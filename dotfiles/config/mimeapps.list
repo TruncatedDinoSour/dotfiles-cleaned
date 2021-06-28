@@ -1,0 +1,5 @@
+[Default Applications]
+x-scheme-handler/tg=userapp-Kotatogram Desktop-EYYK50.desktop
+
+[Added Associations]
+x-scheme-handler/tg=userapp-Kotatogram Desktop-EYYK50.desktop;

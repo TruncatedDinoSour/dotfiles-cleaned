@@ -1,0 +1,58 @@
+#!/usr/bin/bash
+
+
+BLUR=6
+INVISIBLE=\#00000000
+
+VERIFICATION_COLOUR=\#FABD2F
+WRONG_COLOUR=\#FB4934
+
+KEY_COLOUR=\#FE8019
+BACKSPACE_COLOUR=\#E97501
+
+TIME_COLOUR=\#FE7301
+DATE_COLOUR=\#DA6301
+
+
+i3lock \
+--clock \
+--ignore-empty-password \
+--redraw-thread \
+--bar-indicator \
+--no-modkey-text \
+--blur=$BLUR \
+\
+--verif-color=$VERIFICATION_COLOUR \
+--wrong-color=$WRONG_COLOUR \
+\
+--ring-color=$INVISIBLE \
+--line-color=$INVISIBLE \
+--separator-color=$INVISIBLE \
+\
+--keyhl-color=$KEY_COLOUR \
+--bshl-color=$BACKSPACE_COLOUR \
+\
+--time-color=$TIME_COLOUR \
+--date-color=$DATE_COLOUR \
+--greeter-color=\#FFFFFF \
+\
+--verif-text="Verifying..." \
+--wrong-text="Wrong Password:(" \
+--noinput-text="No Input" \
+--lock-text="Locking..." \
+--lockfailed-text="Locking Failed!" \
+\
+--bar-color=$INVISIBLE \
+--bar-count=100 \
+--bar-pos=y+h+50 \
+--bar-direction=1 \
+--bar-max-height=170 \
+--bar-step=44 \
+--bar-periodic-step=38 \
+\
+--time-size=60 \
+--verif-size=40 \
+--wrong-size=40 \
+--date-size=17 \
+\
+--date-str="%Y, %b %d, %A"
