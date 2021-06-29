@@ -66,6 +66,7 @@ to=(
 for i in "${!from[@]}";
 do
     sudo cp -rfv "${from[$i]}" "${to[$i]}"
+    echo "${to[$i]} -> ${from[$i]}" >> list/location.list
 done
 
 sudo chown -R ari:ari dotfiles
