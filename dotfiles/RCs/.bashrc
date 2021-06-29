@@ -36,11 +36,12 @@ ps_one() {
     local status="$?"
     local git="$(__git_ps1 | sed "s/^ //g")"
     local date="$(date "+%H:%M:%S")"
-
+    local extra=""
 
     local dir="${LBLUE}\\W${RESTORE}"
     if [[ "$git" ]];
     then
+        local extra+=" -+- [ ${dir} ]"
         local dir="${LBLUE}$git${RESTORE}"
     fi
 
@@ -57,7 +58,7 @@ ps_one() {
     fi
 
 
-    local PS1_P1="[ \\u${YELLOW}@${RESTORE}\\h ] -+- [ $date ] -+- [ ${status_c}$status${RESTORE} ]"
+    local PS1_P1="[ \\u${YELLOW}@${RESTORE}\\h ] -+- [ $date ] -+- [ ${status_c}$status${RESTORE} ]${extra}"
     local PS1_P2="[ $dir ]${prompt} "
 
     export PS1="\n$PS1_P1\n$PS1_P2"
