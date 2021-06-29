@@ -53,6 +53,12 @@ A: Because I am not on i3 anymore and This is the most screenshot I have :)
 <br/><br/>
 
 <b>
+Q: Why do some files only have some path to some file?
+</b><br/>
+A: Because it's a <a href="//www.howtogeek.com/287014/how-to-create-and-use-symbolic-links-aka-symlinks-on-linux/">symlink</a>
+<br/><br/>
+
+<b>
 Q: Installer doesn't seem to work even though I am on an arch linux(-based) distrobution. what do I do?
 </b><br/>
 A: You may have set pacman as your package manager, But you actually need some our helper, like <a href="//aur.archlinux.org/packages/yay">yay</a>, or newer and more maintained <a href="//aur.archlinux.org/packages/paru">paru</a>
