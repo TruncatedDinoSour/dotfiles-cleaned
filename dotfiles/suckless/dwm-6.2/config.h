@@ -138,7 +138,7 @@ static Key keys[] = {
 	{ MODKEY,                       XK_h,      setmfact,       {.f = -0.05} },
     // make master larger
 	{ MODKEY,                       XK_l,      setmfact,       {.f = +0.05} },
-	// useless
+	// useless (not, i didn't understand this)
     // { MODKEY,                       XK_Return, zoom,           {0} },
 	// switch to a used tab
     { MODKEY,                       XK_Tab,    view,           {0} },
