@@ -103,7 +103,7 @@ export CXX="g++"
 alias make="/bin/make ${MAKEOPTS}"
 alias cxx="$CXX ${CXXFLAGS}"
 
-
+export ENV=$HOME/.profile
 export PATH="$PATH:$HOME/.local/bin"
 export EDITOR='vim'
 export PROMPT_COMMAND='ps_one'

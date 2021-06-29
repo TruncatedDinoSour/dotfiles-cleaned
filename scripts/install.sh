@@ -229,6 +229,7 @@ function dotfiles() {
         'dotfiles/RCs/.bashrc'
         'dotfiles/RCs/nanorc'
         'dotfiles/suckless'
+        'dotfiles/RCs/.profile'
     )
     local to=(
         '/usr/src'
@@ -246,6 +247,7 @@ function dotfiles() {
         "$HOME/.icons"
         "$HOME"
         '/etc'
+        "$HOME"
         "$HOME"
     )
 

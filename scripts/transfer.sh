@@ -37,6 +37,7 @@ from=(
     "/home/ari/Ari/coding/resources_/dotfiles-cleaned/scripts"
     "/etc/sudoers"
     "/etc/mkinitcpio.conf"
+    "/home/ari/.profile"
 )
 to=(
     "dotfiles/config"
@@ -60,6 +61,7 @@ to=(
     "dotfiles/scripts"
     "dotfiles/core"
     "dotfiles/core"
+    "dotfiles/RCs"
 )
 
 
