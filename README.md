@@ -76,10 +76,17 @@ A: You may have set pacman as your package manager, But you actually need some o
 <br/>
 
 
-<h1 align="center"><b>Manual Installation</b></h1>
+<h1 align="center"><b>Manual Installation (Arch Linux)</b></h1>
 
 ```sh
-# use your AUR helper, in my case - paru
+$ sh # you can also use bash or zsh, but I put this here just in case you use something like FISH
+$ cd
+$ git clone https://aur.archlinux.org/paru.git
+$ cd paru
+$ makepkg -si
+$ cd
+$ git clone https://github.com/TruncatedDinosour/dotfiles-cleaned
+$ cd dotfiles-cleaned
 $ paru -S --needed $(cat list/package.list)
 ```
 after that look at the `list/location.list` file and manually move the files
