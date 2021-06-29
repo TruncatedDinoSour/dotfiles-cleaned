@@ -75,6 +75,20 @@ A: You may have set pacman as your package manager, But you actually need some o
 
 <br/>
 
+
+<h1 align="center"><b>Manual Installation</b></h1>
+
+```sh
+# use your AUR helper, in my case - paru
+$ paru -S --needed $(cat list/package.list)
+```
+after that look at the `list/location.list` file and manually move the files
+
+<b>IMAGINE THAT <code>ari</code> IS YOUR USER<b/>
+
+
+<br/>
+
 <h1 align="center"><b>Resources</b></h1>
 <ul>
 <li><a href="//github.com/yrwq/yafetch">Yafetch - "Yet another fetch ..."</a></li>
