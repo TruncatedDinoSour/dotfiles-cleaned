@@ -71,6 +71,7 @@ done
 sudo chown -R ari:ari dotfiles
 rm -rfv dotfiles/editors/vim/.vim/undodir dotfiles/config/Code dotfiles/config/VSCodium
 
-paru -Q > list/package.list
+paru -Q | grep -io "^\S*" > list/package.list
+paru -Q > list/package_full.list
 lsd --tree --depth=2 /usr/src > list/src.list
 
