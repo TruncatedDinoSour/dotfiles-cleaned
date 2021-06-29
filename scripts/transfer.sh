@@ -10,7 +10,8 @@ echo "[?] Are you sure that you want to update the dotfiles?"
 read -p "=== [ press enter to continue ] ===" x
 
 
-rm -rfv dotfiles
+rm -rfv dotfiles list
+mkdir -p list
 mkdir -p dotfiles{,/RCs,/editors/vim,/core,/bin}
 
 
@@ -69,4 +70,7 @@ done
 
 sudo chown -R ari:ari dotfiles
 rm -rfv dotfiles/editors/vim/.vim/undodir dotfiles/config/Code dotfiles/config/VSCodium
+
+paru -Q > list/package.list
+lsd --tree --depth=2 /usr/src > list/src.list
 

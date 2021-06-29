@@ -41,7 +41,7 @@ ps_one() {
     local dir="${LBLUE}\\W${RESTORE}"
     if [[ "$git" ]];
     then
-        local extra+=" -+- [ ${dir} ]"
+        local extra+=" -+- [ $dir ]"
         local dir="${LBLUE}$git${RESTORE}"
     fi
 
