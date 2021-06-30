@@ -43,7 +43,7 @@ A: Arch linux and Arch linux-based distrobutions
 <b>
 Q: How do I install the dotfiles?
 </b><br/>
-A: <code>cd</code> into the root (/) of the dotfiles-cleaned repo and type <code>make food</code>
+A: <code>cd</code> into the root (/) of the dotfiles-cleaned repo and type <code>make food</code>, but if you want a more reliable and controlled installation, read <a href="#manual-installation-arch-linux">this</a>
 <br/><br/>
 
 <b>
