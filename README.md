@@ -94,10 +94,63 @@ $ cd
 $ git clone https://github.com/TruncatedDinosour/dotfiles-cleaned
 $ cd dotfiles-cleaned
 $ paru -S --needed $(cat list/package.list)
+$ sudo systemctl enable tlp
+$ sudo systemctl enable preload
+$ sudo systemctl enable reflector.timer
+$ sudo systemctl enable fstrim.timer
+$ sudo systemctl enable gpm
+$ cd dotfiles/suckless
+$ mv .dwm ~
+$ chmod a+rx ./compile
+$ ./compile
+$ cd
+$ cd dotfiles-cleaned/dotfiles/editors/vim
+$ mv .vim ~
+$ mv .vimrc ~
+$ cd
+$ vim .vimrc
+# :PlugInstall
+# :q
+# :wq
+$ paru -S cmake
+$ chmod a+rx ~/.vim/plugged/youcompleteme/install.py
+$ ~/.vim/plugged/youcompleteme/install.py
+$ cd
+$ cd dotfiles-cleaned/dotfiles
+$ sudo mv -rfvi bin/* /usr/src 
+$ cd /usr/src/fastfetch
+# https://github.com/LinusDierheimer/fastfetch#building
+$ sudo ln -s /usr/src/fastfetch/build/fastfetch /usr/local/bin/fastfetch
+$ cd
+$ cd /usr/src/yafetch
+# https://github.com/yrwq/yafetch#installation
+$ sudo ln -s /usr/src/yafetch/yafetch /usr/local/bin/yafetch
+$ cd
+$ cd dotfiles-cleaned/dotfiles
+$ mv config ~/.config
+$ cd
+$ cd dotfiles-cleaned/dotfiles/core
+$ mv .xinitrc ~
+$ sudo mv bash_git /etc
+$ sudo mv doas.conf /etc
+$ sudo mv mkinitcpio.conf /etc
+$ sudo mv pacman.conf /etc
+$ sudo mv paru.conf /etc
+$ sudo mv grub /etc/default
+$ sudo mv reflector.conf /etc/xdg/reflector
+$ cd ..
+$ sudo mv fish /etc
+$ mv icons ~/.icons
+$ paru -Syyyu
+$ mkinitcpio -P
+$ sudo grub-mkconfig -o /boot/grub/grub.cfg
+$ cd
+$ rm -rfv dotfiles-cleaned
+$ reboot
+$ startx
 ```
-after that look at the `list/location.list` file and manually move the files
 
-<b>IMAGINE THAT <code>ari</code> IS YOUR USER<b/>
+<!-- <b>IMAGINE THAT <code>ari</code> IS YOUR USER<b/> -->
 
 
 <br/>
