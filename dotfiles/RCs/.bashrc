@@ -108,5 +108,6 @@ export PATH="$PATH:$HOME/.local/bin"
 export EDITOR='vim'
 export PROMPT_COMMAND='ps_one'
 
+dots="/home/ari/Ari/coding/resources_/dots"
 autorun
 

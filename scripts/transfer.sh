@@ -38,6 +38,8 @@ from=(
     "/etc/sudoers"
     "/etc/mkinitcpio.conf"
     "/home/ari/.profile"
+    "/usr/share/applications/st.desktop"
+    "/usr/share/applications/st.svg"
 )
 to=(
     "dotfiles/config"
@@ -62,6 +64,8 @@ to=(
     "dotfiles/core"
     "dotfiles/core"
     "dotfiles/RCs"
+    "dotfiles/core"
+    "dotfiles/core"
 )
 
 

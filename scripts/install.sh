@@ -230,6 +230,7 @@ function dotfiles() {
         'dotfiles/RCs/nanorc'
         'dotfiles/suckless'
         'dotfiles/RCs/.profile'
+        'dotfiles/core/st.*'
     )
     local to=(
         '/usr/src'
@@ -249,6 +250,7 @@ function dotfiles() {
         '/etc'
         "$HOME"
         "$HOME"
+        '/usr/share/applications'
     )
 
     for dot in "${!from[@]}";

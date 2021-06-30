@@ -3,3 +3,5 @@ x-scheme-handler/tg=userapp-Kotatogram Desktop-EYYK50.desktop
 
 [Added Associations]
 x-scheme-handler/tg=userapp-Kotatogram Desktop-EYYK50.desktop;
+application/octet-stream=vim.desktop;VSCodium.desktop;
+text/plain=vim.desktop;
