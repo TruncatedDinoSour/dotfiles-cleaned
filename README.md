@@ -140,7 +140,7 @@ $ rm -rfv dotfiles-cleaned
 $ cd Suckless
 $ chmod a+rx ./compile
 $ ./compile
-$ cd ..
+$ cd
 $ vim .vimrc
 #    ;PlugInstall
 #    ;q
