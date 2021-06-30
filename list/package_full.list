@@ -323,7 +323,7 @@ pacman-mirrorlist 20210509-1
 pahole 1.21-1
 pam 1.5.1-1
 pambase 20210605-2
-pango 1:1.48.5-1
+pango 1:1.48.6-1
 paru 1.7.3-1
 patch 2.7.6-8
 pciutils 3.7.0-1
@@ -343,6 +343,7 @@ popt 1.18-1
 preload 0.6.4-7
 procps-ng 3.3.17-1
 psmisc 23.4-1
+pybind11 2.6.2-2
 python 3.9.5-3
 python-appdirs 1.4.4-3
 python-blessings 1.7-7

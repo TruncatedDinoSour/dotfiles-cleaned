@@ -343,6 +343,7 @@ popt
 preload
 procps-ng
 psmisc
+pybind11
 python
 python-appdirs
 python-blessings

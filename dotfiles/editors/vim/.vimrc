@@ -132,4 +132,6 @@ set encoding=utf-8
 " bar's config
 let g:lightline = {}
 let g:lightline.colorscheme = 'gruvbox'
+inoremap jj <Esc>
+noremap jj <Esc>
 
