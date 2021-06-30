@@ -118,7 +118,7 @@ $ sudo mv doas /etc/doas.conf
 $ sudo mv pacman.conf /etc/pacman.conf
 $ paru -Syyyu
 $ sudo mv reflector.conf /etc/xdg/reflector.conf
-$ sudo pacman -S reflector
+$ sudo pacman -S reflector rsync
 $ sudo reflector --age 10 --latest 35 --sort rate --save /etc/pacman.d/mirrorlist
 $ cd ..
 $ rm -rfv core
