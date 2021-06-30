@@ -1,4 +1,4 @@
-#!/usr/bin/sh
+#!/bin/sh
 
 # this script autostarts on startup
 # please be careful

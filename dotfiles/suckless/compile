@@ -1,0 +1,18 @@
+#!/bin/sh
+
+back=$(pwd)
+
+for i in ./*;
+do
+    if [[ -d "$i"  ]];
+    then
+        echo -en "\n$i\n\n"
+        cd $i
+        sudo make clean install
+        cd $back
+    fi
+done
+
+unset back
+unset i
+
