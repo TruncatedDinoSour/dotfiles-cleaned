@@ -152,7 +152,7 @@ $ cd
 $ ln -s $HOME/.bashrc $HOME/.profile
 $ echo $USER > a
 $ su
-$ h=$(cat a)
+$ h=$(/bin/cat a)
 $ rm a
 $ cd
 $ ln -s /home/$h/.bashrc /root/.bashrc
