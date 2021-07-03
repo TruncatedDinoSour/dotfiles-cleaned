@@ -22,3 +22,4 @@ dotfiles/core -> /etc/mkinitcpio.conf
 dotfiles/RCs -> /home/ari/.profile
 dotfiles/core -> /usr/share/applications/st.desktop
 dotfiles/core -> /usr/share/applications/st.svg
+dotfiles/core -> /etc/default/grub

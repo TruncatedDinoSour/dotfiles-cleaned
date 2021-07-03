@@ -40,6 +40,7 @@ from=(
     "/home/ari/.profile"
     "/usr/share/applications/st.desktop"
     "/usr/share/applications/st.svg"
+    "/etc/default/grub"
 )
 to=(
     "dotfiles/config"
@@ -66,6 +67,7 @@ to=(
     "dotfiles/RCs"
     "dotfiles/core"
     "dotfiles/core"
+    "dotfiles/core"
 )
 
 
@@ -76,7 +78,7 @@ do
 done
 
 sudo chown -R ari:ari dotfiles
-rm -rfv dotfiles/editors/vim/.vim/undodir dotfiles/config/Code dotfiles/config/VSCodium
+rm -rfv dotfiles/editors/vim/.vim/undodir dotfiles/config/Code dotfiles/config/VSCodium dotfiles/config/chromium
 
 paru -Q | grep -io "^\S*" > list/package.list
 paru -Q > list/package_full.list

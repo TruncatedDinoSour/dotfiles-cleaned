@@ -34,6 +34,7 @@ ca-certificates-mozilla 3.67-1
 ca-certificates-utils 20210603-1
 cairo 1.17.4-5
 cantarell-fonts 1:0.301-1
+chromium 91.0.4472.114-1
 cmake 3.20.5-1
 coreutils 8.32-1
 cryptsetup 2.3.6-1
@@ -268,6 +269,7 @@ libxpm 3.5.13-2
 libxrandr 1.5.2-3
 libxrender 0.9.10-4
 libxshmfence 1.3-2
+libxslt 1.1.34-5
 libxss 1.2.3-3
 libxt 1.2.1-1
 libxtst 1.2.3-4
@@ -275,10 +277,10 @@ libxv 1.0.11-4
 libxvmc 1.0.12-3
 libxxf86vm 1.1.4-4
 licenses 20200427-1
-linux 5.12.13.arch1-2
+linux 5.12.14.arch1-1
 linux-api-headers 5.12.3-1
 linux-firmware 20210511.7685cf4-1
-linux-headers 5.12.13.arch1-2
+linux-headers 5.12.14.arch1-1
 llvm-libs 12.0.0-2
 lm_sensors 1:3.6.0.r41.g31d1f125-1
 lsd 0.20.1-1
@@ -295,6 +297,7 @@ man-db 2.9.4-2
 md4c 0.4.8-1
 menu-cache 1.1.0-2
 mesa 21.1.3-1
+minizip 1:1.2.11-4
 mkinitcpio 30-1
 mkinitcpio-busybox 1.33.1-1
 mobile-broadband-provider-info 20201225-1
@@ -328,7 +331,7 @@ paru 1.7.3-1
 patch 2.7.6-8
 pciutils 3.7.0-1
 pcmanfm 1.3.2-1
-pcre 8.44-1
+pcre 8.45-1
 pcre2 10.37-1
 perl 5.34.0-1
 perl-error 0.17029-3
@@ -383,10 +386,11 @@ python-urllib3 1.26.5-1
 python-webencodings 0.5.1-6
 python2 2.7.18-3
 python2-pyxdg 0.27-1
-qt5-base 5.15.2+kde+r203-1
+qt5-base 5.15.2+kde+r207-1
 qt5-svg 5.15.2+kde+r7-1
 qt5-x11extras 5.15.2-1
 rav1e 0.4.1-1
+re2 1:20210601-1
 readline 8.1.001-1
 reflector 2021.4-1
 rest 0.8.1-3
@@ -401,6 +405,7 @@ shadow 4.8.1-4
 shared-mime-info 2.0+57+gc1d1c70-1
 siji-git r23.c691f20-2
 slang 2.3.2-2
+snappy 1.1.8-2
 sound-theme-freedesktop 0.8-4
 speex 1.2.0-3
 speexdsp 1.2.0-2
@@ -421,6 +426,7 @@ tlp 1.3.1-2
 tor-browser 10.0.18-1
 tslib 1.22-1
 ttf-font-awesome 5.15.3-1
+ttf-liberation 2.1.4-1
 tzdata 2021a-1
 uchardet 0.0.7-1
 usbutils 013-1
@@ -431,7 +437,7 @@ vid.stab 1.1-3
 vim 8.2.2891-1
 vim-runtime 8.2.2891-1
 virtualbox 6.1.22-3
-virtualbox-host-modules-arch 6.1.22-20
+virtualbox-host-modules-arch 6.1.22-21
 vmaf 1.5.3-1
 vscodium-bin 1.57.1-1
 vscodium-bin-marketplace 1.56.0-4

@@ -34,6 +34,7 @@ ca-certificates-mozilla
 ca-certificates-utils
 cairo
 cantarell-fonts
+chromium
 cmake
 coreutils
 cryptsetup
@@ -268,6 +269,7 @@ libxpm
 libxrandr
 libxrender
 libxshmfence
+libxslt
 libxss
 libxt
 libxtst
@@ -295,6 +297,7 @@ man-db
 md4c
 menu-cache
 mesa
+minizip
 mkinitcpio
 mkinitcpio-busybox
 mobile-broadband-provider-info
@@ -387,6 +390,7 @@ qt5-base
 qt5-svg
 qt5-x11extras
 rav1e
+re2
 readline
 reflector
 rest
@@ -401,6 +405,7 @@ shadow
 shared-mime-info
 siji-git
 slang
+snappy
 sound-theme-freedesktop
 speex
 speexdsp
@@ -421,6 +426,7 @@ tlp
 tor-browser
 tslib
 ttf-font-awesome
+ttf-liberation
 tzdata
 uchardet
 usbutils
