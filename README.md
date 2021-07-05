@@ -43,13 +43,13 @@ A: Arch linux and Arch linux-based distrobutions
 <b>
 Q: How do I install the dotfiles?
 </b><br/>
-A: <code>cd</code> into the root (/) of the dotfiles-cleaned repo and type <code>make food</code>, but if you want a more reliable and controlled installation, read <a href="#manual-installation-arch-linux">this</a>
+A: <code>cd</code> into the root (/) of the dotfiles-cleaned repo, check if the config is correct in scripts/install.sh and then type <code>make food</code>, but if you want a more reliable and controlled installation, read <a href="#manual-installation-arch-linux">this</a>
 <br/><br/>
 
 <b>
 Q: Why is there ony one i3 screenshot when DWM has 2?
 </b><br/>
-A: Because I am not on i3 anymore and This is the most screenshot I have :)
+A: Because I am not on i3 anymore and This is the most recent screenshot I have :)
 <br/><br/>
 
 <b>
