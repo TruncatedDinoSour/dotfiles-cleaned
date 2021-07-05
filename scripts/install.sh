@@ -1,10 +1,9 @@
 #!/bin/sh
 
-sudo="/bin/sudo"
-pacm="/bin/paru"
-sudo="/bin/sudo"
-pins="-S --needed"
-ping="--ignore"
+pacm="/bin/paru"        # Your AUR helper
+sudo="/bin/sudo"        # Run commands as root
+pins="-S --needed"      # Arguments to install an AUR package
+ping="--ignore"         # Arguments to ignore package installation
 
 if [[ "$EUID" == 0 ]];
 then
@@ -88,7 +87,7 @@ function software() {
     then
         $pacm $pins ${pkg_font}
     else
-        echo "No fonts will be installed... Skipping"
+        echo "[-] No fonts will be installed... Skipping"
     fi
 
 
@@ -96,7 +95,7 @@ function software() {
     then
         $pacm $pins ${pkg_theme}
     else
-        echo "No themes will be installed... skipping"
+        echo "[-] No themes will be installed... skipping"
     fi
 
 
@@ -108,7 +107,7 @@ function software() {
 
         $pacm $pins ${pkg_app} $ping "${ignorepkg}"
     else
-        echo "No extra apps will be installed... Skipping"
+        echo "[-] No extra apps will be installed... Skipping"
     fi
 
 
@@ -116,7 +115,7 @@ function software() {
     then
         $pacm $pins $pkg_lang
     else
-        echo "Some things might not work without language support... Skipping"
+        echo "[-] Some things might not work without language support... Skipping"
     fi
 
 
@@ -128,7 +127,7 @@ function software() {
 
         $pacm $pins ${pkg_extra} $ping "${ignorepkg}"
     else
-        echo "No extra packages will be installed... Skipping"
+        echo "[-] No extra packages will be installed... Skipping"
     fi
 
 
@@ -136,7 +135,7 @@ function software() {
     then
         $pacm $pins ${pkg_display}
     else
-        echo "No display server installed, Some things might break... Skipping"
+        echo "[-] No display server installed, Some things might break... Skipping"
     fi
 
 
@@ -144,7 +143,7 @@ function software() {
     then
         $pacm $pins ${pkg_source}
     else
-        echo "No extra compiled packages will be installed... Skipping"
+        echo "[-] No extra compiled packages will be installed... Skipping"
     fi
 
 
@@ -152,7 +151,7 @@ function software() {
     then
         $pacm $pins ${pkg_i3}
     else
-        echo "i3 Will not be installed"
+        echo "[-] i3 Will not be installed"
     fi
 
 
@@ -317,6 +316,9 @@ function opts() {
 
 
 function main() {
+    echo "This WILL erase most, if not all of your configs. If you don\'t want that please consider a manual installation:"
+    echo "- https://github.com/TruncatedDinosour/dotfiles-cleaned#manual-installation-arch-linux"
+
     while true;
     do
         echo -en "\n"

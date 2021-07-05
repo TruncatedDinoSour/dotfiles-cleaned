@@ -9,6 +9,7 @@ dotfiles/suckless -> /home/ari/.dwm
 dotfiles/bin -> /usr/src/fastfetch
 dotfiles/bin -> /usr/src/yafetch
 dotfiles/bin -> /usr/src/colours
+dotfiles/bin -> /usr/src/dunstest
 dotfiles/core -> /etc/bash_git
 dotfiles/core -> /etc/doas.conf
 dotfiles/core -> /etc/paru.conf

@@ -29,12 +29,12 @@ boost-libs 1.76.0-1
 bpython 0.21-1
 brotli 1.0.9-4
 bzip2 1.0.8-4
+c-ares 1.17.1-1
 ca-certificates 20210603-1
 ca-certificates-mozilla 3.67-1
 ca-certificates-utils 20210603-1
 cairo 1.17.4-5
 cantarell-fonts 1:0.301-1
-chromium 91.0.4472.114-1
 cmake 3.20.5-1
 coreutils 8.32-1
 cryptsetup 2.3.6-1
@@ -85,7 +85,7 @@ git 2.32.0-1
 glib-networking 1:2.68.1-1
 glib2 2.68.3-1
 glibc 2.33-5
-glslang 11.4.0-1
+glslang 11.5.0-1
 gmp 6.2.1-1
 gnu-free-fonts 20120503-8
 gnupg 2.2.28-2
@@ -187,7 +187,7 @@ libinput 1.18.0-1
 libjpeg-turbo 2.1.0-1
 libksba 1.6.0-1
 libldap 2.4.59-1
-libmfx 21.1.3-2
+libmfx 21.2.3-1
 libmm-glib 1.16.6-1
 libmnl 1.0.4-3
 libmodplug 0.8.9.0-3
@@ -209,7 +209,7 @@ libpcap 1.10.1-1
 libpciaccess 0.16-2
 libpgm 5.3.128-1
 libpipeline 1.5.3-1
-libplacebo 3.120.3-1
+libplacebo 3.120.3-2
 libpng 1.6.37-3
 libproxy 0.4.17-2
 libpsl 0.21.1-1
@@ -269,7 +269,6 @@ libxpm 3.5.13-2
 libxrandr 1.5.2-3
 libxrender 0.9.10-4
 libxshmfence 1.3-2
-libxslt 1.1.34-5
 libxss 1.2.3-3
 libxt 1.2.1-1
 libxtst 1.2.3-4
@@ -297,7 +296,6 @@ man-db 2.9.4-2
 md4c 0.4.8-1
 menu-cache 1.1.0-2
 mesa 21.1.3-1
-minizip 1:1.2.11-4
 mkinitcpio 30-1
 mkinitcpio-busybox 1.33.1-1
 mobile-broadband-provider-info 20201225-1
@@ -311,8 +309,12 @@ ncurses 6.2-2
 nerd-fonts-hack 2.1.0-3
 nettle 3.7.3-1
 networkmanager 1.32.2-1
+node-gyp 8.1.0-2
+nodejs 16.4.1-1
+nodejs-nopt 5.0.0-2
+npm 7.17.0-1
 npth 1.6-3
-nspr 4.31-1
+nspr 4.32-1
 nss 3.67-1
 opencore-amr 0.1.5-5
 openjpeg2 2.4.0-1
@@ -326,7 +328,7 @@ pacman-mirrorlist 20210509-1
 pahole 1.21-1
 pam 1.5.1-1
 pambase 20210605-2
-pango 1:1.48.6-1
+pango 1:1.48.7-1
 paru 1.7.3-1
 patch 2.7.6-8
 pciutils 3.7.0-1
@@ -390,7 +392,6 @@ qt5-base 5.15.2+kde+r207-1
 qt5-svg 5.15.2+kde+r7-1
 qt5-x11extras 5.15.2-1
 rav1e 0.4.1-1
-re2 1:20210601-1
 readline 8.1.001-1
 reflector 2021.4-1
 rest 0.8.1-3
@@ -400,12 +401,12 @@ rubberband 1.9.2-1
 sdl 1.2.15-14
 sdl2 2.0.14-1
 sed 4.8-1
-shaderc 2021.0-1
+semver 7.3.5-2
+shaderc 2021.1-1
 shadow 4.8.1-4
 shared-mime-info 2.0+57+gc1d1c70-1
 siji-git r23.c691f20-2
 slang 2.3.2-2
-snappy 1.1.8-2
 sound-theme-freedesktop 0.8-4
 speex 1.2.0-3
 speexdsp 1.2.0-2
