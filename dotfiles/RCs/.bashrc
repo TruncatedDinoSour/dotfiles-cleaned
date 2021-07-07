@@ -77,6 +77,7 @@ man() {
 
 
 alias ..='cd ..'
+alias rm="trash-put"
 alias ls='/bin/lsd --color=auto'
 alias ll='/bin/lsd -l --color=auto'
 alias la='/bin/lsd -la --color=auto'

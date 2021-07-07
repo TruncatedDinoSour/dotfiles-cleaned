@@ -295,7 +295,7 @@ make 4.3-3
 man-db 2.9.4-2
 md4c 0.4.8-1
 menu-cache 1.1.0-2
-mesa 21.1.3-1
+mesa 21.1.4-1
 mkinitcpio 30-1
 mkinitcpio-busybox 1.33.1-1
 mobile-broadband-provider-info 20201225-1
@@ -349,7 +349,7 @@ preload 0.6.4-7
 procps-ng 3.3.17-1
 psmisc 23.4-1
 pybind11 2.6.2-2
-python 3.9.5-3
+python 3.9.6-1
 python-appdirs 1.4.4-3
 python-blessings 1.7-7
 python-cachecontrol 0.12.6-3
@@ -384,7 +384,7 @@ python-retrying 1.3.3-9
 python-setuptools 1:57.0.0-2
 python-six 1.16.0-1
 python-toml 0.10.2-3
-python-urllib3 1.26.5-1
+python-urllib3 1.26.6-1
 python-webencodings 0.5.1-6
 python2 2.7.18-3
 python2-pyxdg 0.27-1
@@ -430,7 +430,6 @@ ttf-font-awesome 5.15.3-1
 ttf-liberation 2.1.4-1
 tzdata 2021a-1
 uchardet 0.0.7-1
-unzip 6.0-14
 usbutils 013-1
 util-linux 2.37-3
 util-linux-libs 2.37-3
