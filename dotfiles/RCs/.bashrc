@@ -87,7 +87,6 @@ alias src='source ~/.bashrc'
 alias stx='/bin/startx'
 alias grep='/bin/grep --color="auto" -i'
 alias glew="/home/ari/Ari/coding/python_/glew/glew/__main__.py"
-alias shot="scrot '/tmp/%F_%T_\$wx\$h.png' -e 'xclip -selection clipboard -target image/png -i \$f'"
 alias clear='/bin/clear && autorun'
 alias lsblk='/bin/lsblk -fa'
 alias ngrok='/home/ari/Ari/coding/tools_/ngrok_/ngrok'

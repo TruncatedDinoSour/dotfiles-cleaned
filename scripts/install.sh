@@ -273,9 +273,11 @@ function dotfiles() {
     cd $back
 
 
-    ln -s /usr/src/colours/colours /usr/local/bin/colours
-    ln -s /usr/src/fastfetch/build/fastfetch /usr/local/bin/fastfetch
-    ln -s /usr/src/yafetch/yafetch /usr/local/bin/yafetch
+    $sudo ln -s /usr/src/colours/colours /usr/local/bin/colours
+    $sudo ln -s /usr/src/fastfetch/build/fastfetch /usr/local/bin/fastfetch
+    $sudo ln -s /usr/src/yafetch/yafetch /usr/local/bin/yafetch
+    $sudo ln -s /usr/src/dunstest/dunstest /usr/local/bin/dunstest
+    $sudo ln -s /usr/src/shot/shot /usr/local/bin/shot
 }
 
 function tapps() {

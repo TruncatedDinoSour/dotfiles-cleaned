@@ -42,6 +42,7 @@ from=(
     "/usr/share/applications/st.desktop"
     "/usr/share/applications/st.svg"
     "/etc/default/grub"
+    "/usr/src/shot"
 )
 to=(
     "dotfiles/config"
@@ -70,6 +71,7 @@ to=(
     "dotfiles/core"
     "dotfiles/core"
     "dotfiles/core"
+    "dotfiles/bin"
 )
 
 

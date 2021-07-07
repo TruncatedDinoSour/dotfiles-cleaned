@@ -175,7 +175,9 @@ $ cd /usr/src
 $ cd yafetch
 $ sudo make
 $ sudo ln -s /usr/src/yafetch/yafetch /usr/local/bin/yafetch
-$ cd
+$ cd /usr/src
+$ sudo ln -s /usr/src/dunstest/dunstest /usr/local/bin/dunstest
+$ sudo ln -s /usr/src/shot/shot /usr/local/bin/shot
 $ reboot
 $ startx
 ```

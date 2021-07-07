@@ -288,6 +288,8 @@ src
 │  ├── version
 │  ├── virt
 │  └── vmlinux
+├── shot
+│  └── shot
 └── yafetch
    ├── docs.md
    ├── init.lua
