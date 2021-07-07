@@ -8,6 +8,7 @@
 OS:     Arch Linux
 WM/DE:  DWM
 SHELL:  Bash
+THEME:  Gruvbox (cyan)
 </pre>
 
 <p align="center"><b>What are the dependencies?</b></p>
@@ -69,10 +70,10 @@ A: You may have set pacman as your package manager, But you actually need some o
 <h1 align="center"><b>Look & Feel</b></h1>
 <br/>
 <h3>DWM (Floating)</h3>
-<img src="https://user-images.githubusercontent.com/71613062/123900488-b3185d80-d958-11eb-91b5-66da27aeadf0.png">
+<img src="https://user-images.githubusercontent.com/71613062/124836703-f6835500-df72-11eb-808c-3d89fb3244b1.png">
 
 <h3>DWM (Tiling)</h3>
-<img src="https://user-images.githubusercontent.com/71613062/123900545-c4fa0080-d958-11eb-8883-4b6d53f8c608.png">
+<img src="https://user-images.githubusercontent.com/71613062/124836803-22063f80-df73-11eb-94bd-1c9ff521c901.png">
 
 <h2 align="center"></h2>
 
