@@ -23,7 +23,7 @@ bash-completion 2.11-2
 bat 0.18.1-1
 binutils 2.36.1-3
 bison 3.7.6-1
-bluez-libs 5.59-2
+bluez-libs 5.60-1
 boost 1.76.0-1
 boost-libs 1.76.0-1
 bpython 0.21-1
@@ -80,6 +80,7 @@ gcc-libs 11.1.0-1
 gdbm 1.20-1
 gdk-pixbuf2 2.42.6-1
 gettext 0.21-1
+giblib 1.2.4-8
 giflib 5.2.1-2
 git 2.32.0-1
 glib-networking 1:2.68.1-1
@@ -129,13 +130,10 @@ json-c 0.15-1
 json-glib 1.6.2-1
 jsoncpp 1.9.4-1
 kbd 2.4.0-2
-kcolorpicker 0.1.6-1
 keyutils 1.6.3-1
-kimageannotator 0.5.1-1
 kmod 29-1
 kotatogram-desktop-bin 1.4.1-1
 krb5 1.19.1-1
-ksnip 1.9.0-1
 l-smash 2.14.5-2
 lame 3.100-3
 lcms2 2.12-1
@@ -381,7 +379,7 @@ python-pyparsing 2.4.7-3
 python-requests 2.25.1-1
 python-resolvelib 0.5.5-1
 python-retrying 1.3.3-9
-python-setuptools 1:57.0.0-2
+python-setuptools 1:57.1.0-1
 python-six 1.16.0-1
 python-toml 0.10.2-3
 python-urllib3 1.26.6-1
@@ -389,7 +387,6 @@ python-webencodings 0.5.1-6
 python2 2.7.18-3
 python2-pyxdg 0.27-1
 qt5-base 5.15.2+kde+r207-1
-qt5-svg 5.15.2+kde+r7-1
 qt5-x11extras 5.15.2-1
 rav1e 0.4.1-1
 readline 8.1.001-1
@@ -398,6 +395,7 @@ rest 0.8.1-3
 rhash 1.4.1-1
 rsync 3.2.3-3
 rubberband 1.9.2-1
+scrot 1.5-1
 sdl 1.2.15-14
 sdl2 2.0.14-1
 sed 4.8-1
@@ -424,7 +422,7 @@ tar 1.34-1
 tdb 1.4.3-4
 texinfo 6.8-1
 tlp 1.3.1-2
-tor-browser 10.0.18-1
+tor-browser 10.5-1
 tslib 1.22-1
 ttf-font-awesome 5.15.3-1
 ttf-liberation 2.1.4-1
@@ -456,6 +454,7 @@ xcb-util-image 0.4.0-3
 xcb-util-keysyms 0.4.0-3
 xcb-util-renderutil 0.3.9-3
 xcb-util-wm 0.4.1-3
+xclip 0.13-3
 xdg-utils 1.1.3+19+g9816ebb-1
 xf86-input-libinput 1.1.0-1
 xf86-video-intel 1:2.99.917+916+g31486f40-1

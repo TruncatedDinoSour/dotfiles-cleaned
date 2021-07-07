@@ -81,11 +81,13 @@ alias rm="trash-put"
 alias ls='/bin/lsd --color=auto'
 alias ll='/bin/lsd -l --color=auto'
 alias la='/bin/lsd -la --color=auto'
+alias rms="trash-empty"
 alias cat='/bin/bat --theme="gruvbox-dark"'
 alias src='source ~/.bashrc'
 alias stx='/bin/startx'
 alias grep='/bin/grep --color="auto" -i'
 alias glew="/home/ari/Ari/coding/python_/glew/glew/__main__.py"
+alias shot="scrot '/tmp/%F_%T_\$wx\$h.png' -e 'xclip -selection clipboard -target image/png -i \$f'"
 alias clear='/bin/clear && autorun'
 alias lsblk='/bin/lsblk -fa'
 alias ngrok='/home/ari/Ari/coding/tools_/ngrok_/ngrok'
@@ -108,6 +110,7 @@ export ENV=$HOME/.profile
 export PATH="$PATH:$HOME/.local/bin"
 export EDITOR='vim'
 export PROMPT_COMMAND='ps_one'
+export TORBROWSER_PKGLANG='en-US'
 
 dots="/home/ari/Ari/coding/resources_/dots"
 autorun

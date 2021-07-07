@@ -14,7 +14,7 @@ static int borderpx = 5;
  * 2: scroll and/or utmp
  * 3: SHELL environment variable
  * 4: value of shell in /etc/passwd
- * 5: value of shell in config.h 
+ * 5: value of shell in config.h
  */
 static char *shell = "/bin/fish";
 char *utmp = NULL;
@@ -96,7 +96,7 @@ unsigned int tabspaces = 4;
 
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
-	"#262626", /* hard contrast: #1d2021 / soft contrast: #32302f */
+	"#282828", /* hard contrast: #1d2021 / soft contrast: #32302f */
 	"#cc241d",
 	"#98971a",
 	"#d79921",

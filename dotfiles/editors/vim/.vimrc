@@ -24,7 +24,6 @@ set ignorecase                      " Ignore case in searches
 set smarttab                        " Enable smart tabs
 set confirm                         " Show confirmation
 set hidden                          " You can have unsaved work
-set ruler                           " Shows ruler information
 
 set undolevels=500                  " Number of undos
 set nocompatible                    " Be improved
@@ -64,6 +63,8 @@ call plug#end()
 "   - Emmet
 
 
+" Turn background off
+hi Normal guibg=NONE ctermbg=NONE
 colorscheme gruvbox                 " Set the theme
 set background=dark                 " Set theme mode to dark
 
@@ -112,8 +113,8 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 
 " bar's config
 let g:lightline = {}
-let g:lightline.colorscheme = 'gruvbox' " Set the theme
-
+let g:lightline.colorscheme = 'gruvbox' " Set the bar's theme
+set noshowmode                          " Don't show what mode vim is in
 
 " jj = escape
 inoremap jj <Esc>

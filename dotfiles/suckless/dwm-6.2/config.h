@@ -3,10 +3,10 @@
 #include <X11/XF86keysym.h>
 
 /* definitions */
-char sudo_cmd[4] = "sudo";
+char sudo_cmd[5] = "sudo";
 
 /* appearance */
-static const unsigned int gappx     = 4;        /* gaps */
+static const unsigned int gappx     = 2;        /* gaps */
 static const unsigned int borderpx  = 2;        /* border pixel of windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const bool doAutostart       = true;     /* autostart */
@@ -16,11 +16,11 @@ static const int topbar             = 1;        /* 0 means bottom bar */
 static const char *fonts[]          = { "sans:size=11",
                                         "FontAwesome:size=10.5"};
 static const char dmenufont[]       = "monospace:size=10";
-static const char col_gray1[]       = "#262626"; /* #222222 */
+static const char col_gray1[]       = "#282828"; /* #222222 */
 static const char col_gray2[]       = "#444444"; /* #444444 */
 static const char col_gray3[]       = "#BBBBBB"; /* #BBBBBB */
 static const char col_gray4[]       = "#EEEEEE"; /* #EEEEEE */
-static const char col_cyan[]        = "#CA810C"; /* #005577 */
+static const char col_cyan[]        = "#518152"; /* #005577 */
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
 	[SchemeNorm] = { col_gray3, col_gray1, col_gray2 }, /* innnactive bar */

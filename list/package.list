@@ -80,6 +80,7 @@ gcc-libs
 gdbm
 gdk-pixbuf2
 gettext
+giblib
 giflib
 git
 glib-networking
@@ -129,13 +130,10 @@ json-c
 json-glib
 jsoncpp
 kbd
-kcolorpicker
 keyutils
-kimageannotator
 kmod
 kotatogram-desktop-bin
 krb5
-ksnip
 l-smash
 lame
 lcms2
@@ -389,7 +387,6 @@ python-webencodings
 python2
 python2-pyxdg
 qt5-base
-qt5-svg
 qt5-x11extras
 rav1e
 readline
@@ -398,6 +395,7 @@ rest
 rhash
 rsync
 rubberband
+scrot
 sdl
 sdl2
 sed
@@ -456,6 +454,7 @@ xcb-util-image
 xcb-util-keysyms
 xcb-util-renderutil
 xcb-util-wm
+xclip
 xdg-utils
 xf86-input-libinput
 xf86-video-intel
