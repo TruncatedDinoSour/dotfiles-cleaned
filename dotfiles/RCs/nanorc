@@ -172,7 +172,7 @@ set regexp
 ## (The old form of this option, 'set suspend', is deprecated.)
 
 ## Use this tab size instead of the default; it must be greater than 0.
-set tabsize 3
+set tabsize 4
 
 ## Convert typed tabs to spaces.
 # set tabstospaces
