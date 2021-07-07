@@ -192,5 +192,5 @@ $ startx
 <li><a href="//github.com/gilbertw1/telegram-gruvbox-theme">Telegram-gruvbox-theme - "Gruvbox theme for Telegram Desktop"</a></li>
 <li><a href="//github.com/kotatogram/kotatogram-desktop">Kotatogram-desktop - "Experimental Telegram Desktop fork."</a></li>
 <li><a href="//suckless.org">Suckless's website</a></li>
-<li><a href="//user-images.githubusercontent.com/71613062/123563850-7ad11d80-d7a6-11eb-92dd-6ac0e3033188.png">Wallpaper</a></li>
+<li><a href="//user-images.githubusercontent.com/71613062/124837065-ae186700-df73-11eb-88a5-ce82916d80c8.png">Wallpaper</a></li>
 </ul>
