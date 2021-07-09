@@ -106,6 +106,8 @@ $ sudo systemctl enable tlp.service
 $ sudo systemctl enable gpm.service
 $ sudo systemctl enable preload.service
 $ cd dotfiles
+$ mkdir -p ~/Pictures
+$ mv etc/wallpaper.png ~/Pictures
 $ sudo mv bin/* /usr/src
 $ rm -rfv bin
 $ mv config ~/.config

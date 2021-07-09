@@ -211,6 +211,7 @@ function compile() {
 }
 
 function dotfiles() {
+    mkdir -p ~/Pictures
     local from=(
         'dotfiles/bin/*'
         'dotfiles/config/*'
@@ -230,6 +231,7 @@ function dotfiles() {
         'dotfiles/suckless'
         'dotfiles/RCs/.profile'
         'dotfiles/core/st.*'
+        'dotfiles/etc/wallpaper.png'
     )
     local to=(
         '/usr/src'
@@ -250,6 +252,7 @@ function dotfiles() {
         "$HOME"
         "$HOME"
         '/usr/share/applications'
+        "$HOME/Pictures"
     )
 
     for dot in "${!from[@]}";
