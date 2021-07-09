@@ -8,7 +8,7 @@
 OS:     Arch Linux
 WM/DE:  DWM
 SHELL:  Bash
-THEME:  Gruvbox (cyan)
+THEME:  Gruvbox (aqua)
 </pre>
 
 <p align="center"><b>What are the dependencies?</b></p>
