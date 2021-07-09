@@ -25,3 +25,4 @@ dotfiles/core -> /usr/share/applications/st.desktop
 dotfiles/core -> /usr/share/applications/st.svg
 dotfiles/core -> /etc/default/grub
 dotfiles/bin -> /usr/src/shot
+dotfiles/etc -> /home/ari/Pictures/wallpaper.png

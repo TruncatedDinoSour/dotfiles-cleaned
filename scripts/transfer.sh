@@ -12,7 +12,7 @@ read -p "=== [ press enter to continue ] ===" x
 
 rm -rfv dotfiles list
 mkdir -p list
-mkdir -p dotfiles{,/RCs,/editors/vim,/core,/bin}
+mkdir -p dotfiles{,/RCs,/editors/vim,/core,/bin,/etc}
 
 
 from=(
@@ -43,6 +43,7 @@ from=(
     "/usr/share/applications/st.svg"
     "/etc/default/grub"
     "/usr/src/shot"
+    "/home/ari/Pictures/wallpaper.png"
 )
 to=(
     "dotfiles/config"
@@ -72,6 +73,7 @@ to=(
     "dotfiles/core"
     "dotfiles/core"
     "dotfiles/bin"
+    "dotfiles/etc"
 )
 
 
