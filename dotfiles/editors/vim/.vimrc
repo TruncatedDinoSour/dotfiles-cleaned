@@ -8,7 +8,8 @@ set tabstop=4 softtabstop=4         " Make the tab 4 of the whitespace selected
 set shiftwidth=4                    " Shift text
 set expandtab                       " Convert tabs to spaces
 set smartindent                     " Automatically indent files
-set relativenumber                  " Relatively show the line number
+set number
+"set relativenumber                  " Relatively show the line number
 set nowrap                          " Turn text wrapping off
 set smartcase                       " Turn on searching
 set noswapfile                      " Turn off vim swap files

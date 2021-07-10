@@ -130,10 +130,13 @@ json-c
 json-glib
 jsoncpp
 kbd
+kcolorpicker
 keyutils
+kimageannotator
 kmod
 kotatogram-desktop-bin
 krb5
+ksnip
 l-smash
 lame
 lcms2
@@ -387,6 +390,7 @@ python-webencodings
 python2
 python2-pyxdg
 qt5-base
+qt5-svg
 qt5-x11extras
 rav1e
 readline
