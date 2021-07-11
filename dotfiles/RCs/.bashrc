@@ -82,6 +82,7 @@ alias ls='/bin/lsd --color=auto'
 alias ll='/bin/lsd -l --color=auto'
 alias la='/bin/lsd -la --color=auto'
 alias rms="trash-empty"
+alias rml="trash-list"
 alias cat='/bin/bat --theme="gruvbox-dark"'
 alias src='source ~/.bashrc'
 alias stx='/bin/startx'

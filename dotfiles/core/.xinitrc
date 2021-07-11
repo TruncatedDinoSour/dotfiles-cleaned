@@ -34,7 +34,6 @@ fi
 
 # exec our WMs/DEs
 
-/bin/xbacklight -set 100
 /bin/dunst &
 exec dwm
 #exec i3

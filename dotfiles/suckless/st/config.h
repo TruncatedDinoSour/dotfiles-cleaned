@@ -16,7 +16,7 @@ static int borderpx = 5;
  * 4: value of shell in /etc/passwd
  * 5: value of shell in config.h
  */
-static char *shell = "/bin/fish";
+static char *shell = "/bin/bash";
 char *utmp = NULL;
 /* scroll program: to enable use a string like "scroll" */
 char *scroll = NULL;
