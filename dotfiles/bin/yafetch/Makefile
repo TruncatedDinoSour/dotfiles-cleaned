@@ -1,6 +1,6 @@
 PROJECT = yafetch
-CFLAGS := -Ofast -march=native -ffast-math -pipe -fno-asm -ansi -std=c11 -faggressive-loop-optimizations -floop-strip-mine -fno-omit-frame-pointer -fno-align-functions -fno-align-loops -fprofile-use -flto -fdce -free -funsafe-math-optimizations
-LDFLAGS := -Wl,--gc-sections,-strip-all -flto -Ofast $(shell pkg-config --libs lua5.1)
+#CFLAGS :=
+LDFLAGS := $(shell pkg-config --libs lua5.1)
 OBJECTS = src/script.o src/func.o src/main.o
 
 CONF = "/home/${USER}/.config/yafetch"
