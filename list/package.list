@@ -111,7 +111,6 @@ hdparm
 help2man
 hicolor-icon-theme
 hidapi
-hunspell
 hwids
 hwloc
 iana-etc
@@ -134,7 +133,6 @@ kcolorpicker
 keyutils
 kimageannotator
 kmod
-kotatogram-desktop-bin
 krb5
 ksnip
 l-smash
@@ -415,7 +413,6 @@ speexdsp
 spirv-tools
 sqlite
 srt
-startup-notification
 sudo
 svt-av1
 sysfsutils
@@ -426,7 +423,6 @@ tar
 tdb
 texinfo
 tlp
-tor-browser
 tslib
 ttf-font-awesome
 ttf-liberation
