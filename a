@@ -1,8 +1,0 @@
-=== [ press enter to continue ] ===cp: cannot stat '/usr/src/fastfetch': No such file or directory
-cp: cannot stat '/usr/src/yafetch': No such file or directory
-cp: cannot stat '/usr/src/colours': No such file or directory
-cp: cannot stat '/usr/src/dunstest': No such file or directory
-cp: cannot stat '/etc/doas.conf': No such file or directory
-cp: cannot stat '/usr/share/applications/st.desktop': No such file or directory
-cp: cannot stat '/usr/share/applications/st.svg': No such file or directory
-cp: cannot stat '/usr/src/shot': No such file or directory
