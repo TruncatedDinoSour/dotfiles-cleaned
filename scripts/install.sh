@@ -49,6 +49,14 @@ function q() {
     fi
 }
 
+if q "Do you want to run this very depricated install script?" "Continue?" "[y/N]$ " "Deprication warning";
+then
+    echo 'Okay, I am not responsible for any breakage'
+else
+    echo 'Good choice. https://github.com/TruncatedDinosour/dotfiles-cleaned#manual-installation-arch-linux'
+    exit 0
+fi
+
 function software() {
     if q "Checking internet connection" "Continue?" "[y/N]$ " "\$ ping -c 5 google.com";
     then

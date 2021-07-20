@@ -1,5 +1,5 @@
 [Default Applications]
-x-scheme-handler/tg=userapp-Kotatogram Desktop-EYYK50.desktop
+x-scheme-handler/tg=userapp-Kotatogram Desktop-7TZW60.desktop
 x-scheme-handler/http=firefox.desktop
 x-scheme-handler/https=firefox.desktop
 x-scheme-handler/chrome=firefox.desktop
@@ -12,7 +12,7 @@ application/x-extension-xhtml=firefox.desktop
 application/x-extension-xht=firefox.desktop
 
 [Added Associations]
-x-scheme-handler/tg=userapp-Kotatogram Desktop-EYYK50.desktop;
+x-scheme-handler/tg=userapp-Kotatogram Desktop-EYYK50.desktop;userapp-Kotatogram Desktop-7TZW60.desktop;
 application/octet-stream=vim.desktop;VSCodium.desktop;
 text/plain=vim.desktop;
 x-scheme-handler/http=firefox.desktop;

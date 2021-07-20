@@ -12,12 +12,12 @@
       <ExtraDataItem name="GUI/GroupDefinitions/" value="n=GLOBAL"/>
       <ExtraDataItem name="GUI/HideDescriptionForWizards" value="NewVM"/>
       <ExtraDataItem name="GUI/LastItemSelected" value="n=GLOBAL"/>
-      <ExtraDataItem name="GUI/LastWindowPosition" value="4,23,1908,1049"/>
+      <ExtraDataItem name="GUI/LastWindowPosition" value="0,21,1914,1053"/>
       <ExtraDataItem name="GUI/LogViewerOptions" value="monospace,noFontStyleName,9"/>
       <ExtraDataItem name="GUI/LogWindowGeometry" value="6,25,948,1049"/>
       <ExtraDataItem name="GUI/RecentFolderCD" value="/home/ari/Downloads"/>
       <ExtraDataItem name="GUI/RecentListCD" value="/home/ari/Downloads/artix-base-runit-20210426-x86_64.iso,/home/ari/Downloads/void-live-x86_64-20210218.iso,/home/ari/Downloads/venomlinux-2.1-x86_64.iso"/>
-      <ExtraDataItem name="GUI/SplitterSizes" value="630,1277"/>
+      <ExtraDataItem name="GUI/SplitterSizes" value="632,1281"/>
       <ExtraDataItem name="GUI/SuppressMessages" value="remindAboutAutoCapture,remindAboutMouseIntegration"/>
       <ExtraDataItem name="GUI/Toolbar" value="false"/>
       <ExtraDataItem name="GUI/Tools/LastItemsSelected" value="Welcome,Details"/>

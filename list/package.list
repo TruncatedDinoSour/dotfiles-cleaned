@@ -24,12 +24,9 @@ bat
 binutils
 bison
 bluez-libs
-boost
-boost-libs
 bpython
 brotli
 bzip2
-c-ares
 ca-certificates
 ca-certificates-mozilla
 ca-certificates-utils
@@ -46,12 +43,12 @@ dbus-glib
 dconf
 desktop-file-utils
 device-mapper
-dhcpcd
 dialog
 diffutils
 dnssec-anchors
 dosfstools
 double-conversion
+duf-bin
 dunst-git
 e2fsprogs
 efibootmgr
@@ -108,9 +105,9 @@ guile
 gzip
 harfbuzz
 hdparm
-help2man
 hicolor-icon-theme
 hidapi
+hunspell
 hwids
 hwloc
 iana-etc
@@ -133,6 +130,7 @@ kcolorpicker
 keyutils
 kimageannotator
 kmod
+kotatogram-desktop-bin
 krb5
 ksnip
 l-smash
@@ -308,10 +306,6 @@ ncurses
 nerd-fonts-hack
 nettle
 networkmanager
-node-gyp
-nodejs
-nodejs-nopt
-npm
 npth
 nspr
 nss
@@ -336,7 +330,6 @@ pcre
 pcre2
 perl
 perl-error
-perl-locale-gettext
 perl-mailtools
 perl-timedate
 pinentry
@@ -347,7 +340,6 @@ popt
 preload
 procps-ng
 psmisc
-pybind11
 python
 python-appdirs
 python-blessings
@@ -383,6 +375,7 @@ python-retrying
 python-setuptools
 python-six
 python-toml
+python-tomli
 python-urllib3
 python-webencodings
 python2
@@ -401,7 +394,6 @@ scrot
 sdl
 sdl2
 sed
-semver
 shaderc
 shadow
 shared-mime-info
@@ -413,6 +405,7 @@ speexdsp
 spirv-tools
 sqlite
 srt
+startup-notification
 sudo
 svt-av1
 sysfsutils
@@ -423,9 +416,9 @@ tar
 tdb
 texinfo
 tlp
+tor-browser
 tslib
 ttf-font-awesome
-ttf-liberation
 tzdata
 uchardet
 usbutils

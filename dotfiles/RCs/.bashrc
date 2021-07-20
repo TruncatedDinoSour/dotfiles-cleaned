@@ -76,13 +76,36 @@ man() {
 }
 
 
+# gruvbox TTY theme, pattern: \e]P*[HEX CODE]
+if [ "$TERM" == "linux" ]; then
+    echo -en "\e]P0282828" #black
+    echo -en "\e]P83C3C3C" #darkgrey
+    echo -en "\e]P1CC241D" #darkred
+    echo -en "\e]P9FB4934" #red
+    echo -en "\e]P298971A" #darkgreen
+    echo -en "\e]PA689D6A" #green
+    echo -en "\e]P3D7AF87" #brown
+    echo -en "\e]PBB8BB26" #yellow
+    echo -en "\e]P4458588" #darkblue
+    echo -en "\e]PC83A598" #blue
+    echo -en "\e]P5B16286" #darkmagenta
+    echo -en "\e]PDD3869B" #magenta
+    echo -en "\e]P6458588" #darkcyan
+    echo -en "\e]PE83A598" #cyan
+    echo -en "\e]P7C0B087" #lightgrey
+    echo -en "\e]PFEBDBB2" #white
+    /bin/clear #for background artifacting
+fi
+
+
 alias ..='cd ..'
 alias rm="trash-put"
 alias ls='/bin/lsd --color=auto'
 alias ll='/bin/lsd -l --color=auto'
 alias la='/bin/lsd -la --color=auto'
-alias rms="trash-empty"
-alias rml="trash-list"
+alias rms='trash-empty'
+alias rml='trash-list'
+alias df='/bin/duf -hide special'
 alias cat='/bin/bat --theme="gruvbox-dark"'
 alias src='source ~/.bashrc'
 alias stx='/bin/startx'
@@ -106,7 +129,7 @@ export CXX="g++"
 alias make="/bin/make ${MAKEOPTS}"
 alias cxx="$CXX ${CXXFLAGS}"
 
-export ENV=$HOME/.profile
+export ENV="$HOME/.profile"
 export PATH="$PATH:$HOME/.local/bin"
 export EDITOR='vim'
 export PROMPT_COMMAND='ps_one'

@@ -25,9 +25,9 @@ from=(
     "/home/ari/Suckless"
     "/home/ari/.dwm"
     "/usr/src/fastfetch"
-    "/usr/src/yafetch"
-    "/usr/src/colours"
-    "/usr/src/dunstest"
+    "/usr/local/src/yafetch"
+    "/usr/local/src/colours"
+    "/usr/local/src/dunstest"
     "/etc/bash_git"
     "/etc/doas.conf"
     "/etc/paru.conf"
@@ -39,10 +39,8 @@ from=(
     "/etc/sudoers"
     "/etc/mkinitcpio.conf"
     "/home/ari/.profile"
-    "/usr/share/applications/st.desktop"
-    "/usr/share/applications/st.svg"
     "/etc/default/grub"
-    "/usr/src/shot"
+    "/usr/local/src/shot"
     "/home/ari/Pictures/wallpaper.png"
 )
 to=(
@@ -88,5 +86,5 @@ rm -rfv dotfiles/config/dconf dotfiles/editors/vim/.vim/undodir dotfiles/config/
 
 paru -Q | grep -io "^\S*" > list/package.list
 paru -Q > list/package_full.list
-lsd --tree --depth=2 /usr/src > list/src.list
+lsd --tree --depth=2 /usr/local/src > list/src.list
 

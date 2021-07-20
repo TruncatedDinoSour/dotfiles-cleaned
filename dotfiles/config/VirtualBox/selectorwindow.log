@@ -1,18 +1,18 @@
-00:00:00.523012 VirtualBox GUI VM Selector Window 6.1.22 r144080 linux.amd64 (Jun 21 2021 10:09:41) release log
-00:00:00.523017 Log opened 2021-06-29T21:38:56.567759000Z
-00:00:00.523019 Build Type: release
-00:00:00.523025 OS Product: Linux
-00:00:00.523029 OS Release: 5.12.13-arch1-2
-00:00:00.523032 OS Version: #1 SMP PREEMPT Fri, 25 Jun 2021 22:56:51 +0000
-00:00:00.523103 DMI Product Name: HP 250 G7 Notebook PC
-00:00:00.523138 DMI Product Version: Type1ProductConfigId
-00:00:00.523153 Firmware type: UEFI
-00:00:00.525706 Secure Boot: Disabled
-00:00:00.525845 Host RAM: 3839MB (3.7GB) total, 3263MB (3.1GB) available
-00:00:00.525857 Executable: /usr/lib/virtualbox/VirtualBox
-00:00:00.525859 Process ID: 2540788
-00:00:00.525861 Package type: LINUX_64BITS_GENERIC (OSE)
-00:00:00.525957 Qt version: 5.15.2
-00:00:00.568948 GUI: UIMediumEnumerator: Medium-enumeration started...
-00:00:01.353622 GUI: UIDesktopWidgetWatchdog::sltHandleHostScreenAvailableGeometryCalculated: Screen 0 work area is actually resized to: 2x21 x 948x1049
-00:00:01.353713 GUI: UIMediumEnumerator: Medium-enumeration finished!
+00:00:00.357316 VirtualBox GUI VM Selector Window 6.1.22 r144080 linux.amd64 (Jun 21 2021 10:09:41) release log
+00:00:00.357322 Log opened 2021-07-19T00:28:58.444355000Z
+00:00:00.357324 Build Type: release
+00:00:00.357329 OS Product: Linux
+00:00:00.357332 OS Release: 5.12.15-arch1-1
+00:00:00.357335 OS Version: #1 SMP PREEMPT Wed, 07 Jul 2021 23:35:29 +0000
+00:00:00.357376 DMI Product Name: HP 250 G7 Notebook PC
+00:00:00.357395 DMI Product Version: Type1ProductConfigId
+00:00:00.357405 Firmware type: UEFI
+00:00:00.359639 Secure Boot: Disabled
+00:00:00.359762 Host RAM: 3839MB (3.7GB) total, 3363MB (3.2GB) available
+00:00:00.359770 Executable: /usr/lib/virtualbox/VirtualBox
+00:00:00.359772 Process ID: 68540
+00:00:00.359773 Package type: LINUX_64BITS_GENERIC (OSE)
+00:00:00.359846 Qt version: 5.15.2
+00:00:00.390023 GUI: UIMediumEnumerator: Medium-enumeration started...
+00:00:00.827893 GUI: UIDesktopWidgetWatchdog::sltHandleHostScreenAvailableGeometryCalculated: Screen 0 work area is actually resized to: -2x19 x 954x1053
+00:00:00.827959 GUI: UIMediumEnumerator: Medium-enumeration finished!
