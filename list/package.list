@@ -91,6 +91,7 @@ gnupg
 gnutls
 gpgme
 gpm
+gptfdisk
 graphite
 grep
 groff
@@ -182,6 +183,7 @@ libice
 libid3tag
 libidn2
 libiec61883
+libinih
 libinput
 libjpeg-turbo
 libksba
@@ -282,6 +284,7 @@ linux-headers
 llvm-libs
 lm_sensors
 lsd
+lsof
 lua51
 lua52
 lxappearance
@@ -438,6 +441,7 @@ vscodium-bin-marketplace
 vulkan-icd-loader
 wayland
 wayland-protocols
+wget
 which
 wpa_supplicant
 x264
@@ -454,6 +458,7 @@ xdg-utils
 xf86-input-libinput
 xf86-video-intel
 xf86-video-vesa
+xfsprogs
 xkeyboard-config
 xorg-bdftopcf
 xorg-docs

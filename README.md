@@ -5,7 +5,7 @@
 
 <p align="center"><b>What Am I using right now?</b></p>
 <pre>
-OS:     Arch Linux
+OS:     Bedrock Linux (Using Arch Linux)
 WM/DE:  DWM
 SHELL:  Bash
 THEME:  Gruvbox (aqua)
@@ -109,7 +109,8 @@ $ cd dotfiles
 $ mkdir -p ~/Pictures
 $ mv etc/wallpaper.png ~/Pictures
 $ sudo mv bin/* /usr/src
-$ rm -rfv bin
+$ sudo mv bedrock/* /bedrock
+$ rm -rfv bin bedrock
 $ mv config ~/.config
 $ cd core
 $ mv .xinitrc ~/.xinitrc

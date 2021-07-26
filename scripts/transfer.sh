@@ -12,7 +12,7 @@ read -p "=== [ press enter to continue ] ===" x
 
 rm -rfv dotfiles list
 mkdir -p list
-mkdir -p dotfiles{,/RCs,/editors/vim,/core,/bin,/etc}
+mkdir -p dotfiles{,/RCs,/editors/vim,/core,/bin,/etc,/bedrock}
 
 
 from=(
@@ -41,6 +41,7 @@ from=(
     "/etc/default/grub"
     "/usr/local/src/shot"
     "/home/ari/Pictures/wallpaper.png"
+    "/bedrock/etc/bedrock.conf"
 )
 to=(
     "dotfiles/config"
@@ -70,6 +71,7 @@ to=(
     "dotfiles/core"
     "dotfiles/bin"
     "dotfiles/etc"
+    "dotfiles/bedrock"
 )
 
 
