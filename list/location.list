@@ -21,6 +21,6 @@ dotfiles/core -> /etc/sudoers
 dotfiles/core -> /etc/mkinitcpio.conf
 dotfiles/RCs -> /home/ari/.profile
 dotfiles/core -> /etc/default/grub
-dotfiles/core -> /usr/local/src/shot
-dotfiles/core -> /home/ari/Pictures/wallpaper.png
-dotfiles/bin -> /bedrock/etc/bedrock.conf
+dotfiles/bin -> /usr/local/src/shot
+dotfiles/etc -> /home/ari/Pictures/wallpaper.png
+dotfiles/bedrock -> /bedrock/etc/bedrock.conf

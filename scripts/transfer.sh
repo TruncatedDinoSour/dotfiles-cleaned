@@ -67,8 +67,6 @@ to=(
     "dotfiles/core"
     "dotfiles/RCs"
     "dotfiles/core"
-    "dotfiles/core"
-    "dotfiles/core"
     "dotfiles/bin"
     "dotfiles/etc"
     "dotfiles/bedrock"
