@@ -7,9 +7,9 @@ dotfiles/core -> /home/ari/.xinitrc
 dotfiles/suckless -> /home/ari/Suckless
 dotfiles/suckless -> /home/ari/.dwm
 dotfiles/bin -> /usr/src/fastfetch
-dotfiles/bin -> /usr/src/yafetch
-dotfiles/bin -> /usr/src/colours
-dotfiles/bin -> /usr/src/dunstest
+dotfiles/bin -> /usr/local/src/yafetch
+dotfiles/bin -> /usr/local/src/colours
+dotfiles/bin -> /usr/local/src/dunstest
 dotfiles/core -> /etc/bash_git
 dotfiles/core -> /etc/doas.conf
 dotfiles/core -> /etc/paru.conf
@@ -21,8 +21,6 @@ dotfiles/scripts -> /home/ari/Ari/coding/resources_/dotfiles-cleaned/scripts
 dotfiles/core -> /etc/sudoers
 dotfiles/core -> /etc/mkinitcpio.conf
 dotfiles/RCs -> /home/ari/.profile
-dotfiles/core -> /usr/share/applications/st.desktop
-dotfiles/core -> /usr/share/applications/st.svg
 dotfiles/core -> /etc/default/grub
-dotfiles/bin -> /usr/src/shot
-dotfiles/etc -> /home/ari/Pictures/wallpaper.png
+dotfiles/core -> /usr/local/src/shot
+dotfiles/core -> /home/ari/Pictures/wallpaper.png

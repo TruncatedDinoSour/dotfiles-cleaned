@@ -1,0 +1,26 @@
+00:00:00.239509 VirtualBox GUI VM Selector Window 6.1.24 r145751 linux.amd64 (Jul 20 2021 19:23:17) release log
+00:00:00.239511 Log opened 2021-07-21T08:43:08.268642000Z
+00:00:00.239511 Build Type: release
+00:00:00.239513 OS Product: Linux
+00:00:00.239514 OS Release: 5.13.4-arch1-1
+00:00:00.239515 OS Version: #1 SMP PREEMPT Tue, 20 Jul 2021 16:58:51 +0000
+00:00:00.239530 DMI Product Name: HP 250 G7 Notebook PC
+00:00:00.239535 DMI Product Version: Type1ProductConfigId
+00:00:00.239538 Firmware type: UEFI
+00:00:00.240143 Secure Boot: Disabled
+00:00:00.240178 Host RAM: 3839MB (3.7GB) total, 3478MB (3.3GB) available
+00:00:00.240180 Executable: /usr/lib/virtualbox/VirtualBox
+00:00:00.240181 Process ID: 400123
+00:00:00.240181 Package type: LINUX_64BITS_GENERIC (OSE)
+00:00:00.240204 Qt version: 5.15.2
+00:00:00.248106 GUI: UIMediumEnumerator: Medium-enumeration started...
+00:00:00.620434 GUI: UIDesktopWidgetWatchdog::sltHandleHostScreenAvailableGeometryCalculated: Screen 0 work area is actually resized to: -2x19 x 1914x1053
+00:00:00.620503 GUI: UIMediumEnumerator: Medium-enumeration finished!
+00:00:29.309061 GUI: UIMediumEnumerator: Medium with key={{4ef7cb74-4d83-44b3-9dd2-b7a5db1b82bf}} created
+00:00:29.465059 GUI: UIMediumEnumerator: Medium-enumeration finished!
+00:00:57.492966 GUI: UIMediumEnumerator: Medium-enumeration finished!
+00:01:07.171504 GUI: UIMediumEnumerator: Medium-enumeration finished!
+00:01:09.220378 GUI: UIMediumEnumerator: Medium-enumeration finished!
+00:02:27.729483 GUI: UIMediumEnumerator: Medium-enumeration finished!
+00:02:28.428048 GUI: UIMediumEnumerator: Medium-enumeration finished!
+00:02:35.699770 GUI: UIMediumEnumerator: Medium-enumeration finished!

@@ -1,29 +1,9 @@
-src
-└── linux ⇒ ../lib/modules/5.12.15-arch1-1/build
-   ├── arch
-   ├── block
-   ├── certs
-   ├── crypto
-   ├── drivers
-   ├── fs
-   ├── include
-   ├── init
-   ├── Kconfig
-   ├── kernel
-   ├── lib
-   ├── localversion.10-pkgrel
-   ├── localversion.20-pkgname
-   ├── Makefile
-   ├── mm
-   ├── Module.symvers
-   ├── net
-   ├── samples
-   ├── scripts
-   ├── security
-   ├── sound
-   ├── System.map
-   ├── tools
-   ├── usr
-   ├── version
-   ├── virt
-   └── vmlinux
+drwxr-xr-x root root 4.0 KB Mon Jul 19 03:54:46 2021 .
+drwxr-xr-x root root 4.0 KB Sat Jul 17 22:32:47 2021 ..
+drwxr-xr-x root root 4.0 KB Mon Jul 19 03:53:57 2021 cmatrix
+drwxr-xr-x ari  ari  4.0 KB Mon Jul 19 02:22:57 2021 colours
+drwxr-xr-x ari  ari  4.0 KB Mon Jul 19 02:22:57 2021 dunstest
+drwxr-xr-x ari  ari  4.0 KB Mon Jul 19 03:03:05 2021 fastfetch
+drwxr-xr-x root root  12 KB Mon Jul 19 03:55:43 2021 htop
+drwxr-xr-x ari  ari  4.0 KB Mon Jul 19 02:22:57 2021 shot
+drwxr-xr-x ari  ari  4.0 KB Mon Jul 19 03:05:36 2021 yafetch

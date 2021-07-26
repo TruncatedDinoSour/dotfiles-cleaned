@@ -4,8 +4,8 @@ Generated File. Do not edit.
 Version,0,5
 
 [COMPONENTS]
-rel:VBoxSVCM.so,1624270181000
-rel:VBoxC.so,1624270181000
+rel:VBoxSVCM.so,1626808997000
+rel:VBoxC.so,1626808997000
 rel:VBoxXPCOMIPCC.so,1624270181000
 
 [CLASSIDS]
@@ -15,7 +15,7 @@ rel:VBoxXPCOMIPCC.so,1624270181000
 {b1a7a4f2-47b9-4a1e-82b2-07ccd5323c3f},,,,rel:VBoxSVCM.so
 {3c02f46d-c9d2-4f11-a384-53f0cf917214},,,,rel:VBoxC.so
 {dd3fc71d-26c0-4fe1-bf6f-67f633265bba},,,,rel:VBoxC.so
-{63a5d9dc-4828-425a-bd50-bd10a4b26f2c},,,,rel:VBoxXPCOMIPCC.so
+{63a5d9dc-4828-425a-bd50-bd10a4b26f2c},@mozilla.org/ipc/dconnect-service;1,,ipcDConnectService,rel:VBoxXPCOMIPCC.so
 
 [CONTRACTIDS]
 @virtualbox.org/VirtualBoxClient;1,{dd3fc71d-26c0-4fe1-bf6f-67f633265bba}

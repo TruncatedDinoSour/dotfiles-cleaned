@@ -30,7 +30,7 @@ filetype off
 " after :PlugInstall, install cmake and run the ~/.vim/plugged/youcompleteme/install.py file and
 " then run :YcmRestartServer
 
-call plug#begin('/home/ari/.vim/plugged')
+call plug#begin('~/.vim/plugged')
     Plug 'morhetz/gruvbox'
     Plug 'valloric/youcompleteme'
     Plug 'tpope/vim-surround'

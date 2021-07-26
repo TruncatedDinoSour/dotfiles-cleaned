@@ -1,6 +1,7 @@
 acl
 adobe-source-code-pro-fonts
 adwaita-icon-theme
+alacritty
 alsa-lib
 alsa-topology-conf
 alsa-ucm-conf
@@ -21,8 +22,11 @@ base
 bash
 bash-completion
 bat
+bemenu
+bemenu-x11
 binutils
 bison
+bitwarden-bin
 bluez-libs
 bpython
 brotli
@@ -51,6 +55,7 @@ double-conversion
 duf-bin
 dunst-git
 e2fsprogs
+edk2-ovmf
 efibootmgr
 efivar
 elfutils
@@ -90,6 +95,7 @@ gnupg
 gnutls
 gpgme
 gpm
+gptfdisk
 graphite
 grep
 groff
@@ -121,6 +127,12 @@ iso-codes
 iw
 jack
 jansson
+java-environment-common
+java-runtime-common
+jdk11-openjdk
+jp2a
+jre11-openjdk
+jre11-openjdk-headless
 js78
 json-c
 json-glib
@@ -190,6 +202,7 @@ libmnl
 libmodplug
 libmpc
 libndp
+libnet
 libnetfilter_conntrack
 libnewt
 libnfnetlink
@@ -303,6 +316,7 @@ mtools
 mujs
 nano
 ncurses
+neofetch
 nerd-fonts-hack
 nettle
 networkmanager
@@ -413,8 +427,10 @@ systemd
 systemd-libs
 systemd-sysvcompat
 tar
+tcl
 tdb
 texinfo
+tk
 tlp
 tor-browser
 tslib

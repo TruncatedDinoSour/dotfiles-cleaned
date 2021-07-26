@@ -82,9 +82,9 @@ do
 done
 
 sudo chown -R ari:ari dotfiles
-rm -rfv dotfiles/config/dconf dotfiles/editors/vim/.vim/undodir dotfiles/config/Code dotfiles/config/VSCodium dotfiles/config/chromium
+rm -rfv dotfiles/config/dconf dotfiles/editors/vim/.vim/undodir dotfiles/config/Bitwarden dotfiles/config/Code dotfiles/config/VSCodium dotfiles/config/chromium
 
 paru -Q | grep -io "^\S*" > list/package.list
 paru -Q > list/package_full.list
-lsd --tree --depth=2 /usr/local/src > list/src.list
+lsd -la /usr/local/src > list/src.list
 

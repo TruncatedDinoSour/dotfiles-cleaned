@@ -1,0 +1,3 @@
+{
+    "bits": 256 /* How many random bits to generate (I suggest from 126 to 512) bits */
+}
