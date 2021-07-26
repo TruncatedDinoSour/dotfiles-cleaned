@@ -6,12 +6,11 @@ dotfiles/editors/vim -> /home/ari/.vimrc
 dotfiles/core -> /home/ari/.xinitrc
 dotfiles/suckless -> /home/ari/Suckless
 dotfiles/suckless -> /home/ari/.dwm
-dotfiles/bin -> /usr/src/fastfetch
+dotfiles/bin -> /usr/local/src/fastfetch
 dotfiles/bin -> /usr/local/src/yafetch
 dotfiles/bin -> /usr/local/src/colours
 dotfiles/bin -> /usr/local/src/dunstest
 dotfiles/core -> /etc/bash_git
-dotfiles/core -> /etc/doas.conf
 dotfiles/core -> /etc/paru.conf
 dotfiles/core -> /etc/pacman.conf
 dotfiles/fish -> /etc/fish

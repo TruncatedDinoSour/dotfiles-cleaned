@@ -1,0 +1,5 @@
+**/build/
+**/.vscode/
+**/.cache/
+cscope.*
+tags
