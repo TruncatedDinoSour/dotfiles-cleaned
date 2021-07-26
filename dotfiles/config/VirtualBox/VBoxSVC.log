@@ -1,41 +1,42 @@
-00:00:00.000385 main     VirtualBox XPCOM Server 6.1.24 r145751 linux.amd64 (Jul 20 2021 19:23:17) release log
-00:00:00.000387 main     Log opened 2021-07-25T10:37:46.988965000Z
-00:00:00.000388 main     Build Type: release
-00:00:00.000390 main     OS Product: Linux
-00:00:00.000391 main     OS Release: 5.13.4-arch2-1
-00:00:00.000393 main     OS Version: #1 SMP PREEMPT Thu, 22 Jul 2021 20:46:28 +0000
-00:00:00.000412 main     DMI Product Name: HP 250 G7 Notebook PC
-00:00:00.000422 main     DMI Product Version: Type1ProductConfigId
-00:00:00.000426 main     Firmware type: UEFI
-00:00:00.001061 main     Secure Boot: Disabled
-00:00:00.001116 main     Host RAM: 3839MB (3.7GB) total, 2142MB (2.0GB) available
-00:00:00.001119 main     Executable: /usr/lib/virtualbox/VBoxSVC
-00:00:00.001120 main     Process ID: 419818
-00:00:00.001121 main     Package type: LINUX_64BITS_GENERIC (OSE)
-00:00:00.002928 main     IPC socket path: /tmp/.vbox-ari-ipc/ipcd
-00:00:00.111739 nspr-2   VirtualBox: object creation starts
-00:00:00.111795 nspr-2   Home directory: '/home/ari/.config/VirtualBox'
-00:00:00.111902 nspr-2   Loading settings file "/home/ari/.config/VirtualBox/VirtualBox.xml" with version "1.12-linux"
-00:00:00.116301 nspr-2   NetIfAdpCtlOut: VBoxNetAdpCtl: Error while retrieving link speed for wlo1: VBoxNetAdpCtl: ioctl failed: Operation not supported
-00:00:00.116656 nspr-2   HostDnsMonitor: initializing
-00:00:00.116889 nspr-2   NAT: resolv.conf: nameserver 192.168.1.254
-00:00:00.116900 nspr-2   HostDnsMonitor: updating information
-00:00:00.116909 nspr-2   HostDnsMonitor: old information
-00:00:00.116911 nspr-2     no server entries
-00:00:00.116913 nspr-2     no domain set
-00:00:00.116914 nspr-2     no search string entries
-00:00:00.116915 nspr-2   HostDnsMonitor: new information
-00:00:00.116917 nspr-2     server 1: 192.168.1.254
-00:00:00.116918 nspr-2     domain: lan
-00:00:00.116920 nspr-2     search string 1: lan
-00:00:00.118772 nspr-2   VD: VDInit finished with VINF_SUCCESS
-00:00:00.118839 nspr-2   ERROR [COM]: aRC=NS_ERROR_FAILURE (0x80004005) aIID={027bc463-929c-40e8-bf16-fea557cd8e7e} aComponent={SystemPropertiesWrap} aText={Cannot determine default Guest Additions ISO location. Most likely they are not available}, preserve=false aResultDetail=0
-00:00:00.119240 nspr-2   VirtualBox: object created
-00:00:02.324836 nspr-2   Saving settings file "/home/ari/.config/VirtualBox/VirtualBox.xml" with version "1.12-linux"
-00:00:02.359073 nspr-2   Saving settings file "/home/ari/.config/VirtualBox/VirtualBox.xml" with version "1.12-linux"
-00:00:07.900870 main     VirtualBox: object deletion starts
-00:00:07.901580 main     HostDnsMonitor: shutting down ...
-00:00:07.908329 main     HostDnsMonitor: shut down
-00:00:08.121241 Watcher  ERROR [COM]: aRC=E_ACCESSDENIED (0x80070005) aIID={d0a0163f-e254-4e5b-a1f2-011cf991c38d} aComponent={VirtualBoxWrap} aText={The object is not ready}, preserve=false aResultDetail=0
-00:00:12.908512 main     {00007fdb80017e40} HostPowerServiceLinux::~HostPowerServiceLinux: RTThreadWait() for 5000 ms failed with VERR_TIMEOUT
-00:00:12.909664 main     VirtualBox: object deleted
+00:00:00.001988 main     VirtualBox XPCOM Server 6.1.24 r145751 linux.amd64 (Jul 20 2021 19:23:17) release log
+00:00:00.001990 main     Log opened 2021-07-26T02:14:41.727632000Z
+00:00:00.001990 main     Build Type: release
+00:00:00.001992 main     OS Product: Linux
+00:00:00.001993 main     OS Release: 5.13.4-arch2-1
+00:00:00.001994 main     OS Version: #1 SMP PREEMPT Thu, 22 Jul 2021 20:46:28 +0000
+00:00:00.002009 main     DMI Product Name: HP 250 G7 Notebook PC
+00:00:00.002015 main     DMI Product Version: Type1ProductConfigId
+00:00:00.002018 main     Firmware type: UEFI
+00:00:00.002739 main     Secure Boot: Disabled
+00:00:00.002780 main     Host RAM: 3839MB (3.7GB) total, 2180MB (2.1GB) available
+00:00:00.002789 main     Executable: /usr/lib/virtualbox/VBoxSVC
+00:00:00.002790 main     Process ID: 386008
+00:00:00.002790 main     Package type: LINUX_64BITS_GENERIC (OSE)
+00:00:00.004134 main     IPC socket path: /tmp/.vbox-ari-ipc/ipcd
+00:00:00.113228 nspr-2   VirtualBox: object creation starts
+00:00:00.113460 nspr-2   Home directory: '/home/ari/.config/VirtualBox'
+00:00:00.113738 nspr-2   Loading settings file "/home/ari/.config/VirtualBox/VirtualBox.xml" with version "1.12-linux"
+00:00:00.133804 nspr-2   NetIfAdpCtlOut: VBoxNetAdpCtl: Error while retrieving link speed for wlo1: VBoxNetAdpCtl: ioctl failed: Operation not supported
+00:00:00.135468 nspr-2   HostDnsMonitor: initializing
+00:00:00.136055 nspr-2   NAT: resolv.conf: nameserver 192.168.1.254
+00:00:00.136092 nspr-2   HostDnsMonitor: updating information
+00:00:00.136125 nspr-2   HostDnsMonitor: old information
+00:00:00.136131 nspr-2     no server entries
+00:00:00.136137 nspr-2     no domain set
+00:00:00.136142 nspr-2     no search string entries
+00:00:00.136147 nspr-2   HostDnsMonitor: new information
+00:00:00.136152 nspr-2     server 1: 192.168.1.254
+00:00:00.136158 nspr-2     domain: lan
+00:00:00.136163 nspr-2     search string 1: lan
+00:00:00.143639 nspr-2   VD: VDInit finished with VINF_SUCCESS
+00:00:00.144429 nspr-2   ERROR [COM]: aRC=NS_ERROR_FAILURE (0x80004005) aIID={027bc463-929c-40e8-bf16-fea557cd8e7e} aComponent={SystemPropertiesWrap} aText={Cannot determine default Guest Additions ISO location. Most likely they are not available}, preserve=false aResultDetail=0
+00:00:00.145810 nspr-2   VirtualBox: object created
+00:00:03.406196 nspr-3   Saving settings file "/home/ari/.config/VirtualBox/VirtualBox.xml" with version "1.12-linux"
+00:00:03.473366 nspr-4   Saving settings file "/home/ari/.config/VirtualBox/VirtualBox.xml" with version "1.12-linux"
+00:00:03.492073 nspr-2   Saving settings file "/home/ari/.config/VirtualBox/VirtualBox.xml" with version "1.12-linux"
+00:00:09.029576 main     VirtualBox: object deletion starts
+00:00:09.030193 main     HostDnsMonitor: shutting down ...
+00:00:09.042446 main     HostDnsMonitor: shut down
+00:00:09.148961 Watcher  ERROR [COM]: aRC=E_ACCESSDENIED (0x80070005) aIID={d0a0163f-e254-4e5b-a1f2-011cf991c38d} aComponent={VirtualBoxWrap} aText={The object is not ready}, preserve=false aResultDetail=0
+00:00:14.042689 main     {00007fd0c4018270} HostPowerServiceLinux::~HostPowerServiceLinux: RTThreadWait() for 5000 ms failed with VERR_TIMEOUT
+00:00:14.043327 main     VirtualBox: object deleted
