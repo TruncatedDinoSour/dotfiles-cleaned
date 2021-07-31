@@ -5,7 +5,7 @@
 
 <p align="center"><b>What Am I using right now?</b></p>
 <pre>
-OS:     Bedrock Linux (Using Arch Linux)
+OS:     Arch linux
 WM/DE:  DWM
 SHELL:  Bash
 THEME:  Light-ish???
