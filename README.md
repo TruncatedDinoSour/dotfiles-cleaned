@@ -8,7 +8,7 @@
 OS:     Bedrock Linux (Using Arch Linux)
 WM/DE:  DWM
 SHELL:  Bash
-THEME:  Gruvbox (aqua)
+THEME:  Light-ish???
 </pre>
 
 <p align="center"><b>What are the dependencies?</b></p>
@@ -70,10 +70,10 @@ A: You may have set pacman as your package manager, But you actually need some o
 <h1 align="center"><b>Look & Feel</b></h1>
 <br/>
 <h3>DWM (Floating)</h3>
-<img src="https://user-images.githubusercontent.com/71613062/125146942-261f9200-e118-11eb-89ef-44c1ac552d9b.png">
+<img src="https://user-images.githubusercontent.com/71613062/127733814-049d07ae-a159-4df3-a8d3-202276edd5c3.png">
 
 <h3>DWM (Tiling)</h3>
-<img src="https://user-images.githubusercontent.com/71613062/125146965-418a9d00-e118-11eb-9441-4a662d72c239.png">
+<img src="https://user-images.githubusercontent.com/71613062/127733833-536b372b-37a7-4556-8dce-0b9d15b9d331.png">
 
 <h2 align="center"></h2>
 
