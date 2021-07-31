@@ -1,5 +1,3 @@
-runtime! archlinux.vim
-
 syntax on						" Turn syntax highlighting on
 
 set noerrorbells				" Turn off error sound
@@ -17,16 +15,16 @@ set confirm						" Confirm unsaved changes in files
 
 set encoding=utf-8                      " File encoding
 set laststatus=2                        " Set the bar type
-set undodir=~/.vim/undodir		        " Where to put undo files
+set undodir=~/.nvim/.undodir		    " Where to put undo files
 set tabstop=4							" Maximum tab width
 set shiftwidth=4						" Indent size
 set softtabstop=0						" Insert spaces instead of tabs
 set guicursor=a:hor100                  " Set the cursor shape to a _
 
 " Plugins
-" after :PlugInstall, install cmake and run the ~/.vim/plugged/youcompleteme/install.py file and
+" after :PlugInstall, install cmake and run the ~/.local/share/nvim/site/autoload/youcompleteme/install.py file and
 " then run :YcmRestartServer
-call plug#begin("~/.vim/plugged")
+call plug#begin("~/.local/share/nvim/site/autoload")
     Plug 'shinchu/lightline-gruvbox.vim'
     Plug 'AlessandroYorba/Alduin'
     Plug 'valloric/youcompleteme'

@@ -23,4 +23,3 @@ dotfiles/RCs -> /home/ari/.profile
 dotfiles/core -> /etc/default/grub
 dotfiles/bin -> /usr/local/src/shot
 dotfiles/etc -> /home/ari/Pictures/wallpaper.png
-dotfiles/bedrock -> /bedrock/etc/bedrock.conf

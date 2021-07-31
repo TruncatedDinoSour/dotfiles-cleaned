@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 back=$(pwd)
 
@@ -9,7 +9,14 @@ do
         echo -en "\n$i\n\n"
         cd $i
         sudo make clean install
+        b="$?"
         cd $back
+
+        if [[ "$b" != 0 ]]; then
+            break
+        fi
+
+        unset b
     fi
 done
 

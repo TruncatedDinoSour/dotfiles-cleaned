@@ -4,65 +4,42 @@
 
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
-#[[ -f "$HOME/.bashrc" ]] && return
 
 source /etc/bash_git
 
 
 RESTORE='\033[0m'
-
-RED='\033[00;31m'
 GREEN='\033[00;32m'
-YELLOW='\033[00;33m'
-BLUE='\033[00;34m'
-PURPLE='\033[00;35m'
-CYAN='\033[00;36m'
-LIGHTGRAY='\033[00;37m'
-
-LRED='\033[01;31m'
-LGREEN='\033[01;32m'
-LYELLOW='\033[01;33m'
-LBLUE='\033[01;34m'
-LPURPLE='\033[01;35m'
-LCYAN='\033[01;36m'
-WHITE='\033[01;37m'
+RED='\033[00;31m'
 
 
 autorun() {
     /usr/local/bin/yafetch
 }
 
+
 ps_one() {
-    local status="$?"
-    local git="$(__git_ps1 | sed "s/^ //g")"
-    local date="$(date "+%H:%M:%S")"
-    local extra=""
+    local c_status="$?"
+    local git="$(__git_ps1 | sed 's/^ //g')"
+    local dir='\W'
 
-    local dir="${LBLUE}\\W${RESTORE}"
-    if [[ "$git" ]];
-    then
-        local extra+=" -+- [ $dir ]"
-        local dir="${LBLUE}$git${RESTORE}"
+    local propt_char='#'
+    if [[ "$UID" != '0' ]]; then
+        local propt_char='%'
     fi
 
-    local prompt="$"
-    if [[ "$EUID" == 0 ]];
-    then
-        local prompt="${LRED}#${RESTORE}"
+    if [[ "$c_status" != '0' ]]; then
+        local propt_colour="${RED}$c_status "
     fi
 
-    local status_c="${GREEN}"
-    if [[ "$status" -ne 0 ]];
-    then
-        local status_c="${LRED}"
+    if [[ "$git" ]]; then
+        local dir="$git $dir"
     fi
 
 
-    local PS1_P1="[ \\u${YELLOW}@${RESTORE}\\h ] -+- [ $date ] -+- [ ${status_c}$status${RESTORE} ]${extra}"
-    local PS1_P2="[ $dir ]${prompt} "
-
-    export PS1="\n$PS1_P1\n$PS1_P2"
+    export PS1="\n${GREEN}\u${RESTORE}@\h ${dir} ${propt_colour}${propt_char}${RESTORE} "
 }
+
 
 man() {
     env LESS_TERMCAP_mb=$'\E[01;31m' \
@@ -76,66 +53,65 @@ man() {
 }
 
 
-# gruvbox TTY theme, pattern: \e]P*[HEX CODE]
+# TTy theme
 if [ "$TERM" == "linux" ]; then
     echo -en "\e]P0282828" #black
-    echo -en "\e]P83C3C3C" #darkgrey
-    echo -en "\e]P1CC241D" #darkred
-    echo -en "\e]P9FB4934" #red
-    echo -en "\e]P298971A" #darkgreen
-    echo -en "\e]PA689D6A" #green
+    echo -en "\e]P88F9494" #darkgrey
+    echo -en "\e]P1AF5f5F" #darkred
+    echo -en "\e]P9bb6868" #red
+    echo -en "\e]P287875F" #darkgreen
+    echo -en "\e]PA87875F" #green
     echo -en "\e]P3D7AF87" #brown
-    echo -en "\e]PBB8BB26" #yellow
-    echo -en "\e]P4458588" #darkblue
-    echo -en "\e]PC83A598" #blue
-    echo -en "\e]P5B16286" #darkmagenta
-    echo -en "\e]PDD3869B" #magenta
-    echo -en "\e]P6458588" #darkcyan
-    echo -en "\e]PE83A598" #cyan
-    echo -en "\e]P7C0B087" #lightgrey
-    echo -en "\e]PFEBDBB2" #white
+    echo -en "\e]PBbCBC6C" #yellow
+    echo -en "\e]P4666C7F" #darkblue
+    echo -en "\e]PC666C7F" #blue
+    echo -en "\e]P5A1456E" #darkmagenta
+    echo -en "\e]PDA1456E" #magenta
+    echo -en "\e]P687875F" #darkcyan
+    echo -en "\e]PE87875F" #cyan
+    echo -en "\e]P7DDD0C0" #lightgrey
+    echo -en "\e]PFDDD0C0" #white
     /bin/clear #for background artifacting
 fi
 
 
-alias ..='cd ..'
-alias rm="trash-put"
-alias ls='/bin/lsd --color=auto'
-alias ll='/bin/lsd -l --color=auto'
-alias la='/bin/lsd -la --color=auto'
-alias rms='trash-empty'
-alias rml='trash-list'
-alias rmt='trash-restore'
-alias df='/bin/duf -hide special'
-alias cat='/bin/bat --theme="gruvbox-dark"'
-alias src='source ~/.bashrc'
-alias stx='/bin/startx'
-alias grep='/bin/grep --color="auto" -i'
-alias glew="/home/ari/Ari/coding/python_/glew/glew/__main__.py"
-alias clear='/bin/clear && autorun'
-alias lsblk='/bin/lsblk -fa'
-alias ngrok='/home/ari/Ari/coding/tools_/ngrok_/ngrok'
+export MAKEOPTS='-j4 -l4'
 
-if [[ "${TERM,,}" == 'linux' ]];
-then
-    alias vim='vim --noplugin'
-fi
-
-
-export MAKEOPTS="-j4 -l4"
-export LDFLAGS="-Wl,--gc-sections,-strip-all"
-export CXXFLAGS="-Wall -Wextra -Wpedantic -ffunction-sections -fdata-sections -Wno-c++98-compat -O3 -s -g"
-export CXX="g++"
-
-alias make="/bin/make ${MAKEOPTS}"
-alias cxx="$CXX ${CXXFLAGS}"
+export PROMPT_COMMAND='ps_one'
 
 export ENV="$HOME/.profile"
 export PATH="$PATH:$HOME/.local/bin"
-export EDITOR='vim'
-export PROMPT_COMMAND='ps_one'
-export TORBROWSER_PKGLANG='en-US'
 
-dots="/home/ari/Ari/coding/resources_/dots"
+export EDITOR='vim'
+export BROWSER='firefox'
+
+alias ..='cd ..'
+
+alias ls='/bin/lsd --color=auto -F'
+alias ll='ls -lFS'
+alias la='ls -lFaS'
+
+alias rm='trash-put -v'
+alias rls='trash-list'
+alias rrm='trash-empty'
+alias rmk='trash-restore'
+
+alias df='/bin/duf -hide special'
+alias cat='/bin/bat --theme="gruvbox-dark"'
+
+alias src='source ~/.bashrc'
+alias stx='/bin/startx'
+
+alias lsblk='/bin/lsblk -fa'
+alias clear='/bin/clear; autorun'
+alias grep='/bin/grep --color="auto" -i'
+alias make="/bin/make ${MAKEOPTS}"
+
+alias diff='/bin/diff --color=auto'
+alias mv='/bin/mv -iv'
+alias cp='/bin/cp -iv'
+alias mkdir='/bin/mkdir -pv'
+
+dots='/home/ari/Ari/coding/resources_/dots'
 autorun
 

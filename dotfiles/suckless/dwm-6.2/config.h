@@ -14,13 +14,13 @@ static const int swallowfloating    = 0;        /* 1 means swallow floating wind
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const char *fonts[]          = { "sans:size=11",
-                                        "FontAwesome:size=10.5"};
+	"FontAwesome:size=10.5"};
 static const char dmenufont[]       = "monospace:size=10";
 static const char col_gray1[]       = "#282828"; /* #222222 */
-static const char col_gray2[]       = "#444444"; /* #444444 */
+static const char col_gray2[]       = "#282828"; /* #444444 */
 static const char col_gray3[]       = "#BBBBBB"; /* #BBBBBB */
 static const char col_gray4[]       = "#EEEEEE"; /* #EEEEEE */
-static const char col_cyan[]        = "#518152"; /* #005577 */
+static const char col_cyan[]        = "#87875f"; /* #005577 */
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
 	[SchemeNorm] = { col_gray3, col_gray1, col_gray2 }, /* innnactive bar */
@@ -36,43 +36,44 @@ static const Rule rules[] = {
 	 *	WM_NAME(STRING) = title
 	 */
 	/* class                         instance   title       tags mask     isfloating    isterminal  noswallow   monitor */
-    /*                                                      (1 << tag - 1)                     */
-    /* all tags */
-    { "ksnip",                      NULL,       NULL,       0,            1,            0,          1,          -1 },
-    { "Tk",                         NULL,       NULL,       0,            1,            0,          1,          -1 },
-    { "st",                         NULL,       NULL,       0,            0,            1,          0,          -1 },
-    { "Alacritty",                  NULL,       NULL,       0,            0,            1,          0,          -1 },
-    { NULL,                         NULL,   "Event Tester", 0,            0,            0,          1,          -1 }, /* xev */
-    { "SimpleScreenRecorder",       NULL,       NULL,       0,            1,            0,          1,          -1 },
-    { "Peek",                       NULL,       NULL,       0,            1,            0,          1,          -1 },
-    { "obs",                        NULL,       NULL,       0,            1,            0,          1,          -1 },
+	/*                                                      (1 << tag - 1)                     */
+	/* all tags */
+	{ "ksnip",                      NULL,       NULL,       0,            1,            0,          1,          -1 },
+	{ "Tk",                         NULL,       NULL,       0,            1,            0,          1,          -1 },
+	{ "st",                         NULL,       NULL,       0,            0,            1,          0,          -1 },
+	{ "Alacritty",                  NULL,       NULL,       0,            0,            1,          0,          -1 },
+	{ NULL,                         NULL,   "Event Tester", 0,            0,            0,          1,          -1 }, /* xev */
+	{ "SimpleScreenRecorder",       NULL,       NULL,       0,            1,            0,          1,          -1 },
+	{ "Peek",                       NULL,       NULL,       0,            1,            0,          1,          -1 },
+	{ "obs",                        NULL,       NULL,       0,            1,            0,          1,          -1 },
 
-    /* tag 2 */
-    { "firefox",                    NULL,       NULL,       1 << 1,       0,           0,           0,          -1 },
-    { "Tor Browser",                NULL,       NULL,       1 << 1,       0,           0,           0,          -1 },
-    { "LibreWolf",                  NULL,       NULL,       1 << 1,       0,           0,           0,          -1 },
-    { "chromium",                    NULL,       NULL,       1 << 1,       0,           0,           0,          -1  },
+	/* tag 2 */
+	{ "firefox",                    NULL,       NULL,       1 << 1,       0,           0,           0,          -1 },
+	{ "Tor Browser",                NULL,       NULL,       1 << 1,       0,           0,           0,          -1 },
+	{ "LibreWolf",                  NULL,       NULL,       1 << 1,       0,           0,           0,          -1 },
+	{ "chromium",                   NULL,       NULL,       1 << 1,       0,           0,           0,          -1 },
 
-    /* tag 3 */
-    { "Code",                       NULL,       NULL,       1 << 2,       0,           0,           0,          -1 },
-    { "jetbrains-pycharm-ce",       NULL,       NULL,       1 << 2,       0,           0,           0,          -1 },
-    { "VSCodium",                   NULL,       NULL,       1 << 2,       0,           0,           0,          -1 },
+	/* tag 3 */
+	{ "Code",                       NULL,       NULL,       1 << 2,       0,           0,           0,          -1 },
+	{ "jetbrains-pycharm-ce",       NULL,       NULL,       1 << 2,       0,           0,           0,          -1 },
+	{ "VSCodium",                   NULL,       NULL,       1 << 2,       0,           0,           0,          -1 },
 
-    /* tag 4 */
-    { "discord",                    NULL,       NULL,       1 << 3,       0,           0,           0,          -1 },
-    { "TelegramDesktop",            NULL,       NULL,       1 << 3,       0,           0,           0,          -1 },
-    { "KotatogramDesktop",          NULL,       NULL,       1 << 3,       0,           0,           0,          -1 },
+	/* tag 4 */
+	{ "discord",                    NULL,       NULL,       1 << 3,       0,           0,           0,          -1 },
+	{ "TelegramDesktop",            NULL,       NULL,       1 << 3,       0,           0,           0,          -1 },
+	{ "KotatogramDesktop",          NULL,       NULL,       1 << 3,       0,           0,           0,          -1 },
+    { "Bitwarden",                  NULL,       NULL,       1 << 3,       0,           0,           0,          -1 },
 
-    /* tag 5 */
-    { "Microsoft Teams - Preview",  NULL,       NULL,       1 << 4,       0,           0,           0,          -1 },
-    { "teams-for-linux",            NULL,       NULL,       1 << 4,       0,           0,           0,          -1 },
-    { "zoom",                       NULL,       NULL,       1 << 4,       0,           0,           0,          -1 },
+	/* tag 5 */
+	{ "Microsoft Teams - Preview",  NULL,       NULL,       1 << 4,       0,           0,           0,          -1 },
+	{ "teams-for-linux",            NULL,       NULL,       1 << 4,       0,           0,           0,          -1 },
+	{ "zoom",                       NULL,       NULL,       1 << 4,       0,           0,           0,          -1 },
 
-    /* tag 6 */
-    { "VirtualBox Manager",         NULL,       NULL,       1 << 5,       0,           0,           0,          -1 },
+	/* tag 6 */
+	{ "VirtualBox Manager",         NULL,       NULL,       1 << 5,       0,           0,           0,          -1 },
 
-    /* tag 7 */
-    { "libreoffice",                NULL,       NULL,       1 << 6,       0,           0,           0,          -1 },
+	/* tag 7 */
+	{ "libreoffice",                NULL,       NULL,       1 << 6,       0,           0,           0,          -1 },
 };
 
 /* layout(s) */
@@ -90,10 +91,10 @@ static const Layout layouts[] = {
 /* key definitions */
 #define MODKEY Mod4Mask
 #define TAGKEYS(KEY,TAG) \
-	{ MODKEY,                       KEY,      view,           {.ui = 1 << TAG} }, \
-	{ MODKEY|ControlMask,           KEY,      toggleview,     {.ui = 1 << TAG} }, \
-	{ MODKEY|ShiftMask,             KEY,      tag,            {.ui = 1 << TAG} }, \
-	{ MODKEY|ControlMask|ShiftMask, KEY,      toggletag,      {.ui = 1 << TAG} },
+{ MODKEY,                       KEY,      view,           {.ui = 1 << TAG} }, \
+{ MODKEY|ControlMask,           KEY,      toggleview,     {.ui = 1 << TAG} }, \
+{ MODKEY|ShiftMask,             KEY,      tag,            {.ui = 1 << TAG} }, \
+{ MODKEY|ControlMask|ShiftMask, KEY,      toggletag,      {.ui = 1 << TAG} },
 
 /* helper for spawning shell commands in the pre dwm-5.0 fashion */
 #define SHCMD(cmd) { .v = (const char*[]){ "/bin/sh", "-c", cmd, NULL } }
@@ -112,7 +113,7 @@ static const char *brupcmd[] = { sudo_cmd, "xbacklight", "-inc", "10", NULL  };
 static const char *brdowncmd[] = { sudo_cmd, "xbacklight", "-dec", "10", NULL  };
 
 static const char *bashcmd[] = { "st", "-e", "bash", NULL };
-static const char *editorcmd[] = { "st", "-e", "vim", NULL  };
+static const char *editorcmd[] = { "st", "-e", "nvim", NULL  };
 static const char *lockercmd[] = { "xautolock", "-locknow", NULL };
 static const char *browser[] = { "firefox", NULL };
 static const char *netwmgr[] = { "st", "-e", "nmtui", NULL };
@@ -124,81 +125,85 @@ static Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ MODKEY,                       XK_d,      spawn,          {.v = dmenucmd } },
 	{ MODKEY,                       XK_Return, spawn,          {.v = termcmd } },
-    // make a window master
-    { MODKEY|ShiftMask,             XK_Return, zoom,           {0}  },
-    // toggle bar
+	// make a window master
+	{ MODKEY|ShiftMask,             XK_Return, zoom,           {0}  },
+	// toggle bar
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
-    // cycle through the stack clockwise
+	// cycle through the stack clockwise
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
-    // cycle thtough the stack anti-clockwise
+	// cycle thtough the stack anti-clockwise
 	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
-    // increases number of windows on master
+	// increases number of windows on master
 	{ MODKEY|ShiftMask,             XK_i,      incnmaster,     {.i = +1 } },
 	// decreases number of windows on master
-    { MODKEY|ShiftMask,             XK_d,      incnmaster,     {.i = -1 } },
-    // make master smaller
+	{ MODKEY|ShiftMask,             XK_d,      incnmaster,     {.i = -1 } },
+	// make master smaller
 	{ MODKEY,                       XK_h,      setmfact,       {.f = -0.05} },
-    // make master larger
+	// make master larger
 	{ MODKEY,                       XK_l,      setmfact,       {.f = +0.05} },
 	// useless (not, i didn't understand this)
-    // { MODKEY,                       XK_Return, zoom,           {0} },
+	// { MODKEY,                       XK_Return, zoom,           {0} },
 	// switch to a used tab
-    { MODKEY,                       XK_Tab,    view,           {0} },
-    // kill a window
+	{ MODKEY,                       XK_Tab,    view,           {0} },
+	// kill a window
 	{ MODKEY|ShiftMask,             XK_q,      killclient,     {0} },
-    // default layout
-    { MODKEY,                       XK_t,      setlayout,      {.v = &layouts[0]} },
+	// default layout
+	{ MODKEY,                       XK_t,      setlayout,      {.v = &layouts[0]} },
 	// floating layout
-    { MODKEY,                       XK_f,      setlayout,      {.v = &layouts[1]} },
+	{ MODKEY,                       XK_f,      setlayout,      {.v = &layouts[1]} },
 	// tabbed layout
-    { MODKEY,                       XK_m,      setlayout,      {.v = &layouts[2]} },
-    // toggle floating window
+	{ MODKEY,                       XK_m,      setlayout,      {.v = &layouts[2]} },
+	// toggle floating window
 	{ MODKEY,                       XK_space,  setlayout,      {0} },
-    // toggle floating on all windows
+	// toggle floating on all windows
 	{ MODKEY|ShiftMask,             XK_space,  togglefloating, {0} },
-    // select all tags?
+	// select all tags?
 	// { MODKEY,                       XK_0,      view,           {.ui = ~0 } },
-    // copy a window to all tags?
+	// copy a window to all tags?
 	// { MODKEY|ShiftMask,             XK_0,      tag,            {.ui = ~0 } },
-    // ???
+	// ???
 	// { MODKEY,                       XK_comma,  focusmon,       {.i = -1 } },
 	// { MODKEY,                       XK_period, focusmon,       {.i = +1 } },
 	// { MODKEY|ShiftMask,             XK_comma,  tagmon,         {.i = -1 } },
 	// { MODKEY|ShiftMask,             XK_period, tagmon,         {.i = +1 } },
-	// switch to tags
-    TAGKEYS(                        XK_1,                      0)
-	TAGKEYS(                        XK_2,                      1)
-	TAGKEYS(                        XK_3,                      2)
-	TAGKEYS(                        XK_4,                      3)
-	TAGKEYS(                        XK_5,                      4)
-	TAGKEYS(                        XK_6,                      5)
-	TAGKEYS(                        XK_7,                      6)
-	TAGKEYS(                        XK_8,                      7)
-	TAGKEYS(                        XK_9,                      8)
-	// exit dwm
-    { MODKEY|ShiftMask,             XK_e,      quit,           {0} },
+    // gap control
+    { MODKEY,                       XK_minus,  setgaps,        {.i = -1 } },
+    { MODKEY,                       XK_equal,  setgaps,        {.i = +1 } },
+    { MODKEY|ShiftMask,             XK_equal,  setgaps,        {.i = 0  } },
+    // switch to tags
+	TAGKEYS(                        XK_1,                      0)
+		TAGKEYS(                        XK_2,                      1)
+		TAGKEYS(                        XK_3,                      2)
+		TAGKEYS(                        XK_4,                      3)
+		TAGKEYS(                        XK_5,                      4)
+		TAGKEYS(                        XK_6,                      5)
+		TAGKEYS(                        XK_7,                      6)
+		TAGKEYS(                        XK_8,                      7)
+		TAGKEYS(                        XK_9,                      8)
+		// exit dwm
+		{ MODKEY|ShiftMask,             XK_e,      quit,           {0} },
 
-    // media keys
-    { 0,                            XF86XK_AudioMute,         spawn,          {.v = mutecmd }   },
-    { 0,                            XF86XK_AudioLowerVolume,  spawn,          {.v = voldowncmd} },
-    { 0,                            XF86XK_AudioRaiseVolume,  spawn,          {.v = volupcmd}   },
-    { 0,                            XF86XK_MonBrightnessUp,   spawn,          {.v = brupcmd}    },
-    { 0,                            XF86XK_MonBrightnessDown, spawn,          {.v = brdowncmd}  },
+	// media keys
+	{ 0,                            XF86XK_AudioMute,         spawn,          {.v = mutecmd }   },
+	{ 0,                            XF86XK_AudioLowerVolume,  spawn,          {.v = voldowncmd} },
+	{ 0,                            XF86XK_AudioRaiseVolume,  spawn,          {.v = volupcmd}   },
+	{ 0,                            XF86XK_MonBrightnessUp,   spawn,          {.v = brupcmd}    },
+	{ 0,                            XF86XK_MonBrightnessDown, spawn,          {.v = brdowncmd}  },
 
-    // st + bash
-    { MODKEY|ShiftMask,             XK_b,                     spawn,          {.v = bashcmd}   },
-    // vim
-    { MODKEY|ControlMask,           XK_e,                     spawn,          {.v = editorcmd} },
-    // locker
-    { MODKEY,                       XK_x,                     spawn,          {.v = lockercmd} },
-    // actual full screen patch
-    { MODKEY|ShiftMask,             XK_f,                     togglefullscr,  {0}  },
-    // windows
-    // { Mod1Mask,                  XK_Tab,                   spawn,          {.v = dmenuwin}  },
-    // browser
-    { MODKEY,                       XK_w,                     spawn,          {.v = browser}   },
-    // networm management
-    { MODKEY,                       XK_n,                     spawn,          {.v = netwmgr}   }
+	// st + bash
+	{ MODKEY|ShiftMask,             XK_b,                     spawn,          {.v = bashcmd}   },
+	// vim
+	{ MODKEY|ControlMask,           XK_e,                     spawn,          {.v = editorcmd} },
+	// locker
+	{ MODKEY,                       XK_x,                     spawn,          {.v = lockercmd} },
+	// actual full screen patch
+	{ MODKEY|ShiftMask,             XK_f,                     togglefullscr,  {0}  },
+	// windows
+	// { Mod1Mask,                  XK_Tab,                   spawn,          {.v = dmenuwin}  },
+	// browser
+	{ MODKEY,                       XK_w,                     spawn,          {.v = browser}   },
+	// networm management
+	{ MODKEY,                       XK_n,                     spawn,          {.v = netwmgr}   }
 };
 
 /* button definitions */

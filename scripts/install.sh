@@ -1,5 +1,8 @@
 #!/bin/sh
 
+echo "If you want to actually run this depricated script and remove exit -1 from below the first echo."
+exit -1
+
 pacm="/bin/paru"        # Your AUR helper
 sudo="/bin/sudo"        # Run commands as root
 pins="-S --needed"      # Arguments to install an AUR package

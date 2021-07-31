@@ -41,7 +41,6 @@ from=(
     "/etc/default/grub"
     "/usr/local/src/shot"
     "/home/ari/Pictures/wallpaper.png"
-    "/bedrock/etc/bedrock.conf"
 )
 to=(
     "dotfiles/config"
@@ -69,7 +68,6 @@ to=(
     "dotfiles/core"
     "dotfiles/bin"
     "dotfiles/etc"
-    "dotfiles/bedrock"
 )
 
 

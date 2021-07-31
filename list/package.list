@@ -1,6 +1,7 @@
 acl
 adobe-source-code-pro-fonts
 adwaita-icon-theme
+alacritty
 alsa-lib
 alsa-topology-conf
 alsa-ucm-conf
@@ -23,7 +24,6 @@ bash-completion
 bat
 binutils
 bison
-bitwarden-bin
 bluez-libs
 bpython
 brotli
@@ -33,6 +33,7 @@ ca-certificates-mozilla
 ca-certificates-utils
 cairo
 cantarell-fonts
+celt
 cmake
 coreutils
 cryptsetup
@@ -91,7 +92,6 @@ gnupg
 gnutls
 gpgme
 gpm
-gptfdisk
 graphite
 grep
 groff
@@ -121,9 +121,9 @@ iptables
 iputils
 iso-codes
 iw
-jack
+jack2
 jansson
-jp2a
+jpegoptim
 js78
 json-c
 json-glib
@@ -183,7 +183,6 @@ libice
 libid3tag
 libidn2
 libiec61883
-libinih
 libinput
 libjpeg-turbo
 libksba
@@ -284,7 +283,6 @@ linux-headers
 llvm-libs
 lm_sensors
 lsd
-lsof
 lua51
 lua52
 lxappearance
@@ -441,7 +439,6 @@ vscodium-bin-marketplace
 vulkan-icd-loader
 wayland
 wayland-protocols
-wget
 which
 wpa_supplicant
 x264
@@ -458,7 +455,6 @@ xdg-utils
 xf86-input-libinput
 xf86-video-intel
 xf86-video-vesa
-xfsprogs
 xkeyboard-config
 xorg-bdftopcf
 xorg-docs

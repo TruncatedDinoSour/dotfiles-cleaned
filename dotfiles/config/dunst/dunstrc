@@ -242,7 +242,7 @@
     # corners.
     # The radius will be automatically lowered if it exceeds half of the
     # notification height to avoid clipping text and/or icons.
-    corner_radius = 2.5
+    corner_radius = 2
 
     # Ignore the dbus closeNotification message.
     # Useful to enforce the timeout set by dunst configuration. Without this
@@ -331,22 +331,22 @@
 [urgency_low]
     # IMPORTANT: colors have to be defined in quotation marks.
     # Otherwise the "#" and following would be interpreted as a comment.
-    background = "#689D6A"
-    foreground = "#282828"
+    background = "#303030"
+    foreground = "#a89984"
     timeout = 10
     # Icon for notifications with low urgency, uncomment to enable
     #icon = /path/to/icon
 
 [urgency_normal]
-    background = "#77AC79"
-    foreground = "#282828"
+    background = "#303030"
+    foreground = "#a89984"
     timeout = 15
     # Icon for notifications with normal urgency, uncomment to enable
     #icon = /path/to/icon
 
 [urgency_critical]
-    background = "#88BD89"
-    foreground = "#282828"
+    background = "#303030"
+    foreground = "#a89984"
     timeout = 0
     # Icon for notifications with critical urgency, uncomment to enable
     #icon = /path/to/icon
