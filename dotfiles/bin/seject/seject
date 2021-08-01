@@ -1,5 +1,5 @@
 #!/bin/sh
-if [[ "$UUID" != '0' ]]; then
+if [[ "$EUID" != '0' ]]; then
     echo 'I require root access'
     exit -1
 else
