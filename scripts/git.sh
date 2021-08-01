@@ -8,6 +8,8 @@ then
 fi
 
 echo "committing with message \"$msg\""
+git rm --cached dotfiles/editors/vim/.vim/plugged/Alduin
+
 if [[ ! -d ".git" ]];
 then
     git init

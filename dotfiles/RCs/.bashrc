@@ -21,6 +21,7 @@ autorun() {
 ps_one() {
     local c_status="$?"
     local git="$(__git_ps1 | sed 's/^ //g')"
+    local venv="$(basename "$VIRTUAL_ENV")"
     local dir='\W'
 
     local propt_char='#'
@@ -35,9 +36,12 @@ ps_one() {
     if [[ "$git" ]]; then
         local dir="$git $dir"
     fi
+    if [[ "$venv" ]]; then
+        local extra="{${GREEN}$venv${RESTORE}} "
+    fi
 
 
-    export PS1="\n${GREEN}\u${RESTORE}@\h ${dir} ${propt_colour}${propt_char}${RESTORE} "
+    export PS1="\n${extra}${GREEN}\u${RESTORE}@\h ${dir} ${propt_colour}${propt_char}${RESTORE} "
 }
 
 
@@ -85,13 +89,14 @@ export PATH="$PATH:$HOME/.local/bin"
 export EDITOR='vim'
 export BROWSER='firefox'
 
+
 alias ..='cd ..'
 
-alias ls='/bin/lsd --color=auto -F'
-alias ll='ls -lFS'
-alias la='ls -lFaS'
+alias ls='/bin/lsd --color=auto -Fv'
+alias ll='ls -lFv'
+alias la='ls -lFAv'
 
-alias rm='trash-put -v'
+alias rm='trash-put'
 alias rls='trash-list'
 alias rrm='trash-empty'
 alias rmk='trash-restore'
@@ -108,9 +113,11 @@ alias grep='/bin/grep --color="auto" -i'
 alias make="/bin/make ${MAKEOPTS}"
 
 alias diff='/bin/diff --color=auto'
-alias mv='/bin/mv -iv'
-alias cp='/bin/cp -iv'
-alias mkdir='/bin/mkdir -pv'
+alias mv='/bin/mv -i'
+alias cp='/bin/cp -i'
+alias mkdir='/bin/mkdir -p'
+alias curl='/bin/curl -fL'
+
 
 dots='/home/ari/Ari/coding/resources_/dots'
 autorun

@@ -13,7 +13,7 @@ at-spi2-atk 2.38.0-1
 at-spi2-core 2.40.3-1
 atk 2.36.0-1
 attr 2.5.1-1
-audit 3.0.2-1
+audit 3.0.3-1
 autoconf 2.71-1
 automake 1.16.3-1
 avahi 0.8+20+gd1e71b3-1
@@ -52,7 +52,7 @@ dosfstools 4.2-1
 double-conversion 3.1.5-2
 duf-bin 0.6.2-1
 dunst-git 1.6.1.r95.g6d41d1c-1
-e2fsprogs 1.46.2-1
+e2fsprogs 1.46.3-1
 efibootmgr 17-2
 efivar 37-4
 elfutils 0.185-1
@@ -295,7 +295,7 @@ make 4.3-3
 man-db 2.9.4-2
 md4c 0.4.8-1
 menu-cache 1.1.0-2
-mesa 21.1.5-1
+mesa 21.1.6-1
 mkinitcpio 30-2
 mkinitcpio-busybox 1.33.1-1
 mobile-broadband-provider-info 20201225-1
