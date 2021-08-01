@@ -41,6 +41,7 @@ from=(
     "/etc/default/grub"
     "/usr/local/src/shot"
     "/home/ari/Pictures/wallpaper.png"
+    "/usr/local/src/seject"
 )
 to=(
     "dotfiles/config"
@@ -68,6 +69,7 @@ to=(
     "dotfiles/core"
     "dotfiles/bin"
     "dotfiles/etc"
+    "dotfiles/bin"
 )
 
 
