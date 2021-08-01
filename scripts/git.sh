@@ -8,7 +8,6 @@ then
 fi
 
 echo "committing with message \"$msg\""
-git rm --cached dotfiles/editors/vim/.vim/plugged/Alduin
 
 if [[ ! -d ".git" ]];
 then
@@ -16,11 +15,13 @@ then
     git add .
     git commit -m "$msg"
     git remote add origin "$url"
+    git rm --cached dotfiles/editors/vim/.vim/plugged/Alduin
     git push -u origin master
     exit $?
 else
     git add .
     git commit -m "$msg"
+    git rm --cached dotfiles/editors/vim/.vim/plugged/Alduin
     git push -u origin master
 fi
 
