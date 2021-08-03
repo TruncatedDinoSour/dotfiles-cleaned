@@ -189,7 +189,8 @@ pacman.conf -> /etc/pacman.conf
 paru.conf -> /etc/paru.conf
 reflector.conf -> /etc/xdg/reflector/reflector.conf
 sudoers -> /etc/sudoers
-
+```
+```
 $ sudo mkinitcpio -P
 $ sudo grub-mkconfig -o /boot/grub/grub.cfg
 $ sudo pacman -Syu
