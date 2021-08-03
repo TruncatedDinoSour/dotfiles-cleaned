@@ -86,101 +86,171 @@ A: You may have set pacman as your package manager, But you actually need some o
 <h1 align="center"><b>Manual Installation (Arch Linux)</b></h1>
 <p align="center"><b>IMAGINE THAT <code>ari</code> IS YOUR USER, IF IT IS NOT, CHANGE ALL CONFIGS TO BE TO YOUR USERNAME</b></p>
 
-```sh
+## Perparing
+```bash
 $ cd
-$ sh
-$ sudo pacman -S git
+$ bash # or sh, zsh, ...
+```
+
+## Installing paru
+```bash
+$ sudo pacman -S base-devel git
 $ git clone https://aur.archlinux.org/paru.git
 $ cd paru
 $ makepkg -si
 $ cd
 $ rm -rfv paru
-$ git clone https://github.com/TruncatedDinosour/dotfiles-cleaned
-$ cd dotfiles-cleaned
-$ rm -rfv scripts README.md Makefile LICENSE
-$ paru -S --needed $(cat list/package.list)
-$ sudo systemctl enable systemd-networkd.service
+```
+
+## Packages
+```bash
+$ paru
+$ paru -S curl git make pango man-db nano sed cmake # base
+$ paru -S adobe-source-code-pro-fonts awesome-terminal-fonts cantarell-fonts gnu-free-fonts nerd-fonts-hack siji-git ttf-font-awesome # fonts
+$ paru -S gruvbox-dark-gtk gruvbox-material-icon-theme-git # themes
+$ paru -S firefox kotatogram-desktop-bin ksnip pcmanfm tor-browser vscodium-bin # apps
+$ paru -S lua51 python3 python-pip # language support
+$ paru -S mpv bash-completion bat bpython feh tlp gmp preload lsd lxappearance vim vscodium-bin-marketplace xautolock # extra apps
+$ paru -S xorg xorg-xinit # X.org
+$ paru -S dunst-git # apps from source
+$ paru -S imlib2 libxinerama libxft # libs for DWM
+```
+
+**or (this will install all packages that \*I\* use on my system)**
+
+```bash
+$ paru -S --needed $(curl -fL 'https://raw.githubusercontent.com/TruncatedDinosour/dotfiles-cleaned/master/list/package.list')
+```
+
+## Services
+```bash
 $ sudo systemctl enable fstrim.timer
 $ sudo systemctl enable reflector.timer
 $ sudo systemctl enable tlp.service
 $ sudo systemctl enable gpm.service
 $ sudo systemctl enable preload.service
+```
+
+# Installing the dotfiles
+**preparing**
+```bash
+$ cd
+$ git clone https://github.com/TruncatedDinosour/dotfiles-cleaned
+$ cd dotfiles-cleaned
+$ rm -rfv scripts README.md Makefile LICENSE .gitignore list
 $ cd dotfiles
-$ mkdir -p ~/Pictures
-$ mv etc/wallpaper.png ~/Pictures
-$ sudo mv bin/* /usr/src
-$ sudo mv bedrock/* /bedrock
-$ rm -rfv bin bedrock
-$ mv config ~/.config
-$ cd core
-$ mv .xinitrc ~/.xinitrc
-$ sudo mv bash_git /etc/bash_git
-$ sudo mv mkinitcpio.conf /etc/mkinitcpio.conf
-$ sudo mkinitcpio -P
-$ sudo mv paru.conf /etc/paru.conf
-$ sudo mv doas /etc/doas.conf
-$ sudo mv pacman.conf /etc/pacman.conf
-$ paru -Syyyu
-$ sudo mv reflector.conf /etc/xdg/reflector.conf
-$ sudo pacman -S reflector rsync
-$ sudo reflector --age 10 --latest 35 --sort rate --save /etc/pacman.d/mirrorlist
-$ cd ..
-$ rm -rfv core
-$ cd editors/vim
-$ mv .vimrc ~/.vimrc
-$ mv .vim ~/.vim
-$ cd ../..
-$ rm -rfv editors
-$ sudo mv fish /etc/fish
-$ mv icons ~/.icons
+```
+
+**single RC files**
+```bash
 $ cd RCs
 $ mv .bashrc ~/.bashrc
-$ mv nanorc /etc/nanorc
+$ sudo mv nanorc /etc/nanorc
 $ cd ..
-$ rm -rfv RCs
-$ mv suckless ~/Suckless
-$ cd
-$ rm -rfv dotfiles-cleaned
-$ cd Suckless
-$ chmod a+rx ./compile
-$ ./compile
-$ cd
-$ vim .vimrc
-#    ;PlugInstall
-#    ;q
-#    ;wq
-$ paru -S cmake python3 python3-pip
-$ chmod a+rx ~/.vim/plugged/youcompleteme/install.py
-$ ~/.vim/plugged/youcompleteme/install.py
-$ cd
-$ ln -s $HOME/.bashrc $HOME/.profile
-$ echo $USER > a
-$ su
-$ h=$(/bin/cat a)
-$ rm a
-$ cd
-$ ln -s /home/$h/.bashrc /root/.bashrc
-$ ln -s /home/$h/.config /root/.config
-$ ln -s /home/$h/.icons /root/.icons
-$ ln -s /home/$h/.profile /root/.profile
-$ ln -s /home/$h/.vim /root/.vim
-$ ln -s /home/$h/.vimrc /root/.vimrc
-$ exit
-$ cd /usr/src
+$ rm -rf RCs
+```
+
+**building from source**
+```bash
+$ sudo mv bin/* /usr/local/src
+$ cd /usr/local/src
+$ ln -s /usr/local/src/colours/colours /usr/local/bin/colours
+$ ln -s /usr/local/src/dusntest/dunstest /usr/local/bin/dunstest
 $ cd fastfetch
-$ sudo mkdir -p build && \
-  cd build && \
-  sudo cmake .. && \
-  sudo cmake --build .
-$ sudo ln -s /usr/src/fastfetch/build/fastfetch /usr/local/bin/fastfetch
-$ sudo ln -s /usr/src/fastfetch/build/flashfetch /usr/local/bin/flashfetch
-$ cd /usr/src
+$ ./run.sh
+$ ln -s /usr/local/src/fastfetch/build/fastfetch /usr/local/bin/fastfetch
+$ ln -s /usr/local/src/fastfetch/build/flashfetch /usr/local/bin/flashfetch
+$ cd ..
+$ ln -s /usr/local/src/seject/seject /usr/local/bin/seject
+$ ln -s /usr/local/src/shot/shot /usr/local/bin/shot
 $ cd yafetch
-$ sudo make
-$ sudo ln -s /usr/src/yafetch/yafetch /usr/local/bin/yafetch
-$ cd /usr/src
-$ sudo ln -s /usr/src/dunstest/dunstest /usr/local/bin/dunstest
-$ sudo ln -s /usr/src/shot/shot /usr/local/bin/shot
+$ make
+$ ln -s /usr/local/src/yafetch/yafetch /usr/local/bin/yafetch
+$ cd ~/dotfiles-cleaned/dotfiles
+$ rm -rf bin
+```
+
+**config**
+```bash
+$ mv config ~/.config
+```
+
+**safe core files**
+```bash
+$ sudo mv bash_git /etc
+$ mv .xinitrc ~
+```
+
+**unsafe/might need to do manually core files**
+```bash
+grub -> /etc/default/grub
+mkinitcpio.conf -> /etc/mkinitcpio.conf
+pacman.conf -> /etc/pacman.conf 
+paru.conf -> /etc/paru.conf
+reflector.conf -> /etc/xdg/reflector/reflector.conf
+sudoers -> /etc/sudoers
+
+$ sudo mkinitcpio -P
+$ sudo grub-mkconfig -o /boot/grub/grub.cfg
+$ sudo pacman -Syu
+$ paru
+```
+
+***finishing: remove the directory***
+```bash
+$ rm -rf core
+```
+
+**editors**
+```bash
+$ cd editors/vim
+$ mv .vim ~
+$ mv .vimrc ~
+$ mkdir ~/.vim/undodir
+$ cd ~/dotfiles-cleaned/dotfiles
+$ rm -rf editors
+```
+
+**etc**
+```bash
+$ mkdir ~/Pictures
+$ mv etc/wallpaper.png ~/Pictures
+$ rm -rf etc
+```
+
+**fish (depricated)**
+```bash
+$ sudo mv fish /etc
+```
+
+**icons**
+```bash
+$ mv icons ~/.icons
+```
+
+**scripts**
+```bash
+$ cd scripts
+$ cdmod a+rx ./*
+```
+
+after that, select the scripts you want, I suggest `debloatify-xorg.arch.sh`:
+
+```bash
+$ ./debloatify-xorg.arch.sh 
+```
+
+**suckless**
+```bash
+$ mv suckless ~/Suckless
+$ cd ~/Suckless
+$ ./compile
+```
+
+**finishing up**
+```bash
+$ cd
+$ rm -rf dotfiles-cleaned
 $ reboot
 $ startx
 ```
