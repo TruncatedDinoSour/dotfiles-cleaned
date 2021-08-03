@@ -15,8 +15,8 @@ TerminalEmulator=st.desktop
 
 [Added Associations]
 x-scheme-handler/tg=userapp-Kotatogram Desktop-EYYK50.desktop;userapp-Kotatogram Desktop-7TZW60.desktop;userapp-Kotatogram Desktop-4KUV60.desktop;
-application/octet-stream=nvim.desktop;VSCodium.desktop;
-text/plain=nvim.desktop;VSCodium.desktop;
+application/octet-stream=vim.desktop;VSCodium.desktop;
+text/plain=vim.desktop;VSCodium.desktop;
 x-scheme-handler/http=firefox.desktop;
 x-scheme-handler/https=firefox.desktop;
 x-scheme-handler/chrome=firefox.desktop;

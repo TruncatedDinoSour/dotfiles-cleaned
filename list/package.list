@@ -1,7 +1,6 @@
 acl
 adobe-source-code-pro-fonts
 adwaita-icon-theme
-alacritty
 alsa-lib
 alsa-topology-conf
 alsa-ucm-conf
@@ -123,7 +122,6 @@ iso-codes
 iw
 jack2
 jansson
-jpegoptim
 js78
 json-c
 json-glib
@@ -393,8 +391,8 @@ rest
 rhash
 rsync
 rubberband
+rust
 scrot
-sdl
 sdl2
 sed
 shaderc
@@ -419,6 +417,7 @@ tar
 tdb
 texinfo
 tlp
+tokei
 tor-browser
 tslib
 ttf-font-awesome
@@ -431,8 +430,6 @@ v4l-utils
 vid.stab
 vim
 vim-runtime
-virtualbox
-virtualbox-host-modules-arch
 vmaf
 vscodium-bin
 vscodium-bin-marketplace

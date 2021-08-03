@@ -27,7 +27,6 @@ set guicursor=a:hor100                  " Set the cursor shape to a _
 " after :PlugInstall, install cmake and run the ~/.vim/plugged/youcompleteme/install.py file and
 " then run :YcmRestartServer
 call plug#begin("~/.vim/plugged")
-    Plug 'shinchu/lightline-gruvbox.vim'
     Plug 'AlessandroYorba/Alduin'
     Plug 'valloric/youcompleteme'
     Plug 'tpope/vim-surround'
@@ -68,7 +67,7 @@ fun! TrimWhitespace()
     call winrestview(l:save)
 endfun
 
-augroup ari
+augroup whitespace_trim
     autocmd!
     autocmd BufWritePre * :call TrimWhitespace()
 augroup END

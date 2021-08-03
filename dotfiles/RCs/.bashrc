@@ -107,12 +107,13 @@ alias cat='/bin/bat --theme="gruvbox-dark"'
 alias src='source ~/.bashrc'
 alias stx='/bin/startx'
 
-alias lsblk='/bin/lsblk -fa'
-alias clear='/bin/clear; autorun'
-alias grep='/bin/grep --color="auto" -i'
 alias make="/bin/make ${MAKEOPTS}"
+alias clear='/bin/clear; autorun'
 
+alias grep='/bin/grep --color="auto" -i'
 alias diff='/bin/diff --color=auto'
+
+alias lsblk='/bin/lsblk -fa'
 alias mv='/bin/mv -i'
 alias cp='/bin/cp -i'
 alias mkdir='/bin/mkdir -p'
