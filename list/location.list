@@ -24,3 +24,4 @@ dotfiles/core -> /etc/default/grub
 dotfiles/bin -> /usr/local/src/shot
 dotfiles/etc -> /home/ari/Pictures/wallpaper.png
 dotfiles/bin -> /usr/local/src/seject
+dotfiles/qbittorrent -> /usr/share/themes/mumble-dark.qbtheme

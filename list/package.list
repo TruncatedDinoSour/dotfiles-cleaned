@@ -24,9 +24,12 @@ bat
 binutils
 bison
 bluez-libs
+boost
+boost-libs
 bpython
 brotli
 bzip2
+c-ares
 ca-certificates
 ca-certificates-mozilla
 ca-certificates-utils
@@ -232,6 +235,7 @@ libtheora
 libtiff
 libtirpc
 libtool
+libtorrent-rasterbar
 libunistring
 libunwind
 libusb
@@ -307,6 +311,10 @@ ncurses
 nerd-fonts-hack
 nettle
 networkmanager
+node-gyp
+nodejs
+nodejs-nopt
+npm
 npth
 nspr
 nss
@@ -381,6 +389,7 @@ python-urllib3
 python-webencodings
 python2
 python2-pyxdg
+qbittorrent
 qt5-base
 qt5-svg
 qt5-x11extras
@@ -391,10 +400,11 @@ rest
 rhash
 rsync
 rubberband
-rust
 scrot
+sdl
 sdl2
 sed
+semver
 shaderc
 shadow
 shared-mime-info
@@ -430,6 +440,8 @@ v4l-utils
 vid.stab
 vim
 vim-runtime
+virtualbox
+virtualbox-host-modules-arch
 vmaf
 vscodium-bin
 vscodium-bin-marketplace

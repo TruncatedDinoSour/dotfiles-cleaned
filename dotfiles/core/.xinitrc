@@ -36,3 +36,4 @@ fi
 
 /bin/dunst &
 exec dwm
+

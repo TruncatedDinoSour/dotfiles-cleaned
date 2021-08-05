@@ -20,7 +20,7 @@ static const char col_gray1[]       = "#282828"; /* #222222 */
 static const char col_gray2[]       = "#282828"; /* #444444 */
 static const char col_gray3[]       = "#BBBBBB"; /* #BBBBBB */
 static const char col_gray4[]       = "#EEEEEE"; /* #EEEEEE */
-static const char col_cyan[]        = "#87875f"; /* #005577 */
+static const char col_cyan[]        = "#C6AA76"; /* #005577 */
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
 	[SchemeNorm] = { col_gray3, col_gray1, col_gray2 }, /* innnactive bar */
@@ -52,6 +52,7 @@ static const Rule rules[] = {
 	{ "Tor Browser",                NULL,       NULL,       1 << 1,       0,           0,           0,          -1 },
 	{ "LibreWolf",                  NULL,       NULL,       1 << 1,       0,           0,           0,          -1 },
 	{ "chromium",                   NULL,       NULL,       1 << 1,       0,           0,           0,          -1 },
+    { "qBittorrent",                NULL,       NULL,       1 << 1,       0,           0,           0,          -1 },
 
 	/* tag 3 */
 	{ "Code",                       NULL,       NULL,       1 << 2,       0,           0,           0,          -1 },
@@ -113,7 +114,7 @@ static const char *brupcmd[] = { sudo_cmd, "xbacklight", "-inc", "10", NULL  };
 static const char *brdowncmd[] = { sudo_cmd, "xbacklight", "-dec", "10", NULL  };
 
 static const char *bashcmd[] = { "st", "-e", "bash", NULL };
-static const char *editorcmd[] = { "st", "-e", "nvim", NULL  };
+static const char *editorcmd[] = { "st", "-e", "vim", NULL  };
 static const char *lockercmd[] = { "xautolock", "-locknow", NULL };
 static const char *browser[] = { "firefox", NULL };
 static const char *netwmgr[] = { "st", "-e", "nmtui", NULL };

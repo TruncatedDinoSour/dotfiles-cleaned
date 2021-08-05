@@ -46,13 +46,15 @@ ps_one() {
 
 
 man() {
+    # \E[...m = ANSI colour
+    # \x1b[38;2;...;...;...m = RGB colours
     env LESS_TERMCAP_mb=$'\E[01;31m' \
-        LESS_TERMCAP_md=$'\E[01;38;5;74m' \
+        LESS_TERMCAP_md=$'\E[01;36m' \
         LESS_TERMCAP_me=$'\E[0m' \
         LESS_TERMCAP_se=$'\E[0m' \
-        LESS_TERMCAP_so=$'\E[38;5;246m' \
+        LESS_TERMCAP_so=$'\x1b[38;2;128;128;128m' \
         LESS_TERMCAP_ue=$'\E[0m' \
-        LESS_TERMCAP_us=$'\E[04;38;5;146m' \
+        LESS_TERMCAP_us=$'\E[04;36;146m' \
         man "$@"
 }
 
@@ -92,7 +94,7 @@ export BROWSER='firefox'
 
 alias ..='cd ..'
 
-alias ls='/bin/lsd --color=auto -Fv'
+alias ls='/bin/lsd --color=auto -Fvh'
 alias ll='ls -lFv'
 alias la='ls -lFAv'
 

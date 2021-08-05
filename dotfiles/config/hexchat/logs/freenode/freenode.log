@@ -1,0 +1,121 @@
+**** BEGIN LOGGING AT Wed Aug  4 22:20:14 2021
+
+Aug 04 22:20:14 *	*** Looking up your ident...
+Aug 04 22:20:14 *	*** Looking up your hostname...
+Aug 04 22:20:14 *	*** You must use TLS/SSL and authenticate via SASL to connect to freenode please visit https://irc.com/login/sso in order to create an account. SASL Configuration: https://freenode.net/kb/answer/sasl - Webchat: https://webchat.freenode.net/
+Aug 04 22:20:14 *	*** Found your hostname (78-62-22-205.static.zebra.lt)
+Aug 04 22:20:14 *	Capabilities supported: account-notify account-tag away-notify batch cap-notify chghost draft/relaymsg=/ echo-message extended-join inspircd.org/poison inspircd.org/standard-replies invite-notify labeled-response message-tags multi-prefix sasl server-time setname userhost-in-names 
+Aug 04 22:20:14 *	Capabilities requested: account-notify away-notify cap-notify chghost extended-join multi-prefix server-time userhost-in-names 
+Aug 04 22:20:14 *	Capabilities acknowledged: account-notify away-notify cap-notify chghost extended-join multi-prefix server-time userhost-in-names
+Aug 04 22:20:16 *	*** Ident lookup timed out, using ~ari instead.
+Aug 04 22:20:16 *	Closing link: (~ari@78-62-22-205.static.zebra.lt) [You must use TLS/SSL and authenticate via SASL to connect to freenode please visit https://irc.com/login/sso in order to create an account. SASL Configuration: https://freenode.net/kb/answer/sasl - Webchat: https://webchat.freenode.net/]
+Aug 04 22:20:16 *	Disconnected (Remote host closed socket)
+Aug 04 22:20:26 Cycling to next server in freenode...
+Aug 04 22:20:26 *	Disconnected ()
+Aug 04 22:20:26 *	Looking up irc.freenode.net
+Aug 04 22:20:27 *	Connecting to chat.freenode.net (136.244.117.110:6697)
+Aug 04 22:20:28 *	* Subject: /C=US/O=Internet Security Research Group/CN=ISRG Root X1
+Aug 04 22:20:28 *	* Issuer: /C=US/O=Internet Security Research Group/CN=ISRG Root X1
+Aug 04 22:20:28 *	* Subject: /C=US/O=Let's Encrypt/CN=R3
+Aug 04 22:20:28 *	* Issuer: /C=US/O=Internet Security Research Group/CN=ISRG Root X1
+Aug 04 22:20:28 *	* Subject: /CN=libera.freenode.net
+Aug 04 22:20:28 *	* Issuer: /C=US/O=Let's Encrypt/CN=R3
+Aug 04 22:20:28 *	* Certification info:
+Aug 04 22:20:28 *	  Subject:
+Aug 04 22:20:28 *	    CN=libera.freenode.net
+Aug 04 22:20:28 *	  Issuer:
+Aug 04 22:20:28 *	    C=US
+Aug 04 22:20:28 *	    O=Let's Encrypt
+Aug 04 22:20:28 *	    CN=R3
+Aug 04 22:20:28 *	  Public key algorithm: rsaEncryption (2048 bits)
+Aug 04 22:20:28 *	  Sign algorithm sha256WithRSAEncryption
+Aug 04 22:20:28 *	  Valid since Jul 10 22:02:52 2021 GM to Oct  8 22:02:51 2021 GM
+Aug 04 22:20:28 *	* Cipher info:
+Aug 04 22:20:28 *	  Version: TLSv1.3, cipher TLS_AES_256_GCM_SHA384 (256 bits)
+Aug 04 22:20:28 *	Connected. Now logging in.
+Aug 04 22:20:28 *	*** Looking up your ident...
+Aug 04 22:20:28 *	*** Looking up your hostname...
+Aug 04 22:20:28 *	*** You must use TLS/SSL and authenticate via SASL to connect to freenode please visit https://irc.com/login/sso in order to create an account. SASL Configuration: https://freenode.net/kb/answer/sasl - Webchat: https://webchat.freenode.net/
+Aug 04 22:20:28 *	*** Found your hostname (78-62-22-205.static.zebra.lt)
+Aug 04 22:20:28 *	Capabilities supported: account-notify account-tag away-notify batch cap-notify chghost draft/relaymsg=/ echo-message extended-join inspircd.org/poison inspircd.org/standard-replies invite-notify labeled-response message-tags multi-prefix sasl=EXTERNAL,PLAIN server-time setname userhost-in-names 
+Aug 04 22:20:28 *	Capabilities requested: account-notify away-notify cap-notify chghost extended-join multi-prefix server-time userhost-in-names 
+Aug 04 22:20:28 *	Capabilities acknowledged: account-notify away-notify cap-notify chghost extended-join multi-prefix server-time userhost-in-names
+Aug 04 22:20:31 *	*** Ident lookup timed out, using ~ari instead.
+Aug 04 22:20:31 *	Closing link: (~ari@78-62-22-205.static.zebra.lt) [You must use TLS/SSL and authenticate via SASL to connect to freenode please visit https://irc.com/login/sso in order to create an account. SASL Configuration: https://freenode.net/kb/answer/sasl - Webchat: https://webchat.freenode.net/]
+Aug 04 22:20:31 *	Disconnected (Remote host closed socket)
+Aug 04 22:20:37 No channel joined. Try /join #<channel>
+Aug 04 22:20:41 Cycling to next server in freenode...
+Aug 04 22:20:41 *	Disconnected ()
+Aug 04 22:20:41 *	Looking up chat.freenode.net
+Aug 04 22:20:41 *	Connecting to chat.freenode.net (172.104.27.105:6697)
+Aug 04 22:20:42 *	* Subject: /C=US/O=Internet Security Research Group/CN=ISRG Root X1
+Aug 04 22:20:42 *	* Issuer: /C=US/O=Internet Security Research Group/CN=ISRG Root X1
+Aug 04 22:20:42 *	* Subject: /C=US/O=Let's Encrypt/CN=R3
+Aug 04 22:20:42 *	* Issuer: /C=US/O=Internet Security Research Group/CN=ISRG Root X1
+Aug 04 22:20:42 *	* Subject: /CN=arc.freenode.net
+Aug 04 22:20:42 *	* Issuer: /C=US/O=Let's Encrypt/CN=R3
+Aug 04 22:20:43 *	* Certification info:
+Aug 04 22:20:43 *	  Subject:
+Aug 04 22:20:43 *	    CN=arc.freenode.net
+Aug 04 22:20:43 *	  Issuer:
+Aug 04 22:20:43 *	    C=US
+Aug 04 22:20:43 *	    O=Let's Encrypt
+Aug 04 22:20:43 *	    CN=R3
+Aug 04 22:20:43 *	  Public key algorithm: rsaEncryption (2048 bits)
+Aug 04 22:20:43 *	  Sign algorithm sha256WithRSAEncryption
+Aug 04 22:20:43 *	  Valid since Jul 10 20:59:52 2021 GM to Oct  8 20:59:51 2021 GM
+Aug 04 22:20:43 *	* Cipher info:
+Aug 04 22:20:43 *	  Version: TLSv1.3, cipher TLS_AES_256_GCM_SHA384 (256 bits)
+Aug 04 22:20:43 *	Connected. Now logging in.
+Aug 04 22:20:43 *	*** Looking up your ident...
+Aug 04 22:20:43 *	*** Looking up your hostname...
+Aug 04 22:20:43 *	*** Found your hostname (78-62-22-205.static.zebra.lt) -- cached
+Aug 04 22:20:43 *	*** You must use TLS/SSL and authenticate via SASL to connect to freenode please visit https://irc.com/login/sso in order to create an account. SASL Configuration: https://freenode.net/kb/answer/sasl - Webchat: https://webchat.freenode.net/
+Aug 04 22:20:43 *	Capabilities supported: account-notify account-tag away-notify batch cap-notify chghost draft/relaymsg=/ echo-message extended-join inspircd.org/poison inspircd.org/standard-replies invite-notify labeled-response message-tags multi-prefix sasl server-time setname userhost-in-names 
+Aug 04 22:20:43 *	Capabilities requested: account-notify away-notify cap-notify chghost extended-join multi-prefix server-time userhost-in-names 
+Aug 04 22:20:43 *	Capabilities acknowledged: account-notify away-notify cap-notify chghost extended-join multi-prefix server-time userhost-in-names
+Aug 04 22:20:46 *	*** Ident lookup timed out, using ~ari instead.
+Aug 04 22:20:46 *	Closing link: (~ari@78-62-22-205.static.zebra.lt) [You must use TLS/SSL and authenticate via SASL to connect to freenode please visit https://irc.com/login/sso in order to create an account. SASL Configuration: https://freenode.net/kb/answer/sasl - Webchat: https://webchat.freenode.net/]
+Aug 04 22:20:46 *	Disconnected (Remote host closed socket)
+Aug 04 22:20:46 Not connected. Try /server <host> [<port>]
+Aug 04 22:20:52 Unknown Command serber. Try /help
+Aug 04 22:20:54 No channel joined. Try /join #<channel>
+Aug 04 22:20:56 Cycling to next server in freenode...
+Aug 04 22:20:56 *	Disconnected ()
+Aug 04 22:20:56 *	Looking up irc.freenode.net
+Aug 04 22:20:56 *	Connecting to chat.freenode.net (136.244.117.110:6697)
+Aug 04 22:20:57 *	* Subject: /C=US/O=Internet Security Research Group/CN=ISRG Root X1
+Aug 04 22:20:57 *	* Issuer: /C=US/O=Internet Security Research Group/CN=ISRG Root X1
+Aug 04 22:20:57 *	* Subject: /C=US/O=Let's Encrypt/CN=R3
+Aug 04 22:20:57 *	* Issuer: /C=US/O=Internet Security Research Group/CN=ISRG Root X1
+Aug 04 22:20:57 *	* Subject: /CN=libera.freenode.net
+Aug 04 22:20:57 *	* Issuer: /C=US/O=Let's Encrypt/CN=R3
+Aug 04 22:20:57 *	* Certification info:
+Aug 04 22:20:57 *	  Subject:
+Aug 04 22:20:57 *	    CN=libera.freenode.net
+Aug 04 22:20:57 *	  Issuer:
+Aug 04 22:20:57 *	    C=US
+Aug 04 22:20:57 *	    O=Let's Encrypt
+Aug 04 22:20:57 *	    CN=R3
+Aug 04 22:20:57 *	  Public key algorithm: rsaEncryption (2048 bits)
+Aug 04 22:20:57 *	  Sign algorithm sha256WithRSAEncryption
+Aug 04 22:20:57 *	  Valid since Jul 10 22:02:52 2021 GM to Oct  8 22:02:51 2021 GM
+Aug 04 22:20:57 *	* Cipher info:
+Aug 04 22:20:57 *	  Version: TLSv1.3, cipher TLS_AES_256_GCM_SHA384 (256 bits)
+Aug 04 22:20:57 *	Connected. Now logging in.
+Aug 04 22:20:57 *	*** Looking up your ident...
+Aug 04 22:20:57 *	*** Looking up your hostname...
+Aug 04 22:20:57 *	*** Found your hostname (78-62-22-205.static.zebra.lt) -- cached
+Aug 04 22:20:57 *	*** You must use TLS/SSL and authenticate via SASL to connect to freenode please visit https://irc.com/login/sso in order to create an account. SASL Configuration: https://freenode.net/kb/answer/sasl - Webchat: https://webchat.freenode.net/
+Aug 04 22:20:57 *	Capabilities supported: account-notify account-tag away-notify batch cap-notify chghost draft/relaymsg=/ echo-message extended-join inspircd.org/poison inspircd.org/standard-replies invite-notify labeled-response message-tags multi-prefix sasl=EXTERNAL,PLAIN server-time setname userhost-in-names 
+Aug 04 22:20:57 *	Capabilities requested: account-notify away-notify cap-notify chghost extended-join multi-prefix server-time userhost-in-names 
+Aug 04 22:20:57 *	Capabilities acknowledged: account-notify away-notify cap-notify chghost extended-join multi-prefix server-time userhost-in-names
+Aug 04 22:21:01 *	*** Ident lookup timed out, using ~ari instead.
+Aug 04 22:21:01 *	Closing link: (~ari@78-62-22-205.static.zebra.lt) [You must use TLS/SSL and authenticate via SASL to connect to freenode please visit https://irc.com/login/sso in order to create an account. SASL Configuration: https://freenode.net/kb/answer/sasl - Webchat: https://webchat.freenode.net/]
+Aug 04 22:21:01 *	Disconnected (Remote host closed socket)
+Aug 04 22:21:02 Checksum plugin unloaded
+Aug 04 22:21:02 Sysinfo plugin unloaded
+Aug 04 22:21:02 FiSHLiM plugin unloaded
+Aug 04 22:21:02 Perl interface unloaded
+**** ENDING LOGGING AT Wed Aug  4 22:21:02 2021
+

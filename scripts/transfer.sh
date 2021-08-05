@@ -12,7 +12,7 @@ read -p "=== [ press enter to continue ] ===" x
 
 rm -rfv dotfiles list
 mkdir -p list
-mkdir -p dotfiles{,/RCs,/editors/vim,/core,/bin,/etc,/bedrock}
+mkdir -p dotfiles{,/RCs,/editors/vim,/core,/bin,/etc,/qbittorrent}
 
 
 from=(
@@ -42,6 +42,7 @@ from=(
     "/usr/local/src/shot"
     "/home/ari/Pictures/wallpaper.png"
     "/usr/local/src/seject"
+    "/usr/share/themes/mumble-dark.qbtheme"
 )
 to=(
     "dotfiles/config"
@@ -70,6 +71,7 @@ to=(
     "dotfiles/bin"
     "dotfiles/etc"
     "dotfiles/bin"
+    "dotfiles/qbittorrent"
 )
 
 

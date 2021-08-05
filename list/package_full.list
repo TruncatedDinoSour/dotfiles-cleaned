@@ -24,9 +24,12 @@ bat 0.18.2-1
 binutils 2.36.1-3
 bison 3.7.6-1
 bluez-libs 5.60-1
+boost 1.76.0-1
+boost-libs 1.76.0-1
 bpython 0.21-1
 brotli 1.0.9-4
 bzip2 1.0.8-4
+c-ares 1.17.1-1
 ca-certificates 20210603-1
 ca-certificates-mozilla 3.68-1
 ca-certificates-utils 20210603-1
@@ -181,7 +184,7 @@ libice 1.0.10-3
 libid3tag 0.15.1b-11
 libidn2 2.3.2-1
 libiec61883 1.2.0-6
-libinput 1.18.0-1
+libinput 1.18.1-1
 libjpeg-turbo 2.1.0-1
 libksba 1.6.0-1
 libldap 2.4.59-2
@@ -232,6 +235,7 @@ libtheora 1.1.1-5
 libtiff 4.3.0-1
 libtirpc 1.3.2-1
 libtool 2.4.6+42+gb88cebd5-16
+libtorrent-rasterbar 1:1.2.14-1
 libunistring 0.9.10-3
 libunwind 1.5.0-1
 libusb 1.0.24-2
@@ -307,6 +311,10 @@ ncurses 6.2-2
 nerd-fonts-hack 2.1.0-3
 nettle 3.7.3-1
 networkmanager 1.32.6-1
+node-gyp 8.1.0-2
+nodejs 16.6.1-1
+nodejs-nopt 5.0.0-2
+npm 7.20.3-1
 npth 1.6-3
 nspr 4.32-1
 nss 3.68-1
@@ -381,6 +389,7 @@ python-urllib3 1.26.6-1
 python-webencodings 0.5.1-6
 python2 2.7.18-3
 python2-pyxdg 0.27-1
+qbittorrent 4.3.6-1
 qt5-base 5.15.2+kde+r211-1
 qt5-svg 5.15.2+kde+r7-1
 qt5-x11extras 5.15.2-1
@@ -391,10 +400,11 @@ rest 0.8.1-3
 rhash 1.4.2-1
 rsync 3.2.3-4
 rubberband 1.9.2-1
-rust 1:1.54.0-1
 scrot 1.6-1
+sdl 1.2.15-14
 sdl2 2.0.14-1
 sed 4.8-1
+semver 7.3.5-2
 shaderc 2021.1-1
 shadow 4.8.1-4
 shared-mime-info 2.0+57+gc1d1c70-1
@@ -430,6 +440,8 @@ v4l-utils 1.20.0-1
 vid.stab 1.1-3
 vim 8.2.2891-1
 vim-runtime 8.2.2891-1
+virtualbox 6.1.26-1
+virtualbox-host-modules-arch 6.1.26-3
 vmaf 1.5.3-1
 vscodium-bin 1.58.2-1
 vscodium-bin-marketplace 1.56.0-4
@@ -461,11 +473,11 @@ xorg-fonts-alias-100dpi 1.0.4-1
 xorg-fonts-alias-75dpi 1.0.4-1
 xorg-fonts-encodings 1.0.5-2
 xorg-mkfontscale 1.2.1-2
-xorg-server 1.20.13-1
-xorg-server-common 1.20.13-1
-xorg-server-xephyr 1.20.13-1
-xorg-server-xnest 1.20.13-1
-xorg-server-xvfb 1.20.13-1
+xorg-server 1.20.13-2
+xorg-server-common 1.20.13-2
+xorg-server-xephyr 1.20.13-2
+xorg-server-xnest 1.20.13-2
+xorg-server-xvfb 1.20.13-2
 xorg-sessreg 1.1.2-2
 xorg-setxkbmap 1.3.2-2
 xorg-x11perf 1.6.1-2
