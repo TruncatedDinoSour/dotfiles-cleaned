@@ -1,9 +1,0 @@
-**** BEGIN LOGGING AT Wed Aug  4 22:20:12 2021
-
-Aug 04 22:20:12 Python interface loaded
-Aug 04 22:20:12 Perl interface loaded
-Aug 04 22:20:12 AutoLoad failed for: /usr/lib/hexchat/plugins/lua.so
-Aug 04 22:20:12 liblua.so.5.4: cannot open shared object file: No such file or directory
-Aug 04 22:20:12 FiSHLiM plugin loaded
-Aug 04 22:20:12 Sysinfo plugin loaded
-Aug 04 22:20:12 Checksum plugin loaded
