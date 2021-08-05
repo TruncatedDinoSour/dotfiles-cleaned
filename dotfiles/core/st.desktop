@@ -1,0 +1,18 @@
+[Desktop Entry]
+Type=Application
+TryExec=st
+Exec=st
+Icon=st
+Terminal=false
+Categories=System;TerminalEmulator;
+
+Name=st
+GenericName=Terminal
+Comment=The simple terminal
+StartupWMClass=St
+Actions=New;
+
+[Desktop Action New]
+Name=New Terminal
+Exec=st
+

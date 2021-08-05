@@ -56,11 +56,10 @@ man() {
         LESS_TERMCAP_ue=$'\E[0m' \
         LESS_TERMCAP_us=$'\E[04;36;146m' \
         man "$@"
-}
+    }
 
-
-# TTy theme
-if [ "$TERM" == "linux" ]; then
+tty_autorun() {
+    # TTY theme
     echo -en "\e]P0282828" #black
     echo -en "\e]P88F9494" #darkgrey
     echo -en "\e]P1AF5f5F" #darkred
@@ -78,7 +77,12 @@ if [ "$TERM" == "linux" ]; then
     echo -en "\e]P7DDD0C0" #lightgrey
     echo -en "\e]PFDDD0C0" #white
     /bin/clear #for background artifacting
-fi
+}
+
+
+case "$TERM" in
+    "bsd"|"linux") tty_autorun ;;
+esac
 
 
 export MAKEOPTS='-j4 -l4'

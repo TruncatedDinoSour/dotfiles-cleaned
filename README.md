@@ -179,13 +179,14 @@ $ mv config ~/.config
 ```bash
 $ sudo mv bash_git /etc
 $ mv .xinitrc ~
+$ sudo mv st.desktop /usr/share/applications
 ```
 
 **unsafe/might need to do manually core files**
 ```bash
 grub -> /etc/default/grub
 mkinitcpio.conf -> /etc/mkinitcpio.conf
-pacman.conf -> /etc/pacman.conf 
+pacman.conf -> /etc/pacman.conf
 paru.conf -> /etc/paru.conf
 reflector.conf -> /etc/xdg/reflector/reflector.conf
 sudoers -> /etc/sudoers
@@ -238,7 +239,7 @@ $ cdmod a+rx ./*
 after that, select the scripts you want, I suggest `debloatify-xorg.arch.sh`:
 
 ```bash
-$ ./debloatify-xorg.arch.sh 
+$ ./debloatify-xorg.arch.sh
 ```
 
 **suckless**

@@ -278,10 +278,10 @@ libxv 1.0.11-4
 libxvmc 1.0.12-3
 libxxf86vm 1.1.4-4
 licenses 20200427-1
-linux 5.13.7.arch1-1
+linux 5.13.8.arch1-1
 linux-api-headers 5.12.3-1
 linux-firmware 20210716.b7c134f-1
-linux-headers 5.13.7.arch1-1
+linux-headers 5.13.8.arch1-1
 llvm-libs 12.0.1-2
 lm_sensors 1:3.6.0.r41.g31d1f125-1
 lsd 0.20.1-1
@@ -331,7 +331,7 @@ pahole 1.21-1
 pam 1.5.1-1
 pambase 20210605-2
 pango 1:1.48.7-1
-paru 1.7.3-1
+paru 1.8.0-1
 patch 2.7.6-8
 pciutils 3.7.0-1
 pcmanfm 1.3.2-1
@@ -441,7 +441,7 @@ vid.stab 1.1-3
 vim 8.2.2891-1
 vim-runtime 8.2.2891-1
 virtualbox 6.1.26-1
-virtualbox-host-modules-arch 6.1.26-3
+virtualbox-host-modules-arch 6.1.26-4
 vmaf 1.5.3-1
 vscodium-bin 1.58.2-1
 vscodium-bin-marketplace 1.56.0-4

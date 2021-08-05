@@ -43,6 +43,7 @@ from=(
     "/home/ari/Pictures/wallpaper.png"
     "/usr/local/src/seject"
     "/usr/share/themes/mumble-dark.qbtheme"
+    "/usr/share/applications/st.desktop"
 )
 to=(
     "dotfiles/config"
@@ -72,6 +73,7 @@ to=(
     "dotfiles/etc"
     "dotfiles/bin"
     "dotfiles/qbittorrent"
+    "dotfiles/core"
 )
 
 
