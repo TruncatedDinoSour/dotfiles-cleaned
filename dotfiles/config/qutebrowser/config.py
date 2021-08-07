@@ -11,3 +11,4 @@ c.fonts.web.family.fantasy = 'Arial'
 c.url.start_pages = ['about:blank']
 c.search.incremental = False
 config.source('gruvbox.py')
+

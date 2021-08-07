@@ -44,6 +44,7 @@ from=(
     "/usr/local/src/seject"
     "/usr/share/themes/mumble-dark.qbtheme"
     "/usr/share/applications/st.desktop"
+    "/usr/local/src/pacman-show"
 )
 to=(
     "dotfiles/config"
@@ -74,6 +75,7 @@ to=(
     "dotfiles/bin"
     "dotfiles/qbittorrent"
     "dotfiles/core"
+    "dotfiles/bin"
 )
 
 

@@ -30,4 +30,4 @@ application/x-extension-xht=firefox.desktop;
 application/x-bzip=pcmanfm.desktop;
 application/x-terminal-emulator=st.desktop;
 TerminalEmulator=st.desktop;
-
+inode/directory=st.desktop;

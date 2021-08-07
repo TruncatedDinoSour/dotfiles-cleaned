@@ -54,7 +54,7 @@ dosfstools 4.2-1
 double-conversion 3.1.5-2
 duf-bin 0.6.2-1
 dunst-git 1.6.1.r95.g6d41d1c-1
-e2fsprogs 1.46.3-2
+e2fsprogs 1.46.3-3
 efibootmgr 17-2
 efivar 37-4
 elfutils 0.185-1
@@ -301,7 +301,7 @@ mesa 21.1.6-1
 mkinitcpio 30-2
 mkinitcpio-busybox 1.33.1-1
 mobile-broadband-provider-info 20201225-1
-mpfr 4.1.0-2
+mpfr 4.1.0.p13-1
 mpv 1:0.33.1-2
 mtdev 1.1.6-1
 mtools 1:4.0.34-1
@@ -314,7 +314,7 @@ networkmanager 1.32.6-1
 node-gyp 8.1.0-2
 nodejs 16.6.1-1
 nodejs-nopt 5.0.0-2
-npm 7.20.3-1
+npm 7.20.5-1
 npth 1.6-3
 nspr 4.32-1
 nss 3.68-1
@@ -400,7 +400,7 @@ rest 0.8.1-3
 rhash 1.4.2-1
 rsync 3.2.3-4
 rubberband 1.9.2-1
-scrot 1.6-1
+scrot 1.6-2
 sdl 1.2.15-14
 sdl2 2.0.14-1
 sed 4.8-1
@@ -430,12 +430,12 @@ tlp 1.3.1-2
 tokei 12.1.2-1
 tor-browser 10.5.2-1
 tslib 1.22-1
-ttf-font-awesome 5.15.3-1
+ttf-font-awesome 5.15.4-1
 tzdata 2021a-1
 uchardet 0.0.7-1
 usbutils 013-1
-util-linux 2.37.1-1
-util-linux-libs 2.37.1-1
+util-linux 2.37.1-3
+util-linux-libs 2.37.1-3
 v4l-utils 1.20.0-1
 vid.stab 1.1-3
 vim 8.2.2891-1
@@ -443,11 +443,12 @@ vim-runtime 8.2.2891-1
 virtualbox 6.1.26-1
 virtualbox-host-modules-arch 6.1.26-4
 vmaf 1.5.3-1
-vscodium-bin 1.58.2-1
+vscodium-bin 1.59.0-1
 vscodium-bin-marketplace 1.56.0-4
 vulkan-icd-loader 1.2.185-1
 wayland 1.19.0-1
 wayland-protocols 1.21-1
+wget 1.21.1-1
 which 2.21-5
 wpa_supplicant 2:2.9-8
 x264 3:0.161.r3039.544c61f-1

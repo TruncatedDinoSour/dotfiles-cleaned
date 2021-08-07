@@ -98,9 +98,13 @@ export BROWSER='firefox'
 
 alias ..='cd ..'
 
+alias k='kill'
+alias ka='killall'
+
 alias ls='/bin/lsd --color=auto -Fvh'
 alias ll='ls -lFv'
 alias la='ls -lFAv'
+alias l='ll'
 
 alias rm='trash-put'
 alias rls='trash-list'
@@ -113,10 +117,14 @@ alias cat='/bin/bat --theme="gruvbox-dark"'
 alias src='source ~/.bashrc'
 alias stx='/bin/startx'
 
+alias youtube-dl='youtube-dl --verbose --yes-playlist'
+alias yt='youtube-dl --format mp4'
+alias ys='youtube-dl --extract-audio --audio-format mp3'
+
 alias make="/bin/make ${MAKEOPTS}"
 alias clear='/bin/clear; autorun'
 
-alias grep='/bin/grep --color="auto" -i'
+alias grep='/bin/grep --color=auto -iHn'
 alias diff='/bin/diff --color=auto'
 
 alias lsblk='/bin/lsblk -fa'

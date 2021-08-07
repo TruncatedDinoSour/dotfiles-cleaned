@@ -448,6 +448,7 @@ vscodium-bin-marketplace
 vulkan-icd-loader
 wayland
 wayland-protocols
+wget
 which
 wpa_supplicant
 x264

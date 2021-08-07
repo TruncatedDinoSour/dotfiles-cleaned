@@ -53,6 +53,7 @@ static const Rule rules[] = {
 	{ "LibreWolf",                  NULL,       NULL,       1 << 1,       0,           0,           0,          -1 },
 	{ "chromium",                   NULL,       NULL,       1 << 1,       0,           0,           0,          -1 },
     { "qBittorrent",                NULL,       NULL,       1 << 1,       0,           0,           0,          -1 },
+    { "kristall",                   NULL,       NULL,       1 << 1,       0,           0,           0,          -1 },
 
 	/* tag 3 */
 	{ "Code",                       NULL,       NULL,       1 << 2,       0,           0,           0,          -1 },

@@ -1,5 +1,6 @@
 runtime! archlinux.vim
 
+
 syntax on						" Turn syntax highlighting on
 
 set noerrorbells				" Turn off error sound
@@ -14,6 +15,7 @@ set nobackup					" Don't back files up after saving the file
 set undofile					" Let undo get stored in files
 set incsearch					" Show results while searching live
 set confirm						" Confirm unsaved changes in files
+set lazyredraw                  " Remove macro redraws
 
 set encoding=utf-8                      " File encoding
 set laststatus=2                        " Set the bar type
@@ -22,6 +24,7 @@ set tabstop=4							" Maximum tab width
 set shiftwidth=4						" Indent size
 set softtabstop=0						" Insert spaces instead of tabs
 set guicursor=a:hor100                  " Set the cursor shape to a _
+
 
 " Plugins
 " after :PlugInstall, install cmake and run the ~/.vim/plugged/youcompleteme/install.py file and
