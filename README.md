@@ -6,10 +6,8 @@
   <img src="https://img.shields.io/badge/Maintained-Yes-green?color=red&style=flat-square">
   <img src="https://img.shields.io/github/last-commit/TruncatedDinosour/dotfiles-cleaned?color=red&style=flat-square">
   <img src="https://img.shields.io/github/repo-size/TruncatedDinosour/dotfiles-cleaned?color=red&style=flat-square">
-  <img src="https://img.shields.io/static/v1?label=License&message=GPLv3&color=red&style=flat-square">
   <img src="https://img.shields.io/github/issues/TruncatedDinosour/dotfiles-cleaned?color=red&style=flat-square">
   <img src="https://img.shields.io/github/stars/TruncatedDinosour/dotfiles-cleaned?color=red&style=flat-square">
-  <img src="https://img.shields.io/github/forks/TruncatedDinosour/dotfiles-cleaned?color=red&style=flat-square">
 </p>
 
 <h2 align="center"></h2>
