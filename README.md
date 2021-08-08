@@ -189,6 +189,7 @@ $ mv config ~/.config
 $ sudo mv bash_git /etc
 $ mv .xinitrc ~
 $ sudo mv st.desktop /usr/share/applications
+$ mv .xprofile ~
 ```
 
 **unsafe/might need to do manually core files**

@@ -30,3 +30,4 @@ dotfiles/bin -> /usr/local/src/pacman-show
 dotfiles/zsh -> /home/ari/.zshrc
 dotfiles/zsh -> /home/ari/.zsh_userrc
 dotfiles/zsh -> /home/ari/.oh-my-zsh/custom/plugins
+dotfiles/core -> /home/ari/.xprofile

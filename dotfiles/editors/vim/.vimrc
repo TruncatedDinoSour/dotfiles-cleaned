@@ -6,7 +6,7 @@ syntax on						" Turn syntax highlighting on
 set noerrorbells				" Turn off error sound
 set expandtab					" Will make the tab key insert spaces instead of tabs
 set smarttab					" Will make the tab key insert spaces or tabs to go to the next indent
-set smartindent					" Automatically indent files
+set smartindent autoindent		" Automatically indent files
 set number						" Show line count in a file
 set nowrap						" Turn word wrapping off
 set ignorecase					" Turn case-insensitive searching on

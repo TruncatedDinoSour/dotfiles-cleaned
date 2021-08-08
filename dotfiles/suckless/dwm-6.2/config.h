@@ -54,6 +54,7 @@ static const Rule rules[] = {
 	{ "chromium",                   NULL,       NULL,       1 << 1,       0,           0,           0,          -1 },
     { "qBittorrent",                NULL,       NULL,       1 << 1,       0,           0,           0,          -1 },
     { "kristall",                   NULL,       NULL,       1 << 1,       0,           0,           0,          -1 },
+    { "Thunderbird",                NULL,       NULL,       1 << 1,       0,           0,           0,          -1 },
 
 	/* tag 3 */
 	{ "Code",                       NULL,       NULL,       1 << 2,       0,           0,           0,          -1 },

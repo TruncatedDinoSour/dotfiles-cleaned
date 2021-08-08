@@ -26,6 +26,7 @@ bison
 bluez-libs
 boost
 boost-libs
+botan
 bpython
 brotli
 bzip2
@@ -38,7 +39,6 @@ cantarell-fonts
 celt
 cmake
 coreutils
-cowsay
 cryptsetup
 curl
 dav1d
@@ -64,7 +64,6 @@ fakeroot
 feh
 ffmpeg
 fftw
-figlet
 file
 filesystem
 findutils
@@ -428,6 +427,7 @@ systemd-sysvcompat
 tar
 tdb
 texinfo
+thunderbird
 tlp
 tokei
 tor-browser
@@ -451,7 +451,6 @@ vulkan-icd-loader
 wayland
 wayland-protocols
 which
-wipe
 wpa_supplicant
 x264
 x265

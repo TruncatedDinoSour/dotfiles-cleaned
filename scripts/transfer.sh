@@ -48,6 +48,7 @@ from=(
     "/home/ari/.zshrc"
     "/home/ari/.zsh_userrc"
     "/home/ari/.oh-my-zsh/custom/plugins"
+    "/home/ari/.xprofile"
 )
 to=(
     "dotfiles/config"
@@ -82,6 +83,7 @@ to=(
     "dotfiles/zsh"
     "dotfiles/zsh"
     "dotfiles/zsh"
+    "dotfiles/core"
 )
 
 

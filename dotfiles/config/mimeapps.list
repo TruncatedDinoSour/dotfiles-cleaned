@@ -12,6 +12,12 @@ application/x-extension-xhtml=firefox.desktop
 application/x-extension-xht=firefox.desktop
 application/x-terminal-emulator=st.desktop
 TerminalEmulator=st.desktop
+x-scheme-handler/news=userapp-Thunderbird-MD1770.desktop
+x-scheme-handler/snews=userapp-Thunderbird-MD1770.desktop
+x-scheme-handler/nntp=userapp-Thunderbird-MD1770.desktop
+x-scheme-handler/feed=userapp-Thunderbird-661870.desktop
+application/rss+xml=userapp-Thunderbird-661870.desktop
+application/x-extension-rss=userapp-Thunderbird-661870.desktop
 
 [Added Associations]
 x-scheme-handler/tg=userapp-Kotatogram Desktop-EYYK50.desktop;userapp-Kotatogram Desktop-7TZW60.desktop;userapp-Kotatogram Desktop-4KUV60.desktop;
@@ -31,3 +37,9 @@ application/x-bzip=pcmanfm.desktop;
 application/x-terminal-emulator=st.desktop;
 TerminalEmulator=st.desktop;
 inode/directory=st.desktop;
+x-scheme-handler/news=userapp-Thunderbird-MD1770.desktop;
+x-scheme-handler/snews=userapp-Thunderbird-MD1770.desktop;
+x-scheme-handler/nntp=userapp-Thunderbird-MD1770.desktop;
+x-scheme-handler/feed=userapp-Thunderbird-661870.desktop;
+application/rss+xml=userapp-Thunderbird-661870.desktop;
+application/x-extension-rss=userapp-Thunderbird-661870.desktop;
