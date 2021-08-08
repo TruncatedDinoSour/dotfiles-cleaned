@@ -38,6 +38,7 @@ cantarell-fonts 1:0.301-1
 celt 0.11.3-4
 cmake 3.21.1-1
 coreutils 8.32-1
+cowsay 3.04-2
 cryptsetup 2.3.6-1
 curl 7.78.0-1
 dav1d 0.9.0-1
@@ -63,6 +64,7 @@ fakeroot 1.25.3-2
 feh 3.7.1-1
 ffmpeg 2:4.4-4
 fftw 3.3.9-1
+figlet 2.2.5-4
 file 5.40-5
 filesystem 2021.05.31-1
 findutils 4.8.0-1
@@ -78,12 +80,9 @@ gawk 5.1.0-1
 gc 8.0.4-4
 gcc 11.1.0-1
 gcc-libs 11.1.0-1
-gdb 10.2-2
-gdb-common 10.2-2
 gdbm 1.20-1
 gdk-pixbuf2 2.42.6-2
 gettext 0.21-1
-giblib 1.2.4-8
 giflib 5.2.1-2
 git 2.32.0-1
 glib-networking 1:2.68.1-1
@@ -254,7 +253,7 @@ libxau 1.0.9-3
 libxaw 1.0.14-1
 libxcb 1.14-1
 libxcomposite 0.4.5-3
-libxcrypt 4.4.23-1
+libxcrypt 4.4.24-1
 libxcursor 1.2.0-2
 libxdamage 1.1.5-3
 libxdg-basedir 1.2.3-1
@@ -414,7 +413,6 @@ shared-mime-info 2.0+57+gc1d1c70-1
 siji-git r23.c691f20-2
 slang 2.3.2-2
 sound-theme-freedesktop 0.8-4
-source-highlight 3.1.9-5
 speex 1.2.0-3
 speexdsp 1.2.0-2
 spirv-tools 2021.1-1
@@ -424,9 +422,9 @@ startup-notification 0.12-7
 sudo 1.9.7.p2-1
 svt-av1 0.8.7-1
 sysfsutils 2.1.1-1
-systemd 249.2-1
-systemd-libs 249.2-1
-systemd-sysvcompat 249.2-1
+systemd 249.3-1
+systemd-libs 249.3-1
+systemd-sysvcompat 249.3-1
 tar 1.34-1
 tdb 1.4.5-1
 texinfo 6.8-2
@@ -453,6 +451,7 @@ vulkan-icd-loader 1.2.185-1
 wayland 1.19.0-1
 wayland-protocols 1.21-1
 which 2.21-5
+wipe 2.3.1-5
 wpa_supplicant 2:2.9-8
 x264 3:0.161.r3039.544c61f-1
 x265 3.5-1
@@ -514,5 +513,4 @@ zimg 3.0.2-1
 zita-alsa-pcmi 0.3.2-3
 zita-resampler 1.8.0-1
 zlib 1:1.2.11-4
-zsh 5.8-1
 zstd 1.5.0-1

@@ -21,7 +21,7 @@ fi
 source /etc/bash_git
 
 autorun() {
-    if [ "$USER" != "root" ]; then
+    if [ "$USER" != "root" ] && [ "$TERM" != "linux" ] && [ "$TERM" != "bsd" ]; then
         /usr/local/bin/yafetch
     fi
 }

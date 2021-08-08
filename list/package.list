@@ -38,6 +38,7 @@ cantarell-fonts
 celt
 cmake
 coreutils
+cowsay
 cryptsetup
 curl
 dav1d
@@ -63,6 +64,7 @@ fakeroot
 feh
 ffmpeg
 fftw
+figlet
 file
 filesystem
 findutils
@@ -78,12 +80,9 @@ gawk
 gc
 gcc
 gcc-libs
-gdb
-gdb-common
 gdbm
 gdk-pixbuf2
 gettext
-giblib
 giflib
 git
 glib-networking
@@ -414,7 +413,6 @@ shared-mime-info
 siji-git
 slang
 sound-theme-freedesktop
-source-highlight
 speex
 speexdsp
 spirv-tools
@@ -453,6 +451,7 @@ vulkan-icd-loader
 wayland
 wayland-protocols
 which
+wipe
 wpa_supplicant
 x264
 x265
@@ -514,5 +513,4 @@ zimg
 zita-alsa-pcmi
 zita-resampler
 zlib
-zsh
 zstd
