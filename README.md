@@ -1,6 +1,17 @@
 <p align="center">
 <img src="https://user-images.githubusercontent.com/71613062/123562468-7acd1f80-d79e-11eb-9ca3-6ee2f67fc0c0.png" width="85%">
 </p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Maintained-Yes-green?color=red&style=flat-square">
+  <img src="https://img.shields.io/github/last-commit/TruncatedDinosour/dotfiles-cleaned?color=red&style=flat-square">
+  <img src="https://img.shields.io/github/repo-size/TruncatedDinosour/dotfiles-cleaned?color=red&style=flat-square">
+  <img src="https://img.shields.io/static/v1?label=License&message=GPLv3&color=red&style=flat-square">
+  <img src="https://img.shields.io/github/issues/TruncatedDinosour/dotfiles-cleaned?color=red&style=flat-square">
+  <img src="https://img.shields.io/github/stars/TruncatedDinosour/dotfiles-cleaned?color=red&style=flat-square">
+  <img src="https://img.shields.io/github/forks/TruncatedDinosour/dotfiles-cleaned?color=red&style=flat-square">
+</p>
+
 <h2 align="center"></h2>
 
 <p align="center"><b>What Am I using right now?</b></p>
