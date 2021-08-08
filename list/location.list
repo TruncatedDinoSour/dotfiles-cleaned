@@ -27,3 +27,6 @@ dotfiles/bin -> /usr/local/src/seject
 dotfiles/qbittorrent -> /usr/share/themes/mumble-dark.qbtheme
 dotfiles/core -> /usr/share/applications/st.desktop
 dotfiles/bin -> /usr/local/src/pacman-show
+dotfiles/zsh -> /home/ari/.zshrc
+dotfiles/zsh -> /home/ari/.zsh_userrc
+dotfiles/zsh -> /home/ari/.oh-my-zsh/custom/plugins

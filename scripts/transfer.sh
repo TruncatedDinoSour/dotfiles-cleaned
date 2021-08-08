@@ -12,7 +12,7 @@ read -p "=== [ press enter to continue ] ===" x
 
 rm -rfv dotfiles list
 mkdir -p list
-mkdir -p dotfiles{,/RCs,/editors/vim,/core,/bin,/etc,/qbittorrent}
+mkdir -p dotfiles{,/RCs,/editors/vim,/core,/bin,/etc,/qbittorrent,/zsh}
 
 
 from=(
@@ -45,6 +45,9 @@ from=(
     "/usr/share/themes/mumble-dark.qbtheme"
     "/usr/share/applications/st.desktop"
     "/usr/local/src/pacman-show"
+    "/home/ari/.zshrc"
+    "/home/ari/.zsh_userrc"
+    "/home/ari/.oh-my-zsh/custom/plugins"
 )
 to=(
     "dotfiles/config"
@@ -76,6 +79,9 @@ to=(
     "dotfiles/qbittorrent"
     "dotfiles/core"
     "dotfiles/bin"
+    "dotfiles/zsh"
+    "dotfiles/zsh"
+    "dotfiles/zsh"
 )
 
 
@@ -91,4 +97,5 @@ rm -rfv dotfiles/config/qBittorrent dotfiles/config/VirtualBox dotfiles/config/d
 paru -Q | grep -io "^\S*" > list/package.list
 paru -Q > list/package_full.list
 lsd -la /usr/local/src > list/src.list
+sudo find /root -type l > list/root_symlinks.list
 

@@ -78,6 +78,8 @@ gawk
 gc
 gcc
 gcc-libs
+gdb
+gdb-common
 gdbm
 gdk-pixbuf2
 gettext
@@ -90,6 +92,7 @@ glibc
 glslang
 gmp
 gnu-free-fonts
+gnu-netcat
 gnupg
 gnutls
 gpgme
@@ -411,6 +414,7 @@ shared-mime-info
 siji-git
 slang
 sound-theme-freedesktop
+source-highlight
 speex
 speexdsp
 spirv-tools
@@ -448,7 +452,6 @@ vscodium-bin-marketplace
 vulkan-icd-loader
 wayland
 wayland-protocols
-wget
 which
 wpa_supplicant
 x264
@@ -511,4 +514,5 @@ zimg
 zita-alsa-pcmi
 zita-resampler
 zlib
+zsh
 zstd
