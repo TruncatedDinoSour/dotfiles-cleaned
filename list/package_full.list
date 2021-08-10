@@ -30,9 +30,9 @@ botan 2.18.1-1
 bpython 0.21-1
 brotli 1.0.9-4
 bzip2 1.0.8-4
-c-ares 1.17.1-1
+c-ares 1.17.2-1
 ca-certificates 20210603-1
-ca-certificates-mozilla 3.68-1
+ca-certificates-mozilla 3.69-1
 ca-certificates-utils 20210603-1
 cairo 1.17.4-5
 cantarell-fonts 1:0.301-1
@@ -41,10 +41,10 @@ cmake 3.21.1-1
 coreutils 8.32-1
 cryptsetup 2.3.6-1
 curl 7.78.0-1
-dav1d 0.9.0-1
+dav1d 0.9.1-1
 db 5.3.28-5
 dbus 1.12.20-1
-dbus-glib 0.112-1
+dbus-glib 0.112-2
 dconf 0.40.0-1
 desktop-file-utils 0.26-1
 device-mapper 2.03.12-1
@@ -115,7 +115,7 @@ hidapi 0.10.1-1
 hunspell 1.7.0-3
 hwids 20210613-1
 hwloc 2.5.0-1
-iana-etc 20210624-1
+iana-etc 20210728-1
 icu 69.1-1
 imlib2 1.7.2-1
 intel-ucode 20210608-1
@@ -172,9 +172,6 @@ libevdev 1.11.0-1
 libevent 2.1.12-1
 libexif 0.6.22-1
 libffi 3.3-4
-libfm 1.3.2-1
-libfm-extra 1.3.2-1
-libfm-gtk2 1.3.2-1
 libfontenc 1.1.4-3
 libgcrypt 1.9.3-1
 libglvnd 1.3.3-1
@@ -186,11 +183,11 @@ libid3tag 0.15.1b-11
 libidn2 2.3.2-1
 libiec61883 1.2.0-6
 libinput 1.18.1-1
-libjpeg-turbo 2.1.0-1
+libjpeg-turbo 2.1.1-1
 libksba 1.6.0-1
 libldap 2.4.59-2
 libmfx 21.2.3-1
-libmm-glib 1.16.8-1
+libmm-glib 1.16.10-1
 libmnl 1.0.4-3
 libmodplug 0.8.9.0-3
 libmpc 1.2.1-1
@@ -201,7 +198,7 @@ libnfnetlink 1.0.1-4
 libnftnl 1.2.0-1
 libnghttp2 1.44.0-1
 libnl 3.5.0-3
-libnm 1.32.6-1
+libnm 1.32.8-1
 libnotify 0.7.9-1
 libnsl 1.3.0-2
 libogg 1.3.5-1
@@ -289,7 +286,6 @@ lsd 0.20.1-1
 lua51 5.1.5-9
 lua52 5.2.4-5
 lxappearance 0.6.3-4
-lxmenu-data 0.1.5-3
 lz4 1:1.9.3-2
 lzo 2.10-3
 m4 1.4.19-1
@@ -297,7 +293,6 @@ mailcap 2.1.53-1
 make 4.3-3
 man-db 2.9.4-2
 md4c 0.4.8-1
-menu-cache 1.1.0-2
 mesa 21.1.6-1
 mkinitcpio 30-2
 mkinitcpio-busybox 1.33.1-1
@@ -311,14 +306,15 @@ nano 5.8-1
 ncurses 6.2-2
 nerd-fonts-hack 2.1.0-3
 nettle 3.7.3-1
-networkmanager 1.32.6-1
+networkmanager 1.32.8-1
+nnn 4.2-1
 node-gyp 8.1.0-2
 nodejs 16.6.1-1
 nodejs-nopt 5.0.0-2
 npm 7.20.5-1
 npth 1.6-3
 nspr 4.32-1
-nss 3.68-1
+nss 3.69-1
 opencore-amr 0.1.5-5
 openjpeg2 2.4.0-1
 openmpi 4.1.1-2
@@ -335,7 +331,6 @@ pango 1:1.48.7-1
 paru 1.8.0-1
 patch 2.7.6-8
 pciutils 3.7.0-1
-pcmanfm 1.3.2-1
 pcre 8.45-1
 pcre2 10.37-1
 perl 5.34.0-2
@@ -385,7 +380,7 @@ python-retrying 1.3.3-9
 python-setuptools 1:57.4.0-1
 python-six 1.16.0-1
 python-toml 0.10.2-3
-python-tomli 1.2.0-1
+python-tomli 1.2.1-1
 python-urllib3 1.26.6-1
 python-webencodings 0.5.1-6
 python2 2.7.18-3
@@ -447,7 +442,7 @@ virtualbox-host-modules-arch 6.1.26-5
 vmaf 1.5.3-1
 vscodium-bin 1.59.0-1
 vscodium-bin-marketplace 1.56.0-4
-vulkan-icd-loader 1.2.185-1
+vulkan-icd-loader 1.2.186-1
 wayland 1.19.0-1
 wayland-protocols 1.21-1
 which 2.21-5

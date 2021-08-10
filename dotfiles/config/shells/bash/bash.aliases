@@ -5,7 +5,7 @@ alias ..='cd ..'
 alias k='kill'
 alias ka='killall'
 
-alias ls='/bin/lsd --color=auto -Fvh'
+alias ls='/bin/lsd --group-dirs --color=auto -Fvh'
 alias ll='ls -lFv'
 alias la='ls -lFAv'
 alias l='ll'

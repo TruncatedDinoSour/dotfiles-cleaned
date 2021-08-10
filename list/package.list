@@ -172,9 +172,6 @@ libevdev
 libevent
 libexif
 libffi
-libfm
-libfm-extra
-libfm-gtk2
 libfontenc
 libgcrypt
 libglvnd
@@ -289,7 +286,6 @@ lsd
 lua51
 lua52
 lxappearance
-lxmenu-data
 lz4
 lzo
 m4
@@ -297,7 +293,6 @@ mailcap
 make
 man-db
 md4c
-menu-cache
 mesa
 mkinitcpio
 mkinitcpio-busybox
@@ -312,6 +307,7 @@ ncurses
 nerd-fonts-hack
 nettle
 networkmanager
+nnn
 node-gyp
 nodejs
 nodejs-nopt
@@ -335,7 +331,6 @@ pango
 paru
 patch
 pciutils
-pcmanfm
 pcre
 pcre2
 perl

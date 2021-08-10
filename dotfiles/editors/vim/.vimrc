@@ -1,6 +1,5 @@
 runtime! archlinux.vim
 
-
 syntax on						" Turn syntax highlighting on
 
 set noerrorbells				" Turn off error sound
@@ -25,7 +24,6 @@ set shiftwidth=4						" Indent size
 set softtabstop=0						" Insert spaces instead of tabs
 set guicursor=a:hor100                  " Set the cursor shape to a _
 
-
 " Plugins
 " after :PlugInstall, install cmake and run the ~/.vim/plugged/youcompleteme/install.py file and
 " then run :YcmRestartServer
@@ -47,18 +45,17 @@ hi LineNr guibg=NONE ctermbg=NONE
 hi SignColumn guibg=NONE ctermbg=NONE
 hi EndOfBuffer guibg=NONE ctermbg=NONE
 
+" Remap ; -> :
+map ; :
 
-" ; -> :
-nnoremap ; :
-vnoremap ; :
-" : -> ;
-nnoremap : ;
-vnoremap : ;
-
-" jj -> escape
+" Remap jj -> escape
+nnoremap jj <Esc>
 inoremap jj <Esc>
 vnoremap jj <Esc>
-nnoremap jj <Esc>
+xnoremap jj <Esc>
+snoremap jj <Esc>
+onoremap jj <Esc>
+
 
 let mapleader = ","                 " , = leader
 
@@ -86,5 +83,5 @@ let s:palette.normal.middle = [ [ 'NONE', 'NONE', 'NONE', 'NONE' ] ]
 let s:palette.inactive.middle = s:palette.normal.middle
 let s:palette.tabline.middle = s:palette.normal.middle
 
-set noshowmode                                  " Don't show what mode (neo)vim is in
+set noshowmode                                  " Don't show what mode vim is in
 
