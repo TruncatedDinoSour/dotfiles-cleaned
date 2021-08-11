@@ -6,9 +6,9 @@ function main() {
     local green="\e[0;92m"
     local blue="\e[0;94m"
 
-    printf "${red}❯❯ Explicit${reset}: %s\n" "$(pacman -Qe | wc -l)"
-    printf "${green}❯❯ Total${reset}: %s\n" "$(pacman -Q | wc -l)"
-    printf "${blue}❯❯ External${reset}: %s\n" "$(pacman -Qm | wc -l)"
+    printf "${red}[*] Explicit${reset}: %s\n" "$(pacman -Qe | wc -l)"
+    printf "${blue}[*] External${reset}: %s\n" "$(pacman -Qm | wc -l)"
+    printf "${green}[*] Total${reset}: %s\n" "$(pacman -Q | wc -l)"
 }
 
 main

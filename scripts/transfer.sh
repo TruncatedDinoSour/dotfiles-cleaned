@@ -1,18 +1,18 @@
-#!/bin/sh
+#!/bin/bash
 
 if [[ "$USER" != "ari" ]];
 then
-    exit -1
+    exit 255
 fi
 
 
 echo "[?] Are you sure that you want to update the dotfiles?"
-read -p "=== [ press enter to continue ] ===" x
+read -p "=== [ press enter to continue ] ===" _
 
 
 rm -rfv dotfiles list
 mkdir -p list
-mkdir -p dotfiles{,/RCs,/editors/vim,/core,/bin,/etc,/qbittorrent,/zsh}
+mkdir -p dotfiles{,/RCs,/editors/vim,/core,/bin,/etc,/qbittorrent,/zsh,/custom}
 
 
 from=(
@@ -50,6 +50,7 @@ from=(
     "/home/ari/.oh-my-zsh/custom/plugins"
     "/home/ari/.xprofile"
     "/home/ari/.bash_profile"
+    "/home/ari/.scripts"
 )
 to=(
     "dotfiles/config"
@@ -86,6 +87,7 @@ to=(
     "dotfiles/zsh"
     "dotfiles/core"
     "dotfiles/RCs"
+    "dotfiles/custom"
 )
 
 
@@ -101,5 +103,5 @@ rm -rfv dotfiles/config/qBittorrent dotfiles/config/VirtualBox dotfiles/config/d
 paru -Q | grep -io "^\S*" > list/package.list
 paru -Q > list/package_full.list
 lsd -la /usr/local/src > list/src.list
-sudo ls -lA $(sudo find /root -type l) > list/root_symlinks.list
+sudo find /root -type l | xargs -I {} sudo ls -lA '{}' > list/root_symlinks.list
 

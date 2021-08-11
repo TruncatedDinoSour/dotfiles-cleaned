@@ -1,7 +1,7 @@
-#!/bin/sh
+#!/bin/env bash
 
-echo "If you want to actually run this depricated script and remove exit -1 from below the first echo."
-exit -1
+echo "If you want to actually run this depricated script and remove exit 1 from below the first echo."
+exit 1
 
 pacm="/bin/paru"        # Your AUR helper
 sudo="/bin/sudo"        # Run commands as root
@@ -11,7 +11,7 @@ ping="--ignore"         # Arguments to ignore package installation
 if [[ "$EUID" == 0 ]];
 then
     echo "[-] Do not run me as root!"
-    exit -1
+    exit 255
 fi
 
 

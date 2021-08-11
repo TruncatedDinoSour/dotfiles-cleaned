@@ -23,6 +23,7 @@ set tabstop=4							" Maximum tab width
 set shiftwidth=4						" Indent size
 set softtabstop=0						" Insert spaces instead of tabs
 set guicursor=a:hor100                  " Set the cursor shape to a _
+set clipboard=undefinedplus             " Copy to system clipboard
 
 " Plugins
 " after :PlugInstall, install cmake and run the ~/.vim/plugged/youcompleteme/install.py file and
