@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 source /etc/bash_git
 
@@ -14,10 +14,10 @@ autorun() {
 
 ps_one() {
     local c_status="$?"
-        local git="$(__git_ps1 | sed 's/^ //g')"
-        local venv="$(basename "$VIRTUAL_ENV")"
-        local dir='\W'
-        local propt_char='#'
+    local git="$(__git_ps1 | sed 's/^ //g')"
+    local venv="$(basename "$VIRTUAL_ENV")"
+    local dir='\W'
+    local propt_char='#'
 
         [[ "$UID" != '0'  ]] && local propt_char='%'
         [[ "$c_status" != '0'  ]] && local propt_colour="${RED}$c_status "

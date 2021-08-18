@@ -25,6 +25,7 @@ set softtabstop=0						" Insert spaces instead of tabs
 set guicursor=a:hor100                  " Set the cursor shape to a _
 set clipboard=undefinedplus             " Copy to system clipboard
 
+
 " Plugins
 " after :PlugInstall, install cmake and run the ~/.vim/plugged/youcompleteme/install.py file and
 " then run :YcmRestartServer
@@ -49,13 +50,12 @@ hi EndOfBuffer guibg=NONE ctermbg=NONE
 " Remap ; -> :
 map ; :
 
-" Remap jj -> escape
-nnoremap jj <Esc>
-inoremap jj <Esc>
-vnoremap jj <Esc>
-xnoremap jj <Esc>
-snoremap jj <Esc>
-onoremap jj <Esc>
+" Remap // -> escape
+inoremap // <Esc>
+vnoremap // <Esc>
+xnoremap // <Esc>
+snoremap // <Esc>
+onoremap // <Esc>
 
 
 let mapleader = ","                 " , = leader

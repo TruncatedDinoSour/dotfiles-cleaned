@@ -1,6 +1,0 @@
-#!/bin/sh
-sleep 3
-scrot '/tmp/%F_%T_$wx$h.png' -e '/bin/xclip -selection clipboard -target image/png -i $f && /bin/rm -f $f'
-sleep 0.5
-dunstify "Screenshot copied to clipboard"
-

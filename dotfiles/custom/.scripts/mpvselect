@@ -1,6 +1,0 @@
-#!/bin/sh
-
-/bin/ls -a "$@" |
-    /bin/fzf |
-    /bin/xargs -I {} mpv --really-quiet '{}'
-

@@ -122,7 +122,7 @@ static const char *browser[] = { "firefox", NULL };
 static const char *netwmgr[] = { "st", "-e", "nmtui", NULL };
 
 // static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
-static const char *termcmd[]  = { "st", NULL };
+static const char *termcmd[]  = { "st",  NULL };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */

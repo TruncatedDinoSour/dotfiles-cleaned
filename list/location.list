@@ -8,8 +8,6 @@ dotfiles/suckless -> /home/ari/Suckless
 dotfiles/suckless -> /home/ari/.dwm
 dotfiles/bin -> /usr/local/src/fastfetch
 dotfiles/bin -> /usr/local/src/yafetch
-dotfiles/bin -> /usr/local/src/colours
-dotfiles/bin -> /usr/local/src/dunstest
 dotfiles/core -> /etc/bash_git
 dotfiles/core -> /etc/paru.conf
 dotfiles/core -> /etc/pacman.conf
@@ -21,12 +19,9 @@ dotfiles/core -> /etc/sudoers
 dotfiles/core -> /etc/mkinitcpio.conf
 dotfiles/RCs -> /home/ari/.profile
 dotfiles/core -> /etc/default/grub
-dotfiles/bin -> /usr/local/src/shot
 dotfiles/etc -> /home/ari/Pictures/wallpaper.png
-dotfiles/bin -> /usr/local/src/seject
 dotfiles/qbittorrent -> /usr/share/themes/mumble-dark.qbtheme
 dotfiles/core -> /usr/share/applications/st.desktop
-dotfiles/bin -> /usr/local/src/pacman-show
 dotfiles/zsh -> /home/ari/.zshrc
 dotfiles/zsh -> /home/ari/.zsh_userrc
 dotfiles/zsh -> /home/ari/.oh-my-zsh/custom/plugins

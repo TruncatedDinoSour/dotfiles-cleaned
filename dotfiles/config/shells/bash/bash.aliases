@@ -20,6 +20,7 @@ alias cat='/bin/bat --theme="gruvbox-dark"'
 
 alias src='source ~/.bashrc'
 alias stx='/bin/startx'
+alias r='/bin/ranger'
 
 alias youtube-dl='youtube-dl --verbose --yes-playlist'
 alias yt='youtube-dl --format mp4'
@@ -30,6 +31,7 @@ alias clear='/bin/clear; autorun'
 
 alias grep='/bin/grep --color=auto -iHn'
 alias diff='/bin/diff --color=auto'
+alias c='/bin/clear'
 
 alias lsblk='/bin/lsblk -fa'
 alias mv='/bin/mv -i'

@@ -5,8 +5,11 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
+# Enable Vi(M) mode
+set -o vi
 
 source ~/.config/shells/bash/*.functions
+export PROMPT_COMMAND='ps_one'
 
 case "$TERM" in
     "bsd"|"linux") tty_autorun ;;

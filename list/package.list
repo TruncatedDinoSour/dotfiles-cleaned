@@ -11,6 +11,7 @@ argon2
 at-spi2-atk
 at-spi2-core
 atk
+atool
 attr
 audit
 autoconf
@@ -24,13 +25,11 @@ bat
 binutils
 bison
 bluez-libs
-boost
 boost-libs
 botan
 bpython
 brotli
 bzip2
-c-ares
 ca-certificates
 ca-certificates-mozilla
 ca-certificates-utils
@@ -53,7 +52,6 @@ diffutils
 dnssec-anchors
 dosfstools
 double-conversion
-duf-bin
 dunst-git
 e2fsprogs
 efibootmgr
@@ -63,6 +61,7 @@ expat
 fakeroot
 feh
 ffmpeg
+ffmpegthumbnailer
 fftw
 file
 filesystem
@@ -73,11 +72,15 @@ flex
 fontconfig
 freetype2
 fribidi
+fuse-common
+fuse2
 fzf
 gawk
 gc
 gcc
 gcc-libs
+gdb
+gdb-common
 gdbm
 gdk-pixbuf2
 gettext
@@ -90,7 +93,6 @@ glibc
 glslang
 gmp
 gnu-free-fonts
-gnu-netcat
 gnupg
 gnutls
 gpgme
@@ -144,6 +146,7 @@ haskell-vector
 hdparm
 hicolor-icon-theme
 hidapi
+htop
 hunspell
 hwids
 hwloc
@@ -167,6 +170,7 @@ kcolorpicker
 keyutils
 kimageannotator
 kmod
+kotatogram-desktop-bin
 krb5
 ksnip
 l-smash
@@ -211,6 +215,7 @@ libgudev
 libibus
 libice
 libid3tag
+libidn
 libidn2
 libiec61883
 libinput
@@ -317,6 +322,7 @@ lsd
 lua51
 lua52
 lxappearance
+lynx
 lz4
 lzo
 m4
@@ -338,11 +344,6 @@ ncurses
 nerd-fonts-hack
 nettle
 networkmanager
-nnn
-node-gyp
-nodejs
-nodejs-nopt
-npm
 npth
 nspr
 nss
@@ -366,6 +367,7 @@ pcre
 pcre2
 perl
 perl-error
+perl-image-exiftool
 perl-mailtools
 perl-timedate
 pinentry
@@ -420,18 +422,16 @@ qbittorrent
 qt5-base
 qt5-svg
 qt5-x11extras
+ranger
 rav1e
 readline
 reflector
 rest
 rhash
-rsync
 rubberband
 scrot
-sdl
 sdl2
 sed
-semver
 shaderc
 shadow
 shared-mime-info
@@ -439,6 +439,7 @@ shellcheck
 siji-git
 slang
 sound-theme-freedesktop
+source-highlight
 speex
 speexdsp
 spirv-tools
@@ -456,7 +457,6 @@ tdb
 texinfo
 thunderbird
 tlp
-tokei
 tor-browser
 tslib
 ttf-font-awesome
@@ -469,8 +469,6 @@ v4l-utils
 vid.stab
 vim
 vim-runtime
-virtualbox
-virtualbox-host-modules-arch
 vmaf
 vscodium-bin
 vscodium-bin-marketplace
@@ -532,10 +530,10 @@ xorg-xsetroot
 xorg-xwayland
 xorgproto
 xvidcore
-xxhash
 xz
 zeromq
 zimg
+zip
 zita-alsa-pcmi
 zita-resampler
 zlib

@@ -19,7 +19,7 @@
 ## Automatically indent a newly created line to the same number of
 ## tabs and/or spaces as the preceding line -- or as the next line
 ## if the preceding line is the beginning of a paragraph.
-set autoindent
+# set autoindent
 
 ## Back up files to the current filename plus a tilde.
 # set backup
@@ -36,7 +36,7 @@ set autoindent
 ## The characters treated as closing brackets when justifying paragraphs.
 ## This may not include any blank characters.  Only closing punctuation,
 ## optionally followed by these closing brackets, can end sentences.
-set brackets ""')>]}"
+# set brackets ""')>]}"
 
 ## Automatically hard-wrap the current line when it becomes overlong.
 # set breaklonglines
@@ -68,7 +68,7 @@ set brackets ""')>]}"
 # set jumpyscrolling
 
 ## Display line numbers to the left (and any anchors in the margin).
-set linenumbers
+# set linenumbers
 
 ## Enable vim-style lock-files.  This is just to let a vim user know you
 ## are editing a file [s]he is trying to edit and vice versa.  There are
@@ -81,7 +81,7 @@ set linenumbers
 ## The opening and closing brackets that can be found by bracket
 ## searches.  They cannot contain blank characters.  The former set must
 ## come before the latter set, and both must be in the same order.
-set matchbrackets "(<[{)>]}"
+# set matchbrackets "(<[{)>]}"
 
 ## Suppress title bar and show file name and editor state at the bottom.
 # set minibar
@@ -100,7 +100,7 @@ set matchbrackets "(<[{)>]}"
 # set noconvert
 
 ## Don't display the helpful shortcut lists at the bottom of the screen.
-set nohelp
+# set nohelp
 
 ## Don't automatically add a newline when a file does not end with one.
 # set nonewlines
@@ -138,7 +138,7 @@ set nohelp
 
 ## Do regular-expression searches by default.
 ## Regular expressions are of the extended type (ERE).
-set regexp
+# set regexp
 
 ## Save a changed buffer automatically on exit; don't prompt.
 # set saveonexit
@@ -172,7 +172,7 @@ set regexp
 ## (The old form of this option, 'set suspend', is deprecated.)
 
 ## Use this tab size instead of the default; it must be greater than 0.
-set tabsize 4
+# set tabsize 8
 
 ## Convert typed tabs to spaces.
 # set tabstospaces
@@ -234,7 +234,7 @@ set tabsize 4
 ## For all details, see 'man nanorc', section SYNTAX HIGHLIGHTING.
 
 ## To include most of the existing syntax definitions, you can do:
-include "/usr/share/nano/*.nanorc"
+# include "/usr/share/nano/*.nanorc"
 
 ## Or you can select just the ones you need.  For example:
 # include "/usr/share/nano/html.nanorc"
@@ -265,6 +265,12 @@ include "/usr/share/nano/*.nanorc"
 ## <Ctrl+Backspace> delete the word to the left of the cursor with:
 # bind ^H chopwordleft main
 
+## For quickly uppercasing or lowercasing the word under the cursor.
+## (These effectively do a Ctrl+Right followed by a Shift+Ctrl+Left,
+## and then pipe the selected text through a sed command.)
+#bind Sh-M-U "Oc[1;6D|sed 's/.*/\U&/'" main
+#bind Sh-M-L "Oc[1;6D|sed 's/.*/\L&/'" main
+
 ## If you would like nano to have keybindings that are more "usual",
 ## such as ^O for Open, ^F for Find, ^H for Help, and ^Q for Quit,
 ## then uncomment these:
@@ -279,11 +285,11 @@ include "/usr/share/nano/*.nanorc"
 #bind ^B wherewas all
 #bind ^D findprevious all
 #bind ^R replace main
-#bind M-X flipnewbuffer all
-#bind ^X cut all
+#bind ^X cut main
 #bind ^C copy main
 #bind ^V paste all
 #bind ^P location main
+#bind ^E execute main
 #bind ^A mark main
 #unbind ^K main
 #unbind ^U all
@@ -293,9 +299,10 @@ include "/usr/share/nano/*.nanorc"
 #unbind M-T main
 #bind ^T gotoline main
 #bind ^T gotodir browser
-#bind ^Y speller main
+#bind ^T cutrestoffile execute
+#bind ^L linter execute
 #bind M-U undo main
 #bind M-R redo main
-#bind ^U undo main
-#bind ^E redo main
+#bind ^Z undo main
+#bind ^Y redo main
 #set multibuffer
