@@ -79,10 +79,10 @@ A: You may have set pacman as your package manager, But you actually need some o
 <h1 align="center"><b>Look & Feel</b></h1>
 <br/>
 <h3>DWM (Floating)</h3>
-<img src="https://user-images.githubusercontent.com/71613062/127733814-049d07ae-a159-4df3-a8d3-202276edd5c3.png">
+<img src="https://user-images.githubusercontent.com/71613062/130156504-804e5303-cd26-4b6e-ae09-7b915adae2ab.png">
 
 <h3>DWM (Tiling)</h3>
-<img src="https://user-images.githubusercontent.com/71613062/127733833-536b372b-37a7-4556-8dce-0b9d15b9d331.png">
+<img src="https://user-images.githubusercontent.com/71613062/130156557-8cb9fa6e-3812-4d15-9c2c-9ec223c1b7fc.png">
 
 <h2 align="center"></h2>
 
