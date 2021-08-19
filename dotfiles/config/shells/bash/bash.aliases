@@ -1,7 +1,5 @@
 #!/bin/sh
 
-alias ..='cd ..'
-
 alias k='kill'
 alias ka='killall'
 

@@ -1,8 +1,0 @@
-#!/bin/sh
-
-/bin/man -k . |
-    /bin/awk '{print $1}' |
-    /bin/sort |
-    /bin/fzf |
-    /bin/xargs -r man
-

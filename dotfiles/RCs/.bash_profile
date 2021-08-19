@@ -9,6 +9,7 @@ export ENV="$HOME/.profile"
 export PATH="$PATH:$HOME/.local/bin:$HOME/.scripts"
 export EDITOR='vim'
 export BROWSER='firefox'
+export TERMINAL='st'
 
 # NNN
 export NNN_TRASH=1

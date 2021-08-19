@@ -9,7 +9,7 @@ set smartindent autoindent		" Automatically indent files
 set number						" Show line count in a file
 set nowrap						" Turn word wrapping off
 set ignorecase					" Turn case-insensitive searching on
-set noswapfile					" Turn swapfiles off
+set noswapfile					" Turn swap files off
 set nobackup					" Don't back files up after saving the file
 set undofile					" Let undo get stored in files
 set incsearch					" Show results while searching live
@@ -23,8 +23,6 @@ set tabstop=4							" Maximum tab width
 set shiftwidth=4						" Indent size
 set softtabstop=0						" Insert spaces instead of tabs
 set guicursor=a:hor100                  " Set the cursor shape to a _
-set clipboard=undefinedplus             " Copy to system clipboard
-
 
 " Plugins
 " after :PlugInstall, install cmake and run the ~/.vim/plugged/youcompleteme/install.py file and
@@ -36,6 +34,7 @@ call plug#begin("~/.vim/plugged")
     Plug 'w0rp/ale'
     Plug 'jiangmiao/auto-pairs'
     Plug 'itchyny/lightline.vim'
+    Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install()  }, 'for': ['markdown', 'vim-plug'] }
 call plug#end()
 
 
@@ -51,17 +50,17 @@ hi EndOfBuffer guibg=NONE ctermbg=NONE
 map ; :
 
 " Remap // -> escape
-inoremap // <Esc>
-vnoremap // <Esc>
-xnoremap // <Esc>
-snoremap // <Esc>
-onoremap // <Esc>
+inoremap lj <Esc>
+vnoremap lj <Esc>
+xnoremap lj <Esc>
+snoremap lj <Esc>
+onoremap lj <Esc>
 
 
 let mapleader = ","                 " , = leader
 
 
-" Trim trailing whitespace in files
+" Trim trailing white-space in files
 fun! TrimWhitespace()
     let l:save = winsaveview()
     keeppatterns %s/\s\+$//e
@@ -74,7 +73,7 @@ augroup whitespace_trim
 augroup END
 
 
-" Bar's configration
+" Bar's configuration
 let g:lightline = {}
 let g:lightline.colorscheme = 'apprentice'      " Set the bar's theme
 

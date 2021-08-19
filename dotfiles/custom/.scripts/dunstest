@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 urgent=(
     "low"
@@ -8,6 +8,6 @@ urgent=(
 
 for i in "${!urgent[@]}";
 do
-    dunstify -u ${urgent[$i]} "Notification summary for ${urgent[$i]}" "This is a dunst notification test, this is this notification's body :)"
+    dunstify -u "${urgent[$i]}" "Notification summary for ${urgent[$i]}" "This is a dunst notification test, this is this notification's body :)"
 done
 

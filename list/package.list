@@ -25,18 +25,22 @@ bat
 binutils
 bison
 bluez-libs
+boost
 boost-libs
 botan
 bpython
 brotli
 bzip2
+c-ares
 ca-certificates
 ca-certificates-mozilla
 ca-certificates-utils
 cairo
 cantarell-fonts
 celt
+clang
 cmake
+compiler-rt
 coreutils
 cryptsetup
 curl
@@ -52,6 +56,7 @@ diffutils
 dnssec-anchors
 dosfstools
 double-conversion
+duf-bin
 dunst-git
 e2fsprogs
 efibootmgr
@@ -97,6 +102,7 @@ gnupg
 gnutls
 gpgme
 gpm
+gptfdisk
 graphite
 grep
 groff
@@ -146,7 +152,6 @@ haskell-vector
 hdparm
 hicolor-icon-theme
 hidapi
-htop
 hunspell
 hwids
 hwloc
@@ -344,6 +349,10 @@ ncurses
 nerd-fonts-hack
 nettle
 networkmanager
+node-gyp
+nodejs
+nodejs-nopt
+npm
 npth
 nspr
 nss
@@ -430,8 +439,10 @@ rest
 rhash
 rubberband
 scrot
+sdl
 sdl2
 sed
+semver
 shaderc
 shadow
 shared-mime-info
@@ -469,6 +480,8 @@ v4l-utils
 vid.stab
 vim
 vim-runtime
+virtualbox
+virtualbox-host-modules-arch
 vmaf
 vscodium-bin
 vscodium-bin-marketplace
@@ -533,7 +546,6 @@ xvidcore
 xz
 zeromq
 zimg
-zip
 zita-alsa-pcmi
 zita-resampler
 zlib

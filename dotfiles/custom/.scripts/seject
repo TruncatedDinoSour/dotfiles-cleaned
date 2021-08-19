@@ -1,8 +1,14 @@
 #!/bin/sh
-if [[ "$EUID" != '0' ]]; then
+if [ "$USER" != 'root' ]; then
     echo 'I require root access'
-    exit -1
+    exit 255
 else
-    /bin/eject $1 -tv
+    if [ "$@" ]; then
+        /bin/eject "$@" -tv
+        exit $?
+    else
+        echo "$(basename "$0") /dev/<device>"
+        exit 132
+    fi
 fi
 

@@ -19,12 +19,12 @@ ps_one() {
     local dir='\W'
     local propt_char='#'
 
-        [[ "$UID" != '0'  ]] && local propt_char='%'
-        [[ "$c_status" != '0'  ]] && local propt_colour="${RED}$c_status "
-        [[ "$git"  ]] && local dir="$git $dir"
-        [[ "$venv"  ]] && local extra="{${GREEN}$venv${RESTORE}} "
+    [[ "$UID" != '0'  ]] && local propt_char='%'
+    [[ "$c_status" != '0'  ]] && local propt_colour="${RED}$c_status "
+    [[ "$git"  ]] && local dir="$git $dir"
+    [[ "$venv"  ]] && local extra="{${GREEN}$venv${RESTORE}} "
 
-        export PS1="\n${extra}${GREEN}\u${RESTORE}@\h ${dir} ${propt_colour}${propt_char}${RESTORE} "
+    export PS1="\n${extra}${GREEN}\u${RESTORE}@\h ${dir} ${propt_colour}${propt_char}${RESTORE} "
 }
 
 

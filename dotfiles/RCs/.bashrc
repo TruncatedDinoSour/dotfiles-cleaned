@@ -8,6 +8,9 @@
 # Enable Vi(M) mode
 set -o vi
 
+# cd into a directory with only the name supplied
+shopt -s autocd
+
 source ~/.config/shells/bash/*.functions
 export PROMPT_COMMAND='ps_one'
 
@@ -18,5 +21,7 @@ esac
 source ~/.config/shells/bash/*.aliases
 
 dots='/home/ari/Ari/coding/resources_/dots'
+notes='/home/ari/Ari/coding/resources_/NOTES.md'
+
 autorun
 
