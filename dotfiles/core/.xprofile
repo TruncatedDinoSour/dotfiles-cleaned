@@ -5,7 +5,7 @@
 
 wallpaper="$HOME/Pictures/wallpaper.png"
 
-feh --bg-fill $wallpaper &
+feh --bg-tile "$wallpaper" &
 ~/.dwm/dwm-bar/dwm_bar.sh 2>/dev/null &
 xautolock -time 10 -locker /usr/local/bin/slock &
 

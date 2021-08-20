@@ -49,7 +49,7 @@ hi EndOfBuffer guibg=NONE ctermbg=NONE
 " Remap ; -> :
 map ; :
 
-" Remap // -> escape
+" Remap lj -> escape
 inoremap lj <Esc>
 vnoremap lj <Esc>
 xnoremap lj <Esc>

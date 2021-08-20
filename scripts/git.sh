@@ -19,6 +19,7 @@ then
     git push -u origin master
     exit $?
 else
+    git pull
     git add .
     git commit -m "$msg"
     git rm --cached dotfiles/editors/vim/.vim/plugged/Alduin

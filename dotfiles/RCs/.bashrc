@@ -21,7 +21,7 @@ esac
 source ~/.config/shells/bash/*.aliases
 
 dots='/home/ari/Ari/coding/resources_/dots'
-notes='/home/ari/Ari/coding/resources_/NOTES.md'
+notes='/home/ari/Ari/coding/resources_/NOTES.txt'
 
 autorun
 
