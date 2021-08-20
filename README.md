@@ -17,7 +17,7 @@
 OS:     Arch linux
 WM/DE:  DWM
 SHELL:  Bash
-THEME:  Light-ish???
+THEME:  coffee
 </pre>
 
 <p align="center"><b>What are the dependencies?</b></p>
