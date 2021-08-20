@@ -172,6 +172,7 @@ json-glib
 jsoncpp
 kbd
 kcolorpicker
+keepassxc
 keyutils
 kimageannotator
 kmod
@@ -429,9 +430,11 @@ python-webencodings
 python2
 python2-pyxdg
 qbittorrent
+qrencode
 qt5-base
 qt5-svg
 qt5-x11extras
+quazip
 ranger
 rav1e
 readline
@@ -545,6 +548,9 @@ xorg-xwayland
 xorgproto
 xvidcore
 xz
+yubico-c
+yubico-c-client
+yubikey-personalization
 zeromq
 zimg
 zita-alsa-pcmi

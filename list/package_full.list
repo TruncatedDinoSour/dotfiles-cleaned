@@ -172,6 +172,7 @@ json-glib 1.6.4-1
 jsoncpp 1.9.4-1
 kbd 2.4.0-2
 kcolorpicker 0.1.6-1
+keepassxc 2.6.6-1
 keyutils 1.6.3-1
 kimageannotator 0.5.1-1
 kmod 29-1
@@ -429,9 +430,11 @@ python-webencodings 0.5.1-6
 python2 2.7.18-3
 python2-pyxdg 0.27-1
 qbittorrent 4.3.7-1
+qrencode 4.1.1-1
 qt5-base 5.15.2+kde+r215-2
 qt5-svg 5.15.2+kde+r7-1
 qt5-x11extras 5.15.2-1
+quazip 1.1-1
 ranger 1.9.3-3
 rav1e 0.4.1-1
 readline 8.1.001-1
@@ -545,6 +548,9 @@ xorg-xwayland 21.1.2-1
 xorgproto 2021.4-1
 xvidcore 1.3.7-2
 xz 5.2.5-1
+yubico-c 1.13-6
+yubico-c-client 2.15-5
+yubikey-personalization 1.20.0-3
 zeromq 4.3.4-1
 zimg 3.0.2-1
 zita-alsa-pcmi 0.3.2-3
