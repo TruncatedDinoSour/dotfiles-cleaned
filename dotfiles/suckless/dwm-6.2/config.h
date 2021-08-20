@@ -16,11 +16,12 @@ static const int topbar             = 1;        /* 0 means bottom bar */
 static const char *fonts[]          = { "sans:size=11",
 	"FontAwesome:size=10.5"};
 static const char dmenufont[]       = "monospace:size=10";
-static const char col_gray1[]       = "#262220"; /* #222222 */
-static const char col_gray2[]       = "#262220"; /* #444444 */
-static const char col_gray3[]       = "#f9f6e8"; /* #BBBBBB */
-static const char col_gray4[]       = "#383838"; /* #EEEEEE */
-static const char col_cyan[]        = "#f9f0c2"; /* #005577 */
+
+static const char col_gray1[]       = "#262220"; /* #222222; background colour */
+static const char col_gray2[]       = "#262220"; /* #444444; inactive window border colour */
+static const char col_gray3[]       = "#f9f6e8"; /* #BBBBBB; font colour */
+static const char col_gray4[]       = "#383838"; /* #EEEEEE; current tag and current window colour */
+static const char col_cyan[]        = "#f9f0c2"; /* #005577; second bar colour and active window border colour */
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
 	[SchemeNorm] = { col_gray3, col_gray1, col_gray2 }, /* innnactive bar */

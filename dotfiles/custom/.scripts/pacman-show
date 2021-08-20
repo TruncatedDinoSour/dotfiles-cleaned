@@ -5,9 +5,11 @@ function main() {
     local red="\e[0;91m"
     local green="\e[0;92m"
     local blue="\e[0;94m"
+    local cyan="\e[0;36m"
 
     printf "${red}[*] Explicit${reset}: %s\n" "$(pacman -Qe | wc -l)"
     printf "${blue}[*] External${reset}: %s\n" "$(pacman -Qm | wc -l)"
+    printf "${cyan}[*] Orphans${reset}: %s\n" "$(pacman -Qttdq | wc -l)"
     printf "${green}[*] Total${reset}: %s\n" "$(pacman -Q | wc -l)"
 }
 

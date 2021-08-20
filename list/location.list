@@ -29,3 +29,4 @@ dotfiles/core -> /home/ari/.xprofile
 dotfiles/RCs -> /home/ari/.bash_profile
 dotfiles/custom -> /home/ari/.scripts
 dotfiles/core -> /etc/hosts
+dotfiles/core -> /etc/sysctl.conf

@@ -37,3 +37,5 @@ alias cp='/bin/cp -i'
 alias mkdir='/bin/mkdir -p'
 alias curl='/bin/curl -fL'
 
+alias transmission-cli='/bin/transmission-cli --encryption-preferred --no-uplimit --verify --no-downlimit --finish ~/.config/transmission/fini.sh'
+

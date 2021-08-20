@@ -41,6 +41,6 @@ function clipshot(arg)
 end
 
 mp.add_key_binding('H',     'clipshot-subs',   clipshot('subtitles'))
-mp.add_key_binding('U',     'clipshot-video',  clipshot('video'))
-mp.add_key_binding('p',     'clipshot-window', clipshot('window'))
+mp.add_key_binding('p',     'clipshot-video',  clipshot('video'))
+mp.add_key_binding('U',     'clipshot-window', clipshot('window'))
 

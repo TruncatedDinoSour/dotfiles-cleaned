@@ -76,3 +76,4 @@ end
 function observe(k,v) process(v) end
 
 mp.observe_property("playlist-count", "number", observe)
+

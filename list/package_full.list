@@ -6,7 +6,7 @@ alsa-topology-conf 1.2.5.1-1
 alsa-ucm-conf 1.2.5.1-1
 alsa-utils 1.2.5.1-1
 aom 3.1.2-1
-archlinux-keyring 20210802-1
+archlinux-keyring 20210820-1
 argon2 20190702-3
 at-spi2-atk 2.38.0-1
 at-spi2-core 2.40.3-1
@@ -42,7 +42,7 @@ clang 12.0.1-1
 cmake 3.21.1-1
 compiler-rt 12.0.1-2
 coreutils 8.32-1
-cryptsetup 2.3.6-1
+cryptsetup 2.4.0-1
 curl 7.78.0-1
 dav1d 0.9.1-1
 db 5.3.28-5
@@ -93,7 +93,7 @@ ghc-libs 8.10.5-1
 giflib 5.2.1-2
 git 2.33.0-1
 glib-networking 1:2.68.1-1
-glib2 2.68.3-1
+glib2 2.68.4-1
 glibc 2.33-5
 glslang 11.5.0-1
 gmp 6.2.1-1
@@ -171,14 +171,11 @@ json-c 0.15-1
 json-glib 1.6.4-1
 jsoncpp 1.9.4-1
 kbd 2.4.0-2
-kcolorpicker 0.1.6-1
 keepassxc 2.6.6-1
 keyutils 1.6.3-1
-kimageannotator 0.5.1-1
 kmod 29-1
 kotatogram-desktop-bin 1.4.1-1
 krb5 1.19.1-1
-ksnip 1.9.0-1
 l-smash 2.14.5-2
 lame 3.100-3
 lcms2 2.12-1
@@ -218,7 +215,7 @@ libgcrypt 1.9.3-1
 libglvnd 1.3.3-1
 libgpg-error 1.42-1
 libgudev 237-1
-libibus 1.5.24-1
+libibus 1.5.25-1
 libice 1.0.10-3
 libid3tag 0.15.1b-11
 libidn 1.38-1
@@ -275,7 +272,6 @@ libtheora 1.1.1-5
 libtiff 4.3.0-1
 libtirpc 1.3.2-1
 libtool 2.4.6+42+gb88cebd5-16
-libtorrent-rasterbar 1:1.2.14-1
 libunistring 0.9.10-3
 libunwind 1.5.0-1
 libusb 1.0.24-2
@@ -320,7 +316,7 @@ libxxf86vm 1.1.4-4
 licenses 20200427-1
 linux 5.13.12.arch1-1
 linux-api-headers 5.12.3-1
-linux-firmware 20210716.b7c134f-1
+linux-firmware 20210818.c46b8c3-1
 linux-headers 5.13.12.arch1-1
 llvm-libs 12.0.1-3
 lm_sensors 1:3.6.0.r41.g31d1f125-1
@@ -336,7 +332,7 @@ mailcap 2.1.53-1
 make 4.3-3
 man-db 2.9.4-2
 md4c 0.4.8-1
-mesa 21.1.6-1
+mesa 21.2.1-1
 mkinitcpio 30-2
 mkinitcpio-busybox 1.33.1-1
 mobile-broadband-provider-info 20201225-1
@@ -354,7 +350,7 @@ ngrok-bin 2.3.40-1
 node-gyp 8.1.0-2
 nodejs 16.7.0-1
 nodejs-nopt 5.0.0-2
-npm 7.20.6-1
+npm 7.21.0-1
 npth 1.6-3
 nspr 4.32-1
 nss 3.69-1
@@ -371,7 +367,7 @@ pahole 1.21-1
 pam 1.5.1-1
 pambase 20210605-2
 pango 1:1.48.9-1
-paru 1.8.1-1
+paru 1.8.2-1
 patch 2.7.6-8
 pciutils 3.7.0-1
 pcre 8.45-1
@@ -429,7 +425,6 @@ python-urllib3 1.26.6-1
 python-webencodings 0.5.1-6
 python2 2.7.18-3
 python2-pyxdg 0.27-1
-qbittorrent 4.3.7-1
 qrencode 4.1.1-1
 qt5-base 5.15.2+kde+r215-2
 qt5-svg 5.15.2+kde+r7-1
@@ -473,6 +468,7 @@ texinfo 6.8-2
 thunderbird 78.13.0-1
 tlp 1.3.1-2
 tor-browser 10.5.4-1
+transmission-cli 3.00-2
 tslib 1.22-1
 ttf-font-awesome 5.15.4-1
 tzdata 2021a-1
@@ -487,7 +483,7 @@ vim-runtime 8.2.2891-1
 virtualbox 6.1.26-1
 virtualbox-host-modules-arch 6.1.26-7
 vmaf 1.5.3-1
-vscodium-bin 1.59.0-1
+vscodium-bin 1.59.1-1
 vscodium-bin-marketplace 1.56.0-4
 vulkan-icd-loader 1.2.187-1
 wayland 1.19.0-1

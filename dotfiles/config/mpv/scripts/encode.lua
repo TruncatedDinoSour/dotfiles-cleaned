@@ -313,3 +313,4 @@ function set_timestamp(profile)
 end
 
 mp.add_key_binding(nil, "set-timestamp", set_timestamp)
+

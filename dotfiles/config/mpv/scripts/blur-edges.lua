@@ -145,3 +145,4 @@ end
 mp.add_key_binding(nil, "toggle-blur", toggle)
 mp.add_key_binding(nil, "set-blur", set_blur)
 mp.add_key_binding(nil, "unset-blur", unset_blur)
+
