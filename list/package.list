@@ -12,7 +12,6 @@ bison
 boost
 bpython
 cantarell-fonts
-clang
 cmake
 dialog
 dosfstools
@@ -26,10 +25,9 @@ firefox
 flex
 fzf
 gcc
-gdb
 git
 gnu-free-fonts
-gptfdisk
+gnuplot
 groff
 grub
 gruvbox-dark-gtk
@@ -57,8 +55,6 @@ nano
 nerd-fonts-hack
 networkmanager
 ngrok-bin
-nodejs
-npm
 pango
 paru
 patch
@@ -70,6 +66,7 @@ python-pyalsa
 python2-pyxdg
 ranger
 reflector
+sc-im
 scrot
 shellcheck
 siji-git
@@ -121,4 +118,3 @@ xorg-xrandr
 xorg-xrdb
 xorg-xrefresh
 xorg-xsetroot
-xorg-xwayland

@@ -48,6 +48,7 @@ from=(
     "/home/ari/.scripts"
     "/etc/hosts"
     "/etc/sysctl.conf"
+    "/usr/share/applications/sc-im.desktop"
 )
 to=(
     "dotfiles/config"
@@ -82,6 +83,7 @@ to=(
     "dotfiles/custom"
     "dotfiles/core"
     "dotfiles/core"
+    "dotfiles/core"
 )
 
 
@@ -95,7 +97,7 @@ sudo chown -R ari:ari dotfiles
 rm -rfv dotfiles/config/balena-etcher-electron dotfiles/config/qBittorrent dotfiles/config/VirtualBox dotfiles/config/dconf dotfiles/editors/vim/.vim/undodir dotfiles/config/Bitwarden dotfiles/config/Code dotfiles/config/VSCodium dotfiles/config/chromium
 
 paru -Qe | grep -io "^\S*" > list/package.list
-paru -Q > list/package_full.list
+paru -Q | grep -io "^\S*" > list/package_full.list
 lsd -la /usr/local/src > list/src.list
 sudo find /root -type l | xargs -I {} sudo ls -lA '{}' > list/root_symlinks.list
 

@@ -1,4 +1,5 @@
 #!/bin/sh
+
 if [ "$USER" != 'root' ]; then
     echo 'I require root access'
     exit 255

@@ -24,6 +24,9 @@ set shiftwidth=4						" Indent size
 set softtabstop=0						" Insert spaces instead of tabs
 set guicursor=a:hor100                  " Set the cursor shape to a _
 
+" Enable spellchecking and wrapping in vim
+autocmd BufReadPost,BufNewFile *.md,*.txt,*.1 set spell wrap
+
 " Plugins
 " after :PlugInstall, install cmake and run the ~/.vim/plugged/youcompleteme/install.py file and
 " then run :YcmRestartServer

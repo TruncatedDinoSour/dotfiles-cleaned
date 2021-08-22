@@ -3,7 +3,7 @@
 #include <X11/XF86keysym.h>
 
 /* definitions */
-char sudo_cmd[5] = "sudo";
+char sudo_cmd[] = "sudo";
 
 /* appearance */
 static const unsigned int gappx     = 2;        /* gaps */
