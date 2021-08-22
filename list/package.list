@@ -84,6 +84,7 @@ vscodium-bin-marketplace
 which
 xautolock
 xclip
+xdg-user-dirs
 xdg-utils
 xf86-video-intel
 xf86-video-vesa
