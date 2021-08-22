@@ -21,6 +21,8 @@ application/x-extension-rss=userapp-Thunderbird-661870.desktop
 application/json=vim.desktop;VSCodium.desktop;firefox.desktop
 text/csv=sc-im.desktop;vim.desktop;firefox.desktop
 inode/directory=ranger.desktop
+image/png=mpv.desktop;firefox.desktop
+image/jpeg=mpv.desktop;firefox.desktop
 
 [Added Associations]
 x-scheme-handler/tg=userapp-Kotatogram Desktop-EYYK50.desktop;userapp-Kotatogram Desktop-7TZW60.desktop;userapp-Kotatogram Desktop-4KUV60.desktop;userapp-Telegram Desktop-LTQ180.desktop;
@@ -47,4 +49,6 @@ application/rss+xml=userapp-Thunderbird-661870.desktop;
 application/x-extension-rss=userapp-Thunderbird-661870.desktop;
 application/json=vim.desktop;VSCodium.desktop;firefox.desktop;
 text/csv=sc-im.desktop;vim.desktop;firefox.desktop;
+image/png=mpv.desktop;firefox.desktop;
+image/jpeg=mpv.desktop;firefox.desktop;
 
