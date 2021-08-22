@@ -369,7 +369,6 @@ pahole
 pam
 pambase
 pango
-paru
 patch
 pciutils
 pcre
@@ -379,6 +378,7 @@ perl-error
 perl-image-exiftool
 perl-mailtools
 perl-timedate
+pikaur
 pinentry
 pixman
 pkgconf
@@ -387,6 +387,7 @@ popt
 preload
 procps-ng
 psmisc
+pyalpm
 python
 python-appdirs
 python-blessings
@@ -503,7 +504,6 @@ xcb-util-keysyms
 xcb-util-renderutil
 xcb-util-wm
 xclip
-xdg-user-dirs
 xdg-utils
 xf86-input-libinput
 xf86-video-intel

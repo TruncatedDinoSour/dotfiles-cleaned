@@ -1,5 +1,5 @@
 [Default Applications]
-x-scheme-handler/tg=userapp-Kotatogram Desktop-4KUV60.desktop
+x-scheme-handler/tg=userapp-Telegram Desktop-LTQ180.desktop
 x-scheme-handler/http=firefox.desktop
 x-scheme-handler/https=firefox.desktop
 x-scheme-handler/chrome=firefox.desktop
@@ -23,7 +23,7 @@ text/csv=sc-im.desktop;vim.desktop;firefox.desktop
 inode/directory=ranger.desktop
 
 [Added Associations]
-x-scheme-handler/tg=userapp-Kotatogram Desktop-EYYK50.desktop;userapp-Kotatogram Desktop-7TZW60.desktop;userapp-Kotatogram Desktop-4KUV60.desktop;
+x-scheme-handler/tg=userapp-Kotatogram Desktop-EYYK50.desktop;userapp-Kotatogram Desktop-7TZW60.desktop;userapp-Kotatogram Desktop-4KUV60.desktop;userapp-Telegram Desktop-LTQ180.desktop;
 application/octet-stream=vim.desktop;VSCodium.desktop;
 text/plain=vim.desktop;VSCodium.desktop;
 x-scheme-handler/http=firefox.desktop;

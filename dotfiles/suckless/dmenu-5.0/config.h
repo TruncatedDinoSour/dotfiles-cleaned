@@ -1,6 +1,7 @@
 /* See LICENSE file for copyright and license details. */
 /* Default settings; can be overriden by command line. */
 
+const static int dmenuwpx = 430;             /* dmenu width */
 static int topbar = 1;                      /* -b  option; if 0, dmenu appears at bottom     */
 /* -fn option overrides fonts[0]; default X11 font or font set */
 static const char *fonts[] = {
@@ -16,7 +17,7 @@ static const char *colors[SchemeLast][2] = {
 	[SchemeOut]           =  { "#262220", "#f9f0c2" },
 };
 /* -l option; if nonzero, dmenu uses vertical list with given number of lines */
-static unsigned int lines      = 15;
+static unsigned int lines      = 12;
 
 /*
  * Characters not considered part of a word while deleting words

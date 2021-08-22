@@ -47,6 +47,7 @@ static const Rule rules[] = {
 	{ "SimpleScreenRecorder",       NULL,       NULL,       0,            1,            0,          1,          -1 },
 	{ "Peek",                       NULL,       NULL,       0,            1,            0,          1,          -1 },
 	{ "obs",                        NULL,       NULL,       0,            1,            0,          1,          -1 },
+	// { "mpv",                        NULL,       NULL,       0,            1,            0,          1,          -1 },
 
 	/* tag 2 */
 	{ "firefox",                    NULL,       NULL,       1 << 1,       0,           0,           0,          -1 },
