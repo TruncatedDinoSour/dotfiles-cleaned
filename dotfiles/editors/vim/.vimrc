@@ -25,7 +25,7 @@ set softtabstop=0						" Insert spaces instead of tabs
 set guicursor=a:hor100                  " Set the cursor shape to a _
 
 " Enable spellchecking and wrapping in vim
-autocmd BufReadPost,BufNewFile *.md,*.txt,*.1,*.ms set spell wrap
+autocmd BufReadPost,BufNewFile *.md,*.txt,*.1,*.ms,*.tex set spell wrap
 
 
 " Plugins

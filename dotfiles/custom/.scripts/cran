@@ -1,0 +1,70 @@
+#!/bin/bash
+
+__VERSION__='1.0'
+
+print_help() {
+    echo "$(basename "$0") commands:"
+    echo -e "\tversion"
+    echo -e "\tinstall <package>"
+    echo -e "\tremove <package>"
+    echo -e "\tlist"
+    echo -e "\thelp"
+    echo -e "\tupdate"
+    echo -e "\tupdates"
+
+    if [[ "$1" ]]; then exit "$1"; fi
+}
+
+unlist() {
+    local str
+    str="$(echo "$@" | grep -io '\s.*$' | sed 's/^.//')"
+    echo "unlist(strsplit(\"$str\", \" \"), use.names=FALSE)"
+}
+
+
+## Config (doc/cran_config)
+repos="$(unlist ". https://cran.r-project.org/")"
+root_required=true
+r_interpreter=/bin/R
+r_flags=(-q --vanilla -e)
+
+
+install_packages() {
+    if [[ "$1" ]]; then
+        $r_interpreter ${r_flags[*]} "install.packages($(unlist "$@"), ask=FALSE, repos=$repos)"
+    else
+        print_help 3
+    fi
+}
+
+remove_packages() {
+    if [[ "$1" ]]; then
+        $r_interpreter ${r_flags[*]} "remove.packages($(unlist "$@"))"
+    else
+        print_help 3
+    fi
+}
+
+
+main() {
+    if [[ "$UID" != '0' ]] && $root_required; then
+        echo 'run me as root!'
+        exit 1
+    fi
+
+    [[ ! "$1" ]] && print_help 2
+
+
+    case "$1" in
+        version) echo "cran version $__VERSION__" ;;
+        install) install_packages "$@" ;;
+        remove) remove_packages "$@" ;;
+        list) $r_interpreter ${r_flags[*]} 'installed.packages()' | sed '/^>.*$/ d' ;;
+        help) print_help ;;
+        update) $r_interpreter ${r_flags[*]} "update.packages(ask=FALSE, repos=$repos)" ;;
+        updates) $r_interpreter ${r_flags[*]} "old.packages(repos=$repos)" | sed '/^>.*$/ d; s/^NULL$/Everything is up-to-date./g' ;;
+    esac
+}
+
+main "$@"
+

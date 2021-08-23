@@ -87,6 +87,7 @@ gdk-pixbuf2
 gettext
 ghc-libs
 giflib
+girara
 git
 glib-networking
 glib2
@@ -115,6 +116,7 @@ gtk3
 guile
 gzip
 harfbuzz
+harfbuzz-icu
 haskell-aeson
 haskell-assoc
 haskell-attoparsec
@@ -176,6 +178,7 @@ kotatogram-desktop-bin
 krb5
 l-smash
 lame
+lapack
 lcms2
 ldns
 less
@@ -245,6 +248,7 @@ libnsl
 libogg
 libomxil-bellagio
 libp11-kit
+libpaper
 libpcap
 libpciaccess
 libpgm
@@ -260,6 +264,7 @@ libsamplerate
 libsasl
 libseccomp
 libsecret
+libsigsegv
 libsm
 libsndfile
 libsodium
@@ -267,6 +272,7 @@ libsoup
 libsoxr
 libssh
 libssh2
+libsynctex
 libtasn1
 libteam
 libthai
@@ -355,6 +361,7 @@ ngrok-bin
 npth
 nspr
 nss
+openblas
 opencore-amr
 openjpeg2
 openmpi
@@ -375,6 +382,7 @@ pcre
 pcre2
 perl
 perl-error
+perl-file-which
 perl-image-exiftool
 perl-mailtools
 perl-timedate
@@ -383,7 +391,11 @@ pinentry
 pixman
 pkgconf
 polkit
+poppler
+poppler-data
+poppler-glib
 popt
+potrace
 preload
 procps-ng
 psmisc
@@ -404,8 +416,10 @@ python-distro
 python-greenlet
 python-html5lib
 python-idna
+python-lineedit
 python-more-itertools
 python-msgpack
+python-multipledispatch
 python-ordered-set
 python-packaging
 python-pep517
@@ -417,6 +431,7 @@ python-pycparser
 python-pygments
 python-pyopenssl
 python-pyparsing
+python-rchitect
 python-requests
 python-resolvelib
 python-retrying
@@ -425,6 +440,7 @@ python-six
 python-toml
 python-tomli
 python-urllib3
+python-wcwidth
 python-webencodings
 python2
 python2-pyxdg
@@ -433,6 +449,8 @@ qt5-base
 qt5-svg
 qt5-x11extras
 quazip
+r
+radian
 ranger
 rav1e
 readline
@@ -440,6 +458,7 @@ reflector
 rest
 rhash
 rubberband
+run-parts
 sc-im
 scrot
 sdl
@@ -464,10 +483,26 @@ sysfsutils
 systemd
 systemd-libs
 systemd-sysvcompat
+t1lib
 tar
+tcl
 tdb
 texinfo
+texlive-bibtexextra
+texlive-bin
+texlive-core
+texlive-fontsextra
+texlive-formatsextra
+texlive-games
+texlive-humanities
+texlive-latexextra
+texlive-music
+texlive-pictures
+texlive-pstricks
+texlive-publishers
+texlive-science
 thunderbird
+tk
 tlp
 tor-browser
 transmission-cli
@@ -475,6 +510,7 @@ tslib
 ttf-font-awesome
 tzdata
 uchardet
+unzip
 usbutils
 util-linux
 util-linux-libs
@@ -550,9 +586,13 @@ xz
 yubico-c
 yubico-c-client
 yubikey-personalization
+zathura
+zathura-pdf-poppler
 zeromq
 zimg
+zip
 zita-alsa-pcmi
 zita-resampler
 zlib
 zstd
+zziplib
