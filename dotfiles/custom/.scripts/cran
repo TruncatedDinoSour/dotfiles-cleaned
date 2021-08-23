@@ -5,20 +5,26 @@ __VERSION__='1.0'
 print_help() {
     echo "$(basename "$0") commands:"
     echo -e "\tversion"
-    echo -e "\tinstall <package>"
-    echo -e "\tremove <package>"
+    echo -e "\tinstall <package(s)>"
+    echo -e "\tdownload <package(s)>"
+    echo -e "\tremove <package(s)>"
     echo -e "\tlist"
     echo -e "\thelp"
     echo -e "\tupdate"
     echo -e "\tupdates"
+    echo -e "\tdepends" # Show current package's dependencies
 
     if [[ "$1" ]]; then exit "$1"; fi
 }
 
 unlist() {
     local str
-    str="$(echo "$@" | grep -io '\s.*$' | sed 's/^.//')"
-    echo "unlist(strsplit(\"$str\", \" \"), use.names=FALSE)"
+    str="$(echo -n "$@" | grep -io '\s.*$' | sed 's/^.//')"
+    echo -n "unlist(strsplit(\"$str\", \" \"), use.names=FALSE)"
+}
+
+read_file() {
+    echo -n "$(unlist ". $(xargs echo -n <"$1")")"
 }
 
 
@@ -30,16 +36,33 @@ r_flags=(-q --vanilla -e)
 
 
 install_packages() {
-    if [[ "$1" ]]; then
+    if [[ "$2" ]]; then
         $r_interpreter ${r_flags[*]} "install.packages($(unlist "$@"), ask=FALSE, repos=$repos)"
     else
-        print_help 3
+        if [[ -f "./cranfile" ]]; then
+            $r_interpreter ${r_flags[*]} "install.packages($(read_file ./cranfile), ask=FALSE, repos=$repos)"
+        else
+            print_help 3
+        fi
     fi
 }
 
 remove_packages() {
-    if [[ "$1" ]]; then
+    if [[ "$2" ]]; then
         $r_interpreter ${r_flags[*]} "remove.packages($(unlist "$@"))"
+    else
+        if [[ -f "cranfile" ]]; then
+            $r_interpreter ${r_flags[*]} "remove.packages($(read_file ./cranfile))"
+        else
+            print_help 3
+        fi
+    fi
+}
+
+download_packages() {
+    if [[ "$2" ]]; then
+        $r_interpreter ${r_flags[*]} "download.packages($(unlist "$@"), ask=FALSE, repos=$repos, destdir=\".\")"
+        chmod a+rw ./*.tar.*
     else
         print_help 3
     fi
@@ -58,11 +81,13 @@ main() {
     case "$1" in
         version) echo "cran version $__VERSION__" ;;
         install) install_packages "$@" ;;
+        download) download_packages "$@" ;;
         remove) remove_packages "$@" ;;
         list) $r_interpreter ${r_flags[*]} 'installed.packages()' | sed '/^>.*$/ d' ;;
         help) print_help ;;
         update) $r_interpreter ${r_flags[*]} "update.packages(ask=FALSE, repos=$repos)" ;;
-        updates) $r_interpreter ${r_flags[*]} "old.packages(repos=$repos)" | sed '/^>.*$/ d; s/^NULL$/Everything is up-to-date./g' ;;
+        updates) $r_interpreter ${r_flags[*]} "old.packages(repos=$repos)" | sed '/^>.*$/ d; s/^NULL$/Everything is up-to-date./' ;;
+        depends) [[ -f "./cranfile" ]] && xargs echo <./cranfile || exit 4 ;;
     esac
 }
 
