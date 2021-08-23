@@ -95,7 +95,9 @@ A: You may have set pacman as your package manager, But you actually need some o
 <h1 align="center"><b>Manual Installation (Arch Linux)</b></h1>
 <p align="center"><b>IMAGINE THAT <code>ari</code> IS YOUR USER, IF IT IS NOT, CHANGE ALL CONFIGS TO BE TO YOUR USERNAME</b></p>
 
-## Perparing
+# TODO: update the installation
+
+<!-- ## Perparing
 ```bash
 $ cd
 $ bash # or sh, zsh, ...
@@ -265,7 +267,7 @@ $ cd
 $ rm -rf dotfiles-cleaned
 $ reboot
 $ startx
-```
+``` -->
 
 <br/>
 
