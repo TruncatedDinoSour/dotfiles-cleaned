@@ -95,43 +95,99 @@ A: You may have set pacman as your package manager, But you actually need some o
 <h1 align="center"><b>Manual Installation (Arch Linux)</b></h1>
 <p align="center"><b>IMAGINE THAT <code>ari</code> IS YOUR USER, IF IT IS NOT, CHANGE ALL CONFIGS TO BE TO YOUR USERNAME</b></p>
 
-# TODO: update the installation
+## Back your data up!
+```
+Please back your data up before doing any of this,
+this guide is only meant to be used on a base system and
+if installed on a non-base system - it might break
+```
 
-<!-- ## Perparing
+
+## Preparing
 ```bash
 $ cd
-$ bash # or sh, zsh, ...
+$ bash # You can use any POSIX complient shell, for example: ZSH, DASH, KSH
 ```
 
-## Installing paru
+
+## Installing an AUR helper
 ```bash
-$ sudo pacman -S base-devel git
-$ git clone https://aur.archlinux.org/paru.git
-$ cd paru
-$ makepkg -si
 $ cd
-$ rm -rfv paru
+$ sudo pacman -S --needed base-devel git
+$ git clone https://aur.archlinux.org/pikaur.git
+$ cd pikaur
+$ makepkg -fsri
+$ cd ..
+$ rm -rf pikaur
 ```
 
-## Packages
+
+## Installing packages
+### Updating the system
 ```bash
-$ paru
-$ paru -S curl git make pango man-db nano sed cmake # base
-$ paru -S adobe-source-code-pro-fonts awesome-terminal-fonts cantarell-fonts gnu-free-fonts nerd-fonts-hack siji-git ttf-font-awesome # fonts
-$ paru -S gruvbox-dark-gtk gruvbox-material-icon-theme-git # themes
-$ paru -S firefox kotatogram-desktop-bin ksnip pcmanfm tor-browser vscodium-bin # apps
-$ paru -S lua51 python3 python-pip # language support
-$ paru -S mpv bash-completion bat bpython feh tlp gmp preload lsd lxappearance vim vscodium-bin-marketplace xautolock # extra apps
-$ paru -S xorg xorg-xinit # X.org
-$ paru -S dunst-git # apps from source
-$ paru -S imlib2 libxinerama libxft # libs for DWM
+$ cd
+$ sudo pacman -S --needed reflector
+$ sudo reflector --age 10 --sort rate --latest 25 --save /etc/pacman.d/mirrorlist
+$ pikaur -Syyu
 ```
 
-**or (this will install all packages that \*I\* use on my system)**
 
+### Installing the packages
+1. Base
 ```bash
-$ paru -S --needed $(curl -fL 'https://raw.githubusercontent.com/TruncatedDinosour/dotfiles-cleaned/master/list/package.list')
+$ pikaur -S curl git make pango man-db nano sed cmake alsa alsa-utils reflector
 ```
+
+2. Fonts
+```bash
+$ pikaur -S adobe-source-code-pro-fonts awesome-terminal-fonts cantarell-fonts gnu-free-fonts nerd-fonts-hack siji-git ttf-font-awesome
+```
+
+3. Themes & icons
+```bash
+$ pikaur -S gruvbox-dark-gtk gruvbox-material-icon-theme-git
+```
+
+4. Apps
+```bash
+$ pikaur -S feh firefox keepassxc kotatogram-desktop-bin lxappearance mpv thunderbird tor-browser vscodium-bin vscodium-bin-marketplace zathura zathura-pdf-poppler
+```
+
+5. Language support
+```bash
+$ pikaur -S lua51 python3 python-pip
+```
+
+6. Extra support for languages
+```bash
+$ pikaur -S bpython radian R openblas npm nodejs
+```
+
+6. Extra packages
+```bash
+$ pikaur -S bat duf-bin atool ffmpegthumbnailer libcaca lynx perl-image-exiftool python-chardet transmission-cli fzf gpm lsd ngrok-bin ranger texlive-most scrot tlp transmission-cli vim xautolock xclip
+```
+
+7. Display server
+```bash
+$ pikaur -S xorg xorg-xinit
+```
+
+8. Compiling from source
+```bash
+$ pikaur -S dunst-git preload
+```
+
+9. Libs for DWM
+```bash
+$ pikaur -S imlib2 libxinerama libxft
+```
+
+10. Packages from pypi
+```bash
+$ python3 -m pip install trash-cli
+```
+
 
 ## Services
 ```bash
@@ -142,132 +198,275 @@ $ sudo systemctl enable gpm.service
 $ sudo systemctl enable preload.service
 ```
 
-# Installing the dotfiles
-**preparing**
+
+## Installing dotfiles
+### Cloning the repository
 ```bash
-$ cd
 $ git clone https://github.com/TruncatedDinosour/dotfiles-cleaned
 $ cd dotfiles-cleaned
-$ rm -rfv scripts README.md Makefile LICENSE .gitignore list
+```
+
+### Cleaning up
+```bash
+$ rm -rfv README.md Makefile LICENSE .gitignore list scripts
 $ cd dotfiles
 ```
 
-**single RC files**
+### Installing single configuration files
 ```bash
 $ cd RCs
-$ mv .bashrc ~/.bashrc
+$ rm -rfv ~/.bash_profile ~/.bashrc
+$ sudo rm -rf /etc/nanorc
+$ mv .bash_profile ~
+$ mv .bashrc ~
+$ ln -s /home/$USER/.bashrc /home/$USER/.profile
 $ sudo mv nanorc /etc/nanorc
 $ cd ..
-$ rm -rf RCs
+$ rm -rfv RCs
 ```
 
-**building from source**
+### Source files
 ```bash
 $ sudo mv bin/* /usr/local/src
-$ cd /usr/local/src
-$ ln -s /usr/local/src/colours/colours /usr/local/bin/colours
-$ ln -s /usr/local/src/dusntest/dunstest /usr/local/bin/dunstest
-$ cd fastfetch
-$ ./run.sh
-$ ln -s /usr/local/src/fastfetch/build/fastfetch /usr/local/bin/fastfetch
-$ ln -s /usr/local/src/fastfetch/build/flashfetch /usr/local/bin/flashfetch
-$ cd ..
-$ ln -s /usr/local/src/seject/seject /usr/local/bin/seject
-$ ln -s /usr/local/src/shot/shot /usr/local/bin/shot
-$ cd yafetch
-$ make
-$ ln -s /usr/local/src/yafetch/yafetch /usr/local/bin/yafetch
-$ cd ~/dotfiles-cleaned/dotfiles
-$ rm -rf bin
+$ rm -rfv bin
 ```
 
-**config**
+### Configs
 ```bash
+$ rm -rfv ~/.config
 $ mv config ~/.config
 ```
 
-**safe core files**
+### Core files
 ```bash
-$ sudo mv bash_git /etc
-$ mv .xinitrc ~
-$ sudo mv st.desktop /usr/share/applications
-$ mv .xprofile ~
+$ cd core
 ```
 
-**unsafe/might need to do manually core files**
+* I will leave this step up to you what to use or not to use, here's a map where they're supposed to go
 ```bash
-grub -> /etc/default/grub
-mkinitcpio.conf -> /etc/mkinitcpio.conf
-pacman.conf -> /etc/pacman.conf
-paru.conf -> /etc/paru.conf
-reflector.conf -> /etc/xdg/reflector/reflector.conf
-sudoers -> /etc/sudoers
-```
-```
-$ sudo mkinitcpio -P
-$ sudo grub-mkconfig -o /boot/grub/grub.cfg
-$ sudo pacman -Syu
-$ paru
+.xinitrc = ~/.xinitrc
+.xprofile = ~/.xprofile
+bash_git = /etc/bash_git
+grub = /etc/default/grub
+hosts = /etc/hosts
+mkinitcpio.conf = /etc/mkinitcpio.conf
+pacman.conf = /etc/pacman.conf
+paru.conf = /etc/paru.conf
+reflector.conf = /etc/xdg/reflector/reflector.conf
+sc-im.desktop = /usr/share/applications/sc-im.desktop
+st.desktop = /usr/share/applications/st.desktop
+sudoers = /etc/sudoers
+sysctl.conf = /etc/sysctl.conf
 ```
 
-***finishing: remove the directory***
+* I'd suggest using all of them except for:
+  * sudoers (make your own, make it that /bin/xbacklight can run as root with no password)
+  * mkinitcpio.conf (load your own gpu-specific modules)
+  * hosts [if you want to use it, edit it]
+  * grub (your encrypted home partition might not have the same UUID as mine) [if you want to use it, edit it]
+
+
+### Cleanup
 ```bash
-$ rm -rf core
+$ cd ..
+$ rm -rfv core
 ```
 
-**editors**
+
+### Custom
 ```bash
-$ cd editors/vim
-$ mv .vim ~
-$ mv .vimrc ~
-$ mkdir ~/.vim/undodir
-$ cd ~/dotfiles-cleaned/dotfiles
-$ rm -rf editors
+$ cd custom
 ```
 
-**etc**
+#### Scripts
 ```bash
-$ mkdir ~/Pictures
-$ mv etc/wallpaper.png ~/Pictures
-$ rm -rf etc
+$ rm -rfv ~/.scripts
+$ mv .scripts ~
 ```
 
-**fish (depricated)**
+#### cleanup
 ```bash
-$ sudo mv fish /etc
+$ cd ..
+$ rm -rfv custom
 ```
 
-**icons**
+
+### Editors
 ```bash
+$ cd editors
+```
+
+#### ViM
+```bash
+$ rm -rf ~/.vim*
+$ mv vim/.* ~
+$ rm -rfv vim
+```
+
+#### Cleanup
+```bash
+$ cd ..
+$ rm -rfv editors
+```
+
+
+### Etc.
+```bash
+$ cd etc
+```
+
+#### Wallpaper
+```bash
+$ mkdir -p ~/Pictures
+$ mv wallpaper.png ~/Pictures
+```
+
+#### Cleanup
+```bash
+$ cd ..
+$ rm -rfv etc
+```
+
+
+## Icons
+```bash
+$ rm -rfv ~/.icons
 $ mv icons ~/.icons
 ```
 
-**scripts**
+
+## Qbittorrent
+```bash
+$ cd qbittorrent
+```
+
+### Themes
+```bash
+$ sudo mkdir /usr/share/themes
+$ sudo mv mumble-dark.qbtheme /usr/share/themes
+```
+
+### Cleanup
+```bash
+$ cd ..
+$ rm -rf qbittorrent
+```
+
+
+## Suckless
+```bash
+$ rm -rfv ~/Suckless
+$ mv suckless ~/Suckless
+```
+
+
+## ZSH
+```bash
+$ cd zsh
+```
+
+### RCs
+```bash
+$ rm -rf ./.zsh*
+$ mv ./.zsh* ~
+$ sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+$ rm -rf ~/.oh-my-zsh/plugins
+$ mv plugins ~/.oh-my-zsh/plugins
+```
+
+### Cleanup
+```bash
+$ cd ..
+$ rm -rf zsh
+```
+
+
+## Scripts
 ```bash
 $ cd scripts
-$ cdmod a+rx ./*
+$ chmod a+rx ./*
 ```
 
-after that, select the scripts you want, I suggest `debloatify-xorg.arch.sh`:
+* Now select what scripts you want to run, my recomendations:
+  * alsa-restrore.sh
+  * debloatify-xorg.arch.sh
+  * fix_bpython.sh
 
-```bash
-$ ./debloatify-xorg.arch.sh
-```
 
-**suckless**
-```bash
-$ mv suckless ~/Suckless
-$ cd ~/Suckless
-$ ./compile
-```
-
-**finishing up**
+## Clean up
 ```bash
 $ cd
 $ rm -rf dotfiles-cleaned
+```
+
+
+## Suckless
+```bash
+$ cd Suckless
+$ chmod a+rx ./compile
+$ ./compile
+$ cd
+```
+
+
+## Compiling apps manually
+```bash
+$ cd /usr/local/src
+```
+
+### Fastfetch
+```bash
+$ cd fastfetch
+$ sudo chmod a+rx ./run.sh
+$ sudo ./run.sh
+$ sudo ln -s /usr/local/src/fastfetch/build/fastfetch /usr/local/bin/fastfetch
+$ sudo ln -s /usr/local/src/fastfetch/build/flashfetch /usr/local/bin/flashfetch
+$ cd /usr/local/src
+```
+
+### Yafetch
+```bash
+$ cd yafetch
+$ sudo make
+$ sudo ln -s /usr/local/src/yafetch/yafetch /usr/local/bin/yafetch
+$ cd
+```
+
+
+## Root symlinks
+```bash
+# REMEMBER: YOUR USERNAME IS SUPPOSED TO BR ARI, IF NOT, CHANGE ALL CONFIGS AND COMMANDS TO BE YOUR USERNAME
+$ sudo su -
+$ cd
+$ function l() { rm -rfv "/root/$1"; ln -s "/home/ari/$1" "/root/$1"; }
+$ l .icons
+$ l .zsh_userrc
+$ l .nvim
+$ l .config
+$ l .local
+$ l .dwm
+$ l .mozilla
+$ l .zshrc
+$ l .oh-my-zsh
+$ l .vim
+$ l .gitconfig
+$ l .bashrc
+$ l .vscode-oss
+$ l .bash_profile
+$ l .xinitrc
+$ l .vimrc
+$ l .scripts
+$ l .profile
+```
+
+
+## Finalizing
+```bash
+$ grub-mkconfig -o /boot/grub/grub.cfg
+$ mkinitcpio -P
 $ reboot
 $ startx
-``` -->
+```
 
 <br/>
 
