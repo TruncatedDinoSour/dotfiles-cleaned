@@ -41,7 +41,7 @@ alias mkdir='/bin/mkdir -p'
 alias curl='/bin/curl -fL'
 
 alias transmission-cli='/bin/transmission-cli --encryption-preferred --no-uplimit --verify --no-downlimit --finish ~/.config/transmission/fini.sh'
-alias fzf="/bin/fzf --layout=reverse --height=20 --no-mouse -i"
+alias fzf="/bin/fzf --layout=reverse --height=20 --no-mouse -i --preview 'bat --color=always --style=numbers --line-range=:500 {}'"
 alias mpvp='/bin/mpv --shuffle --loop-playlist'
 
 alias mimetypeof='/bin/xdg-mime query filetype'

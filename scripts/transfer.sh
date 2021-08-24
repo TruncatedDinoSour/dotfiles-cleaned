@@ -12,7 +12,7 @@ read -p "=== [ press enter to continue ] ===" _
 
 rm -rfv dotfiles list
 mkdir -p list
-mkdir -p dotfiles{,/RCs,/editors/vim,/core,/bin,/etc,/qbittorrent,/zsh,/custom}
+mkdir -p dotfiles{,/RCs,/editors/vim,/core,/bin,/etc,/qbittorrent,/zsh,/custom,/programming}
 
 
 from=(
@@ -49,6 +49,7 @@ from=(
     "/etc/hosts"
     "/etc/sysctl.conf"
     "/usr/share/applications/sc-im.desktop"
+    "/home/ari/.config/VSCodium/User/snippets"
 )
 to=(
     "dotfiles/config"
@@ -84,6 +85,7 @@ to=(
     "dotfiles/core"
     "dotfiles/core"
     "dotfiles/core"
+    "dotfiles/programming/VSCodium_snippets"
 )
 
 

@@ -31,3 +31,4 @@ dotfiles/custom -> /home/ari/.scripts
 dotfiles/core -> /etc/hosts
 dotfiles/core -> /etc/sysctl.conf
 dotfiles/core -> /usr/share/applications/sc-im.desktop
+dotfiles/programming/VSCodium_snippets -> /home/ari/.config/VSCodium/User/snippets

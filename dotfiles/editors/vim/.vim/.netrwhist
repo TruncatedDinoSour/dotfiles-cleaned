@@ -1,5 +1,6 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =6
+let g:netrw_dirhistcnt =7
+let g:netrw_dirhist_7='/home/ari/Ari/coding/resources_/dots'
 let g:netrw_dirhist_6='/home/ari/.config/calcurse'
 let g:netrw_dirhist_5='/home/ari/.dwm/dwm-bar'
 let g:netrw_dirhist_4='/home/ari/Ari/coding/linux_/ppkg-git/src/ppkglib'
