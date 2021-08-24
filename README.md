@@ -282,6 +282,7 @@ $ cd custom
 ```bash
 $ rm -rfv ~/.scripts
 $ mv .scripts ~
+$ chmod a+rx ~/.scripts/*
 ```
 
 #### cleanup
