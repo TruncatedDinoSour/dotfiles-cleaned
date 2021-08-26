@@ -13,6 +13,7 @@ main() {
 
     printf "%s\n" "${passwords[@]}" |
         fzf --layout=reverse --height=20 --no-mouse -i |
+        tr -d "\n" |
         xclip -sel c
 }
 
