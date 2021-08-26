@@ -2,7 +2,7 @@
 
 main() {
     if [ ! "$1" ]; then
-        local max_length=70
+        local max_length=$((RANDOM % 384))
     else
         local max_length="$1"
     fi
@@ -15,7 +15,7 @@ main() {
     local bytes
     bytes="$(cat -A /tmp/.pwdgen_random_bytes)"
 
-    echo -en "$(((RANDOM / max_length) * max_length ^ WINDOWID))${bytes}${max_length}${bytes,,}${WINDOWID}" |
+    echo -en "$(((RANDOM / max_length) * max_length ^ WINDOWID))${bytes}${COLUMNS}${max_length}$(date '+%N%S%N%u%V%N%y%Y%m%G%I%m%N%s%N')${bytes,,}$(ip a)${WINDOWID}${PS1}${RANDOM}" |
         base64 -w 0 --ignore-garbage |
         sed 's/O/k/g; s/=/{/g; s/U/s/g; s/4/%/g; s/G/O/g; s/g/4/g; s/s/p/g; s/T/=/g; s/R/*/g' |
         base32 -w 0 --ignore-garbage |
@@ -28,7 +28,7 @@ main() {
         rev |
         tail --bytes="$((30 + rng + ((RANDOM % max_length) - 20)))" |
         sed 's/\//F/g; s/=//g; s/8/u/g; s/p/*/g; s/U/%/g; s/f/-/g; s/s/@/g; s/Y/+/g;' |
-        sed 's/e/&/g; s/O/./g; s/W/~/g; s/m/\\/; s/~/l/g; s/9/$/; s/o/:/g' |
+        sed 's/e/&/g; s/O/./g; s/W/~/g; s/m/\\/; s/~/l/g; s/9/$/; s/o/:/g; s/K/`/g' |
         awk '{ print $1 }' |
         rev
 

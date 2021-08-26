@@ -461,7 +461,6 @@ rubberband
 run-parts
 sc-im
 scrot
-sdl
 sdl2
 sed
 shaderc
@@ -508,6 +507,7 @@ tor-browser
 transmission-cli
 tslib
 ttf-font-awesome
+ttf-liberation
 tzdata
 uchardet
 unzip
@@ -518,8 +518,6 @@ v4l-utils
 vid.stab
 vim
 vim-runtime
-virtualbox
-virtualbox-host-modules-arch
 vmaf
 vscodium-bin
 vscodium-bin-marketplace

@@ -1,0 +1,43 @@
+cran commands:
+    version
+    install <package(s)>
+    download <package(s)>
+    remove <package(s)>
+    list
+    help
+    update
+    updates
+    depends
+
+
+version, v, -v, ver:
+    show the version of cran
+
+install, i, -i, ins:
+    install a package.
+    if (a) package(s) is/are supplied it installs them, if not it reads the `cranfile` for
+    dependencies and installs them
+
+download, d, -d, dow:
+    donload package's source code
+
+remove, r, -r, rm:
+    remove a package.
+    if (a) package(s) is/are supplied it removes them, if not it reads the `cranfile` for
+    dependencies and removes them
+
+list, l, -l, ls:
+    list installed packages
+
+help, h, -h, hlp:
+    show the help page
+
+update, u, -u, upt:
+    update all packages
+
+updates, U, -U, upd:
+    show available updates
+
+depends, D, -D, dep:
+    show current directory's dependencies
+

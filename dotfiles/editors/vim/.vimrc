@@ -1,6 +1,7 @@
 runtime! archlinux.vim
 
 syntax on						" Turn syntax highlighting on
+filetype plugin on              " This makes vim invoke Latex-Suite when you open a tex file.
 
 set noerrorbells				" Turn off error sound
 set expandtab					" Will make the tab key insert spaces instead of tabs
@@ -25,7 +26,7 @@ set softtabstop=0						" Insert spaces instead of tabs
 set guicursor=a:hor100                  " Set the cursor shape to a _
 
 " Enable spellchecking and wrapping in vim
-autocmd BufReadPost,BufNewFile *.md,*.txt,*.1,*.ms,*.tex set spell wrap
+autocmd BufReadPost,BufNewFile *.md,*.txt,*.1,*.ms,*.tex,*.latex set spell wrap
 
 
 " Plugins
@@ -38,6 +39,7 @@ call plug#begin("~/.vim/plugged")
     Plug 'w0rp/ale'
     Plug 'jiangmiao/auto-pairs'
     Plug 'itchyny/lightline.vim'
+    Plug 'vim-latex/vim-latex'
     Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install()  }, 'for': ['markdown', 'vim-plug'] }
 call plug#end()
 
@@ -76,6 +78,9 @@ augroup whitespace_trim
     autocmd BufWritePre * :call TrimWhitespace()
 augroup END
 
+
+" laTeX config
+let g:tex_flavor='latex'
 
 " Bar's configuration
 let g:lightline = {}

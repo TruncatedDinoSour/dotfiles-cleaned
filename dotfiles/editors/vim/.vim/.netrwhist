@@ -1,5 +1,8 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =7
+let g:netrw_dirhistcnt =0
+let g:netrw_dirhist_0='/home/ari/Documents/linux_is_superior'
+let g:netrw_dirhist_9='/home/ari/Documents/linux_is_superior/images'
+let g:netrw_dirhist_8='/etc/iptables'
 let g:netrw_dirhist_7='/home/ari/Ari/coding/resources_/dots'
 let g:netrw_dirhist_6='/home/ari/.config/calcurse'
 let g:netrw_dirhist_5='/home/ari/.dwm/dwm-bar'
