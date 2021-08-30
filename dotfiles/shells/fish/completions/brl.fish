@@ -1,0 +1,1 @@
+/bedrock/share/fish/completion/brl.fish

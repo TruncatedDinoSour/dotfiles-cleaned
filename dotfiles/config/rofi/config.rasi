@@ -1,0 +1,6 @@
+configuration {
+	theme: "/usr/share/rofi/themes/gruvbox-dark.rasi";
+    modi: "window,run,ssh,file-browser";
+    font: "mono 11";
+    lines: 12;
+}

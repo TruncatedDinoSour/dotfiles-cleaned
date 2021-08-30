@@ -1,0 +1,49 @@
+#!/bin/bash
+
+source ~/.config/shells/bash/*.conf
+
+alias k="\$__BASH_CORE_BIN_DIR/kill"
+alias ka="\$__BASH_BIN_DIR/killall"
+alias q='exit'
+
+alias ls="\$__BASH_BIN_DIR/lsd --group-dirs --color=auto -Fh"
+alias ll='ls -lF'
+alias la='ls -lFA'
+alias l='ll'
+
+alias rm='trash-put'
+alias rls='trash-list'
+alias rrm='trash-empty'
+alias rmk='trash-restore'
+
+alias sc="\$__BASH_BIN_DIR/sc-im"
+
+alias cat="\$__BASH_BIN_DIR/bat --theme=\"gruvbox-dark\""
+
+alias src='source ~/.bashrc'
+alias stx="\$__BASH_BIN_DIR/startx"
+alias r="\$__BASH_BIN_DIR/ranger"
+
+alias youtube-dl='youtube-dl --verbose --yes-playlist'
+alias yt='youtube-dl --format mp4'
+alias ys='youtube-dl --extract-audio --audio-format mp3'
+
+alias make="\$__BASH_BIN_DIR/make ${MAKEOPTS}"
+alias clear="\$__BASH_BIN_DIR/clear; autorun"
+
+alias grep="\$__BASH_CORE_BIN_DIR/grep --color=auto -iHn"
+alias diff="\$__BASH_CORE_BIN_DIR/diff --color=auto"
+
+alias lsblk="\$__BASH_CORE_BIN_DIR/lsblk -fa"
+
+alias mv="\$__BASH_CORE_BIN_DIR/mv -i"
+alias cp="\$__BASH_CORE_BIN_DIR/cp -i"
+alias mkdir="\$__BASH_CORE_BIN_DIR/mkdir -p"
+alias curl="\$__BASH_BIN_DIR/curl -fL"
+
+alias transmission-cli="\$__BASH_BIN_DIR/transmission-cli --encryption-preferred --no-uplimit --verify --no-downlimit --finish ~/.config/transmission/fini.sh"
+alias fzf="\$__BASH_BIN_DIR/fzf --layout=reverse --height=20 --no-mouse -i --preview 'bat --color=always --style=numbers --line-range=:500 {}'"
+alias mpvp="\$__BASH_BIN_DIR/mpv --shuffle --loop-playlist"
+
+alias mimetypeof="xdg-mime query filetype"
+

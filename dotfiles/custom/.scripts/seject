@@ -1,0 +1,15 @@
+#!/bin/sh
+
+if [ "$USER" != 'root' ]; then
+    echo 'I require root access'
+    exit 255
+else
+    if [ "$@" ]; then
+        /bin/eject "$@" -tv
+        exit $?
+    else
+        echo "$(basename "$0") /dev/<device>"
+        exit 132
+    fi
+fi
+

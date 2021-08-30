@@ -1,0 +1,6 @@
+#!/bin/sh
+
+/bin/amixer -q set Master toggle
+/usr/local/bin/slock
+/bin/amixer -q set Master toggle
+
