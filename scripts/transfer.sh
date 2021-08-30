@@ -10,7 +10,7 @@ read -p "=== [ press enter to continue  ] ===" _
 
 rm -rf dotfiles list
 mkdir -p list
-mkdir -p dotfiles{,/bin,/shells/bash,/shells/zsh,/suckless,/etc,/custom,/programming/VScodium,/core,/linux,/portage,/qbittorrent,/editors/vim,/editors/nano}
+mkdir -p dotfiles{,/bin,/shells/bash,/shells/zsh,/suckless,/etc,/custom,/programming/VScodium,/core,/linux,/portage,/qbittorrent,/editors/vim}
 
 
 from=(
@@ -36,7 +36,6 @@ from=(
 
     '/home/ari/.vim'
     '/home/ari/.vimrc'
-    '/etc/nanorc'
 
     '/home/ari/.config/VSCodium/User/snippets'
 
@@ -85,7 +84,6 @@ to=(
 
     'dotfiles/editors/vim'
     'dotfiles/editors/vim'
-    'dotfiles/editors/nano'
 
     'dotfiles/programming/VScodium'
 
@@ -118,6 +116,16 @@ do
     echo "${to[$i]} -> ${from[$i]}" >> list/location.list
 done
 
+
+ls -lA /usr/local/src > list/src.list
+
+find /usr/local/bin -type l -exec ls -lA {} +
+ls -lA /usr/bin/xterm >> list/location.list
+
+sudo find /root -type l -exec ls -lA {} + | tee list/root_symlinks.list
+
+equery list '*' | grep -io '[a-z].*' > list/packagei_full.list
+cp /var/lib/portage/world list/package.list
 
 sudo chown -R ari:ari dotfiles
 rm -rfv dotfiles/editors/vim/.vim/undodir dotfiles/config/keepassxc dotfiles/config/VSCodium dotfiles/config/VirtualBox dotfiles/config/transmission/dht.dat dotfiles/config/dconf

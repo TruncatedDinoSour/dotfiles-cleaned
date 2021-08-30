@@ -13,7 +13,6 @@ dotfiles/shells/zsh -> /home/ari/.zsh_userrc
 dotfiles/custom -> /home/ari/.scripts
 dotfiles/editors/vim -> /home/ari/.vim
 dotfiles/editors/vim -> /home/ari/.vimrc
-dotfiles/editors/nano -> /etc/nanorc
 dotfiles/programming/VScodium -> /home/ari/.config/VSCodium/User/snippets
 dotfiles/core -> /home/ari/.xinitrc
 dotfiles/core -> /home/ari/.xprofile
@@ -30,3 +29,4 @@ dotfiles/linux -> /usr/src/linux/.config
 dotfiles/shells -> /etc/fish
 dotfiles/qbittorrent -> /usr/share/themes/mumble-dark.qbtheme
 dotfiles/bin -> /usr/local/src/mfetch
+lrwxrwxrwx 1 root root 17 Aug 30 18:04 /usr/bin/xterm -> /usr/local/bin/st
