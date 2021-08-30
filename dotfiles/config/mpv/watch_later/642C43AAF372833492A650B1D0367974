@@ -1,3 +1,0 @@
-start=0.000000
-pause=yes
-vf=crop=y=181:x=1086:w=664:h=559,delogo=y=133:x=335:w=281:h=374,delogo=y=133:x=617:w=31:h=281
