@@ -49,6 +49,7 @@ from=(
     '/etc/dracut.conf.d'
     '/etc/tlp.conf'
     '/etc/sudoers'
+    '/etc/X11/xorg.conf.d/20-intel-graphics.conf'
 
     '/etc/portage'
 
@@ -87,6 +88,7 @@ to=(
 
     'dotfiles/programming/VScodium'
 
+    'dotfiles/core'
     'dotfiles/core'
     'dotfiles/core'
     'dotfiles/core'
