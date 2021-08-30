@@ -38,6 +38,7 @@ fi
 
 # execute our WMs and nice some utilities
 
-/bin/dunst &
+exec dunst &
+exec xbacklight -set 80 &
 exec dwm
 

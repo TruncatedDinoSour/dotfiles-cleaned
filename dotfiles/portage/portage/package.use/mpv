@@ -1,0 +1,2 @@
+media-video/mpv -bluray -cuda -gamepad -raspberry-pi -vulcan -tools opengl -dvb -sdl  cli jpeg lua xv openal
+

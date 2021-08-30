@@ -8,7 +8,7 @@ RED='\033[00;31m'
 
 
 autorun() {
-    /usr/local/bin/yafetch
+    /usr/local/bin/mfetch
 }
 
 
@@ -60,6 +60,15 @@ tty_autorun() {
     echo -en "\e]PE87875F" #cyan
     echo -en "\e]P7DDD0C0" #lightgrey
     echo -en "\e]PFDDD0C0" #white
-    /bin/clear #for background artifacting
+    clear #for background artifacting
+}
+
+mkkernel() {
+    cd /usr/src/linux || exit 1
+    $__BASH_RUNAS "$__BASH_BIN_DIR"/make "$@"
+    $__BASH_RUNAS "$__BASH_BIN_DIR"/make modules_install "$@"
+    $__BASH_RUNAS "$__BASH_BIN_DIR"/make install
+    $__BASH_RUNAS "$__BASH_BIN_DIR"/dracut --force
+    $__BASH_RUNAS /usr/sbin/grub-mkconfig -o /boot/grub/grub.cfg
 }
 

@@ -24,6 +24,7 @@ set tabstop=4							" Maximum tab width
 set shiftwidth=4						" Indent size
 set softtabstop=0						" Insert spaces instead of tabs
 set guicursor=a:hor100                  " Set the cursor shape to a _
+set clipboard=unnamedplus               " Copy text to clipboard
 
 " Enable spellchecking and wrapping in vim
 autocmd BufReadPost,BufNewFile *.md,*.txt,*.1,*.ms,*.tex,*.latex set spell wrap

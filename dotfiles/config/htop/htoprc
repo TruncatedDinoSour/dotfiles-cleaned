@@ -1,5 +1,7 @@
 # Beware! This file is rewritten by htop when settings are changed in the interface.
 # The parser is also very primitive, and not human-friendly.
+htop_version=3.1.0-rc1
+config_reader_min_version=2
 fields=0 48 17 18 38 39 40 2 46 47 49 1
 sort_key=0
 sort_direction=1
@@ -27,15 +29,14 @@ detailed_cpu_time=0
 cpu_count_from_one=1
 show_cpu_usage=1
 show_cpu_frequency=0
-show_cpu_temperature=1
-degree_fahrenheit=0
 update_process_names=1
 account_guest_in_cpu_meter=0
 color_scheme=5
 enable_mouse=1
 delay=10
-left_meters=Memory Swap Blank Load Uptime System Systemd
-left_meter_modes=1 1 2 2 2 2 2
-right_meters=Tasks CPU Blank AllCPUs
-right_meter_modes=2 2 2 1
 hide_function_bar=1
+header_layout=two_50_50
+column_meters_0=Memory Swap Blank Load Uptime System Battery
+column_meter_modes_0=1 1 2 2 2 2 2
+column_meters_1=Tasks CPU Blank AllCPUs
+column_meter_modes_1=2 2 2 1
