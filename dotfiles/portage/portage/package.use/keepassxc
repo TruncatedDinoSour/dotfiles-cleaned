@@ -1,2 +1,0 @@
-app-admin/keepassxc -autotype -browser -ccache -keeshare -network -yubikey
-
