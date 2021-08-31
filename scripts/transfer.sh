@@ -129,6 +129,8 @@ sudo find /root -type l -exec ls -lA {} + | tee list/root_symlinks.list
 equery list '*' | grep -io '[a-z].*' > list/packagei_full.list
 cp /var/lib/portage/world list/package.list
 
+uname -r > list/kernel.release
+
 sudo chown -R ari:ari dotfiles
 rm -rfv dotfiles/editors/vim/.vim/undodir dotfiles/config/keepassxc dotfiles/config/VSCodium dotfiles/config/VirtualBox dotfiles/config/transmission/dht.dat dotfiles/config/dconf
 

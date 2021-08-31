@@ -9,9 +9,6 @@ unmap F
 map F toggle_fullscreen
 map [fullscreen] F toggle_fullscreen
 
-# Open document in fit-width mode by default
-set adjust-open "best-fit"
-
 # One page per row by default
 set pages-per-row 1
 
@@ -30,4 +27,10 @@ set selection-clipboard clipboard
 # : -> ;
 map ; feedkeys ":"
 
+# Page padding
+set sandbox none
+set statusbar-h-padding 0
+set statusbar-v-padding 0
+set page-padding 1
+set selection-clipboard clipboard
 

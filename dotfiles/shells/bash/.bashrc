@@ -22,8 +22,9 @@ esac
 
 source ~/.config/shells/bash/*.aliases
 
-dots='/home/ari/Ari/coding/resources_/dots'
-notes='/home/ari/Ari/coding/resources_/NOTES.txt'
+export dots='/home/ari/Ari/coding/resources_/dots'
+export notes='/home/ari/Documents/NOTES/notes.latex'
+export overlay='/home/ari/Ari/coding/resources_/dinolay'
 
 autorun
 

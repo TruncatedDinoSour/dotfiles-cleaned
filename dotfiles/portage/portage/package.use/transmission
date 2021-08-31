@@ -1,0 +1,2 @@
+net-p2p/transmission -gtk -appindicator -nls
+

@@ -17,7 +17,7 @@ mail-client/thunderbird
 media-fonts/fira-mono
 media-fonts/fontawesome
 media-fonts/freefont
-media-fonts/nerd-fonts
+media-fonts/nerd-fonts::dinolay
 media-fonts/x11fonts-jmk
 media-gfx/feh
 media-gfx/scrot
@@ -28,6 +28,7 @@ media-video/mpv
 net-im/telegram-desktop
 net-misc/dhcpcd
 net-misc/netifrc
+net-p2p/transmission-cli
 net-wireless/wpa_supplicant
 sys-apps/bat
 sys-apps/lsd

@@ -1,12 +1,12 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =6
+let g:netrw_dirhistcnt =0
+let g:netrw_dirhist_0='/home/ari/Ari/coding/resources_/dinolay/net-p2p/transmission-cli'
+let g:netrw_dirhist_9='/home/ari/Ari/coding/resources_/dinolay/net-p2p'
+let g:netrw_dirhist_8='/home/ari/Ari/coding/resources_/dinolay/net-p2p/transmission-cli'
+let g:netrw_dirhist_7='/home/ari/Ari/coding/resources_/dinolay/net-p2p'
 let g:netrw_dirhist_6='/home/ari/.config/bdwmb'
 let g:netrw_dirhist_5='/home/ari/.config/mpv/script-opts'
 let g:netrw_dirhist_4='/home/ari/Ari/coding/executables_/bdwmb/doc'
 let g:netrw_dirhist_3='/home/ari/Ari/coding/executables_/bdwmb/modules'
 let g:netrw_dirhist_2='/home/ari/Suckless/st'
 let g:netrw_dirhist_1='/usr/local/src/yafetch/src'
-let g:netrw_dirhist_0='/home/ari/Documents/linux_is_superior'
-let g:netrw_dirhist_9='/home/ari/Documents/linux_is_superior/images'
-let g:netrw_dirhist_8='/etc/iptables'
-let g:netrw_dirhist_7='/home/ari/Ari/coding/resources_/dots'

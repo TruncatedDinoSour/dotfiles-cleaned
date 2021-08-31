@@ -417,6 +417,7 @@ net-misc/netifrc-0.7.3
 net-misc/openssh-8.6_p1-r2
 net-misc/rsync-3.2.3-r4
 net-misc/wget-1.21.1
+net-p2p/transmission-cli-3.00
 net-print/cups-2.3.3_p2-r2
 net-print/cups-filters-1.28.7
 net-wireless/crda-4.14
