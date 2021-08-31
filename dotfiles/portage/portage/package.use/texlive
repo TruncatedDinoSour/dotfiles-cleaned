@@ -1,0 +1,4 @@
+app-text/texlive extra graphics -luatex -metapost -music -pstricks -pdfannotextractor -publishers science -tex2ht -texi2html xetex
+>=media-libs/harfbuzz-2.8.2-r1 icu
+>=app-text/texlive-core-2021-r1 xetex
+

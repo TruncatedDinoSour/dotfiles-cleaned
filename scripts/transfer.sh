@@ -44,12 +44,12 @@ from=(
     '/etc/bash_git'
     '/etc/default/grub'
     '/etc/hosts'
-    '/etc/hosts.allow'
     '/etc/dracut.conf'
     '/etc/dracut.conf.d'
     '/etc/tlp.conf'
     '/etc/sudoers'
     '/etc/X11/xorg.conf.d/20-intel-graphics.conf'
+    '/etc/rc.conf'
 
     '/etc/portage'
 

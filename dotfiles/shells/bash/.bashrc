@@ -4,6 +4,7 @@
 
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
+export PATH="$PATH:$HOME/.local/bin:$HOME/.scripts"
 
 # Enable Vi(M) mode
 set -o vi

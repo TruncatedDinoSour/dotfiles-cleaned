@@ -32,7 +32,7 @@ alias make="\$__BASH_BIN_DIR/make ${MAKEOPTS}"
 alias clear="\$__BASH_BIN_DIR/clear; autorun"
 
 alias grep="\$__BASH_CORE_BIN_DIR/grep --color=auto -iHn"
-alias diff="\$__BASH_CORE_BIN_DIR/diff --color=auto"
+alias diff="\$__BASH_BIN_DIR/diff --color=auto"
 
 alias lsblk="\$__BASH_CORE_BIN_DIR/lsblk -fa"
 

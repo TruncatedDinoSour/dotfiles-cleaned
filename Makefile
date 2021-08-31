@@ -7,3 +7,7 @@ tea:
 	chmod a+rx ./scripts/transfer.sh
 	./scripts/transfer.sh
 
+tools:
+	chmod a+rx ./scripts/tools.sh
+	./scripts/tools.sh
+

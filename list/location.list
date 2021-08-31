@@ -19,12 +19,12 @@ dotfiles/core -> /home/ari/.xprofile
 dotfiles/core -> /etc/bash_git
 dotfiles/core -> /etc/default/grub
 dotfiles/core -> /etc/hosts
-dotfiles/core -> /etc/hosts.allow
 dotfiles/core -> /etc/dracut.conf
 dotfiles/core -> /etc/dracut.conf.d
 dotfiles/core -> /etc/tlp.conf
 dotfiles/core -> /etc/sudoers
 dotfiles/core -> /etc/X11/xorg.conf.d/20-intel-graphics.conf
+dotfiles/core -> /etc/rc.conf
 dotfiles/portage -> /etc/portage
 dotfiles/linux -> /usr/src/linux/.config
 dotfiles/shells -> /etc/fish
