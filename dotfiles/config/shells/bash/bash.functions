@@ -8,7 +8,7 @@ RED='\033[00;31m'
 
 
 autorun() {
-    /usr/local/bin/mfetch
+    /usr/local/bin/yafetch 2>/dev/null || return
 }
 
 

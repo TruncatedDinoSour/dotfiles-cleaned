@@ -29,5 +29,5 @@ dotfiles/portage -> /etc/portage
 dotfiles/linux -> /usr/src/linux/.config
 dotfiles/shells -> /etc/fish
 dotfiles/qbittorrent -> /usr/share/themes/mumble-dark.qbtheme
-dotfiles/bin -> /usr/local/src/mfetch
+dotfiles/bin -> /usr/local/src/yafetch
 lrwxrwxrwx 1 root root 17 Aug 30 18:04 /usr/bin/xterm -> /usr/local/bin/st

@@ -3,6 +3,7 @@ app-admin/sudo
 app-arch/cpio
 app-editors/vim
 app-editors/vscodium
+app-emulation/qemu
 app-eselect/eselect-repository
 app-misc/ranger
 app-portage/gentoolkit
@@ -25,6 +26,7 @@ media-libs/alsa-oss
 media-libs/imlib2
 media-sound/alsa-utils
 media-video/mpv
+net-analyzer/traceroute
 net-im/telegram-desktop
 net-misc/dhcpcd
 net-misc/netifrc

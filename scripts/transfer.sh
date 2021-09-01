@@ -59,7 +59,7 @@ from=(
 
     '/usr/share/themes/mumble-dark.qbtheme'
 
-    '/usr/local/src/mfetch'
+    '/usr/local/src/yafetch'
 )
 
 to=(
