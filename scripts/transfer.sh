@@ -10,7 +10,7 @@ read -p "=== [ press enter to continue  ] ===" _
 
 rm -rf dotfiles list
 mkdir -p list
-mkdir -p dotfiles{,/bin,/shells/bash,/shells/zsh,/suckless,/etc,/custom,/programming/VScodium,/core,/linux,/portage,/qbittorrent,/editors/vim}
+mkdir -p dotfiles{,/bin,/shells/bash,/shells/zsh,/suckless,/etc,/custom,/programming/VScodium,/core,/linux,/portage,/qbittorrent,/editors/vim,/fix}
 
 
 from=(
@@ -60,6 +60,8 @@ from=(
     '/usr/share/themes/mumble-dark.qbtheme'
 
     '/usr/local/src/yafetch'
+
+    '/home/ari/Documents/wpa_cli_fix/doc.latex'
 )
 
 to=(
@@ -109,6 +111,8 @@ to=(
     'dotfiles/qbittorrent'
 
     'dotfiles/bin'
+
+    'dotfiles/fix/wpa_cli_fix.latex'
 )
 
 
