@@ -4,13 +4,12 @@ back=$(pwd)
 
 for i in ./*;
 do
-    if [[ -d "$i"  ]];
-    then
+    if [[ -d "$i"  ]]; then
         echo -en "\n$i\n\n"
-        cd $i
+        cd "$i" || exit 1
         sudo make clean install
         b="$?"
-        cd $back
+        cd "$back" || exit 1
 
         if [[ "$b" != 0 ]]; then
             break

@@ -25,6 +25,7 @@ media-gfx/scrot
 media-libs/alsa-oss
 media-libs/imlib2
 media-sound/alsa-utils
+media-video/ffmpeg
 media-video/mpv
 net-analyzer/traceroute
 net-im/telegram-desktop

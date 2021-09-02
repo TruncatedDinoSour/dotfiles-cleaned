@@ -30,4 +30,5 @@ dotfiles/linux -> /usr/src/linux/.config
 dotfiles/shells -> /etc/fish
 dotfiles/qbittorrent -> /usr/share/themes/mumble-dark.qbtheme
 dotfiles/bin -> /usr/local/src/yafetch
+dotfiles/fix/wpa_cli_fix.latex -> /home/ari/Documents/wpa_cli_fix/doc.latex
 lrwxrwxrwx 1 root root 17 Aug 30 18:04 /usr/bin/xterm -> /usr/local/bin/st

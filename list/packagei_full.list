@@ -428,7 +428,7 @@ net-dns/c-ares-1.17.2
 net-dns/libidn-1.37
 net-dns/libidn2-2.3.1
 net-firewall/iptables-1.8.7
-net-im/telegram-desktop-2.9.3
+net-im/telegram-desktop-3.0.0
 net-libs/gnutls-3.7.2
 net-libs/http-parser-2.9.4-r1
 net-libs/libiscsi-1.18.0
@@ -494,7 +494,7 @@ sys-apps/portage-3.0.20-r6
 sys-apps/sandbox-2.24
 sys-apps/sed-4.8
 sys-apps/shadow-4.8.1-r4
-sys-apps/systemd-tmpfiles-246
+sys-apps/systemd-tmpfiles-249.2
 sys-apps/sysvinit-2.99
 sys-apps/texinfo-6.7
 sys-apps/util-linux-2.36.2-r1
@@ -561,7 +561,7 @@ sys-libs/libseccomp-2.5.1
 sys-libs/liburing-0.7-r1
 sys-libs/mtdev-1.1.6
 sys-libs/ncurses-6.2-r1
-sys-libs/pam-1.5.1-r1
+sys-libs/pam-1.5.1_p20210622-r1
 sys-libs/readline-8.1_p1-r1
 sys-libs/timezone-data-2021a-r1
 sys-libs/zlib-1.2.11-r4

@@ -9,7 +9,7 @@ export MODULES=('pad'
                 'alsa'       'sep1'
                 'time')
 
-export DELAY='0.5'
+export DELAY='0.5s'
 
 # Module config
 export TIME_FORMAT='+%H:%M, %m-%d (%Y)'

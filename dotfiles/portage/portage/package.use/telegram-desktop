@@ -1,4 +1,4 @@
 net-im/telegram-desktop -screencast
->=dev-qt/qtgui-5.15.2-r2 dbus jpeg
->=media-video/ffmpeg-4.4-r1 opus
->=sys-libs/zlib-1.2.11-r4 minizip
+dev-qt/qtgui dbus jpeg
+media-video/ffmpeg opus
+sys-libs/zlib minizip
