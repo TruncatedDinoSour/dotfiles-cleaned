@@ -50,6 +50,7 @@ from=(
     '/etc/sudoers'
     '/etc/X11/xorg.conf.d/20-intel-graphics.conf'
     '/etc/rc.conf'
+    '/etc/modprobe.d/kernel_unfreeze_rtw.conf'
 
     '/etc/portage'
 
@@ -62,6 +63,7 @@ from=(
     '/usr/local/src/yafetch'
 
     '/home/ari/Documents/wpa_cli_fix/doc.latex'
+    '/home/ari/Documents/new_kernel_gentoo/doc.md'
 )
 
 to=(
@@ -101,6 +103,7 @@ to=(
     'dotfiles/core'
     'dotfiles/core'
     'dotfiles/core'
+    'dotfiles/core'
 
     'dotfiles/portage'
 
@@ -113,6 +116,7 @@ to=(
     'dotfiles/bin'
 
     'dotfiles/fix/wpa_cli_fix.latex'
+    'dotfiles/fix/gentoo_new_kernel.md'
 )
 
 

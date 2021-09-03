@@ -392,7 +392,7 @@ media-libs/alsa-ucm-conf-1.2.4
 media-libs/dav1d-0.8.2
 media-libs/fontconfig-2.13.1-r2
 media-libs/freeglut-3.2.1-r1
-media-libs/freetype-2.10.4
+media-libs/freetype-2.11.0-r1
 media-libs/gd-2.3.2
 media-libs/giblib-1.2.4-r1
 media-libs/giflib-5.2.1-r1
@@ -426,7 +426,7 @@ media-video/mpv-0.33.1-r1
 net-analyzer/traceroute-2.1.0
 net-dns/c-ares-1.17.2
 net-dns/libidn-1.37
-net-dns/libidn2-2.3.1
+net-dns/libidn2-2.3.2
 net-firewall/iptables-1.8.7
 net-im/telegram-desktop-3.0.0
 net-libs/gnutls-3.7.2
@@ -497,7 +497,7 @@ sys-apps/shadow-4.8.1-r4
 sys-apps/systemd-tmpfiles-249.2
 sys-apps/sysvinit-2.99
 sys-apps/texinfo-6.7
-sys-apps/util-linux-2.36.2-r1
+sys-apps/util-linux-2.37.2
 sys-apps/which-2.21
 sys-auth/elogind-246.10-r1
 sys-auth/pambase-20210201.1
@@ -543,6 +543,7 @@ sys-fs/udev-init-scripts-34
 sys-fs/xfsprogs-5.10.0-r1
 sys-kernel/dracut-053-r1
 sys-kernel/gentoo-sources-5.13.13
+sys-kernel/gentoo-sources-5.13.14
 sys-kernel/installkernel-gentoo-3
 sys-kernel/linux-firmware-20210818
 sys-kernel/linux-headers-5.10
@@ -557,7 +558,7 @@ sys-libs/gpm-1.20.7-r3
 sys-libs/libcap-2.49-r1
 sys-libs/libcap-ng-0.8.2-r1
 sys-libs/libomp-12.0.1
-sys-libs/libseccomp-2.5.1
+sys-libs/libseccomp-2.5.1-r1
 sys-libs/liburing-0.7-r1
 sys-libs/mtdev-1.1.6
 sys-libs/ncurses-6.2-r1
