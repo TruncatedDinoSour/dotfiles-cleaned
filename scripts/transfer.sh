@@ -51,6 +51,7 @@ from=(
     '/etc/X11/xorg.conf.d/20-intel-graphics.conf'
     '/etc/rc.conf'
     '/etc/modprobe.d/kernel_unfreeze_rtw.conf'
+    '/etc/conf.d'
 
     '/etc/portage'
 
@@ -92,6 +93,7 @@ to=(
 
     'dotfiles/programming/VScodium'
 
+    'dotfiles/core'
     'dotfiles/core'
     'dotfiles/core'
     'dotfiles/core'

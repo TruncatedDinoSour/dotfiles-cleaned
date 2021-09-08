@@ -84,6 +84,7 @@ check <a href="/INSTALLATION.md">INSTALLATION.md</a>
 <li><a href="//github.com/htop-dev/htop">Htop - "htop - an interactive process viewer"</a></li>
 <li><a href="//github.com/abishekvashok/cmatrix">Cmatrix - "Terminal based "The Matrix" like implementation"</a></li>
 <li><a href="//github.com/gilbertw1/telegram-gruvbox-theme">Telegram-gruvbox-theme - "Gruvbox theme for Telegram Desktop"</a></li>
+<li><a href="//github.com/muesli/duf/releases">DUF (better DF)</a></li>
 <li><a href="//suckless.org">Suckless's website</a></li>
 <li><a href="//github.com/TruncatedDinosour/dotfiles-cleaned/blob/gentoo/dotfiles/etc/wallpaper.png">Wallpaper</a></li>
 </ul>

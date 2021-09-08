@@ -1,4 +1,4 @@
-runtime! archlinux.vim
+scriptencoding utf-8
 
 syntax on						" Turn syntax highlighting on
 filetype plugin on              " This makes vim invoke Latex-Suite when you open a tex file.

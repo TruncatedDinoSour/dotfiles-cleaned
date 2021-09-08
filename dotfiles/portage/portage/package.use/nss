@@ -1,0 +1,11 @@
+# required by dev-libs/libxml2-2.9.12-r5::gentoo[python,python_targets_python3_9]
+# required by app-arch/libarchive-3.5.2::gentoo[-expat]
+# required by dev-util/cmake-3.20.5::gentoo
+# required by sys-devel/llvm-12.0.1::gentoo
+# required by media-libs/mesa-21.1.7::gentoo
+# required by media-libs/libepoxy-1.5.5::gentoo[egl]
+# required by x11-base/xorg-server-1.20.13-r1::gentoo[-minimal]
+# required by @selected
+# required by @world (argument)
+>=dev-lang/python-3.9.6_p2 xml
+

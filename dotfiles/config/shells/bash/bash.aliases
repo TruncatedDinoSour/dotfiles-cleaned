@@ -18,6 +18,8 @@ alias rmk='trash-restore'
 
 alias sc="\$__BASH_BIN_DIR/sc-im"
 
+alias df='duf -hide special'
+alias colorpicker='colorpicker --short --one-shot --preview'
 alias cat="\$__BASH_BIN_DIR/bat --theme=\"gruvbox-dark\""
 
 alias src='source ~/.bashrc'

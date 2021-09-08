@@ -153,6 +153,7 @@ $ cd /boot
 $ rm /boot/vmlinuz-X.Y.Z-gentoo
 $ rm /boot/System.map-X.Y.Z-gentoo
 $ rm /boot/initramfs-X.Y.Z-gentoo
+$ rm /boot/config-X.Y.Z-gentoo
 $ rm *.old
 ```
 
