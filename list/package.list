@@ -12,6 +12,8 @@ app-shells/fzf
 app-text/texlive
 app-text/zathura
 app-text/zathura-pdf-poppler
+dev-cpp/nlohmann_json
+dev-libs/boost
 dev-util/shellcheck-bin
 dev-vcs/git
 mail-client/thunderbird
@@ -46,6 +48,7 @@ sys-kernel/gentoo-sources
 sys-kernel/linux-firmware
 sys-libs/gpm
 www-client/firefox
+www-client/torbrowser-launcher
 x11-apps/xbacklight
 x11-apps/xinit
 x11-apps/xprop

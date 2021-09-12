@@ -4,7 +4,7 @@ main() {
     if [ ! "$1" ]; then
         local max_length=$((RANDOM % 384))
     else
-        local max_length="$1"
+        local max_length="$(($1 + 1 + RANDOM % 6))"
     fi
 
     local rng="$(( (50 + RANDOM) % "$max_length"))"
@@ -12,10 +12,21 @@ main() {
     dd if=/dev/urandom of=/tmp/.pwdgen_random_bytes bs=1 count="$rng" status=none
     date >>/tmp/.pwdgen_random_bytes
 
-    local bytes
-    bytes="$(cat -A /tmp/.pwdgen_random_bytes)"
+    id="${RANDOM}$(lsblk -fa | rev;
+        date | sha512sum;
+        ip a | rev | base64 | md5sum;
+        which "$SHELL" | base32;
+        env;
+        ps aux | sha256sum;
+        ss | sha384sum)${RANDOM}"
 
-    echo -en "$(((RANDOM / max_length) * max_length ^ WINDOWID))${bytes}${COLUMNS}${max_length}$(date '+%N%S%N%u%V%N%y%Y%m%G%I%m%N%s%N')${bytes,,}$(ip a)${WINDOWID}${PS1}${RANDOM}" |
+    echo "$id" >>/tmp/.pwdgen_random_bytes
+
+    local bytes
+    bytes="${RANDOM}$(cat -A /tmp/.pwdgen_random_bytes)大波留${id}${RANDOM}"
+
+    echo -en "$(((RANDOM / max_length) * max_length ^ WINDOWID))${bytes}${COLUMNS}${max_length}${id}
+                $(date '+%N%S%N%u%V%N%y%Y%m%G%I%m%N%s%N')${bytes,,}$(ip a | sha384sum)${WINDOWID}${PS1}${RANDOM}" |
         base64 -w 0 --ignore-garbage |
         sed 's/O/k/g; s/=/{/g; s/U/s/g; s/4/%/g; s/G/O/g; s/g/4/g; s/s/p/g; s/T/=/g; s/R/*/g' |
         base32 -w 0 --ignore-garbage |
@@ -27,8 +38,11 @@ main() {
         base64 -w 0 --ignore-garbage |
         rev |
         tail --bytes="$((30 + rng + ((RANDOM % max_length) - 20)))" |
-        sed 's/\//F/; s/=//g; s/8/u/g; s/p/*/g; s/U/%/g; s/f/-/g; s/s/@/g; s/Y/+/g' |
-        sed 's/e/&/g; s/O/./g; s/W/~/g; s/m/\\/; s/~/l/g; s/9/$/; s/o/:/g; s/K/`/g' |
+        sed 's/\//F/; s/=//g; s/8/u/g; s/p/*/g; s/U/%/g; s/f/-/g; s/s/@/g; s/Y/+/g'  |
+        sed 's/e/&/g; s/O/./g; s/W/~/g; s/m/\\/; s/~/l/g; s/9/$/; s/o/:/g; s/K/`/g'  |
+        sed 's/Z/😍/; s/c/🥵/; s/4/🤢/g; s/H/🧞‍♂️/g; s/m/📢/g; s/n/🏺/g; s/W/🧿/g' |
+        sed 's/e/恩/g; s/T/✒️/; s/J/ظ/g; s/s/つ/; s/E/ą/g; s/V/弛/; s/I/魚/; s/A/π/g; s/0/ℼ/; s/M/ž/g' |
+        sed 's/R/ɫ/; s/Z/⊈/' |
         awk '{ print $1 }' |
         rev
 

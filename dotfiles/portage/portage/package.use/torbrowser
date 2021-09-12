@@ -1,0 +1,7 @@
+# required by www-client/torbrowser-launcher-0.3.4::torbrowser
+# required by www-client/torbrowser-launcher (argument)
+app-crypt/gpgme python
+# required by www-client/torbrowser-launcher-0.3.4::torbrowser
+# required by www-client/torbrowser-launcher (argument)
+dev-python/PyQt5 widgets gui
+

@@ -38,6 +38,7 @@ from=(
     '/home/ari/.vimrc'
 
     '/home/ari/.config/VSCodium/User/snippets'
+    '/home/ari/.config/VSCodium/product.json'
 
     '/home/ari/.xinitrc'
     '/home/ari/.xprofile'
@@ -91,6 +92,7 @@ to=(
     'dotfiles/editors/vim'
     'dotfiles/editors/vim'
 
+    'dotfiles/programming/VScodium'
     'dotfiles/programming/VScodium'
 
     'dotfiles/core'

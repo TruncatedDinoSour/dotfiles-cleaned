@@ -63,6 +63,7 @@ tty_autorun() {
     clear #for background artifacting
 }
 
+
 mkkernel() {
     cd /usr/src/linux || exit 1
     $__BASH_RUNAS "$__BASH_BIN_DIR"/make "$@"
@@ -70,5 +71,15 @@ mkkernel() {
     $__BASH_RUNAS "$__BASH_BIN_DIR"/make install
     $__BASH_RUNAS "$__BASH_BIN_DIR"/dracut --force
     $__BASH_RUNAS /usr/sbin/grub-mkconfig -o /boot/grub/grub.cfg
+}
+
+
+vs() {
+    back="$(pwd)"
+    scriptdir="$HOME/.scripts"
+    script="$(find "$scriptdir" -maxdepth 1 -type f | fzf)"
+
+    [[ "$script" ]] && vim "$script"
+    cd "$back" || exit 2
 }
 

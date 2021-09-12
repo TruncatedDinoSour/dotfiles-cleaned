@@ -14,6 +14,7 @@ dotfiles/custom -> /home/ari/.scripts
 dotfiles/editors/vim -> /home/ari/.vim
 dotfiles/editors/vim -> /home/ari/.vimrc
 dotfiles/programming/VScodium -> /home/ari/.config/VSCodium/User/snippets
+dotfiles/programming/VScodium -> /home/ari/.config/VSCodium/product.json
 dotfiles/core -> /home/ari/.xinitrc
 dotfiles/core -> /home/ari/.xprofile
 dotfiles/core -> /etc/bash_git

@@ -116,6 +116,7 @@ app-vim/gentoo-syntax-20210716
 dev-cpp/abseil-cpp-20210324.1
 dev-cpp/glibmm-2.66.1
 dev-cpp/ms-gsl-3.1.0
+dev-cpp/nlohmann_json-3.9.1
 dev-cpp/range-v3-0.11.0
 dev-db/sqlite-3.35.5
 dev-lang/go-1.17
@@ -281,11 +282,14 @@ dev-perl/libwww-perl-6.550.0
 dev-perl/namespace-autoclean-0.290.0
 dev-perl/namespace-clean-0.270.0-r1
 dev-python/Babel-2.9.1
+dev-python/PyQt5-5.15.4-r1
+dev-python/PyQt5-sip-12.9.0
 dev-python/PySocks-1.7.1-r1
 dev-python/alabaster-0.7.12
 dev-python/certifi-10001-r1
 dev-python/charset_normalizer-2.0.4
 dev-python/cython-0.29.23
+dev-python/distro-1.6.0
 dev-python/docutils-0.17.1
 dev-python/idna-3.2
 dev-python/imagesize-1.2.0
@@ -302,6 +306,7 @@ dev-python/pytz-2021.1
 dev-python/requests-2.26.0
 dev-python/setuptools-57.4.0-r2
 dev-python/setuptools_scm-6.0.1-r1
+dev-python/sip-4.19.25-r1
 dev-python/six-1.16.0
 dev-python/snowballstemmer-2.1.0
 dev-python/sphinx-4.1.2
@@ -321,6 +326,7 @@ dev-qt/qtdbus-5.15.2-r1
 dev-qt/qtgui-5.15.2-r2
 dev-qt/qtimageformats-5.15.2
 dev-qt/qtnetwork-5.15.2-r2
+dev-qt/qtopengl-5.15.2-r1
 dev-qt/qtsvg-5.15.2
 dev-qt/qttest-5.15.2-r1
 dev-qt/qtwidgets-5.15.2-r1
@@ -497,7 +503,7 @@ sys-apps/shadow-4.8.1-r4
 sys-apps/systemd-tmpfiles-249.2
 sys-apps/sysvinit-2.99
 sys-apps/texinfo-6.7
-sys-apps/util-linux-2.37.2
+sys-apps/util-linux-2.37.2-r1
 sys-apps/which-2.21
 sys-auth/elogind-246.10-r1
 sys-auth/pambase-20210201.1
@@ -542,7 +548,7 @@ sys-fs/lvm2-2.02.188-r2
 sys-fs/udev-init-scripts-34
 sys-fs/xfsprogs-5.10.0-r1
 sys-kernel/dracut-053-r1
-sys-kernel/gentoo-sources-5.14.1
+sys-kernel/gentoo-sources-5.14.2
 sys-kernel/installkernel-gentoo-3
 sys-kernel/linux-firmware-20210818
 sys-kernel/linux-headers-5.10
@@ -643,6 +649,7 @@ virtual/udev-217-r3
 virtual/w3m-1
 virtual/yacc-0
 www-client/firefox-78.14.0
+www-client/torbrowser-launcher-0.3.4
 www-client/w3m-0.5.3_p20210102
 x11-apps/bdftopcf-1.1-r1
 x11-apps/iceauth-1.0.8-r1
@@ -693,7 +700,7 @@ x11-libs/libXv-1.0.11-r2
 x11-libs/libXxf86vm-1.1.4-r2
 x11-libs/libdrm-2.4.107
 x11-libs/libfontenc-1.1.4
-x11-libs/libnotify-0.7.9
+x11-libs/libnotify-0.7.9-r1
 x11-libs/libpciaccess-0.16
 x11-libs/libxcb-1.14
 x11-libs/libxkbcommon-1.3.0
@@ -712,7 +719,7 @@ x11-libs/xtrans-1.4.0
 x11-misc/compose-tables-1.7.2
 x11-misc/dunst-1.6.1
 x11-misc/imake-1.0.8-r1
-x11-misc/shared-mime-info-2.0-r2
+x11-misc/shared-mime-info-2.1
 x11-misc/util-macros-1.19.3
 x11-misc/xautolock-2.2_p7
 x11-misc/xbitmaps-1.1.2-r1
