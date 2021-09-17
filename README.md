@@ -35,7 +35,7 @@ A: No
 <b>
 Q: How heavy is your system running?
 </b><br/>
-A: ~100-130MiBs of RAM and ~1% CPU usage on fresh boot
+A: ~120MiBs of RAM and <1% CPU usage on fresh boot
 <br/><br/>
 
 <b>
@@ -61,10 +61,10 @@ A: Because it's a <a href="//www.howtogeek.com/287014/how-to-create-and-use-symb
 <h1 align="center"><b>Look & Feel</b></h1>
 <br/>
 <h3>DWM (Floating)</h3>
-<img src="https://user-images.githubusercontent.com/71613062/131375735-c8a10923-9628-4d3e-9e99-814688c69366.jpg">
+<img src="https://user-images.githubusercontent.com/71613062/133834683-02c0fc2e-e09d-4c63-abff-f3ff40d791a8.png">
 
 <h3>DWM (Tiling)</h3>
-<img src="https://user-images.githubusercontent.com/71613062/131375888-480ee38c-09e8-4bf9-94d0-4d77c6f933c1.jpg">
+<img src="https://user-images.githubusercontent.com/71613062/133834786-f4df7a2c-2eef-4b41-9d56-742f17a8f377.png">
 
 <h2 align="center"></h2>
 
