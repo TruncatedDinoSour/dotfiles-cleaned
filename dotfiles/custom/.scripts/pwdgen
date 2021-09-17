@@ -40,9 +40,6 @@ main() {
         tail --bytes="$((30 + rng + ((RANDOM % max_length) - 20)))" |
         sed 's/\//F/; s/=//g; s/8/u/g; s/p/*/g; s/U/%/g; s/f/-/g; s/s/@/g; s/Y/+/g'  |
         sed 's/e/&/g; s/O/./g; s/W/~/g; s/m/\\/; s/~/l/g; s/9/$/; s/o/:/g; s/K/`/g'  |
-        sed 's/Z/😍/; s/c/🥵/; s/4/🤢/g; s/H/🧞‍♂️/g; s/m/📢/g; s/n/🏺/g; s/W/🧿/g' |
-        sed 's/e/恩/g; s/T/✒️/; s/J/ظ/g; s/s/つ/; s/E/ą/g; s/V/弛/; s/I/魚/; s/A/π/g; s/0/ℼ/; s/M/ž/g' |
-        sed 's/R/ɫ/; s/Z/⊈/' |
         awk '{ print $1 }' |
         rev
 

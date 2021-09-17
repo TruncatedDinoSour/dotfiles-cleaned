@@ -1,5 +1,10 @@
 #!/bin/sh
 
+delay='5s'
+
+dunstify "The screen will be locked in ${delay}"
+sleep "$delay"
+
 /usr/bin/amixer -q set Master toggle
 /usr/local/bin/slock
 /usr/bin/amixer -q set Master toggle

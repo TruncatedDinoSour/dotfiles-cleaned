@@ -3,9 +3,10 @@ app-admin/sudo
 app-arch/cpio
 app-editors/vim
 app-editors/vscodium
-app-emulation/qemu
 app-eselect/eselect-repository
+app-misc/neofetch
 app-misc/ranger
+app-office/sc-im
 app-portage/gentoolkit
 app-shells/bash-completion
 app-shells/fzf
@@ -36,6 +37,7 @@ net-misc/netifrc
 net-p2p/transmission-cli
 net-wireless/wpa_supplicant
 sys-apps/bat
+sys-apps/duf
 sys-apps/lsd
 sys-apps/mlocate
 sys-apps/pciutils
@@ -47,6 +49,7 @@ sys-kernel/dracut
 sys-kernel/gentoo-sources
 sys-kernel/linux-firmware
 sys-libs/gpm
+sys-process/htop
 www-client/firefox
 www-client/torbrowser-launcher
 x11-apps/xbacklight

@@ -31,8 +31,13 @@ autocmd BufReadPost,BufNewFile *.md,*.txt,*.1,*.ms,*.tex,*.latex set spell wrap
 
 
 " Plugins
-" after :PlugInstall, install cmake and run the ~/.vim/plugged/youcompleteme/install.py file and
-" then run :YcmRestartServer
+" YouCompleteMe:
+"   after :PlugInstall, install cmake and run the ~/.vim/plugged/youcompleteme/install.py file and
+"   then run :YcmRestartServer
+" Bracey:
+"   1.  cd ~/.vim/bundle/bracey.vim for pathogen/neoBundle/vundle
+"       cd ~/.vim/plugged/bracey.vim for plug
+"   2. run npm install --prefix server
 call plug#begin("~/.vim/plugged")
     Plug 'AlessandroYorba/Alduin'
     Plug 'valloric/youcompleteme'
@@ -41,6 +46,7 @@ call plug#begin("~/.vim/plugged")
     Plug 'jiangmiao/auto-pairs'
     Plug 'itchyny/lightline.vim'
     Plug 'vim-latex/vim-latex'
+    Plug 'turbio/bracey.vim'
     Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install()  }, 'for': ['markdown', 'vim-plug'] }
 call plug#end()
 

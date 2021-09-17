@@ -5,7 +5,7 @@
 
 wallpaper="$HOME/Pictures/wallpaper.png"
 
-/usr/local/bin/bdwmb -q &
+bdwmb -q &
 feh --bg-tile "$wallpaper" &
 xautolock -time 10 -locker ~/.scripts/locker &
 xset r rate 300 50 &
