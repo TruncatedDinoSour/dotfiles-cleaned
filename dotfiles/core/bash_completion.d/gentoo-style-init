@@ -1,0 +1,27 @@
+# Gentoo init.d completion
+#
+# $Id$
+#
+# Copyright 1999-2009 Gentoo Foundation
+# Distributed under the terms of the GNU General Public License, v2 or later
+
+_gentoo_style_init()
+{
+    local script="${COMP_WORDS[0]}"
+    local cur="${COMP_WORDS[$COMP_CWORD]}"
+
+    if [[ ( -f "${script}" || -h "${script}" ) && -r "${script}" ]] \
+    && [[ "${script}" != *.sh ]] \
+    && [[ "$(head -n 1 "${script}")" = "#!/sbin/runscript" ]]
+    then
+    [[ $COMP_CWORD -gt 1 ]] && return 1
+    COMPREPLY=($(opts="start stop status restart pause zap ineed needsme iuse usesme broken"; \
+            eval "$(grep '^opts=' "${script}")"; echo "${opts}"))
+    [[ -n "$COMPREPLY" ]] || COMPREPLY=(start stop restart zap)
+    COMPREPLY=($(compgen -W "${COMPREPLY[*]}" -- "${cur}"))
+    else
+    COMPREPLY=($(compgen -o default -- "${cur}"))
+    fi
+    return 0
+}
+complete -F _gentoo_style_init /etc/init.d/*

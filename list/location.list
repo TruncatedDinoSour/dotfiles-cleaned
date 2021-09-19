@@ -28,6 +28,9 @@ dotfiles/core -> /etc/X11/xorg.conf.d/20-intel-graphics.conf
 dotfiles/core -> /etc/rc.conf
 dotfiles/core -> /etc/modprobe.d/kernel_unfreeze_rtw.conf
 dotfiles/core -> /etc/conf.d
+dotfiles/core -> /etc/profile
+dotfiles/core -> /etc/profile.env
+dotfiles/core -> /etc/bash_completion.d
 dotfiles/portage -> /etc/portage
 dotfiles/linux -> /usr/src/linux/.config
 dotfiles/shells -> /etc/fish

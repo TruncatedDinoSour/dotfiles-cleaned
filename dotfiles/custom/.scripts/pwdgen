@@ -13,20 +13,22 @@ main() {
     date >>/tmp/.pwdgen_random_bytes
 
     id="${RANDOM}$(lsblk -fa | rev;
-        date | sha512sum;
-        ip a | rev | base64 | md5sum;
-        which "$SHELL" | base32;
-        env;
-        ps aux | sha256sum;
-        ss | sha384sum)${RANDOM}"
+    date | sha512sum;
+    ip a | rev | base64 | md5sum;
+    which "$SHELL" | base32;
+    env;
+    ps aux | sha256sum;
+    ss | sha384sum)${RANDOM}"
 
     echo "$id" >>/tmp/.pwdgen_random_bytes
 
     local bytes
     bytes="${RANDOM}$(cat -A /tmp/.pwdgen_random_bytes)大波留${id}${RANDOM}"
 
+    rm -f /tmp/.pwdgen_random_bytes
+
     echo -en "$(((RANDOM / max_length) * max_length ^ WINDOWID))${bytes}${COLUMNS}${max_length}${id}
-                $(date '+%N%S%N%u%V%N%y%Y%m%G%I%m%N%s%N')${bytes,,}$(ip a | sha384sum)${WINDOWID}${PS1}${RANDOM}" |
+    $(date '+%N%S%N%u%V%N%y%Y%m%G%I%m%N%s%N')${bytes,,}$(ls /usr/bin)${WINDOWID}${PS1}${RANDOM}" |
         base64 -w 0 --ignore-garbage |
         sed 's/O/k/g; s/=/{/g; s/U/s/g; s/4/%/g; s/G/O/g; s/g/4/g; s/s/p/g; s/T/=/g; s/R/*/g' |
         base32 -w 0 --ignore-garbage |
@@ -38,13 +40,11 @@ main() {
         base64 -w 0 --ignore-garbage |
         rev |
         tail --bytes="$((30 + rng + ((RANDOM % max_length) - 20)))" |
-        sed 's/\//F/; s/=//g; s/8/u/g; s/p/*/g; s/U/%/g; s/f/-/g; s/s/@/g; s/Y/+/g'  |
-        sed 's/e/&/g; s/O/./g; s/W/~/g; s/m/\\/; s/~/l/g; s/9/$/; s/o/:/g; s/K/`/g'  |
+        sed 's/\//F/; s/=//g; s/8/u/g; s/p/*/g; s/U/%/g; s/f/-/g; s/s/@/g; s/Y/+/g' |
+        sed 's/e/&/g; s/O/./g; s/W/~/g; s/m/\\/; s/~/l/g; s/9/$/; s/o/:/g; s/K/`/g' |
         awk '{ print $1 }' |
         rev
-
-    rm -f /tmp/.pwdgen_random_bytes
-}
+    }
 
 
 main "$@"

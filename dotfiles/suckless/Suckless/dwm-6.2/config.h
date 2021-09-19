@@ -46,7 +46,6 @@ static const Rule rules[] = {
 	{ "SimpleScreenRecorder",       NULL,       NULL,       0,            1,            0,          1,          -1 },
 	{ "Peek",                       NULL,       NULL,       0,            1,            0,          1,          -1 },
 	{ "obs",                        NULL,       NULL,       0,            1,            0,          1,          -1 },
-	// { "mpv",                        NULL,       NULL,       0,            1,            0,          1,          -1 },
 
 	/* tag 2 */
 	{ "Firefox",                    NULL,       NULL,       1 << 1,       0,           0,           0,          -1 },
@@ -111,18 +110,14 @@ static const char *dmenucmd[] = { "dmenu_run", NULL };
 static const char *mutecmd[] = { "amixer", "-q", "set", "Master", "toggle", NULL  };
 static const char *volupcmd[] = { "amixer", "-q", "set", "Master", "5%+", "unmute", NULL  };
 static const char *voldowncmd[] = { "amixer", "-q", "set", "Master", "5%-", "unmute", NULL  };
-// static const char *miccmd[] = { "amixer", "set", "Capture", "toggle", NULL  };
 
 static const char *brupcmd[] = { sudo_cmd, "xbacklight", "-inc", "10", NULL  };
 static const char *brdowncmd[] = { sudo_cmd, "xbacklight", "-dec", "10", NULL  };
 
-static const char *bashcmd[] = { "st", "-e", "bash", NULL };
 static const char *editorcmd[] = { "st", "-e", "vim", NULL  };
 static const char *lockercmd[] = { "xautolock", "-locknow", NULL };
 static const char *browser[] = { "firefox", NULL };
-static const char *netwmgr[] = { "st", "-e", "nmtui", NULL };
 
-// static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
 static const char *termcmd[]  = { "st",  NULL };
 
 static Key keys[] = {
@@ -173,7 +168,7 @@ static Key keys[] = {
     // gap control
     { MODKEY,                       XK_minus,  setgaps,        {.i = -1 } },
     { MODKEY,                       XK_equal,  setgaps,        {.i = +1 } },
-    { MODKEY|ShiftMask,             XK_equal,  setgaps,        {.i = 0  } },
+    { MODKEY|ShiftMask,             XK_equal,  setgaps,        {.i = 0 } },
     // switch to tags
 	TAGKEYS(                        XK_1,                      0)
 		TAGKEYS(                        XK_2,                      1)
@@ -194,8 +189,6 @@ static Key keys[] = {
 	{ 0,                            XF86XK_MonBrightnessUp,   spawn,          {.v = brupcmd}    },
 	{ 0,                            XF86XK_MonBrightnessDown, spawn,          {.v = brdowncmd}  },
 
-	// st + bash
-	{ MODKEY|ShiftMask,             XK_b,                     spawn,          {.v = bashcmd}   },
 	// vim
 	{ MODKEY|ControlMask,           XK_e,                     spawn,          {.v = editorcmd} },
 	// locker
@@ -206,8 +199,6 @@ static Key keys[] = {
 	// { Mod1Mask,                  XK_Tab,                   spawn,          {.v = dmenuwin}  },
 	// browser
 	{ MODKEY,                       XK_w,                     spawn,          {.v = browser}   },
-	// networm management
-	{ MODKEY,                       XK_n,                     spawn,          {.v = netwmgr}   }
 };
 
 /* button definitions */

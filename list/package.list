@@ -14,6 +14,7 @@ app-text/texlive
 app-text/zathura
 app-text/zathura-pdf-poppler
 dev-cpp/nlohmann_json
+dev-lang/R
 dev-libs/boost
 dev-util/shellcheck-bin
 dev-vcs/git
@@ -38,6 +39,7 @@ net-p2p/transmission-cli
 net-wireless/wpa_supplicant
 sys-apps/bat
 sys-apps/duf
+sys-apps/lm-sensors
 sys-apps/lsd
 sys-apps/mlocate
 sys-apps/pciutils

@@ -53,6 +53,9 @@ from=(
     '/etc/rc.conf'
     '/etc/modprobe.d/kernel_unfreeze_rtw.conf'
     '/etc/conf.d'
+    '/etc/profile'
+    '/etc/profile.env'
+    '/etc/bash_completion.d'
 
     '/etc/portage'
 
@@ -95,6 +98,9 @@ to=(
     'dotfiles/programming/VScodium'
     'dotfiles/programming/VScodium'
 
+    'dotfiles/core'
+    'dotfiles/core'
+    'dotfiles/core'
     'dotfiles/core'
     'dotfiles/core'
     'dotfiles/core'

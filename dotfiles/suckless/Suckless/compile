@@ -11,7 +11,7 @@ do
         b="$?"
         cd "$back" || exit 1
 
-        if [[ "$b" != 0 ]]; then
+        if [[ "$b" -ne '0' ]]; then
             break
         fi
 
