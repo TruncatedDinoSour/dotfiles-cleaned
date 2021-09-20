@@ -19,7 +19,7 @@ fun! MakeNewLaTeXFile()
     put ='\begin{document}'
     put ='\maketitle'
     put ='\tableofcontents'
-    put ='\vspace{1mm}'
+    put ='\pagebreak{}'
     put =''
     put ='\end{document}'
     put =''

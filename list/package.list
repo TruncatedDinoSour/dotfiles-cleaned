@@ -6,6 +6,7 @@ app-editors/vscodium
 app-eselect/eselect-repository
 app-misc/neofetch
 app-misc/ranger
+app-office/calcurse
 app-office/sc-im
 app-portage/gentoolkit
 app-shells/bash-completion
