@@ -502,7 +502,7 @@ sys-devel/autoconf-wrapper-15
 sys-devel/automake-1.16.4
 sys-devel/automake-wrapper-11
 sys-devel/bc-1.07.1-r3
-sys-devel/binutils-2.36.1-r2
+sys-devel/binutils-2.37_p1
 sys-devel/binutils-config-5.4
 sys-devel/bison-3.7.6
 sys-devel/clang-12.0.1
@@ -522,7 +522,7 @@ sys-devel/make-4.3
 sys-devel/patch-2.7.6-r4
 sys-firmware/intel-microcode-20210608_p20210830
 sys-fs/cryptsetup-2.3.6-r2
-sys-fs/e2fsprogs-1.46.2
+sys-fs/e2fsprogs-1.46.4
 sys-fs/eudev-3.2.10-r1
 sys-fs/lvm2-2.02.188-r2
 sys-fs/udev-init-scripts-34
@@ -532,10 +532,10 @@ sys-kernel/gentoo-sources-5.14.6
 sys-kernel/installkernel-gentoo-3
 sys-kernel/linux-firmware-20210818
 sys-kernel/linux-headers-5.10
-sys-libs/binutils-libs-2.36.1-r2
+sys-libs/binutils-libs-2.37_p1
 sys-libs/compiler-rt-12.0.1
 sys-libs/compiler-rt-sanitizers-12.0.1
-sys-libs/e2fsprogs-libs-1.46.2
+sys-libs/e2fsprogs-libs-1.46.4
 sys-libs/efivar-37
 sys-libs/gdbm-1.20
 sys-libs/glibc-2.33-r1
