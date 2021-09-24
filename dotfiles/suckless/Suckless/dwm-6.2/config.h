@@ -105,7 +105,7 @@ static const Layout layouts[] = {
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 // static const char *dmenucmd[] = { "rofi", "-show", "run", NULL };
-static const char *dmenucmd[] = { "dmenu_run", NULL };
+static const char *dmenucmd[] = { "dmenu_run", "-i", NULL };
 
 static const char *mutecmd[] = { "amixer", "-q", "set", "Master", "toggle", NULL  };
 static const char *volupcmd[] = { "amixer", "-q", "set", "Master", "5%+", "unmute", NULL  };
@@ -117,6 +117,7 @@ static const char *brdowncmd[] = { sudo_cmd, "xbacklight", "-dec", "10", NULL  }
 static const char *editorcmd[] = { "st", "-e", "vim", NULL  };
 static const char *lockercmd[] = { "xautolock", "-locknow", NULL };
 static const char *browser[] = { "firefox", NULL };
+static const char *emojicmd[] = { "emoji", NULL  };
 
 static const char *termcmd[]  = { "st",  NULL };
 
@@ -199,6 +200,8 @@ static Key keys[] = {
 	// { Mod1Mask,                  XK_Tab,                   spawn,          {.v = dmenuwin}  },
 	// browser
 	{ MODKEY,                       XK_w,                     spawn,          {.v = browser}   },
+    // Emoji selector
+	{ MODKEY,                       XK_e,                     spawn,          {.v = emojicmd}  }
 };
 
 /* button definitions */

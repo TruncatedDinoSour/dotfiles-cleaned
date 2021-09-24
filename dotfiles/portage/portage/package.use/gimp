@@ -1,0 +1,3 @@
+media-gfx/gimp -heif -vector-icons
+media-libs/gegl cairo
+

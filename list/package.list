@@ -3,6 +3,7 @@ app-admin/sudo
 app-arch/cpio
 app-editors/vim
 app-editors/vscodium
+app-emulation/qemu
 app-eselect/eselect-repository
 app-misc/neofetch
 app-misc/ranger
@@ -24,8 +25,10 @@ media-fonts/fira-mono
 media-fonts/fontawesome
 media-fonts/freefont
 media-fonts/nerd-fonts::dinolay
+media-fonts/unifont
 media-fonts/x11fonts-jmk
 media-gfx/feh
+media-gfx/gimp
 media-gfx/scrot
 media-libs/alsa-oss
 media-libs/imlib2
@@ -55,6 +58,7 @@ sys-libs/gpm
 sys-process/htop
 www-client/firefox
 www-client/torbrowser-launcher
+x11-apps/setxkbmap
 x11-apps/xbacklight
 x11-apps/xinit
 x11-apps/xprop
