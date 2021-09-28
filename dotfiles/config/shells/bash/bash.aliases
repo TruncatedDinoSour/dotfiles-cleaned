@@ -17,6 +17,7 @@ alias rrm='trash-empty'
 alias rmk='trash-restore'
 
 alias sc="\$__BASH_BIN_DIR/sc-im"
+alias v="\$__BASH_BIN_DIR/vim"
 
 alias df='duf -hide special'
 alias colorpicker='colorpicker --short --one-shot --preview'

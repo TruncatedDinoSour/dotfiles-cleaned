@@ -29,7 +29,7 @@ esac
 source ~/.config/shells/bash/*.aliases
 
 export dots='/home/ari/Ari/coding/resources_/dots'
-export overlay='/home/ari/Ari/coding/resources_/dinolay'
+export overlay='/home/ari/Ari/coding/resources_/overlay'
 export ntex='/home/ari/Documents/notes/doc.tex'
 export npdf='/home/ari/Documents/notes/doc.pdf'
 export ndir='/home/ari/Documents/notes'

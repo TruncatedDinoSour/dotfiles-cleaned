@@ -207,9 +207,9 @@ static Shortcut shortcuts[] = {
     { TERMMOD,               XK_H,     kscrollup,           {.i = -1} },
     { TERMMOD,               XK_B,     kscrolldown,         {.i = -1} },
 
-	{ Mod1Mask|ControlMask, XK_l,           externalpipe,   {.v = openurlcmd } },
-	{ Mod1Mask,             XK_y,           externalpipe,   {.v = copyurlcmd } },
-	{ Mod1Mask,             XK_o,           externalpipe,   {.v = copyoutput } },
+	{ MODKEY|ControlMask, XK_l,           externalpipe,   {.v = openurlcmd } },
+	{ MODKEY,             XK_y,           externalpipe,   {.v = copyurlcmd } },
+	{ MODKEY,             XK_o,           externalpipe,   {.v = copyoutput } },
 };
 
 /*

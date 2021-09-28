@@ -150,7 +150,7 @@ dev-libs/glib-2.68.3-r1
 dev-libs/gmp-6.2.1-r1
 dev-libs/gobject-introspection-1.68.0
 dev-libs/gobject-introspection-common-1.68.0
-dev-libs/icu-69.1
+dev-libs/icu-69.1-r1
 dev-libs/inih-53
 dev-libs/jemalloc-5.2.1
 dev-libs/json-c-0.15
@@ -180,7 +180,6 @@ dev-libs/libsigc++-2.10.7
 dev-libs/libsodium-1.0.18_p20210617
 dev-libs/libtasn1-4.17.0
 dev-libs/libunistring-0.9.10-r1
-dev-libs/libusb-1.0.24-r2
 dev-libs/libuv-1.42.0
 dev-libs/libxml2-2.9.12-r5
 dev-libs/libxslt-1.1.34-r1
@@ -298,6 +297,7 @@ dev-python/alabaster-0.7.12
 dev-python/certifi-10001-r1
 dev-python/charset_normalizer-2.0.4
 dev-python/cython-0.29.23
+dev-python/dbus-python-1.2.16-r1
 dev-python/distro-1.6.0
 dev-python/docutils-0.17.1
 dev-python/httplib2-0.19.1
@@ -306,7 +306,7 @@ dev-python/imagesize-1.2.0
 dev-python/jinja-3.0.1
 dev-python/lxml-4.6.3-r1
 dev-python/m2crypto-0.38.0
-dev-python/mako-1.1.4
+dev-python/mako-1.1.5
 dev-python/markupsafe-2.0.1
 dev-python/namespace-sphinxcontrib-1.0
 dev-python/packaging-21.0
@@ -333,12 +333,17 @@ dev-qt/qtchooser-66
 dev-qt/qtconcurrent-5.15.2-r1
 dev-qt/qtcore-5.15.2-r3
 dev-qt/qtdbus-5.15.2-r1
+dev-qt/qtdeclarative-5.15.2-r1
 dev-qt/qtgui-5.15.2-r2
 dev-qt/qtimageformats-5.15.2
+dev-qt/qtmultimedia-5.15.2-r1
 dev-qt/qtnetwork-5.15.2-r2
 dev-qt/qtopengl-5.15.2-r1
+dev-qt/qtprintsupport-5.15.2-r1
+dev-qt/qtsql-5.15.2-r1
 dev-qt/qtsvg-5.15.2
 dev-qt/qttest-5.15.2-r1
+dev-qt/qtwebchannel-5.15.2-r1
 dev-qt/qtwidgets-5.15.2-r1
 dev-qt/qtxml-5.15.2-r1
 dev-tex/bibtexu-3.71_p20210325
@@ -373,7 +378,7 @@ dev-util/gtk-doc-am-1.33.2
 dev-util/gtk-update-icon-cache-3.24.26
 dev-util/intltool-0.51.0-r2
 dev-util/itstool-2.0.6-r1
-dev-util/meson-0.58.2-r1
+dev-util/meson-0.59.1-r1
 dev-util/meson-format-array-0
 dev-util/netsurf-buildsystem-1.9
 dev-util/ninja-1.10.1
@@ -435,7 +440,7 @@ media-libs/libmypaint-1.6.1
 media-libs/libnsgif-0.2.1-r3
 media-libs/libpng-1.6.37-r2
 media-libs/libsamplerate-0.2.1
-media-libs/libtgvoip-2.4.4_p20210302-r2
+media-libs/libtgvoip-2.4.4_p20210302-r3
 media-libs/libvpx-1.10.0
 media-libs/libwebp-1.1.0
 media-libs/mesa-21.1.7
@@ -455,7 +460,7 @@ net-dns/c-ares-1.17.2
 net-dns/libidn-1.37
 net-dns/libidn2-2.3.2
 net-firewall/iptables-1.8.7
-net-im/telegram-desktop-3.0.1
+net-im/telegram-desktop-3.0.1-r1
 net-libs/glib-networking-2.68.1
 net-libs/gnutls-3.7.2
 net-libs/http-parser-2.9.4-r1
@@ -468,10 +473,10 @@ net-libs/libslirp-4.6.1
 net-libs/libsoup-2.72.0-r1
 net-libs/libssh2-1.9.0_p20200614-r1
 net-libs/libtirpc-1.3.2
-net-libs/nghttp2-1.44.0
+net-libs/nghttp2-1.44.0-r1
 net-libs/nodejs-14.17.6
 net-libs/usrsctp-0.9.5.0
-net-misc/curl-7.78.0-r1
+net-misc/curl-7.79.1
 net-misc/dhcpcd-9.4.0-r1
 net-misc/iputils-20210722
 net-misc/netifrc-0.7.3
@@ -494,7 +499,6 @@ sys-apps/acl-2.3.1
 sys-apps/attr-2.5.1
 sys-apps/baselayout-2.7
 sys-apps/bat-0.18.3
-sys-apps/busybox-1.32.1-r1
 sys-apps/coreutils-8.32-r1
 sys-apps/dbus-1.12.20-r3
 sys-apps/debianutils-4.11.2
@@ -533,7 +537,6 @@ sys-apps/shadow-4.9-r2
 sys-apps/systemd-tmpfiles-249.2
 sys-apps/sysvinit-2.99
 sys-apps/texinfo-6.8
-sys-apps/usbredir-0.9.0
 sys-apps/util-linux-2.37.2-r1
 sys-apps/which-2.21
 sys-auth/elogind-246.10-r1
@@ -579,8 +582,7 @@ sys-fs/lvm2-2.02.188-r2
 sys-fs/udev-init-scripts-34
 sys-fs/xfsprogs-5.10.0-r1
 sys-kernel/dracut-053-r1
-sys-kernel/gentoo-sources-5.14.6
-sys-kernel/gentoo-sources-5.14.7
+sys-kernel/gentoo-sources-5.14.8
 sys-kernel/installkernel-gentoo-3
 sys-kernel/linux-firmware-20210818
 sys-kernel/linux-headers-5.10
@@ -622,7 +624,6 @@ virtual/libelf-3
 virtual/libiconv-0-r2
 virtual/libintl-0-r2
 virtual/libudev-232-r5
-virtual/libusb-1-r2
 virtual/logger-0-r1
 virtual/man-0-r4
 virtual/mta-1-r2

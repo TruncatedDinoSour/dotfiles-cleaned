@@ -48,6 +48,7 @@ sys-apps/lsd
 sys-apps/mlocate
 sys-apps/pciutils
 sys-boot/grub:2
+sys-firmware/edk2-ovmf
 sys-firmware/intel-microcode
 sys-fs/cryptsetup
 sys-fs/xfsprogs

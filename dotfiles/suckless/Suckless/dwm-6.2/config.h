@@ -46,6 +46,8 @@ static const Rule rules[] = {
 	{ "SimpleScreenRecorder",       NULL,       NULL,       0,            1,            0,          1,          -1 },
 	{ "Peek",                       NULL,       NULL,       0,            1,            0,          1,          -1 },
 	{ "obs",                        NULL,       NULL,       0,            1,            0,          1,          -1 },
+	{ NULL,                         NULL,       "Picture in picture",
+                                                            0,            1,            0,          1,          -1 },
 
 	/* tag 2 */
 	{ "Firefox",                    NULL,       NULL,       1 << 1,       0,           0,           0,          -1 },
@@ -55,6 +57,7 @@ static const Rule rules[] = {
     { "qBittorrent",                NULL,       NULL,       1 << 1,       0,           0,           0,          -1 },
     { "kristall",                   NULL,       NULL,       1 << 1,       0,           0,           0,          -1 },
     { "Thunderbird",                NULL,       NULL,       1 << 1,       0,           0,           0,          -1 },
+    { "FreeTube",                   NULL,       NULL,       1 << 1,       0,           0,           0,          -1 },
 
 	/* tag 3 */
 	{ "Code",                       NULL,       NULL,       1 << 2,       0,           0,           0,          -1 },
@@ -92,7 +95,7 @@ static const Layout layouts[] = {
 };
 
 /* key definitions */
-#define MODKEY Mod1Mask
+#define MODKEY Mod4Mask
 #define TAGKEYS(KEY,TAG) \
 { MODKEY,                       KEY,      view,           {.ui = 1 << TAG} }, \
 { MODKEY|ControlMask,           KEY,      toggleview,     {.ui = 1 << TAG} }, \
