@@ -10,10 +10,10 @@
     <tag>round</tag>
   </resource>
 
-  <resource identifier="gimp-brush-clipboard-image" checksum="0a8709e46795009b4a28fe4c6aeb3ef2">
+  <resource identifier="gimp-brush-clipboard-image" checksum="ab3f4ff46c70126f8a71e368e45439ce">
   </resource>
 
-  <resource identifier="gimp-brush-clipboard-mask" checksum="853075856c0bb3f0b40c7531adb5feb9">
+  <resource identifier="gimp-brush-clipboard-mask" checksum="5543d657634812e056190a3bf63a7029">
   </resource>
 
   <resource identifier="${gimp_data_dir}/brushes/Basic/1-pixel.vbr" checksum="c84494b4a904a7c1a3548e564b073ca3">
@@ -829,7 +829,7 @@
   <resource identifier="${mypaint_brushes_dir}/ramon/wet_round.myb" checksum="038abfe33947692f773e0244d2ac7fc1">
   </resource>
 
-  <resource identifier="gimp-pattern-clipboard-image" checksum="89ebb61da33d0e21da0acb6aef0d812e">
+  <resource identifier="gimp-pattern-clipboard-image" checksum="0ff9d1fd9cdd421cae8b8fabf19335af">
   </resource>
 
   <resource identifier="${gimp_data_dir}/patterns/Legacy/3dgreen.pat" checksum="00052731f14a5bc614daece969b368bc">
@@ -1426,6 +1426,15 @@
   <resource identifier="FreeSerif Italic" checksum="(null)">
   </resource>
 
+  <resource identifier="GNU Unifont CSUR Medium" checksum="(null)">
+  </resource>
+
+  <resource identifier="GNU Unifont Medium" checksum="(null)">
+  </resource>
+
+  <resource identifier="GNU Unifont Sample Medium" checksum="(null)">
+  </resource>
+
   <resource identifier="Hack Nerd Font" checksum="(null)">
   </resource>
 
@@ -1613,6 +1622,18 @@
   </resource>
 
   <resource identifier="Standard Symbols L" checksum="(null)">
+  </resource>
+
+  <resource identifier="Unifont CSUR Medium" checksum="(null)">
+  </resource>
+
+  <resource identifier="Unifont Medium" checksum="(null)">
+  </resource>
+
+  <resource identifier="Unifont Sample Medium" checksum="(null)">
+  </resource>
+
+  <resource identifier="Unifont Upper Medium" checksum="(null)">
   </resource>
 
   <resource identifier="URW Bookman L" checksum="(null)">

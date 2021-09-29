@@ -29,6 +29,7 @@ media-fonts/unifont
 media-fonts/x11fonts-jmk
 media-gfx/feh
 media-gfx/gimp
+media-gfx/mypaint
 media-gfx/scrot
 media-libs/alsa-oss
 media-libs/imlib2

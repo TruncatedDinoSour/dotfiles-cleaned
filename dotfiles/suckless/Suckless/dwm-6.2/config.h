@@ -118,6 +118,8 @@ static const char *brupcmd[] = { sudo_cmd, "xbacklight", "-inc", "10", NULL  };
 static const char *brdowncmd[] = { sudo_cmd, "xbacklight", "-dec", "10", NULL  };
 
 static const char *editorcmd[] = { "st", "-e", "vim", NULL  };
+static const char *calandarcmd[] = { "st", "-e", "calcurse", NULL };
+
 static const char *lockercmd[] = { "xautolock", "-locknow", NULL };
 static const char *browser[] = { "firefox", NULL };
 static const char *emojicmd[] = { "emoji", NULL  };
@@ -204,7 +206,9 @@ static Key keys[] = {
 	// browser
 	{ MODKEY,                       XK_w,                     spawn,          {.v = browser}   },
     // Emoji selector
-	{ MODKEY,                       XK_e,                     spawn,          {.v = emojicmd}  }
+	{ MODKEY,                       XK_e,                     spawn,          {.v = emojicmd}  },
+    // Notes/TODOs/etc.
+	{ MODKEY,                       XK_n,                     spawn,          {.v = calandarcmd}  },
 };
 
 /* button definitions */

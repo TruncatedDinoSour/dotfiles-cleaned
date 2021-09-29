@@ -153,6 +153,9 @@ rc-update > list/openrc_services.sysvinit.list
 python3 -m jupyter nbextension list 2>/dev/null > list/jupyter_entensions.list
 python3 -m pip list | awk '{ print $1 }' | tail -n +3 > list/pip_modules.list
 
+
 sudo chown -R ari:ari dotfiles
 rm -rfv dotfiles/editors/vim/.vim/undodir dotfiles/config/keepassxc dotfiles/config/VSCodium dotfiles/config/VirtualBox dotfiles/config/transmission/dht.dat dotfiles/config/dconf
+
+sed -i '/PHONE/d' dotfiles/config/tg/conf.py
 

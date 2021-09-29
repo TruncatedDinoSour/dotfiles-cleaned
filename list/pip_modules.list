@@ -2,6 +2,7 @@ alabaster
 ansicolors
 anyio
 argon2-cffi
+asyncio
 attrs
 autopep8
 Babel
@@ -110,16 +111,19 @@ plumbum
 portage
 prometheus-client
 prompt-toolkit
+protobuf
 psutil
 ptyprocess
 pyaes
 pyasn1
+pycairo
 pycodestyle
 pycparser
 pyelftools
 pyfiglet
 pygame
 Pygments
+PyGObject
 PyJWT
 PyNaCl
 pynvim
@@ -134,6 +138,7 @@ pytg
 python-aalib
 python-dateutil
 python-dotenv
+python-telegram
 pytz
 pyxdg
 PyYAML

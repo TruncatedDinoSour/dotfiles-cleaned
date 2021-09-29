@@ -1,0 +1,4 @@
+# required by media-gfx/mypaint-2.0.1-r2::gentoo[-test]
+# required by mypaint (argument)
+>=x11-libs/gdk-pixbuf-2.42.6 jpeg
+

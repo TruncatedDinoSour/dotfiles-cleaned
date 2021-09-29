@@ -37,14 +37,20 @@ main() {
         sed 's/5/p/g; s/e/G/g; s/c/5/g; s/b/c/g; s/c/H/g; s/9/e/g' |
         base64 -w 0 --ignore-garbage |
         sed 's/_/O/g; s/d/_/g; s/A/@/g; s/E/:/g' |
+        echo "$(cat -)$(echo "$bytes" | rev)" |
+        sed 's/./&\n/g' | shuf | tr -d "\n" |
         base64 -w 0 --ignore-garbage |
         rev |
         tail --bytes="$((30 + rng + ((RANDOM % max_length) - 20)))" |
         sed 's/\//F/; s/=//g; s/8/u/g; s/p/*/g; s/U/%/g; s/f/-/g; s/s/@/g; s/Y/+/g' |
         sed 's/e/&/g; s/O/./g; s/W/~/g; s/m/\\/; s/~/l/g; s/9/$/; s/o/:/g; s/K/`/g' |
         awk '{ print $1 }' |
+        sed 's/./&\n/g' | shuf | tr -d "\n" |
         rev
-    }
+
+    [[ "$2" != "-n" ]] && echo
+    return 0
+}
 
 
 main "$@"
