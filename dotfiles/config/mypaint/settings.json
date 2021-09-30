@@ -71,7 +71,7 @@
           "active_page": -1
         }
       ],
-      "w": 235,
+      "w": 21,
       "h": 954
     },
     "floating": [],
@@ -436,7 +436,7 @@
     "#aa6633",
     "#003153",
     "#000000",
-    "#ff35ab"
+    "#ff35aa"
   ],
   "brush_chooser.default.window_size": [
     256,

@@ -19,7 +19,6 @@ certifi
 cffi
 charset-normalizer
 click
-cmdpxl
 colorama
 colored-traceback
 coloredlogs

@@ -74,7 +74,7 @@ A: Because it's a <a href="//www.howtogeek.com/287014/how-to-create-and-use-symb
 <br/>
 
 <h1 align="center"><b>Manual Installation</b></h1>
-check <a href="/INSTALLATION.md">INSTALLATION.md</a>
+check <a href="/doc/INSTALLATION.md">/doc/INSTALLATION.md</a>
 
 
 <br/>

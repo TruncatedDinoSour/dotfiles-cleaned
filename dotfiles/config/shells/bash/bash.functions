@@ -83,3 +83,14 @@ vs() {
     cd "$back" || exit 2
 }
 
+
+pip_upgrade() {
+    "$__BASH_BIN_DIR"/python3 -m pip list |
+        "$__BASH_BIN_DIR"/awk '{ print $1  }' |
+        "$__BASH_BIN_DIR"/tail -n +3 > /tmp/requirements.txt
+
+    "$__BASH_BIN_DIR"/python3 -m pip install --upgrade -r /tmp/requirements.txt
+
+    rm -f /tmp/requirements.txt
+}
+

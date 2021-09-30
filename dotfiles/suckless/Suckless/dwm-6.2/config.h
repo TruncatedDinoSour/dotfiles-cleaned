@@ -148,11 +148,11 @@ static Key keys[] = {
 	{ MODKEY,                       XK_l,      setmfact,       {.f = +0.05} },
 	// useless (not, i didn't understand this)
 	// { MODKEY,                       XK_Return, zoom,           {0} },
-	// switch to a used tab
+	// switch to a used tag
 	{ MODKEY,                       XK_Tab,    view,           {0} },
 	// kill a window
 	{ MODKEY|ShiftMask,             XK_q,      killclient,     {0} },
-	// default layout
+	// default (tiled) layout
 	{ MODKEY,                       XK_t,      setlayout,      {.v = &layouts[0]} },
 	// floating layout
 	{ MODKEY,                       XK_f,      setlayout,      {.v = &layouts[1]} },
