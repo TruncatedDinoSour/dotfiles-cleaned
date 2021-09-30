@@ -1,4 +1,4 @@
-# Installation of my dotfiles in gentoo
+# Installation of my dotfiles in gentoo, #WIP
 
 ## Clone the repository
 
@@ -84,3 +84,4 @@ $ cd ../list
 ```bash
 $ sudo emerge app-editors/vim
 ```
+
