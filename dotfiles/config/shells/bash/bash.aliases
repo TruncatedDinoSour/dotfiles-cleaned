@@ -22,6 +22,7 @@ alias v="\$__BASH_BIN_DIR/vim"
 alias df='duf -hide special'
 alias colorpicker='colorpicker --short --one-shot --preview'
 alias cat="\$__BASH_BIN_DIR/bat --theme=\"gruvbox-dark\""
+alias googler="\$__BASH_LOCAL_BIN_DIR/googler --geoloc=CC"
 
 alias src='source ~/.bashrc'
 alias stx="\$__BASH_BIN_DIR/startx"

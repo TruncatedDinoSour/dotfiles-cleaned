@@ -1,0 +1,32 @@
+#!/bin/sh
+
+main() {
+    minute=""
+
+    while true; do
+        appointment="$(calcurse --next | tr -d "\n\[\]" | cut -d' ' -f3-)"
+        appointment_in="$(echo "$appointment" | cut -d' ' -f3-3)"
+        appointment_text="$(echo "$appointment" | cut -d' ' -f4-)"
+
+        if [ "$appointment_text" ]; then
+            if [ "$minute" != "$appointment_in" ]; then
+                notify-send -u critical 'Calcurse reminder' "'${appointment_text}' in ${appointment_in}"
+            else
+                minute="$appointment_in"
+                continue
+            fi
+        else
+            break
+        fi
+
+        # Beep
+        (speaker-test -l 1 -f 1500 -t sine -P 2 -X >/dev/null)& pid="$!"; sleep 0.08; kill -9 $pid
+
+        sleep 60
+    done
+
+    return 0
+}
+
+main "$@"
+

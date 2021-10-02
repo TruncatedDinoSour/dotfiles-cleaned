@@ -124,6 +124,7 @@ static const char *lockercmd[] = { "xautolock", "-locknow", NULL };
 static const char *browser[] = { "firefox", NULL };
 static const char *emojicmd[] = { "emoji", NULL  };
 
+static const char *quitdwmcmd[] = { "quitdwm", NULL  };
 static const char *termcmd[]  = { "st",  NULL };
 
 static Key keys[] = {
@@ -185,8 +186,8 @@ static Key keys[] = {
 		TAGKEYS(                        XK_7,                      6)
 		TAGKEYS(                        XK_8,                      7)
 		TAGKEYS(                        XK_9,                      8)
-		// exit dwm
-		{ MODKEY|ShiftMask,             XK_e,      quit,           {0} },
+    // exit dwm
+    { MODKEY|ShiftMask,             XK_e,      spawn,           {.v = quitdwmcmd} },
 
 	// media keys
 	{ 0,                            XF86XK_AudioMute,         spawn,          {.v = mutecmd }   },

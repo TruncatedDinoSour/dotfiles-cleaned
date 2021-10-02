@@ -39,13 +39,25 @@ dist: clean
 install: all
 	mkdir -p ${DESTDIR}${PREFIX}/bin
 	cp -f dwm ${DESTDIR}${PREFIX}/bin
+	cp -f quitdwm ${DESTDIR}${PREFIX}/bin
+	cp -f emoji ${DESTDIR}${PREFIX}/bin
+	cp -f dwmlocker ${DESTDIR}${PREFIX}/bin
+	cp -f send_calcurse_notification ${DESTDIR}${PREFIX}/bin
 	chmod 755 ${DESTDIR}${PREFIX}/bin/dwm
+	chmod 755 ${DESTDIR}${PREFIX}/bin/quitdwm
+	chmod 755 ${DESTDIR}${PREFIX}/bin/emoji
+	chmod 755 ${DESTDIR}${PREFIX}/bin/dwmlocker
+	chmod 755 ${DESTDIR}${PREFIX}/bin/send_calcurse_notification
 	mkdir -p ${DESTDIR}${MANPREFIX}/man1
 	sed "s/VERSION/${VERSION}/g" < dwm.1 > ${DESTDIR}${MANPREFIX}/man1/dwm.1
 	chmod 644 ${DESTDIR}${MANPREFIX}/man1/dwm.1
 
 uninstall:
 	rm -f ${DESTDIR}${PREFIX}/bin/dwm\
-		${DESTDIR}${MANPREFIX}/man1/dwm.1
+		${DESTDIR}${MANPREFIX}/man1/dwm.1\
+		${DESTDIR}${PREFIX}/bin/quitdwm\
+		${DESTDIR}${PREFIX}/bin/emoji\
+		${DESTDIR}${PREFIX}/bin/dwmlocker\
+		${DESTDIR}${PREFIX}/bin/send_calcurse_notification
 
 .PHONY: all options clean dist install uninstall

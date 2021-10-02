@@ -80,7 +80,7 @@ root ALL=(ALL) ALL
 
 ## Uncomment to allow members of group wheel to execute any command
 %wheel ALL=(ALL) ALL
-%wheel ALL=(ALL) NOPASSWD: /usr/bin/xbacklight
+%wheel ALL=(ALL) NOPASSWD: /usr/bin/xbacklight, /sbin/reboot, /sbin/poweroff
 
 ## Same thing without a password
 # %wheel ALL=(ALL) NOPASSWD: ALL
