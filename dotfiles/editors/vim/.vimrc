@@ -7,7 +7,7 @@ set noerrorbells				" Turn off error sound
 set expandtab					" Will make the tab key insert spaces instead of tabs
 set smarttab					" Will make the tab key insert spaces or tabs to go to the next indent
 set smartindent autoindent		" Automatically indent files
-set number						" Show line count in a file
+set relativenumber				" Show line count in a file
 set nowrap						" Turn word wrapping off
 set ignorecase					" Turn case-insensitive searching on
 set noswapfile					" Turn swap files off
@@ -25,6 +25,8 @@ set shiftwidth=4						" Indent size
 set softtabstop=0						" Insert spaces instead of tabs
 set guicursor=a:hor100                  " Set the cursor shape to a _
 set clipboard=unnamedplus               " Copy text to clipboard
+set cursorline                          " Highlight the current line number
+
 
 " Enable spellchecking and wrapping in vim
 autocmd BufReadPost,BufNewFile *.md,*.txt,*.1,*.ms,*.tex,*.latex set spell wrap
@@ -58,6 +60,10 @@ hi Normal guibg=NONE ctermbg=NONE
 hi LineNr guibg=NONE ctermbg=NONE
 hi SignColumn guibg=NONE ctermbg=NONE
 hi EndOfBuffer guibg=NONE ctermbg=NONE
+
+" Hide cursorline background
+hi CursorLine cterm=NONE term=underline ctermbg=NONE guibg=NONE
+
 
 " Remap ; -> :
 map ; :

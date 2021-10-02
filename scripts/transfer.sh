@@ -144,7 +144,7 @@ ls -lA /usr/bin/xterm >> list/location.list
 
 sudo find /root -type l -exec ls -lA {} + | tee list/root_symlinks.list
 
-equery list '*' | grep -io '[a-z].*' > list/packagei_full.list
+equery list '*' | grep -io '[a-z].*' > list/package_full.list
 cp /var/lib/portage/world list/package.list
 
 uname -r > list/kernel.release
