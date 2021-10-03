@@ -7,7 +7,7 @@ set noerrorbells				" Turn off error sound
 set expandtab					" Will make the tab key insert spaces instead of tabs
 set smarttab					" Will make the tab key insert spaces or tabs to go to the next indent
 set smartindent autoindent		" Automatically indent files
-set relativenumber				" Show line count in a file
+set relativenumber				" Show line count in a file (dynamic)
 set nowrap						" Turn word wrapping off
 set ignorecase					" Turn case-insensitive searching on
 set noswapfile					" Turn swap files off
@@ -69,11 +69,20 @@ hi CursorLine cterm=NONE term=underline ctermbg=NONE guibg=NONE
 map ; :
 
 " Remap lj -> escape
+map lj <Esc>
 inoremap lj <Esc>
-vnoremap lj <Esc>
-xnoremap lj <Esc>
-snoremap lj <Esc>
-onoremap lj <Esc>
+
+" h, l <=> b, w
+nnoremap h b
+nnoremap l w
+nnoremap b h
+nnoremap w l
+
+" Disable arrows keys because I keep using them :(
+for key in ['<Up>', '<Down>', '<Left>', '<Right>']
+  exec 'map'        key '<Nop>'
+  exec 'inoremap'   key '<Nop>'
+endfor
 
 
 let mapleader = ","                 " , = leader
@@ -106,4 +115,16 @@ let s:palette.inactive.middle = s:palette.normal.middle
 let s:palette.tabline.middle = s:palette.normal.middle
 
 set noshowmode                                  " Don't show what mode vim is in
+
+
+" Show diff in a better way
+function! s:DiffWithSaved()
+  let filetype=&ft
+  diffthis
+  vnew | r # | normal! 1Gdd
+  diffthis
+  exe "setlocal bt=nofile bh=wipe nobl noswf ro ft=" . filetype
+endfunction
+com! Diff call s:DiffWithSaved()
+cabbrev diff Diff
 

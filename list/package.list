@@ -11,6 +11,7 @@ app-misc/ranger
 app-office/calcurse
 app-office/sc-im
 app-portage/gentoolkit
+app-portage/mirrorselect
 app-shells/bash-completion
 app-shells/fzf
 app-text/texlive
