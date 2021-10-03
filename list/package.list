@@ -4,14 +4,12 @@ app-arch/cpio
 app-editors/vim
 app-editors/vscodium
 app-emulation/qemu
-app-eselect/eselect-python
 app-eselect/eselect-repository
 app-misc/neofetch
 app-misc/ranger
 app-office/calcurse
 app-office/sc-im
 app-portage/gentoolkit
-app-portage/mirrorselect
 app-shells/bash-completion
 app-shells/fzf
 app-text/texlive
@@ -20,6 +18,7 @@ app-text/zathura-pdf-poppler
 dev-cpp/nlohmann_json
 dev-lang/R
 dev-libs/boost
+dev-qt/qtcore
 dev-util/shellcheck-bin
 dev-vcs/git
 mail-client/thunderbird
@@ -31,14 +30,12 @@ media-fonts/unifont
 media-fonts/x11fonts-jmk
 media-gfx/feh
 media-gfx/gimp
-media-gfx/mypaint
 media-gfx/scrot
 media-libs/alsa-oss
 media-libs/imlib2
 media-sound/alsa-utils
 media-video/ffmpeg
 media-video/mpv
-net-analyzer/traceroute
 net-im/telegram-desktop
 net-misc/dhcpcd
 net-misc/netifrc

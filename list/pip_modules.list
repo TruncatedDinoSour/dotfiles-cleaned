@@ -83,7 +83,6 @@ Mako
 MarkupSafe
 matplotlib-inline
 meson
-mirrorselect
 mistune
 msgpack
 mypy
@@ -117,7 +116,6 @@ psutil
 ptyprocess
 pyaes
 pyasn1
-pycairo
 pycodestyle
 pycparser
 pyelftools
@@ -173,7 +171,6 @@ sphinxcontrib-jsmath
 sphinxcontrib-qthelp
 sphinxcontrib-serializinghtml
 SQLAlchemy
-ssl-fetch
 Telethon
 termcolor
 terminado
