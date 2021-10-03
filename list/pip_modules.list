@@ -2,6 +2,7 @@ alabaster
 ansicolors
 anyio
 argon2-cffi
+asciinema
 asyncio
 attrs
 autopep8

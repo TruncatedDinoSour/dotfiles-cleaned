@@ -4,6 +4,7 @@ app-arch/cpio
 app-editors/vim
 app-editors/vscodium
 app-emulation/qemu
+app-eselect/eselect-python
 app-eselect/eselect-repository
 app-misc/neofetch
 app-misc/ranger
@@ -48,6 +49,7 @@ sys-apps/lm-sensors
 sys-apps/lsd
 sys-apps/mlocate
 sys-apps/pciutils
+sys-apps/portage
 sys-boot/grub:2
 sys-firmware/edk2-ovmf
 sys-firmware/intel-microcode
