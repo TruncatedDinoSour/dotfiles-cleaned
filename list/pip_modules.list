@@ -116,6 +116,7 @@ psutil
 ptyprocess
 pyaes
 pyasn1
+pycairo
 pycodestyle
 pycparser
 pyelftools
