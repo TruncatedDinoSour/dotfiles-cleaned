@@ -6,6 +6,7 @@ dotfiles/suckless -> /home/ari/Suckless
 dotfiles/etc -> /home/ari/.fehbg
 dotfiles/etc -> /home/ari/.gtkrc-2.0
 dotfiles/etc -> /home/ari/.jupyter
+dotfiles/etc -> /home/ari/Pictures/wallpaper.png
 dotfiles/icons -> /home/ari/.icons
 dotfiles/shells/zsh -> /home/ari/.oh-my-zsh
 dotfiles/shells/zsh -> /home/ari/.zsh_userrc

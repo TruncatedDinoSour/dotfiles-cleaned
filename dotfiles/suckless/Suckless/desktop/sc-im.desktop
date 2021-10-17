@@ -1,6 +1,6 @@
 [Desktop Entry]
 Name=sc-im
-GenericName=Text Editor
+GenericName=Spreadsheet editor
 TryExec=sc-im
 Exec=sc-im %F
 Terminal=true

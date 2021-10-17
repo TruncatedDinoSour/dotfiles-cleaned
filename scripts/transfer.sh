@@ -25,6 +25,7 @@ from=(
     '/home/ari/.fehbg'
     '/home/ari/.gtkrc-2.0'
     '/home/ari/.jupyter'
+    '/home/ari/Pictures/wallpaper.png'
 
     '/home/ari/.icons'
 
@@ -72,6 +73,7 @@ to=(
     'dotfiles/suckless'
     'dotfiles/suckless'
 
+    'dotfiles/etc'
     'dotfiles/etc'
     'dotfiles/etc'
     'dotfiles/etc'
