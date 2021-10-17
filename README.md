@@ -35,13 +35,13 @@ A: No
 <b>
 Q: How heavy is your system running?
 </b><br/>
-A: ~150MiBs of RAM and <1% CPU usage on fresh boot
+A: ~150MiBs of RAM and <2% CPU usage on fresh boot
 <br/><br/>
 
 <b>
 Q: How do I install the dotfiles?
 </b><br/>
-A: TODO
+A: Check the <a href="#manual-installation">manual installation section</a>
 <br/><br/>
 
 <b>
@@ -61,10 +61,10 @@ A: Because it's a <a href="//www.howtogeek.com/287014/how-to-create-and-use-symb
 <h1 align="center"><b>Look & Feel</b></h1>
 <br/>
 <h3>DWM (Floating)</h3>
-<img src="https://user-images.githubusercontent.com/71613062/133834683-02c0fc2e-e09d-4c63-abff-f3ff40d791a8.png">
+<img src="https://user-images.githubusercontent.com/71613062/137628924-2d0a15ab-5f3d-4e31-aba7-5878b0a6936b.png">
 
 <h3>DWM (Tiling)</h3>
-<img src="https://user-images.githubusercontent.com/71613062/133834786-f4df7a2c-2eef-4b41-9d56-742f17a8f377.png">
+<img src="https://user-images.githubusercontent.com/71613062/137628936-b6121ba1-2de7-4149-83f0-af87e9885075.png">
 
 <h2 align="center"></h2>
 
@@ -82,7 +82,7 @@ check <a href="/doc/INSTALLATION.md">/doc/INSTALLATION.md</a>
 <h1 align="center"><b>Resources</b></h1>
 <ul>
 <li><a href="//github.com/htop-dev/htop">Htop - "htop - an interactive process viewer"</a></li>
-<li><a href="//github.com/abishekvashok/cmatrix">Cmatrix - "Terminal based "The Matrix" like implementation"</a></li>
+<li><a href="//github.com/yrwq/yafetch">Yafetch - "Yet another fetch ..."</a></li>
 <li><a href="//github.com/gilbertw1/telegram-gruvbox-theme">Telegram-gruvbox-theme - "Gruvbox theme for Telegram Desktop"</a></li>
 <li><a href="//github.com/muesli/duf/releases">DUF (better DF)</a></li>
 <li><a href="//suckless.org">Suckless's website</a></li>
