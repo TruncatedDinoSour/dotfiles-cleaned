@@ -1,0 +1,12 @@
+#!/bin/sh
+
+main() {
+    sed '/#.*$/d; /^\s*$/d' < "$HOME/.config/emoji.list" |
+        dmenu -i |
+        awk ' { print $1 } ' |
+        tr -d "\n" |
+        xclip -selection clipboard
+}
+
+main "$@"
+

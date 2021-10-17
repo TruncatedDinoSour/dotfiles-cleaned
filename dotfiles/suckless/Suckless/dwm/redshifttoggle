@@ -1,0 +1,19 @@
+#!/bin/sh
+
+main() {
+    if [ ! "$1" ]; then
+        echo 'Usage: redshifttoggle <xrandr display>'
+        exit 1
+    fi
+
+    if [ -f "/tmp/redshifttoggle.lock" ]; then
+        xrandr --output "$1" --gamma 1.0:1.0:1.0 --brightness 1.0
+        rm -f /tmp/redshifttoggle.lock
+    else
+        xrandr --output "$1" --gamma 1.91000000000000000000:1.46000000000000000000:1 --brightness 0.9
+        touch /tmp/redshifttoggle.lock
+    fi
+}
+
+main "$@"
+

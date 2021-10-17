@@ -31,7 +31,7 @@ read_file() {
 ## Config (doc/cran_config)
 repos="$(unlist ". https://cran.r-project.org/")"
 root_required=true
-r_interpreter=/bin/R
+r_interpreter=/usr/bin/R
 r_flags=(-q --vanilla -e)
 
 
@@ -86,7 +86,7 @@ main() {
         list|l|-l|ls) $r_interpreter ${r_flags[*]} 'installed.packages()' | sed '/^>.*$/ d' ;;
         help|h|-h|hlp) print_help ;;
         update|u|-u|upt) $r_interpreter ${r_flags[*]} "update.packages(ask=FALSE, repos=$repos)" ;;
-        updates|U|-U|upd) $r_interpreter ${r_flags[*]} "old.packages(repos=$repos)" | sed '/^>.*$/ d; s/^NULL$/Everything is up-to-date./; /Repository.*/ d' ;;
+        updates|U|-U|upd) $r_interpreter ${r_flags[*]} "old.packages(repos=$repos)" | sed '/^>.*$/ d; s/^NULL$/Everything is up-to-date./; /Repository.*/ d; /https\:\/\/.*/ d' ;;
         depends|D|-D|dep) [[ -f "./cranfile" ]] && xargs echo <./cranfile || exit 4 ;;
         *) print_help 2 ;;
     esac

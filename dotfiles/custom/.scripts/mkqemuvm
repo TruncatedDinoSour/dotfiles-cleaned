@@ -1,0 +1,86 @@
+#!/bin/bash
+
+FZF_FLAGS=(--layout=reverse --height=20 --no-mouse -i)
+DRIVE_FORMATS=(raw qcow2 bochs cloop cow dmg nbd parallels qcow qed vdi vhdx vmdk vvfat)
+VM_NAME_DISALOWED_CHARS="\n\./\*\[\]\{\},"
+BIOS="/usr/share/edk2-ovmf/x64/OVMF_CODE.fd"
+
+
+_ask_q() {
+    local value
+    value="$(\echo "$2" | \fzf --prompt "${1}: " ${FZF_FLAGS[*]})"
+
+    if [[ ! "$value" ]]; then
+        _ask_q "$@"
+    else
+        \echo -n "$value"
+    fi
+}
+
+_input() {
+    local value
+    read -p "${1}: " value
+
+    [[ "$2" ]] && value="$(\echo -n "$value" | \tr -d "$2")"
+
+    if [[ ! "$value" ]]; then
+        _input "$@"
+    else
+        \echo -n "$value"
+    fi
+}
+
+
+main() {
+    #iso="$(_ask_q  "CDROM/ISO" "$(\find ~ -iname '*.iso')")"
+
+    vm_name="$(_input "VM name" "$VM_NAME_DISALOWED_CHARS")"
+
+    cdrom="$(_ask_q  "CDROM/ISO" "$(\find ~ -iname '*.iso')")"
+
+    drive_size="$(_input "Drive size in GB")"
+    drive_format="$(_ask_q "Drive drive fomat" "$(printf "%s\n" "${DRIVE_FORMATS[@]}")")"
+
+    emulator="$(_ask_q "Emulator" "$(printf "%s\n" "$(\ls /usr/bin/qemu-system-*)")")"
+
+    ram="$(_input "RAM size in MiB")"
+    cpus="$(_input "Number of cpu cores")"
+
+    __bioses=("$BIOS" "Something else")
+    bios="$(_ask_q "BIOS" "$(printf "%s\n" "${__bioses[@]}")")"
+
+    [[ "$bios" != "$BIOS" ]] && BIOS="$(_input "Enter the path to bios")"
+
+
+    \echo "--- CONFIG ---"
+    \echo "Virtual machine name: ${vm_name}"
+    \echo "ISO/CDROM image: ${cdrom}"
+    \echo "Drive size: ${drive_size}GB"
+    \echo "Drive format: ${drive_format}"
+    \echo "Emulator: $(\basename "$emulator")"
+    \echo "RAM size: ${ram}MiB"
+    \echo "CPU cores: ${cpus}"
+    \echo "BIOS: ${BIOS}"
+
+    read -p "Press enter if this is right - else press CTRL + C..." _
+
+
+    \echo '[*] Making the VMs directory'
+    \mkdir "$vm_name"
+    cd "$vm_name" || exit 1
+
+    \echo '[*] Making the QEMU image'
+    \qemu-img create -f "$drive_format" "root.${drive_format}" "${drive_size}G" || exit 1
+
+    \echo '[*] Making a run script'
+    \echo "#!/bin/sh" > run
+    \echo "'${emulator}' -cpu host -enable-kvm -m '${ram}' -smp '${cpus}' -drive file='${PWD}/root.${drive_format}',format='${drive_format}' -smbios type=0,uefi=on -bios '${BIOS}' &" >> run
+    \chmod a+rx ./run
+
+    \echo '[*] Running the VM'
+    "${emulator}" -cdrom "$cdrom" -cpu 'host' -enable-kvm -m "${ram}" -smp "${cpus}" -drive file="${PWD}/root.${drive_format}",format="${drive_format}" -smbios type=0,uefi=on -bios "${BIOS}" &
+}
+
+
+main "$@"
+

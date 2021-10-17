@@ -1,0 +1,32 @@
+#!/bin/bash
+
+main() {
+    back="$(pwd)"
+
+    RESET="\e[0m"
+    BOLD="\e[1m"
+    GREEN="\e[32m"
+    RED='\033[00;31m'
+
+
+    for directory in ./*;
+    do
+        if [[ -d "$directory"  ]]; then
+            echo -en "\n${BOLD}>> ${RESET}Compiling ${GREEN}$directory${RESET}\n\n"
+            cd "$directory" || exit 1
+
+            "${__BASH_RUNAS:-sudo}" make clean install
+            make_return_code="$?"
+
+            cd "$back" || exit 1
+
+            if [[ "$make_return_code" -ne '0' ]]; then
+                echo -e "${BOLD}${RED}!!${RESET} ${BOLD}make${RESET} exited with code of ${BOLD}$make_return_code${RESET}"
+                exit 1
+            fi
+        fi
+    done
+}
+
+main "$@"
+

@@ -1,0 +1,4 @@
+Known nbextensions:
+  config dir: /home/ari/.jupyter/nbconfig
+    notebook section
+      vim_binding/vim_binding [32m enabled [0m

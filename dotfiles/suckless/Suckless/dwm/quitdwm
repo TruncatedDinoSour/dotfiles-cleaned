@@ -1,0 +1,25 @@
+#!/bin/bash
+
+main() {
+    options=("1 Cancel" \
+        "2 Quit DWM" \
+        "3 Reboot" \
+        "4 Poweroff / Shutdown")
+
+    option="$(/usr/bin/printf "%s\n" "${options[@]}" | \dmenu | /usr/bin/awk '{ print $1 }')"
+
+
+    [[ ! "$option" ]] && exit 1
+
+    case "$option" in
+        1) exit 0                                               ;;
+        2) /usr/bin/killall dwm                                 ;;
+        3) ${__BASH_RUNAS:-sudo} reboot -h now                  ;;
+        4) ${__BASH_RUNAS:-sudo} poweroff                       ;;
+        *) /usr/bin/notify-send "Option '$option' not found"    ;;
+    esac
+}
+
+
+main "$@"
+

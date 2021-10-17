@@ -38,6 +38,5 @@ fi
 
 # execute our WMs and nice some utilities
 
-/bin/dunst &
 exec dwm
 

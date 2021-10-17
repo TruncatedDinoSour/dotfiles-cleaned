@@ -1,7 +1,7 @@
 {
     "keymaps": {
         "0": { "type": "scroll.home"  },
-        ":": { "type": "command.show"  },
+        ";": { "type": "command.show"  },
         "o": { "type": "command.show.open", "alter": false  },
         "O": { "type": "command.show.open", "alter": true  },
         "t": { "type": "command.show.tabopen", "alter": false  },
@@ -65,12 +65,12 @@
         "<S-Esc>": { "type": "addon.toggle.enabled"  }
     },
     "search": {
-        "default": "duckduckgo",
+        "default": "searx",
         "engines": {
             "google": "https://google.com/search?q={}",
             "duckduckgo": "https://duckduckgo.com/?q={}",
-            "wikipedia": "https://en.wikipedia.org/w/index.php?search={}"
-
+            "wikipedia": "https://en.wikipedia.org/w/index.php?search={}",
+            "searx": "https://searx.tiekoetter.com/search?q={}"
         }
 
     },
