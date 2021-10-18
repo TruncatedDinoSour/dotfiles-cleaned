@@ -19,6 +19,7 @@ function! s:DiffWithSaved()
     diffthis
     exe "setlocal bt=nofile bh=wipe nobl noswf ro ft=" . filetype
 endfunction
+
 com! Diff call s:DiffWithSaved()
 cabbrev diff Diff
 
@@ -27,8 +28,11 @@ cabbrev diff Diff
 function! OpenTerminal()
     setlocal splitbelow
     terminal
-    resize 15
+    resize 14
 endfunction
+
 nnoremap <C-t> :call OpenTerminal()<CR>
 tnoremap <C-t> <C-\><C-n>:buf<CR><C-W><C-K>
+tnoremap <C-y> <C-\><C-n>:resize +1<CR>i
+tnoremap <C-u> <C-\><C-n>:resize -1<CR>i
 

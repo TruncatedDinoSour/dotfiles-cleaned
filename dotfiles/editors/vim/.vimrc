@@ -19,7 +19,7 @@ set confirm						" Confirm unsaved changes in files
 set lazyredraw                  " Remove macro redraws
 set autochdir                   " automatically enter a directory if a file is opened
 set cursorline                  " Highlight the current line number
-set splitbelow splitright       " split the terminal to below and split files to right
+set splitright                  " split the terminal to below and split files to right
 set timeout                     " let timeout happen
 
 set encoding=utf-8                      " File encoding
@@ -45,6 +45,8 @@ autocmd BufRead,BufNewFile *.porth set filetype=porth
 "   after :PlugInstall, install cmake and run the ~/.vim/plugged/youcompleteme/install.py file and
 "   then run :YcmRestartServer
 call plug#begin("~/.vim/plugged")
+    Plug 'hrsh7th/vim-vsnip'
+    Plug 'hrsh7th/vim-vsnip-integ'
     Plug 'AlessandroYorba/Alduin'
     Plug 'valloric/youcompleteme'
     Plug 'tpope/vim-surround'

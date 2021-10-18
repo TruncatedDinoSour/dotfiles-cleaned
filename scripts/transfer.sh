@@ -36,6 +36,7 @@ from=(
     '/home/ari/.scripts'
 
     '/home/ari/.vim'
+    '/home/ari/.vsnip'
     '/home/ari/.vimrc'
     '/etc/nanorc'
 
@@ -56,6 +57,7 @@ from=(
     '/etc/xdg/reflector'
     '/etc/X11/xorg.conf.d'
     '/etc/paru.conf'
+    '/etc/security'
 
     '/usr/local/src'
 
@@ -88,11 +90,13 @@ to=(
 
     'dotfiles/editors/vim'
     'dotfiles/editors/vim'
+    'dotfiles/editors/vim'
     'dotfiles/editors/nano'
 
     'dotfiles/programming/VScodium'
     'dotfiles/programming/VScodium'
 
+    'dotfiles/core'
     'dotfiles/core'
     'dotfiles/core'
     'dotfiles/core'

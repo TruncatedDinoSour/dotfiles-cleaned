@@ -13,6 +13,7 @@ dotfiles/shells/zsh -> /home/ari/.zsh_userrc
 dotfiles/shells/zsh -> /home/ari/.zshrc
 dotfiles/custom -> /home/ari/.scripts
 dotfiles/editors/vim -> /home/ari/.vim
+dotfiles/editors/vim -> /home/ari/.vsnip
 dotfiles/editors/vim -> /home/ari/.vimrc
 dotfiles/editors/nano -> /etc/nanorc
 dotfiles/programming/VScodium -> /home/ari/.config/VSCodium/User/snippets
@@ -31,6 +32,7 @@ dotfiles/core -> /etc/tlp.conf
 dotfiles/core -> /etc/xdg/reflector
 dotfiles/core -> /etc/X11/xorg.conf.d
 dotfiles/core -> /etc/paru.conf
+dotfiles/core -> /etc/security
 dotfiles/bin -> /usr/local/src
 dotfiles/qbittorrent -> /usr/share/themes/mumble-dark.qbtheme
 dotfiles/fix -> /home/ari/Documents/wpa_cli_fix/doc.tex
