@@ -1,0 +1,19 @@
+#!/bin/sh
+
+main() {
+    date_format='+%Y-%m-%d'
+    changelog_file='CHANGELOG.md'
+
+    [ "$(date "$date_format")" != "$(cat 'doc/.last_changelog')" ] && \
+        echo "## Changelog on $(date "$date_format")" >> "$changelog_file"
+
+    echo "- $1" >> "$changelog_file"
+    echo '```'  >> "$changelog_file"
+    echo "$2"   >> "$changelog_file"
+    echo '```'  >> "$changelog_file"
+
+    date "$date_format" > doc/.last_changelog
+}
+
+main "$@"
+
