@@ -1,5 +1,5 @@
 " laTeX config
-let g:tex_flavor='latex'
+let g:tex_flavor = 'latex'
 
 " Bar's configuration
 let g:lightline = {}
@@ -12,4 +12,7 @@ let s:palette.inactive.middle = s:palette.normal.middle
 let s:palette.tabline.middle = s:palette.normal.middle
 
 set noshowmode                                  " Don't show what mode vim is in
+
+" Emmet
+let g:user_emmet_install_global = 1
 

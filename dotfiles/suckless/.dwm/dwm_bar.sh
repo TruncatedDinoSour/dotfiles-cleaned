@@ -1,5 +1,5 @@
 #!/bin/sh
-# bdwmb used instead of this.
+# NOTE: bdwmb used instead of this.
 
 # A modular status bar for dwm
 # Joe Standring <git@joestandring.com>

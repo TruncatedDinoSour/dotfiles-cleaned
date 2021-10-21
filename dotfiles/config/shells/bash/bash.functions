@@ -7,6 +7,12 @@ GREEN='\033[00;32m'
 RED='\033[00;31m'
 
 
+vecho() {
+    [[ "$__BASH_VINFO" == true ]] && echo "[VECHO] $@"
+}
+
+
+
 autorun() {
     /usr/local/bin/yafetch 2>/dev/null || return
 }
@@ -18,13 +24,15 @@ ps_one() {
     local venv="$(basename "$VIRTUAL_ENV")"
     local dir='\W'
     local propt_char='#'
+    local user_colour="${GREEN}"
 
     [[ "$UID" != '0'  ]] && local propt_char='%'
     [[ "$c_status" != '0'  ]] && local propt_colour="${RED}$c_status "
     [[ "$git"  ]] && local dir="$git $dir"
     [[ "$venv"  ]] && local extra="{${GREEN}$venv${RESTORE}} "
+    [[ "$UID" == '0' ]] && local user_colour="${RED}"
 
-    export PS1="\n${extra}${GREEN}\u${RESTORE}@\h ${dir} ${propt_colour}${propt_char}${RESTORE} "
+    export PS1="\n${extra}${user_colour}\u${RESTORE}@\h ${dir} ${propt_colour}${propt_char}${RESTORE} "
 }
 
 
@@ -67,7 +75,7 @@ tty_autorun() {
 mkkernel() {
     cd /usr/src/linux || exit 1
     $__BASH_RUNAS "$__BASH_BIN_DIR"/make "$@"
-    $__BASH_RUNAS "$__BASH_BIN_DIR"/make modules_install "$@"
+    $__BASH_RUNAS "$__BASH_BIN_DIR"/make modules_install
     $__BASH_RUNAS "$__BASH_BIN_DIR"/make install
     $__BASH_RUNAS "$__BASH_BIN_DIR"/dracut --force
     $__BASH_RUNAS /usr/sbin/grub-mkconfig -o /boot/grub/grub.cfg
@@ -89,7 +97,7 @@ pip_upgrade() {
         "$__BASH_BIN_DIR"/awk '{ print $1  }' |
         "$__BASH_BIN_DIR"/tail -n +3 > /tmp/requirements.txt
 
-    "$__BASH_BIN_DIR"/python3 -m pip install --upgrade -r /tmp/requirements.txt
+    "$__BASH_BIN_DIR"/python3 -m pip install --user --upgrade -r /tmp/requirements.txt
 
     rm -f /tmp/requirements.txt
 }

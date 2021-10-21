@@ -1,0 +1,13 @@
+[Desktop Entry]
+Name=sc-im
+GenericName=Spreadsheet editor
+TryExec=sc-im
+Exec=sc-im %F
+Terminal=true
+Type=Application
+Keywords=spreadsheet;editor;
+Icon=sc-im
+Categories=Utility;TextEditor;
+StartupNotify=false
+MimeType=text/csv
+

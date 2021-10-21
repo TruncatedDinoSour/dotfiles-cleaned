@@ -52,3 +52,5 @@ alias mpvp="\$__BASH_BIN_DIR/mpv --shuffle --loop-playlist"
 
 alias mimetypeof="xdg-mime query filetype"
 
+alias dos2unix="\$__BASH_BIN_DIR/sed -i $'s/\r$//'"
+

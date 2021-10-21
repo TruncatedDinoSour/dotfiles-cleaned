@@ -1,9 +1,9 @@
 #!/bin/bash
 
 FZF_FLAGS=(--layout=reverse --height=20 --no-mouse -i)
-DRIVE_FORMATS=(raw qcow2)
+DRIVE_FORMATS=(raw qcow2 bochs cloop cow dmg nbd parallels qcow qed vdi vhdx vmdk vvfat)
 VM_NAME_DISALOWED_CHARS="\n\./\*\[\]\{\},"
-BIOS="/usr/share/edk2-ovmf/OVMF_CODE.fd"
+BIOS="/usr/share/edk2-ovmf/x64/OVMF_CODE.fd"
 
 
 _ask_q() {
@@ -46,6 +46,11 @@ main() {
     ram="$(_input "RAM size in MiB")"
     cpus="$(_input "Number of cpu cores")"
 
+    __bioses=("$BIOS" "Something else")
+    bios="$(_ask_q "BIOS" "$(printf "%s\n" "${__bioses[@]}")")"
+
+    [[ "$bios" != "$BIOS" ]] && BIOS="$(_input "Enter the path to bios")"
+
 
     \echo "--- CONFIG ---"
     \echo "Virtual machine name: ${vm_name}"
@@ -55,6 +60,7 @@ main() {
     \echo "Emulator: $(\basename "$emulator")"
     \echo "RAM size: ${ram}MiB"
     \echo "CPU cores: ${cpus}"
+    \echo "BIOS: ${BIOS}"
 
     read -p "Press enter if this is right - else press CTRL + C..." _
 
@@ -64,7 +70,7 @@ main() {
     cd "$vm_name" || exit 1
 
     \echo '[*] Making the QEMU image'
-    \qemu-img create -f "$drive_format" "root.${drive_format}" "${drive_size}G"
+    \qemu-img create -f "$drive_format" "root.${drive_format}" "${drive_size}G" || exit 1
 
     \echo '[*] Making a run script'
     \echo "#!/bin/sh" > run

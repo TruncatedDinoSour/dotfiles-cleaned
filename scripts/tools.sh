@@ -4,7 +4,7 @@
 # bdwmb
 git clone https://github.com/TruncatedDinosour/bdwmb
 cd bdwmb
-make full
+sudo make full
 cd ..
 rm -rf bdwmb
 

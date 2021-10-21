@@ -1,26 +1,24 @@
-            alsasound |      default                           
+            alsasound | boot                                   
                binfmt | boot                                   
              bootmisc | boot                                   
               cgroups |                                 sysinit
                 devfs |                                 sysinit
-              dmcrypt | boot                                   
                 dmesg |                                 sysinit
-              elogind |      default                           
+              elogind | boot                                   
                  fsck | boot                                   
-                  gpm |      default                           
              hostname | boot                                   
               hwclock | boot                                   
               keymaps | boot                                   
             killprocs |                        shutdown        
     kmod-static-nodes |                                 sysinit
-                local |              nonetwork                 
+                local |      default nonetwork                 
            localmount | boot                                   
              loopback | boot                                   
-                  lvm | boot                                   
               modules | boot                                   
              mount-ro |                        shutdown        
                  mtab | boot                                   
              net.wlo1 |      default                           
+             netmount |      default                           
                procfs | boot                                   
                  root | boot                                   
          save-keymaps | boot                                   
@@ -32,6 +30,6 @@
                sysctl | boot                                   
                 sysfs |                                 sysinit
          termencoding | boot                                   
-                 udev |      default                    sysinit
+                 udev |                                 sysinit
          udev-trigger |                                 sysinit
               urandom | boot                                   

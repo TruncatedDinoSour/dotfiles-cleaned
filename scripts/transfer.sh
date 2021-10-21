@@ -36,6 +36,7 @@ from=(
 
     '/home/ari/.vim'
     '/home/ari/.vimrc'
+    '/home/ari/.vsnip'
 
     '/home/ari/.config/VSCodium/User/snippets'
     '/home/ari/.config/VSCodium/product.json'
@@ -47,7 +48,6 @@ from=(
     '/etc/hosts'
     '/etc/dracut.conf'
     '/etc/dracut.conf.d'
-    '/etc/tlp.conf'
     '/etc/sudoers'
     '/etc/X11/xorg.conf.d/20-intel-graphics.conf'
     '/etc/rc.conf'
@@ -61,13 +61,11 @@ from=(
 
     '/usr/src/linux/.config'
 
-    '/etc/fish'
-
     '/usr/share/themes/mumble-dark.qbtheme'
 
     '/usr/local/src/yafetch'
 
-    '/home/ari/Documents/wpa_cli_fix/doc.latex'
+    '/home/ari/Documents/wpa_cli_fix/doc.tex'
     '/home/ari/Documents/new_kernel_gentoo/doc.md'
 )
 
@@ -94,11 +92,11 @@ to=(
 
     'dotfiles/editors/vim'
     'dotfiles/editors/vim'
+    'dotfiles/editors/vim'
 
     'dotfiles/programming/VScodium'
     'dotfiles/programming/VScodium'
 
-    'dotfiles/core'
     'dotfiles/core'
     'dotfiles/core'
     'dotfiles/core'
@@ -123,9 +121,7 @@ to=(
 
     'dotfiles/qbittorrent'
 
-    'dotfiles/bin'
-
-    'dotfiles/fix/wpa_cli_fix.latex'
+    'dotfiles/fix/wpa_cli_fix.tex'
     'dotfiles/fix/gentoo_new_kernel.md'
 )
 
@@ -144,7 +140,6 @@ ls -lA /usr/bin/xterm >> list/location.list
 
 sudo find /root -type l -exec ls -lA {} + | tee list/root_symlinks.list
 
-equery list '*' | grep -io '[a-z].*' > list/package_full.list
 cp /var/lib/portage/world list/package.list
 
 uname -r > list/kernel.release

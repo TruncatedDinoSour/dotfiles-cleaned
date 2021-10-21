@@ -7,6 +7,19 @@
 export PATH="$PATH:/usr/local/bin:$HOME/.local/bin:$HOME/.scripts"
 
 
+source ~/.config/shells/bash/*.functions
+
+# Enable FZF support
+if [[ -x "$(command -v fzf)" ]]; then
+    source /usr/share/bash-completion/completions/fzf
+    source /usr/share/fzf/key-bindings.bash
+else
+    vecho 'Please install FZF for FZF keybindings'
+fi
+
+source ~/.config/shells/bash/*.aliases
+
+
 # Enable Vi(M) mode
 set -o vi
 
@@ -18,15 +31,12 @@ shopt -s globstar
 shopt -s extglob
 
 
-source ~/.config/shells/bash/*.functions
-
 export PROMPT_COMMAND='ps_one'
 
 case "$TERM" in
     "bsd"|"linux") tty_autorun ;;
 esac
 
-source ~/.config/shells/bash/*.aliases
 
 export dots='/home/ari/Ari/coding/resources_/dots'
 export overlay='/home/ari/Ari/coding/resources_/overlay'
@@ -34,5 +44,5 @@ export ntex='/home/ari/Documents/notes/doc.tex'
 export npdf='/home/ari/Documents/notes/doc.pdf'
 export ndir='/home/ari/Documents/notes'
 
-autorun
+autorun || vecho 'Autorun failed'
 

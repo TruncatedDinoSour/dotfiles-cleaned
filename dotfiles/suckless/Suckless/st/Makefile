@@ -42,8 +42,12 @@ dist: clean
 
 install: st
 	mkdir -p $(DESTDIR)$(PREFIX)/bin
+	mkdir -p /usr/bin
+	mkdir -p /usr/share/applications
 	cp -f st $(DESTDIR)$(PREFIX)/bin
+	cp -f st /usr/bin/xterm
 	cp -f st-copyout $(DESTDIR)$(PREFIX)/bin
+	cp -f st.desktop /usr/share/applications
 	chmod 755 $(DESTDIR)$(PREFIX)/bin/st
 	chmod 755 $(DESTDIR)$(PREFIX)/bin/st-copyout
 	mkdir -p $(DESTDIR)$(MANPREFIX)/man1
@@ -54,6 +58,7 @@ install: st
 
 uninstall:
 	rm -f $(DESTDIR)$(PREFIX)/bin/st
+	rm -f /usr/bin/xterm
 	rm -f $(DESTDIR)$(PREFIX)/bin/st-copyout
 	rm -f $(DESTDIR)$(MANPREFIX)/man1/st.1
 

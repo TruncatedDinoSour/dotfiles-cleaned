@@ -13,6 +13,7 @@ dotfiles/shells/zsh -> /home/ari/.zsh_userrc
 dotfiles/custom -> /home/ari/.scripts
 dotfiles/editors/vim -> /home/ari/.vim
 dotfiles/editors/vim -> /home/ari/.vimrc
+dotfiles/editors/vim -> /home/ari/.vsnip
 dotfiles/programming/VScodium -> /home/ari/.config/VSCodium/User/snippets
 dotfiles/programming/VScodium -> /home/ari/.config/VSCodium/product.json
 dotfiles/core -> /home/ari/.xinitrc
@@ -22,7 +23,6 @@ dotfiles/core -> /etc/default/grub
 dotfiles/core -> /etc/hosts
 dotfiles/core -> /etc/dracut.conf
 dotfiles/core -> /etc/dracut.conf.d
-dotfiles/core -> /etc/tlp.conf
 dotfiles/core -> /etc/sudoers
 dotfiles/core -> /etc/X11/xorg.conf.d/20-intel-graphics.conf
 dotfiles/core -> /etc/rc.conf
@@ -33,9 +33,8 @@ dotfiles/core -> /etc/profile.env
 dotfiles/core -> /etc/bash_completion.d
 dotfiles/portage -> /etc/portage
 dotfiles/linux -> /usr/src/linux/.config
-dotfiles/shells -> /etc/fish
-dotfiles/qbittorrent -> /usr/share/themes/mumble-dark.qbtheme
-dotfiles/bin -> /usr/local/src/yafetch
-dotfiles/fix/wpa_cli_fix.latex -> /home/ari/Documents/wpa_cli_fix/doc.latex
+dotfiles/shells -> /usr/share/themes/mumble-dark.qbtheme
+dotfiles/qbittorrent -> /usr/local/src/yafetch
+dotfiles/fix/wpa_cli_fix.tex -> /home/ari/Documents/wpa_cli_fix/doc.tex
 dotfiles/fix/gentoo_new_kernel.md -> /home/ari/Documents/new_kernel_gentoo/doc.md
-lrwxrwxrwx 1 root root 17 Aug 30 18:04 /usr/bin/xterm -> /usr/local/bin/st
+-rwxr-xr-x 1 root root 102248 Oct 21 18:18 /usr/bin/xterm

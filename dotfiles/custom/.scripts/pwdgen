@@ -40,7 +40,7 @@ main() {
         sed 's/O/k/g; s/=/{/g; s/U/s/g; s/4/%/g; s/G/O/g; s/g/4/g; s/s/p/g; s/T/=/g; s/R/*/g' |
         base32 -w 0 --ignore-garbage |
         sha512sum |
-        edonr512-hash - |
+        sha512sum |
         sed 's/5/p/g; s/e/G/g; s/c/5/g; s/b/c/g; s/c/H/g; s/9/e/g' |
         base64 -w 0 --ignore-garbage |
         sed 's/_/O/g; s/d/_/g; s/A/@/g; s/E/:/g' |

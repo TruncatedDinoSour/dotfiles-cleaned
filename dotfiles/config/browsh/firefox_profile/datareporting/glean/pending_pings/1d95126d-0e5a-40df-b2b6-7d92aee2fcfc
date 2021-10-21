@@ -1,0 +1,2 @@
+/submit/firefox-desktop/metrics/1/1d95126d-0e5a-40df-b2b6-7d92aee2fcfc
+{"ping_info":{"seq":0,"start_time":"2021-10-21T19:37+03:00","end_time":"2021-10-21T19:39+03:00","reason":"overdue"},"client_info":{"telemetry_sdk_build":"40.1.0","client_id":"a29ab2d6-544a-4353-aafd-b5418c7aef66","os":"Linux","first_run_date":"2021-10-21+03:00"},"metrics":{"datetime":{"glean.validation.first_run_hour":"2021-10-21T19+03:00"}}}
