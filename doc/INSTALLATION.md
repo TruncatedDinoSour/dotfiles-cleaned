@@ -41,14 +41,14 @@ $ sudo emerge -qa app-eselect/eselect-repository
 $ sudo eselect repository add 'dinolay' 'git' 'https://github.com/TruncatedDinosour/dinolay.git'
 $ sudo eselect repository enable dinolay
 ```
-
+<!-- 
 4. Add torbrowser
 ```bash
 $ sudo eselect repository add 'torbrowser' 'git' 'https://github.com/MeisterP/torbrowser-overlay.git'
 $ sudo eselect repository enable torbrowser
-```
+``` -->
 
-5. Sync portage
+4. Sync portage
 ```bash
 $ sudo emerge --sync
 ```
