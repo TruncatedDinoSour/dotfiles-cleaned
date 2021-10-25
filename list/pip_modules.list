@@ -1,5 +1,7 @@
+alabaster
 argon2-cffi
 attrs
+Babel
 backcall
 backports.entry-points-selectable
 black
@@ -12,6 +14,7 @@ charset-normalizer
 click
 commonmark
 contextlib2
+cPython
 cryptography
 curtsies
 cwcwidth
@@ -27,8 +30,10 @@ gdbus_codegen
 gemato
 gpg
 greenlet
+HelperSDT
 httplib2
 idna
+imagesize
 ipykernel
 ipython
 ipython-genutils
@@ -45,6 +50,7 @@ jupyterlab-widgets
 lxml
 M2Crypto
 Mako
+Markdown
 MarkupSafe
 matplotlib-inline
 meson
@@ -73,12 +79,14 @@ pyaes
 pyasn1
 pycparser
 Pygments
+pymongo
 pyOpenSSL
 pyparsing
 pyrsistent
 PySocks
 python-aalib
 python-dateutil
+pytz
 pyxdg
 pyzmq
 qtconsole
@@ -92,6 +100,14 @@ Send2Trash
 setuptools
 setuptools-scm
 six
+snowballstemmer
+Sphinx
+sphinxcontrib-applehelp
+sphinxcontrib-devhelp
+sphinxcontrib-htmlhelp
+sphinxcontrib-jsmath
+sphinxcontrib-qthelp
+sphinxcontrib-serializinghtml
 Telethon
 terminado
 testpath

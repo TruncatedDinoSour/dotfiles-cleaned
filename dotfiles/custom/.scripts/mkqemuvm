@@ -3,7 +3,7 @@
 FZF_FLAGS=(--layout=reverse --height=20 --no-mouse -i)
 DRIVE_FORMATS=(raw qcow2 bochs cloop cow dmg nbd parallels qcow qed vdi vhdx vmdk vvfat)
 VM_NAME_DISALOWED_CHARS="\n\./\*\[\]\{\},"
-BIOS="/usr/share/edk2-ovmf/x64/OVMF_CODE.fd"
+BIOS="/usr/share/edk2-ovmf/OVMF_CODE.fd"
 
 
 _ask_q() {

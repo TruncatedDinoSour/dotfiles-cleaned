@@ -1,0 +1,12 @@
+{
+    "main": {
+        "prefix": ["main", "m"],
+        "body": [
+            "int main() {",
+            "\t$1",
+            "\treturn 0;",
+            "}",
+            ""
+        ]
+    }
+}

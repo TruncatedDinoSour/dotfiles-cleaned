@@ -3,6 +3,7 @@
              bootmisc | boot                                   
               cgroups |                                 sysinit
                 devfs |                                 sysinit
+              dmcrypt | boot                                   
                 dmesg |                                 sysinit
               elogind | boot                                   
                  fsck | boot                                   

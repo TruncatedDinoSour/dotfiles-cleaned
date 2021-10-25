@@ -31,10 +31,11 @@ dotfiles/core -> /etc/conf.d
 dotfiles/core -> /etc/profile
 dotfiles/core -> /etc/profile.env
 dotfiles/core -> /etc/bash_completion.d
+dotfiles/core -> /etc/gnupg
 dotfiles/portage -> /etc/portage
 dotfiles/linux -> /usr/src/linux/.config
 dotfiles/shells -> /usr/share/themes/mumble-dark.qbtheme
 dotfiles/qbittorrent -> /usr/local/src/yafetch
 dotfiles/fix/wpa_cli_fix.tex -> /home/ari/Documents/wpa_cli_fix/doc.tex
 dotfiles/fix/gentoo_new_kernel.md -> /home/ari/Documents/new_kernel_gentoo/doc.md
--rwxr-xr-x 1 root root 102248 Oct 21 18:18 /usr/bin/xterm
+-rwxr-xr-x 1 root root 102248 Oct 21 22:20 /usr/bin/xterm

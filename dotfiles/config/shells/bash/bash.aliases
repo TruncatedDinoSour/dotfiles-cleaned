@@ -22,7 +22,6 @@ alias v="\$__BASH_BIN_DIR/vim"
 alias df='duf -hide special'
 alias colorpicker='colorpicker --short --one-shot --preview'
 alias cat="\$__BASH_BIN_DIR/bat --theme=\"gruvbox-dark\""
-alias googler="\$__BASH_LOCAL_BIN_DIR/googler --geoloc=CC"
 
 alias src='source ~/.bashrc'
 alias stx="\$__BASH_BIN_DIR/startx"
@@ -49,8 +48,10 @@ alias sudo="\$__BASH_BIN_DIR/sudo env \"PATH=\$PATH\""
 alias transmission-cli="\$__BASH_BIN_DIR/transmission-cli --encryption-preferred --no-uplimit --verify --no-downlimit --finish ~/.config/transmission/fini.sh"
 alias fzf="\$__BASH_BIN_DIR/fzf --layout=reverse --height=20 --no-mouse -i --preview 'bat --color=always --style=numbers --line-range=:500 {}'"
 alias mpvp="\$__BASH_BIN_DIR/mpv --shuffle --loop-playlist"
+alias clip="\$__BASH_BIN_DIR/xclip -selection clipboard"
 
 alias mimetypeof="xdg-mime query filetype"
 
-alias dos2unix="\$__BASH_BIN_DIR/sed -i $'s/\r$//'"
+alias dos2unix="\$__BASH_CORE_BIN_DIR/sed -i $'s/\r$//'"
+alias beep='(speaker-test -l 1 -f 1500 -t sine -P 2 -X >/dev/null)& pid="$!"; sleep 0.08; kill -9 $pid'
 

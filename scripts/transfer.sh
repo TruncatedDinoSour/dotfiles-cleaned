@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 if [[ "$USER" != "ari" ]];
 then
@@ -56,6 +56,7 @@ from=(
     '/etc/profile'
     '/etc/profile.env'
     '/etc/bash_completion.d'
+    '/etc/gnupg'
 
     '/etc/portage'
 
@@ -112,6 +113,7 @@ to=(
     'dotfiles/core'
     'dotfiles/core'
     'dotfiles/core'
+    'dotfiles/core'
 
     'dotfiles/portage'
 
@@ -141,6 +143,7 @@ ls -lA /usr/bin/xterm >> list/location.list
 sudo find /root -type l -exec ls -lA {} + | tee list/root_symlinks.list
 
 cp /var/lib/portage/world list/package.list
+q qlist -I > list/package_full.list
 
 uname -r > list/kernel.release
 rc-update > list/openrc_services.sysvinit.list
