@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env sh
 
 main() {
     reset="\e[0m"
@@ -8,7 +8,7 @@ main() {
 
     printf "${red}[*] Explicit${reset}: %s\n" "$(wc -l </var/lib/portage/world)"
     printf "${cyan}[*] Orphans${reset}: %s\n" "$(emerge -cp  2>/dev/null | grep -io '^[a-z]\S*:' | wc -l)"
-    printf "${green}[*] Total${reset}: %s\n" "$(emerge -ep @world 2>/dev/null | wc -l)"
+    printf "${green}[*] Total${reset}: %s\n" "$(q qlist -I | wc -l)"
 }
 
 main "$@"

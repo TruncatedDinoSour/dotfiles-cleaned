@@ -38,4 +38,3 @@ dotfiles/shells -> /usr/share/themes/mumble-dark.qbtheme
 dotfiles/qbittorrent -> /usr/local/src/yafetch
 dotfiles/fix/wpa_cli_fix.tex -> /home/ari/Documents/wpa_cli_fix/doc.tex
 dotfiles/fix/gentoo_new_kernel.md -> /home/ari/Documents/new_kernel_gentoo/doc.md
--rwxr-xr-x 1 root root 102248 Oct 21 22:20 /usr/bin/xterm

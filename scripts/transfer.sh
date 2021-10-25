@@ -138,7 +138,6 @@ done
 ls -lA /usr/local/src > list/src.list
 
 find /usr/local/bin -type l -exec ls -lA {} +
-ls -lA /usr/bin/xterm >> list/location.list
 
 sudo find /root -type l -exec ls -lA {} + | tee list/root_symlinks.list
 

@@ -4,7 +4,7 @@ source ~/.config/shells/bash/*.conf
 
 alias k="\$__BASH_CORE_BIN_DIR/kill"
 alias ka="\$__BASH_BIN_DIR/killall"
-alias q='exit'
+alias e='exit'
 
 alias ls="\$__BASH_BIN_DIR/lsd --group-dirs --color=auto -Fh"
 alias ll='ls -lF'
@@ -16,7 +16,6 @@ alias rls='trash-list'
 alias rrm='trash-empty'
 alias rmk='trash-restore'
 
-alias sc="\$__BASH_BIN_DIR/sc-im"
 alias v="\$__BASH_BIN_DIR/vim"
 
 alias df='duf -hide special'
