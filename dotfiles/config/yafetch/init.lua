@@ -41,7 +41,15 @@ else
     distro_icon = " "
 end
 
-if os.getenv("USER") == "root" then
+
+function running_as_root()
+  local fd = io.open"/root"
+  if fd == nil then return false else io.close(fd) return true end
+end
+
+
+
+if running_as_root() then
     --[
     -- Dear future me,
     -- I am very sorry for the bad formatting,
