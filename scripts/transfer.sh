@@ -123,6 +123,8 @@ to=(
 
     'dotfiles/qbittorrent'
 
+    'dotfiles/bin'
+
     'dotfiles/fix/wpa_cli_fix.tex'
     'dotfiles/fix/gentoo_new_kernel.md'
 )
@@ -131,7 +133,7 @@ to=(
 for i in "${!from[@]}";
 do
     sudo cp -rfv "${from[$i]}" "${to[$i]}"
-    echo "${to[$i]} -> ${from[$i]}" >> list/location.list
+    echo "${from[$i]} -> ${to[$i]}" >> list/location.list
 done
 
 

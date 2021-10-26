@@ -56,3 +56,4 @@ x11-libs/libXinerama
 x11-misc/dunst
 x11-misc/xautolock
 x11-misc/xclip
+x11-themes/gruvbox-material-gtk-theme

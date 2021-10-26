@@ -13,6 +13,7 @@ advansys/mcode.bin
 advansys/38C0800.bin
 agere_ap_fw.bin
 agere_sta_fw.bin
+amd/amd_sev_fam19h_model0xh.sbin
 amd/amd_sev_fam17h_model3xh.sbin
 amd/amd_sev_fam17h_model0xh.sbin
 amd-ucode/microcode_amd_fam17h.bin
@@ -42,12 +43,14 @@ amdgpu/navi12_sdma1.bin
 amdgpu/topaz_mc.bin
 amdgpu/kabini_sdma.bin
 amdgpu/polaris11_mec2_2.bin
+amdgpu/yellow_carp_toc.bin
 amdgpu/vega10_mec.bin
 amdgpu/kabini_sdma1.bin
 amdgpu/navi14_sdma1.bin
 amdgpu/vegam_mec.bin
 amdgpu/navi14_vcn.bin
 amdgpu/vega12_mec.bin
+amdgpu/yellow_carp_asd.bin
 amdgpu/navi14_mec2_wks.bin
 amdgpu/navi10_mec.bin
 amdgpu/fiji_vce.bin
@@ -55,6 +58,7 @@ amdgpu/vega12_ce.bin
 amdgpu/polaris10_mec.bin
 amdgpu/navi10_sdma.bin
 amdgpu/navi14_rlc.bin
+amdgpu/yellow_carp_dmcub.bin
 amdgpu/navi12_pfp.bin
 amdgpu/polaris12_pfp.bin
 amdgpu/bonaire_rlc.bin
@@ -62,6 +66,7 @@ amdgpu/sienna_cichlid_ce.bin
 amdgpu/vega20_mec2.bin
 amdgpu/dimgrey_cavefish_mec2.bin
 amdgpu/renoir_pfp.bin
+amdgpu/yellow_carp_vcn.bin
 amdgpu/navi14_mec_wks.bin
 amdgpu/polaris10_me_2.bin
 amdgpu/hawaii_pfp.bin
@@ -163,6 +168,7 @@ amdgpu/banks_k_2_smc.bin
 amdgpu/navy_flounder_smc.bin
 amdgpu/sienna_cichlid_vcn.bin
 amdgpu/kaveri_pfp.bin
+amdgpu/yellow_carp_sdma.bin
 amdgpu/hawaii_ce.bin
 amdgpu/polaris12_mec2_2.bin
 amdgpu/tonga_rlc.bin
@@ -272,11 +278,13 @@ amdgpu/kaveri_mec2.bin
 amdgpu/polaris12_k_mc.bin
 amdgpu/dimgrey_cavefish_mec.bin
 amdgpu/tonga_pfp.bin
+amdgpu/yellow_carp_pfp.bin
 amdgpu/polaris11_k2_smc.bin
 amdgpu/polaris10_k2_smc.bin
 amdgpu/polaris10_sdma.bin
 amdgpu/vega10_sos.bin
 amdgpu/renoir_gpu_info.bin
+amdgpu/yellow_carp_rlc.bin
 amdgpu/vega20_mec.bin
 amdgpu/polaris11_me_2.bin
 amdgpu/sienna_cichlid_pfp.bin
@@ -308,6 +316,7 @@ amdgpu/vegam_uvd.bin
 amdgpu/vega10_sdma.bin
 amdgpu/vega12_me.bin
 amdgpu/vega10_vce.bin
+amdgpu/yellow_carp_me.bin
 amdgpu/vegam_ce.bin
 amdgpu/carrizo_me.bin
 amdgpu/navi14_mec2.bin
@@ -328,6 +337,7 @@ amdgpu/navi14_sos.bin
 amdgpu/navy_flounder_dmcub.bin
 amdgpu/vega20_vce.bin
 amdgpu/raven_rlc.bin
+amdgpu/yellow_carp_ta.bin
 amdgpu/mullins_uvd.bin
 amdgpu/tahiti_ce.bin
 amdgpu/kabini_mec.bin
@@ -371,6 +381,7 @@ amdgpu/raven_vcn.bin
 amdgpu/navi12_sos.bin
 amdgpu/navi12_ce.bin
 amdgpu/navi14_ce_wks.bin
+amdgpu/yellow_carp_mec2.bin
 amdgpu/navy_flounder_mec.bin
 amdgpu/oland_uvd.bin
 amdgpu/renoir_mec2.bin
@@ -393,6 +404,7 @@ amdgpu/fiji_ce.bin
 amdgpu/vangogh_sdma.bin
 amdgpu/navy_flounder_me.bin
 amdgpu/dimgrey_cavefish_smc.bin
+amdgpu/yellow_carp_mec.bin
 amdgpu/navi10_pfp.bin
 amdgpu/hainan_mc.bin
 amdgpu/polaris11_mc.bin
@@ -428,6 +440,7 @@ amdgpu/topaz_sdma1.bin
 amdgpu/renoir_asd.bin
 amdgpu/hawaii_k_smc.bin
 amdgpu/carrizo_mec.bin
+amdgpu/yellow_carp_ce.bin
 amdgpu/vega20_uvd.bin
 amdgpu/navi10_rlc.bin
 amdgpu/vangogh_pfp.bin
@@ -1024,6 +1037,7 @@ intel/ibt-17-0-1.sfi
 intel/ibt-19-32-0.ddc
 intel/dsp_fw_cnl.bin
 intel/dsp_fw_kbl_v2042.bin
+intel/ibt-0040-0041.ddc
 intel/fw_sst_0f28_ssp0.bin
 intel/ibt-19-0-4.ddc
 intel/ibt-hw-37.7.10-fw-1.80.2.3.d.bseq
@@ -1038,6 +1052,7 @@ intel/ibt-19-32-4.sfi
 intel/dsp_fw_cnl_v1191.bin
 intel/ibt-19-0-1.sfi
 intel/dsp_fw_release.bin
+intel/ibt-0040-0041.sfi
 intel/dsp_fw_kbl_v1037.bin
 intel/dsp_fw_bxtn_v2219.bin
 intel/dsp_fw_kbl_v701.bin
@@ -1202,6 +1217,10 @@ iwlwifi-cc-a0-55.ucode
 iwlwifi-cc-a0-59.ucode
 iwlwifi-cc-a0-62.ucode
 iwlwifi-cc-a0-63.ucode
+iwlwifi-so-a0-gf-a0-64.ucode
+iwlwifi-so-a0-gf-a0.pnvm
+iwlwifi-so-a0-hr-b0-64.ucode
+iwlwifi-so-a0-jf-b0-64.ucode
 iwlwifi-ty-a0-gf-a0-59.ucode
 iwlwifi-ty-a0-gf-a0-62.ucode
 iwlwifi-ty-a0-gf-a0-63.ucode
@@ -1272,6 +1291,7 @@ mediatek/mt7622_n9.bin
 mediatek/mt7915_wm.bin
 mediatek/mt8173/vpu_p.bin
 mediatek/mt8173/vpu_d.bin
+mediatek/BT_RAM_CODE_MT7922_1_1_hdr.bin
 mediatek/mt7662u.bin
 mediatek/mt7915_wa.bin
 mediatek/mt7663pr2h_rebb.bin
@@ -1286,6 +1306,7 @@ mediatek/mt7610e.bin
 mediatek/mt7615_n9.bin
 mediatek/mt7610u.bin
 mediatek/mt7615_rom_patch.bin
+mellanox/mlxsw_spectrum2-29.2008.3326.mfa2
 mellanox/mlxsw_spectrum2-29.2008.2406.mfa2
 mellanox/mlxsw_spectrum3-30.2008.2018.mfa2
 mellanox/mlxsw_spectrum3-30.2007.1168.mfa2
@@ -1294,6 +1315,7 @@ mellanox/mlxsw_spectrum-13.1702.6.mfa2
 mellanox/mlxsw_spectrum3-30.2008.2438.mfa2
 mellanox/mlxsw_spectrum-13.2008.2304.mfa2
 mellanox/mlxsw_spectrum-13.2007.1168.mfa2
+mellanox/mlxsw_spectrum-13.2008.3326.mfa2
 mellanox/mlxsw_spectrum-13.2000.1122.mfa2
 mellanox/mlxsw_spectrum3-30.2008.1036.mfa2
 mellanox/mlxsw_spectrum-13.2008.1036.mfa2
@@ -1311,6 +1333,7 @@ mellanox/mlxsw_spectrum2-29.2008.1310.mfa2
 mellanox/mlxsw_spectrum2-29.2008.2946.mfa2
 mellanox/mlxsw_spectrum-13.1910.622.mfa2
 mellanox/mlxsw_spectrum-13.2008.1310.mfa2
+mellanox/mlxsw_spectrum3-30.2008.3326.mfa2
 mellanox/mlxsw_spectrum-13.2000.1886.mfa2
 mellanox/mlxsw_spectrum-13.2000.2714.mfa2
 mellanox/mlxsw_spectrum-13.2008.2438.mfa2
@@ -1964,6 +1987,7 @@ qcom/a530_pm4.fw
 qcom/a650_gmu.bin
 qcom/a300_pm4.fw
 qcom/a630_gmu.bin
+qed/qed_init_values_zipped-8.59.1.0.bin
 qed/qed_init_values-8.33.12.0.bin
 qed/qed_init_values-8.14.6.0.bin
 qed/qed_init_values_zipped-8.15.3.0.bin

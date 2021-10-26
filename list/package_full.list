@@ -733,5 +733,8 @@ x11-misc/xkeyboard-config
 x11-misc/xorg-cf-files
 x11-themes/adwaita-icon-theme
 x11-themes/gnome-themes-standard
+x11-themes/gruvbox-material-gtk-theme
 x11-themes/gtk-engines-adwaita
+x11-themes/gtk-engines-murrine
 x11-themes/hicolor-icon-theme
+x11-themes/murrine-themes
