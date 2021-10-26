@@ -64,7 +64,7 @@ A: Because it's a <a href="//www.howtogeek.com/287014/how-to-create-and-use-symb
 <img src="https://user-images.githubusercontent.com/71613062/138791507-2ac776d6-a4f4-43f9-b22b-0c1cf1c9869a.jpg">
 
 <h3>DWM (Tiling)</h3>
-<img src="https://user-images.githubusercontent.com/71613062/138791638-9c8de7c8-43db-4c81-a7a7-5fa8cb078368.jpg">
+<img src="https://user-images.githubusercontent.com/71613062/138791885-455028bd-0c76-4597-92bb-0e75b0593f9d.jpg">
 
 <h2 align="center"></h2>
 
