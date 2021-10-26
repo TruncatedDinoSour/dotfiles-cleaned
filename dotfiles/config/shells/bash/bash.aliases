@@ -28,7 +28,7 @@ alias r="\$__BASH_BIN_DIR/ranger"
 
 alias youtube-dl='youtube-dl --verbose --yes-playlist'
 alias yt='youtube-dl --format mp4'
-alias ys='youtube-dl --extract-audio --audio-format flac'
+alias ys='youtube-dl --extract-audio --audio-format mp3'
 
 alias make="\$__BASH_BIN_DIR/make ${MAKEOPTS}"
 alias clear="\$__BASH_BIN_DIR/clear; autorun"

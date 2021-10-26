@@ -19,7 +19,7 @@ main() {
         shuf |
         tr -d "\n" >>/tmp/.pwdgen_random_bytes
 
-    id="${RANDOM}$(lsblk -fa | rev | sha512sum | rev;
+    id="${RANDOM}$(lsblk -fa | rev | sha512sum | base64 | sha512sum | rev;
     date '+%N%S%N%u%V%N%y%Y%m%G%I%m%N%s%N' | sha512sum;
     ip a | rev | base64 | sed 's/w/G/g; s/o/M/g; s/=//g' | md5sum;
     which "$SHELL" | base32 | rev;
@@ -27,19 +27,27 @@ main() {
     ps aux | sha256sum | base64 | rev;
     ss | sha384sum | rev)${RANDOM}"
 
-    echo "$id" >>/tmp/.pwdgen_random_bytes
+    echo "$id" | rev >>/tmp/.pwdgen_random_bytes
+    echo "$@" >>/tmp/.pwdgen_random_bytes
 
     local bytes
     bytes="${RANDOM}$(cat -A /tmp/.pwdgen_random_bytes)${id}${RANDOM}"
+    bytes="$(echo -n "$bytes" |
+        sed 's/./&\n/g' |
+        shuf |
+        tr -d "\n" |
+        rev)"
 
     rm -f /tmp/.pwdgen_random_bytes
 
-    echo -en "${RANDOM}$((((RANDOM + 3) / max_length) * max_length ^ WINDOWID))${bytes}${COLUMNS}${max_length}${id}${RANDOM}\
+    echo -en "${RANDOM}$((((RANDOM + 3) / (max_length + rng + 83)) + 7 * max_length ^ WINDOWID))${bytes}${COLUMNS}${max_length}${id}${RANDOM}\
         $(date '+%N%S%N%u%V%N%y%Y%m%G%I%m%N%s%N')${bytes,,}$(ls /usr/bin)${WINDOWID}${PS1}${RANDOM}" |
         base64 -w 0 --ignore-garbage |
         sed 's/O/k/g; s/=/{/g; s/U/s/g; s/4/%/g; s/G/O/g; s/g/4/g; s/s/p/g; s/T/=/g; s/R/*/g' |
         base32 -w 0 --ignore-garbage |
         sha512sum |
+        rev |
+        base64 -w "$rng" |
         sha512sum |
         sed 's/5/p/g; s/e/G/g; s/c/5/g; s/b/c/g; s/c/H/g; s/9/e/g' |
         base64 -w 0 --ignore-garbage |
@@ -48,6 +56,7 @@ main() {
         sed 's/./&\n/g' |
         shuf |
         tr -d "\n" |
+        base64 -w 8 |
         base64 -w 0 --ignore-garbage |
         rev |
         tail --bytes="$((30 + rng + (((RANDOM + 1) % max_length) - 20)))" |
