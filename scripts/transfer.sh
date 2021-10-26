@@ -119,8 +119,6 @@ to=(
 
     'dotfiles/linux'
 
-    'dotfiles/shells'
-
     'dotfiles/qbittorrent'
 
     'dotfiles/bin'
