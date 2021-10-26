@@ -18,7 +18,7 @@ alias rmk='trash-restore'
 
 alias v="\$__BASH_BIN_DIR/vim"
 
-alias df='duf -hide special'
+alias df="\$__BASH_BIN_DIR/duf -hide special"
 alias colorpicker='colorpicker --short --one-shot --preview'
 alias cat="\$__BASH_BIN_DIR/bat --theme=\"gruvbox-dark\""
 

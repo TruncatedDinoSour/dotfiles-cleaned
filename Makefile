@@ -4,7 +4,7 @@ git:
 	-git push -u origin gentoo
 
 tea:
-	chmod a+rx ./scripts/transfer.sh
+	chmod a+rx ./scripts/*
 	./scripts/transfer.sh
 
 tools:

@@ -12,6 +12,7 @@ certifi
 cffi
 charset-normalizer
 click
+colorama
 commonmark
 contextlib2
 cPython

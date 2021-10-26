@@ -9,5 +9,5 @@ show-type-column=true
 sidebar-width=162
 sort-column='name'
 sort-directories-first=false
-sort-order='ascending'
+sort-order='descending'
 type-format='category'
