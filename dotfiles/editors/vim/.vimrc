@@ -37,9 +37,9 @@ set timeoutlen=0 ttimeoutlen=0          " Set timeout to 0s
 autocmd Filetype markdown,text,xmath,tex set spell wrap
 
 " Default filetype = text
-autocmd BufEnter * if &filetype == "" | setlocal ft=text | endif
+" autocmd BufEnter * if &filetype == "" | setlocal ft=text | endif
 
-" Make emmet work
+" Make emmet work on HTML
 autocmd Filetype html set notimeout timeoutlen=100 ttimeoutlen=100
 
 " Porth

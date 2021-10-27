@@ -1,5 +1,7 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =0
+let g:netrw_dirhistcnt =2
+let g:netrw_dirhist_2='/home/ari/.scripts/doc'
+let g:netrw_dirhist_1='/home/ari/.scripts/requirements'
 let g:netrw_dirhist_0='/home/ari/.scripts/doc'
 let g:netrw_dirhist_9='/home/ari/.vim'
 let g:netrw_dirhist_8='/home/ari/.config/neofetch'
@@ -8,5 +10,3 @@ let g:netrw_dirhist_6='/home/ari/Ari/coding/python_/pyQMD_'
 let g:netrw_dirhist_5='/home/ari/Ari/coding/python_'
 let g:netrw_dirhist_4='/home/ari/Ari/passwd'
 let g:netrw_dirhist_3='/'
-let g:netrw_dirhist_2='/etc/portage/repos.conf'
-let g:netrw_dirhist_1='/etc/portage/repo.postsync.d'

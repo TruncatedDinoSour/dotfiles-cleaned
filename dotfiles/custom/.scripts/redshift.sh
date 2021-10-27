@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 RR=1
 GG=1
 BB=1

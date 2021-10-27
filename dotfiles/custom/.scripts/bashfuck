@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 # CREATED BY: https://github.com/0xddaa/bashfuck
 
 usage(){

@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env sh
 
 sleep 3
 scrot '/tmp/%F_%T_$wx$h.png' -e '/usr/bin/mpv $f; /bin/rm -f $f'

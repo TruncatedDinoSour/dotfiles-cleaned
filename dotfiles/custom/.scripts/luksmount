@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 __close_drive() {
     echo 'Close the device to open in'

@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 FZF_FLAGS=(--layout=reverse --height=20 --no-mouse -i)
 DRIVE_FORMATS=(raw qcow2 bochs cloop cow dmg nbd parallels qcow qed vdi vhdx vmdk vvfat)
