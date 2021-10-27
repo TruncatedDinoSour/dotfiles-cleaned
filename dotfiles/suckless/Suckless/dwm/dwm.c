@@ -246,6 +246,7 @@ static int xerror(Display *dpy, XErrorEvent *ee);
 static int xerrordummy(Display *dpy, XErrorEvent *ee);
 static int xerrorstart(Display *dpy, XErrorEvent *ee);
 static void zoom(const Arg *arg);
+static void setenvvars(void);
 
 static pid_t getparentprocess(pid_t p);
 static int isdescprocess(pid_t p, pid_t c);
@@ -2367,6 +2368,15 @@ zoom(const Arg *arg)
 	pop(c);
 }
 
+void
+setenvvars(void)
+{
+    /* For Information Fetchers */
+    setenv("XDG_CURRENT_DESKTOP","dwm",1);
+    setenv("XDG_SESSION_DESKTOP","dwm",1);
+    setenv("DESKTOP_SESSION","dwm",1);
+}
+
 int
 main(int argc, char *argv[])
 {
@@ -2387,6 +2397,7 @@ main(int argc, char *argv[])
 		die("pledge");
 #endif /* __OpenBSD__ */
 	scan();
+    setenvvars();
 	run();
 	cleanup();
 	XCloseDisplay(dpy);

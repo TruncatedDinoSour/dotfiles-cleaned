@@ -22,9 +22,14 @@ from=(
     '/home/ari/.dwm'
     '/home/ari/Suckless'
 
-    '/home/ari/.fehbg'
     '/home/ari/.gtkrc-2.0'
     '/home/ari/Pictures/wallpaper.png'
+    '/home/ari/.mozilla/firefox/3s4h1qq0.default-release/prefs.js'
+    '/home/ari/.mozilla/firefox/3s4h1qq0.default-release/extensions.json'
+    '/home/ari/.mozilla/firefox/3s4h1qq0.default-release/extension-settings.json'
+    '/home/ari/.mozilla/firefox/3s4h1qq0.default-release/extension-preferences.json'
+    '/home/ari/.mozilla/firefox/3s4h1qq0.default-release/extensions'
+    '/home/ari/.mozilla/firefox/3s4h1qq0.default-release/features'
 
     '/home/ari/.icons'
 
@@ -79,6 +84,11 @@ to=(
     'dotfiles/suckless'
     'dotfiles/suckless'
 
+    'dotfiles/etc'
+    'dotfiles/etc'
+    'dotfiles/etc'
+    'dotfiles/etc'
+    'dotfiles/etc'
     'dotfiles/etc'
     'dotfiles/etc'
     'dotfiles/etc'

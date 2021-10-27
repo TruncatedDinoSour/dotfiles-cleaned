@@ -10,7 +10,7 @@ wallpaper="$HOME/Pictures/wallpaper.png"
 bdwmb -q &
 dunst &
 calcurse --daemon &
-feh --bg-tile "$wallpaper" &
+feh --bg-tile --no-fehbg "$wallpaper" &
 xautolock -time 10 -locker /usr/local/bin/dwmlocker &
 xset r rate 300 50 &
 xbacklight -set 80 &

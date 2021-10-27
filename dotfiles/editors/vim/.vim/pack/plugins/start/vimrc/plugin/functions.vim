@@ -26,7 +26,7 @@ cabbrev diff Diff
 
 " Open the terminal
 function! OpenTerminal()
-    setlocal splitbelow
+    setlocal splitbelow nospell
     terminal
     resize 14
 endfunction
