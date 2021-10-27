@@ -10,7 +10,7 @@ read -p "=== [ press enter to continue  ] ===" _
 
 rm -rf dotfiles list
 mkdir -p list
-mkdir -p dotfiles{,/bin,/shells/bash,/shells/zsh,/suckless,/etc,/custom,/programming/VScodium,/core,/linux,/portage,/qbittorrent,/editors/vim,/fix}
+mkdir -p dotfiles{,/bin,/shells/bash,/shells/zsh,/suckless,/etc,/etc/firefox,/custom,/programming/VScodium,/core,/linux,/portage,/qbittorrent,/editors/vim,/fix}
 
 
 from=(
@@ -24,12 +24,15 @@ from=(
 
     '/home/ari/.gtkrc-2.0'
     '/home/ari/Pictures/wallpaper.png'
+
     '/home/ari/.mozilla/firefox/3s4h1qq0.default-release/prefs.js'
     '/home/ari/.mozilla/firefox/3s4h1qq0.default-release/extensions.json'
     '/home/ari/.mozilla/firefox/3s4h1qq0.default-release/extension-settings.json'
     '/home/ari/.mozilla/firefox/3s4h1qq0.default-release/extension-preferences.json'
     '/home/ari/.mozilla/firefox/3s4h1qq0.default-release/extensions'
     '/home/ari/.mozilla/firefox/3s4h1qq0.default-release/features'
+    '/home/ari/.mozilla/firefox/3s4h1qq0.default-release/addons.json'
+    '/home/ari/.mozilla/firefox/3s4h1qq0.default-release/search.json.mozlz4'
 
     '/home/ari/.icons'
 
@@ -86,12 +89,15 @@ to=(
 
     'dotfiles/etc'
     'dotfiles/etc'
-    'dotfiles/etc'
-    'dotfiles/etc'
-    'dotfiles/etc'
-    'dotfiles/etc'
-    'dotfiles/etc'
-    'dotfiles/etc'
+
+    'dotfiles/etc/firefox'
+    'dotfiles/etc/firefox'
+    'dotfiles/etc/firefox'
+    'dotfiles/etc/firefox'
+    'dotfiles/etc/firefox'
+    'dotfiles/etc/firefox'
+    'dotfiles/etc/firefox'
+    'dotfiles/etc/firefox'
 
     'dotfiles/icons'
 
