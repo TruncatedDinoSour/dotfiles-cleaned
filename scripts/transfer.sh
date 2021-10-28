@@ -12,12 +12,13 @@ read -p "=== [ press enter to continue  ] ===" _
 
 rm -rf dotfiles list
 mkdir -p list
-mkdir -p dotfiles{,/bin,/shells/bash,/shells/zsh,/suckless,/etc,/etc/firefox,/custom,/programming/VScodium,/core,/linux,/portage,/qbittorrent,/editors/vim,/fix}
+mkdir -p dotfiles{,/bin,/shells/bash,/suckless,/etc,/etc/firefox,/custom,/programming/VScodium,/core,/linux,/portage,/qbittorrent,/editors/vim,/fix}
 
 
 from=(
     '/home/ari/.bashrc'
     '/home/ari/.profile'
+    '/home/ari/.bash_profile'
 
     '/home/ari/.config'
 
@@ -37,10 +38,6 @@ from=(
     "$FIREFOX_PROFILE/search.json.mozlz4"
 
     '/home/ari/.icons'
-
-    '/home/ari/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting'
-    '/home/ari/.zshrc'
-    '/home/ari/.zsh_userrc'
 
     '/home/ari/.scripts'
 
@@ -83,6 +80,7 @@ from=(
 to=(
     'dotfiles/shells/bash'
     'dotfiles/shells/bash'
+    'dotfiles/shells/bash'
 
     'dotfiles/config'
 
@@ -102,10 +100,6 @@ to=(
     'dotfiles/etc/firefox'
 
     'dotfiles/icons'
-
-    'dotfiles/shells/zsh'
-    'dotfiles/shells/zsh'
-    'dotfiles/shells/zsh'
 
     'dotfiles/custom'
 

@@ -20,3 +20,7 @@ Changed .vimrc to have no automatic buffer conversion to text
 ```
 See: setenv(3)
 ```
+- Dropped ZSH support
+```
+I don't use it so I decided to drop it
+```

@@ -19,18 +19,17 @@ alias rmk='trash-restore'
 alias v="\$__BASH_BIN_DIR/vim"
 
 alias df="\$__BASH_BIN_DIR/duf -hide special"
-alias colorpicker='colorpicker --short --one-shot --preview'
+#alias colorpicker='colorpicker --short --one-shot --preview'
 alias cat="\$__BASH_BIN_DIR/bat --theme=\"gruvbox-dark\""
 
 alias src='source ~/.bashrc'
 alias stx="\$__BASH_BIN_DIR/startx"
-alias r="\$__BASH_BIN_DIR/ranger"
+#alias r="\$__BASH_BIN_DIR/ranger"
 
 alias youtube-dl='youtube-dl --verbose --yes-playlist'
 alias yt='youtube-dl --format mp4'
 alias ys='youtube-dl --extract-audio --audio-format mp3'
 
-alias make="\$__BASH_BIN_DIR/make ${MAKEOPTS}"
 alias clear="\$__BASH_BIN_DIR/clear; autorun"
 
 alias grep="\$__BASH_CORE_BIN_DIR/grep --color=auto -iHn"
@@ -50,7 +49,6 @@ alias mpvp="\$__BASH_BIN_DIR/mpv --shuffle --loop-playlist"
 alias clip="\$__BASH_BIN_DIR/xclip -selection clipboard"
 
 alias mimetypeof="xdg-mime query filetype"
-
 alias dos2unix="\$__BASH_CORE_BIN_DIR/sed -i $'s/\r$//'"
 alias beep='(speaker-test -l 1 -f 1500 -t sine -P 2 -X >/dev/null)& pid="$!"; sleep 0.08; kill -9 $pid'
 

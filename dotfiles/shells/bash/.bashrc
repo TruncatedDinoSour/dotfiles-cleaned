@@ -6,7 +6,11 @@
 [[ $- != *i* ]] && return
 export PATH="$PATH:/usr/local/bin:$HOME/.local/bin:$HOME/.scripts"
 
+# Disable stuff like ^S and ^Q
+stty -ixon
 
+
+# Functions
 source ~/.config/shells/bash/*.functions
 
 # Enable FZF support
@@ -43,6 +47,16 @@ export overlay='/home/ari/Ari/coding/resources_/overlay'
 export ntex='/home/ari/Documents/notes/doc.tex'
 export npdf='/home/ari/Documents/notes/doc.pdf'
 export ndir='/home/ari/Documents/notes'
+
+
+# Keybinds
+bind -f ~/.config/shells/bash/inputrc
+
+for keymap in ~/.config/shells/bash/input/*; do
+    vecho "Setting up readline keybinds for $keymap"
+    bind -m "$(basename "$keymap")" -f "$keymap" || vecho "Failed to set bindings"
+done 2>/dev/null
+
 
 autorun || vecho 'Autorun failed'
 
