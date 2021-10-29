@@ -1,3 +1,4 @@
+lrwxrwxrwx 1 root root 23 Oct 28 04:47 /root/.bash_profile -> /home/ari/.bash_profile
 lrwxrwxrwx 1 root root 17 Oct 20 21:55 /root/.bashrc -> /home/ari/.bashrc
 lrwxrwxrwx 1 root root 17 Oct 20 21:54 /root/.config -> /home/ari/.config
 lrwxrwxrwx 1 root root 20 Oct 20 21:55 /root/.gitconfig -> /home/ari/.gitconfig

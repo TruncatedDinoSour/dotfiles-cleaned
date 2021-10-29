@@ -142,6 +142,7 @@ dev-lang/yasm
 dev-libs/atk
 dev-libs/boost
 dev-libs/botan
+dev-libs/concurrencykit
 dev-libs/dbus-glib
 dev-libs/double-conversion
 dev-libs/elfutils
@@ -162,6 +163,7 @@ dev-libs/libaio
 dev-libs/libassuan
 dev-libs/libbsd
 dev-libs/libdbusmenu-qt
+dev-libs/libedit
 dev-libs/libevdev
 dev-libs/libevent
 dev-libs/libffi
@@ -335,6 +337,9 @@ dev-qt/qtsvg
 dev-qt/qttest
 dev-qt/qtwidgets
 dev-qt/qtxml
+dev-scheme/chezscheme
+dev-scheme/cyclone
+dev-scheme/racket
 dev-tex/bibtexu
 dev-tex/glossaries
 dev-tex/latex-beamer

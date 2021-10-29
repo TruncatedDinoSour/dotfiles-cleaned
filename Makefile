@@ -1,5 +1,5 @@
 git:
-	-git add .
+	-git add -A
 	-git commit -m "update @ $(shell date)"
 	-git push -u origin gentoo
 

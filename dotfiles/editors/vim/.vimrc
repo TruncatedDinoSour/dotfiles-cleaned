@@ -36,9 +36,6 @@ set timeoutlen=0 ttimeoutlen=0          " Set timeout to 0s
 " Enable spellchecking and wrapping in vim
 autocmd Filetype markdown,text,xmath,tex set spell wrap
 
-" Default filetype = text
-" autocmd BufEnter * if &filetype == "" | setlocal ft=text | endif
-
 " Make emmet work on HTML
 autocmd Filetype html set notimeout timeoutlen=100 ttimeoutlen=100
 
@@ -47,9 +44,10 @@ autocmd BufRead,BufNewFile *.porth set filetype=porth
 
 
 " Plugins
+"   To Install the plugins type `:PlugInstall`
 " YouCompleteMe:
-"   after :PlugInstall, install cmake and run the ~/.vim/plugged/youcompleteme/install.py file and
-"   then run :YcmRestartServer
+"   $ sudo emerge -qa cmake
+"   $ ~/.vim/plugged/youcompleteme/install.py
 " Bracey:
 "   $ cd ~/.vim/pluggled/bracey
 "   $ npm install --prefix server

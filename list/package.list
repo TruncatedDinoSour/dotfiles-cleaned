@@ -13,6 +13,9 @@ app-text/zathura
 app-text/zathura-pdf-poppler
 dev-libs/boost
 dev-libs/botan
+dev-scheme/chezscheme
+dev-scheme/cyclone
+dev-scheme/racket
 dev-util/shellcheck-bin
 dev-vcs/git
 mail-client/thunderbird

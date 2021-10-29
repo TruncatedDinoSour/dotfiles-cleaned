@@ -4,10 +4,12 @@ attrs
 Babel
 backcall
 backports.entry-points-selectable
+beautifulsoup4
 black
 bleach
 blessings
 bpython
+bs4
 certifi
 cffi
 charset-normalizer
@@ -102,6 +104,7 @@ setuptools
 setuptools-scm
 six
 snowballstemmer
+soupsieve
 Sphinx
 sphinxcontrib-applehelp
 sphinxcontrib-devhelp

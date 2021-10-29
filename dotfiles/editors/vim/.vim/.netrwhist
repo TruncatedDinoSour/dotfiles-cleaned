@@ -1,5 +1,6 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =5
+let g:netrw_dirhistcnt =6
+let g:netrw_dirhist_6='/home/ari/Suckless/st'
 let g:netrw_dirhist_5='/home/ari/Ari/coding/resources_/dots/gentoo/scripts'
 let g:netrw_dirhist_4='/home/ari/.config/shells/bash/input'
 let g:netrw_dirhist_3='/home/ari/Ari/coding/resources_/dots/gentoo/scripts'
@@ -9,4 +10,3 @@ let g:netrw_dirhist_0='/home/ari/.scripts/doc'
 let g:netrw_dirhist_9='/home/ari/.vim'
 let g:netrw_dirhist_8='/home/ari/.config/neofetch'
 let g:netrw_dirhist_7='/home/ari/Ari/coding/python_/pyQMD_/pyQMDline1.4'
-let g:netrw_dirhist_6='/home/ari/Ari/coding/python_/pyQMD_'

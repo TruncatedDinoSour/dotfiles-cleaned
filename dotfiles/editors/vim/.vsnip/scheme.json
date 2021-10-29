@@ -1,0 +1,12 @@
+{
+    "Racket header": {
+        "prefix": ["rh"],
+        "body": [
+            "#!/usr/bin/env racket",
+            "#lang racket/base",
+            "",
+            "$1",
+            ""
+        ]
+    }
+}

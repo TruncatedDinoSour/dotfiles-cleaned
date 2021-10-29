@@ -60,8 +60,7 @@ static double maxlatency = 33;
  * blinking timeout (set to 0 to disable blinking) for the terminal blinking
  * attribute.
  */
-// 800
-static unsigned int blinktimeout = 600;
+static unsigned int blinktimeout = 0;
 
 /*
  * thickness of underline and bar cursors

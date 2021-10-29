@@ -12,7 +12,7 @@ read -p "=== [ press enter to continue  ] ===" _
 
 rm -rf dotfiles list
 mkdir -p list
-mkdir -p dotfiles{,/bin,/shells/bash,/suckless,/etc,/etc/firefox,/custom,/programming/VScodium,/core,/linux,/portage,/qbittorrent,/editors/vim,/fix}
+mkdir -p dotfiles{,/lang,/bin,/shells/bash,/suckless,/etc,/etc/firefox,/custom,/programming/VScodium,/core,/linux,/portage,/qbittorrent,/editors/vim,/fix}
 
 
 from=(
@@ -75,6 +75,8 @@ from=(
 
     '/home/ari/Documents/wpa_cli_fix/doc.tex'
     '/home/ari/Documents/new_kernel_gentoo/doc.md'
+
+    '/home/ari/.racket'
 )
 
 to=(
@@ -137,6 +139,8 @@ to=(
 
     'dotfiles/fix/wpa_cli_fix.tex'
     'dotfiles/fix/gentoo_new_kernel.md'
+
+    'dotfiles/lang'
 )
 
 
