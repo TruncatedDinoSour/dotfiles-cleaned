@@ -48,6 +48,10 @@
     box-shadow: none !important;
 }
 
+.browserContainer {
+  background-color: #262220 !important;
+}
+
 
 
 #urlbar-container {

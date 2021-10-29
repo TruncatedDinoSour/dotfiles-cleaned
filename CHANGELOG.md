@@ -24,3 +24,9 @@ See: setenv(3)
 ```
 I don't use it so I decided to drop it
 ```
+## Changelog on 2021-10-29
+- Added my firefox profile
+```
+Added my *whole (a cleanup script is ran so it wouldn't expose my cookies and stuff) firefox profile,
+can be found in /etc/filefox
+```

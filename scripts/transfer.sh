@@ -12,7 +12,7 @@ read -p "=== [ press enter to continue  ] ===" _
 
 rm -rf dotfiles list
 mkdir -p list
-mkdir -p dotfiles{,/lang,/bin,/shells/bash,/suckless,/etc,/etc/firefox,/custom,/programming/VScodium,/core,/linux,/portage,/qbittorrent,/editors/vim,/fix}
+mkdir -p dotfiles{,/lang,/bin,/shells/bash,/suckless,/etc,/custom,/programming/VScodium,/core,/linux,/portage,/qbittorrent,/editors/vim,/fix}
 
 
 from=(
@@ -28,15 +28,7 @@ from=(
     '/home/ari/.gtkrc-2.0'
     '/home/ari/Pictures/wallpaper.png'
 
-    "$FIREFOX_PROFILE/prefs.js"
-    "$FIREFOX_PROFILE/extensions.json"
-    "$FIREFOX_PROFILE/extension-settings.json"
-    "$FIREFOX_PROFILE/extension-preferences.json"
-    "$FIREFOX_PROFILE/extensions"
-    "$FIREFOX_PROFILE/features"
-    "$FIREFOX_PROFILE/addons.json"
-    "$FIREFOX_PROFILE/search.json.mozlz4"
-    "$FIREFOX_PROFILE/chrome"
+    "$FIREFOX_PROFILE"
 
     '/home/ari/.icons'
 
@@ -93,14 +85,6 @@ to=(
     'dotfiles/etc'
     'dotfiles/etc'
 
-    'dotfiles/etc/firefox'
-    'dotfiles/etc/firefox'
-    'dotfiles/etc/firefox'
-    'dotfiles/etc/firefox'
-    'dotfiles/etc/firefox'
-    'dotfiles/etc/firefox'
-    'dotfiles/etc/firefox'
-    'dotfiles/etc/firefox'
     'dotfiles/etc/firefox'
 
     'dotfiles/icons'
@@ -171,6 +155,11 @@ python3 -m pip list | awk '{ print $1 }' | tail -n +3 > list/pip_modules.list
 
 sudo chown -R ari:ari dotfiles
 rm -rfv dotfiles/config/asciinema dotfiles/editors/vim/.vim/undodir dotfiles/config/keepassxc dotfiles/config/VSCodium dotfiles/config/VirtualBox dotfiles/config/transmission/dht.dat dotfiles/config/dconf
+
+cp scripts/clean_firefox_profile dotfiles/etc/firefox
+cd dotfiles/etc/firefox || exit 1
+./clean_firefox_profile
+cd ../../.. || exit 2
 
 sed -i '/PHONE/d' dotfiles/config/tg/conf.py
 
