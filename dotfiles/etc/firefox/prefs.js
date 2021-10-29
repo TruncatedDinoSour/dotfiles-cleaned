@@ -135,7 +135,7 @@ user_pref("doh-rollout.doneFirstRun", true);
 user_pref("doh-rollout.home-region", "CC");
 user_pref("dom.ipc.processCount", 6);
 user_pref("dom.maxHardwareConcurrency", 0);
-user_pref("dom.push.userAgentID", "4f282c40bb3f406bbab34feb50fa9028");
+user_pref("dom.push.userAgentID", "fb16494aa19844a5bcecf1ad3f73c5b9");
 user_pref("dom.security.https_only_mode", true);
 user_pref("dom.security.https_only_mode_ever_enabled", true);
 user_pref("dom.storage_access.max_concurrent_auto_grants", 0);
