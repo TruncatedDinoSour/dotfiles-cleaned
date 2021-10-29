@@ -36,6 +36,7 @@ from=(
     "$FIREFOX_PROFILE/features"
     "$FIREFOX_PROFILE/addons.json"
     "$FIREFOX_PROFILE/search.json.mozlz4"
+    "$FIREFOX_PROFILE/chrome"
 
     '/home/ari/.icons'
 
@@ -92,6 +93,7 @@ to=(
     'dotfiles/etc'
     'dotfiles/etc'
 
+    'dotfiles/etc/firefox'
     'dotfiles/etc/firefox'
     'dotfiles/etc/firefox'
     'dotfiles/etc/firefox'
