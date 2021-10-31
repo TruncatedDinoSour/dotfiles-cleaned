@@ -5,6 +5,7 @@ app-editors/vscodium
 app-emulation/qemu
 app-eselect/eselect-repository
 app-misc/neofetch
+app-misc/yafetch
 app-office/calcurse
 app-shells/bash-completion
 app-shells/fzf
@@ -14,7 +15,6 @@ app-text/zathura-pdf-poppler
 dev-libs/boost
 dev-libs/botan
 dev-scheme/chezscheme
-dev-scheme/cyclone
 dev-scheme/racket
 dev-util/shellcheck-bin
 dev-vcs/git

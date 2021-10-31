@@ -32,3 +32,5 @@ nnoremap D :redo<CR>
 imap <expr> <C-j>   vsnip#expandable()  ? '<Plug>(vsnip-expand)'         : '<C-j>'
 smap <expr> <C-j>   vsnip#expandable()  ? '<Plug>(vsnip-expand)'         : '<C-j>'
 
+" vim-codefmt
+map F :FormatCode<CR>

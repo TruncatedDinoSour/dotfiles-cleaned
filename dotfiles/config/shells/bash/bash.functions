@@ -14,7 +14,7 @@ vecho() {
 
 
 autorun() {
-    /usr/local/bin/yafetch 2>/dev/null || return
+    /usr/bin/yafetch 2>/dev/null || return
 }
 
 

@@ -1,10 +1,1 @@
-total 56
--rw-r--r-- 1 root root  2106 Oct 20 18:12 docs.md
-drwxr-xr-x 7 root root  4096 Oct 20 18:12 .git
--rw-r--r-- 1 root root  1622 Oct 20 18:12 init.lua
--rw-r--r-- 1 root root  1056 Oct 20 18:12 LICENSE
--rw-r--r-- 1 root root   478 Oct 20 18:12 Makefile
--rw-r--r-- 1 root root   648 Oct 20 18:12 README.md
--rw-r--r-- 1 root root   183 Oct 20 18:12 shell.nix
-drwxr-xr-x 2 root root  4096 Oct 20 18:12 src
--rwxr-xr-x 1 root root 21984 Oct 20 18:12 yafetch
+total 0

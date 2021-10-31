@@ -31,6 +31,7 @@ set softtabstop=0						" Insert spaces instead of tabs
 set guicursor=a:hor100                  " Set the cursor shape to a _
 set clipboard=unnamedplus               " Copy text to clipboard
 set timeoutlen=0 ttimeoutlen=0          " Set timeout to 0s
+set virtualedit=all                     " Improve visual block to select past the line
 
 
 " Enable spellchecking and wrapping in vim
@@ -65,7 +66,12 @@ call plug#begin("~/.vim/plugged")
     Plug 'itchyny/lightline.vim'
     Plug 'vim-latex/vim-latex'
     Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install()  }, 'for': ['markdown', 'vim-plug'] }
+    Plug 'google/vim-maktaba'
+    Plug 'google/vim-codefmt'
+    Plug 'google/vim-glaive'
 call plug#end()
+
+call glaive#Install()               " Install glave
 
 
 colorscheme alduin                  " Set the theme

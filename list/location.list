@@ -33,7 +33,6 @@
 /etc/portage -> dotfiles/portage
 /usr/src/linux/.config -> dotfiles/linux
 /usr/share/themes/mumble-dark.qbtheme -> dotfiles/qbittorrent
-/usr/local/src/yafetch -> dotfiles/bin
 /home/ari/Documents/wpa_cli_fix/doc.tex -> dotfiles/fix/wpa_cli_fix.tex
 /home/ari/Documents/new_kernel_gentoo/doc.md -> dotfiles/fix/gentoo_new_kernel.md
 /home/ari/.racket -> dotfiles/lang

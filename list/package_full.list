@@ -76,6 +76,7 @@ app-misc/editor-wrapper
 app-misc/mime-types
 app-misc/neofetch
 app-misc/pax-utils
+app-misc/yafetch
 app-office/calcurse
 app-portage/elt-patches
 app-portage/gemato
@@ -128,6 +129,7 @@ dev-cpp/range-v3
 dev-db/sqlite
 dev-lang/go
 dev-lang/lua
+dev-lang/lua
 dev-lang/nasm
 dev-lang/orc
 dev-lang/perl
@@ -142,7 +144,6 @@ dev-lang/yasm
 dev-libs/atk
 dev-libs/boost
 dev-libs/botan
-dev-libs/concurrencykit
 dev-libs/dbus-glib
 dev-libs/double-conversion
 dev-libs/elfutils
@@ -338,7 +339,6 @@ dev-qt/qttest
 dev-qt/qtwidgets
 dev-qt/qtxml
 dev-scheme/chezscheme
-dev-scheme/cyclone
 dev-scheme/racket
 dev-tex/bibtexu
 dev-tex/glossaries

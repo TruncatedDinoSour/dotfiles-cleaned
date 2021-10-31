@@ -32,6 +32,8 @@
  (readline-input-history
   (
    #"(exit)"
+   #"planet"
+   #"pkg"
    #"(vector-length current-command-line-arguments\n "
    #"(vector-length current-command-line-arguments\n  )"
    #"(display (current-command-line-arguments))"

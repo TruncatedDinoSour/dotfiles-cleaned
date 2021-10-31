@@ -29,6 +29,7 @@ distlib
 docutils
 entrypoints
 filelock
+Flask
 gdbus_codegen
 gemato
 gpg
@@ -41,6 +42,7 @@ ipykernel
 ipython
 ipython-genutils
 ipywidgets
+itsdangerous
 jedi
 Jinja2
 jsonschema
@@ -127,5 +129,6 @@ urllib3
 virtualenv
 wcwidth
 webencodings
+Werkzeug
 widgetsnbextension
 youtube-dl

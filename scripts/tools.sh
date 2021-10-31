@@ -2,11 +2,12 @@
 # DEPENDENCIES: git, make, curl
 
 # bdwmb
-git clone https://github.com/TruncatedDinosour/bdwmb
-cd bdwmb || exit 1
-sudo make full
-cd .. || exit 1
-rm -rf bdwmb
+# git clone https://github.com/TruncatedDinosour/bdwmb
+# cd bdwmb || exit 1
+# sudo make full
+# cd .. || exit 1
+# rm -rf bdwmb
+# Already built into DWM
 
 # vimplug
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \

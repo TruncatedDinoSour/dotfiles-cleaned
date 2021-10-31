@@ -12,7 +12,7 @@ read -p "=== [ press enter to continue  ] ===" _
 
 rm -rf dotfiles list
 mkdir -p list
-mkdir -p dotfiles{,/lang,/bin,/shells/bash,/suckless,/etc,/custom,/programming/VScodium,/core,/linux,/portage,/qbittorrent,/editors/vim,/fix}
+mkdir -p dotfiles{,/lang,/shells/bash,/suckless,/etc,/custom,/programming/VScodium,/core,/linux,/portage,/qbittorrent,/editors/vim,/fix}
 
 
 from=(
@@ -63,8 +63,6 @@ from=(
     '/usr/src/linux/.config'
 
     '/usr/share/themes/mumble-dark.qbtheme'
-
-    '/usr/local/src/yafetch'
 
     '/home/ari/Documents/wpa_cli_fix/doc.tex'
     '/home/ari/Documents/new_kernel_gentoo/doc.md'
@@ -121,8 +119,6 @@ to=(
 
     'dotfiles/qbittorrent'
 
-    'dotfiles/bin'
-
     'dotfiles/fix/wpa_cli_fix.tex'
     'dotfiles/fix/gentoo_new_kernel.md'
 
@@ -138,8 +134,6 @@ done
 
 
 ls -lA /usr/local/src > list/src.list
-
-find /usr/local/bin -type l -exec ls -lA {} +
 
 sudo find /root -type l -exec ls -lA {} + | tee list/root_symlinks.list
 
