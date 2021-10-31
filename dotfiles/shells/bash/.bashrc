@@ -42,6 +42,8 @@ case "$TERM" in
 esac
 
 
+export GPG_TTY="$(tty)"
+
 export dots='/home/ari/Ari/coding/resources_/dots'
 export overlay='/home/ari/Ari/coding/resources_/overlay'
 export ntex='/home/ari/Documents/notes/doc.tex'
