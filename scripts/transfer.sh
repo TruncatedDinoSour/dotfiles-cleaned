@@ -133,8 +133,6 @@ do
 done
 
 
-ls -lA /usr/local/src > list/src.list
-
 sudo find /root -type l -exec ls -lA {} + | tee list/root_symlinks.list
 
 cp /var/lib/portage/world list/package.list
