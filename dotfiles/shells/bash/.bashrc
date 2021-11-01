@@ -42,7 +42,9 @@ case "$TERM" in
 esac
 
 
-export GPG_TTY="$(tty)"
+# GPG
+GPG_TTY="$(tty)"
+export GPG_TTY
 
 export dots='/home/ari/Ari/coding/resources_/dots'
 export overlay='/home/ari/Ari/coding/resources_/overlay'
