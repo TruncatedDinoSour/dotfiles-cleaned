@@ -34,16 +34,16 @@ set virtualedit=all                     " Improve visual block to select past th
 
 set list listchars=trail:~,extends:»,precedes:«,nbsp:×   " Show indentation
 
-
 " Enable spellchecking and wrapping in vim
 autocmd Filetype markdown,text,xmath,tex set spell wrap
 
 " Make emmet work on HTML
 autocmd Filetype html set notimeout timeoutlen=100 ttimeoutlen=100
 
+autocmd FileType make set noexpandtab tabstop=8
+
 " Porth
 autocmd BufRead,BufNewFile *.porth set filetype=porth
-
 
 " Plugins
 "   To Install the plugins type `:PlugInstall`

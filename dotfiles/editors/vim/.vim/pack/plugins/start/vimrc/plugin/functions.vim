@@ -38,6 +38,7 @@ tnoremap <C-y> <C-\><C-n>:resize +1<CR>i
 tnoremap <C-u> <C-\><C-n>:resize -1<CR>i
 
 
+" Convert to spaces
 autocmd! bufreadpost * set expandtab | retab!
 autocmd! bufwritepre * set expandtab | retab!
 
