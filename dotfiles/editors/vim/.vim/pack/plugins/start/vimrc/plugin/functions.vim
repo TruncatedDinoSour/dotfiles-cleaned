@@ -29,10 +29,15 @@ function! OpenTerminal()
     setlocal splitbelow
     terminal
     resize 14
+    setlocal nosplitbelow
 endfunction
 
 nnoremap <C-t> :call OpenTerminal()<CR>
 tnoremap <C-t> <C-\><C-n>:buf<CR><C-W><C-K>
 tnoremap <C-y> <C-\><C-n>:resize +1<CR>i
 tnoremap <C-u> <C-\><C-n>:resize -1<CR>i
+
+
+autocmd! bufreadpost * set expandtab | retab!
+autocmd! bufwritepre * set expandtab | retab!
 

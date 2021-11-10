@@ -80,6 +80,9 @@ else
     ascii3 = grn .. " `Y8888888Y´    " .. res
     ascii4 = yel .. "   `Y888Y´      " .. res
     ascii5 = blu .. "     `Y´        " .. res
+
+    root_mode = false
+    root_extras = {}
 end
 
 yafetch.header_sep = string.format("%s@%s", blu, res)

@@ -16,3 +16,7 @@ set noshowmode                                  " Don't show what mode vim is in
 " Emmet
 let g:user_emmet_install_global = 1
 
+" indentLine
+let g:indentLine_char = '·'
+let g:indentLine_conceallevel = 1
+

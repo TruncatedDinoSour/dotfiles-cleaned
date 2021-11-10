@@ -531,7 +531,9 @@ sys-devel/binutils
 sys-devel/binutils-config
 sys-devel/bison
 sys-devel/clang
+sys-devel/clang
 sys-devel/clang-common
+sys-devel/clang-runtime
 sys-devel/clang-runtime
 sys-devel/flex
 sys-devel/gcc
@@ -541,7 +543,9 @@ sys-devel/gnuconfig
 sys-devel/libtool
 sys-devel/lld
 sys-devel/llvm
+sys-devel/llvm
 sys-devel/llvm-common
+sys-devel/llvmgold
 sys-devel/m4
 sys-devel/make
 sys-devel/patch
@@ -563,6 +567,8 @@ sys-kernel/linux-firmware
 sys-kernel/linux-headers
 sys-libs/binutils-libs
 sys-libs/compiler-rt
+sys-libs/compiler-rt
+sys-libs/compiler-rt-sanitizers
 sys-libs/compiler-rt-sanitizers
 sys-libs/e2fsprogs-libs
 sys-libs/efivar
@@ -573,6 +579,7 @@ sys-libs/libcap-ng
 sys-libs/libomp
 sys-libs/libseccomp
 sys-libs/liburing
+sys-libs/libxcrypt
 sys-libs/mtdev
 sys-libs/ncurses
 sys-libs/pam
@@ -724,6 +731,7 @@ x11-libs/xcb-util-keysyms
 x11-libs/xcb-util-renderutil
 x11-libs/xcb-util-wm
 x11-libs/xtrans
+x11-misc/bdwmb
 x11-misc/compose-tables
 x11-misc/dunst
 x11-misc/imake

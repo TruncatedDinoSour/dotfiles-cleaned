@@ -13,7 +13,7 @@ alias l='ll'
 
 alias rm='trash-put'
 alias rls='trash-list'
-alias rrm='trash-empty'
+alias rrm='trash-empty -f'
 alias rmk='trash-restore'
 
 alias v="\$__BASH_BIN_DIR/vim"

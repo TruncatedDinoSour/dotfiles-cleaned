@@ -34,3 +34,18 @@ smap <expr> <C-j>   vsnip#expandable()  ? '<Plug>(vsnip-expand)'         : '<C-j
 
 " vim-codefmt
 map F :FormatCode<CR>
+
+" Tabs
+map <C-n> <ESC>:tabnew<space>
+inoremap <C-t> <ESC>:tabnew<space>
+
+" Open a file
+map <C-o> <ESC>:open<space>
+inoremap <C-o> <ESC>:open<space>
+
+" Splits
+map <C-s> <ESC>:vsplit<space>
+inoremap <C-s> <ESC>:vsplit<space>
+map <C-a> <ESC>:split<space>
+inoremap <C-a> <ESC>:split<space>
+

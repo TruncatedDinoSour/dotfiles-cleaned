@@ -7,7 +7,7 @@
 # sudo make full
 # cd .. || exit 1
 # rm -rf bdwmb
-# Already built into DWM
+# Ebuild in ::dinolay - https://ari-web.netlify.app/gentooatom/x11-misc/bdwmb
 
 # vimplug
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \

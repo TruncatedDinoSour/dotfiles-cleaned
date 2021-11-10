@@ -74,11 +74,11 @@ main() {
 
     \echo '[*] Making a run script'
     \echo "#!/bin/sh" > run
-    \echo "'${emulator}' -cpu host -enable-kvm -m '${ram}' -smp '${cpus}' -drive file='${PWD}/root.${drive_format}',format='${drive_format}' -smbios type=0,uefi=on -bios '${BIOS}' &" >> run
+    \echo "'${emulator}' -net user,hostfwd=tcp::10022-:22 -net nic -cpu host -enable-kvm -m '${ram}' -smp '${cpus}' -drive file='${PWD}/root.${drive_format}',format='${drive_format}' -smbios type=0,uefi=on -bios '${BIOS}' &" >> run
     \chmod a+rx ./run
 
     \echo '[*] Running the VM'
-    "${emulator}" -cdrom "$cdrom" -cpu 'host' -enable-kvm -m "${ram}" -smp "${cpus}" -drive file="${PWD}/root.${drive_format}",format="${drive_format}" -smbios type=0,uefi=on -bios "${BIOS}" &
+    "${emulator}" -net user,hostfwd=tcp::10022-:22 -net nic -cdrom "$cdrom" -cpu 'host' -enable-kvm -m "${ram}" -smp "${cpus}" -drive file="${PWD}/root.${drive_format}",format="${drive_format}" -smbios type=0,uefi=on -bios "${BIOS}" &
 }
 
 

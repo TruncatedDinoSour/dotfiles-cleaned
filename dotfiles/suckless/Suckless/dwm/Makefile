@@ -46,7 +46,6 @@ install: all
 	cp -f send_calcurse_notification ${DESTDIR}${PREFIX}/bin
 	cp -f redshifttoggle ${DESTDIR}${PREFIX}/bin
 	cp -f dwm.desktop /usr/share/xsessions
-	make full -C bdwmb
 	chmod 755 ${DESTDIR}${PREFIX}/bin/dwm
 	chmod 755 ${DESTDIR}${PREFIX}/bin/quitdwm
 	chmod 755 ${DESTDIR}${PREFIX}/bin/emoji
@@ -65,7 +64,5 @@ uninstall:
 		${DESTDIR}${PREFIX}/bin/dwmlocker\
 		${DESTDIR}${PREFIX}/bin/send_calcurse_notification\
 		${DESTDIR}${PREFIX}/bin/redshifttoggle
-
-	make uninstall -C bdwmb
 
 .PHONY: all options clean dist install uninstall

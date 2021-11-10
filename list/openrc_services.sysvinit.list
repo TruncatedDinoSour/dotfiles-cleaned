@@ -1,4 +1,4 @@
-            alsasound |      default                           
+            alsasound | boot                                   
                binfmt | boot                                   
              bootmisc | boot                                   
               cgroups |                                 sysinit
