@@ -1,0 +1,14 @@
+{
+    "Main function": {
+        "prefix": ["main", "m"],
+        "body": [
+            "main() {",
+            "\t$0",
+            "\treturn 0",
+            "}",
+            "",
+            "main \"\\$@\"",
+            ""
+        ]
+    }
+}

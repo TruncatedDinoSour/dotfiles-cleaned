@@ -24,7 +24,7 @@ set timeout                     " let timeout happen
 set encoding=utf-8                      " File encoding
 set laststatus=2                        " Set the bar type
 set undodir=~/.vim/undodir              " Where to put undo files
-set tabstop=8                           " Maximum tab width
+set tabstop=4                           " Maximum tab width
 set shiftwidth=4                        " Indent size
 set softtabstop=0                       " Insert spaces instead of tabs
 set guicursor=a:hor100                  " Set the cursor shape to a _
@@ -34,16 +34,19 @@ set virtualedit=all                     " Improve visual block to select past th
 
 set list listchars=trail:~,extends:»,precedes:«,nbsp:×   " Show indentation
 
+
 " Enable spellchecking and wrapping in vim
 autocmd Filetype markdown,text,xmath,tex set spell wrap
 
 " Make emmet work on HTML
 autocmd Filetype html set notimeout timeoutlen=100 ttimeoutlen=100
 
-autocmd FileType make set noexpandtab tabstop=8
-
 " Porth
 autocmd BufRead,BufNewFile *.porth set filetype=porth
+
+" Make it not store some undos
+autocmd BufWritePre,BufRead,BufNewFile /mnt/* set noundofile undodir=
+
 
 " Plugins
 "   To Install the plugins type `:PlugInstall`
@@ -72,6 +75,7 @@ call plug#begin("~/.vim/plugged")
     Plug 'google/vim-glaive'
     Plug 'Yggdroot/indentLine'
     Plug 'drmingdrmer/vim-tabbar'
+    Plug 'lilydjwg/colorizer'
 call plug#end()
 
 call glaive#Install()               " Install glave

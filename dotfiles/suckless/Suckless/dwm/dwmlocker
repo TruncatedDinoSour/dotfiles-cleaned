@@ -2,7 +2,7 @@
 
 state="$(amixer sget Master | /bin/grep -io '\[on\|off\]$' | tr -d '\[\]')"
 
-/usr/bin/amixer -q set Master mute
-/usr/local/bin/slock
-/usr/bin/amixer -q set Master "$state"
+amixer -q set Master mute
+slock
+amixer -q set Master "$state"
 

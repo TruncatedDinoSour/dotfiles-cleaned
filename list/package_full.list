@@ -139,6 +139,7 @@ dev-lang/python-exec-conf
 dev-lang/rust
 dev-lang/swig
 dev-lang/tcl
+dev-lang/tk
 dev-lang/vala
 dev-lang/yasm
 dev-libs/atk
@@ -197,6 +198,7 @@ dev-libs/openssl
 dev-libs/popt
 dev-libs/protobuf
 dev-libs/ptexenc
+dev-libs/rapidjson
 dev-libs/vala-common
 dev-libs/xxhash
 dev-libs/zziplib
@@ -340,6 +342,8 @@ dev-qt/qtwidgets
 dev-qt/qtxml
 dev-scheme/chezscheme
 dev-scheme/racket
+dev-tcltk/blt
+dev-tcltk/tix
 dev-tex/bibtexu
 dev-tex/glossaries
 dev-tex/latex-beamer
@@ -363,6 +367,7 @@ dev-texlive/texlive-pstricks
 dev-texlive/texlive-xetex
 dev-util/boost-build
 dev-util/cbindgen
+dev-util/ccls
 dev-util/cmake
 dev-util/desktop-file-utils
 dev-util/gdbus-codegen
@@ -557,6 +562,7 @@ sys-fs/cryptsetup
 sys-fs/dosfstools
 sys-fs/e2fsprogs
 sys-fs/lvm2
+sys-fs/squashfs-tools
 sys-fs/udev
 sys-fs/udev-init-scripts
 sys-fs/xfsprogs

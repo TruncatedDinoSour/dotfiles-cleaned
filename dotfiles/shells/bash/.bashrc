@@ -47,10 +47,6 @@ shopt -s autocd
 shopt -s globstar
 shopt -s extglob
 
-# check the window size after each command and, if necessary,
-# update the values of LINES and COLUMNS.
-shopt -s checkwinsize
-
 
 export PROMPT_COMMAND='ps_one'
 

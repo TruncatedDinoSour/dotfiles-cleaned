@@ -17,6 +17,7 @@ alias rrm='trash-empty -f'
 alias rmk='trash-restore'
 
 alias v="\$__BASH_BIN_DIR/vim"
+alias vn='v -Nu NONE'
 
 alias df="\$__BASH_BIN_DIR/duf -hide special"
 alias cat="\$__BASH_BIN_DIR/bat --theme=\"gruvbox-dark\""
@@ -45,7 +46,6 @@ alias transmission-cli="\$__BASH_BIN_DIR/transmission-cli --encryption-preferred
 alias fzf="\$__BASH_BIN_DIR/fzf --layout=reverse --height=20 --no-mouse -i --preview 'bat --theme=\"gruvbox-dark\" --color=always --style=numbers --line-range=:500 {}'"
 alias mpvp="\$__BASH_BIN_DIR/mpv --shuffle --loop-playlist"
 alias clip="\$__BASH_BIN_DIR/xclip -selection clipboard"
-alias vnone="v -u NONE"
 
 alias mimetypeof="xdg-mime query filetype"
 alias dos2unix="\$__BASH_CORE_BIN_DIR/sed -i $'s/\r$//'"

@@ -39,6 +39,9 @@ map F :FormatCode<CR>
 map <C-n> <ESC>:tabnew<space>
 inoremap <C-t> <ESC>:tabnew<space>
 
+map <C-b> <ESC>:tabprevious<CR>
+inoremap <C-t> <ESC>:tabprevious<CR>
+
 " Open a file
 map <C-o> <ESC>:open<space>
 inoremap <C-o> <ESC>:open<space>

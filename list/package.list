@@ -12,10 +12,12 @@ app-shells/fzf
 app-text/texlive
 app-text/zathura
 app-text/zathura-pdf-poppler
+dev-lang/python
 dev-libs/boost
 dev-libs/botan
 dev-scheme/chezscheme
 dev-scheme/racket
+dev-util/ccls
 dev-util/shellcheck-bin
 dev-vcs/git
 mail-client/thunderbird
@@ -39,6 +41,7 @@ sys-apps/mlocate
 sys-boot/grub:2
 sys-fs/cryptsetup
 sys-fs/dosfstools
+sys-fs/squashfs-tools
 sys-fs/xfsprogs
 sys-kernel/dracut
 sys-kernel/gentoo-sources

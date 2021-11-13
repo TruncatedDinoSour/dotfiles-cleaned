@@ -1,0 +1,196 @@
+#!/usr/bin/env python3
+"""A script to generate and show colours"""
+
+import sys
+import typing
+import tkinter
+import os
+
+from threading import Thread
+
+RESET: str = "\033[0m"
+
+CONFIG: dict = {
+    "red": 0,
+    "green": 0,
+    "blue": 0,
+    "bg": False,
+    "allowed_colours": {"red", "green", "blue"},
+}
+
+
+def get_colour_escape(red: int, green: int, blue: int, background: bool = False) -> str:
+    """Get escape colour"""
+
+    return f"\033[{48 if background else 38};2;{red};{green};{blue}m"
+
+
+def rgb_to_hex(rgb: typing.Tuple[int, int, int]) -> str:
+    """Converts a tuple of RGB values into a hex value"""
+
+    return "#%02x%02x%02x" % rgb
+
+
+def hex_to_rgb(value: str) -> typing.Tuple[int, ...]:
+    value = value.lstrip("#")
+    lv = len(value)
+    return tuple(int(value[i : i + lv // 3], 16) for i in range(0, lv, lv // 3))
+
+
+def print_err(msg: str) -> None:
+    """A helper function to print stuff to STDERR"""
+    sys.stderr.write(f"ERROR: {msg}\n")
+
+
+class CommandFn:
+    """Command functions class"""
+
+    @classmethod
+    def display(cls, colour=None) -> None:
+        """Display the colour including its RGB and hex forms"""
+
+        if colour is None:
+            r = CONFIG["red"]
+            g = CONFIG["green"]
+            b = CONFIG["blue"]
+        else:
+            r, g, b = hex_to_rgb(colour)
+
+        escape = get_colour_escape(r, g, b, CONFIG["bg"])
+
+        print(
+            f"{escape!r} :: rgb({r}, {g}, {b}) :: {rgb_to_hex((r, g, b))}  --  {escape}AsDf{RESET}"
+        )
+
+    @classmethod
+    def set_bg_mode(cls, mode: str) -> None:
+        """Set if it's a background colour or foreground colour"""
+
+        CONFIG["bg"] = mode == "true"
+
+    @classmethod
+    def subtract_colour(cls, colour: str, ammount: str) -> None:
+        """Substracts from RGB value"""
+
+        if colour not in CONFIG["allowed_colours"]:
+            print_err(f"{colour} is not a modifieable colour")
+            return
+
+        CONFIG[colour] -= int(ammount)
+
+    @classmethod
+    def add_colour(cls, colour: str, ammount: str) -> None:
+        """Adds to RGB value"""
+
+        if colour not in CONFIG["allowed_colours"]:
+            print_err(f"{colour} is not a modifieable colour")
+            return
+
+        CONFIG[colour] += int(ammount)
+
+    @classmethod
+    def set_colour(cls, colour: str, value: str) -> None:
+        """Sets a specific values to a new one"""
+
+        if colour not in CONFIG["allowed_colours"]:
+            print_err(f"{colour} is not a modifieable colour")
+            return
+
+        CONFIG[colour] = int(value)
+
+    @classmethod
+    def show_in_gui(cls, daemon="nodaemon", geometry="400x400", colour=None) -> None:
+        """Show current colour in GUI"""
+
+        colour = (
+            rgb_to_hex((CONFIG["red"], CONFIG["green"], CONFIG["blue"]))
+            if colour is None
+            else colour
+        )
+
+        r, g, b = hex_to_rgb(colour)
+
+        escape = get_colour_escape(r, g, b, CONFIG["bg"])
+
+        def tk_loop() -> None:
+            gui = tkinter.Tk()
+            gui.title(f"{escape!r} :: rgb({r}, {g}, {b}) :: {rgb_to_hex((r, g, b))}")
+            gui.geometry(geometry)
+            gui["background"] = colour
+
+            gui.mainloop()
+
+        thread = Thread(target=tk_loop)
+        thread.setDaemon(daemon == "daemon")
+        thread.start()
+
+
+COMMANDS: dict = {
+    "out": CommandFn.display,
+    "bg": CommandFn.set_bg_mode,
+    "-": CommandFn.subtract_colour,
+    "+": CommandFn.add_colour,
+    "=": CommandFn.set_colour,
+    "exit": sys.exit,
+    "gui": CommandFn.show_in_gui,
+    "clear": lambda: os.system("cls || clear")
+}
+
+
+def commmands_help() -> None:
+    """Prints help"""
+
+    print("Commands:")
+    for command in COMMANDS:
+        print(f"\t* {command}")
+
+
+COMMANDS.update({"help": commmands_help})
+
+
+def parse_and_run(command: str) -> None:
+    """This parses commands ad runs them"""
+
+    command_split = command.split()
+
+    try:
+        command_name = command_split[0]
+    except IndexError:
+        return
+
+    command_args = command_split[1:]
+
+    fn = COMMANDS.get(command_name)
+
+    if fn is None:
+        print_err(f"command {command_name} not found :(")
+        return
+
+    try:
+        fn(*command_args)
+    except TypeError as e:
+        print_err(str(e))
+
+
+def main() -> int:
+    """Main function"""
+
+    sys.argv.append("")
+
+    file = sys.argv[1]
+
+    if file:
+        with open(file, "r", encoding="utf-8") as f:
+            for line in f:
+                parse_and_run(line)
+        return 0
+
+    while True:
+        command: str = input(":: ")
+        parse_and_run(command)
+
+
+if __name__ == "__main__":
+    # NOTE: My linter forces me to use docstrings, sorry for this mess
+    assert main.__annotations__.get("return") is int, "main() should return an integer"
+    sys.exit(main())
