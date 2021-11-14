@@ -32,6 +32,8 @@ def rgb_to_hex(rgb: typing.Tuple[int, int, int]) -> str:
 
 
 def hex_to_rgb(value: str) -> typing.Tuple[int, ...]:
+    """Convert a given hex colour value into an RGB value"""
+
     value = value.lstrip("#")
     lv = len(value)
     return tuple(int(value[i : i + lv // 3], 16) for i in range(0, lv, lv // 3))
@@ -39,6 +41,7 @@ def hex_to_rgb(value: str) -> typing.Tuple[int, ...]:
 
 def print_err(msg: str) -> None:
     """A helper function to print stuff to STDERR"""
+
     sys.stderr.write(f"ERROR: {msg}\n")
 
 
@@ -124,6 +127,33 @@ class CommandFn:
         thread.setDaemon(daemon == "daemon")
         thread.start()
 
+    @classmethod
+    def save(cls, filename="colour.clr") -> None:
+        """Save colour information"""
+
+        hex_colour = rgb_to_hex((CONFIG["red"], CONFIG["green"], CONFIG["blue"]))
+        r, g, b = hex_to_rgb(hex_colour)
+        escape = get_colour_escape(r, g, b, CONFIG["bg"])
+
+        with open(os.path.expanduser(filename), "a", encoding="utf-8") as f:
+            f.write("-----------------------\n")
+            f.write(f"ESCAPE: {escape!r}\n")
+            f.write(f"RGB: rgb({r}, {g}, {b})\n")
+            f.write(f"HEX: {hex_colour}\n")
+            f.write("-----------------------\n")
+            f.write("\n")
+
+    @classmethod
+    def export(cls, filename="colour.cp") -> None:
+        """Export current colour to a file"""
+
+        with open(os.path.expanduser(filename), "w", encoding="utf-8") as f:
+            f.write(f"= red {CONFIG['red']}\n")
+            f.write(f"= green {CONFIG['green']}\n")
+            f.write(f"= blue {CONFIG['blue']}\n")
+            f.write(f"bg {str(CONFIG['bg']).lower()}\n")
+            f.write("\n")
+
 
 COMMANDS: dict = {
     "out": CommandFn.display,
@@ -133,7 +163,9 @@ COMMANDS: dict = {
     "=": CommandFn.set_colour,
     "exit": sys.exit,
     "gui": CommandFn.show_in_gui,
-    "clear": lambda: os.system("cls || clear")
+    "clear": lambda: os.system("cls || clear"),
+    "save": CommandFn.save,
+    "export": CommandFn.export,
 }
 
 
@@ -172,6 +204,20 @@ def parse_and_run(command: str) -> None:
         print_err(str(e))
 
 
+def load_file(filename: str) -> None:
+    """Loads a specified file"""
+
+    try:
+        with open(os.path.expanduser(filename), "r", encoding="utf-8") as f:
+            for line in f:
+                parse_and_run(line)
+    except FileNotFoundError:
+        print_err("File not found")
+
+
+COMMANDS.update({"load": load_file})
+
+
 def main() -> int:
     """Main function"""
 
@@ -180,9 +226,7 @@ def main() -> int:
     file = sys.argv[1]
 
     if file:
-        with open(file, "r", encoding="utf-8") as f:
-            for line in f:
-                parse_and_run(line)
+        load_file(file)
         return 0
 
     while True:

@@ -25,7 +25,8 @@ main() {
     which "$SHELL" | base32 | rev;
     env | rev | base64 | sed 's/w/G/g; s/o/M/g; s/=//g' | sha256sum;
     ps aux | sha256sum | base64 | rev;
-    ss | sha384sum | rev)${RANDOM}"
+    ss | sha384sum | rev;
+    w | xz -z -9 -e -f -c -T0 --no-adjust | sha512sum)${RANDOM}"
 
     echo "$id" | rev >>/tmp/.pwdgen_random_bytes
     echo "$@" >>/tmp/.pwdgen_random_bytes
@@ -48,13 +49,22 @@ main() {
         sha512sum |
         rev |
         base64 -w "$rng" |
-        sha512sum |
+        gzip -f -9 |
+        lz4 -c -7 --no-content-size -BD -z |
+        xz -z -9 -e -f -c -T0 --no-adjust --block-size="$((RANDOM % 50))" --no-warn |
+        bzip2 -3 -z -f |
+        base64 -w "$((RANDOM % 48))" --ignore-garbage |
         sed 's/5/p/g; s/e/G/g; s/c/5/g; s/b/c/g; s/c/H/g; s/9/e/g' |
         base64 -w 0 --ignore-garbage |
         sed 's/_/O/g; s/d/_/g; s/A/@/g; s/E/:/g' |
         echo "$(cat -)$(echo "$bytes" | rev)" |
         sed 's/./&\n/g' |
         shuf |
+        base64 -w "$((RANDOM % rng))" --ignore-garbage |
+        cat - /dev/urandom |
+        head -n "$((rng ** 2))" |
+        base64 |
+        sha512sum |
         tr -d "\n" |
         base64 -w 8 |
         base64 -w 0 --ignore-garbage |

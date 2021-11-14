@@ -181,11 +181,11 @@ static Key keys[] = {
     // { MODKEY,                       XK_0,      view,           {.ui = ~0 } },
     // copy a window to all tags?
     // { MODKEY|ShiftMask,             XK_0,      tag,            {.ui = ~0 } },
-    // ???
-    // { MODKEY,                       XK_comma,  focusmon,       {.i = -1 } },
-    // { MODKEY,                       XK_period, focusmon,       {.i = +1 } },
-    // { MODKEY|ShiftMask,             XK_comma,  tagmon,         {.i = -1 } },
-    // { MODKEY|ShiftMask,             XK_period, tagmon,         {.i = +1 } },
+    // Monicle movelemnt
+    { MODKEY,                       XK_comma,  focusmon,       {.i = -1 } },
+    { MODKEY,                       XK_period, focusmon,       {.i = +1 } },
+    { MODKEY|ShiftMask,             XK_comma,  tagmon,         {.i = -1 } },
+    { MODKEY|ShiftMask,             XK_period, tagmon,         {.i = +1 } },
     // gap control
     {MODKEY, XK_minus, setgaps, {.i = -1}},
     {MODKEY, XK_equal, setgaps, {.i = +1}},

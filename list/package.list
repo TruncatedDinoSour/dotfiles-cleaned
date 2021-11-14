@@ -19,6 +19,7 @@ dev-scheme/chezscheme
 dev-scheme/racket
 dev-util/ccls
 dev-util/shellcheck-bin
+dev-util/shfmt
 dev-vcs/git
 mail-client/thunderbird
 media-fonts/fira-mono

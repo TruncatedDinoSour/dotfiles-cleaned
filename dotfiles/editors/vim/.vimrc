@@ -76,6 +76,7 @@ call plug#begin("~/.vim/plugged")
     Plug 'Yggdroot/indentLine'
     Plug 'drmingdrmer/vim-tabbar'
     Plug 'lilydjwg/colorizer'
+    Plug 'editorconfig/editorconfig-vim'
 call plug#end()
 
 call glaive#Install()               " Install glave

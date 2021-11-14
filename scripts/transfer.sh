@@ -27,6 +27,7 @@ from=(
 
     '/home/ari/.gtkrc-2.0'
     '/home/ari/Pictures/wallpaper.png'
+    '/home/ari/.editorconfig'
 
     "$FIREFOX_PROFILE"
 
@@ -80,6 +81,7 @@ to=(
     'dotfiles/suckless'
     'dotfiles/suckless'
 
+    'dotfiles/etc'
     'dotfiles/etc'
     'dotfiles/etc'
 

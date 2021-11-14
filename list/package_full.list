@@ -383,6 +383,7 @@ dev-util/ninja
 dev-util/pkgconf
 dev-util/re2c
 dev-util/shellcheck-bin
+dev-util/shfmt
 dev-util/systemtap
 dev-vcs/git
 gnome-base/gsettings-desktop-schemas
