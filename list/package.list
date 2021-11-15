@@ -42,7 +42,6 @@ sys-apps/mlocate
 sys-boot/grub:2
 sys-fs/cryptsetup
 sys-fs/dosfstools
-sys-fs/squashfs-tools
 sys-fs/xfsprogs
 sys-kernel/dracut
 sys-kernel/gentoo-sources

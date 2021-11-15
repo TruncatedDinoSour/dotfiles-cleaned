@@ -37,7 +37,6 @@ from=(
 
     '/home/ari/.vim'
     '/home/ari/.vimrc'
-    '/home/ari/.vsnip'
 
     '/home/ari/.config/VSCodium/User/snippets'
     '/home/ari/.config/VSCodium/product.json'
@@ -91,7 +90,6 @@ to=(
 
     'dotfiles/custom'
 
-    'dotfiles/editors/vim'
     'dotfiles/editors/vim'
     'dotfiles/editors/vim'
 

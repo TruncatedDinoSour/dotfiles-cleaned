@@ -60,13 +60,10 @@ autocmd BufWritePre,BufRead,BufNewFile /mnt/* set noundofile undodir=
 call plug#begin("~/.vim/plugged")
     Plug 'turbio/bracey.vim'
     Plug 'mattn/emmet-vim'
-    Plug 'hrsh7th/vim-vsnip'
-    Plug 'hrsh7th/vim-vsnip-integ'
     Plug 'AlessandroYorba/Alduin'
     Plug 'tpope/vim-surround'
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
     Plug 'w0rp/ale'
-    Plug 'jiangmiao/auto-pairs'
     Plug 'itchyny/lightline.vim'
     Plug 'vim-latex/vim-latex'
     Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install()  }, 'for': ['markdown', 'vim-plug'] }

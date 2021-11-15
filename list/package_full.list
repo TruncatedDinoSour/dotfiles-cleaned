@@ -563,7 +563,6 @@ sys-fs/cryptsetup
 sys-fs/dosfstools
 sys-fs/e2fsprogs
 sys-fs/lvm2
-sys-fs/squashfs-tools
 sys-fs/udev
 sys-fs/udev-init-scripts
 sys-fs/xfsprogs

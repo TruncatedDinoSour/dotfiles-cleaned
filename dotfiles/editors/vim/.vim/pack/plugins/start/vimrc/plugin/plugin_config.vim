@@ -20,3 +20,11 @@ let g:user_emmet_install_global = 1
 let g:indentLine_char = '·'
 let g:indentLine_conceallevel = 1
 
+" CoC
+let g:coc_global_extensions = [
+            \ 'coc-json',
+            \ 'coc-pyright',
+            \ 'coc-pairs',
+            \ 'coc-snippets'
+            \ ]
+
