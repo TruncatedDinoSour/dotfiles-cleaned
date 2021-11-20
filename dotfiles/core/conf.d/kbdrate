@@ -1,0 +1,6 @@
+# Set the delay
+kbd_delay=200
+
+# Set the rate
+kbd_rate=80
+

@@ -7,6 +7,8 @@
 /home/ari/.gtkrc-2.0 -> dotfiles/etc
 /home/ari/Pictures/wallpaper.png -> dotfiles/etc
 /home/ari/.editorconfig -> dotfiles/etc
+/home/ari/.mailcap -> dotfiles/etc
+/home/ari/.mutt/muttrc -> dotfiles/etc
 /home/ari/.mozilla/firefox/3s4h1qq0.default-release -> dotfiles/etc/firefox
 /home/ari/.icons -> dotfiles/icons
 /home/ari/.scripts -> dotfiles/custom
@@ -30,9 +32,12 @@
 /etc/profile.env -> dotfiles/core
 /etc/bash_completion.d -> dotfiles/core
 /etc/gnupg -> dotfiles/core
+/usr/share/keymaps/i386/qwerty/custom_mapping.map.gz -> dotfiles/core
+/home/ari/Documents/custom_mapping.map -> dotfiles/core
 /etc/portage -> dotfiles/portage
 /usr/src/linux/.config -> dotfiles/linux
 /usr/share/themes/mumble-dark.qbtheme -> dotfiles/qbittorrent
 /home/ari/Documents/wpa_cli_fix/doc.tex -> dotfiles/fix/wpa_cli_fix.tex
 /home/ari/Documents/new_kernel_gentoo/doc.md -> dotfiles/fix/gentoo_new_kernel.md
 /home/ari/.racket -> dotfiles/lang
+/etc/init.d/kbdrate -> dotfiles/openrc

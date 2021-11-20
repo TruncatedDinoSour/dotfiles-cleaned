@@ -9,6 +9,7 @@
                  fsck | boot                                   
              hostname | boot                                   
               hwclock | boot                                   
+              kbdrate | boot                                   
               keymaps | boot                                   
             killprocs |                        shutdown        
     kmod-static-nodes |                                 sysinit

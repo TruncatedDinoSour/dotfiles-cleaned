@@ -202,7 +202,7 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-       
+
 # Brightness key bindings (need x11-apps/xbacklight for xbacklight.)
 bindsym XF86MonBrightnessUp exec xbacklight -inc 10
 bindsym XF86MonBrightnessDown exec xbacklight -dec 10
@@ -392,25 +392,25 @@ set $i3blocks_config_file "/home/ari/.config/i3blocks/i3blocks.conf"
 
 # colours
 #* bar *#
-# set $bar_bg		#283149
-set $bar_bg		    #262626
-set $bar_stat		#DCDCDC
-set $bar_sep		#EEEBDD
+# set $bar_bg   #283149
+set $bar_bg       #262626
+set $bar_stat   #DCDCDC
+set $bar_sep    #EEEBDD
 
-set $bar_ws_focus	#CA810C
-set $bar_ws_ubg 	#3D3D3D
+set $bar_ws_focus #CA810C
+set $bar_ws_ubg   #3D3D3D
 
 #* windows *#
 # #404B69 (window highlighted border)
-set $window_bg		#CA810C
-set $iwindow_bg	    #444444
-set $ubg_colour		#FB4934
+set $window_bg    #CA810C
+set $iwindow_bg     #444444
+set $ubg_colour   #FB4934
 
-set $txt			#FFFFFF
-set $itxt			#E8EAE6
+set $txt      #FFFFFF
+set $itxt     #E8EAE6
 
 #* i.... = innactive *#
-#* u.... = urgent	 *#
+#* u.... = urgent  *#
 
 
 # display vars
@@ -431,29 +431,29 @@ set $masterl "/home/ari/.config/scripts/master"
 
 
 bar {
-		status_command i3blocks -c $i3blocks_config_file
-		# uncomment the line below for access to i3status instead of i3blocks
+    status_command i3blocks -c $i3blocks_config_file
+    # uncomment the line below for access to i3status instead of i3blocks
         # status_command i3status -c $i3status_config_file
-		position top
-		font pango:sans 11
+    position top
+    font pango:sans 11
         font pango:FontAwesome 11
-		# font pango:Source Code Pro Medium 11.6
+    # font pango:Source Code Pro Medium 11.6
 
-		# enable transperacy
-		i3bar_command i3bar --transparency
-		tray_output none
-		separator_symbol "|"
-		
-		colors {
+    # enable transperacy
+    i3bar_command i3bar --transparency
+    tray_output none
+    separator_symbol "|"
+
+    colors {
            background $bar_bg
            statusline $bar_stat
            separator  $bar_sep
 
-           #					border		bg				txt
+           #          border    bg        txt
            focused_workspace    $bar_bg     $bar_ws_focus   $txt
            inactive_workspace   $bar_bg     $bar_bg         $itxt
            urgent_workspace     $bar_bg     $bar_ws_ubg     $txt
-		}
+    }
 }
 
 ## notes:
@@ -495,11 +495,11 @@ for_window [class="^.*"] border pixel 2
 
 
 # windows
-#								border		bg			text	indicator
-client.focused				$window_bg	$window_bg	$txt	$window_bg
-client.unfocused			$iwindow_bg	$iwindow_bg	$itxt	$iwindow_bg
-client.focused_inactive 	$iwindow_bg	$iwindow_bg	$itxt	$iwindow_bg
-client.urgent				$ubg_colour	$ubg_colour	$txt	$ubg_colour
+#               border    bg      text  indicator
+client.focused        $window_bg  $window_bg  $txt  $window_bg
+client.unfocused      $iwindow_bg $iwindow_bg $itxt $iwindow_bg
+client.focused_inactive   $iwindow_bg $iwindow_bg $itxt $iwindow_bg
+client.urgent       $ubg_colour $ubg_colour $txt  $ubg_colour
 
 
 # execute compositor
@@ -531,7 +531,7 @@ set $backup_terminal "st -e bash"
 
 bindsym $mod+control+w exec $browser
 bindsym $mod+control+e exec $editor
-bindsym $mod+control+b exec $backup_terminal 
+bindsym $mod+control+b exec $backup_terminal
 # bindsym Print exec $screenshot_app
 
 
@@ -544,9 +544,9 @@ exec_always --no-startup-id xautolock -time 10 -locker $screen_locker
 # stack/master layout
 exec --no-startup-id  $masterl
 # swap to master node
-bindsym $mod+m nop swap master 
+bindsym $mod+m nop swap master
 # go to master node
-bindsym $mod+shift+m nop go master 
+bindsym $mod+shift+m nop go master
 # enable/disable master layout in current workspace
 bindsym $mod+alt+m nop master toggle
 

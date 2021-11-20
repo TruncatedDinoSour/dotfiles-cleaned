@@ -1,0 +1,21 @@
+set spoolfile = "imaps://imap.gmail.com:993/INBOX"
+set folder = "imaps://imap.gmail.com:993"
+set record = "+[Gmail]/Sent Mail"
+set postponed = "+[Gmail]/Drafts"
+
+set header_cache = "~/.mutt/cache/headers"
+set message_cachedir = "~/.mutt/cache/bodies"
+set certificate_file = "~/.mutt/certificates"
+
+set record = ""
+
+set ssl_starttls = yes
+set ssl_force_tls = yes
+
+# Default account
+source "gpg -dq ~/.mutt/accounts/account_1.gpg |"
+
+# Macros for switching accounts
+macro index  1 "<sync-mailbox><enter-command>source 'gpg -dq ~/.mutt/accounts/account_1.gpg |'<enter><change-folder>!<enter>"
+macro index  2 "<sync-mailbox><enter-command>source 'gpg -dq ~/.mutt/accounts/account_2.gpg |'<enter><change-folder>!<enter>"
+

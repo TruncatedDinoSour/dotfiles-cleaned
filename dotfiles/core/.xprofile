@@ -3,6 +3,7 @@
 # this script autostarts on startup
 # please be careful
 
+
 wallpaper="$HOME/Pictures/wallpaper.png"
 
 bdwmb -q &
@@ -10,7 +11,7 @@ dunst &
 calcurse --daemon &
 feh --bg-tile --no-fehbg "$wallpaper" &
 xautolock -time 10 -locker dwmlocker &
-xset r rate 300 50 &
 xbacklight -set 80 &
-xrandr --output eDP1 --mode 1920x1080 --scale 1.5x1.5 &
+xset r rate 300 50 &
+xrandr --output eDP1 --mode 1920x1080 --scale 1.6x1.6 &
 

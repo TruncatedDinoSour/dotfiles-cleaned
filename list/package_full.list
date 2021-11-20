@@ -8,6 +8,7 @@ acct-group/kvm
 acct-group/locate
 acct-group/lp
 acct-group/lpadmin
+acct-group/mail
 acct-group/man
 acct-group/messagebus
 acct-group/nullmail
@@ -21,10 +22,12 @@ acct-group/stapusr
 acct-group/tape
 acct-group/tty
 acct-group/video
+acct-user/mail
 acct-user/man
 acct-user/messagebus
 acct-user/nullmail
 acct-user/portage
+acct-user/postmaster
 acct-user/sshd
 app-accessibility/at-spi2-atk
 app-accessibility/at-spi2-core
@@ -50,13 +53,11 @@ app-crypt/gnupg
 app-crypt/gpgme
 app-crypt/libb2
 app-crypt/libmd
-app-crypt/libsecret
 app-crypt/openpgp-keys-gentoo-release
 app-crypt/pinentry
 app-crypt/rhash
 app-editors/vim
 app-editors/vim-core
-app-editors/vscodium
 app-emulation/qemu
 app-emulation/spice
 app-emulation/spice-protocol
@@ -66,7 +67,6 @@ app-eselect/eselect-lib-bin-symlink
 app-eselect/eselect-lua
 app-eselect/eselect-notify-send
 app-eselect/eselect-pinentry
-app-eselect/eselect-repository
 app-eselect/eselect-rust
 app-eselect/eselect-vi
 app-i18n/uchardet
@@ -126,6 +126,7 @@ dev-cpp/abseil-cpp
 dev-cpp/glibmm
 dev-cpp/ms-gsl
 dev-cpp/range-v3
+dev-db/lmdb
 dev-db/sqlite
 dev-lang/go
 dev-lang/lua
@@ -145,7 +146,7 @@ dev-lang/yasm
 dev-libs/atk
 dev-libs/boost
 dev-libs/botan
-dev-libs/dbus-glib
+dev-libs/cyrus-sasl
 dev-libs/double-conversion
 dev-libs/elfutils
 dev-libs/expat
@@ -298,13 +299,11 @@ dev-python/alabaster
 dev-python/Babel
 dev-python/certifi
 dev-python/charset_normalizer
-dev-python/cython
 dev-python/docutils
 dev-python/httplib2
 dev-python/idna
 dev-python/imagesize
 dev-python/jinja
-dev-python/lxml
 dev-python/m2crypto
 dev-python/mako
 dev-python/markupsafe
@@ -389,7 +388,7 @@ dev-vcs/git
 gnome-base/gsettings-desktop-schemas
 gnome-base/librsvg
 gui-libs/display-manager-init
-mail-client/thunderbird
+mail-client/mutt
 mail-mta/nullmailer
 media-fonts/encodings
 media-fonts/fira-mono
@@ -460,6 +459,7 @@ net-libs/libtirpc
 net-libs/nghttp2
 net-libs/nodejs
 net-libs/usrsctp
+net-mail/mailbase
 net-misc/curl
 net-misc/dhcpcd
 net-misc/iputils
@@ -537,9 +537,7 @@ sys-devel/binutils
 sys-devel/binutils-config
 sys-devel/bison
 sys-devel/clang
-sys-devel/clang
 sys-devel/clang-common
-sys-devel/clang-runtime
 sys-devel/clang-runtime
 sys-devel/flex
 sys-devel/gcc
@@ -548,7 +546,6 @@ sys-devel/gettext
 sys-devel/gnuconfig
 sys-devel/libtool
 sys-devel/lld
-sys-devel/llvm
 sys-devel/llvm
 sys-devel/llvm-common
 sys-devel/llvmgold
@@ -573,8 +570,6 @@ sys-kernel/linux-firmware
 sys-kernel/linux-headers
 sys-libs/binutils-libs
 sys-libs/compiler-rt
-sys-libs/compiler-rt
-sys-libs/compiler-rt-sanitizers
 sys-libs/compiler-rt-sanitizers
 sys-libs/e2fsprogs-libs
 sys-libs/efivar
@@ -660,7 +655,6 @@ virtual/perl-version
 virtual/perl-XSLoader
 virtual/pkgconfig
 virtual/rust
-virtual/secret-service
 virtual/service-manager
 virtual/ssh
 virtual/tex-base

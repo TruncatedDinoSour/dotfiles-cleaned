@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env sh
 
 state="$(amixer sget Master | /bin/grep -io '\[on\|off\]$' | tr -d '\[\]')"
 

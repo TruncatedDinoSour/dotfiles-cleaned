@@ -39,52 +39,45 @@ static const Rule rules[] = {
      *      WM_CLASS(STRING) = instance, class
      *      WM_NAME(STRING) = title
      */
-    /* class                         instance   title       tags mask
-       isfloating    isterminal  noswallow   monitor */
+    /* class        instance   title       tags mask   isterminal  noswallow   monitor */
     /*                                                      (1 << tag - 1) */
     /* all tags */
-    {"ksnip", NULL, NULL, 0, 1, 0, 1, -1},
-    {"Tk", NULL, NULL, 0, 1, 0, 1, -1},
-    {"st", NULL, NULL, 0, 0, 1, 0, -1},
-    {"Alacritty", NULL, NULL, 0, 0, 1, 0, -1},
-    {NULL, NULL, "Event Tester", 0, 0, 0, 1, -1}, /* xev */
-    {"SimpleScreenRecorder", NULL, NULL, 0, 1, 0, 1, -1},
-    {"Peek", NULL, NULL, 0, 1, 0, 1, -1},
-    {"obs", NULL, NULL, 0, 1, 0, 1, -1},
-    {NULL, NULL, "Picture in picture", 0, 1, 0, 1, -1},
+    {"st",          NULL,       NULL,       0,          0,          0,      -1},
+    {"Alacritty",   NULL,       NULL,       0,          1,          0,      -1},
 
     /* tag 2 */
-    {"Firefox", NULL, NULL, 1 << 1, 0, 0, 0, -1},
-    {"Pale moon", NULL, NULL, 1 << 1, 0, 0, 0, -1},
-    {"Tor Browser", NULL, NULL, 1 << 1, 0, 0, 0, -1},
-    {"LibreWolf", NULL, NULL, 1 << 1, 0, 0, 0, -1},
-    {"chromium", NULL, NULL, 1 << 1, 0, 0, 0, -1},
-    {"qBittorrent", NULL, NULL, 1 << 1, 0, 0, 0, -1},
-    {"kristall", NULL, NULL, 1 << 1, 0, 0, 0, -1},
-    {"Thunderbird", NULL, NULL, 1 << 1, 0, 0, 0, -1},
-    {"FreeTube", NULL, NULL, 1 << 1, 0, 0, 0, -1},
+    {"Firefox",     NULL,       NULL,       1 << 1,     0,          0,      -1},
+    {"Pale moon",   NULL,       NULL,       1 << 1,     0,          0,      -1},
+    {"Tor Browser", NULL,       NULL,       1 << 1,     0,          0,      -1},
+    {"LibreWolf",   NULL,       NULL,       1 << 1,     0,          0,      -1},
+    {"chromium",    NULL,       NULL,       1 << 1,     0,          0,      -1},
+    {"qBittorrent", NULL,       NULL,       1 << 1,     0,          0,      -1},
+    {"kristall",    NULL,       NULL,       1 << 1,     0,          0,      -1},
+    {"Thunderbird", NULL,       NULL,       1 << 1,     0,          0,      -1},
+    {"FreeTube",    NULL,       NULL,       1 << 1,     0,          0,      -1},
 
     /* tag 3 */
-    {"Code", NULL, NULL, 1 << 2, 0, 0, 0, -1},
-    {"jetbrains-pycharm-ce", NULL, NULL, 1 << 2, 0, 0, 0, -1},
-    {"VSCodium", NULL, NULL, 1 << 2, 0, 0, 0, -1},
+    {"Code",        NULL,       NULL,       1 << 2,     0,          0,      -1},
+    {"VSCodium",    NULL,       NULL,       1 << 2,     0,          0,      -1},
+    {"jetbrains-pycharm-ce",    NULL, NULL, 1 << 2,     0,          0,      -1},
 
     /* tag 4 */
-    {"discord", NULL, NULL, 1 << 3, 0, 0, 0, -1},
-    {"TelegramDesktop", NULL, NULL, 1 << 3, 0, 0, 0, -1},
-    {"KotatogramDesktop", NULL, NULL, 1 << 3, 0, 0, 0, -1},
-    {"Bitwarden", NULL, NULL, 1 << 3, 0, 0, 0, -1},
+    {"discord",     NULL,       NULL,       1 << 3,     0,          0,      -1},
+    {"Bitwarden",   NULL,       NULL,       1 << 3,     0,          0,      -1},
+    {"TelegramDesktop",         NULL, NULL, 1 << 3,     0,          0,      -1},
+    {"KotatogramDesktop",       NULL, NULL, 1 << 3,     0,          0,      -1},
 
     /* tag 5 */
-    {"Microsoft Teams - Preview", NULL, NULL, 1 << 4, 0, 0, 0, -1},
-    {"teams-for-linux", NULL, NULL, 1 << 4, 0, 0, 0, -1},
-    {"zoom", NULL, NULL, 1 << 4, 0, 0, 0, -1},
+    {"Microsoft Teams - Preview", NULL, NULL, 1 << 4,   0,          0,      -1},
+    {"teams-for-linux",         NULL, NULL, 1 << 4,     0,          0,      -1},
+    {"zoom",                    NULL, NULL, 1 << 4,     0,          0,      -1},
 
     /* tag 6 */
-    {"VirtualBox Manager", NULL, NULL, 1 << 5, 0, 0, 0, -1},
+    {"VirtualBox Manager",      NULL, NULL, 1 << 5,     0,          0,      -1},
+    {NULL,                    "qemu", NULL, 1 << 5,     0,          0,      -1},
 
     /* tag 7 */
-    {"libreoffice", NULL, NULL, 1 << 6, 0, 0, 0, -1},
+    {"libreoffice",             NULL, NULL, 1 << 6,     0,          0,      -1},
 };
 
 /* layout(s) */
@@ -96,8 +89,6 @@ static const int resizehints =
 static const Layout layouts[] = {
     /* symbol     arrange function */
     {"[]=", tile}, /* first entry is default */
-    {"><>", NULL}, /* no layout function means floating behavior */
-    {"[M]", monocle},
 };
 
 /* key definitions */
@@ -140,6 +131,7 @@ static const char *redshifttoggle[] = {"redshifttoggle", "eDP1", NULL};
 
 static const char *quitdwmcmd[] = {"quitdwm", NULL};
 static const char *termcmd[] = {"st", NULL};
+static const char *extrakbcmd[] ={"extrakb", NULL};
 
 static Key keys[] = {
     /* modifier                     key        function        argument */
@@ -167,25 +159,10 @@ static Key keys[] = {
     {MODKEY, XK_Tab, view, {0}},
     // kill a window
     {MODKEY | ShiftMask, XK_q, killclient, {0}},
-    // default (tiled) layout
-    {MODKEY, XK_t, setlayout, {.v = &layouts[0]}},
-    // floating layout
-    {MODKEY, XK_f, setlayout, {.v = &layouts[1]}},
-    // tabbed layout
-    {MODKEY, XK_m, setlayout, {.v = &layouts[2]}},
-    // toggle floating window
-    {MODKEY, XK_space, setlayout, {0}},
-    // toggle floating on all windows
-    {MODKEY | ShiftMask, XK_space, togglefloating, {0}},
     // select all tags?
     // { MODKEY,                       XK_0,      view,           {.ui = ~0 } },
     // copy a window to all tags?
     // { MODKEY|ShiftMask,             XK_0,      tag,            {.ui = ~0 } },
-    // Monicle movelemnt
-    { MODKEY,                       XK_comma,  focusmon,       {.i = -1 } },
-    { MODKEY,                       XK_period, focusmon,       {.i = +1 } },
-    { MODKEY|ShiftMask,             XK_comma,  tagmon,         {.i = -1 } },
-    { MODKEY|ShiftMask,             XK_period, tagmon,         {.i = +1 } },
     // gap control
     {MODKEY, XK_minus, setgaps, {.i = -1}},
     {MODKEY, XK_equal, setgaps, {.i = +1}},
@@ -220,6 +197,8 @@ static Key keys[] = {
     {MODKEY, XK_n, spawn, {.v = calandarcmd}},
     // Toggle redshift
     {MODKEY | ShiftMask, XK_r, spawn, {.v = redshifttoggle}},
+    // Extra keyboard characters
+    {MODKEY | ShiftMask, XK_k, spawn, {.v = extrakbcmd}},
 };
 
 /* button definitions */
@@ -228,12 +207,9 @@ static Key keys[] = {
 static Button buttons[] = {
     /* click                event mask      button          function argument
      */
-    {ClkLtSymbol, 0, Button1, setlayout, {0}},
-    {ClkLtSymbol, 0, Button3, setlayout, {.v = &layouts[2]}},
     {ClkWinTitle, 0, Button2, zoom, {0}},
     {ClkStatusText, 0, Button2, spawn, {.v = termcmd}},
     {ClkClientWin, MODKEY, Button1, movemouse, {0}},
-    {ClkClientWin, MODKEY, Button2, togglefloating, {0}},
     {ClkClientWin, MODKEY, Button3, resizemouse, {0}},
     {ClkTagBar, 0, Button1, view, {0}},
     {ClkTagBar, 0, Button3, toggleview, {0}},

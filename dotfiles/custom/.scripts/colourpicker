@@ -154,6 +154,12 @@ class CommandFn:
             f.write(f"bg {str(CONFIG['bg']).lower()}\n")
             f.write("\n")
 
+    @classmethod
+    def loadhex(cls, colour) -> None:
+        """Loads a colour from hex"""
+
+        CONFIG["red"], CONFIG["green"], CONFIG["blue"] = hex_to_rgb(colour)
+
 
 COMMANDS: dict = {
     "out": CommandFn.display,
@@ -166,6 +172,7 @@ COMMANDS: dict = {
     "clear": lambda: os.system("cls || clear"),
     "save": CommandFn.save,
     "export": CommandFn.export,
+    "loadhex": CommandFn.loadhex,
 }
 
 
@@ -200,7 +207,7 @@ def parse_and_run(command: str) -> None:
 
     try:
         fn(*command_args)
-    except TypeError as e:
+    except Exception as e:
         print_err(str(e))
 
 

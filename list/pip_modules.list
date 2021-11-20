@@ -24,7 +24,6 @@ cPython
 cryptography
 curtsies
 cwcwidth
-Cython
 dbus-python
 debugpy
 decorator
@@ -126,6 +125,7 @@ qtconsole
 QtPy
 regex
 requests
+requests-file
 resolvelib
 rich
 rsa
@@ -149,6 +149,7 @@ terminado
 testpath
 textual
 textual-inputs
+tldextract
 toml
 tomli
 tornado

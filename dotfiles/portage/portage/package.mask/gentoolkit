@@ -1,2 +1,6 @@
+# STOP! unmasking and installing this package will break portage, python and
+# ebuild, please DO NOT UNMASK this package or
+# THIS WILL BREAK YOUR SYSTEM
+
 app-portage/gentoolkit
 

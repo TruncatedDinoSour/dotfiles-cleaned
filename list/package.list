@@ -1,9 +1,7 @@
 app-admin/keepassxc
 app-admin/sudo
 app-editors/vim
-app-editors/vscodium
 app-emulation/qemu
-app-eselect/eselect-repository
 app-misc/neofetch
 app-misc/yafetch
 app-office/calcurse
@@ -21,7 +19,7 @@ dev-util/ccls
 dev-util/shellcheck-bin
 dev-util/shfmt
 dev-vcs/git
-mail-client/thunderbird
+mail-client/mutt
 media-fonts/fira-mono
 media-fonts/freefont
 media-fonts/nerd-fonts
