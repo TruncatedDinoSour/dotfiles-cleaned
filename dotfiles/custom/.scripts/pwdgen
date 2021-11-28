@@ -41,7 +41,7 @@ main() {
 
     rm -f /tmp/.pwdgen_random_bytes
 
-    echo -en "${RANDOM}$((((RANDOM + 3) / (max_length + rng + 83)) + 7 * max_length ^ WINDOWID))${bytes}${COLUMNS}${max_length}${id}${RANDOM}\
+    echo -en "${RADNOM}$(ls -laikrt /proc 2>/dev/null | sha512sum | awk '{print $1}')${RANDOM}$((((RANDOM + 3) / (max_length + rng + 83)) + 7 * max_length ^ WINDOWID))${bytes}${COLUMNS}${max_length}${id}${RANDOM}\
         $(date '+%N%S%N%u%V%N%y%Y%m%G%I%m%N%s%N')${bytes,,}$(ls /usr/bin)${WINDOWID}${PS1}${RANDOM}" |
         base64 -w 0 --ignore-garbage |
         sed 's/O/k/g; s/=/{/g; s/U/s/g; s/4/%/g; s/G/O/g; s/g/4/g; s/s/p/g; s/T/=/g; s/R/*/g' |
@@ -50,6 +50,7 @@ main() {
         rev |
         base64 -w "$rng" |
         gzip -f -9 |
+        sha512sum |
         lz4 -c -7 --no-content-size -BD -z |
         xz -z -9 -e -f -c -T0 --no-adjust --block-size="$((RANDOM % 50))" --no-warn |
         bzip2 -3 -z -f |

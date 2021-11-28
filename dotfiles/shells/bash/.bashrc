@@ -6,12 +6,27 @@
 [[ $- != *i* ]] && return
 export PATH="$PATH:/usr/local/bin:$HOME/.local/bin:$HOME/.scripts"
 
+
+__BASH_TERM="$(tset -q)"
+
+
+# TMUX config
+source ~/.config/shells/tmux/tmux.*
+
+# Check for TMUX
+if [ -z "$TMUX" ] && [ "$__BASH_TERM" != 'linux' ] && [ -x "$(command -v tmux)" ] && [ ! "$__BASH_TMUX_DISABLE" ]; then
+    tmux -2 -l
+    exit 127
+fi
+
+
 # Disable stuff like ^S and ^Q
 stty -ixon
 
 
 # Functions
 source ~/.config/shells/bash/*.functions
+
 
 # Enable FZF support
 if [[ -x "$(command -v fzf)" ]]; then
@@ -26,11 +41,11 @@ fi
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
 # sources /etc/bash.bashrc).
 if ! shopt -oq posix; then
-  if [ -f /usr/share/bash-completion/bash_completion ]; then
-    . /usr/share/bash-completion/bash_completion
-  elif [ -f /etc/bash_completion ]; then
-    . /etc/bash_completion
-  fi
+    if [ -f /usr/share/bash-completion/bash_completion ]; then
+      . /usr/share/bash-completion/bash_completion
+    elif [ -f /etc/bash_completion ]; then
+      . /etc/bash_completion
+    fi
 fi
 
 
@@ -50,9 +65,7 @@ shopt -s extglob
 
 export PROMPT_COMMAND='ps_one'
 
-case "$TERM" in
-    "bsd"|"linux") tty_autorun ;;
-esac
+[ "$TERM" == "$__BASH_TERM" ] && tty_autorun
 
 
 # GPG

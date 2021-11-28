@@ -4,7 +4,7 @@ tmpfile=$(mktemp /tmp/st-cmd-output.XXXXXX)
 
 trap 'rm "$tmpfile"' 0 1 15
 sed -n "w $tmpfile"
-sed -i 's/\x0//g' "$tmpfile"
+sed -i 's/\x0//g; /^\s*$/d' "$tmpfile"
 
-sed '/^\s*$/d' "$tmpfile" | dmenu -p 'Copy line:' | xclip -selection clipboard
+dmenu -p 'Copy line:' < "$tmpfile" | xclip -selection clipboard
 

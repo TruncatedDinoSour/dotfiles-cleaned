@@ -1,14 +1,14 @@
 #!/usr/bin/env sh
 
 main() {
-    ip="$(/usr/bin/curl -s 'https://ifconfig.me/')"
+    ip="$(curl -s 'https://ifconfig.me/')"
 
     [ ! "$ip" ] && exit 1;
 
-    id="$(/usr/sbin/lspci;
-    /bin/lsblk;
-    /usr/bin/uname -mp;
-    /sbin/blkid)$ip"
+    id="$(lspci;
+    lsblk -f;
+    uname -mp;
+    blkid)$ip"
 
     echo "$id" | base64 | sha512sum | sed 's/a/:/g' | awk '{ print $1 }'
 }

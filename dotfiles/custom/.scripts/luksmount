@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+set -e
+
 __close_drive() {
     echo 'Close the device to open in'
     exit "$2"

@@ -46,6 +46,7 @@ install: all
 	cp -f send_calcurse_notification ${DESTDIR}${PREFIX}/bin
 	cp -f redshifttoggle ${DESTDIR}${PREFIX}/bin
 	cp -f extrakb ${DESTDIR}${PREFIX}/bin
+	cp -f dweather ${DESTDIR}${PREFIX}/bin
 	cp -f dwm.desktop /usr/share/xsessions
 	chmod 755 ${DESTDIR}${PREFIX}/bin/dwm
 	chmod 755 ${DESTDIR}${PREFIX}/bin/quitdwm
@@ -54,6 +55,7 @@ install: all
 	chmod 755 ${DESTDIR}${PREFIX}/bin/send_calcurse_notification
 	chmod 755 ${DESTDIR}${PREFIX}/bin/redshifttoggle
 	chmod 755 ${DESTDIR}${PREFIX}/bin/extrakb
+	chmod 755 ${DESTDIR}${PREFIX}/bin/dweather
 	mkdir -p ${DESTDIR}${MANPREFIX}/man1
 	sed "s/VERSION/${VERSION}/g" < dwm.1 > ${DESTDIR}${MANPREFIX}/man1/dwm.1
 	chmod 644 ${DESTDIR}${MANPREFIX}/man1/dwm.1
@@ -65,7 +67,8 @@ uninstall:
 		${DESTDIR}${PREFIX}/bin/emoji\
 		${DESTDIR}${PREFIX}/bin/dwmlocker\
 		${DESTDIR}${PREFIX}/bin/send_calcurse_notification\
-		${DESTDIR}${PREFIX}/bin/redshifttoggle \
-		${DESTDIR}${PREFIX}/bin/extrakb
+		${DESTDIR}${PREFIX}/bin/redshifttoggle\
+		${DESTDIR}${PREFIX}/bin/extrakb\
+		${DESTDIR}${PREFIX}/bin/dweather
 
 .PHONY: all options clean dist install uninstall

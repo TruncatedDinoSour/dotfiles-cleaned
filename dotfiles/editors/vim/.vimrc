@@ -47,6 +47,9 @@ autocmd BufRead,BufNewFile *.porth set filetype=porth
 " Make it not store some undos
 autocmd BufWritePre,BufRead,BufNewFile /mnt/* set noundofile undodir=
 
+" ALE is a bitch sometimes
+let g:ale_pattern_options = {'\.py$': {'ale_enabled': 0}}
+
 
 " Plugins
 "   To Install the plugins type `:PlugInstall`
@@ -74,6 +77,8 @@ call plug#begin("~/.vim/plugged")
     Plug 'drmingdrmer/vim-tabbar'
     Plug 'lilydjwg/colorizer'
     Plug 'editorconfig/editorconfig-vim'
+    Plug 'christoomey/vim-tmux-navigator'
+    Plug 'wlangstroth/vim-racket'
 call plug#end()
 
 call glaive#Install()               " Install glave

@@ -1,0 +1,5 @@
+(("http" (up up #"Ari" #"coding" #"racket_" #"http"))
+ ("fancy-app" (#"pkgs" #"fancy-app"))
+ ("net" (#"pkgs" #"http-easy"))
+ (root (#"pkgs" #"memoize"))
+ ("data" (#"pkgs" #"resource-pool-lib")))

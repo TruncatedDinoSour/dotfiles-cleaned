@@ -1,12 +1,15 @@
 alabaster
 argon2-cffi
+arigram
 astroid
+async-timeout
 asyncio
 attrs
 Babel
 backcall
 backports.entry-points-selectable
 beautifulsoup4
+beepy
 black
 bleach
 blessings
@@ -30,6 +33,7 @@ decorator
 defusedxml
 dirsync
 distlib
+distro
 docutils
 entrypoints
 filelock
@@ -46,6 +50,7 @@ HelperSDT
 httplib2
 idna
 imagesize
+importlib-metadata
 ipykernel
 ipython
 ipython-genutils
@@ -72,6 +77,7 @@ mccabe
 meson
 mistune
 MouseInfo
+mypy
 mypy-extensions
 nbclient
 nbconvert
@@ -88,6 +94,8 @@ pickleshare
 Pillow
 pip
 platformdirs
+playsound
+plumbum
 plyer
 portage
 prometheus-client
@@ -96,11 +104,16 @@ psutil
 ptyprocess
 pyaes
 pyasn1
+pycairo
 pycodestyle
 pycparser
+pycrypto
 pyflakes
+pyfzf
+pygame
 PyGetWindow
 Pygments
+PyGObject
 pylint
 pymongo
 PyMsgBox
@@ -116,13 +129,17 @@ PyScreeze
 PySocks
 python-aalib
 python-dateutil
+python-libtorrent-bin
+python-telegram
 python3-xlib
 pytweening
 pytz
 pyxdg
+pyYify
 pyzmq
 qtconsole
 QtPy
+ranger-fm
 regex
 requests
 requests-file
@@ -133,6 +150,7 @@ scandir
 Send2Trash
 setuptools
 setuptools-scm
+simpleaudio
 six
 smmap
 snowballstemmer
@@ -156,7 +174,7 @@ tornado
 tqdm
 traitlets
 trash-cli
-typing-extensions
+typing_extensions
 urllib3
 virtualenv
 wcwidth
@@ -166,3 +184,4 @@ wheel
 widgetsnbextension
 wrapt
 youtube-dl
+zipp

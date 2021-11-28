@@ -41,7 +41,6 @@ app-arch/bzip2
 app-arch/cpio
 app-arch/gzip
 app-arch/libarchive
-app-arch/lz4
 app-arch/rpm2targz
 app-arch/tar
 app-arch/unzip
@@ -76,6 +75,8 @@ app-misc/editor-wrapper
 app-misc/mime-types
 app-misc/neofetch
 app-misc/pax-utils
+app-misc/ranger
+app-misc/tmux
 app-misc/yafetch
 app-office/calcurse
 app-portage/elt-patches
@@ -98,7 +99,6 @@ app-text/dvipng
 app-text/dvipsk
 app-text/dvisvgm
 app-text/ghostscript-gpl
-app-text/hunspell
 app-text/lcdf-typetools
 app-text/libpaper
 app-text/manpager
@@ -122,10 +122,6 @@ app-text/xmlto
 app-text/zathura
 app-text/zathura-pdf-poppler
 app-vim/gentoo-syntax
-dev-cpp/abseil-cpp
-dev-cpp/glibmm
-dev-cpp/ms-gsl
-dev-cpp/range-v3
 dev-db/lmdb
 dev-db/sqlite
 dev-lang/go
@@ -165,7 +161,6 @@ dev-libs/kpathsea
 dev-libs/libaio
 dev-libs/libassuan
 dev-libs/libbsd
-dev-libs/libdbusmenu-qt
 dev-libs/libedit
 dev-libs/libevdev
 dev-libs/libevent
@@ -180,7 +175,6 @@ dev-libs/libnl
 dev-libs/libpcre
 dev-libs/libpcre2
 dev-libs/libpipeline
-dev-libs/libsigc++
 dev-libs/libsodium
 dev-libs/libtasn1
 dev-libs/libunistring
@@ -197,7 +191,6 @@ dev-libs/nss
 dev-libs/oniguruma
 dev-libs/openssl
 dev-libs/popt
-dev-libs/protobuf
 dev-libs/ptexenc
 dev-libs/rapidjson
 dev-libs/vala-common
@@ -333,7 +326,6 @@ dev-qt/qtconcurrent
 dev-qt/qtcore
 dev-qt/qtdbus
 dev-qt/qtgui
-dev-qt/qtimageformats
 dev-qt/qtnetwork
 dev-qt/qtsvg
 dev-qt/qttest
@@ -375,7 +367,6 @@ dev-util/gperf
 dev-util/gtk-doc-am
 dev-util/gtk-update-icon-cache
 dev-util/intltool
-dev-util/itstool
 dev-util/meson
 dev-util/meson-format-array
 dev-util/ninja
@@ -395,7 +386,6 @@ media-fonts/fira-mono
 media-fonts/font-util
 media-fonts/freefont
 media-fonts/nerd-fonts
-media-fonts/open-sans
 media-fonts/unifont
 media-fonts/urw-fonts
 media-gfx/feh
@@ -427,7 +417,6 @@ media-libs/libid3tag
 media-libs/libjpeg-turbo
 media-libs/libpng
 media-libs/libsamplerate
-media-libs/libtgvoip
 media-libs/libvpx
 media-libs/libwebp
 media-libs/mesa
@@ -435,8 +424,6 @@ media-libs/openal
 media-libs/openh264
 media-libs/openjpeg
 media-libs/opus
-media-libs/rnnoise
-media-libs/tg_owt
 media-libs/tiff
 media-libs/woff2
 media-sound/alsa-utils
@@ -447,7 +434,6 @@ net-dns/c-ares
 net-dns/libidn
 net-dns/libidn2
 net-firewall/iptables
-net-im/telegram-desktop
 net-libs/gnutls
 net-libs/http-parser
 net-libs/libiscsi
@@ -458,7 +444,6 @@ net-libs/libssh2
 net-libs/libtirpc
 net-libs/nghttp2
 net-libs/nodejs
-net-libs/usrsctp
 net-mail/mailbase
 net-misc/curl
 net-misc/dhcpcd
@@ -564,6 +549,7 @@ sys-fs/udev
 sys-fs/udev-init-scripts
 sys-fs/xfsprogs
 sys-kernel/dracut
+sys-kernel/gentoo-sources
 sys-kernel/gentoo-sources
 sys-kernel/installkernel-gentoo
 sys-kernel/linux-firmware

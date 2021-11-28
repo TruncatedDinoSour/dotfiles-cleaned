@@ -1,0 +1,1 @@
+("8.2" ta6le ("0ab00e5afbd2d486347d99fb305598928e0552a1" . "2da7e83e0f2473abf2092ed7df9902f392ca9f48") (collects #"memoize" #"main.rkt") (collects #"net" #"url.rkt") (collects #"racket" #"base.rkt") (collects #"racket" #"runtime-config.rkt") (collects #"racket" #"string.rkt"))

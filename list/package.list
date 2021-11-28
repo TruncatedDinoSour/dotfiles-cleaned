@@ -3,6 +3,8 @@ app-admin/sudo
 app-editors/vim
 app-emulation/qemu
 app-misc/neofetch
+app-misc/ranger
+app-misc/tmux
 app-misc/yafetch
 app-office/calcurse
 app-shells/bash-completion
@@ -28,7 +30,6 @@ media-gfx/feh
 media-gfx/scrot
 media-sound/alsa-utils
 media-video/mpv
-net-im/telegram-desktop
 net-misc/dhcpcd
 net-misc/netifrc
 net-p2p/transmission-cli

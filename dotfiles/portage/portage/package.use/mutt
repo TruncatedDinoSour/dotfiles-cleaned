@@ -1,2 +1,2 @@
-mail-client/mutt -hcache
+mail-client/mutt -hcache debug
 

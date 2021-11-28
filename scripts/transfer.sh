@@ -30,6 +30,7 @@ from=(
     '/home/ari/.editorconfig'
     '/home/ari/.mailcap'
     '/home/ari/.mutt/muttrc'
+    '/home/ari/.lynxrc'
 
     "$FIREFOX_PROFILE"
 
@@ -51,7 +52,7 @@ from=(
     '/etc/dracut.conf'
     '/etc/dracut.conf.d'
     '/etc/sudoers'
-    '/etc/X11/xorg.conf.d/20-intel-graphics.conf'
+    '/etc/X11/xorg.conf.d'
     '/etc/rc.conf'
     '/etc/modprobe.d/kernel_unfreeze_rtw.conf'
     '/etc/conf.d'
@@ -86,6 +87,7 @@ to=(
     'dotfiles/suckless'
     'dotfiles/suckless'
 
+    'dotfiles/etc'
     'dotfiles/etc'
     'dotfiles/etc'
     'dotfiles/etc'
@@ -165,5 +167,5 @@ cd dotfiles/etc/firefox || exit 1
 ./clean_firefox_profile
 cd ../../.. || exit 2
 
-sed -i '/PHONE/d' dotfiles/config/tg/conf.py
+sed -i '/PHONE/d' dotfiles/config/arigram/config.py
 

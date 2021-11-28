@@ -49,7 +49,7 @@
 }
 
 .browserContainer {
-  background-color: #262220 !important;
+    background-color: #262220 !important;
 }
 
 
@@ -164,13 +164,13 @@ hbox.titlebar-spacer:nth-child(3) {visibility: collapse !important;}
 :root { --tab-border-radius: 0px !important }
 
 /* URL Bar Corner Radius */
-:root {	--toolbarbutton-border-radius: 0px !important }
+:root { --toolbarbutton-border-radius: 0px !important }
 
 /* Icons in the URL Bar liek the Shield Corner Raidus  */
 :root { --urlbar-icon-border-radius: 0px !important }
 
 /* Extention Panel, Hambuger Menu, and Extension Menus Corner Radius */
-:root {	--arrowpanel-border-radius: 0px !important }
+:root { --arrowpanel-border-radius: 0px !important }
 
 
 
@@ -277,3 +277,27 @@ image.panel-arrow {
 
 
 #main-window{ background-color: transparent !important }
+
+/* Old tab designs tabs */
+.tab-background {
+    border-radius: 0px 0px !important;
+    margin-bottom: 0px !important;
+}
+
+.tabbrowser-tab:not([selected=true]):not([multiselected=true]) .tab-background {
+    background-color: color-mix(in srgb, currentColor 5%, transparent);
+}
+
+menupopup>menu,
+menupopup>menuitem {
+    padding-block: 10px !important;
+}
+
+:root {
+    --arrowpanel-menuitem-padding: 2px !important;
+}
+
+.scrollbox {
+    padding: 0 !important;
+}
+

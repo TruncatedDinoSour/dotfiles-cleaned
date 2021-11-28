@@ -19,11 +19,11 @@ endfor
 
 let mapleader = ","                 " , = leader
 
-" Navigate splits
-nnoremap <C-J> <C-W><C-J>
-nnoremap <C-K> <C-W><C-K>
-nnoremap <C-L> <C-W><C-L>
-nnoremap <C-H> <C-W><C-H>
+" Navigate splits (supplied by tmux plugin)
+"nnoremap <C-J> <C-W><C-J>
+"nnoremap <C-K> <C-W><C-K>
+"nnoremap <C-L> <C-W><C-L>
+"nnoremap <C-H> <C-W><C-H>
 
 " Map D to redo
 nnoremap D :redo<CR>
@@ -46,9 +46,8 @@ map F :FormatCode<CR>
 " Tabs
 map <C-n> <ESC>:tabnew<space>
 inoremap <C-t> <ESC>:tabnew<space>
-
 map <C-b> <ESC>:tabprevious<CR>
-inoremap <C-t> <ESC>:tabprevious<CR>
+inoremap <C-b> <ESC>:tabprevious<CR>
 
 " Open a file
 map <C-o> <ESC>:open<space>
@@ -57,6 +56,6 @@ inoremap <C-o> <ESC>:open<space>
 " Splits
 map <C-s> <ESC>:vsplit<space>
 inoremap <C-s> <ESC>:vsplit<space>
-map <C-a> <ESC>:split<space>
-inoremap <C-a> <ESC>:split<space>
+map <C-d> <ESC>:split<space>
+inoremap <C-d> <ESC>:split<space>
 
