@@ -10,8 +10,12 @@ export PATH="$PATH:/usr/local/bin:$HOME/.local/bin:$HOME/.scripts"
 __BASH_TERM="$(tset -q)"
 
 
+# Environment
+source ~/.config/shells/bash/*.env
+
+
 # TMUX config
-source ~/.config/shells/tmux/tmux.*
+source ~/.config/shells/tmux/*.tmux
 
 # Check for TMUX
 if [ -z "$TMUX" ] && [ "$__BASH_TERM" != 'linux' ] && [ -x "$(command -v tmux)" ] && [ ! "$__BASH_TMUX_DISABLE" ]; then

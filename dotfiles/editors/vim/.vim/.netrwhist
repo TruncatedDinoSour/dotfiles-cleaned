@@ -1,5 +1,8 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =8
+let g:netrw_dirhistcnt =1
+let g:netrw_dirhist_1='/home/ari/Ari/coding/forks_/tg/arigram'
+let g:netrw_dirhist_0='/home/ari/.cache/arigram/database/secret'
+let g:netrw_dirhist_9='/mnt/crypt_sda2'
 let g:netrw_dirhist_8='/home/ari/Ari/coding/forks_/tg/arigram'
 let g:netrw_dirhist_7='/home/ari/.config/tg'
 let g:netrw_dirhist_6='/home/ari/.config/coc/extensions/coc-lua-data/sumneko-lua-ls/3rd/luamake'
@@ -7,6 +10,3 @@ let g:netrw_dirhist_5='/home/ari/.config/coc/extensions/coc-lua-data/sumneko-lua
 let g:netrw_dirhist_4='/home/ari/.config/coc/extensions/coc-lua-data/sumneko-lua-ls/script/brave'
 let g:netrw_dirhist_3='/home/ari/.vim/snippets'
 let g:netrw_dirhist_2='/mnt/crypt_sda2'
-let g:netrw_dirhist_1='/etc/cron.daily'
-let g:netrw_dirhist_0='/tmp'
-let g:netrw_dirhist_9='/home/ari/Ari/coding/c_cpp_/new/cpp/glang/src/parser'

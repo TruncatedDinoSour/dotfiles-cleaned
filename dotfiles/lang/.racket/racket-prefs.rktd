@@ -32,6 +32,9 @@
  (readline-input-history
   (
    #"(exit)"
+   #"\316\273"
+   #"(\316\273"
+   #"(\316\273)"
    #"planet"
    #"pkg"
    #"(vector-length current-command-line-arguments\n "

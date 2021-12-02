@@ -550,7 +550,6 @@ sys-fs/udev-init-scripts
 sys-fs/xfsprogs
 sys-kernel/dracut
 sys-kernel/gentoo-sources
-sys-kernel/gentoo-sources
 sys-kernel/installkernel-gentoo
 sys-kernel/linux-firmware
 sys-kernel/linux-headers

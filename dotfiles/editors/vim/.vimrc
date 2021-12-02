@@ -45,7 +45,7 @@ autocmd Filetype html set notimeout timeoutlen=100 ttimeoutlen=100
 autocmd BufRead,BufNewFile *.porth set filetype=porth
 
 " Make it not store some undos
-autocmd BufWritePre,BufRead,BufNewFile /mnt/* set noundofile undodir=
+autocmd BufWritePre,BufRead,BufNewFile /mnt/*,/tmp/* set noundofile undodir=
 
 " ALE is a bitch sometimes
 let g:ale_pattern_options = {'\.py$': {'ale_enabled': 0}}
