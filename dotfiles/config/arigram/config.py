@@ -3,6 +3,7 @@ import time
 from threading import Thread
 from urllib.parse import quote as url_safe
 from re import escape as escape_special
+from timeit import default_timer as timer
 
 import arigram
 import pyfzf
@@ -99,9 +100,13 @@ class Custom:
         sleep_time = float(
             ctrl.view.status.get_input("every valid deletion sleep (float in s)")
         )
+
+        start = timer()
         total = killer(sleep_time, max_deletion)
+        end = timer()
+
         ctrl.model.send_message(
-            text=f"\[ARIGRAM\] Deleted {total}/{max_deletion} messages"
+                text=f"[ARIGRAM] Deleted {total}/{max_deletion} messages with delay of {sleep_time}s in {(end - start):.3f}s"
         )
 
     def batch_send(self, ctrl, *args) -> None:
@@ -140,8 +145,12 @@ class Custom:
         sleep_time = float(
             ctrl.view.status.get_input("every valid message sent sleep (float in s)")
         )
+
+        start = timer()
         total = sender(sleep_time, max_sending, string)
-        ctrl.model.send_message(text=f"\[ARIGRAM\] Sent {total}/{max_sending} messages")
+        end = timer()
+
+        ctrl.model.send_message(text=f"[ARIGRAM] Sent {total}/{max_sending} messages with delay of {sleep_time}s in {(end - start):.3f}s")
 
     @staticmethod
     def send_reversed(ctrl, *args) -> None:
@@ -149,15 +158,33 @@ class Custom:
         ctrl.model.send_message(ctrl.view.status.get_input("reversed message")[::-1])
 
     @staticmethod
+    def send_countdown(ctrl, *args) -> None:
+        del args
+        max_count = ctrl.view.status.get_input("countdown")
+
+        for count in reversed(range(1, int(max_count) + 1)):
+            ctrl.model.send_message(str(count))
+            time.sleep(1)
+
+    @staticmethod
     def send_wiki(ctrl, *args) -> None:
         del args
 
         search = ctrl.view.status.get_input("wikipedia query")
+
+        if not search:
+            ctrl.present_info("Query canceled")
+            return
+
         query_results = wikipedia.search(search)
+
+        if not search:
+            ctrl.present_info("Query canceled")
+            return
 
         with suspend(ctrl.view):
             article_name = pyfzf.FzfPrompt().prompt(
-                query_results, "--prompt='Article name: '"
+                query_results, f"--prompt='Results about <{search}>: '"
             )
 
         article_page = wikipedia.page(article_name)
@@ -173,7 +200,7 @@ class Custom:
         message_content = f"""[Wikipedia: {escape_special(article_page.title)}](https://en.wikipedia.org/wiki/{url_safe(article_page.title)})
 
 ```
-{article_page.summary[:150]}...
+{article_page.summary[:200]}...
 ```
 """
         ctrl.model.send_message(message_content)
@@ -187,6 +214,7 @@ CUSTOM_KEYBINDS = {
     "x": {"func": custom_code.batch_send, "handler": msg_handler},
     "C": {"func": custom_code.send_reversed, "handler": msg_handler},
     "w": {"func": custom_code.send_wiki, "handler": msg_handler},
+    "B": {"func": custom_code.send_countdown, "handler": msg_handler},
 }
 DEFAULT_OPEN = tg_config.LONG_MSG_CMD
 EXTRA_TDLIB_HEADEARS = {

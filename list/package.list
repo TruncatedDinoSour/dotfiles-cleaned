@@ -3,7 +3,6 @@ app-admin/sudo
 app-editors/vim
 app-emulation/qemu
 app-misc/neofetch
-app-misc/ranger
 app-misc/tmux
 app-misc/yafetch
 app-office/calcurse
@@ -15,6 +14,7 @@ app-text/zathura-pdf-poppler
 dev-lang/python
 dev-libs/boost
 dev-libs/botan
+dev-python/pip
 dev-scheme/chezscheme
 dev-scheme/racket
 dev-util/ccls
@@ -38,6 +38,7 @@ sys-apps/bat
 sys-apps/duf
 sys-apps/lsd
 sys-apps/mlocate
+sys-apps/usbutils
 sys-boot/grub:2
 sys-fs/cryptsetup
 sys-fs/dosfstools

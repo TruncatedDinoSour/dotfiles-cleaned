@@ -11,8 +11,10 @@ nnoremap l w
 nnoremap b h
 nnoremap w l
 
-" Disable arrows keys because I keep using them :(
-for key in ['<Up>', '<Down>', '<Left>', '<Right>']
+" Disable arrows keys
+for key in ['<Up>', '<Down>', '<Left>',
+            \ '<Right>', '<PageUp>', '<PageDown>',
+            \ 'gh', 'gj', 'gk', 'gl']
   exec 'map'        key '<Nop>'
   exec 'inoremap'   key '<Nop>'
 endfor

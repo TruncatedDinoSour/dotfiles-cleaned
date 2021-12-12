@@ -2,10 +2,6 @@
 
 source /etc/bash_git
 
-RESTORE='\033[0m'
-GREEN='\033[00;32m'
-RED='\033[00;31m'
-
 
 vecho() {
     [[ "$__BASH_VINFO" == true ]] && echo "[VECHO] $@"
@@ -123,5 +119,17 @@ dlt() {
     echo "$content" > "$1"
 
     shred -fvzun "$((RANDOM % 12127))" "${1}"
+}
+
+
+NO() {
+    mkdir -p ~/.no
+
+    echo "I am sorry to hear that, tell me what's wrong"
+    sleep 2
+
+    ${EDITOR:-vim} ~/.no/"$(date "+feel-%N%S%V%I%m%Y$RANDOM.md")"
+
+    echo 'Thank you, I will save this memory :), Hope you feel better soon'
 }
 

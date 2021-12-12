@@ -1,4 +1,4 @@
-snippet m
+snippet ma
 import asyncio
 import sys
 
@@ -13,6 +13,23 @@ async def main() -> int:
 if __name__ == "__main__":
     assert main.__annotations__.get("return") is int, "main() should return an integer"
     sys.exit(asyncio.run(main()))
+
+endsnippet
+
+snippet m
+import sys
+
+
+def main() -> int:
+    """Entry/main function"""
+
+    $0
+    return 0
+
+
+if __name__ == "__main__":
+    assert main.__annotations__.get("return") is int, "main() should return an integer"
+    sys.exit(main())
 
 endsnippet
 

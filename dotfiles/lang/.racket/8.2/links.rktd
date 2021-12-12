@@ -2,4 +2,5 @@
  ("fancy-app" (#"pkgs" #"fancy-app"))
  ("net" (#"pkgs" #"http-easy"))
  (root (#"pkgs" #"memoize"))
- ("data" (#"pkgs" #"resource-pool-lib")))
+ ("data" (#"pkgs" #"resource-pool-lib"))
+ (root (#"pkgs" #"while-loop")))

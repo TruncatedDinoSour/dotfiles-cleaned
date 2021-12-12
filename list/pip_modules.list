@@ -2,6 +2,7 @@ alabaster
 APScheduler
 argon2-cffi
 arigram
+asciinema
 astroid
 async-timeout
 asyncio
@@ -19,7 +20,8 @@ bs4
 CacheControl
 cachetools
 cachy
-certifi
+certifi-system-store
+certifi-system-store
 cffi
 charset-normalizer
 cleo
@@ -42,6 +44,8 @@ dirsync
 distlib
 distro
 docutils
+EasyProcess
+entrypoint2
 entrypoints
 filelock
 flake8
@@ -89,6 +93,7 @@ meson
 mistune
 MouseInfo
 msgpack
+mss
 mypy
 mypy-extensions
 nbclient
@@ -97,9 +102,12 @@ nbformat
 nest-asyncio
 nodeenv
 notebook
+numpy
 packaging
+pandas
 pandocfilters
 parso
+password-strength
 pastel
 pathspec
 pexpect
@@ -142,6 +150,7 @@ PyQt5-sip
 PyRect
 pyright
 pyrsistent
+pyscreenshot
 PyScreeze
 PySocks
 python-aalib
@@ -158,7 +167,6 @@ pyYify
 pyzmq
 qtconsole
 QtPy
-ranger-fm
 regex
 requests
 requests-file

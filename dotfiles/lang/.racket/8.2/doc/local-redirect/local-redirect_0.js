@@ -1,7 +1,11 @@
 user_link_targets[0] = [
+ ["(mod-path._.'dyoo-while-loop.')", "file:///home/ari/.racket/8.2/pkgs/while-loop/dyoo-while-loop/doc/dyoo-while-loop/index.html#%28mod-path._dyoo-while-loop%29"],
  ["(mod-path._.'fancy-app.')", "file:///home/ari/.racket/8.2/pkgs/fancy-app/doc/fancy-app/index.html"],
  ["(mod-path._.'memoize.')", "file:///home/ari/.racket/8.2/pkgs/memoize/memoize/doc/memoize/index.html"],
  ["(mod-path._.'net/http-easy.')", "file:///home/ari/.racket/8.2/pkgs/http-easy/doc/http-easy/index.html"],
+ ["(part._(.'(lib._dyoo-while-loop/dyoo-while-loop..scrbl).'._.'.Example_and_usage.'))", "file:///home/ari/.racket/8.2/pkgs/while-loop/dyoo-while-loop/doc/dyoo-while-loop/index.html#%28part._.Example_and_usage%29"],
+ ["(part._(.'(lib._dyoo-while-loop/dyoo-while-loop..scrbl).'._.'.While_loops_for_.Racket.'))", "file:///home/ari/.racket/8.2/pkgs/while-loop/dyoo-while-loop/doc/dyoo-while-loop/index.html"],
+ ["(part._(.'(lib._dyoo-while-loop/dyoo-while-loop..scrbl).'._.'top.'))", "file:///home/ari/.racket/8.2/pkgs/while-loop/dyoo-while-loop/doc/dyoo-while-loop/index.html"],
  ["(part._(.'(lib._fancy-app/main..scrbl).'._.'.Fancy_.App__.Scala-.Style_.Magic_.Lambdas.'))", "file:///home/ari/.racket/8.2/pkgs/fancy-app/doc/fancy-app/index.html"],
  ["(part._(.'(lib._fancy-app/main..scrbl).'._.'top.'))", "file:///home/ari/.racket/8.2/pkgs/fancy-app/doc/fancy-app/index.html"],
  ["(part._(.'(lib._memoize/memoize..scrbl).'._.'definitions.'))", "file:///home/ari/.racket/8.2/pkgs/memoize/memoize/doc/memoize/index.html#%28part._definitions%29"],

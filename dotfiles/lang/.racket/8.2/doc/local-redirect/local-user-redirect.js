@@ -5,6 +5,7 @@
 link_target_prefix = "file:///usr/share/doc/racket-8.2-r1/local-redirect/";
 
 var user_link_dirs = [
+ ["dyoo-while-loop", "file:///home/ari/.racket/8.2/pkgs/while-loop/dyoo-while-loop/doc/dyoo-while-loop"],
  ["fancy-app", "file:///home/ari/.racket/8.2/pkgs/fancy-app/doc/fancy-app"],
  ["http-easy", "file:///home/ari/.racket/8.2/pkgs/http-easy/doc/http-easy"],
  ["memoize", "file:///home/ari/.racket/8.2/pkgs/memoize/memoize/doc/memoize"]];

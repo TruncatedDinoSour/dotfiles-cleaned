@@ -28,7 +28,9 @@ var plt_user_search_data = [
 ["authentication","../../pkgs/http-easy/doc/http-easy/index.html#%28part._.Authentication%29","Authentication",false],
 ["basic-auth","../../pkgs/http-easy/doc/http-easy/index.html#%28def._%28%28lib._net%2Fhttp-easy..rkt%29._basic-auth%29%29",[0,[2,"basic-auth"]],["net/http-easy"]],
 ["bearer-auth","../../pkgs/http-easy/doc/http-easy/index.html#%28def._%28%28lib._net%2Fhttp-easy..rkt%29._bearer-auth%29%29",[0,[2,"bearer-auth"]],["net/http-easy"]],
+["break","../../pkgs/while-loop/dyoo-while-loop/doc/dyoo-while-loop/index.html#%28form._%28%28lib._dyoo-while-loop%2Fmain..rkt%29._break%29%29",[0,[1,"break"]],["dyoo-while-loop"]],
 ["connection pooling","../../pkgs/http-easy/doc/http-easy/index.html#%28part._.Connection_.Pooling%29","Connection Pooling",false],
+["continue","../../pkgs/while-loop/dyoo-while-loop/doc/dyoo-while-loop/index.html#%28form._%28%28lib._dyoo-while-loop%2Fmain..rkt%29._continue%29%29",[0,[1,"continue"]],["dyoo-while-loop"]],
 ["cookie storage","../../pkgs/http-easy/doc/http-easy/index.html#%28part._.Cookie_.Storage%29","Cookie Storage",false],
 ["current-session","../../pkgs/http-easy/doc/http-easy/index.html#%28def._%28%28lib._net%2Fhttp-easy..rkt%29._current-session%29%29",[0,[2,"current-session"]],["net/http-easy"]],
 ["current-user-agent","../../pkgs/http-easy/doc/http-easy/index.html#%28def._%28%28lib._net%2Fhttp-easy..rkt%29._current-user-agent%29%29",[0,[2,"current-user-agent"]],["net/http-easy"]],
@@ -36,7 +38,9 @@ var plt_user_search_data = [
 ["define/memo*","../../pkgs/memoize/memoize/doc/memoize/index.html#%28form._%28%28lib._memoize%2Fmain..rkt%29._define%2Fmemo%2A%29%29",[0,[1,"define/memo*"]],["memoize"]],
 ["definition forms","../../pkgs/memoize/memoize/doc/memoize/index.html#%28part._definitions%29","Definition Forms",false],
 ["delete","../../pkgs/http-easy/doc/http-easy/index.html#%28def._%28%28lib._net%2Fhttp-easy..rkt%29._delete%29%29",[0,[2,"delete"]],["net/http-easy"]],
+["dyoo-while-loop","../../pkgs/while-loop/dyoo-while-loop/doc/dyoo-while-loop/index.html#%28mod-path._dyoo-while-loop%29",[3,[0,"dyoo-while-loop"]],"module"],
 ["errors","../../pkgs/http-easy/doc/http-easy/index.html#%28part._.Errors%29","Errors",false],
+["example and usage","../../pkgs/while-loop/dyoo-while-loop/doc/dyoo-while-loop/index.html#%28part._.Example_and_usage%29","Example and usage",false],
 ["example: fibonacci","../../pkgs/memoize/memoize/doc/memoize/index.html#%28part._intro%29","Example: Fibonacci",false],
 ["exn:fail:http-easy:timeout-kind","../../pkgs/http-easy/doc/http-easy/index.html#%28def._%28%28lib._net%2Fhttp-easy..rkt%29._exn~3afail~3ahttp-easy~3atimeout-kind%29%29",[0,[2,"exn:fail:http-easy:timeout-kind"]],["net/http-easy"]],
 ["exn:fail:http-easy:timeout?","../../pkgs/http-easy/doc/http-easy/index.html#%28def._%28%28lib._net%2Fhttp-easy..rkt%29._exn~3afail~3ahttp-easy~3atimeout~3f%29%29",[0,[2,"exn:fail:http-easy:timeout?"]],["net/http-easy"]],
@@ -120,11 +124,14 @@ var plt_user_search_data = [
 ["timeout/c","../../pkgs/http-easy/doc/http-easy/index.html#%28def._%28%28lib._net%2Fhttp-easy..rkt%29._timeout%2Fc%29%29",[0,[2,"timeout/c"]],["net/http-easy"]],
 ["timeouts","../../pkgs/http-easy/doc/http-easy/index.html#%28part._.Timeouts%29","Timeouts",false],
 ["unix sockets","../../pkgs/http-easy/doc/http-easy/index.html#%28part._.U.N.I.X_.Sockets%29","UNIX Sockets",false],
-["user agents","../../pkgs/http-easy/doc/http-easy/index.html#%28part._.User_.Agents%29","User Agents",false]
+["user agents","../../pkgs/http-easy/doc/http-easy/index.html#%28part._.User_.Agents%29","User Agents",false],
+["while","../../pkgs/while-loop/dyoo-while-loop/doc/dyoo-while-loop/index.html#%28form._%28%28lib._dyoo-while-loop%2Fmain..rkt%29._while%29%29",[0,[1,"while"]],["dyoo-while-loop"]],
+["while loops for racket","../../pkgs/while-loop/dyoo-while-loop/doc/dyoo-while-loop/index.html","While loops for Racket",false]
 ];
 
 // array of pointers to the previous array, for items that are manuals
 var plt_user_manual_ptrs = {
-  "fancy-app": 20,
-  "http-easy": 32,
-  "memoize": 45};
+  "fancy-app": 24,
+  "http-easy": 36,
+  "memoize": 49,
+  "dyoo-while-loop": 104};

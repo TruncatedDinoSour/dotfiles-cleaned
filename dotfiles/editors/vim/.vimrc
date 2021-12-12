@@ -31,6 +31,7 @@ set guicursor=a:hor100                  " Set the cursor shape to a _
 set clipboard=unnamedplus               " Copy text to clipboard
 set timeoutlen=0 ttimeoutlen=0          " Set timeout to 0s
 set virtualedit=all                     " Improve visual block to select past the line
+set backspace=0                         " Disable backspace
 
 set list listchars=trail:~,extends:»,precedes:«,nbsp:×   " Show indentation
 
@@ -48,7 +49,7 @@ autocmd BufRead,BufNewFile *.porth set filetype=porth
 autocmd BufWritePre,BufRead,BufNewFile /mnt/*,/tmp/* set noundofile undodir=
 
 " ALE is a bitch sometimes
-let g:ale_pattern_options = {'\.py$': {'ale_enabled': 0}}
+" let g:ale_pattern_options = {'\.py$': {'ale_enabled': 0}}
 
 
 " Plugins
@@ -72,7 +73,6 @@ call plug#begin("~/.vim/plugged")
     Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install()  }, 'for': ['markdown', 'vim-plug'] }
     Plug 'google/vim-maktaba'
     Plug 'google/vim-codefmt'
-    Plug 'google/vim-glaive'
     Plug 'Yggdroot/indentLine'
     Plug 'drmingdrmer/vim-tabbar'
     Plug 'lilydjwg/colorizer'
@@ -80,8 +80,6 @@ call plug#begin("~/.vim/plugged")
     Plug 'christoomey/vim-tmux-navigator'
     Plug 'wlangstroth/vim-racket'
 call plug#end()
-
-call glaive#Install()               " Install glave
 
 
 colorscheme alduin                  " Set the theme

@@ -1,9 +1,12 @@
 #!/usr/bin/env bash
 
+set -e
+
 FZF_FLAGS=(--layout=reverse --height=20 --no-mouse -i)
 DRIVE_FORMATS=(raw qcow2 bochs cloop cow dmg nbd parallels qcow qed vdi vhdx vmdk vvfat)
 VM_NAME_DISALOWED_CHARS="\n\./\*\[\]\{\},"
-BIOS="/usr/share/edk2-ovmf/OVMF_CODE.fd"
+BIOS="OVMF_CODE.fd"
+DOAS="${__BASH_DOAS:-sudo}"
 
 
 _ask_q() {
@@ -32,11 +35,13 @@ _input() {
 
 
 main() {
-    #iso="$(_ask_q  "CDROM/ISO" "$(\find ~ -iname '*.iso')")"
+    "$DOAS" updatedb
 
     vm_name="$(_input "VM name" "$VM_NAME_DISALOWED_CHARS")"
 
-    cdrom="$(_ask_q  "CDROM/ISO" "$(\find ~ -iname '*.iso')")"
+    cdrom="$(_ask_q  "CDROM/ISO" "$(locate '*.iso')")"
+
+    ssh_port="$(_input "SSH port")"
 
     drive_size="$(_input "Drive size in GB")"
     drive_format="$(_ask_q "Drive drive fomat" "$(printf "%s\n" "${DRIVE_FORMATS[@]}")")"
@@ -46,39 +51,40 @@ main() {
     ram="$(_input "RAM size in MiB")"
     cpus="$(_input "Number of cpu cores")"
 
-    __bioses=("$BIOS" "Something else")
+    __bioses=("$(locate "$BIOS")" "?")
     bios="$(_ask_q "BIOS" "$(printf "%s\n" "${__bioses[@]}")")"
 
-    [[ "$bios" != "$BIOS" ]] && BIOS="$(_input "Enter the path to bios")"
+    [[ "$bios" == "?" ]] && bios="$(_input "Enter the path to bios")"
 
 
-    \echo "--- CONFIG ---"
-    \echo "Virtual machine name: ${vm_name}"
-    \echo "ISO/CDROM image: ${cdrom}"
-    \echo "Drive size: ${drive_size}GB"
-    \echo "Drive format: ${drive_format}"
-    \echo "Emulator: $(\basename "$emulator")"
-    \echo "RAM size: ${ram}MiB"
-    \echo "CPU cores: ${cpus}"
-    \echo "BIOS: ${BIOS}"
+    echo "--- CONFIG ---"
+    echo "Virtual machine name: ${vm_name}"
+    echo "ISO/CDROM image: ${cdrom}"
+    echo "SSH port: ${ssh_port}"
+    echo "Drive size: ${drive_size}GB"
+    echo "Drive format: ${drive_format}"
+    echo "Emulator: $(basename "$emulator")"
+    echo "RAM size: ${ram}MiB"
+    echo "CPU cores: ${cpus}"
+    echo "BIOS: ${bios}"
 
-    read -p "Press enter if this is right - else press CTRL + C..." _
+    read -p "Press enter if this is right - else press CTRL + C..."
 
 
-    \echo '[*] Making the VMs directory'
-    \mkdir "$vm_name"
-    cd "$vm_name" || exit 1
+    echo '[*] Making the VMs directory'
+    mkdir -p "$vm_name"
+    cd "$vm_name"
 
-    \echo '[*] Making the QEMU image'
-    \qemu-img create -f "$drive_format" "root.${drive_format}" "${drive_size}G" || exit 1
+    echo '[*] Making the QEMU image'
+    qemu-img create -f "$drive_format" "root.${drive_format}" "${drive_size}G"
 
-    \echo '[*] Making a run script'
-    \echo "#!/bin/sh" > run
-    \echo "'${emulator}' -net user,hostfwd=tcp::10022-:22 -net nic -cpu host -enable-kvm -m '${ram}' -smp '${cpus}' -drive file='${PWD}/root.${drive_format}',format='${drive_format}' -smbios type=0,uefi=on -bios '${BIOS}' &" >> run
-    \chmod a+rx ./run
+    echo '[*] Making a run script'
+    echo "#!/usr/bin/env sh" > run
+    echo "'${emulator}' -net user,hostfwd=tcp::'${ssh_port}'-:22 -net nic -cpu host -enable-kvm -m '${ram}' -smp '${cpus}' -drive file='${PWD}/root.${drive_format}',format='${drive_format}' -smbios type=0,uefi=on -bios '${bios}' &" >> run
+    chmod a+rx ./run
 
-    \echo '[*] Running the VM'
-    "${emulator}" -net user,hostfwd=tcp::10022-:22 -net nic -cdrom "$cdrom" -cpu 'host' -enable-kvm -m "${ram}" -smp "${cpus}" -drive file="${PWD}/root.${drive_format}",format="${drive_format}" -smbios type=0,uefi=on -bios "${BIOS}" &
+    echo '[*] Running the VM'
+    "${emulator}" -net user,hostfwd="tcp::${ssh_port}-:22" -net nic -cdrom "$cdrom" -cpu 'host' -enable-kvm -m "${ram}" -smp "${cpus}" -drive file="${PWD}/root.${drive_format}",format="${drive_format}" -smbios type=0,uefi=on -bios "${bios}" &
 }
 
 

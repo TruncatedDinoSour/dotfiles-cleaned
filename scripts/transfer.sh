@@ -26,7 +26,7 @@ from=(
     '/home/ari/Suckless'
 
     '/home/ari/.gtkrc-2.0'
-    '/home/ari/Pictures/wallpaper.png'
+    '/home/ari/Media/wallpaper.png'
     '/home/ari/.editorconfig'
     '/home/ari/.mailcap'
     '/home/ari/.mutt/muttrc'

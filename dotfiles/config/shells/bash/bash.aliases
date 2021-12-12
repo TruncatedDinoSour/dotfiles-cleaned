@@ -42,7 +42,6 @@ alias mkdir="\$__BASH_CORE_BIN_DIR/mkdir -p"
 alias curl="\$__BASH_BIN_DIR/curl -fL"
 alias sudo="\$__BASH_BIN_DIR/sudo -E env PATH=\"$PATH\""
 
-alias transmission-cli="\$__BASH_BIN_DIR/transmission-cli --encryption-preferred --no-uplimit --verify --no-downlimit --finish ~/.config/transmission/fini.sh"
 alias fzf="\$__BASH_BIN_DIR/fzf --layout=reverse --height=20 --no-mouse -i --preview 'bat --theme=\"gruvbox-dark\" --color=always --style=numbers --line-range=:500 {}'"
 alias mpvp="\$__BASH_BIN_DIR/mpv --shuffle --loop-playlist"
 alias clip="\$__BASH_BIN_DIR/xclip -selection clipboard"

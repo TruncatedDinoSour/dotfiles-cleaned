@@ -228,7 +228,7 @@ static Shortcut shortcuts[] = {
     {MODKEY, XK_y, externalpipe, {.v = copyurlcmd}},
     {MODKEY, XK_o, externalpipe, {.v = copyoutput}},
     {MODKEY, XK_g, externalpipe, {.v = copyline}},
-    {TERMMOD,XK_g, externalpipe, {.v = copylines}},
+    {TERMMOD,XK_G, externalpipe, {.v = copylines}},
 };
 
 /*

@@ -4,7 +4,7 @@
 # please be careful
 
 
-wallpaper="$HOME/Pictures/wallpaper.png"
+wallpaper="$HOME/Media/wallpaper.png"
 
 bdwmb -q &
 dunst &

@@ -1,88 +1,234 @@
-#!/usr/bin/env bash
+#!/usr/bin/env python3
+"""Password generator script"""
 
-main() {
-    rm -f /tmp/.pwdgen_random_bytes
+import random
+import string
+import sys
+from optparse import OptionParser, make_option
 
-    if [ ! "$1" ]; then
-        local max_length="$(((RANDOM + 1) % 384))"
-    else
-        local max_length="$((($1 + 1) + RANDOM % 6))"
-    fi
+from password_strength import PasswordStats
+from pyfzf import FzfPrompt
+from pyperclip import copy as copy_clipboard
 
-    local rng="$((((50 + RANDOM) % "$((max_length + 1))") + 1))"
+__VERSION__ = "0.0.1"
 
-    dd if=/dev/urandom of=/tmp/.pwdgen_random_bytes bs=1 count="$rng" status=none
-    date '+%N%S%N%u%V%N%y%Y%m%G%I%m%N%s%N' >>/tmp/.pwdgen_random_bytes
-    cat -A /bin/wc |
-        head -n "$(((RANDOM + 2) % 22))" |
-        sed 's/./&\n/g' |
-        shuf |
-        tr -d "\n" >>/tmp/.pwdgen_random_bytes
 
-    id="${RANDOM}$(lsblk -fa | rev | sha512sum | base64 | sha512sum | rev;
-    date '+%N%S%N%u%V%N%y%Y%m%G%I%m%N%s%N' | sha512sum;
-    ip a | rev | base64 | sed 's/w/G/g; s/o/M/g; s/=//g' | md5sum;
-    which "$SHELL" | base32 | rev;
-    env | rev | base64 | sed 's/w/G/g; s/o/M/g; s/=//g' | sha256sum;
-    ps aux | sha256sum | base64 | rev;
-    ss | sha384sum | rev;
-    w | xz -z -9 -e -f -c -T0 --no-adjust | sha512sum)${RANDOM}"
+PWD_OPTIONS = OptionParser(
+    option_list=[
+        make_option(
+            "-c",
+            "--charset",
+            action="store",
+            type="string",
+            dest="charset",
+            help="specify a list of allowed characters",
+            default=string.printable.strip(),
+        ),
+        make_option(
+            "-u",
+            "--unicode",
+            action="store_true",
+            dest="allow_unicode",
+            help="allow for unicode to appear in passwords",
+            default=False,
+        ),
+        make_option(
+            "-U",
+            "--unicode-range",
+            action="store",
+            dest="unicode_range",
+            type="str",
+            help="specify the unicode range, format: min,max",
+            default="1,256",
+        ),
+        make_option(
+            "-C",
+            "--copy",
+            action="store_true",
+            dest="clipboard",
+            help="copy the generated password to clipboard",
+            default=False,
+        ),
+        make_option(
+            "-i",
+            "--interactive",
+            action="store_true",
+            dest="interactive",
+            help="let user pick passwords from a menu",
+            default=False,
+        ),
+        make_option(
+            "-t",
+            "--interactive-count",
+            action="store",
+            dest="interactive_count",
+            type="int",
+            help="how many passwords to generate in interactive mode",
+            default=10,
+        ),
+        make_option(
+            "-l",
+            "--length",
+            action="store",
+            dest="length",
+            type="int",
+            help="max password length",
+            default=random.randint(50, 5000),
+        ),
+        make_option(
+            "-L",
+            "--limit",
+            action="store",
+            dest="recursion_limit",
+            type="int",
+            help="set max recursion limit",
+        ),
+        make_option(
+            "-s",
+            "--min-strength",
+            action="store",
+            type="float",
+            dest="min_strength",
+            help="minimum password strength in float, 0.01 = 1%",
+            default=0.95,
+        ),
+        make_option(
+            "-E",
+            "--min-entropy",
+            action="store",
+            type="float",
+            dest="min_entropy",
+            help="minimum password entropy in float",
+            default=1500.0,
+        ),
+        make_option(
+            "-M",
+            "--no-modify",
+            action="store_false",
+            dest="allow_modify",
+            help="if password is too weak, don't modify the configuration to make it stronger",
+            default=True,
+        ),
+        make_option(
+            "-D",
+            "--debug",
+            action="store_true",
+            dest="debug",
+            help="enable debug mode",
+            default=False,
+        ),
+        make_option(
+            "-e",
+            "--end",
+            action="store",
+            dest="end",
+            help="delimeter to end output with",
+            default="\n",
+        ),
+    ],
+    version=__VERSION__,
+    description="Generate strong and secure passwords",
+).parse_args()[0]
 
-    echo "$id" | rev >>/tmp/.pwdgen_random_bytes
-    echo "$@" >>/tmp/.pwdgen_random_bytes
 
-    local bytes
-    bytes="${RANDOM}$(cat -A /tmp/.pwdgen_random_bytes)${id}${RANDOM}"
-    bytes="$(echo -n "$bytes" |
-        sed 's/./&\n/g' |
-        shuf |
-        tr -d "\n" |
-        rev)"
+def dprint(msg: str) -> None:
+    """print a debug message"""
 
-    rm -f /tmp/.pwdgen_random_bytes
+    if PWD_OPTIONS.debug:
+        sys.stderr.write(f"[DEBUG] {msg}\n")
 
-    echo -en "${RADNOM}$(ls -laikrt /proc 2>/dev/null | sha512sum | awk '{print $1}')${RANDOM}$((((RANDOM + 3) / (max_length + rng + 83)) + 7 * max_length ^ WINDOWID))${bytes}${COLUMNS}${max_length}${id}${RANDOM}\
-        $(date '+%N%S%N%u%V%N%y%Y%m%G%I%m%N%s%N')${bytes,,}$(ls /usr/bin)${WINDOWID}${PS1}${RANDOM}" |
-        base64 -w 0 --ignore-garbage |
-        sed 's/O/k/g; s/=/{/g; s/U/s/g; s/4/%/g; s/G/O/g; s/g/4/g; s/s/p/g; s/T/=/g; s/R/*/g' |
-        base32 -w 0 --ignore-garbage |
-        sha512sum |
-        rev |
-        base64 -w "$rng" |
-        gzip -f -9 |
-        sha512sum |
-        lz4 -c -7 --no-content-size -BD -z |
-        xz -z -9 -e -f -c -T0 --no-adjust --block-size="$((RANDOM % 50))" --no-warn |
-        bzip2 -3 -z -f |
-        base64 -w "$((RANDOM % 48))" --ignore-garbage |
-        sed 's/5/p/g; s/e/G/g; s/c/5/g; s/b/c/g; s/c/H/g; s/9/e/g' |
-        base64 -w 0 --ignore-garbage |
-        sed 's/_/O/g; s/d/_/g; s/A/@/g; s/E/:/g' |
-        echo "$(cat -)$(echo "$bytes" | rev)" |
-        sed 's/./&\n/g' |
-        shuf |
-        base64 -w "$((RANDOM % rng))" --ignore-garbage |
-        cat - /dev/urandom |
-        head -n "$((rng ** 2))" |
-        base64 |
-        sha512sum |
-        tr -d "\n" |
-        base64 -w 8 |
-        base64 -w 0 --ignore-garbage |
-        rev |
-        tail --bytes="$((30 + rng + (((RANDOM + 1) % max_length) - 20)))" |
-        sed 's/\//f/; s/=//g; s/8/u/g; s/p/*/g; s/U/%/g; s/f/-/g; s/s/@/g; s/y/+/g' |
-        sed 's/e/&/g; s/O/./g; s/W/~/g; s/m/\\/; s/~/l/g; s/9/$/; s/o/:/g; s/K/`/g' |
-        awk '{ print $1 }' |
-        sed 's/./&\n/g' |
-        shuf |
-        tr -d "\n" |
-        rev
 
-    [[ "$2" != "-n" ]] && echo
+def generate_password() -> str:
+    """Generate and return a password"""
+
+    dprint(f"generating new password of length of {PWD_OPTIONS.length}")
+
+    if PWD_OPTIONS.allow_unicode:
+        dprint("unicode mode = on")
+
+        unicode_min, unicode_max = map(int, PWD_OPTIONS.unicode_range.split(","))
+        generated_password = "".join(
+            [
+                chr(code)
+                for code in (
+                    random.randint(unicode_min, unicode_max)
+                    for _ in range(PWD_OPTIONS.length)
+                )
+            ]
+        )
+    else:
+        generated_password = "".join(
+            [random.choice(PWD_OPTIONS.charset) for _ in range(PWD_OPTIONS.length)]
+        )
+
+    dprint("password generated. calculating statistics...")
+
+    p_stats = PasswordStats(generated_password)
+    p_strength = (1 - p_stats.weakness_factor) * p_stats.strength()
+
+    dprint(
+        f"generated new password. strength = {p_strength} out of {PWD_OPTIONS.min_strength} required, length = {len(generated_password)} out of {PWD_OPTIONS.length} and entropy = {p_stats.entropy_bits} out of {PWD_OPTIONS.min_entropy} required"
+    )
+
+    if PWD_OPTIONS.allow_modify:
+        dprint("modifying config...")
+        PWD_OPTIONS.length += int(
+            (p_stats.entropy_bits * p_strength) // p_stats.length
+            + random.randint(2, 30)
+        )
+        PWD_OPTIONS.charset += random.choice(PWD_OPTIONS.charset)
+
+    return (
+        generated_password
+        if p_strength >= PWD_OPTIONS.min_strength
+        and p_stats.entropy_bits >= PWD_OPTIONS.min_entropy
+        else generate_password()
+    )
+
+
+def main() -> int:
+    """Entry/main function"""
+
+    dprint(f"PWD_OPTIONS = {PWD_OPTIONS}")
+
+    if PWD_OPTIONS.interactive:
+        dprint("interactive mode = on")
+        dprint(f"generating {PWD_OPTIONS.interactive_count} passwords")
+
+        password = FzfPrompt().prompt(
+            [generate_password() for _ in range(PWD_OPTIONS.interactive_count)]
+        )[0]
+    else:
+        dprint("generating password")
+        password = generate_password()
+
+    if PWD_OPTIONS.clipboard:
+        dprint("copying password to clipboard")
+        copy_clipboard(password)
+        dprint("copied password to clipboard")
+    else:
+        dprint("outputing password")
+        print(
+            password,
+            end=PWD_OPTIONS.end.encode("raw_unicode_escape").decode("unicode_escape"),
+        )
+
+    dprint(f"PWD_OPTIONS = {PWD_OPTIONS}")
+
     return 0
-}
 
 
-main "$@"
+if __name__ == "__main__":
+    dprint(f"version {__VERSION__}")
 
+    if PWD_OPTIONS.recursion_limit is not None:
+        dprint(
+            f"setting recursion limit {sys.getrecursionlimit()} -> {PWD_OPTIONS.recursion_limit}"
+        )
+        sys.setrecursionlimit(PWD_OPTIONS.recursion_limit)
+
+    dprint("asserting main()")
+    assert main.__annotations__.get("return") is int, "main() should return an integer"
+
+    dprint("running main()")
+    sys.exit(main())

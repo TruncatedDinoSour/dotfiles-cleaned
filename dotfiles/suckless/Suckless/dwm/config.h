@@ -9,11 +9,9 @@ static const char sudo_cmd[] = "sudo";
 static const unsigned int gappx = 2;    /* gaps */
 static const unsigned int borderpx = 2; /* border pixel of windows */
 static const unsigned int snap = 32;    /* snap pixel */
-static const bool doAutostart = true;   /* autostart */
 static const int showbar = 1; /* 0 means no bar */
 static const int topbar = 1;  /* 0 means bottom bar */
 static const char *fonts[] = {"sans:size=15.5"};
-static const char dmenufont[] = "monospace:size=13";
 
 static const char col_gray1[] =
     "#262220"; /* #222222; background colour */
