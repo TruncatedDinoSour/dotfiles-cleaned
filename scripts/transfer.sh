@@ -160,7 +160,7 @@ python3 -m pip list | awk '{ print $1 }' | tail -n +3 > list/pip_modules.list
 
 
 sudo chown -R ari:ari dotfiles
-rm -rfv dotfiles/config/asciinema dotfiles/editors/vim/.vim/undodir dotfiles/config/keepassxc dotfiles/config/VSCodium dotfiles/config/VirtualBox dotfiles/config/transmission/dht.dat dotfiles/config/dconf
+rm -rfv dotfiles/config/asciinema dotfiles/editors/vim/.vim/undodir dotfiles/config/keepassxc dotfiles/config/VSCodium dotfiles/config/VirtualBox dotfiles/config/transmission/dht.dat dotfiles/config/dconf dotfiles/config/netlify dotfiles/config/transmission/resume
 
 cp scripts/clean_firefox_profile dotfiles/etc/firefox
 cd dotfiles/etc/firefox || exit 1
