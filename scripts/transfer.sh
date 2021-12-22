@@ -167,5 +167,5 @@ cd dotfiles/etc/firefox || exit 1
 ./clean_firefox_profile
 cd ../../.. || exit 2
 
-sed -i '/PHONE/d' dotfiles/config/arigram/config.py
+# sed -i '/PHONE/d' dotfiles/config/arigram/config.py
 

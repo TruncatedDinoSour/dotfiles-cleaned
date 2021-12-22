@@ -27,6 +27,8 @@ config.h:
 slock: ${OBJ}
 	@echo CC -o $@
 	@${CC} -o $@ ${OBJ} ${LDFLAGS}
+	@echo STRIP -o $@
+	@$(STRIP) $@ -o $@ ${STRIPFLAGS}
 
 clean:
 	@echo cleaning

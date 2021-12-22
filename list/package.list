@@ -14,6 +14,7 @@ app-text/zathura-pdf-poppler
 dev-lang/python
 dev-libs/boost
 dev-libs/botan
+dev-libs/libedit
 dev-python/pip
 dev-scheme/chezscheme
 dev-scheme/racket
@@ -38,7 +39,7 @@ sys-apps/bat
 sys-apps/duf
 sys-apps/lsd
 sys-apps/mlocate
-sys-apps/usbutils
+sys-apps/portage
 sys-boot/grub:2
 sys-fs/cryptsetup
 sys-fs/dosfstools
@@ -46,7 +47,7 @@ sys-fs/xfsprogs
 sys-kernel/dracut
 sys-kernel/gentoo-sources
 sys-kernel/linux-firmware
-sys-process/htop
+sys-process/htop-vim
 www-client/firefox
 www-client/lynx
 x11-apps/xbacklight

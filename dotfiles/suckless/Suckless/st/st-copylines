@@ -7,7 +7,7 @@ sed -n "w $tmpfile"
 sed -i 's/\x0//g; /^\s*$/d' "$tmpfile"
 
 from="$(nl -w2 -s' ' < "$tmpfile" | dmenu -p 'From:' | awk '{print $1}')"
-to="$(nl -w2 -s' ' < "$tmpfile" | dmenu -p 'to:' | awk '{print $1}')"
+to="$(nl -w2 -s' ' < "$tmpfile" | dmenu -p 'To:' | awk '{print $1}')"
 
 if [ "$to" -lt "$from" ]; then
     notify-send "Bad range" "${from} > ${to} condinion has been met. Invalid range."

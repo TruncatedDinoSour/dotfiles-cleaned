@@ -24,9 +24,49 @@ let g:indentLine_conceallevel = 1
 let g:coc_global_extensions = [
             \ 'coc-json',
             \ 'coc-pyright',
-            \ 'coc-pairs',
             \ 'coc-snippets',
             \ 'coc-lua',
             \ 'coc-sh',
             \ ]
+
+" Rainbow parenteces
+let g:rainbow_active = 1
+let g:rainbow_conf = {
+            \ 'ctermfgs': [ 'gray', 'darkgray', 'magenta', 'red' ],
+            \ 'contains_prefix': 'TOP',
+            \ 'parentheses_options': '',
+            \ 'parentheses': ['start=/</ end=/>/ fold', 'start=/(/ end=/)/ fold', 'start=/\[/ end=/\]/ fold', 'start=/{/ end=/}/ fold'],
+            \ 'separately': {
+            \         '*': {},
+            \         'markdown': {
+            \             'parentheses_options': 'containedin=markdownCode contained',
+            \         },
+            \         'haskell': {
+            \             'parentheses': ['start=/(/ end=/)/ fold', 'start=/\[/ end=/\]/ fold', 'start=/\v\{\ze[^-]/ end=/}/ fold'],
+            \         },
+            \         'ocaml': {
+            \           'parentheses': ['start=/(\ze[^*]/ end=/)/ fold', 'start=/\[/ end=/\]/ fold', 'start=/\[|/ end=/|\]/ fold', 'start=/{/ end=/}/ fold'],
+            \         },
+            \         'tex': {
+            \             'parentheses_options': 'containedin=texDocZone',
+            \             'parentheses': ['start=/(/ end=/)/', 'start=/\[/ end=/\]/'],
+            \         },
+            \         'vim': {
+            \             'parentheses_options': 'containedin=vimFuncBody,vimExecute',
+            \             'parentheses': ['start=/(/ end=/)/', 'start=/\[/ end=/\]/', 'start=/{/ end=/}/ fold'],
+            \         },
+            \         'lua': {
+            \             'parentheses': ["start=/(/ end=/)/", "start=/{/ end=/}/", "start=/\\v\\[\\ze($|[^[])/ end=/\\]/"],
+            \         },
+            \         'perl': {
+            \             'syn_name_prefix': 'perlBlockFoldRainbow',
+            \         },
+            \         'stylus': {
+            \             'parentheses': ['start=/{/ end=/}/ fold contains=@colorableGroup'],
+            \         },
+            \         'css': 0,
+            \         'sh': 0,
+            \         'vimwiki': 0,
+            \     }
+            \ }
 

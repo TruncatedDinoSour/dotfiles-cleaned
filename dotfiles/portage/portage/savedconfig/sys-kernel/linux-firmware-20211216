@@ -30,6 +30,7 @@ amdgpu/renoir_ce.bin
 amdgpu/picasso_ta.bin
 amdgpu/polaris12_mec.bin
 amdgpu/carrizo_rlc.bin
+amdgpu/cyan_skillfish2_me.bin
 amdgpu/renoir_sdma.bin
 amdgpu/kaveri_sdma.bin
 amdgpu/bonaire_smc.bin
@@ -94,6 +95,7 @@ amdgpu/carrizo_mec2.bin
 amdgpu/mullins_rlc.bin
 amdgpu/green_sardine_sdma.bin
 amdgpu/navi14_sdma.bin
+amdgpu/cyan_skillfish2_pfp.bin
 amdgpu/vangogh_asd.bin
 amdgpu/tonga_smc.bin
 amdgpu/pitcairn_rlc.bin
@@ -200,6 +202,7 @@ amdgpu/topaz_me.bin
 amdgpu/pitcairn_uvd.bin
 amdgpu/navi10_me.bin
 amdgpu/polaris10_k_smc.bin
+amdgpu/cyan_skillfish2_mec.bin
 amdgpu/navy_flounder_vcn.bin
 amdgpu/navi12_gpu_info.bin
 amdgpu/vegam_sdma1.bin
@@ -220,6 +223,7 @@ amdgpu/polaris11_rlc.bin
 amdgpu/topaz_mec.bin
 amdgpu/bonaire_ce.bin
 amdgpu/beige_goby_pfp.bin
+amdgpu/cyan_skillfish2_sdma.bin
 amdgpu/mullins_pfp.bin
 amdgpu/polaris12_rlc.bin
 amdgpu/green_sardine_asd.bin
@@ -270,6 +274,7 @@ amdgpu/green_sardine_mec2.bin
 amdgpu/stoney_rlc.bin
 amdgpu/pitcairn_mc.bin
 amdgpu/sienna_cichlid_smc.bin
+amdgpu/cyan_skillfish2_ce.bin
 amdgpu/raven2_ta.bin
 amdgpu/fiji_pfp.bin
 amdgpu/polaris11_mec_2.bin
@@ -318,6 +323,7 @@ amdgpu/fiji_me.bin
 amdgpu/polaris11_k_mc.bin
 amdgpu/arcturus_mec2.bin
 amdgpu/dimgrey_cavefish_me.bin
+amdgpu/cyan_skillfish2_sdma1.bin
 amdgpu/vega20_asd.bin
 amdgpu/tonga_k_smc.bin
 amdgpu/vegam_uvd.bin
@@ -328,6 +334,7 @@ amdgpu/yellow_carp_me.bin
 amdgpu/vegam_ce.bin
 amdgpu/carrizo_me.bin
 amdgpu/navi14_mec2.bin
+amdgpu/cyan_skillfish2_rlc.bin
 amdgpu/polaris11_pfp.bin
 amdgpu/kabini_me.bin
 amdgpu/raven2_ce.bin
@@ -352,6 +359,7 @@ amdgpu/kabini_mec.bin
 amdgpu/bonaire_vce.bin
 amdgpu/navy_flounder_pfp.bin
 amdgpu/beige_goby_vcn.bin
+amdgpu/cyan_skillfish2_mec2.bin
 amdgpu/green_sardine_pfp.bin
 amdgpu/topaz_pfp.bin
 amdgpu/topaz_rlc.bin
@@ -653,6 +661,7 @@ bnx2/bnx2-mips-09-6.2.1b.fw
 bnx2x/bnx2x-e1h-6.0.34.0.fw
 bnx2x/bnx2x-e2-7.8.19.0.fw
 bnx2x/bnx2x-e2-6.0.34.0.fw
+bnx2x/bnx2x-e1h-7.13.21.0.fw
 bnx2x/bnx2x-e1-7.8.19.0.fw
 bnx2x/bnx2x-e1h-7.10.51.0.fw
 bnx2x/bnx2x-e2-7.2.16.0.fw
@@ -661,13 +670,12 @@ bnx2x/bnx2x-e1-7.8.2.0.fw
 bnx2x/bnx2x-e1-7.13.1.0.fw
 bnx2x/bnx2x-e2-7.0.20.0.fw
 bnx2x/bnx2x-e1h-7.2.51.0.fw
-bnx2x/bnx2x-e1-7.13.20.0.fw
-bnx2x/bnx2x-e1h-7.13.20.0.fw
 bnx2x/bnx2x-e1h-7.8.17.0.fw
 bnx2x/bnx2x-e1h-6.2.5.0.fw
 bnx2x/bnx2x-e2-7.0.23.0.fw
 bnx2x/bnx2x-e1-6.2.9.0.fw
 bnx2x/bnx2x-e1-7.0.29.0.fw
+bnx2x/bnx2x-e2-7.13.21.0.fw
 bnx2x/bnx2x-e1h-7.12.30.0.fw
 bnx2x/bnx2x-e1-7.0.23.0.fw
 bnx2x/bnx2x-e2-7.2.51.0.fw
@@ -687,8 +695,8 @@ bnx2x/bnx2x-e2-7.8.17.0.fw
 bnx2x/bnx2x-e1-6.2.5.0.fw
 bnx2x/bnx2x-e1h-7.0.20.0.fw
 bnx2x/bnx2x-e2-7.12.30.0.fw
-bnx2x/bnx2x-e2-7.13.20.0.fw
 bnx2x/bnx2x-e1h-7.2.16.0.fw
+bnx2x/bnx2x-e1-7.13.21.0.fw
 bnx2x/bnx2x-e1h-7.0.23.0.fw
 bnx2x/bnx2x-e2-7.13.15.0.fw
 bnx2x/bnx2x-e1h-7.13.15.0.fw
@@ -826,10 +834,11 @@ cxgb3/t3fw-7.10.0.bin
 cxgb3/t3fw-7.12.0.bin
 cxgb3/ael2020_twx_edc.bin
 cxgb3/t3fw-7.1.0.bin
+cxgb4/t6fw-1.26.4.0.bin
+cxgb4/t5fw-1.26.4.0.bin
 cxgb4/t5fw.bin
 cxgb4/t4-config.txt
 cxgb4/aq1202_fw.cld
-cxgb4/t6fw-1.26.2.0.bin
 cxgb4/t6-config.txt
 cxgb4/t4fw-1.15.37.0.bin
 cxgb4/configs/t4-config-default.txt
@@ -839,10 +848,9 @@ cxgb4/configs/t6-config-hashfilter.txt
 cxgb4/configs/t5-config-default.txt
 cxgb4/t5fw-1.15.37.0.bin
 cxgb4/t4fw-1.14.4.0.bin
-cxgb4/t4fw-1.26.2.0.bin
 cxgb4/t6fw.bin
 cxgb4/t4fw.bin
-cxgb4/t5fw-1.26.2.0.bin
+cxgb4/t4fw-1.26.4.0.bin
 cxgb4/t5-config.txt
 cxgb4/bcm8483.bin
 cxgb4/t5fw-1.14.4.0.bin
@@ -992,6 +1000,7 @@ i915/glk_huc_4.0.0.bin
 i915/cml_guc_62.0.0.bin
 i915/icl_huc_9.0.0.bin
 i915/skl_guc_ver9_33.bin
+i915/adlp_dmc_ver2_14.bin
 i915/skl_guc_ver1.bin
 i915/glk_guc_49.0.1.bin
 i915/icl_guc_49.0.1.bin
@@ -1237,6 +1246,7 @@ iwlwifi-QuZ-a0-hr-b0-55.ucode
 iwlwifi-QuZ-a0-hr-b0-59.ucode
 iwlwifi-QuZ-a0-hr-b0-62.ucode
 iwlwifi-QuZ-a0-hr-b0-63.ucode
+iwlwifi-QuZ-a0-hr-b0-67.ucode
 iwlwifi-QuZ-a0-jf-b0-48.ucode
 iwlwifi-QuZ-a0-jf-b0-50.ucode
 iwlwifi-QuZ-a0-jf-b0-53.ucode
@@ -1252,14 +1262,19 @@ iwlwifi-cc-a0-55.ucode
 iwlwifi-cc-a0-59.ucode
 iwlwifi-cc-a0-62.ucode
 iwlwifi-cc-a0-63.ucode
+iwlwifi-cc-a0-67.ucode
 iwlwifi-so-a0-gf-a0-64.ucode
+iwlwifi-so-a0-gf-a0-67.ucode
 iwlwifi-so-a0-gf-a0.pnvm
+iwlwifi-so-a0-gf4-a0-67.ucode
+iwlwifi-so-a0-gf4-a0.pnvm
 iwlwifi-so-a0-hr-b0-64.ucode
 iwlwifi-so-a0-jf-b0-64.ucode
 iwlwifi-ty-a0-gf-a0-59.ucode
 iwlwifi-ty-a0-gf-a0-62.ucode
 iwlwifi-ty-a0-gf-a0-63.ucode
 iwlwifi-ty-a0-gf-a0-66.ucode
+iwlwifi-ty-a0-gf-a0-67.ucode
 iwlwifi-ty-a0-gf-a0.pnvm
 kaweth/new_code_fix.bin
 kaweth/trigger_code_fix.bin
@@ -1430,6 +1445,7 @@ mrvl/usb8797_uapsta.bin
 mrvl/usb8801_uapsta.bin
 mrvl/sdsd8997_combo_v4.bin
 mrvl/prestera/mvsw_prestera_fw-v3.0.img
+mrvl/prestera/mvsw_prestera_fw-v4.0.img
 mrvl/prestera/mvsw_prestera_fw-v2.0.img
 mrvl/usbusb8997_combo_v4.bin
 mrvl/sd8688_helper.bin
@@ -1909,12 +1925,14 @@ qca/nvm_00440302.bin
 qca/crnv32.bin
 qca/rampatch_usb_00130200.bin
 qca/nvm_usb_00000200.bin
+qca/nvm_usb_00130201.bin
 qca/msnv11.bin
 qca/nvm_usb_00000302_eu.bin
 qca/rampatch_usb_00000201.bin
 qca/msbtfw11.mbn
 qca/htbtfw20.tlv
 qca/msbtfw11.tlv
+qca/nvm_usb_00130201_010a.bin
 qca/nvm_usb_00130200_0110.bin
 qca/crnv32u.bin
 qca/nvm_usb_00000201.bin
@@ -1935,6 +1953,7 @@ qca/nvm_00440302_eu.bin
 qca/nvm_usb_00000300.bin
 qca/rampatch_00230302.bin
 qca/nvm_usb_00000302.bin
+qca/rampatch_usb_00130201.bin
 qca/nvm_00230302.bin
 qca/nvm_usb_00130200_0109.bin
 qca/crbtfw32.tlv

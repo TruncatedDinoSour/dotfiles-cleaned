@@ -1,2 +1,2 @@
-dev-scheme/racket chez jit readline
+dev-scheme/racket chez jit -X minimal
 

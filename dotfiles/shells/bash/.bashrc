@@ -7,7 +7,15 @@
 export PATH="$PATH:/usr/local/bin:$HOME/.local/bin:$HOME/.scripts"
 
 
+# config
+source ~/.config/shells/bash/*.conf
+
+
 __BASH_TERM="$(tset -q)"
+
+
+# pre-run
+source ~/.config/shells/bash/*.pre
 
 
 # Environment
@@ -15,12 +23,14 @@ source ~/.config/shells/bash/*.env
 
 
 # TMUX config
-source ~/.config/shells/tmux/*.tmux
+source ~/.config/shells/tmux/*.conf
 
 # Check for TMUX
 if [ -z "$TMUX" ] && [ "$__BASH_TERM" != 'linux' ] && [ -x "$(command -v tmux)" ] && [ ! "$__BASH_TMUX_DISABLE" ]; then
     tmux -2 -l
     exit 127
+else
+    vecho 'TMUX not started'
 fi
 
 

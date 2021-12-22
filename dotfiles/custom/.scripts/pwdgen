@@ -146,7 +146,7 @@ def generate_password() -> str:
     if PWD_OPTIONS.allow_unicode:
         dprint("unicode mode = on")
 
-        unicode_min, unicode_max = map(int, PWD_OPTIONS.unicode_range.split(","))
+        unicode_min, unicode_max = map(int, PWD_OPTIONS.unicode_range.split(",", 1))
         generated_password = "".join(
             [
                 chr(code)

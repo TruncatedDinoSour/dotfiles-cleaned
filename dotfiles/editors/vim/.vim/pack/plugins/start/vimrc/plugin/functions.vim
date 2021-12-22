@@ -38,6 +38,14 @@ tnoremap <C-y> <C-\><C-n>:resize +1<CR>i
 tnoremap <C-u> <C-\><C-n>:resize -1<CR>i
 
 
+" Format python
+function! FormatPythonCode()
+    FormatCode black
+    FormatCode isort
+endfun
+
+autocmd! filetype python map F :call FormatPythonCode()<CR>
+
 " Convert to spaces
 autocmd! bufreadpost * set expandtab | retab!
 autocmd! bufwritepre * set expandtab | retab!

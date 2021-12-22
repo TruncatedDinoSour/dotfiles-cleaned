@@ -51,7 +51,7 @@ main() {
     ram="$(_input "RAM size in MiB")"
     cpus="$(_input "Number of cpu cores")"
 
-    __bioses=("$(locate "$BIOS")" "?")
+    __bioses=($(locate "$BIOS") "?")
     bios="$(_ask_q "BIOS" "$(printf "%s\n" "${__bioses[@]}")")"
 
     [[ "$bios" == "?" ]] && bios="$(_input "Enter the path to bios")"

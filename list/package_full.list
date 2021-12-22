@@ -7,7 +7,6 @@ acct-group/kmem
 acct-group/kvm
 acct-group/locate
 acct-group/lp
-acct-group/lpadmin
 acct-group/mail
 acct-group/man
 acct-group/messagebus
@@ -53,7 +52,6 @@ app-crypt/gnupg
 app-crypt/gpgme
 app-crypt/libb2
 app-crypt/libmd
-app-crypt/openpgp-keys-gentoo-release
 app-crypt/pinentry
 app-crypt/rhash
 app-editors/vim
@@ -109,7 +107,6 @@ app-text/poppler-data
 app-text/ps2eps
 app-text/ps2pkm
 app-text/psutils
-app-text/qpdf
 app-text/rman
 app-text/sgml-common
 app-text/t1utils
@@ -162,6 +159,7 @@ dev-libs/kpathsea
 dev-libs/libaio
 dev-libs/libassuan
 dev-libs/libbsd
+dev-libs/libedit
 dev-libs/libevdev
 dev-libs/libevent
 dev-libs/libffi
@@ -213,34 +211,17 @@ dev-perl/Devel-StackTrace
 dev-perl/Digest-HMAC
 dev-perl/Digest-Perl-MD5
 dev-perl/Dist-CheckConflicts
-dev-perl/Encode-Locale
 dev-perl/Error
 dev-perl/Eval-Closure
 dev-perl/Exception-Class
 dev-perl/ExtUtils-HasCompiler
-dev-perl/File-BaseDir
-dev-perl/File-DesktopEntry
 dev-perl/File-HomeDir
-dev-perl/File-Listing
-dev-perl/File-MimeInfo
 dev-perl/File-Slurper
 dev-perl/File-Which
-dev-perl/HTML-Parser
-dev-perl/HTML-Tagset
-dev-perl/HTTP-Cookies
-dev-perl/HTTP-Date
-dev-perl/HTTP-Message
-dev-perl/HTTP-Negotiate
-dev-perl/IO-HTML
-dev-perl/IO-Socket-INET6
 dev-perl/IO-Socket-SSL
 dev-perl/IO-stringy
-dev-perl/IPC-System-Simple
-dev-perl/libwww-perl
 dev-perl/Locale-gettext
 dev-perl/Log-Dispatch
-dev-perl/LWP-MediaTypes
-dev-perl/LWP-Protocol-https
 dev-perl/MailTools
 dev-perl/MIME-Charset
 dev-perl/Module-Build
@@ -250,7 +231,6 @@ dev-perl/Mozilla-CA
 dev-perl/MRO-Compat
 dev-perl/namespace-autoclean
 dev-perl/namespace-clean
-dev-perl/Net-HTTP
 dev-perl/Net-SSLeay
 dev-perl/OLE-StorageLite
 dev-perl/Package-Stash
@@ -266,7 +246,6 @@ dev-perl/Ref-Util
 dev-perl/Ref-Util-XS
 dev-perl/Role-Tiny
 dev-perl/SGMLSpm
-dev-perl/Socket6
 dev-perl/Specio
 dev-perl/Spreadsheet-ParseExcel
 dev-perl/Sub-Exporter
@@ -284,9 +263,7 @@ dev-perl/TimeDate
 dev-perl/Try-Tiny
 dev-perl/Unicode-LineBreak
 dev-perl/Unicode-Map
-dev-perl/URI
 dev-perl/Variable-Magic
-dev-perl/WWW-RobotRules
 dev-perl/XML-Parser
 dev-perl/XString
 dev-perl/YAML-Tiny
@@ -315,6 +292,7 @@ dev-python/setuptools_scm
 dev-python/six
 dev-python/snowballstemmer
 dev-python/sphinx
+dev-python/sphinx_rtd_theme
 dev-python/sphinxcontrib-applehelp
 dev-python/sphinxcontrib-devhelp
 dev-python/sphinxcontrib-htmlhelp
@@ -456,14 +434,13 @@ net-misc/rsync
 net-misc/vde
 net-misc/wget
 net-p2p/transmission-cli
-net-print/cups
-net-print/cups-filters
 net-wireless/crda
 net-wireless/wireless-regdb
 net-wireless/wpa_supplicant
 perl-core/Encode
 perl-core/File-Temp
 perl-core/Scalar-List-Utils
+sec-keys/openpgp-keys-gentoo-release
 sys-apps/acl
 sys-apps/attr
 sys-apps/baselayout
@@ -505,7 +482,6 @@ sys-apps/shadow
 sys-apps/systemd-tmpfiles
 sys-apps/sysvinit
 sys-apps/texinfo
-sys-apps/usbutils
 sys-apps/util-linux
 sys-apps/which
 sys-auth/elogind
@@ -575,7 +551,7 @@ sys-libs/pam
 sys-libs/readline
 sys-libs/timezone-data
 sys-libs/zlib
-sys-process/htop
+sys-process/htop-vim
 sys-process/procps
 sys-process/psmisc
 virtual/acl
@@ -602,8 +578,6 @@ virtual/os-headers
 virtual/package-manager
 virtual/pager
 virtual/perl-Carp
-virtual/perl-Compress-Raw-Bzip2
-virtual/perl-Compress-Raw-Zlib
 virtual/perl-CPAN-Meta
 virtual/perl-CPAN-Meta-Requirements
 virtual/perl-CPAN-Meta-YAML
@@ -623,8 +597,6 @@ virtual/perl-File-Temp
 virtual/perl-Getopt-Long
 virtual/perl-if
 virtual/perl-IO
-virtual/perl-IO-Compress
-virtual/perl-IO-Socket-IP
 virtual/perl-JSON-PP
 virtual/perl-libnet
 virtual/perl-MIME-Base64
@@ -639,7 +611,6 @@ virtual/perl-Sys-Syslog
 virtual/perl-Test-Harness
 virtual/perl-Test-Simple
 virtual/perl-Text-ParseWords
-virtual/perl-Time-Local
 virtual/perl-version
 virtual/perl-XSLoader
 virtual/pkgconfig
@@ -662,7 +633,6 @@ x11-apps/xbacklight
 x11-apps/xinit
 x11-apps/xkbcomp
 x11-apps/xmodmap
-x11-apps/xprop
 x11-apps/xrandr
 x11-apps/xrdb
 x11-apps/xset
@@ -730,7 +700,6 @@ x11-misc/xautolock
 x11-misc/xbitmaps
 x11-misc/xclip
 x11-misc/xdg-user-dirs
-x11-misc/xdg-utils
 x11-misc/xkeyboard-config
 x11-misc/xorg-cf-files
 x11-themes/adwaita-icon-theme

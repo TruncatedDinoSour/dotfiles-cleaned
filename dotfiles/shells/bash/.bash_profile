@@ -15,7 +15,3 @@ export XZ_OPT=-e9T0
 export NNN_TRASH=1
 export NNN_LOCKER='cmatrix'
 
-# FZF
-export FZF_DEFAULT_OPTS="--layout=reverse --height=20 --no-mouse -i"
-export FZF_TMUX_HEIGHT=20
-

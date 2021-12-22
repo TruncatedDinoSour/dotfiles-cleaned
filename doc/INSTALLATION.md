@@ -31,22 +31,9 @@ $ mkdir ~/backups
 $ cp -r /etc/portage ~/backups
 ```
 
-2. Install eselect-repository
-```bash
-$ sudo emerge -qa app-eselect/eselect-repository
-```
-
 3. Add dinolay
-```bash
-$ sudo eselect repository add 'dinolay' 'git' 'https://github.com/TruncatedDinosour/dinolay.git'
-$ sudo eselect repository enable dinolay
-```
-<!-- 
-4. Add torbrowser
-```bash
-$ sudo eselect repository add 'torbrowser' 'git' 'https://github.com/MeisterP/torbrowser-overlay.git'
-$ sudo eselect repository enable torbrowser
-``` -->
+https://github.com/TruncatedDinosour/dinolay#installation
+
 
 4. Sync portage
 ```bash
@@ -147,11 +134,10 @@ $ sudo mv bin/* /usr/local/src
 $ cd /usr/local/src
 ```
 
-5. Install yafetch
+5. Install extra tools
 ```bash
-$ cd yafetch
-$ sudo make
-$ sudo ln -s /usr/local/src/yafetch/yafetch /usr/local/bin/yafetch
+$ sudo emerhe -qa yafetch
+$ sudo emerhe -qa bdwmb
 ```
 
 6. Go back to dotfiles
@@ -239,6 +225,7 @@ $ sudo make install
 $ sudo dracut --force
 $ sudo grub-mkconfig -o /boot/grub/grub.cfg
 ```
+
 
 21. Get my suckless software builds
 ```bash

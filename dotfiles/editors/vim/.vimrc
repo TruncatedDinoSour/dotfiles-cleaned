@@ -42,14 +42,14 @@ autocmd Filetype markdown,text,xmath,tex set spell wrap
 " Make emmet work on HTML
 autocmd Filetype html set notimeout timeoutlen=100 ttimeoutlen=100
 
+" Lisp mode for lisp
+autocmd Filetype racket,scheme,lisp,clojure set lisp
+
 " Porth
 autocmd BufRead,BufNewFile *.porth set filetype=porth
 
 " Make it not store some undos
 autocmd BufWritePre,BufRead,BufNewFile /mnt/*,/tmp/* set noundofile undodir=
-
-" ALE is a bitch sometimes
-" let g:ale_pattern_options = {'\.py$': {'ale_enabled': 0}}
 
 
 " Plugins
@@ -72,15 +72,23 @@ call plug#begin("~/.vim/plugged")
     Plug 'vim-latex/vim-latex'
     Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install()  }, 'for': ['markdown', 'vim-plug'] }
     Plug 'google/vim-maktaba'
-    Plug 'google/vim-codefmt'
+    Plug 'TruncatedDinosour/vim-codefmt'
     Plug 'Yggdroot/indentLine'
     Plug 'drmingdrmer/vim-tabbar'
     Plug 'lilydjwg/colorizer'
     Plug 'editorconfig/editorconfig-vim'
     Plug 'christoomey/vim-tmux-navigator'
     Plug 'wlangstroth/vim-racket'
+    Plug 'tpope/vim-surround'
+    Plug 'luochen1990/rainbow'
+    Plug 'MicahElliott/vrod'
+    Plug 'kovisoft/slimv'
 call plug#end()
 
 
 colorscheme alduin                  " Set the theme
+
+
+" Plugin config
+source ~/.vim/pack/plugins/start/vimrc/plugin/plugin_config.vim
 

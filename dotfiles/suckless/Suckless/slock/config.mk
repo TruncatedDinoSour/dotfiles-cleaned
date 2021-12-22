@@ -29,4 +29,9 @@ COMPATSRC = explicit_bzero.c
 #COMPATSRC =
 
 # compiler and linker
-CC = cc
+CC = clang
+
+# Stripper
+STRIP = strip
+STRIPFLAGS = --strip-all --remove-section=.note --remove-section=.gnu.version --remove-section=.comment --strip-debug --strip-unneeded
+

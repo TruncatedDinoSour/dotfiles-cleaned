@@ -1,15 +1,17 @@
 #!/bin/bash
 
-source ~/.config/shells/bash/*.conf
-
 alias k="\$__BASH_CORE_BIN_DIR/kill"
 alias ka="\$__BASH_BIN_DIR/killall"
 alias e='exit'
+alias c='clear'
 
 alias ls="\$__BASH_BIN_DIR/lsd --group-dirs --color=auto -Fh"
 alias ll='ls -lF'
 alias la='ls -lFA'
 alias l='ll'
+
+alias mkb="\$__BASH_BIN_DIR/make -C .."
+alias mk="\$__BASH_BIN_DIR/make"
 
 alias rm='trash-put'
 alias rls='trash-list'
@@ -18,6 +20,7 @@ alias rmk='trash-restore'
 
 alias v="\$__BASH_BIN_DIR/vim"
 alias vn='v -Nu NONE'
+alias vc='v ~/.config'
 
 alias df="\$__BASH_BIN_DIR/duf -hide special"
 alias cat="\$__BASH_BIN_DIR/bat --theme=\"gruvbox-dark\""

@@ -2,17 +2,9 @@
 
 source /etc/bash_git
 
-
-vecho() {
-    [[ "$__BASH_VINFO" == true ]] && echo "[VECHO] $@"
-}
-
-
-
 autorun() {
     /usr/bin/yafetch 2>/dev/null || return
 }
-
 
 ps_one() {
     local c_status="$?"
@@ -22,15 +14,14 @@ ps_one() {
     local propt_char='#'
     local user_colour="${GREEN}"
 
-    [[ "$UID" != '0'  ]] && local propt_char='%'
-    [[ "$c_status" != '0'  ]] && local propt_colour="${RED}$c_status "
-    [[ "$git"  ]] && local dir="$git $dir"
-    [[ "$venv"  ]] && local extra="{${GREEN}$venv${RESTORE}} "
-    [[ "$UID" == '0' ]] && local user_colour="${RED}"
+    [[ $UID != '0' ]] && local propt_char='%'
+    [[ $c_status != '0' ]] && local propt_colour="${RED}$c_status "
+    [[ "$git" ]] && local dir="$git $dir"
+    [[ "$venv" ]] && local extra="{${GREEN}$venv${RESTORE}} "
+    [[ $UID == '0' ]] && local user_colour="${RED}"
 
     export PS1="\n${extra}${user_colour}\u${RESTORE}@\h ${dir} ${propt_colour}${propt_char}${RESTORE} "
 }
-
 
 man() {
     # \E[...m = ANSI colour
@@ -45,8 +36,9 @@ man() {
         man "$@"
 }
 
-
 tty_autorun() {
+    vecho 'running TTY autorun'
+
     # TTY theme
     echo -en "\e]P0282828" #black
     echo -en "\e]P88F9494" #darkgrey
@@ -64,9 +56,8 @@ tty_autorun() {
     echo -en "\e]PE87875F" #cyan
     echo -en "\e]P7DDD0C0" #lightgrey
     echo -en "\e]PFDDD0C0" #white
-    clear #for background artifacting
+    clear                  #for background artifacting
 }
-
 
 mkkernel() {
     cd /usr/src/linux || exit 1
@@ -77,33 +68,43 @@ mkkernel() {
     $__BASH_RUNAS /usr/sbin/grub-mkconfig -o /boot/grub/grub.cfg
 }
 
-
 vs() {
     back="$(pwd)"
     scriptdir="$HOME/.scripts"
     script="$(find "$scriptdir" -maxdepth 1 -type f | fzf)"
 
-    [[ "$script" ]] && vim "$script"
+    if [[ "$script" ]]; then
+        $EDITOR "$script"
+        history -s "$EDITOR '$script'"
+    fi
+
     cd "$back" || exit 2
 }
 
+vv() {
+    file="$(fzf)"
+
+    if [[ "$file" ]]; then
+        $EDITOR "$file"
+        history -s "$EDITOR '$file'"
+    fi
+}
 
 pip_upgrade() {
     "$__BASH_BIN_DIR"/python3 -m pip list |
         "$__BASH_BIN_DIR"/awk '{ print $1  }' |
-        "$__BASH_BIN_DIR"/tail -n +3 > /tmp/requirements.txt
+        "$__BASH_BIN_DIR"/tail -n +3 >/tmp/requirements.txt
 
     "$__BASH_BIN_DIR"/python3 -m pip install --user --upgrade -r /tmp/requirements.txt
 
     rm -f /tmp/requirements.txt
 }
 
-
 dlt() {
     local name="$RANDOM"
     read -p "This will delete $1 perminatly, are you sure you want to do this? (type 'yes, please delete $1, do as I say $name' in all caps without the quates to confirm): " confirm
 
-    [[ "$confirm" != "YES, PLEASE DELETE ${1^^}, DO AS I SAY $name" ]] && return 1
+    [[ $confirm != "YES, PLEASE DELETE ${1^^}, DO AS I SAY $name" ]] && return 1
 
     bzip2 "$1" -f -9 -z -p -v
     mv "${1}.bz2" "$1"
@@ -116,11 +117,10 @@ dlt() {
 
     local content
     content="$(shuf -z "$1" | tr -d "\0")"
-    echo "$content" > "$1"
+    echo "$content" >"$1"
 
     shred -fvzun "$((RANDOM % 12127))" "${1}"
 }
-
 
 NO() {
     mkdir -p ~/.no
@@ -132,4 +132,3 @@ NO() {
 
     echo 'Thank you, I will save this memory :), Hope you feel better soon'
 }
-

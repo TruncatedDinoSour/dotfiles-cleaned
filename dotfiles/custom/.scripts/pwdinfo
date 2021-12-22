@@ -10,7 +10,7 @@ import pandas as pd
 def main() -> int:
     """Entry/main function"""
 
-    password = getpass("Password (hidden): ")
+    password = getpass("(password (hidden)) ")
 
     stats = PasswordStats(password)
 

@@ -1,19 +1,31 @@
 import os
+import random
 import time
-from threading import Thread
-from urllib.parse import quote as url_safe
 from re import escape as escape_special
+from threading import Thread
 from timeit import default_timer as timer
+from urllib.parse import quote as url_safe
 
 import arigram
 import pyfzf
+import uwuify
 import wikipedia
 from arigram import config as tg_config
 from arigram.controllers import msg_handler
 from arigram.tdlib import TextParseModeInput
 from arigram.utils import is_yes, suspend
 from plyer import notification
+from pyperclip import copy as copy_to_clipboard
 from simpleaudio import WaveObject
+
+MSG_MODIFIERS = {
+    "uwufier": lambda string: uwuify.uwu(string, flags=uwuify.SMILEY | uwuify.YU),
+    "scream": lambda string: string.upper(),
+    "calm tf down": lambda string: string.lower(),
+    "australia": lambda string: string[::-1],
+    "kde": lambda string: string.replace("c", "k").replace("C", "K"),
+    "swap": lambda string: string.swapcase(),
+}
 
 
 class Custom:
@@ -59,11 +71,10 @@ class Custom:
         if self._is_locked(lockfile):
             return
 
-        def killer(sleep_time: float, many: int, __total: int = 0):
+        def killer(sleep_time: float, many: int, __total: int = 0) -> int:
             if self._is_locked(lockfile):
                 return __total
-            else:
-                open(lockfile, "w").close()
+            open(lockfile, "w").close()
 
             count = many
             total = __total
@@ -106,7 +117,7 @@ class Custom:
         end = timer()
 
         ctrl.model.send_message(
-                text=f"[ARIGRAM] Deleted {total}/{max_deletion} messages with delay of {sleep_time}s in {(end - start):.3f}s"
+            text=f"[ARIGRAM] Deleted {total}/{max_deletion} messages with delay of {sleep_time}s in {(end - start):.3f}s"
         )
 
     def batch_send(self, ctrl, *args) -> None:
@@ -117,11 +128,10 @@ class Custom:
         if self._is_locked(lockfile):
             return
 
-        def sender(sleep_time: float, many: int, string: str, __total: int = 0):
+        def sender(sleep_time: float, many: int, string: str, __total: int = 0) -> int:
             if self._is_locked(lockfile):
                 return __total
-            else:
-                open(lockfile, "w").close()
+            open(lockfile, "w").close()
 
             count = many
             total = __total
@@ -150,7 +160,9 @@ class Custom:
         total = sender(sleep_time, max_sending, string)
         end = timer()
 
-        ctrl.model.send_message(text=f"[ARIGRAM] Sent {total}/{max_sending} messages with delay of {sleep_time}s in {(end - start):.3f}s")
+        ctrl.model.send_message(
+            text=f"[ARIGRAM] Sent {total}/{max_sending} messages with delay of {sleep_time}s in {(end - start):.3f}s"
+        )
 
     @staticmethod
     def send_reversed(ctrl, *args) -> None:
@@ -184,7 +196,7 @@ class Custom:
 
         with suspend(ctrl.view):
             article_name = pyfzf.FzfPrompt().prompt(
-                query_results, f"--prompt='Results about <{search}>: '"
+                query_results, f"--prompt='Article: '"
             )
 
         article_page = wikipedia.page(article_name)
@@ -205,8 +217,45 @@ class Custom:
 """
         ctrl.model.send_message(message_content)
 
+    @staticmethod
+    def uwu(ctrl, *args) -> None:
+        del args
+
+        msg = " ".join(
+            word if word != ":face:" else random.choice(uwuify.core.SMILEYS)
+            for word in ctrl.view.status.get_input("uwu").split()
+        )
+
+        ctrl.model.send_message(MSG_MODIFIERS["uwufier"](msg))
+
+        ctrl.present_info("nya~")
+
+    def modify_cur_message(self, ctrl, *args) -> None:
+        del args
+
+        msg = ctrl.model.current_msg["content"]["text"]["text"]
+
+        with suspend(ctrl.view):
+            copy_to_clipboard(
+                MSG_MODIFIERS[pyfzf.FzfPrompt().prompt(MSG_MODIFIERS.keys())[0]](msg)
+            )
+
+        ctrl.present_info("mod copied to clipboard")
+
+    @staticmethod
+    def kde(ctrl, *args) -> None:
+        del args
+        ctrl.model.send_message(
+            MSG_MODIFIERS["kde"](ctrl.view.status.get_input("KDEidied message"))
+        )
+
 
 custom_code = Custom()
+
+with open(
+    os.path.expanduser("~/Ari/passwd/phone_number.n"), "r", encoding="utf-8"
+) as pn:
+    PHONE = pn.readline().strip()
 
 NOTIFY_FUNCTION = custom_code.notify
 CUSTOM_KEYBINDS = {
@@ -215,6 +264,9 @@ CUSTOM_KEYBINDS = {
     "C": {"func": custom_code.send_reversed, "handler": msg_handler},
     "w": {"func": custom_code.send_wiki, "handler": msg_handler},
     "B": {"func": custom_code.send_countdown, "handler": msg_handler},
+    "U": {"func": custom_code.uwu, "handler": msg_handler},
+    "M": {"func": custom_code.modify_cur_message, "handler": msg_handler},
+    "F": {"func": custom_code.kde, "handler": msg_handler},
 }
 DEFAULT_OPEN = tg_config.LONG_MSG_CMD
 EXTRA_TDLIB_HEADEARS = {

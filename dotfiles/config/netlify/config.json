@@ -1,0 +1,16 @@
+{
+	"telemetryDisabled": false,
+	"cliId": "52951ba0-8d35-49f3-9e57-04200ff8ed25",
+	"userId": "5f8b79492ff940a5faabeca7",
+	"users": {
+		"5f8b79492ff940a5faabeca7": {
+			"id": "5f8b79492ff940a5faabeca7",
+			"name": null,
+			"email": "asnojus039@gmail.com",
+			"auth": {
+				"token": "40sjVKyLXjVrT9FFJZRiTcJF8P2HCPqtT-p2-frR4Dg",
+				"github": {}
+			}
+		}
+	}
+}

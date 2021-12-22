@@ -1,6 +1,7 @@
 alabaster
 APScheduler
 argon2-cffi
+argon2-cffi-bindings
 arigram
 asciinema
 astroid
@@ -107,6 +108,7 @@ packaging
 pandas
 pandocfilters
 parso
+passlib
 password-strength
 pastel
 pathspec
@@ -156,9 +158,10 @@ PySocks
 python-aalib
 python-dateutil
 python-libtorrent-bin
+python-magic
 python-telegram
-python-telegram-bot
 python3-xlib
+pytube
 pytweening
 pytz
 pytz-deprecation-shim
@@ -186,6 +189,7 @@ smmap
 snowballstemmer
 soupsieve
 Sphinx
+sphinx-rtd-theme
 sphinxcontrib-applehelp
 sphinxcontrib-devhelp
 sphinxcontrib-htmlhelp
@@ -209,6 +213,7 @@ typing_extensions
 tzdata
 tzlocal
 urllib3
+uwuify
 virtualenv
 wcwidth
 webencodings
