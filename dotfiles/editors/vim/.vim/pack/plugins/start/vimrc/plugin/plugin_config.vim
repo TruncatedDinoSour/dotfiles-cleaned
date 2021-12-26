@@ -27,6 +27,7 @@ let g:coc_global_extensions = [
             \ 'coc-snippets',
             \ 'coc-lua',
             \ 'coc-sh',
+            \ 'coc-css',
             \ ]
 
 " Rainbow parenteces
