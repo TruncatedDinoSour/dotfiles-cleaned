@@ -9,6 +9,7 @@ alias ls="\$__BASH_BIN_DIR/lsd --group-dirs --color=auto -Fh"
 alias ll='ls -lF'
 alias la='ls -lFA'
 alias l='ll'
+alias lf='ls -FA'
 
 alias mkb="\$__BASH_BIN_DIR/make -C .."
 alias mk="\$__BASH_BIN_DIR/make"

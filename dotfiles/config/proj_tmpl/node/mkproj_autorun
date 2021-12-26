@@ -1,0 +1,10 @@
+#!/usr/bin/env sh
+
+set -e
+
+main() {
+    npm init -y
+    touch index.js
+}
+
+main "$@"

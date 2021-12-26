@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+set -e
+
 main() {
     back="$(pwd)"
 
@@ -8,16 +10,19 @@ main() {
     GREEN="\e[32m"
     RED='\033[00;31m'
 
-
-    for directory in *;
-    do
-        if [[ -d "$directory"  ]]; then
+    for directory in *; do
+        if [[ -d $directory ]]; then
             echo -en "\n${BOLD}>> ${RESET}Compiling ${GREEN}$directory${RESET}\n\n"
 
-            "${__BASH_RUNAS:-sudo}" make -C "$back/$directory" clean install
+            chown "$USER":"$USER" "$directory"
+
+            make -C "$back/$directory" clean
+            make -C "$back/$directory" -j"$(($(nproc --all) * 4))"
             make_return_code="$?"
 
-            if [[ "$make_return_code" -ne '0' ]]; then
+            "${__BASH_RUNAS:-sudo}" make -C "$back/$directory" install
+
+            if [[ $make_return_code -ne '0' ]]; then
                 echo -e "${BOLD}${RED}!!${RESET} ${BOLD}make${RESET} exited with code of ${BOLD}$make_return_code${RESET}"
                 exit 1
             fi
@@ -26,4 +31,3 @@ main() {
 }
 
 main "$@"
-

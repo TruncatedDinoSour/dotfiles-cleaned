@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+set -e
+
+main() {
+    echo -en "# $(basename "$PWD")\n" >README.md
+
+    git init
+    git add -A
+}
+
+main "$@"

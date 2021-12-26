@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+set -e
+
+main() {
+    echo -en "# $(basename "$PWD")\n" >README.md
+    sed -i "s/PROJ_YEAR/$(date '+%Y')/g; s/PROJ_AUTHOR/$(git config user.name) <$(git config user.email)>/g" LICENSE
+
+    git init
+    git add -A
+}
+
+main "$@"

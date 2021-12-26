@@ -10,6 +10,7 @@
 /home/ari/.mailcap -> dotfiles/etc
 /home/ari/.mutt/muttrc -> dotfiles/etc
 /home/ari/.lynxrc -> dotfiles/etc
+/home/ari/.gitconfig -> dotfiles/etc
 /home/ari/.mozilla/firefox/3s4h1qq0.default-release -> dotfiles/etc/firefox
 /home/ari/.icons -> dotfiles/icons
 /home/ari/.scripts -> dotfiles/custom

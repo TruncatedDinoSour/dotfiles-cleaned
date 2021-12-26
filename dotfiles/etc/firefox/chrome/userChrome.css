@@ -14,9 +14,10 @@
 #urlbar-zoom-button,
 #pageActionButton, #page-action-buttons,
 #reload-button, #tabs-newtab-button,
-#PanelUI-button, .webextension-browser-action {
+#PanelUI-button,  {
     display: none !important;
 }
+/*.webextension-browser-action*/
 
 
 #TabsToolbar {

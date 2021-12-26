@@ -40,7 +40,7 @@ set list listchars=trail:~,extends:»,precedes:«,nbsp:×   " Show indentation
 autocmd Filetype markdown,text,xmath,tex set spell wrap
 
 " Make emmet work on HTML
-autocmd Filetype html set notimeout timeoutlen=100 ttimeoutlen=100
+" autocmd Filetype html set notimeout timeoutlen=100 ttimeoutlen=100
 
 " Lisp mode for lisp
 autocmd Filetype racket,scheme,lisp,clojure set lisp
@@ -83,6 +83,7 @@ call plug#begin("~/.vim/plugged")
     Plug 'luochen1990/rainbow'
     Plug 'MicahElliott/vrod'
     Plug 'kovisoft/slimv'
+    Plug 'lepture/vim-jinja'
 call plug#end()
 
 

@@ -1,0 +1,7 @@
+# General setup
+
+.tmp_*
+*.old
+*.bak
+*cache
+

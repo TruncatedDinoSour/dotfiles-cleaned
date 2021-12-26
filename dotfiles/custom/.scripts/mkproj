@@ -1,0 +1,74 @@
+#!/usr/bin/env python3
+"""Make a project from a template"""
+
+
+import os
+import subprocess
+import sys
+
+import dirsync
+
+TEMPLATE_DIR = os.path.expanduser("~/.config/proj_tmpl")
+
+
+class QuietLogger:
+    def info(self, *args) -> None:
+        del args
+
+
+def log(msg: str, code: int = 1) -> int:
+    sys.stderr.write(f" ~ {msg}\n")
+    return code
+
+
+def main() -> int:
+    """Entry/main function"""
+    sys.argv.append("")  # Prevent index errors
+
+    if not sys.argv[1]:
+        log("Available templates")
+
+        for template in os.scandir(TEMPLATE_DIR):
+            print(f"   * {template.name}")
+
+        return log("No template specified")
+
+    t_dir = os.path.join(TEMPLATE_DIR, sys.argv[1])
+
+    if not os.path.exists(TEMPLATE_DIR):
+        log(f"Making template directory -- {TEMPLATE_DIR}")
+        os.makedirs(TEMPLATE_DIR, exist_ok=True)
+        log("Templates made -- exiting")
+        return 0
+
+    if not os.path.exists(t_dir) or not os.path.isdir(t_dir):
+        return log(f"Template /{sys.argv[1]}/ does not exist")
+
+    try:
+        next(os.scandir("."))
+        return log("Directoty not empty")
+    except StopIteration:
+        pass
+
+    log(f"Adding template /{sys.argv[1]}/")
+    dirsync.sync(t_dir, ".", "sync", logger=QuietLogger())
+
+    autorun_script = os.path.join(".", "mkproj_autorun")
+    if os.path.isfile(autorun_script) and os.path.exists(autorun_script):
+        log("Making autorun script executable")
+        os.chmod(autorun_script, 0o777)
+
+        log("Running autorun script")
+        subprocess.call([autorun_script])
+
+        log("Removing script")
+        os.remove(autorun_script)
+
+    log(f"Created project with template /{sys.argv[1]}/")
+
+    return 0
+
+
+if __name__ == "__main__":
+    assert main.__annotations__.get("return") is int, "main() should return an integer"
+    sys.exit(main())

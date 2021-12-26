@@ -1,0 +1,9 @@
+#!/usr/bin/env sh
+
+set -e
+
+main() {
+    return 0
+}
+
+main "$@"

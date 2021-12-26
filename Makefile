@@ -1,6 +1,6 @@
 git:
 	-git add -A
-	-git commit -S -m "update @ $(shell date)"
+	git commit -sam "update @ $(shell date)"
 	-git push -u origin gentoo
 
 tea:

@@ -192,6 +192,7 @@ dev-libs/openssl
 dev-libs/popt
 dev-libs/ptexenc
 dev-libs/rapidjson
+dev-libs/userspace-rcu
 dev-libs/vala-common
 dev-libs/xxhash
 dev-libs/zziplib
@@ -528,7 +529,6 @@ sys-fs/udev
 sys-fs/udev-init-scripts
 sys-fs/xfsprogs
 sys-kernel/dracut
-sys-kernel/gentoo-sources
 sys-kernel/installkernel-gentoo
 sys-kernel/linux-firmware
 sys-kernel/linux-headers

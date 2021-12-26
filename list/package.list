@@ -41,11 +41,11 @@ sys-apps/lsd
 sys-apps/mlocate
 sys-apps/portage
 sys-boot/grub:2
+sys-devel/bc
 sys-fs/cryptsetup
 sys-fs/dosfstools
 sys-fs/xfsprogs
 sys-kernel/dracut
-sys-kernel/gentoo-sources
 sys-kernel/linux-firmware
 sys-process/htop-vim
 www-client/firefox

@@ -31,6 +31,7 @@ from=(
     '/home/ari/.mailcap'
     '/home/ari/.mutt/muttrc'
     '/home/ari/.lynxrc'
+    '/home/ari/.gitconfig'
 
     "$FIREFOX_PROFILE"
 
@@ -87,6 +88,7 @@ to=(
     'dotfiles/suckless'
     'dotfiles/suckless'
 
+    'dotfiles/etc'
     'dotfiles/etc'
     'dotfiles/etc'
     'dotfiles/etc'
@@ -167,5 +169,7 @@ cd dotfiles/etc/firefox || exit 1
 ./clean_firefox_profile
 cd ../../.. || exit 2
 
+
 # sed -i '/PHONE/d' dotfiles/config/arigram/config.py
+sed -i '/signingkey/d' dotfiles/etc/.gitconfig
 

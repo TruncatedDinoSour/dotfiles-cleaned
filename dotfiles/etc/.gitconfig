@@ -1,0 +1,14 @@
+[user]
+    email = truncateddinosour@gmail.com
+    name = Ari Archer
+[credential]
+    helper = cache
+[gpg]
+    program = gpg
+[commit]
+    gpgsign = true
+[color "diff"]
+    old = red strike
+    new = green italic
+[init]
+	defaultBranch = main
