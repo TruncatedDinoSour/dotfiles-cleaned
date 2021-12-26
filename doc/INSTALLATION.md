@@ -1,4 +1,4 @@
-# Installation of my dotfiles in gentoo (WORK IN PROGRESS)
+# Installation of my dotfiles in gentoo (MIGHT BE OUTDATED, CHECK UP WITH [transfer.sh script](/scripts/transfer.sh))
 
 **Before doing any of this - back everything up, this is not a 100% fool-proof method, this works on my machine, you might need to tweak some things like instead of username "ari" you might use "joe"**
 

@@ -38,3 +38,8 @@ All suckless software is now compiled with clang
 ```
 Now installation includes updated instructions
 ```
+## Changelog on 2021-12-27
+- Changed release naming
+```
+v[version]-[theme] -> v[version]-[theme]-[distro]
+```
