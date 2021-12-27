@@ -60,16 +60,9 @@ A: Because it's a <a href="//www.howtogeek.com/287014/how-to-create-and-use-symb
 
 <h1 align="center"><b>Look & Feel</b></h1>
 <br/>
-<h3>DWM (Floating)</h3>
-<img src="https://user-images.githubusercontent.com/71613062/138791507-2ac776d6-a4f4-43f9-b22b-0c1cf1c9869a.jpg">
 
-<h3>DWM (Tiling)</h3>
+<h3>DWM</h3>
 <img src="https://user-images.githubusercontent.com/71613062/138791885-455028bd-0c76-4597-92bb-0e75b0593f9d.jpg">
-
-<h2 align="center"></h2>
-
-<h3>i3 (Floating)</h3>
-<img src="https://user-images.githubusercontent.com/71613062/123563488-70ae1f80-d7a4-11eb-8b10-affa3e4a2cdd.png">
 
 <br/>
 

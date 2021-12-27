@@ -43,3 +43,11 @@ Now installation includes updated instructions
 ```
 v[version]-[theme] -> v[version]-[theme]-[distro]
 ```
+- Archived a bunch of stuff
+```
+- No i3 support
+- Dropped nvim support
+- Dropped alacritty
+- Dropped i3blocks
+...
+```

@@ -123,12 +123,12 @@ dlt() {
 }
 
 NO() {
-    mkdir -p ~/.no
+    mkdir -p ~/Documents/no
 
     echo "I am sorry to hear that, tell me what's wrong"
     sleep 2
 
-    ${EDITOR:-vim} ~/.no/"$(date "+feel-%N%S%V%I%m%Y$RANDOM.md")"
+    ${EDITOR:-vim} ~/Documents/no/"$(date "+feel-%N%S%V%I%m%Y$RANDOM.md")"
 
     echo 'Thank you, I will save this memory :), Hope you feel better soon'
 }

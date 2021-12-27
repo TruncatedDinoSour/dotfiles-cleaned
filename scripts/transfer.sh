@@ -20,7 +20,7 @@ from=(
 
     '/home/ari/.config'
 
-    '/home/ari/.dwm'
+    '/home/ari/Documents/dwm_bar.sh'
     '/home/ari/Suckless'
 
     '/home/ari/.gtkrc-2.0'

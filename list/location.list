@@ -2,7 +2,7 @@
 /home/ari/.profile -> dotfiles/shells/bash
 /home/ari/.bash_profile -> dotfiles/shells/bash
 /home/ari/.config -> dotfiles/config
-/home/ari/.dwm -> dotfiles/suckless
+/home/ari/Documents/dwm_bar.sh -> dotfiles/suckless
 /home/ari/Suckless -> dotfiles/suckless
 /home/ari/.gtkrc-2.0 -> dotfiles/etc
 /home/ari/Media/wallpaper.png -> dotfiles/etc
