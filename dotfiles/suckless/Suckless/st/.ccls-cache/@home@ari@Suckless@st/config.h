@@ -204,7 +204,7 @@ static char *copyline[] = {"/bin/sh", "-c", "st-copyline", "externalpipe",
                            NULL};
 
 static char *copylines[] = {"/bin/sh", "-c", "st-copylines", "externalpipe",
-                           NULL};
+                            NULL};
 
 static Shortcut shortcuts[] = {
     /* mask                 keysym          function        argument */
@@ -228,7 +228,7 @@ static Shortcut shortcuts[] = {
     {MODKEY, XK_y, externalpipe, {.v = copyurlcmd}},
     {MODKEY, XK_o, externalpipe, {.v = copyoutput}},
     {MODKEY, XK_g, externalpipe, {.v = copyline}},
-    {TERMMOD,XK_G, externalpipe, {.v = copylines}},
+    {TERMMOD, XK_G, externalpipe, {.v = copylines}},
 };
 
 /*

@@ -6,5 +6,4 @@ trap 'rm "$tmpfile"' 0 1 15
 sed -n "w $tmpfile"
 sed -i 's/\x0//g; /^\s*$/d' "$tmpfile"
 
-dmenu -p 'Copy line:' < "$tmpfile" | xclip -selection clipboard
-
+dmenu -p 'Copy line:' <"$tmpfile" | xclip -selection clipboard

@@ -45,6 +45,7 @@ alias cp="\$__BASH_CORE_BIN_DIR/cp -i"
 alias mkdir="\$__BASH_CORE_BIN_DIR/mkdir -p"
 alias curl="\$__BASH_BIN_DIR/curl -fL"
 alias sudo="\$__BASH_BIN_DIR/sudo -E env PATH=\"$PATH\""
+alias less="\$__BASH_BIN_DIR/less -NrIMJ --use-color --incsearch --line-num-width=2"
 
 alias fzf="\$__BASH_BIN_DIR/fzf --layout=reverse --height=20 --no-mouse -i --preview 'bat --theme=\"gruvbox-dark\" --color=always --style=numbers --line-range=:500 {}'"
 alias mpvp="\$__BASH_BIN_DIR/mpv --shuffle --loop-playlist"
@@ -53,4 +54,8 @@ alias clip="\$__BASH_BIN_DIR/xclip -selection clipboard"
 alias mimetypeof="xdg-mime query filetype"
 alias dos2unix="\$__BASH_CORE_BIN_DIR/sed -i $'s/\r$//'"
 alias beep='(speaker-test -l 1 -f 1500 -t sine -P 2 -X >/dev/null)& pid="$!"; sleep 0.08; kill -9 $pid'
+alias showtopcmd="fc -l 1 | \$__BASH_BIN_DIR/awk '{CMD[\$2]++;count++;}END { for (a in CMD)print CMD[a] \" \" CMD[a]/count*100 \"% \" a;}' | \$__BASH_CORE_BIN_DIR/grep -v './' | \$__BASH_BIN_DIR/column -c3 -s ' ' -t | \$__BASH_BIN_DIR/sort -nr | \$__BASH_BIN_DIR/nl | \$__BASH_BIN_DIR/head -n"
+alias rshell="\$__BASH_CORE_BIN_DIR/rm -f \$HISTFILE && \$__BASH_BIN_DIR/reset && \$SHELL && exit 127"
+alias killyourself='$__BASH_CORE_BIN_DIR/kill -9 $$'
 
+alias full_upgrade='vim  +PlugUpdate +q! +q! && sudo npm update -g --unsafe-perm=true && sudo npm upgrade -g --unsafe-perm=true && pip_upgrade && sudo emerge --sync && sudo emerge -uDUN --with-bdeps=y @world'

@@ -14,9 +14,9 @@ from colorama import init as colorama_init
 colorama_init()
 
 
-def log(msg: str, clr: str = Fore.GREEN) -> None:
+def log(msg: str, clr: str = Fore.GREEN, buffer: Any = sys.stderr) -> None:
     """Print a log message"""
-    sys.stderr.write(f" {clr}*{Fore.RESET} {msg}\n")
+    buffer.write(f" {clr}*{Fore.RESET} {msg}\n")
 
 
 def get_file_info(path: str) -> None:
@@ -93,10 +93,10 @@ def get_file_info(path: str) -> None:
         info["File path"]["Link target"] = os.readlink(path)
 
     for header, data in info.items():
-        log(header, Fore.LIGHTRED_EX)
+        log(header, Fore.LIGHTRED_EX, sys.stdout)
 
         for name, value in data.items():
-            log(f"{name}: {value}", f"\t{Fore.LIGHTBLUE_EX}")
+            log(f"{name}: {value}", f"\t{Fore.LIGHTBLUE_EX}", buffer=sys.stdout)
 
 
 def main() -> int:

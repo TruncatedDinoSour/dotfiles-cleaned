@@ -1,14 +1,12 @@
 #!/bin/bash
 
-source /etc/bash_git
-
 autorun() {
     /usr/bin/yafetch 2>/dev/null || return
 }
 
 ps_one() {
     local c_status="$?"
-    local git="$(__git_ps1 | sed 's/^ //g')"
+    local git="$(git rev-parse --abbrev-ref HEAD 2>/dev/null || true)"
     local venv="$(basename "$VIRTUAL_ENV")"
     local dir='\W'
     local propt_char='#'
@@ -16,7 +14,7 @@ ps_one() {
 
     [[ $UID != '0' ]] && local propt_char='%'
     [[ $c_status != '0' ]] && local propt_colour="${RED}$c_status "
-    [[ "$git" ]] && local dir="$git $dir"
+    [[ "$git" ]] && local dir="($git) $dir"
     [[ "$venv" ]] && local extra="{${GREEN}$venv${RESTORE}} "
     [[ $UID == '0' ]] && local user_colour="${RED}"
 
@@ -93,11 +91,12 @@ vv() {
 pip_upgrade() {
     "$__BASH_BIN_DIR"/python3 -m pip list |
         "$__BASH_BIN_DIR"/awk '{ print $1  }' |
+        sed '/portage/d' |
         "$__BASH_BIN_DIR"/tail -n +3 >/tmp/requirements.txt
 
     "$__BASH_BIN_DIR"/python3 -m pip install --user --upgrade -r /tmp/requirements.txt
 
-    rm -f /tmp/requirements.txt
+    "$__BASH_CORE_BIN_DIR"/rm -f /tmp/requirements.txt
 }
 
 dlt() {
@@ -126,7 +125,7 @@ NO() {
     mkdir -p ~/Documents/no
 
     echo "I am sorry to hear that, tell me what's wrong"
-    sleep 2
+    sleep 1
 
     ${EDITOR:-vim} ~/Documents/no/"$(date "+feel-%N%S%V%I%m%Y$RANDOM.md")"
 

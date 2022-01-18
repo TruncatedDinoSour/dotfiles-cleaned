@@ -5,7 +5,6 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 export PATH="$PATH:/usr/local/bin:$HOME/.local/bin:$HOME/.scripts"
-#readonly PATH
 
 # config
 source ~/.config/shells/bash/*.conf
@@ -81,9 +80,9 @@ export npdf='/home/ari/Documents/notes/doc.pdf'
 export ndir='/home/ari/Documents/notes'
 
 # Keybinds
-bind -f ~/.config/shells/bash/inputrc
+bind -f ~/.config/shells/input/inputrc
 
-for keymap in ~/.config/shells/bash/input/*; do
+for keymap in ~/.config/shells/input/input/*; do
     vecho "Setting up readline keybinds for $keymap"
     bind -m "$(basename "$keymap")" -f "$keymap" || vecho "Failed to set bindings"
 done 2>/dev/null

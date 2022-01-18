@@ -1,7 +1,9 @@
+acme
 alabaster
 argon2-cffi
 argon2-cffi-bindings
 arigram
+asttokens
 attrs
 Babel
 backcall
@@ -13,6 +15,7 @@ blessings
 bpython
 CacheControl
 cachy
+certbot
 certifi-system-store
 certifi-system-store
 cffi
@@ -21,6 +24,8 @@ cleo
 click
 clikit
 colorama
+ConfigArgParse
+configobj
 crashtest
 cryptography
 curtsies
@@ -30,8 +35,10 @@ decorator
 defusedxml
 dirsync
 distlib
+distro
 docutils
 entrypoints
+executing
 filelock
 flake8
 Flask
@@ -45,6 +52,7 @@ html5lib
 httplib2
 idna
 imagesize
+importlib-metadata
 ipykernel
 ipython
 ipython-genutils
@@ -54,6 +62,7 @@ itsdangerous
 jedi
 jeepney
 Jinja2
+josepy
 jsonschema
 jupyter
 jupyter-client
@@ -64,8 +73,10 @@ jupyterlab-widgets
 keyring
 limits
 lockfile
+lxml
 M2Crypto
 Mako
+Markdown
 MarkupSafe
 matplotlib-inline
 mccabe
@@ -83,6 +94,7 @@ numpy
 packaging
 pandas
 pandocfilters
+parsedatetime
 parso
 password-strength
 pastel
@@ -101,6 +113,7 @@ prometheus-client
 prompt-toolkit
 psutil
 ptyprocess
+pure-eval
 pyasn1
 pycodestyle
 pycparser
@@ -108,8 +121,10 @@ pyflakes
 pyfzf
 Pygments
 pylev
+pyOpenSSL
 pyparsing
 pyperclip
+pyRFC3339
 pyrsistent
 PySocks
 python-dateutil
@@ -140,6 +155,7 @@ sphinxcontrib-htmlhelp
 sphinxcontrib-jsmath
 sphinxcontrib-qthelp
 sphinxcontrib-serializinghtml
+stack-data
 terminado
 testpath
 tomli
@@ -158,3 +174,8 @@ wheel
 widgetsnbextension
 wikipedia
 youtube-dl
+zipp
+zope.component
+zope.event
+zope.hookable
+zope.interface

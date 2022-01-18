@@ -29,6 +29,7 @@ let g:coc_global_extensions = [
             \ 'coc-sh',
             \ 'coc-css',
             \ 'coc-html',
+            \ 'coc-tsserver'
             \ ]
 
 " Rainbow parenteces
@@ -72,3 +73,15 @@ let g:rainbow_conf = {
             \     }
             \ }
 
+" Markdown
+let g:markdown_fenced_languages = [
+            \ 'html', 'python', 'py=python',
+            \ 'css', 'javascript', 'sh', 'bash=sh',
+            \ 'python3=python', 'py3=python',
+            \ 'vim', 'vi=vim', 'r',
+            \ 'R=r', 'racket', 'rkt=racket',
+            \ 'scheme', 'scm=scheme', 'c',
+            \ 'cpp', 'asm=nasm', 'nasm',
+            \ 'assembly=nasm', 'porth'
+            \ ]
+let g:markdown_syntax_conceal = 0

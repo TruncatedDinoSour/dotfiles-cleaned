@@ -6,8 +6,8 @@ trap 'rm "$tmpfile"' 0 1 15
 sed -n "w $tmpfile"
 sed -i 's/\x0//g; /^\s*$/d' "$tmpfile"
 
-from="$(nl -w2 -s' ' < "$tmpfile" | dmenu -p 'From:' | awk '{print $1}')"
-to="$(nl -w2 -s' ' < "$tmpfile" | dmenu -p 'To:' | awk '{print $1}')"
+from="$(nl -w2 -s' ' <"$tmpfile" | dmenu -p 'From:' | awk '{print $1}')"
+to="$(nl -w2 -s' ' <"$tmpfile" | dmenu -p 'To:' | awk '{print $1}')"
 
 if [ "$to" -lt "$from" ]; then
     notify-send "Bad range" "${from} > ${to} condinion has been met. Invalid range."
@@ -15,4 +15,3 @@ if [ "$to" -lt "$from" ]; then
 fi
 
 sed -n "${from},${to} p" "$tmpfile" | xclip -selection clipboard
-

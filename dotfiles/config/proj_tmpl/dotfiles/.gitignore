@@ -1,0 +1,20 @@
+# General setup
+
+.tmp_*
+*.old
+*.bak
+*cache
+
+# Other stuff
+node_modules
+*.o
+.ccls-cache/
+cache/
+accounts/
+*.gpg
+certificates
+
+# from project root
+/a
+/mkproj_autorun
+

@@ -48,8 +48,11 @@ map F :FormatCode<CR>
 " Tabs
 map <C-n> <ESC>:tabnew<space>
 inoremap <C-t> <ESC>:tabnew<space>
+
 map <C-b> <ESC>:tabprevious<CR>
 inoremap <C-b> <ESC>:tabprevious<CR>
+map <C-c> <ESC>:tabnext<CR>
+inoremap <C-c> <ESC>:tabnext<CR>
 
 " Open a file
 map <C-o> <ESC>:open<space>

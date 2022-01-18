@@ -5,3 +5,6 @@
 *.bak
 *cache
 
+# from project root
+/mkproj_autorun
+

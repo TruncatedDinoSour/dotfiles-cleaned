@@ -5,8 +5,7 @@
 /home/ari/Documents/dwm_bar.sh -> dotfiles/suckless
 /home/ari/Suckless -> dotfiles/suckless
 /home/ari/.gtkrc-2.0 -> dotfiles/etc
-/home/ari/Media/wallpaper.png -> dotfiles/etc
-/home/ari/.editorconfig -> dotfiles/etc
+/home/ari/Media/Pictures/wallpaper.png -> dotfiles/etc
 /home/ari/.mailcap -> dotfiles/etc
 /home/ari/.mutt/muttrc -> dotfiles/etc
 /home/ari/.lynxrc -> dotfiles/etc
@@ -17,10 +16,8 @@
 /home/ari/.vim -> dotfiles/editors/vim
 /home/ari/.vimrc -> dotfiles/editors/vim
 /home/ari/.config/VSCodium/User/snippets -> dotfiles/programming/VScodium
-/home/ari/.config/VSCodium/product.json -> dotfiles/programming/VScodium
 /home/ari/.xinitrc -> dotfiles/core
 /home/ari/.xprofile -> dotfiles/core
-/etc/bash_git -> dotfiles/core
 /etc/default/grub -> dotfiles/core
 /etc/hosts -> dotfiles/core
 /etc/dracut.conf -> dotfiles/core

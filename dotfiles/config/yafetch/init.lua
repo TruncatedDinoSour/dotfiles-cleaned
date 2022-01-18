@@ -2,8 +2,6 @@ local red = "\27[31m"
 local grn = "\27[32m"
 local yel = "\27[33m"
 local blu = "\27[34m"
-local mag = "\27[35m"
-local cyn = "\27[36m"
 local wht = "\27[37m"
 local bld = "\27[1m"
 local res = "\27[0m"
@@ -16,9 +14,6 @@ yafetch.sep_color = bld
 yafetch.shell_base = true
 local shell = yafetch.shell()
 local shell_icon = " "
-
-local username = yafetch.user()
-local hostname = yafetch.hostname()
 
 local kernel = yafetch.kernel()
 local kernel_icon = " "
@@ -86,7 +81,7 @@ else
 end
 
 yafetch.header_sep = string.format("%s@%s", blu, res)
-yafetch.header_sep_color = bold
+yafetch.header_sep_color = wht
 yafetch.header_format = ascii1 -- could be ascii1, an icon, etc.
 
 function yafetch.init()

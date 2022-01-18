@@ -1,6 +1,9 @@
 snippet ma
 import asyncio
 import sys
+import warnings
+
+warnings.filterwarnings("error", category=Warning)
 
 
 async def main() -> int:
@@ -18,6 +21,9 @@ endsnippet
 
 snippet m
 import sys
+import warnings
+
+warnings.filterwarnings("error", category=Warning)
 
 
 def main() -> int:

@@ -391,6 +391,7 @@ media-libs/harfbuzz
 media-libs/imlib2
 media-libs/jbig2dec
 media-libs/lcms
+media-libs/libaom
 media-libs/libass
 media-libs/libepoxy
 media-libs/libglvnd
@@ -411,6 +412,7 @@ media-sound/alsa-utils
 media-sound/lame
 media-video/ffmpeg
 media-video/mpv
+net-analyzer/traceroute
 net-dns/c-ares
 net-dns/libidn
 net-dns/libidn2
@@ -438,6 +440,7 @@ net-p2p/transmission-cli
 net-wireless/crda
 net-wireless/wireless-regdb
 net-wireless/wpa_supplicant
+perl-core/CPAN
 perl-core/Encode
 perl-core/File-Temp
 perl-core/Scalar-List-Utils
@@ -543,6 +546,7 @@ sys-libs/libcap
 sys-libs/libcap-ng
 sys-libs/libomp
 sys-libs/libseccomp
+sys-libs/libstatgrab
 sys-libs/liburing
 sys-libs/libxcrypt
 sys-libs/mtdev
@@ -578,6 +582,7 @@ virtual/os-headers
 virtual/package-manager
 virtual/pager
 virtual/perl-Carp
+virtual/perl-CPAN
 virtual/perl-CPAN-Meta
 virtual/perl-CPAN-Meta-Requirements
 virtual/perl-CPAN-Meta-YAML

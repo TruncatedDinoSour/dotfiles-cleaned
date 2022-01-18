@@ -1,0 +1,10 @@
+#!/usr/bin/env sh
+
+set -e
+
+main() {
+    js-beautify index.html js/generic/generic.js
+}
+
+main "$@"
+

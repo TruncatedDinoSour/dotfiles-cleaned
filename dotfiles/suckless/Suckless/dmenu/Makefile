@@ -13,6 +13,8 @@ options:
 	@echo "CFLAGS   = $(CFLAGS)"
 	@echo "LDFLAGS  = $(LDFLAGS)"
 	@echo "CC       = $(CC)"
+	@echo "STRIP    = ${STRIP}"
+	@echo "STFLAGS  = ${STRIPFLAGS}"
 
 .c.o:
 	$(CC) -c $(CFLAGS) $<

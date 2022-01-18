@@ -24,8 +24,7 @@ from=(
     '/home/ari/Suckless'
 
     '/home/ari/.gtkrc-2.0'
-    '/home/ari/Media/wallpaper.png'
-    '/home/ari/.editorconfig'
+    '/home/ari/Media/Pictures/wallpaper.png'
     '/home/ari/.mailcap'
     '/home/ari/.mutt/muttrc'
     '/home/ari/.lynxrc'
@@ -41,11 +40,9 @@ from=(
     '/home/ari/.vimrc'
 
     '/home/ari/.config/VSCodium/User/snippets'
-    '/home/ari/.config/VSCodium/product.json'
 
     '/home/ari/.xinitrc'
     '/home/ari/.xprofile'
-    '/etc/bash_git'
     '/etc/default/grub'
     '/etc/hosts'
     '/etc/dracut.conf'
@@ -92,7 +89,6 @@ to=(
     'dotfiles/etc'
     'dotfiles/etc'
     'dotfiles/etc'
-    'dotfiles/etc'
 
     'dotfiles/etc/firefox'
 
@@ -104,9 +100,7 @@ to=(
     'dotfiles/editors/vim'
 
     'dotfiles/programming/VScodium'
-    'dotfiles/programming/VScodium'
 
-    'dotfiles/core'
     'dotfiles/core'
     'dotfiles/core'
     'dotfiles/core'
@@ -154,6 +148,7 @@ rc-update >list/openrc_services.sysvinit.list
 
 python3 -m jupyter nbextension list 2>/dev/null >list/jupyter_entensions.list
 python3 -m pip list | awk '{ print $1 }' | tail -n +3 >list/pip_modules.list
+npm list -g --depth=0 >list/npm.list
 
 sudo chown -R ari:ari dotfiles
 rm -rfv dotfiles/config/asciinema dotfiles/editors/vim/.vim/undodir dotfiles/config/keepassxc dotfiles/config/VSCodium dotfiles/config/VirtualBox dotfiles/config/transmission/dht.dat dotfiles/config/dconf dotfiles/config/netlify dotfiles/config/transmission/resume dotfiles/editors/vim/.vim/.netrwhist

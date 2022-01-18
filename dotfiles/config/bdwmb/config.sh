@@ -7,7 +7,7 @@ export MODULES=('pad'
                 'battery'    'sep1'
                 'brightness' 'sep1'
                 'alsa'       'sep1'
-                'time')
+                'time'       'pad')
 
 export DELAY='0.5s'
 

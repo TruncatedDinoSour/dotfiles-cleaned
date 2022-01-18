@@ -25,6 +25,7 @@ MSG_MODIFIERS = {
     "australia": lambda string: string[::-1],
     "kde": lambda string: string.replace("c", "k").replace("C", "K"),
     "swap": lambda string: string.swapcase(),
+    "ok hun": lambda string: string.title().removesuffix(".") + ".",
 }
 
 
@@ -249,6 +250,13 @@ class Custom:
             MSG_MODIFIERS["kde"](ctrl.view.status.get_input("KDEidied message"))
         )
 
+    @staticmethod
+    def send_formal(ctrl, *args) -> None:
+        del args
+        ctrl.model.send_message(
+            MSG_MODIFIERS["ok hun"](ctrl.view.status.get_input("Formalised message"))
+        )
+
 
 custom_code = Custom()
 
@@ -267,6 +275,7 @@ CUSTOM_KEYBINDS = {
     "U": {"func": custom_code.uwu, "handler": msg_handler},
     "M": {"func": custom_code.modify_cur_message, "handler": msg_handler},
     "F": {"func": custom_code.kde, "handler": msg_handler},
+    "Y": {"func": custom_code.send_formal, "handler": msg_handler},
 }
 DEFAULT_OPEN = tg_config.LONG_MSG_CMD
 EXTRA_TDLIB_HEADEARS = {
@@ -276,3 +285,6 @@ EXTRA_TDLIB_HEADEARS = {
         "version": 2,
     },
 }
+USERS_COLOURS = [
+    random.choice(tg_config.USERS_COLOURS) for _ in tg_config.USERS_COLOURS
+]

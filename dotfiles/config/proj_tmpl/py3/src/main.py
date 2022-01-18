@@ -2,6 +2,9 @@
 """PROJECT_TITLE"""
 
 import sys
+import warnings
+
+warnings.filterwarnings("error", category=Warning)
 
 
 def main() -> int:

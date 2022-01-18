@@ -38,6 +38,7 @@ set list listchars=trail:~,extends:»,precedes:«,nbsp:×   " Show indentation
 
 " Enable spellchecking and wrapping in vim
 autocmd Filetype markdown,text,xmath,tex set spell wrap
+autocmd BufRead,BufNewFile *.LICENSE set spell wrap
 
 " Make emmet work on HTML
 " autocmd Filetype html set notimeout timeoutlen=100 ttimeoutlen=100
@@ -50,6 +51,9 @@ autocmd BufRead,BufNewFile *.porth set filetype=porth
 
 " Make it not store some undos
 autocmd BufWritePre,BufRead,BufNewFile /mnt/*,/tmp/* set noundofile undodir=
+
+" Assembly uses nasm
+autocmd Filetype asm set ft=nasm
 
 
 " Plugins
@@ -76,7 +80,6 @@ call plug#begin("~/.vim/plugged")
     Plug 'Yggdroot/indentLine'
     Plug 'drmingdrmer/vim-tabbar'
     Plug 'lilydjwg/colorizer'
-    Plug 'editorconfig/editorconfig-vim'
     Plug 'christoomey/vim-tmux-navigator'
     Plug 'wlangstroth/vim-racket'
     Plug 'tpope/vim-surround'
@@ -84,6 +87,7 @@ call plug#begin("~/.vim/plugged")
     Plug 'MicahElliott/vrod'
     Plug 'kovisoft/slimv'
     Plug 'lepture/vim-jinja'
+    Plug 'tpope/vim-markdown'
 call plug#end()
 
 
