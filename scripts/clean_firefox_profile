@@ -34,6 +34,7 @@ main() {
         "times.json"
         "weave"
         "webappsstore.sqlite"
+        "cert_override.txt"
         )
 
     for private in "${info[@]}"; do
