@@ -1,5 +1,5 @@
 [user]
-    email = truncateddinosour@gmail.com
+    email = ari@mail.ari-web.xyz
     name = Ari Archer
 [credential]
     helper = cache
@@ -11,4 +11,5 @@
     old = red strike
     new = green italic
 [init]
-	defaultBranch = main
+    defaultBranch = main
+

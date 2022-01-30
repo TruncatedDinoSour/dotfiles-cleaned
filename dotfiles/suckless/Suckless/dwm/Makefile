@@ -40,6 +40,8 @@ dist: clean
 	rm -rf dwm-${VERSION}
 
 install: all
+	cp -f config.h config.def.h
+
 	mkdir -p ${DESTDIR}${PREFIX}/bin
 	mkdir -p /usr/share/xsessions
 	cp -f dwm ${DESTDIR}${PREFIX}/bin
@@ -50,6 +52,7 @@ install: all
 	cp -f redshifttoggle ${DESTDIR}${PREFIX}/bin
 	cp -f extrakb ${DESTDIR}${PREFIX}/bin
 	cp -f dweather ${DESTDIR}${PREFIX}/bin
+	cp -f dwmmenu ${DESTDIR}${PREFIX}/bin
 	cp -f dwm.desktop /usr/share/xsessions
 	chmod 755 ${DESTDIR}${PREFIX}/bin/dwm
 	chmod 755 ${DESTDIR}${PREFIX}/bin/quitdwm
@@ -59,6 +62,7 @@ install: all
 	chmod 755 ${DESTDIR}${PREFIX}/bin/redshifttoggle
 	chmod 755 ${DESTDIR}${PREFIX}/bin/extrakb
 	chmod 755 ${DESTDIR}${PREFIX}/bin/dweather
+	chmod 755 ${DESTDIR}${PREFIX}/bin/dwmmenu
 	mkdir -p ${DESTDIR}${MANPREFIX}/man1
 	sed "s/VERSION/${VERSION}/g" < dwm.1 > ${DESTDIR}${MANPREFIX}/man1/dwm.1
 	chmod 644 ${DESTDIR}${MANPREFIX}/man1/dwm.1

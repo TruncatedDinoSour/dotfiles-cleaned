@@ -1,1 +1,7 @@
-firefox $@
+#!/usr/bin/env sh
+
+main() {
+    firefox "$@"
+}
+
+main "$@"

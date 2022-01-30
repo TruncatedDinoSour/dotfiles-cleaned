@@ -4,10 +4,10 @@ git:
 	-git push -u origin DOT_BRANCH
 
 tea:
-	chmod a+rx ./scripts/*
+	chmod u+rx ./scripts/*
 	./scripts/transfer.sh
 
 tools:
-	chmod a+rx ./scripts/*
+	chmod u+rx ./scripts/*
 	./scripts/tools.sh
 

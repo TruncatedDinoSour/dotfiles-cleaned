@@ -125,9 +125,27 @@ NO() {
     mkdir -p ~/Documents/no
 
     echo "I am sorry to hear that, tell me what's wrong"
-    sleep 1
+    sleep 0.5
 
-    ${EDITOR:-vim} ~/Documents/no/"$(date "+feel-%N%S%V%I%m%Y$RANDOM.md")"
+    title="$(date "+feel-%N%S%V%I%m%Y$RANDOM.md")"
 
-    echo 'Thank you, I will save this memory :), Hope you feel better soon'
+    ${EDITOR:-vim} ~/Documents/no/"$title"
+    [ -f ~/Documents/no/"$title" ] && echo 'Thank you, I will save this memory :), Hope you feel better soon'
+
+    return 0
+}
+
+gitsuicide() {
+    msg="${1:-The end}"
+    branch="$(git branch --show-current)"
+
+    git checkout --orphan tmp
+
+    git add -A
+    git commit -sam "$msg"
+
+    git branch -D "$branch"
+    git branch -m "$branch"
+
+    git push -f origin "$branch"
 }

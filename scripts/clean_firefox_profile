@@ -26,7 +26,6 @@ main() {
         "sessionstore-backups"
         "signedInUser.json"
         "SiteSecurityServiceState.txt"
-        "storage"
         "storage-sync-v2.sqlite"
         "storage-sync-v2.sqlite-shm"
         "storage-sync-v2.sqlite-wal"
@@ -40,6 +39,8 @@ main() {
     for private in "${info[@]}"; do
         rm -rfv "$private"
     done
+
+    rm -rf storage/default/http* storage/temporary
 }
 
 main "$@"

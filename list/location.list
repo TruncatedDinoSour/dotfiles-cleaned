@@ -1,6 +1,5 @@
 /home/ari/.bashrc -> dotfiles/shells/bash
 /home/ari/.profile -> dotfiles/shells/bash
-/home/ari/.bash_profile -> dotfiles/shells/bash
 /home/ari/.config -> dotfiles/config
 /home/ari/Documents/dwm_bar.sh -> dotfiles/suckless
 /home/ari/Suckless -> dotfiles/suckless

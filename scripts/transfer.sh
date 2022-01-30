@@ -10,13 +10,13 @@ echo "[?] Are you sure that you want to update the dotfiles?"
 read -p "=== [ press enter to continue  ] ===" _
 
 rm -rf dotfiles list
-mkdir -p list
+mkdir -m 700 -p list
 mkdir -p dotfiles{,/openrc,/lang,/shells/bash,/suckless,/etc,/custom,/programming/VScodium,/core,/linux,/portage,/qbittorrent,/editors/vim,/fix}
+chmod 700 -R dotfiles
 
 from=(
     '/home/ari/.bashrc'
     '/home/ari/.profile'
-    '/home/ari/.bash_profile'
 
     '/home/ari/.config'
 
@@ -74,7 +74,6 @@ from=(
 )
 
 to=(
-    'dotfiles/shells/bash'
     'dotfiles/shells/bash'
     'dotfiles/shells/bash'
 

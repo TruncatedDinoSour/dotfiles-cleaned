@@ -12,7 +12,6 @@
 
 <h2 align="center"></h2>
 
-
 <p align="center"><b>What Am I using right now?</b></p>
 <pre>
 OS:     Gentoo linux
@@ -21,9 +20,7 @@ SHELL:  Bash
 THEME:  coffee
 </pre>
 
-
 <h2 align="center"></h2>
-
 
 <h1 align="center"><b>FAQ</b></h1>
 <b>
@@ -35,19 +32,13 @@ A: No
 <b>
 Q: How heavy is your system running?
 </b><br/>
-A: ~120MiBs of RAM and <1% CPU usage on fresh boot
+A: ~160MiBs of RAM hardened, and 115MiBs unhardened, and less then 1% CPU usage on fresh boot
 <br/><br/>
 
 <b>
 Q: How do I install the dotfiles?
 </b><br/>
 A: Check the <a href="#manual-installation">manual installation section</a>
-<br/><br/>
-
-<b>
-Q: Why is there ony one i3 screenshot when DWM has 2?
-</b><br/>
-A: Because I am not on i3 anymore and This is the most recent screenshot I have :)
 <br/><br/>
 
 <b>
@@ -68,7 +59,6 @@ A: Because it's a <a href="//www.howtogeek.com/287014/how-to-create-and-use-symb
 
 <h1 align="center"><b>Manual Installation</b></h1>
 check <a href="/doc/INSTALLATION.md">/doc/INSTALLATION.md</a>
-
 
 <br/>
 

@@ -1,0 +1,10 @@
+[general]
+auto_display_list = True
+syntax = True
+arg_spec = True
+hist_file = ~/.cache/.bpython_history
+hist_length = 1000
+tab_length = 4
+color_scheme = coffee
+editor = vim
+

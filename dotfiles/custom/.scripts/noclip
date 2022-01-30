@@ -4,7 +4,6 @@
 import random
 import string
 import sys
-import time
 
 import pyperclip
 
@@ -12,6 +11,7 @@ import pyperclip
 def main() -> int:
     """Entry/main function"""
 
+    pyperclip.copy("")
     while True:
         try:
             pyperclip.copy(

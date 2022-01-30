@@ -4,7 +4,7 @@ set -xe
 
 main() {
     cd src
-    ${CXX:-clang++} -flto -Ofast -std=c++20 -Wall -Wextra -Wpedantic -pedantic -ffunction-sections -fdata-sections -march=native -pipe -o ../PROJECT_NAME.elf main.cc -s
+    ${CXX:-clang++} -flto -Ofast -std=c++20 -Wall -Wextra -Wpedantic -Wshadow -pedantic -ffunction-sections -fdata-sections -march=native -pipe -o ../PROJECT_NAME.elf main.cc -s
     strip --strip-all --remove-section=.note --remove-section=.gnu.version --remove-section=.comment --strip-debug --strip-unneeded ../PROJECT_NAME.elf -o ../PROJECT_NAME.elf
     cd ..
 

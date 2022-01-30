@@ -83,7 +83,7 @@ while read -n1 -s; do
         l) dec_gamma $LL "BRIGHTNESS" ;;
         s|S)
             echo "xrandr --output $MON --gamma $NR:$NG:$NB --brightness $LL" > ~/xrandrconf
-            chmod a+x ~/xrandrconf
+            chmod u+x ~/xrandrconf
             echo "Saved as ~/xrandrconf"
             exit 0
             ;;

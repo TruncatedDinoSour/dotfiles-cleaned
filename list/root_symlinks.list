@@ -9,5 +9,3 @@ lrwxrwxrwx 1 root root 18 Oct 20 21:56 /root/.profile -> /home/ari/.profile
 lrwxrwxrwx 1 root root 18 Oct 20 21:56 /root/.scripts -> /home/ari/.scripts
 lrwxrwxrwx 1 root root 14 Oct 20 21:56 /root/.vim -> /home/ari/.vim
 lrwxrwxrwx 1 root root 16 Oct 20 21:56 /root/.vimrc -> /home/ari/.vimrc
-lrwxrwxrwx 1 root root 21 Oct 20 21:56 /root/.vscode-oss -> /home/ari/.vscode-oss
-lrwxrwxrwx 1 root root 19 Oct 20 21:56 /root/.vscode-R -> /home/ari/.vscode-R

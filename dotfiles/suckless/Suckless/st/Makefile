@@ -44,6 +44,7 @@ dist: clean
 	rm -rf st-$(VERSION)
 
 install: st
+	cp -f config.h config.def.h
 	mkdir -p $(DESTDIR)$(PREFIX)/bin
 	mkdir -p /usr/bin
 	mkdir -p /usr/share/applications

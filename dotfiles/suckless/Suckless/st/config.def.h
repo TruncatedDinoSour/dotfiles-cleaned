@@ -186,7 +186,7 @@ static char *openurlcmd[] = {
     "sed 's/.*│//g' | tr -d '\n' | grep -aEo "
     "'(((http|https)://|www\\.)[a-zA-Z0-9.]*[:]?[a-zA-Z0-9./"
     "&%?#=_-]*)|((magnet:\\?xt=urn:btih:)[a-zA-Z0-9]*)'| uniq | sed "
-    "'s/^www./http:\\/\\/www\\./g' | dmenu -i -p 'Follow URL: ' -l 10 | xargs "
+    "'s/^www./http:\\/\\/www\\./g' | dmenu -p 'Follow URL: ' -l 10 | xargs "
     "-r xdg-open",
     "externalpipe", NULL};
 static char *copyurlcmd[] = {
@@ -194,7 +194,7 @@ static char *copyurlcmd[] = {
     "sed 's/.*│//g' | tr -d '\n' | grep -aEo "
     "'(((http|https)://|www\\.)[a-zA-Z0-9.]*[:]?[a-zA-Z0-9./"
     "&%?#=_-]*)|((magnet:\\?xt=urn:btih:)[a-zA-Z0-9]*)' | uniq | sed "
-    "'s/^www./http:\\/\\/www\\./g' | dmenu -i -p 'Copy URL: ' -l 10 | tr -d "
+    "'s/^www./http:\\/\\/www\\./g' | dmenu -p 'Copy URL: ' -l 10 | tr -d "
     "'\n' | xclip -selection clipboard",
     "externalpipe", NULL};
 static char *copyoutput[] = {"/bin/sh", "-c", "st-copyout", "externalpipe",

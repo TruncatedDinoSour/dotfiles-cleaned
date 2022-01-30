@@ -55,6 +55,9 @@ autocmd BufWritePre,BufRead,BufNewFile /mnt/*,/tmp/* set noundofile undodir=
 " Assembly uses nasm
 autocmd Filetype asm set ft=nasm
 
+" Set jinja to html
+autocmd BufRead,BufNewFile *.j2 set filetype=html
+
 
 " Plugins
 "   To Install the plugins type `:PlugInstall`
@@ -86,7 +89,6 @@ call plug#begin("~/.vim/plugged")
     Plug 'luochen1990/rainbow'
     Plug 'MicahElliott/vrod'
     Plug 'kovisoft/slimv'
-    Plug 'lepture/vim-jinja'
     Plug 'tpope/vim-markdown'
 call plug#end()
 
@@ -96,4 +98,3 @@ colorscheme alduin                  " Set the theme
 
 " Plugin config
 source ~/.vim/pack/plugins/start/vimrc/plugin/plugin_config.vim
-

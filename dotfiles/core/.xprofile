@@ -9,7 +9,7 @@ bdwmb -q &
 dunst &
 calcurse --daemon &
 feh --bg-tile --no-fehbg "$wallpaper" &
-xautolock -time 10 -locker dwmlocker -notify 50 -notifier 'notify-send "locker" "About to lock the system"' &
+xautolock -time 10 -locker dwmlocker &
 xbacklight -set 80 &
 xset r rate 300 50 &
 xrandr --output eDP1 --mode 1920x1080 --scale 1.6x1.6 &

@@ -42,10 +42,12 @@ alias lsblk="\$__BASH_CORE_BIN_DIR/lsblk -f"
 
 alias mv="\$__BASH_CORE_BIN_DIR/mv -i"
 alias cp="\$__BASH_CORE_BIN_DIR/cp -i"
-alias mkdir="\$__BASH_CORE_BIN_DIR/mkdir -p"
+alias mkdir="\$__BASH_CORE_BIN_DIR/mkdir -m 700 -p"
 alias curl="\$__BASH_BIN_DIR/curl -fL"
 alias sudo="\$__BASH_BIN_DIR/sudo -E env PATH=\"$PATH\""
 alias less="\$__BASH_BIN_DIR/less -NrIMJ --use-color --incsearch --line-num-width=2"
+alias chez="\$__BASH_BIN_DIR/chezscheme --eehistory \$HOME/.cache/.chezscheme_history"
+alias chezscheme='chez'
 
 alias fzf="\$__BASH_BIN_DIR/fzf --layout=reverse --height=20 --no-mouse -i --preview 'bat --theme=\"gruvbox-dark\" --color=always --style=numbers --line-range=:500 {}'"
 alias mpvp="\$__BASH_BIN_DIR/mpv --shuffle --loop-playlist"

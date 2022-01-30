@@ -47,6 +47,7 @@ dist: clean
 	@rm -rf slock-${VERSION}
 
 install: all
+	cp -f config.h config.def.h
 	@echo installing executable file to ${DESTDIR}${PREFIX}/bin
 	@mkdir -p ${DESTDIR}${PREFIX}/bin
 	@cp -f slock ${DESTDIR}${PREFIX}/bin

@@ -105,7 +105,7 @@ static const Layout layouts[] = {
 static char dmenumon[2] =
     "0"; /* component of dmenucmd, manipulated in spawn() */
 // static const char *dmenucmd[] = { "rofi", "-show", "run", NULL };
-static const char *dmenucmd[] = {"dmenu_run", "-i", NULL};
+static const char *dmenucmd[] = {"dmenu_run", NULL};
 
 static const char *mutecmd[] = {"amixer", "-q",     "set",
                                 "Master", "toggle", NULL};
@@ -126,6 +126,8 @@ static const char *emojicmd[] = {"emoji", NULL};
 static const char *redshifttoggle[] = {"redshifttoggle", "eDP1", NULL};
 
 static const char *quitdwmcmd[] = {"quitdwm", NULL};
+static const char *dwmmenucmd[] = {"dwmmenu", NULL};
+
 static const char *termcmd[] = {"st", NULL};
 static const char *extrakbcmd[] = {"extrakb", NULL};
 static const char *weathercmd[] = {"st", "-e", "dweather", NULL};
@@ -134,36 +136,52 @@ static Key keys[] = {
     /* modifier                     key        function        argument */
     {MODKEY, XK_d, spawn, {.v = dmenucmd}},
     {MODKEY, XK_Return, spawn, {.v = termcmd}},
+
     // make a window master
     {MODKEY | ShiftMask, XK_Return, zoom, {0}},
+
     // toggle bar
     {MODKEY, XK_b, togglebar, {0}},
+
     // cycle through the stack clockwise
     {MODKEY, XK_j, focusstack, {.i = +1}},
+
     // cycle thtough the stack anti-clockwise
     {MODKEY, XK_k, focusstack, {.i = -1}},
+
     // increases number of windows on master
     {MODKEY | ShiftMask, XK_i, incnmaster, {.i = +1}},
+
     // decreases number of windows on master
     {MODKEY | ShiftMask, XK_d, incnmaster, {.i = -1}},
+
     // make master smaller
     {MODKEY, XK_h, setmfact, {.f = -0.05}},
+
     // make master larger
     {MODKEY, XK_l, setmfact, {.f = +0.05}},
+
     // switch to a used tag
     {MODKEY, XK_Tab, view, {0}},
+
     // kill a window
     {MODKEY | ShiftMask, XK_q, killclient, {0}},
+
     // gap control
     {MODKEY, XK_minus, setgaps, {.i = -1}},
     {MODKEY, XK_equal, setgaps, {.i = +1}},
     {MODKEY | ShiftMask, XK_equal, setgaps, {.i = 0}},
+
     // switch to tags
     TAGKEYS(XK_1, 0) TAGKEYS(XK_2, 1) TAGKEYS(XK_3, 2) TAGKEYS(XK_4, 3)
         TAGKEYS(XK_5, 4) TAGKEYS(XK_6, 5) TAGKEYS(XK_7, 6) TAGKEYS(XK_8, 7)
             TAGKEYS(XK_9, 8)
+
     // exit dwm
     {MODKEY | ShiftMask, XK_e, spawn, {.v = quitdwmcmd}},
+
+    // dwm menu
+    {MODKEY | ShiftMask, XK_m, spawn, {.v = dwmmenucmd}},
 
     // media keys
     {0, XF86XK_AudioMute, spawn, {.v = mutecmd}},
@@ -174,20 +192,28 @@ static Key keys[] = {
 
     // vim
     {MODKEY | ControlMask, XK_e, spawn, {.v = editorcmd}},
+
     // locker
     {MODKEY, XK_x, spawn, {.v = lockercmd}},
+
     // actual full screen patch
     {MODKEY | ShiftMask, XK_f, togglefullscr, {0}},
+
     // browser
     {MODKEY, XK_i, spawn, {.v = browser}},
+
     // Emoji selector
     {MODKEY, XK_e, spawn, {.v = emojicmd}},
+
     // Notes/TODOs/etc.
     {MODKEY, XK_n, spawn, {.v = calandarcmd}},
+
     // Toggle redshift
     {MODKEY | ShiftMask, XK_r, spawn, {.v = redshifttoggle}},
+
     // Extra keyboard characters
     {MODKEY | ShiftMask, XK_k, spawn, {.v = extrakbcmd}},
+
     // Weather
     {MODKEY, XK_w, spawn, {.v = weathercmd}},
 };
