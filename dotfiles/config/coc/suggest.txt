@@ -1,3 +1,8 @@
+LI|LICENSE_SED|sh
+user|user_license|sh
+use|user_license|sh
+lice|license|sh
+chec|check_valid_license|sh
 stor|storage|around
 store|storage|around
 pyp|pyperclip|around
@@ -204,12 +209,10 @@ se|sed_escape|sh
 tm|tmp_l|sh
 sho|show_license|sh
 L|LICENSE_SED|sh
-LI|LICENSE_SED|sh
 ex|extract_license|sh
 ext|extract_license|sh
 ed|editor|sh
 basena|basename|sh
-chec|check_valid_license|sh
 is_|is_valid_license|sh
 cont|continue|sh
 H|HOME|sh

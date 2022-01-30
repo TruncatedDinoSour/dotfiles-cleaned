@@ -23,7 +23,7 @@ user_pref("app.shield.optoutstudies.enabled", false);
 user_pref("app.support.baseURL", "");
 user_pref("app.update.auto", false);
 user_pref("app.update.lastUpdateTime.addon-background-update-timer", 1643572359);
-user_pref("app.update.lastUpdateTime.browser-cleanup-thumbnails", 1643572479);
+user_pref("app.update.lastUpdateTime.browser-cleanup-thumbnails", 1643576079);
 user_pref("app.update.lastUpdateTime.region-update-timer", 1635390493);
 user_pref("app.update.lastUpdateTime.rs-experiment-loader-timer", 1634784846);
 user_pref("app.update.lastUpdateTime.search-engine-update-timer", 1643565066);
