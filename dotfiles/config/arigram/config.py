@@ -6,17 +6,18 @@ from threading import Thread
 from timeit import default_timer as timer
 from urllib.parse import quote as url_safe
 
-import arigram
 import pyfzf
 import uwuify
 import wikipedia
+from plyer import notification
+from pyperclip import copy as copy_to_clipboard
+from simpleaudio import WaveObject
+
+import arigram
 from arigram import config as tg_config
 from arigram.controllers import msg_handler
 from arigram.tdlib import TextParseModeInput
 from arigram.utils import is_yes, suspend
-from plyer import notification
-from pyperclip import copy as copy_to_clipboard
-from simpleaudio import WaveObject
 
 MSG_MODIFIERS = {
     "uwufier": lambda string: uwuify.uwu(string, flags=uwuify.SMILEY | uwuify.YU),
@@ -26,6 +27,7 @@ MSG_MODIFIERS = {
     "kde": lambda string: string.replace("c", "k").replace("C", "K"),
     "swap": lambda string: string.swapcase(),
     "ok hun": lambda string: string.title().removesuffix(".") + ".",
+    "sr2": lambda string: "".join((chr(ord(character) << 2) for character in string)),
 }
 
 
@@ -257,6 +259,14 @@ class Custom:
             MSG_MODIFIERS["ok hun"](ctrl.view.status.get_input("Formalised message"))
         )
 
+    @staticmethod
+    def sr2(ctrl, *args) -> None:
+        del args
+
+        ctrl.model.send_message(
+            MSG_MODIFIERS["sr2"](ctrl.view.status.get_input("SR2 message"))
+        )
+
 
 custom_code = Custom()
 
@@ -276,6 +286,7 @@ CUSTOM_KEYBINDS = {
     "M": {"func": custom_code.modify_cur_message, "handler": msg_handler},
     "F": {"func": custom_code.kde, "handler": msg_handler},
     "Y": {"func": custom_code.send_formal, "handler": msg_handler},
+    "W": {"func": custom_code.sr2, "handler": msg_handler},
 }
 DEFAULT_OPEN = tg_config.LONG_MSG_CMD
 EXTRA_TDLIB_HEADEARS = {

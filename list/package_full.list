@@ -63,7 +63,6 @@ app-emulation/mkqemuvm
 app-emulation/qemu
 app-emulation/spice
 app-emulation/spice-protocol
-app-eselect/eselect-ctags
 app-eselect/eselect-fontconfig
 app-eselect/eselect-iptables
 app-eselect/eselect-lib-bin-symlink
@@ -75,9 +74,6 @@ app-eselect/eselect-vi
 app-i18n/uchardet
 app-misc/c_rehash
 app-misc/ca-certificates
-app-misc/char
-app-misc/colourpicker
-app-misc/colours
 app-misc/editor-wrapper
 app-misc/lmgr
 app-misc/mime-types
@@ -89,7 +85,6 @@ app-misc/yafetch
 app-office/calcurse
 app-portage/elt-patches
 app-portage/gemato
-app-portage/portage-show
 app-portage/portage-utils
 app-shells/bash
 app-shells/bash-completion
@@ -150,7 +145,6 @@ dev-lang/vala
 dev-lang/yasm
 dev-libs/atk
 dev-libs/boost
-dev-libs/botan
 dev-libs/cyrus-sasl
 dev-libs/double-conversion
 dev-libs/elfutils
@@ -170,7 +164,6 @@ dev-libs/kpathsea
 dev-libs/libaio
 dev-libs/libassuan
 dev-libs/libbsd
-dev-libs/libedit
 dev-libs/libevdev
 dev-libs/libevent
 dev-libs/libffi
@@ -217,6 +210,7 @@ dev-perl/CPAN-Meta-Check
 dev-perl/Crypt-RC4
 dev-perl/Data-OptList
 dev-perl/Devel-Caller
+dev-perl/Devel-CheckLib
 dev-perl/Devel-GlobalDestruction
 dev-perl/Devel-LexAlias
 dev-perl/Devel-StackTrace
@@ -231,14 +225,26 @@ dev-perl/ExtUtils-HasCompiler
 dev-perl/File-BaseDir
 dev-perl/File-DesktopEntry
 dev-perl/File-HomeDir
+dev-perl/File-Listing
 dev-perl/File-MimeInfo
 dev-perl/File-Slurper
 dev-perl/File-Which
+dev-perl/HTML-Parser
+dev-perl/HTML-Tagset
+dev-perl/HTTP-Cookies
+dev-perl/HTTP-Date
+dev-perl/HTTP-Message
+dev-perl/HTTP-Negotiate
+dev-perl/IO-HTML
+dev-perl/IO-Socket-INET6
 dev-perl/IO-Socket-SSL
 dev-perl/IO-stringy
 dev-perl/IPC-System-Simple
+dev-perl/libwww-perl
 dev-perl/Locale-gettext
 dev-perl/Log-Dispatch
+dev-perl/LWP-MediaTypes
+dev-perl/LWP-Protocol-https
 dev-perl/MailTools
 dev-perl/MIME-Charset
 dev-perl/Module-Build
@@ -248,6 +254,7 @@ dev-perl/Mozilla-CA
 dev-perl/MRO-Compat
 dev-perl/namespace-autoclean
 dev-perl/namespace-clean
+dev-perl/Net-HTTP
 dev-perl/Net-SSLeay
 dev-perl/OLE-StorageLite
 dev-perl/Package-Stash
@@ -263,6 +270,7 @@ dev-perl/Ref-Util
 dev-perl/Ref-Util-XS
 dev-perl/Role-Tiny
 dev-perl/SGMLSpm
+dev-perl/Socket6
 dev-perl/Specio
 dev-perl/Spreadsheet-ParseExcel
 dev-perl/Sub-Exporter
@@ -282,6 +290,7 @@ dev-perl/Unicode-LineBreak
 dev-perl/Unicode-Map
 dev-perl/URI
 dev-perl/Variable-Magic
+dev-perl/WWW-RobotRules
 dev-perl/XML-Parser
 dev-perl/XString
 dev-perl/YAML-Tiny
@@ -341,8 +350,6 @@ dev-qt/qtsvg
 dev-qt/qttest
 dev-qt/qtwidgets
 dev-qt/qtxml
-dev-scheme/chezscheme
-dev-scheme/racket
 dev-tcltk/blt
 dev-tcltk/tix
 dev-tex/bibtexu
@@ -370,7 +377,6 @@ dev-util/boost-build
 dev-util/cbindgen
 dev-util/ccls
 dev-util/cmake
-dev-util/ctags
 dev-util/desktop-file-utils
 dev-util/gdbus-codegen
 dev-util/glib-utils
@@ -385,7 +391,6 @@ dev-util/pkgconf
 dev-util/re2c
 dev-util/shellcheck-bin
 dev-util/shfmt
-dev-util/source-highlight
 dev-util/systemtap
 dev-vcs/git
 gnome-base/gsettings-desktop-schemas
@@ -422,7 +427,6 @@ media-libs/harfbuzz
 media-libs/imlib2
 media-libs/jbig2dec
 media-libs/lcms
-media-libs/libaom
 media-libs/libass
 media-libs/libepoxy
 media-libs/libglvnd
@@ -443,7 +447,6 @@ media-sound/alsa-utils
 media-sound/lame
 media-video/ffmpeg
 media-video/mpv
-net-analyzer/traceroute
 net-dns/c-ares
 net-dns/libidn
 net-dns/libidn2
@@ -541,7 +544,6 @@ sys-devel/clang-runtime
 sys-devel/flex
 sys-devel/gcc
 sys-devel/gcc-config
-sys-devel/gdb
 sys-devel/gettext
 sys-devel/gnuconfig
 sys-devel/libtool
@@ -579,7 +581,6 @@ sys-libs/libcap
 sys-libs/libcap-ng
 sys-libs/libomp
 sys-libs/libseccomp
-sys-libs/libstatgrab
 sys-libs/liburing
 sys-libs/libxcrypt
 sys-libs/mtdev
@@ -615,6 +616,8 @@ virtual/os-headers
 virtual/package-manager
 virtual/pager
 virtual/perl-Carp
+virtual/perl-Compress-Raw-Bzip2
+virtual/perl-Compress-Raw-Zlib
 virtual/perl-CPAN
 virtual/perl-CPAN-Meta
 virtual/perl-CPAN-Meta-Requirements
@@ -635,6 +638,8 @@ virtual/perl-File-Temp
 virtual/perl-Getopt-Long
 virtual/perl-if
 virtual/perl-IO
+virtual/perl-IO-Compress
+virtual/perl-IO-Socket-IP
 virtual/perl-JSON-PP
 virtual/perl-libnet
 virtual/perl-MIME-Base64
@@ -649,6 +654,7 @@ virtual/perl-Sys-Syslog
 virtual/perl-Test-Harness
 virtual/perl-Test-Simple
 virtual/perl-Text-ParseWords
+virtual/perl-Time-Local
 virtual/perl-version
 virtual/perl-XSLoader
 virtual/pkgconfig

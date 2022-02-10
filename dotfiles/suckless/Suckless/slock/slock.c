@@ -176,7 +176,7 @@ static void readpw(Display *dpy, struct xrandr *rr, struct lock **locks,
                 break;
             }
             color = len ? INPUT : ((failure || failonclear) ? FAILED : INIT);
-            if (running && oldc != color) {
+            if (running && oldc != (int)color) {
                 for (screen = 0; screen < nscreens; screen++) {
                     if (locks[screen]->bgmap)
                         XSetWindowBackgroundPixmap(dpy, locks[screen]->win,

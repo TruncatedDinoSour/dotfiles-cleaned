@@ -672,6 +672,8 @@ void execsh(char *cmd, char **args) {
 }
 
 void sigchld(int a) {
+    (void)a;
+
     int stat;
     pid_t p;
 
@@ -907,7 +909,7 @@ void ttywriteraw(const char *s, size_t n) {
              */
             if ((r = write(cmdfd, s, (n < lim) ? n : lim)) < 0)
                 goto write_error;
-            if (r < n) {
+            if (r < (ssize_t)n) {
                 /*
                  * We weren't able to write out everything.
                  * This means the buffer is getting full
@@ -1006,7 +1008,7 @@ void treset(void) {
                        .state = CURSOR_DEFAULT};
 
     memset(term.tabs, 0, term.col * sizeof(*term.tabs));
-    for (i = tabspaces; i < term.col; i += tabspaces)
+    for (i = tabspaces; i < (unsigned int)term.col; i += tabspaces)
         term.tabs[i] = 1;
     term.top = 0;
     term.bot = term.row - 1;
@@ -1933,6 +1935,8 @@ void strreset(void) {
 }
 
 void sendbreak(const Arg *arg) {
+    (void)arg;
+
     if (tcsendbreak(cmdfd, 0))
         perror("Error sending break");
 }
@@ -1945,11 +1949,20 @@ void tprinter(char *s, size_t len) {
     }
 }
 
-void toggleprinter(const Arg *arg) { term.mode ^= MODE_PRINT; }
+void toggleprinter(const Arg *arg) {
+    (void)arg;
+    term.mode ^= MODE_PRINT;
+}
 
-void printscreen(const Arg *arg) { tdump(); }
+void printscreen(const Arg *arg) {
+    (void)arg;
+    tdump();
+}
 
-void printsel(const Arg *arg) { tdumpsel(); }
+void printsel(const Arg *arg) {
+    (void)arg;
+    tdumpsel();
+}
 
 void tdumpsel(void) {
     char *ptr;
@@ -1984,15 +1997,15 @@ void tputtab(int n) {
     uint x = term.c.x;
 
     if (n > 0) {
-        while (x < term.col && n--)
-            for (++x; x < term.col && !term.tabs[x]; ++x)
+        while (x < (unsigned int)term.col && n--)
+            for (++x; x < (unsigned int)term.col && !term.tabs[x]; ++x)
                 /* nothing */;
     } else if (n < 0) {
         while (x > 0 && n++)
             for (--x; x > 0 && !term.tabs[x]; --x)
                 /* nothing */;
     }
-    term.c.x = LIMIT(x, 0, term.col - 1);
+    term.c.x = LIMIT(x, 0, (unsigned int)term.col - 1);
 }
 
 void tdefutf8(char ascii) {

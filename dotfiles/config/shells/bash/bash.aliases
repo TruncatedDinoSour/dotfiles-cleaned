@@ -60,4 +60,4 @@ alias showtopcmd="fc -l 1 | \$__BASH_BIN_DIR/awk '{CMD[\$2]++;count++;}END { for
 alias rshell="\$__BASH_CORE_BIN_DIR/rm -f \$HISTFILE && \$__BASH_BIN_DIR/reset && \$SHELL && exit 127"
 alias killyourself='$__BASH_CORE_BIN_DIR/kill -9 $$'
 
-alias full_upgrade='vim  +PlugUpdate +q! +q! && sudo npm update -g --unsafe-perm=true && sudo npm upgrade -g --unsafe-perm=true && pip_upgrade && sudo emerge --sync && sudo emerge -uDUN --with-bdeps=y @world'
+alias full_upgrade='vim +PlugUpdate +q! +q! && vim +CocUpdate +q! +q! && sudo npm update -g --unsafe-perm=true && sudo npm upgrade -g --unsafe-perm=true && pip_upgrade && sudo emerge --sync && sudo emerge -uDUN --with-bdeps=y @world'

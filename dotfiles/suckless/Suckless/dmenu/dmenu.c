@@ -92,17 +92,17 @@ static void calcoffsets(void) {
         n = mw - (promptw + inputw + TEXTW("<") + TEXTW(">"));
     /* calculate which items will begin the next page and previous page */
     for (i = 0, next = curr; next; next = next->right)
-        if ((i += (lines > 0) ? bh : MIN(TEXTW(next->text), n)) > n)
+        if ((i += (lines > 0) ? bh : MIN((int)TEXTW(next->text), n)) > n)
             break;
     for (i = 0, prev = curr; prev && prev->left; prev = prev->left)
-        if ((i += (lines > 0) ? bh : MIN(TEXTW(prev->left->text), n)) > n)
+        if ((i += (lines > 0) ? bh : MIN((int)TEXTW(prev->left->text), n)) > n)
             break;
 }
 
 static int max_textw(void) {
     int len = 0;
     for (struct item *item = items; item && item->text; item++)
-        len = MAX(TEXTW(item->text) % dmenuwpx, len);
+        len = MAX((int)TEXTW(item->text) % dmenuwpx, len);
     return len;
 }
 
@@ -148,8 +148,8 @@ static void drawhighlights(struct item *item, int x, int y, int maxw) {
             highlight[strlen(token)] = '\0';
             if (indentx - (lrpad / 2) - 1 < maxw)
                 drw_text(drw, x + indentx - (lrpad / 2) - 1, y,
-                         MIN(maxw - indentx, TEXTW(highlight) - lrpad), bh, 0,
-                         highlight, 0);
+                         MIN(maxw - indentx, (int)TEXTW(highlight) - lrpad), bh,
+                         0, highlight, 0);
             highlight[strlen(token)] = restorechar;
 
             if (strlen(highlight) - strlen(token) < strlen(token))
@@ -629,7 +629,7 @@ static void readstdin(void) {
             die("cannot strdup %u bytes:", strlen(buf) + 1);
         items[i].out = 0;
         drw_font_getexts(drw->fonts, buf, strlen(buf), &tmpmax, NULL);
-        if (tmpmax > inputw) {
+        if (tmpmax > (unsigned int)inputw) {
             inputw = tmpmax;
             imax = i;
         }
@@ -766,7 +766,7 @@ static void setup(void) {
     if (embed) {
         XSelectInput(dpy, parentwin, FocusChangeMask | SubstructureNotifyMask);
         if (XQueryTree(dpy, parentwin, &dw, &w, &dws, &du) && dws) {
-            for (i = 0; i < du && dws[i] != win; ++i)
+            for (i = 0; (unsigned int)i < du && dws[i] != win; ++i)
                 XSelectInput(dpy, dws[i], FocusChangeMask);
             XFree(dws);
         }

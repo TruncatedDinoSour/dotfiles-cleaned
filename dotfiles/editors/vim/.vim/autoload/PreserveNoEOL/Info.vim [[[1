@@ -1,0 +1,24 @@
+" PreserveNoEOL/Info.vim: Preserve EOL information for use in statusline etc.
+"
+" DEPENDENCIES:
+"
+" Copyright: (C) 2011-2012 Ingo Karkat
+"   The VIM LICENSE applies to this script; see ':help copyright'.
+"
+" Maintainer:   Ingo Karkat <ingo@karkat.de>
+"
+" REVISION  DATE        REMARKS
+"   1.00.002    23-Mar-2012 Rename preservenoeol flag to PreserveNoEOL.
+"   001 18-Nov-2011 file creation
+
+function! PreserveNoEOL#Info#IsPreserve()
+    if exists('b:PreserveNoEOL')
+    return !! b:PreserveNoEOL
+    elseif exists('g:PreserveNoEOL')
+    return !! g:PreserveNoEOL
+    else
+    return 0
+    endif
+endfunction
+
+" vim: set ts=8 sts=4 sw=4 noexpandtab ff=unix fdm=syntax :

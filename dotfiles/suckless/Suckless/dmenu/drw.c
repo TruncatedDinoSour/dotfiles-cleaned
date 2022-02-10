@@ -295,13 +295,14 @@ int drw_text(Drw *drw, int x, int y, unsigned int w, unsigned int h,
         if (utf8strlen) {
             drw_font_getexts(usedfont, utf8str, utf8strlen, &ew, NULL);
             /* shorten text if necessary */
-            for (len = MIN(utf8strlen, sizeof(buf) - 1); len && ew > w; len--)
+            for (len = MIN((unsigned long)utf8strlen, sizeof(buf) - 1);
+                 len && ew > w; len--)
                 drw_font_getexts(usedfont, utf8str, len, &ew, NULL);
 
             if (len) {
                 memcpy(buf, utf8str, len);
                 buf[len] = '\0';
-                if (len < utf8strlen)
+                if (len < (size_t)utf8strlen)
                     for (i = len; i && i > len - 3; buf[--i] = '.')
                         ; /* NOP */
 
@@ -487,7 +488,7 @@ int drw_text_align(Drw *drw, int x, int y, unsigned int w, unsigned int h,
                 x += align == AlignL ? ew : -ew;
                 w -= ew;
             }
-            if (len < utf8strlen)
+            if (len < (size_t)utf8strlen)
                 break;
         }
 

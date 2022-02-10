@@ -41,8 +41,10 @@ dirsync
 distlib
 distro
 docutils
+easygui
 entrypoints
 executing
+fabulous
 filelock
 flake8
 Flask
@@ -50,6 +52,8 @@ Flask-Limit
 gdbus_codegen
 gemato
 gpg
+GPUtil
+grapefruit
 greenlet
 HelperSDT
 html
@@ -89,6 +93,7 @@ mccabe
 meson
 mistune
 msgpack
+mutagen
 mypy
 mypy-extensions
 nbclient
@@ -128,6 +133,7 @@ pure-eval
 pyasn1
 pycodestyle
 pycparser
+pycryptodomex
 pydocstyle
 pyflakes
 pyfzf
@@ -173,12 +179,14 @@ sphinxcontrib-jsmath
 sphinxcontrib-qthelp
 sphinxcontrib-serializinghtml
 stack-data
+tabulate
 terminado
 testpath
 toml
 tomli
 tomlkit
 tornado
+tqdm
 traitlets
 trash-cli
 typing_extensions
@@ -188,13 +196,14 @@ uwuify
 virtualenv
 wcwidth
 webencodings
+websockets
 Werkzeug
 wheel
 widgetsnbextension
 wikipedia
 wrapt
 yapf
-youtube-dl
+yt-dlp
 zipp
 zope.component
 zope.event

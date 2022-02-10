@@ -1,15 +1,30 @@
 " laTeX config
 let g:tex_flavor = 'latex'
 
-" Bar's configuration
-let g:lightline = {}
-let g:lightline.colorscheme = 'apprentice'      " Set the bar's theme
+" Lightline
+let g:lightline = {
+            \ 'colorscheme': 'coffee',
+            \ 'active': {
+            \     'left': [ [ 'mode', 'paste' ],
+            \               [ 'readonly', 'filename', 'modified' ] ],
+            \ 'right':    [ [ 'lineinfo' ],
+            \               [ 'percent' ],
+            \               [ 'linter', 'fileformat', 'fileencoding', 'filetype' ] ]
+            \ },
+            \ 'inactive': {
+            \     'left':   [ [ 'filename' ] ],
+            \     'right':  [ [ 'lineinfo' ],
+            \                 [ 'percent' ] ]
+            \ },
+            \ 'component_function': {
+            \     'linter': 'LightlineLinterStatus'
+            \ }
+            \ }
 
-" Remove bar's background
-let s:palette = g:lightline#colorscheme#{g:lightline.colorscheme}#palette
-let s:palette.normal.middle = [ [ 'NONE', 'NONE', 'NONE', 'NONE' ] ]
-let s:palette.inactive.middle = s:palette.normal.middle
-let s:palette.tabline.middle = s:palette.normal.middle
+"let s:palette = g:lightline#colorscheme#{g:lightline.colorscheme}#palette
+"let s:palette.normal.middle = [ [ 'NONE', 'NONE', 'NONE', 'NONE' ] ]
+"let s:palette.inactive.middle = s:palette.normal.middle
+"let s:palette.tabline.middle = s:palette.normal.middle
 
 set noshowmode                                  " Don't show what mode vim is in
 
@@ -31,6 +46,22 @@ let g:coc_global_extensions = [
             \ 'coc-html',
             \ 'coc-tsserver'
             \ ]
+
+" ALE
+let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
+
+function! LightlineLinterStatus() abort
+    let l:counts = ale#statusline#Count(bufnr(''))
+
+    let l:all_errors = l:counts.error + l:counts.style_error
+    let l:all_non_errors = l:counts.total - l:all_errors
+
+    return l:counts.total == 0 ? 'OK' : printf(
+    \   '%dW %dE',
+    \   all_non_errors,
+    \   all_errors
+    \)
+endfunction
 
 " Rainbow parenteces
 let g:rainbow_active = 1
@@ -85,3 +116,8 @@ let g:markdown_fenced_languages = [
             \ 'assembly=nasm', 'porth'
             \ ]
 let g:markdown_syntax_conceal = 0
+
+" FixEOL
+let g:PreserveNoEOL_Function = function('PreserveNoEOL#Python#Preserve')
+let g:PreserveNoEOL = 1
+

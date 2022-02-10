@@ -16,7 +16,7 @@ LIBS = -L/usr/lib -lc -lcrypt -L${X11LIB} -lX11 -lXext -lXrandr -lImlib2
 
 # flags
 CPPFLAGS = -ffunction-sections -fdata-sections -DVERSION=\"${VERSION}\" -D_DEFAULT_SOURCE -DHAVE_SHADOW_H
-CFLAGS = -ffast-math -mfancy-math-387 -fno-ident -fmerge-all-constants -fno-unroll-loops -fno-math-errno -fno-unwind-tables -fno-asynchronous-unwind-tables -ffunction-sections -fdata-sections -std=c99 -pedantic -Wall -Ofast ${INCS} ${CPPFLAGS}
+CFLAGS = -Werror -Wshadow -Wall -Wextra -Wpedantic -pedantic -ffast-math -mfancy-math-387 -fno-ident -fmerge-all-constants -fno-unroll-loops -fno-math-errno -fno-unwind-tables -fno-asynchronous-unwind-tables -ffunction-sections -fdata-sections -std=c99 -pedantic -Wall -Ofast ${INCS} ${CPPFLAGS}
 LDFLAGS = -Wl,--build-id=none -Wl,--hash-style=gnu -s ${LIBS}
 COMPATSRC = explicit_bzero.c
 

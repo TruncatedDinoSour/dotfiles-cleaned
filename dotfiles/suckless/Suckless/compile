@@ -3,8 +3,6 @@
 set -e
 
 main() {
-    back="$(pwd)"
-
     RESET="\e[0m"
     BOLD="\e[1m"
     GREEN="\e[32m"
@@ -14,13 +12,13 @@ main() {
         if [[ -d $directory ]]; then
             echo -en "\n${BOLD}>> ${RESET}Compiling ${GREEN}$directory${RESET}\n\n"
 
-            chown "$USER":"$USER" "$directory"
+            chown "$USER":"$USER" -R "$directory"
 
-            make -C "$back/$directory" clean
-            make -C "$back/$directory" -j"$(($(nproc --all) * 4))"
+            make -C "$directory" clean
+            make -C "$directory" -j"$(($(nproc --all) * 4))"
             make_return_code="$?"
 
-            "${__BASH_RUNAS:-sudo}" make -C "$back/$directory" install
+            "${__BASH_RUNAS:-sudo}" make -C "$directory" install
 
             if [[ $make_return_code -ne '0' ]]; then
                 echo -e "${BOLD}${RED}!!${RESET} ${BOLD}make${RESET} exited with code of ${BOLD}$make_return_code${RESET}"

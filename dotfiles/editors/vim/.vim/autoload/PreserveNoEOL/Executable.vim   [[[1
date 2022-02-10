@@ -1,0 +1,47 @@
+" PreserveNoEOL/Executable.vim: Preserve EOL implementation via external "noeol"
+" executable.
+"
+" DEPENDENCIES:
+"   - PreserveNoEOL.vim autoload script
+"   - "noeol" helper executable.
+"
+" Copyright: (C) 2011-2013 Ingo Karkat
+"   The VIM LICENSE applies to this script; see ':help copyright'.
+"
+" Maintainer:   Ingo Karkat <ingo@karkat.de>
+"
+" REVISION  DATE        REMARKS
+"   1.00.004    26-Apr-2013 Return the potential error message;
+"               PreserveNoEOL#HandleNoEOL will print it.
+"   003 23-Mar-2012 Renamed from noeol.vim to Executable.vim.
+"   002 18-Nov-2011 Switched interface of Preserve() to pass
+"               pre-/post-write flag instead of filespec.
+"   001 18-Nov-2011 file creation
+
+function! PreserveNoEOL#Executable#Preserve( isPostWrite )
+    if ! a:isPostWrite
+    return ''
+    endif
+
+    let l:filespec = expand('<afile>')
+
+    " Using the system() command even though we're not interested in the command
+    " output. This is because on Windows GVIM, the system() call does not
+    " (briefly) open a Windows shell window, but ':silent !{cmd}' does. system()
+    " also does not unintentionally trigger the 'autowrite' feature.
+    let l:shell_output = system(g:PreserveNoEOL_Command . ' ' . escapings#shellescape(l:filespec))
+
+    if v:shell_error != 0
+    return (empty(l:shell_output) ? v:shell_error : l:shell_output)
+    endif
+
+    " Even though the file was changed outside of Vim, this doesn't seem to
+    " trigger the |timestamp| "file changed" warning, probably because Vim
+    " doesn't regard the change in the final EOL as a change. (The help text
+    " says Vim re-reads in to a hidden buffer, so it probably doesn't even see
+    " the change.)
+    " Therefore, no :checktime / temporary setting of 'autoread' is necessary.
+    return ''
+endfunction
+
+" vim: set ts=8 sts=4 sw=4 noexpandtab ff=unix fdm=syntax :

@@ -84,7 +84,6 @@ enum {
 }; /* default atoms */
 enum {
     ClkTagBar,
-    ClkLtSymbol,
     ClkStatusText,
     ClkWinTitle,
     ClkClientWin,
@@ -138,7 +137,6 @@ typedef struct {
 } Layout;
 
 struct Monitor {
-    char ltsymbol[16];
     float mfact;
     int nmaster;
     int num;
@@ -260,9 +258,9 @@ static void setenvvars(void);
 static const char broken[] = "broken";
 static char stext[256];
 static int screen;
-static int sw, sh;      /* X display screen geometry width, height */
-static int bh, blw = 0; /* bar geometry */
-static int lrpad;       /* sum of left and right padding for text */
+static int sw, sh; /* X display screen geometry width, height */
+static int bh = 0; /* bar geometry */
+static int lrpad;  /* sum of left and right padding for text */
 static int (*xerrorxlib)(Display *, XErrorEvent *);
 static unsigned int numlockmask = 0;
 static void (*handler[LASTEvent])(XEvent *) = {
@@ -409,7 +407,6 @@ void arrange(Monitor *m) {
 }
 
 void arrangemon(Monitor *m) {
-    strncpy(m->ltsymbol, m->lt[m->sellt]->symbol, sizeof m->ltsymbol);
     if (m->lt[m->sellt]->arrange)
         m->lt[m->sellt]->arrange(m);
 }
@@ -480,8 +477,8 @@ void clientmessage(XEvent *e) {
     if (!c)
         return;
     if (cme->message_type == netatom[NetWMState]) {
-        if (cme->data.l[1] == netatom[NetWMFullscreen] ||
-            cme->data.l[2] == netatom[NetWMFullscreen])
+        if (cme->data.l[1] == (long)netatom[NetWMFullscreen] ||
+            cme->data.l[2] == (long)netatom[NetWMFullscreen])
             setfullscreen(c,
                           (cme->data.l[0] == 1 /* _NET_WM_STATE_ADD    */
                            || (cme->data.l[0] == 2 /* _NET_WM_STATE_TOGGLE */ &&
@@ -594,7 +591,6 @@ Monitor *createmon(void) {
     m->gappx = gappx;
     m->lt[0] = &layouts[0];
     m->lt[1] = &layouts[1 % LENGTH(layouts)];
-    strncpy(m->ltsymbol, layouts[0].symbol, sizeof m->ltsymbol);
     return m;
 }
 
@@ -678,9 +674,7 @@ void drawbar(Monitor *m) {
                      urg & 1 << i);
         x += w;
     }
-    w = blw = TEXTW(m->ltsymbol);
     drw_setscheme(drw, scheme[SchemeNorm]);
-    x = drw_text(drw, x, 0, w, bh, lrpad / 2, m->ltsymbol, 0);
 
     if ((w = m->ww - tw - x) > bh) {
         if (m->sel) {
@@ -910,6 +904,8 @@ void keypress(XEvent *e) {
 }
 
 void killclient(const Arg *arg) {
+    (void)arg;
+
     if (!selmon->sel)
         return;
     if (!sendevent(selmon->sel, wmatom[WMDelete])) {
@@ -1286,7 +1282,7 @@ void setup(void) {
     cursor[CurMove] = drw_cur_create(drw, XC_fleur);
     /* init appearance */
     scheme = ecalloc(LENGTH(colors), sizeof(Clr *));
-    for (i = 0; i < LENGTH(colors); i++)
+    for (i = 0; (unsigned long)i < LENGTH(colors); i++)
         scheme[i] = drw_scm_create(drw, colors[i], 3);
     /* init bars */
     updatebars();
@@ -1343,6 +1339,8 @@ void showhide(Client *c) {
 }
 
 void sigchld(int unused) {
+    (void)unused;
+
     if (signal(SIGCHLD, sigchld) == SIG_ERR)
         die("can't install SIGCHLD handler:");
     while (0 < waitpid(-1, NULL, WNOHANG))
@@ -1388,28 +1386,30 @@ void tile(Monitor *m) {
     if (n == 0)
         return;
 
-    if (n > m->nmaster)
+    if ((int)n > m->nmaster)
         mw = m->nmaster ? m->ww * m->mfact : 0;
     else
         mw = m->ww;
     for (i = 0, my = ty = m->gappx, c = nexttiled(m->clients); c;
          c = nexttiled(c->next), i++)
-        if (i < m->nmaster) {
-            h = (m->wh - my) / (MIN(n, m->nmaster) - i) - m->gappx;
+        if ((int)i < m->nmaster) {
+            h = (m->wh - my) / (MIN((int)n, m->nmaster) - i) - m->gappx;
             resize(c, m->wx + m->gappx, m->wy + my, mw - (2 * c->bw) - m->gappx,
                    h - (2 * c->bw), 0);
-            if (ty + HEIGHT(c) < m->wh)
+            if ((int)ty + HEIGHT(c) < m->wh)
                 my += HEIGHT(c) + m->gappx;
         } else {
             h = (m->wh - ty) / (n - i) - m->gappx;
             resize(c, m->wx + mw + m->gappx, m->wy + ty,
                    m->ww - mw - (2 * c->bw) - 2 * m->gappx, h - (2 * c->bw), 0);
-            if (ty + HEIGHT(c) < m->wh)
+            if ((int)ty + HEIGHT(c) < m->wh)
                 ty += HEIGHT(c) + m->gappx;
         }
 }
 
 void togglebar(const Arg *arg) {
+    (void)arg;
+
     selmon->showbar = !selmon->showbar;
     updatebarpos(selmon);
     XMoveResizeWindow(dpy, selmon->barwin, selmon->wx, selmon->by, selmon->ww,
@@ -1418,6 +1418,8 @@ void togglebar(const Arg *arg) {
 }
 
 void togglefullscr(const Arg *arg) {
+    (void)arg;
+
     if (selmon->sel)
         setfullscreen(selmon->sel, !selmon->sel->isfullscreen);
 }
@@ -1618,7 +1620,7 @@ void updatenumlockmask(void) {
     numlockmask = 0;
     modmap = XGetModifierMapping(dpy);
     for (i = 0; i < 8; i++)
-        for (j = 0; j < modmap->max_keypermod; j++)
+        for (j = 0; (int)j < modmap->max_keypermod; j++)
             if (modmap->modifiermap[i * modmap->max_keypermod + j] ==
                 XKeysymToKeycode(dpy, XK_Num_Lock))
                 numlockmask = (1 << i);
@@ -1743,7 +1745,7 @@ Monitor *wintomon(Window w) {
 /* There's no way to check accesses to destroyed windows, thus those cases are
  * ignored (especially on UnmapNotify's). Other types of errors call Xlibs
  * default error handler, which may call exit. */
-int xerror(Display *dpy, XErrorEvent *ee) {
+int xerror(Display *edpy, XErrorEvent *ee) {
     if (ee->error_code == BadWindow ||
         (ee->request_code == X_SetInputFocus && ee->error_code == BadMatch) ||
         (ee->request_code == X_PolyText8 && ee->error_code == BadDrawable) ||
@@ -1757,19 +1759,27 @@ int xerror(Display *dpy, XErrorEvent *ee) {
         return 0;
     fprintf(stderr, "dwm: fatal error: request code=%d, error code=%d\n",
             ee->request_code, ee->error_code);
-    return xerrorxlib(dpy, ee); /* may call exit */
+    return xerrorxlib(edpy, ee); /* may call exit */
 }
 
-int xerrordummy(Display *dpy, XErrorEvent *ee) { return 0; }
+int xerrordummy(Display *xeddpy, XErrorEvent *ee) {
+    (void)xeddpy;
+    (void)ee;
+
+    return 0;
+}
 
 /* Startup Error handler to check if another window manager
  * is already running. */
-int xerrorstart(Display *dpy, XErrorEvent *ee) {
+int xerrorstart(Display *xesdpy, XErrorEvent *ee) {
+    (void)xesdpy;
+    (void)ee;
+
     die("dwm: another window manager is already running");
     return -1;
 }
 
-void zoom(const Arg *arg) {
+void zoom() {
     Client *c = selmon->sel;
 
     if (!selmon->lt[selmon->sellt]->arrange)
