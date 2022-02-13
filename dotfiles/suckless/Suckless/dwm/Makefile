@@ -10,11 +10,11 @@ all: options dwm
 
 options:
 	@echo dwm build options:
-	@echo "CFLAGS   = ${CFLAGS}"
-	@echo "LDFLAGS  = ${LDFLAGS}"
-	@echo "CC       = ${CC}"
-	@echo "STRIP    = ${STRIP}"
-	@echo "STFLAGS  = ${STRIPFLAGS}"
+	@echo "CFLAGS    = ${CFLAGS}"
+	@echo "LDFLAGS   = ${LDFLAGS}"
+	@echo "CC        = ${CC}"
+	@echo "STRIP     = ${STRIP}"
+	@echo "STFLAGS   = ${STRIPFLAGS}"
 
 .c.o:
 	${CC} -c ${CFLAGS} $<
@@ -41,29 +41,15 @@ dist: clean
 
 install: all
 	cp -f config.h config.def.h
-
-	mkdir -p ${DESTDIR}${PREFIX}/bin
-	mkdir -p /usr/share/xsessions
-	cp -f dwm ${DESTDIR}${PREFIX}/bin
-	cp -f quitdwm ${DESTDIR}${PREFIX}/bin
-	cp -f emoji ${DESTDIR}${PREFIX}/bin
-	cp -f dwmlocker ${DESTDIR}${PREFIX}/bin
-	cp -f send_calcurse_notification ${DESTDIR}${PREFIX}/bin
-	cp -f redshifttoggle ${DESTDIR}${PREFIX}/bin
-	cp -f extrakb ${DESTDIR}${PREFIX}/bin
-	cp -f dweather ${DESTDIR}${PREFIX}/bin
-	cp -f dwmmenu ${DESTDIR}${PREFIX}/bin
-	cp -f dwm.desktop /usr/share/xsessions
-	chmod 755 ${DESTDIR}${PREFIX}/bin/dwm
-	chmod 755 ${DESTDIR}${PREFIX}/bin/quitdwm
-	chmod 755 ${DESTDIR}${PREFIX}/bin/emoji
-	chmod 755 ${DESTDIR}${PREFIX}/bin/dwmlocker
-	chmod 755 ${DESTDIR}${PREFIX}/bin/send_calcurse_notification
-	chmod 755 ${DESTDIR}${PREFIX}/bin/redshifttoggle
-	chmod 755 ${DESTDIR}${PREFIX}/bin/extrakb
-	chmod 755 ${DESTDIR}${PREFIX}/bin/dweather
-	chmod 755 ${DESTDIR}${PREFIX}/bin/dwmmenu
-	mkdir -p ${DESTDIR}${MANPREFIX}/man1
+	mkdir -p ${DESTDIR}${PREFIX}/bin ${DESTDIR}${PREFIX}/share/xsessions ${DESTDIR}${MANPREFIX}/man1
+	cp -f dwm quitdwm emoji dwmlocker send_calcurse_notification redshifttoggle\
+		extrakb dweather dwmmenu ${DESTDIR}${PREFIX}/bin
+	cp -f dwm.desktop ${DESTDIR}${PREFIX}/share/xsessions
+	chmod 755 ${DESTDIR}${PREFIX}/bin/dwm ${DESTDIR}${PREFIX}/bin/quitdwm\
+		${DESTDIR}${PREFIX}/bin/emoji ${DESTDIR}${PREFIX}/bin/dwmlocker\
+		${DESTDIR}${PREFIX}/bin/send_calcurse_notification\
+		${DESTDIR}${PREFIX}/bin/redshifttoggle ${DESTDIR}${PREFIX}/bin/extrakb\
+		${DESTDIR}${PREFIX}/bin/dweather ${DESTDIR}${PREFIX}/bin/dwmmenu
 	sed "s/VERSION/${VERSION}/g" < dwm.1 > ${DESTDIR}${MANPREFIX}/man1/dwm.1
 	chmod 644 ${DESTDIR}${MANPREFIX}/man1/dwm.1
 

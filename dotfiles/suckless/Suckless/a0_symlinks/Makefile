@@ -1,7 +1,13 @@
+include config.mk
+
+install: version
+	-ln -s "/usr/lib/llvm/$(CLANG_VERSION)/bin/clang" '/usr/bin/clang'
+	-ln -s "/usr/lib/llvm/$(CLANG_VERSION)/bin/clang++" '/usr/bin/clang++'
+	-ln -s "/usr/lib/llvm/$(CLANG_VERSION)/bin/llvm-strip" '/usr/bin/llvm-strip'
+
 clean:
 	@echo 'No cleaning step required'
 
-install:
-	-ln -s '/usr/lib/llvm/13/bin/clang' '/usr/bin/clang'
-	-ln -s '/usr/lib/llvm/13/bin/clang++' '/usr/bin/clang++'
+version:
+	@echo "Clang version $(CLANG_VERSION)"
 

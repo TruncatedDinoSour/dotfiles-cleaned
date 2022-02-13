@@ -52,7 +52,7 @@ autocmd Filetype racket,scheme,lisp,clojure set lisp
 autocmd BufRead,BufNewFile *.porth set filetype=porth
 
 " Make it not store some undos
-autocmd BufWritePre,BufRead,BufNewFile /mnt/*,/tmp/* set noundofile undodir=
+autocmd BufWritePre,BufRead,BufNewFile /mnt/*,/tmp/*,/media/* set noundofile undodir=
 
 " Assembly uses nasm
 autocmd Filetype asm set ft=nasm

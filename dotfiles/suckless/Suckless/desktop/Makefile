@@ -1,7 +1,9 @@
+include config.mk
+
 clean:
 	@echo 'No cleaning step required'
 
 install:
-	mkdir -p /usr/share/applications
-	cp -f *.desktop /usr/share/applications
+	mkdir -p $(PREFIX)/share/applications
+	cp -f *.desktop $(PREFIX)/share/applications
 

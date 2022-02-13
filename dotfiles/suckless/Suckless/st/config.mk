@@ -22,8 +22,8 @@ LIBS = -L$(X11LIB) -lm -lrt -lX11 -lutil -lXft \
 
 # flags
 STCPPFLAGS = -ffunction-sections -fdata-sections -DVERSION=\"$(VERSION)\" -D_XOPEN_SOURCE=600
-STCFLAGS = -Werror -Wshadow -Wall -Wextra -Wpedantic -pedantic -ffast-math -mfancy-math-387 -fno-ident -fmerge-all-constants -fno-unroll-loops -fno-math-errno -fno-unwind-tables -fno-asynchronous-unwind-tables -ffunction-sections -fdata-sections $(INCS) $(STCPPFLAGS) $(CPPFLAGS) $(CFLAGS)
-STLDFLAGS = -Wl,--build-id=none -Wl,--hash-style=gnu -s $(LIBS) $(LDFLAGS)
+STCFLAGS = -Os -Werror -Wshadow -Wall -Wextra -Wpedantic -pedantic -ffast-math -mfancy-math-387 -fno-ident -fmerge-all-constants -fno-unroll-loops -fno-math-errno -fno-unwind-tables -fno-asynchronous-unwind-tables -ffunction-sections -fdata-sections $(INCS) $(STCPPFLAGS)
+STLDFLAGS = -Wl,--build-id=none -Wl,--hash-style=gnu,-Os -s $(LIBS)
 
 # OpenBSD:
 #CPPFLAGS = -DVERSION=\"$(VERSION)\" -D_XOPEN_SOURCE=600 -D_BSD_SOURCE
@@ -35,6 +35,6 @@ STLDFLAGS = -Wl,--build-id=none -Wl,--hash-style=gnu -s $(LIBS) $(LDFLAGS)
 CC = clang
 
 # Stripper
-STRIP = strip
+STRIP = llvm-strip
 STRIPFLAGS = --strip-all --remove-section=.eh_frame --remove-section=.eh_frame_ptr --remove-section=.note.gnu.gold-version --remove-section=.note.gnu.build-id --remove-section=.note.ABI-tag --remove-section=.note --remove-section=.gnu.version --remove-section=.comment --strip-debug --strip-unneeded
 

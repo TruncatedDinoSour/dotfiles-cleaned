@@ -28,6 +28,7 @@ MSG_MODIFIERS = {
     "swap": lambda string: string.swapcase(),
     "ok hun": lambda string: string.title().removesuffix(".") + ".",
     "sr2": lambda string: "".join((chr(ord(character) << 2) for character in string)),
+    "!sr2": lambda string: "".join((chr(ord(character) >> 2) for character in string)),
 }
 
 
@@ -199,14 +200,14 @@ class Custom:
 
         with suspend(ctrl.view):
             article_name = pyfzf.FzfPrompt().prompt(
-                query_results, f"--prompt='Article: '"
+                query_results, "--prompt='Article: '"
             )
 
         article_page = wikipedia.page(article_name)
 
         resp = ctrl.view.status.get_input(
             f"send wikipedia article about <{article_page.title}>? (Y/n)"
-        )
+        ).strip()
 
         if not is_yes(resp):
             ctrl.present_info(f"Discarding article about <{article_page.title}>")

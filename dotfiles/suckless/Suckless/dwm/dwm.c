@@ -82,14 +82,6 @@ enum {
     WMTakeFocus,
     WMLast
 }; /* default atoms */
-enum {
-    ClkTagBar,
-    ClkStatusText,
-    ClkWinTitle,
-    ClkClientWin,
-    ClkRootWin,
-    ClkLast
-}; /* clicks */
 
 typedef union {
     int i;
@@ -97,14 +89,6 @@ typedef union {
     float f;
     const void *v;
 } Arg;
-
-typedef struct {
-    unsigned int click;
-    unsigned int mask;
-    unsigned int button;
-    void (*func)(const Arg *arg);
-    const Arg arg;
-} Button;
 
 typedef struct Monitor Monitor;
 typedef struct Client Client;
@@ -116,7 +100,7 @@ struct Client {
     int basew, baseh, incw, inch, maxw, maxh, minw, minh;
     int bw, oldbw;
     unsigned int tags;
-    int isfixed, isurgent, neverfocus, oldstate, isfullscreen, isterminal;
+    int isfixed, isurgent, neverfocus, oldstate, isfullscreen;
     pid_t pid;
     Client *next;
     Client *snext;
@@ -131,11 +115,6 @@ typedef struct {
     const Arg arg;
 } Key;
 
-typedef struct {
-    const char *symbol;
-    void (*arrange)(Monitor *);
-} Layout;
-
 struct Monitor {
     float mfact;
     int nmaster;
@@ -145,7 +124,6 @@ struct Monitor {
     int wx, wy, ww, wh; /* window area  */
     int gappx;          /* gaps between windows */
     unsigned int seltags;
-    unsigned int sellt;
     unsigned int tagset[2];
     int showbar;
     int topbar;
@@ -154,7 +132,6 @@ struct Monitor {
     Client *stack;
     Monitor *next;
     Window barwin;
-    const Layout *lt[2];
 };
 
 typedef struct {
@@ -170,7 +147,6 @@ static void applyrules(Client *c);
 static int applysizehints(Client *c, int *x, int *y, int *w, int *h,
                           int interact);
 static void arrange(Monitor *m);
-static void arrangemon(Monitor *m);
 static void attach(Client *c);
 static void attachstack(Client *c);
 static void checkotherwm(void);
@@ -184,14 +160,12 @@ static Monitor *createmon(void);
 static void destroynotify(XEvent *e);
 static void detach(Client *c);
 static void detachstack(Client *c);
-// static Monitor *dirtomon(int dir);
 static void drawbar(Monitor *m);
 static void drawbars(void);
 static void enternotify(XEvent *e);
 static void expose(XEvent *e);
 static void focus(Client *c);
 static void focusin(XEvent *e);
-// static void focusmon(const Arg *arg);
 static void focusstack(const Arg *arg);
 static Atom getatomprop(Client *c, Atom prop);
 static int getrootptr(int *x, int *y);
@@ -226,7 +200,6 @@ static void showhide(Client *c);
 static void sigchld(int unused);
 static void spawn(const Arg *arg);
 static void tag(const Arg *arg);
-// static void tagmon(const Arg *arg);
 static void tile(Monitor *);
 static void togglebar(const Arg *arg);
 static void togglefullscr(const Arg *arg);
@@ -358,7 +331,7 @@ int applysizehints(Client *c, int *x, int *y, int *w, int *h, int interact) {
         *h = bh;
     if (*w < bh)
         *w = bh;
-    if (resizehints || !c->mon->lt[c->mon->sellt]->arrange) {
+    if (resizehints) {
         /* see last two sentences in ICCCM 4.1.2.3 */
         baseismin = c->basew == c->minw && c->baseh == c->minh;
         if (!baseismin) { /* temporarily remove base dimensions */
@@ -399,16 +372,11 @@ void arrange(Monitor *m) {
         for (m = mons; m; m = m->next)
             showhide(m->stack);
     if (m) {
-        arrangemon(m);
+        tile(m);
         restack(m);
     } else
         for (m = mons; m; m = m->next)
-            arrangemon(m);
-}
-
-void arrangemon(Monitor *m) {
-    if (m->lt[m->sellt]->arrange)
-        m->lt[m->sellt]->arrange(m);
+            tile(m);
 }
 
 void attach(Client *c) {
@@ -432,12 +400,10 @@ void checkotherwm(void) {
 
 void cleanup(void) {
     Arg a = {.ui = ~0};
-    Layout foo = {"", NULL};
     Monitor *m;
     size_t i;
 
     view(&a);
-    selmon->lt[selmon->sellt] = &foo;
     for (m = mons; m; m = m->next)
         while (m->stack)
             unmanage(m->stack, 0);
@@ -534,37 +500,13 @@ void configurenotify(XEvent *e) {
 
 void configurerequest(XEvent *e) {
     Client *c;
-    Monitor *m;
     XConfigureRequestEvent *ev = &e->xconfigurerequest;
     XWindowChanges wc;
 
     if ((c = wintoclient(ev->window))) {
         if (ev->value_mask & CWBorderWidth)
             c->bw = ev->border_width;
-        else if (!selmon->lt[selmon->sellt]->arrange) {
-            m = c->mon;
-            if (ev->value_mask & CWX) {
-                c->oldx = c->x;
-                c->x = m->mx + ev->x;
-            }
-            if (ev->value_mask & CWY) {
-                c->oldy = c->y;
-                c->y = m->my + ev->y;
-            }
-            if (ev->value_mask & CWWidth) {
-                c->oldw = c->w;
-                c->w = ev->width;
-            }
-            if (ev->value_mask & CWHeight) {
-                c->oldh = c->h;
-                c->h = ev->height;
-            }
-            if ((ev->value_mask & (CWX | CWY)) &&
-                !(ev->value_mask & (CWWidth | CWHeight)))
-                configure(c);
-            if (ISVISIBLE(c))
-                XMoveResizeWindow(dpy, c->win, c->x, c->y, c->w, c->h);
-        } else
+        else
             configure(c);
     } else {
         wc.x = ev->x;
@@ -589,8 +531,6 @@ Monitor *createmon(void) {
     m->showbar = showbar;
     m->topbar = topbar;
     m->gappx = gappx;
-    m->lt[0] = &layouts[0];
-    m->lt[1] = &layouts[1 % LENGTH(layouts)];
     return m;
 }
 
@@ -752,20 +692,6 @@ void focusin(XEvent *e) {
     if (selmon->sel && ev->window != selmon->sel->win)
         setfocus(selmon->sel);
 }
-
-/* void
-focusmon(const Arg *arg)
-{
-  Monitor *m;
-
-  if (!mons->next)
-    return;
-  if ((m = dirtomon(arg->i)) == selmon)
-    return;
-  unfocus(selmon->sel, 0);
-  selmon = m;
-  focus(NULL);
-} */
 
 void focusstack(const Arg *arg) {
     Client *c = NULL, *i;
@@ -1098,24 +1024,11 @@ void resizeclient(Client *c, int x, int y, int w, int h) {
 }
 
 void restack(Monitor *m) {
-    Client *c;
     XEvent ev;
-    XWindowChanges wc;
 
     drawbar(m);
     if (!m->sel)
         return;
-    if (!m->lt[m->sellt]->arrange)
-        XRaiseWindow(dpy, m->sel->win);
-    if (m->lt[m->sellt]->arrange) {
-        wc.stack_mode = Below;
-        wc.sibling = m->barwin;
-        for (c = m->stack; c; c = c->snext)
-            if (ISVISIBLE(c)) {
-                XConfigureWindow(dpy, c->win, CWSibling | CWStackMode, &wc);
-                wc.sibling = c->win;
-            }
-    }
     XSync(dpy, False);
     while (XCheckMaskEvent(dpy, EnterWindowMask, &ev))
         ;
@@ -1231,7 +1144,7 @@ void setgaps(const Arg *arg) {
 void setmfact(const Arg *arg) {
     float f;
 
-    if (!arg || !selmon->lt[selmon->sellt]->arrange)
+    if (!arg)
         return;
     f = arg->f < 1.0 ? arg->f + selmon->mfact : arg->f - 1.0;
     if (f < 0.1 || f > 0.95)
@@ -1328,8 +1241,6 @@ void showhide(Client *c) {
     if (ISVISIBLE(c)) {
         /* show clients top down */
         XMoveWindow(dpy, c->win, c->x, c->y);
-        if ((!c->mon->lt[c->mon->sellt]->arrange) && !c->isfullscreen)
-            resize(c, c->x, c->y, c->w, c->h, 0);
         showhide(c->snext);
     } else {
         /* hide clients bottom up */
@@ -1368,14 +1279,6 @@ void tag(const Arg *arg) {
         arrange(selmon);
     }
 }
-
-/*void
-tagmon(const Arg *arg)
-{
-  if (!selmon->sel || !mons->next)
-    return;
-  sendmon(selmon->sel, dirtomon(arg->i));
-}*/
 
 void tile(Monitor *m) {
     unsigned int i, n, h, mw, my, ty;
@@ -1782,8 +1685,6 @@ int xerrorstart(Display *xesdpy, XErrorEvent *ee) {
 void zoom() {
     Client *c = selmon->sel;
 
-    if (!selmon->lt[selmon->sellt]->arrange)
-        return;
     if (c == nexttiled(selmon->clients))
         if (!c || !(c = nexttiled(c->next)))
             return;

@@ -31,7 +31,7 @@ media-fonts/unifont
 media-gfx/feh
 media-gfx/shot
 media-sound/alsa-utils
-media-video/mpv
+media-video/mpv::dinolay
 net-misc/dhcpcd
 net-misc/netifrc
 net-p2p/transmission-cli

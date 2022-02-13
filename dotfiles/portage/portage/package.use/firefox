@@ -11,5 +11,5 @@ media-libs/libvpx postproc
 # required by www-client/firefox-78.13.0::gentoo
 # required by firefox (argument)
 media-libs/freetype harfbuzz
-www-client/firefox eme-free -gmp-autoupdate
+www-client/firefox eme-free -gmp-autoupdate hardened
 

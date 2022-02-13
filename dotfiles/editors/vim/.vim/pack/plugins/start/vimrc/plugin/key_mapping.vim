@@ -15,8 +15,8 @@ nnoremap w l
 for key in ['<Up>', '<Down>', '<Left>',
             \ '<Right>', '<PageUp>', '<PageDown>',
             \ 'gh', 'gj', 'gk', 'gl']
-  exec 'map'        key '<Nop>'
-  exec 'inoremap'   key '<Nop>'
+    exec 'map'        key '<Nop>'
+    exec 'inoremap'   key '<Nop>'
 endfor
 
 let mapleader = ","                 " , = leader
@@ -32,18 +32,21 @@ nnoremap D :redo<CR>
 
 " Snippets
 inoremap <silent><expr> <C-j>
-      \ pumvisible() ? coc#_select_confirm() :
-      \ coc#expandableOrJumpable() ? "\<C-r>=coc#rpc#request('doKeymap', ['snippets-expand-jump',''])\<CR>" :
-      \ <SID>check_back_space() ? "\<TAB>" :
-      \ coc#refresh()
+            \ pumvisible() ? coc#_select_confirm() :
+            \ coc#expandableOrJumpable() ? "\<C-r>=coc#rpc#request('doKeymap', ['snippets-expand-jump',''])\<CR>" :
+            \ <SID>check_back_space() ? "\<TAB>" :
+            \ coc#refresh()
 
 function! s:check_back_space() abort
-  let col = col('.') - 1
-  return !col || getline('.')[col - 1]  =~# '\s'
+    let col = col('.') - 1
+    return !col || getline('.')[col - 1]  =~# '\s'
 endfunction
 
 " vim-codefmt
 map F :FormatCode<CR>
+
+" Trim whitespace
+map T :call TrimWhitespace()<CR>
 
 " Tabs
 map <C-n> <ESC>:tabnew<space>

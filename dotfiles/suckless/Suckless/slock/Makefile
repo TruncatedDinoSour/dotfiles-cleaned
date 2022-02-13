@@ -10,11 +10,11 @@ all: options slock
 
 options:
 	@echo slock build options:
-	@echo "CFLAGS   = ${CFLAGS}"
-	@echo "LDFLAGS  = ${LDFLAGS}"
-	@echo "CC       = ${CC}"
-	@echo "STRIP    = ${STRIP}"
-	@echo "STFLAGS  = ${STRIPFLAGS}"
+	@echo "CFLAGS    = ${CFLAGS}"
+	@echo "LDFLAGS   = ${LDFLAGS}"
+	@echo "CC        = ${CC}"
+	@echo "STRIP     = ${STRIP}"
+	@echo "STFLAGS   = ${STRIPFLAGS}"
 
 
 .c.o:

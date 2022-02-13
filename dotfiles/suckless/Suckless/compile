@@ -18,14 +18,17 @@ main() {
             make -C "$directory" -j"$(($(nproc --all) * 4))"
             make_return_code="$?"
 
-            "${__BASH_RUNAS:-sudo}" make -C "$directory" install
-
-            if [[ $make_return_code -ne '0' ]]; then
+            if [[ $make_return_code -ne 0 ]]; then
                 echo -e "${BOLD}${RED}!!${RESET} ${BOLD}make${RESET} exited with code of ${BOLD}$make_return_code${RESET}"
-                exit 1
+                exit "$make_return_code"
             fi
+
+            [[ ! $NO_INSTALL ]] && "${__BASH_RUNAS:-sudo}" make -C "$directory" install
+            [[ ! $NO_CLEAN ]] && make -C "$directory" clean
         fi
     done
+
+    return "${make_return_code:-0}"
 }
 
 main "$@"

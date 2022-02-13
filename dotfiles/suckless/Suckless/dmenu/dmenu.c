@@ -738,7 +738,7 @@ static void setup(void) {
     {
         if (!XGetWindowAttributes(dpy, parentwin, &wa))
             die("could not get embedding window attributes: 0x%lx", parentwin);
-        mw = MIN(MAX(max_textw() + promptw, 100), wa.width);
+        mw = MIN(MAX(max_textw() + promptw, 100), wa.width) + dmenuwpx;
         x = (wa.width - mw) / 2;
         y = (wa.height - mh) / 2;
     }

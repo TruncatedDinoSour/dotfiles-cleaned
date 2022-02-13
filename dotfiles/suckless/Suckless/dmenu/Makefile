@@ -10,11 +10,11 @@ all: options dmenu stest
 
 options:
 	@echo dmenu build options:
-	@echo "CFLAGS   = $(CFLAGS)"
-	@echo "LDFLAGS  = $(LDFLAGS)"
-	@echo "CC       = $(CC)"
-	@echo "STRIP    = ${STRIP}"
-	@echo "STFLAGS  = ${STRIPFLAGS}"
+	@echo "CFLAGS    = $(CFLAGS)"
+	@echo "LDFLAGS   = $(LDFLAGS)"
+	@echo "CC        = $(CC)"
+	@echo "STRIP     = ${STRIP}"
+	@echo "STFLAGS   = ${STRIPFLAGS}"
 
 .c.o:
 	$(CC) -c $(CFLAGS) $<
@@ -45,17 +45,13 @@ dist: clean
 
 install: all
 	cp -f config.h config.def.h
-	mkdir -p $(DESTDIR)$(PREFIX)/bin
+	mkdir -p $(DESTDIR)$(PREFIX)/bin $(DESTDIR)$(MANPREFIX)/man1
 	cp -f dmenu dmenu_path dmenu_run stest $(DESTDIR)$(PREFIX)/bin
-	chmod 755 $(DESTDIR)$(PREFIX)/bin/dmenu
-	chmod 755 $(DESTDIR)$(PREFIX)/bin/dmenu_path
-	chmod 755 $(DESTDIR)$(PREFIX)/bin/dmenu_run
-	chmod 755 $(DESTDIR)$(PREFIX)/bin/stest
-	mkdir -p $(DESTDIR)$(MANPREFIX)/man1
+	chmod 755 $(DESTDIR)$(PREFIX)/bin/dmenu $(DESTDIR)$(PREFIX)/bin/dmenu_path\
+		$(DESTDIR)$(PREFIX)/bin/dmenu_run $(DESTDIR)$(PREFIX)/bin/stest
 	sed "s/VERSION/$(VERSION)/g" < dmenu.1 > $(DESTDIR)$(MANPREFIX)/man1/dmenu.1
 	sed "s/VERSION/$(VERSION)/g" < stest.1 > $(DESTDIR)$(MANPREFIX)/man1/stest.1
-	chmod 644 $(DESTDIR)$(MANPREFIX)/man1/dmenu.1
-	chmod 644 $(DESTDIR)$(MANPREFIX)/man1/stest.1
+	chmod 644 $(DESTDIR)$(MANPREFIX)/man1/dmenu.1 $(DESTDIR)$(MANPREFIX)/man1/stest.1
 
 uninstall:
 	rm -f $(DESTDIR)$(PREFIX)/bin/dmenu\
