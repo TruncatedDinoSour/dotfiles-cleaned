@@ -38,7 +38,6 @@ let g:indentLine_conceallevel = 1
 " CoC
 let g:coc_global_extensions = [
             \ 'coc-json',
-            \ 'coc-pyright',
             \ 'coc-snippets',
             \ 'coc-lua',
             \ 'coc-sh',
@@ -49,6 +48,9 @@ let g:coc_global_extensions = [
 
 " ALE
 let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
+let g:ale_linters = {
+            \ 'python': ['flake8', 'pytype', 'mypy']
+            \ }
 
 function! LightlineLinterStatus() abort
     let l:counts = ale#statusline#Count(bufnr(''))

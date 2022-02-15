@@ -1,1 +1,0 @@
-("8.2" ta6le ("20a8c277c4ed30dab52975f2c432797126c47567" . "53011fa2915fec4e567d3d634303cf07fc70b66c") (collects #"net" #"base64.rkt") (collects #"net" #"http-easy" #"private" #"contract.rkt") (collects #"racket" #"base.rkt") (collects #"racket" #"contract.rkt") (collects #"racket" #"port.rkt") (collects #"racket" #"runtime-config.rkt"))

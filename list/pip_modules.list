@@ -61,7 +61,9 @@ html5lib
 httplib2
 idna
 imagesize
+importlab
 importlib-metadata
+installer
 ipykernel
 ipython
 ipython-genutils
@@ -81,11 +83,10 @@ jupyterlab-pygments
 jupyterlab-widgets
 keyring
 lazy-object-proxy
+libcst
 limits
 lockfile
 lxml
-M2Crypto
-Mako
 Markdown
 MarkupSafe
 matplotlib-inline
@@ -100,6 +101,8 @@ nbclient
 nbconvert
 nbformat
 nest-asyncio
+networkx
+ninja
 nodeenv
 notebook
 numexpr
@@ -144,7 +147,6 @@ pyOpenSSL
 pyparsing
 pyperclip
 pyRFC3339
-pyright
 pyrsistent
 PySocks
 python-dateutil
@@ -154,6 +156,7 @@ python-magic
 python-telegram
 pytz
 pyxdg
+PyYAML
 pyzmq
 qtconsole
 QtPy
@@ -190,6 +193,7 @@ tqdm
 traitlets
 trash-cli
 typing_extensions
+typing-inspect
 ujson
 urllib3
 uwuify

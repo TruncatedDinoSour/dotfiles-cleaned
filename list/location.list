@@ -14,7 +14,6 @@
 /home/ari/.scripts -> dotfiles/custom
 /home/ari/.vim -> dotfiles/editors/vim
 /home/ari/.vimrc -> dotfiles/editors/vim
-/home/ari/.config/VSCodium/User/snippets -> dotfiles/programming/VScodium
 /home/ari/.xinitrc -> dotfiles/core
 /home/ari/.xprofile -> dotfiles/core
 /etc/default/grub -> dotfiles/core
@@ -37,5 +36,3 @@
 /usr/share/themes/mumble-dark.qbtheme -> dotfiles/qbittorrent
 /home/ari/Documents/wpa_cli_fix/doc.tex -> dotfiles/fix/wpa_cli_fix.tex
 /home/ari/Documents/new_kernel_gentoo/doc.md -> dotfiles/fix/gentoo_new_kernel.md
-/home/ari/.racket -> dotfiles/lang
-/etc/init.d/kbdrate -> dotfiles/openrc

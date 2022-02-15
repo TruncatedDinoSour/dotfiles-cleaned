@@ -60,6 +60,9 @@ autocmd Filetype asm set ft=nasm
 " Set jinja to html
 autocmd BufRead,BufNewFile *.j2 set filetype=html
 
+" Make ebuilds highlight properly
+autocmd Filetype ebuild set syntax=ebuildspace
+
 
 " Plugins
 "   To Install the plugins type `:PlugInstall`

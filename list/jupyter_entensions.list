@@ -1,7 +1,4 @@
 Known nbextensions:
-  config dir: /home/ari/.jupyter/nbconfig
-    notebook section
-      vim_binding/vim_binding [32m enabled [0m
   config dir: /home/ari/.local/etc/jupyter/nbconfig
     notebook section
       jupyter-js-widgets/extension [32m enabled [0m

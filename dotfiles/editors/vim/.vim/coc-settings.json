@@ -1,12 +1,5 @@
 {
-    "pyright.enable": true,
-    "python.linting.enabled": true,
     "snippets.userSnippetsDirectory": "~/.vim/snippets",
-    "python.linting.banditEnabled": true,
-    "python.linting.flake8Enabled": true,
-    "python.linting.mypyEnabled": true,
-    "python.linting.pydocstyleEnabled": true,
-    "python.linting.pylintEnabled": true,
     "languageserver": {
         "ccls": {
             "command": "ccls",
@@ -18,20 +11,12 @@
                 ".git/",
                 ".hg/"
             ],
-            "initializationOptions": {
-                "cache": {
-                    "directory": "/tmp/ccls"
-                }
-            }
+            "initializationOptions": {"cache": {"directory": "/tmp/ccls"}}
         },
         "pyls": {
             "command": "pyls",
             "filetypes": ["python"],
-            "initializationOptions": {
-                "cache": {
-                    "directory": "/tmp/pyls"
-                }
-            }
+            "initializationOptions": {"cache": {"directory": "/tmp/pyls"}}
         }
     }
 }

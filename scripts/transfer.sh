@@ -11,7 +11,7 @@ read -p "=== [ press enter to continue  ] ===" _
 
 rm -rf dotfiles list
 mkdir -m 700 -p list
-mkdir -p dotfiles{,/openrc,/lang,/shells/bash,/suckless,/etc,/custom,/programming/VScodium,/core,/linux,/portage,/qbittorrent,/editors/vim,/fix}
+mkdir -p dotfiles{,/shells/bash,/suckless,/etc,/custom,/core,/linux,/portage,/qbittorrent,/editors/vim,/fix}
 chmod 700 -R dotfiles
 
 from=(
@@ -39,8 +39,6 @@ from=(
     '/home/ari/.vim'
     '/home/ari/.vimrc'
 
-    '/home/ari/.config/VSCodium/User/snippets'
-
     '/home/ari/.xinitrc'
     '/home/ari/.xprofile'
     '/etc/default/grub'
@@ -67,10 +65,6 @@ from=(
 
     '/home/ari/Documents/wpa_cli_fix/doc.tex'
     '/home/ari/Documents/new_kernel_gentoo/doc.md'
-
-    '/home/ari/.racket'
-
-    '/etc/init.d/kbdrate'
 )
 
 to=(
@@ -98,8 +92,6 @@ to=(
     'dotfiles/editors/vim'
     'dotfiles/editors/vim'
 
-    'dotfiles/programming/VScodium'
-
     'dotfiles/core'
     'dotfiles/core'
     'dotfiles/core'
@@ -126,10 +118,6 @@ to=(
 
     'dotfiles/fix/wpa_cli_fix.tex'
     'dotfiles/fix/gentoo_new_kernel.md'
-
-    'dotfiles/lang'
-
-    'dotfiles/openrc'
 )
 
 for i in "${!from[@]}"; do

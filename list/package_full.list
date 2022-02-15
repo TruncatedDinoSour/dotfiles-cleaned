@@ -135,7 +135,6 @@ dev-lang/orc
 dev-lang/perl
 dev-lang/python
 dev-lang/python
-dev-lang/python
 dev-lang/python-exec
 dev-lang/python-exec-conf
 dev-lang/rust
@@ -305,9 +304,8 @@ dev-python/docutils
 dev-python/httplib2
 dev-python/idna
 dev-python/imagesize
+dev-python/installer
 dev-python/jinja
-dev-python/m2crypto
-dev-python/mako
 dev-python/markupsafe
 dev-python/namespace-sphinxcontrib
 dev-python/numexpr
@@ -340,6 +338,7 @@ dev-python/sphinxcontrib-qthelp
 dev-python/sphinxcontrib-serializinghtml
 dev-python/tomli
 dev-python/urllib3
+dev-python/wheel
 dev-qt/linguist-tools
 dev-qt/qtchooser
 dev-qt/qtconcurrent

@@ -6,4 +6,5 @@ accounts/
 *.gpg
 certificates
 /a
+/dotfiles/config/coc/extensions/
 

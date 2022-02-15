@@ -1,1 +1,0 @@
-("8.2" ta6le ("79acbf6ee3702d8a34ab0b3285727a5bb2c1de93" . "8c944f462d890df0949919f22b8846c57197ff7e") (collects #"net" #"http-client.rkt") (collects #"net" #"http-easy" #"private" #"url.rkt") (collects #"net" #"url.rkt") (collects #"openssl" #"main.rkt") (collects #"racket" #"base.rkt") (collects #"racket" #"contract.rkt") (collects #"racket" #"runtime-config.rkt"))

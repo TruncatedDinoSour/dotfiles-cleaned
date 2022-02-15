@@ -64,10 +64,10 @@ if running_as_root() then
 
     root_mode = true
     root_extras = {
-        [1] = ascii6,
-        [2] = ascii7,
-        [3] = ascii8,
-        [4] = ascii9
+        ascii6,
+        ascii7,
+        ascii8,
+        ascii9
     }
 else
     ascii1 = wht .. " ,d88b.d88b,    " .. res
@@ -92,8 +92,8 @@ function yafetch.init()
     yafetch.format(ascii5 .. res .. blu, pkgs_icon, wht, pkgs)
 
     if root_mode then
-        for _, extra_art in ipairs(root_extras) do
-            print(extra_art)
+        for extra_art in pairs(root_extras) do
+                print(root_extras[extra_art])
         end
     end
 end
