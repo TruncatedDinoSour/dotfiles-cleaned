@@ -1,2 +1,2 @@
-archive/** export-ignore linguist-detectable=false
+/archive/** export-ignore linguist-detectable=false
 
