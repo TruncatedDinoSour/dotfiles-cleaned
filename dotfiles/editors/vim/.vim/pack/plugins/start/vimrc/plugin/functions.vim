@@ -11,6 +11,16 @@ augroup whitespace_trim
 augroup END
 
 
+" Update CoC and VimPlug
+function! s:PackUpdate()
+    CocUpdate
+    PlugUpdate
+    PlugUpgrade
+endfunction
+
+com! PackUpdate call s:PackUpdate()
+
+
 " Show diff in a better way
 function! s:DiffWithSaved()
     let filetype=&ft

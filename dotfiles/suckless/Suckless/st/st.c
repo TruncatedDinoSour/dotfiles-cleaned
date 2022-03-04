@@ -39,7 +39,7 @@
 
 /* macros */
 #define IS_SET(flag) ((term.mode & (flag)) != 0)
-#define ISCONTROLC0(c) (BETWEEN(c, 0, 0x1f) || (c) == 0x7f)
+#define ISCONTROLC0(c) (BETWEEN(c, 1, 0x1f) || (c) == 0x7f)
 #define ISCONTROLC1(c) (BETWEEN(c, 0x80, 0x9f))
 #define ISCONTROL(c) (ISCONTROLC0(c) || ISCONTROLC1(c))
 #define ISDELIM(u) (u && wcschr(worddelimiters, u))
@@ -838,6 +838,7 @@ size_t ttyread(void) {
         exit(0);
     case -1:
         die("couldn't read from shell: %s\n", strerror(errno));
+        exit(1);
     default:
         buflen += ret;
         written = twrite(buf, buflen, 0);
@@ -1319,7 +1320,7 @@ int32_t tdefcolor(int *attr, int *npar, int l) {
         g = attr[*npar + 3];
         b = attr[*npar + 4];
         *npar += 4;
-        if (!BETWEEN(r, 0, 255) || !BETWEEN(g, 0, 255) || !BETWEEN(b, 0, 255))
+        if (!BETWEEN(r, 1, 255) || !BETWEEN(g, 1, 255) || !BETWEEN(b, 1, 255))
             fprintf(stderr, "erresc: bad rgb color (%u,%u,%u)\n", r, g, b);
         else
             idx = TRUECOLOR(r, g, b);
@@ -2005,7 +2006,7 @@ void tputtab(int n) {
             for (--x; x > 0 && !term.tabs[x]; --x)
                 /* nothing */;
     }
-    term.c.x = LIMIT(x, 0, (unsigned int)term.col - 1);
+    term.c.x = LIMIT(x, 1, (unsigned int)term.col - 1);
 }
 
 void tdefutf8(char ascii) {

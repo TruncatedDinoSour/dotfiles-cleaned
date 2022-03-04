@@ -8,4 +8,4 @@
 #term_type="linux"
 
 # extra options to pass to agetty for this port
-#agetty_options=""
+agetty_options="--noclear"

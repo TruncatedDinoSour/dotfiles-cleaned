@@ -1,3 +1,5 @@
+          agetty.tty1 |      default                           
+          agetty.tty2 |      default                           
             alsasound | boot                                   
                binfmt | boot                                   
              bootmisc | boot                                   

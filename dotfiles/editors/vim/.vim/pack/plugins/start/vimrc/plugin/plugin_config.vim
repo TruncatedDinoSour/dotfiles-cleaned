@@ -43,7 +43,8 @@ let g:coc_global_extensions = [
             \ 'coc-sh',
             \ 'coc-css',
             \ 'coc-html',
-            \ 'coc-tsserver'
+            \ 'coc-tsserver',
+            \ 'coc-docker'
             \ ]
 
 " ALE
@@ -115,11 +116,17 @@ let g:markdown_fenced_languages = [
             \ 'R=r', 'racket', 'rkt=racket',
             \ 'scheme', 'scm=scheme', 'c',
             \ 'cpp', 'asm=nasm', 'nasm',
-            \ 'assembly=nasm', 'porth'
+            \ 'assembly=nasm', 'porth', 'rys',
+            \ 'lua'
             \ ]
 let g:markdown_syntax_conceal = 0
 
 " FixEOL
 let g:PreserveNoEOL_Function = function('PreserveNoEOL#Python#Preserve')
 let g:PreserveNoEOL = 1
+
+" Vim Markdown Preview
+let vim_markdown_preview_hotkey='<C-m>'
+let vim_markdown_preview_browser='Mozilla Firefox'
+let vim_markdown_preview_use_xdg_open=1
 

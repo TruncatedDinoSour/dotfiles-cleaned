@@ -63,6 +63,7 @@ app-emulation/mkqemuvm
 app-emulation/qemu
 app-emulation/spice
 app-emulation/spice-protocol
+app-eselect/eselect-ctags
 app-eselect/eselect-fontconfig
 app-eselect/eselect-iptables
 app-eselect/eselect-lib-bin-symlink
@@ -304,8 +305,11 @@ dev-python/docutils
 dev-python/httplib2
 dev-python/idna
 dev-python/imagesize
+dev-python/importlib_metadata
 dev-python/installer
 dev-python/jinja
+dev-python/m2crypto
+dev-python/mako
 dev-python/markupsafe
 dev-python/namespace-sphinxcontrib
 dev-python/numexpr
@@ -339,6 +343,7 @@ dev-python/sphinxcontrib-serializinghtml
 dev-python/tomli
 dev-python/urllib3
 dev-python/wheel
+dev-python/zipp
 dev-qt/linguist-tools
 dev-qt/qtchooser
 dev-qt/qtconcurrent
@@ -377,6 +382,7 @@ dev-util/boost-build
 dev-util/cbindgen
 dev-util/ccls
 dev-util/cmake
+dev-util/ctags
 dev-util/desktop-file-utils
 dev-util/gdbus-codegen
 dev-util/glib-utils
@@ -391,6 +397,7 @@ dev-util/pkgconf
 dev-util/re2c
 dev-util/shellcheck-bin
 dev-util/shfmt
+dev-util/source-highlight
 dev-util/systemtap
 dev-vcs/git
 gnome-base/gsettings-desktop-schemas
@@ -518,7 +525,6 @@ sys-apps/sandbox
 sys-apps/sed
 sys-apps/shadow
 sys-apps/systemd-tmpfiles
-sys-apps/sysvinit
 sys-apps/texinfo
 sys-apps/util-linux
 sys-apps/which
@@ -544,6 +550,7 @@ sys-devel/clang-runtime
 sys-devel/flex
 sys-devel/gcc
 sys-devel/gcc-config
+sys-devel/gdb
 sys-devel/gettext
 sys-devel/gnuconfig
 sys-devel/libtool

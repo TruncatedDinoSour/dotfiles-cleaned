@@ -63,6 +63,8 @@ autocmd BufRead,BufNewFile *.j2 set filetype=html
 " Make ebuilds highlight properly
 autocmd Filetype ebuild set syntax=ebuildspace
 
+" Rys
+autocmd BufRead,BufNewFile *.rys set filetype=rys
 
 " Plugins
 "   To Install the plugins type `:PlugInstall`
@@ -76,13 +78,13 @@ autocmd Filetype ebuild set syntax=ebuildspace
 call plug#begin("~/.vim/plugged")
     Plug 'turbio/bracey.vim'
     Plug 'mattn/emmet-vim'
-    Plug 'AlessandroYorba/Alduin'
     Plug 'tpope/vim-surround'
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
     Plug 'w0rp/ale'
     Plug 'coffee-theme/lightline.vim'
     Plug 'vim-latex/vim-latex'
-    Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install()  }, 'for': ['markdown', 'vim-plug'] }
+    " Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install()  }, 'for': ['markdown', 'vim-plug'] }
+    Plug 'JamshedVesuna/vim-markdown-preview'
     Plug 'google/vim-maktaba'
     Plug 'TruncatedDinosour/vim-codefmt'
     Plug 'Yggdroot/indentLine'

@@ -1,15 +1,31 @@
 [user]
-	email = truncateddinosour@gmail.com
+    email = ari.web.xyz@gmail.com
     name = Ari Archer
+
 [credential]
     helper = cache
+
 [gpg]
     program = gpg
+
 [commit]
     gpgsign = true
+
 [color "diff"]
     old = red strike
     new = green italic
+
 [init]
     defaultBranch = main
 
+[alias]
+    glog = log --graph --oneline --decorate
+
+[web]
+    browser = firefox
+
+[instaweb]
+    browser = firefox
+
+[github]
+	user = TruncatedDinosour

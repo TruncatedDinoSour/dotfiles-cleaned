@@ -411,7 +411,7 @@ int drw_text_align(Drw *drw, int x, int y, unsigned int w, unsigned int h,
 
     usedfont = drw->fonts;
     i = align == AlignL ? 0 : textlen;
-    x = align == AlignL ? x : x + w;
+    x = align == AlignL ? (unsigned int)x : x + w;
     while (1) {
         utf8strlen = 0;
         nextfont = NULL;
@@ -482,7 +482,7 @@ int drw_text_align(Drw *drw, int x, int y, unsigned int w, unsigned int h,
                 if (render) {
                     ty = y + (h - usedfont->h) / 2 + usedfont->xfont->ascent;
                     XftDrawStringUtf8(d, &drw->scheme[ColFg], usedfont->xfont,
-                                      align == AlignL ? x : x - ew, ty,
+                                      align == AlignL ? (unsigned int)x : x - ew, ty,
                                       (XftChar8 *)utf8str, len);
                 }
                 x += align == AlignL ? ew : -ew;

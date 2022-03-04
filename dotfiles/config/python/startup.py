@@ -10,6 +10,9 @@ readline.parse_and_bind("tab: complete")
 # history file
 histfile = os.path.join(os.environ["HOME"], ".cache", ".python_history")
 
+if not os.path.exists(histfile):
+    open(histfile, "w").close()
+
 try:
     readline.read_history_file(histfile)
 except IOError:

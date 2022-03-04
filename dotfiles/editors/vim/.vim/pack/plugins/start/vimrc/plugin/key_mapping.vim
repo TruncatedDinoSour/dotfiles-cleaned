@@ -6,10 +6,10 @@ map lj <Esc>
 inoremap lj <Esc>
 
 " h, l <=> b, w
-nnoremap h b
-nnoremap l w
-nnoremap b h
-nnoremap w l
+noremap h b
+noremap l w
+noremap b h
+noremap w l
 
 " Disable arrows keys
 for key in ['<Up>', '<Down>', '<Left>',

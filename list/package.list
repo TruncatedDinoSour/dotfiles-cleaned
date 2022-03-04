@@ -43,6 +43,7 @@ sys-apps/mlocate
 sys-apps/portage
 sys-boot/grub:2
 sys-devel/bc
+sys-devel/gdb
 sys-fs/cryptsetup
 sys-fs/dosfstools
 sys-fs/luksmount
