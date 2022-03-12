@@ -113,8 +113,7 @@ let g:markdown_fenced_languages = [
             \ 'css', 'javascript', 'sh', 'bash=sh',
             \ 'python3=python', 'py3=python',
             \ 'vim', 'vi=vim', 'r',
-            \ 'R=r', 'racket', 'rkt=racket',
-            \ 'scheme', 'scm=scheme', 'c',
+            \ 'R=r', 'scheme', 'scm=scheme', 'c',
             \ 'cpp', 'asm=nasm', 'nasm',
             \ 'assembly=nasm', 'porth', 'rys',
             \ 'lua'
@@ -125,8 +124,7 @@ let g:markdown_syntax_conceal = 0
 let g:PreserveNoEOL_Function = function('PreserveNoEOL#Python#Preserve')
 let g:PreserveNoEOL = 1
 
-" Vim Markdown Preview
-let vim_markdown_preview_hotkey='<C-m>'
-let vim_markdown_preview_browser='Mozilla Firefox'
-let vim_markdown_preview_use_xdg_open=1
+" Highlightedyank
+let g:highlightedyank_highlight_duration = 500
+highlight HighlightedyankRegion cterm=reverse gui=reverse
 

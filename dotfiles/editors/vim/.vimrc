@@ -83,22 +83,20 @@ call plug#begin("~/.vim/plugged")
     Plug 'w0rp/ale'
     Plug 'coffee-theme/lightline.vim'
     Plug 'vim-latex/vim-latex'
-    " Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install()  }, 'for': ['markdown', 'vim-plug'] }
-    Plug 'JamshedVesuna/vim-markdown-preview'
     Plug 'google/vim-maktaba'
     Plug 'TruncatedDinosour/vim-codefmt'
     Plug 'Yggdroot/indentLine'
     Plug 'drmingdrmer/vim-tabbar'
     Plug 'lilydjwg/colorizer'
     Plug 'christoomey/vim-tmux-navigator'
-    Plug 'wlangstroth/vim-racket'
     Plug 'tpope/vim-surround'
     Plug 'luochen1990/rainbow'
-    Plug 'MicahElliott/vrod'
-    Plug 'kovisoft/slimv'
     Plug 'tpope/vim-markdown'
     Plug 'editorconfig/editorconfig-vim'
     Plug 'coffee-theme/coffee.vim'
+    Plug 'godlygeek/tabular'
+    Plug 'haya14busa/is.vim'
+    Plug 'machakann/vim-highlightedyank'
 call plug#end()
 
 

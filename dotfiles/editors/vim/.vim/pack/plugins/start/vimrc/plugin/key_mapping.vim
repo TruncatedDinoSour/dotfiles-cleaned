@@ -2,8 +2,7 @@
 map ; :
 
 " Remap lj -> escape
-map lj <Esc>
-inoremap lj <Esc>
+nnoremap lj <Esc>
 
 " h, l <=> b, w
 noremap h b
@@ -15,8 +14,7 @@ noremap w l
 for key in ['<Up>', '<Down>', '<Left>',
             \ '<Right>', '<PageUp>', '<PageDown>',
             \ 'gh', 'gj', 'gk', 'gl']
-    exec 'map'        key '<Nop>'
-    exec 'inoremap'   key '<Nop>'
+    exec 'nnoremap'        key '<Nop>'
 endfor
 
 let mapleader = ","                 " , = leader
@@ -43,27 +41,23 @@ function! s:check_back_space() abort
 endfunction
 
 " vim-codefmt
-map F :FormatCode<CR>
+nnoremap F :FormatCode<CR>
 
 " Trim whitespace
-map T :call TrimWhitespace()<CR>
+nnoremap T :call TrimWhitespace()<CR>
 
 " Tabs
-map <C-n> <ESC>:tabnew<space>
-inoremap <C-t> <ESC>:tabnew<space>
-
-map <C-b> <ESC>:tabprevious<CR>
-inoremap <C-b> <ESC>:tabprevious<CR>
-map <C-c> <ESC>:tabnext<CR>
-inoremap <C-c> <ESC>:tabnext<CR>
+nnoremap <C-n> <ESC>:tabnew<space>
+nnoremap <C-b> <ESC>:tabprevious<CR>
+nnoremap <C-c> <ESC>:tabnext<CR>
 
 " Open a file
-map <C-o> <ESC>:open<space>
-inoremap <C-o> <ESC>:open<space>
+nnoremap <C-o> <ESC>:open<space>
 
 " Splits
-map <C-s> <ESC>:vsplit<space>
-inoremap <C-s> <ESC>:vsplit<space>
-map <C-d> <ESC>:split<space>
-inoremap <C-d> <ESC>:split<space>
+nnoremap <C-s> <ESC>:vsplit<space>
+nnoremap <C-d> <ESC>:split<space>
+
+" Tabular
+nnoremap U <ESC>:Tabularize<space>
 

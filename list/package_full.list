@@ -75,6 +75,7 @@ app-eselect/eselect-vi
 app-i18n/uchardet
 app-misc/c_rehash
 app-misc/ca-certificates
+app-misc/colourpicker
 app-misc/editor-wrapper
 app-misc/lmgr
 app-misc/mime-types
@@ -302,6 +303,7 @@ dev-python/certifi
 dev-python/charset_normalizer
 dev-python/cython
 dev-python/docutils
+dev-python/flit_core
 dev-python/httplib2
 dev-python/idna
 dev-python/imagesize

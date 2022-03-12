@@ -1,41 +1,45 @@
-snippet ma
-import asyncio
-import sys
-import warnings
-
-warnings.filterwarnings("error", category=Warning)
-
-
-async def main() -> int:
-    """Entry/main function"""
-
-    $0
-    return 0
-
-
-if __name__ == "__main__":
-    assert main.__annotations__.get("return") is int, "main() should return an integer"
-    sys.exit(asyncio.run(main()))
-
-endsnippet
-
 snippet m
 import sys
-import warnings
-
-warnings.filterwarnings("error", category=Warning)
+from warnings import filterwarnings as filter_warnings
 
 
 def main() -> int:
     """Entry/main function"""
-
-    $0
+    $1
     return 0
 
 
 if __name__ == "__main__":
     assert main.__annotations__.get("return") is int, "main() should return an integer"
-    sys.exit(main())
 
+    filter_warnings("error", category=Warning)
+    sys.exit(main())
 endsnippet
 
+
+snippet fe
+from enum import Enum, auto
+endsnippet
+
+snippet e
+class $1(Enum):
+    $2
+endsnippet
+
+
+snippet c
+class $1:
+    $2
+endsnippet
+
+
+snippet fd
+from dataclasses import dataclass
+endsnippet
+
+
+snippet cd
+@dataclass
+class $1:
+    $2
+endsnippet

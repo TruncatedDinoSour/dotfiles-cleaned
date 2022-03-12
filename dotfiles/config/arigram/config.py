@@ -268,6 +268,46 @@ class Custom:
             MSG_MODIFIERS["sr2"](ctrl.view.status.get_input("SR2 message"))
         )
 
+    @staticmethod
+    def googleitforme(ctrl, *args) -> None:
+        chat_id = ctrl.model.chats.id_by_index(ctrl.model.current_chat)
+        if not chat_id:
+            return
+
+        msg_ids = ctrl.model.selected[chat_id]
+        if not msg_ids:
+            msg = ctrl.model.current_msg
+            msg_ids = [msg["id"]]
+
+        ctrl.model.copied_msgs = (chat_id, msg_ids)
+        ctrl.discard_selected_msgs()
+
+        question: list = list(ctrl.model.get_current_message_text())
+        question[0] = " ".join(question[0].split())
+
+        if not question[1]:
+            ctrl.present_error("Failed to get message text")
+            return
+
+        question_encoded: str = url_safe(question[0])
+
+        msg_txt: str = f"""Have you tried looking up {question[0]!r} ?
+
+* SearX results: https://searx.be/search?q={question_encoded}
+
+* Ecosia results: https://www.ecosia.org/search?q={question_encoded}
+* DuckDuckGo results: https://duckduckgo.com/?q={question_encoded}
+* Google results: https://google.com/search?q={question_encoded}
+
+* Gentoo Linux wiki results: https://wiki.gentoo.org/index.php?search={question_encoded}
+* Arch Linux wiki results: https://wiki.archlinux.org/index.php?search={question_encoded}
+
+This isn't google, please search before asking <3"""
+
+        reply_to_msg = ctrl.model.current_msg_id
+        ctrl.model.view_all_msgs()
+        ctrl.tg.reply_message(chat_id, reply_to_msg, msg_txt)
+
 
 custom_code = Custom()
 
@@ -288,6 +328,7 @@ CUSTOM_KEYBINDS = {
     "F": {"func": custom_code.kde, "handler": msg_handler},
     "Y": {"func": custom_code.send_formal, "handler": msg_handler},
     "W": {"func": custom_code.sr2, "handler": msg_handler},
+    "X": {"func": custom_code.googleitforme, "handler": msg_handler},
 }
 DEFAULT_OPEN = tg_config.LONG_MSG_CMD
 EXTRA_TDLIB_HEADEARS = {

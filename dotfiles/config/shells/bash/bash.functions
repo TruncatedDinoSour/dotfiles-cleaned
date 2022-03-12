@@ -6,17 +6,22 @@ autorun() {
 
 ps_one() {
     local c_status="$?"
-    local git="$(git rev-parse --abbrev-ref HEAD 2>/dev/null || true)"
-    local venv="$(basename "$VIRTUAL_ENV")"
+
+    local git
+    git="$(git rev-parse --abbrev-ref HEAD 2>/dev/null || true)"
+
+    local venv
+    venv="$(basename "$VIRTUAL_ENV")"
+
     local dir='\W'
     local propt_char='#'
     local user_colour="${GREEN}"
 
-    [[ $UID != '0' ]] && local propt_char='%'
-    [[ $c_status != '0' ]] && local propt_colour="${RED}$c_status "
-    [[ "$git" ]] && local dir="($git) $dir"
-    [[ "$venv" ]] && local extra="{${GREEN}$venv${RESTORE}} "
-    [[ $UID == '0' ]] && local user_colour="${RED}"
+    [ $UID != '0' ] && local propt_char='%'
+    [ $c_status != '0' ] && local propt_colour="${RED}$c_status "
+    [ "$git" ] && local dir="($git) $dir"
+    [ "$venv" ] && local extra="{${GREEN}$venv${RESTORE}} "
+    [ $UID == '0' ] && local user_colour="${RED}"
 
     export PS1="\n${extra}${user_colour}\u${RESTORE}@\h ${dir} ${propt_colour}${propt_char}${RESTORE} "
 }

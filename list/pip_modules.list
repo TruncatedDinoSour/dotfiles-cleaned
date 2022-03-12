@@ -11,6 +11,7 @@ Babel
 backcall
 backports.entry-points-selectable
 beautifulsoup4
+beepy
 bidict
 black
 bleach
@@ -33,10 +34,12 @@ configobj
 contextlib2
 crashtest
 cryptography
+css-html-js-minify
 curtsies
 cwcwidth
 cycler
 Cython
+DateTime
 debugpy
 decorator
 defusedxml
@@ -54,6 +57,7 @@ filelock
 flake8
 Flask
 Flask-Limit
+flit_core
 fonttools
 gdbus_codegen
 gemato
@@ -63,7 +67,6 @@ GPUtil
 grapefruit
 greenlet
 HelperSDT
-html
 html5lib
 httplib2
 idna
@@ -107,6 +110,7 @@ meson
 mistune
 mock
 msgpack
+musicalbeeps
 mutagen
 mypy
 mypy-extensions
@@ -182,6 +186,7 @@ PyYAML
 pyzmq
 qtconsole
 QtPy
+readline
 requests
 requests-toolbelt
 rope
@@ -222,6 +227,7 @@ ujson
 urllib3
 uwuify
 virtualenv
+waitress
 wcwidth
 webencodings
 websockets

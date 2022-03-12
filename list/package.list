@@ -6,6 +6,7 @@ app-admin/sudo
 app-editors/vim
 app-emulation/mkqemuvm
 app-emulation/qemu
+app-misc/colourpicker
 app-misc/lmgr
 app-misc/mkproj
 app-misc/neofetch
