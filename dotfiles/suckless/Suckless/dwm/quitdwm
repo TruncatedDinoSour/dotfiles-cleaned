@@ -1,5 +1,9 @@
 #!/usr/bin/env bash
 
+run_root() {
+    st -e "${__BASH_RUNAS:-sudo}" "$@"
+}
+
 main() {
     options=("1 Cancel"
         "2 Quit DWM"
@@ -7,15 +11,15 @@ main() {
         "4 Poweroff / Shutdown"
         "5 Kill xautolock")
 
-    option="$(/usr/bin/printf "%s\n" "${options[@]}" | \dmenu | /usr/bin/awk '{ print $1 }')"
+    option="$(printf "%s\n" "${options[@]}" | dmenu | awk '{ print $1 }')"
 
     [[ ! $option ]] && exit 1
 
     case "$option" in
     1) exit 0 ;;
     2) killall dwm ;;
-    3) ${__BASH_RUNAS:-sudo} reboot -h ;;
-    4) ${__BASH_RUNAS:-sudo} poweroff ;;
+    3) run_root reboot -h ;;
+    4) run_root poweroff ;;
     5) xautolock -exit ;;
     *) notify-send "Option '$option' not found" ;;
     esac

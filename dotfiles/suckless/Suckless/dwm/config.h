@@ -43,6 +43,8 @@ static const Rule rules[] = {
 
     /* tag 2 */
     {"Firefox", NULL, NULL, 1 << 1, -1},
+    {"firefox", NULL, NULL, 1 << 1, -1},
+
     {"Pale moon", NULL, NULL, 1 << 1, -1},
     {"Tor Browser", NULL, NULL, 1 << 1, -1},
     {"LibreWolf", NULL, NULL, 1 << 1, -1},

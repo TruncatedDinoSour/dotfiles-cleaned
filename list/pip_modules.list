@@ -1,5 +1,6 @@
 acme
 alabaster
+appdirs
 argon2-cffi
 argon2-cffi-bindings
 arigram
@@ -16,7 +17,6 @@ bidict
 black
 bleach
 blessings
-Bottleneck
 bpython
 CacheControl
 cachy
@@ -38,7 +38,6 @@ css-html-js-minify
 curtsies
 cwcwidth
 cycler
-Cython
 DateTime
 debugpy
 decorator
@@ -81,6 +80,9 @@ ipython-genutils
 ipywidgets
 isort
 itsdangerous
+jaraco.context
+jaraco.functools
+jaraco.text
 jedi
 jeepney
 Jinja2
@@ -109,6 +111,7 @@ mccabe
 meson
 mistune
 mock
+more_itertools
 msgpack
 musicalbeeps
 mutagen
@@ -122,8 +125,8 @@ networkx
 ninja
 nodeenv
 notebook
-numexpr
 numpy
+ordered-set
 packaging
 pandas
 pandocfilters

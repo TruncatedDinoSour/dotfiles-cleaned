@@ -2,12 +2,10 @@
 
 FIREFOX_PROFILE='/home/ari/.mozilla/firefox/3s4h1qq0.default-release'
 
-if [[ $USER != "ari" ]]; then
-    exit 255
-fi
+[ "$USER" != "ari" ] && exit 255
 
 echo "[?] Are you sure that you want to update the dotfiles?"
-read -p "=== [ press enter to continue  ] ===" _
+read -rp "=== [ press enter to continue  ] ==="
 
 rm -rf dotfiles list
 mkdir -m 700 -p list
@@ -121,11 +119,11 @@ to=(
 )
 
 for i in "${!from[@]}"; do
-    sudo cp -rfv "${from[$i]}" "${to[$i]}"
+    cp -rfv "${from[$i]}" "${to[$i]}"
     echo "${from[$i]} -> ${to[$i]}" >>list/location.list
 done
 
-sudo find /root -type l -exec ls -lA {} + | tee list/root_symlinks.list
+find /root -type l -exec ls -lA {} + | tee list/root_symlinks.list
 
 cp /var/lib/portage/world list/package.list
 q qlist -I >list/package_full.list
@@ -137,7 +135,6 @@ python3 -m jupyter nbextension list 2>/dev/null >list/jupyter_entensions.list
 python3 -m pip list | awk '{ print $1 }' | tail -n +3 >list/pip_modules.list
 npm list -g --depth=0 >list/npm.list
 
-sudo chown -R ari:ari dotfiles
 rm -rfv dotfiles/config/asciinema dotfiles/editors/vim/.vim/undodir dotfiles/config/keepassxc dotfiles/config/VSCodium dotfiles/config/VirtualBox dotfiles/config/transmission/dht.dat dotfiles/config/dconf dotfiles/config/netlify dotfiles/config/transmission/resume dotfiles/editors/vim/.vim/.netrwhist
 
 cp scripts/clean_firefox_profile dotfiles/etc/firefox
@@ -147,3 +144,5 @@ cd ../../.. || exit 2
 
 # sed -i '/PHONE/d' dotfiles/config/arigram/config.py
 sed -i '/signingkey/d' dotfiles/etc/.gitconfig
+
+chown -R ari:ari dotfiles list

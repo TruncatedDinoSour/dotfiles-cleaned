@@ -10,7 +10,6 @@ acct-group/lp
 acct-group/mail
 acct-group/man
 acct-group/messagebus
-acct-group/nullmail
 acct-group/portage
 acct-group/qemu
 acct-group/render
@@ -25,7 +24,6 @@ acct-group/video
 acct-user/mail
 acct-user/man
 acct-user/messagebus
-acct-user/nullmail
 acct-user/portage
 acct-user/postmaster
 acct-user/sshd
@@ -35,10 +33,9 @@ app-admin/eselect
 app-admin/filetools
 app-admin/kbdrate-openrc
 app-admin/keepassxc
-app-admin/metalog
+app-admin/kos
 app-admin/perl-cleaner
 app-admin/pwdtools
-app-admin/sudo
 app-arch/brotli
 app-arch/bzip2
 app-arch/cpio
@@ -75,6 +72,7 @@ app-eselect/eselect-vi
 app-i18n/uchardet
 app-misc/c_rehash
 app-misc/ca-certificates
+app-misc/char
 app-misc/colourpicker
 app-misc/editor-wrapper
 app-misc/lmgr
@@ -297,11 +295,10 @@ dev-perl/XML-Parser
 dev-perl/XString
 dev-perl/YAML-Tiny
 dev-python/alabaster
+dev-python/appdirs
 dev-python/Babel
-dev-python/bottleneck
 dev-python/certifi
 dev-python/charset_normalizer
-dev-python/cython
 dev-python/docutils
 dev-python/flit_core
 dev-python/httplib2
@@ -309,15 +306,17 @@ dev-python/idna
 dev-python/imagesize
 dev-python/importlib_metadata
 dev-python/installer
+dev-python/jaraco-context
+dev-python/jaraco-functools
+dev-python/jaraco-text
 dev-python/jinja
 dev-python/m2crypto
 dev-python/mako
 dev-python/markupsafe
+dev-python/more-itertools
 dev-python/namespace-sphinxcontrib
-dev-python/numexpr
-dev-python/numpy
+dev-python/ordered-set
 dev-python/packaging
-dev-python/pandas
 dev-python/password-strength
 dev-python/pip
 dev-python/plumbum
@@ -326,7 +325,6 @@ dev-python/pygments
 dev-python/pyparsing
 dev-python/pyperclip
 dev-python/PySocks
-dev-python/python-dateutil
 dev-python/python-magic
 dev-python/pytz
 dev-python/requests
@@ -406,7 +404,6 @@ gnome-base/gsettings-desktop-schemas
 gnome-base/librsvg
 gui-libs/display-manager-init
 mail-client/mutt
-mail-mta/nullmailer
 media-fonts/encodings
 media-fonts/fira-mono
 media-fonts/font-util
@@ -616,9 +613,7 @@ virtual/libiconv
 virtual/libintl
 virtual/libudev
 virtual/libusb
-virtual/logger
 virtual/man
-virtual/mta
 virtual/notification-daemon
 virtual/opengl
 virtual/os-headers

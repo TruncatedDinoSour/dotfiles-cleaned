@@ -21,10 +21,9 @@ alias rmk='trash-restore'
 
 alias v="\$__BASH_BIN_DIR/vim"
 alias vn='v -Nu NONE'
-alias vc='v ~/.config'
 
 alias df="\$__BASH_BIN_DIR/duf -hide special"
-alias cat="\$__BASH_BIN_DIR/bat --theme=\"gruvbox-dark\""
+alias cat="\$__BASH_BIN_DIR/bat"
 
 alias src='source ~/.bashrc'
 alias stx="\$__BASH_BIN_DIR/startx"
@@ -45,11 +44,9 @@ alias cp="\$__BASH_CORE_BIN_DIR/cp -i"
 alias mkdir="\$__BASH_CORE_BIN_DIR/mkdir -m 700 -p"
 alias curl="\$__BASH_BIN_DIR/curl -fL"
 alias sudo="\$__BASH_BIN_DIR/sudo -E env PATH=\"$PATH\""
-alias less="\$__BASH_BIN_DIR/less -NrIMJ --use-color --incsearch --line-num-width=2"
-alias chez="\$__BASH_BIN_DIR/chezscheme --eehistory \$HOME/.cache/.chezscheme_history"
-alias chezscheme='chez'
+alias less="\$__BASH_BIN_DIR/less -NJ --line-num-width=2"
 
-alias fzf="\$__BASH_BIN_DIR/fzf --layout=reverse --height=20 --no-mouse -i --preview 'bat --theme=\"gruvbox-dark\" --color=always --style=numbers --line-range=:500 {}'"
+alias fzf="\$__BASH_BIN_DIR/fzf --preview 'bat --theme=\"gruvbox-dark\" --color=always --style=numbers --line-range=:500 {}'"
 alias mpvp="\$__BASH_BIN_DIR/mpv --shuffle --loop-playlist"
 alias clip="\$__BASH_BIN_DIR/xclip -selection clipboard"
 

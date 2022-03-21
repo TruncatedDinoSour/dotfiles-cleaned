@@ -1,10 +1,13 @@
+m|m|snippets
+arg|argv|snippets
+ar|asctime_r|languageserver.ccls
+argv|argv|snippets
 COMM|COMMANDS|languageserver.pyls
 Toke|TokenType|languageserver.pyls
 Token|TokenType|around
 cd|cd|snippets
 fd|fd|snippets
 e|e|snippets
-m|m|snippets
 new|new_title|languageserver.pyls
 htm|html_escape(s, quote)|languageserver.pyls
 HIS|HISTORY_FILE|languageserver.pyls
@@ -21,15 +24,12 @@ ser|service_path|languageserver.ccls
 ser|service|languageserver.ccls
 ser|service_enabled|languageserver.ccls
 dire|directory|around
-arg|argv|snippets
 SERV|SERVICE_DIR|around
 dire|directory|languageserver.ccls
 log|log_type|languageserver.ccls
 sub|subcommands|languageserver.ccls
 EX|EXIT_SYSCALL_INVALID_COUNT_ARGS|languageserver.ccls
 INV|EXIT_INVALID_STATE|languageserver.ccls
-argv|argv|snippets
-ar|asctime_r|languageserver.ccls
 Rys|RysType|languageserver.pyls
 EX|EXIT_OK|languageserver.pyls
 tmp|tmp_stack|languageserver.pyls

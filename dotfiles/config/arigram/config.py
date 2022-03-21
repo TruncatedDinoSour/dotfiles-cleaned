@@ -29,6 +29,7 @@ MSG_MODIFIERS = {
     "ok hun": lambda string: string.title().removesuffix(".") + ".",
     "sr2": lambda string: "".join((chr(ord(character) << 2) for character in string)),
     "!sr2": lambda string: "".join((chr(ord(character) >> 2) for character in string)),
+    "c l o s e  y o u r  f u c k i n g  d o o r": lambda string: " ".join(string),
 }
 
 
@@ -308,6 +309,14 @@ This isn't google, please search before asking <3"""
         ctrl.model.view_all_msgs()
         ctrl.tg.reply_message(chat_id, reply_to_msg, msg_txt)
 
+    @staticmethod
+    def close_your_fucking_door(ctrl, *args) -> None:
+        ctrl.model.send_message(
+            MSG_MODIFIERS["c l o s e  y o u r  f u c k i n g  d o o r"](
+                ctrl.view.status.get_input("close your fucking door")
+            )
+        )
+
 
 custom_code = Custom()
 
@@ -329,6 +338,7 @@ CUSTOM_KEYBINDS = {
     "Y": {"func": custom_code.send_formal, "handler": msg_handler},
     "W": {"func": custom_code.sr2, "handler": msg_handler},
     "X": {"func": custom_code.googleitforme, "handler": msg_handler},
+    "H": {"func": custom_code.close_your_fucking_door, "handler": msg_handler},
 }
 DEFAULT_OPEN = tg_config.LONG_MSG_CMD
 EXTRA_TDLIB_HEADEARS = {

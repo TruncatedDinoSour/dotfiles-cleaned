@@ -48,9 +48,6 @@ autocmd BufRead,BufNewFile *.LICENSE set spell wrap
 " Lisp mode for lisp
 autocmd Filetype racket,scheme,lisp,clojure set lisp
 
-" Porth
-autocmd BufRead,BufNewFile *.porth set filetype=porth
-
 " Make it not store some undos
 autocmd BufWritePre,BufRead,BufNewFile /mnt/*,/tmp/*,/media/* set noundofile undodir=
 
@@ -62,9 +59,6 @@ autocmd BufRead,BufNewFile *.j2 set filetype=html
 
 " Make ebuilds highlight properly
 autocmd Filetype ebuild set syntax=ebuildspace
-
-" Rys
-autocmd BufRead,BufNewFile *.rys set filetype=rys
 
 " Plugins
 "   To Install the plugins type `:PlugInstall`
