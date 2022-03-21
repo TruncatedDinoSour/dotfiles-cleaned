@@ -2,7 +2,9 @@
 
 FIREFOX_PROFILE='/home/ari/.mozilla/firefox/3s4h1qq0.default-release'
 
-[ "$USER" != "ari" ] && exit 255
+if [ "$USER" != "ari" ] || [ "$EUID" != 0 ]; then
+    exit 255
+fi
 
 echo "[?] Are you sure that you want to update the dotfiles?"
 read -rp "=== [ press enter to continue  ] ==="

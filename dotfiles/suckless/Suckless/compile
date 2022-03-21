@@ -3,6 +3,11 @@
 set -e
 
 main() {
+    if [ "$EUID" != 0 ]; then
+        echo ' !! Run me as root :)'
+        exit 1
+    fi
+
     RESET="\e[0m"
     BOLD="\e[1m"
     GREEN="\e[32m"
@@ -23,7 +28,7 @@ main() {
                 exit "$make_return_code"
             fi
 
-            [[ ! $NO_INSTALL ]] && "${__BASH_RUNAS:-sudo}" make -C "$directory" install
+            [[ ! $NO_INSTALL ]] && make -C "$directory" install
             [[ ! $NO_CLEAN ]] && make -C "$directory" clean
         fi
     done

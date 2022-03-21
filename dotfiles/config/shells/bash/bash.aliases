@@ -43,7 +43,7 @@ alias mv="\$__BASH_CORE_BIN_DIR/mv -i"
 alias cp="\$__BASH_CORE_BIN_DIR/cp -i"
 alias mkdir="\$__BASH_CORE_BIN_DIR/mkdir -m 700 -p"
 alias curl="\$__BASH_BIN_DIR/curl -fL"
-alias sudo="\$__BASH_BIN_DIR/sudo -E env PATH=\"$PATH\""
+# alias sudo="\$__BASH_BIN_DIR/sudo -E env PATH=\"$PATH\""
 alias less="\$__BASH_BIN_DIR/less -NJ --line-num-width=2"
 
 alias fzf="\$__BASH_BIN_DIR/fzf --preview 'bat --theme=\"gruvbox-dark\" --color=always --style=numbers --line-range=:500 {}'"
@@ -57,4 +57,4 @@ alias showtopcmd="fc -l 1 | \$__BASH_BIN_DIR/awk '{CMD[\$2]++;count++;}END { for
 alias rshell="\$__BASH_CORE_BIN_DIR/rm -f \$HISTFILE && \$__BASH_BIN_DIR/reset && \$SHELL && exit 127"
 alias killyourself='$__BASH_CORE_BIN_DIR/kill -9 $$'
 
-alias full_upgrade='vim +PlugUpdate +qall! && vim +CocUpdate +qall! && sudo npm update -g --unsafe-perm=true && sudo npm upgrade -g --unsafe-perm=true && pip_upgrade && sudo emerge --sync && sudo emerge -uDUN --with-bdeps=y @world'
+alias full_upgrade="vim +PlugUpdate +qall! && vim +CocUpdate +qall! && \${__BASH_RUNAS:-sudo} npm update -g --unsafe-perm=true && \${__BASH_RUNAS:-sudo} npm upgrade -g --unsafe-perm=true && pip_upgrade && \${__BASH_RUNAS:-sudo} emerge --sync && \${__BASH_RUNAS:-sudo} emerge -uDUN --with-bdeps=y @world"

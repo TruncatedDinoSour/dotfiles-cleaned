@@ -4,6 +4,7 @@ acct-group/dialout
 acct-group/disk
 acct-group/input
 acct-group/kmem
+acct-group/kos
 acct-group/kvm
 acct-group/locate
 acct-group/lp
