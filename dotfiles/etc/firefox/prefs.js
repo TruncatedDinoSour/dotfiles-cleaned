@@ -216,7 +216,7 @@ user_pref("devtools.chrome.enabled", true);
 user_pref("devtools.command-button-screenshot.enabled", true);
 user_pref("devtools.debugger.end-panel-size", 170);
 user_pref("devtools.debugger.features.wasm", false);
-user_pref("devtools.debugger.pending-selected-location", "{\"sourceId\":\"source-https://emapamokos.lt/build/studentTestView.8dff7d994ba5b5c97c21.js\",\"line\":0,\"sourceUrl\":\"\",\"url\":\"https://emapamokos.lt/build/studentTestView.8dff7d994ba5b5c97c21.js\"}");
+user_pref("devtools.debugger.pending-selected-location", "{\"url\": \"\"}");
 user_pref("devtools.debugger.prefs-schema-version", 11);
 user_pref("devtools.debugger.remote-enabled", true);
 user_pref("devtools.devices.url", "");

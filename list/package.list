@@ -53,7 +53,6 @@ sys-fs/luksmount
 sys-fs/xfsprogs
 sys-kernel/dracut
 sys-kernel/linux-firmware
-sys-libs/glibc
 sys-process/htop-vim
 www-client/firefox
 x11-apps/xbacklight
