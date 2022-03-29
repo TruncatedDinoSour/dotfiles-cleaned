@@ -1,2 +1,2 @@
-app-admin/kos::dinolay man
+app-admin/kos::dinolay man lto test speed -flags valgrind
 

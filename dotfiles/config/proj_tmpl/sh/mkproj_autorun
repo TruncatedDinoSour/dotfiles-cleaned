@@ -5,6 +5,7 @@ set -e
 main() {
     code="$(shfmt -s -i 4 main)"
     echo "$code" >main
+    chmod +x main
 }
 
 main "$@"

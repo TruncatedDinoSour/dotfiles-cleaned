@@ -1,4 +1,4 @@
 Known nbextensions:
-  config dir: /home/ari/.local/etc/jupyter/nbconfig
+  config dir: /root/.local/etc/jupyter/nbconfig
     notebook section
       jupyter-js-widgets/extension [32m enabled [0m

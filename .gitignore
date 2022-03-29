@@ -7,4 +7,9 @@ accounts/
 certificates
 /a
 /dotfiles/config/coc/extensions/
+.viminfo
+undodir/
+.VimballRecord
+.netrwhist
+.viminfo
 

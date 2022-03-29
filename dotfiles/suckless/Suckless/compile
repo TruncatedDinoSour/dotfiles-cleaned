@@ -2,34 +2,32 @@
 
 set -e
 
-main() {
-    if [ "$EUID" != 0 ]; then
-        echo ' !! Run me as root :)'
-        exit 1
-    fi
+RESET="\e[0m"
+BOLD="\e[1m"
+GREEN="\e[32m"
+RED="\e[31m"
 
-    RESET="\e[0m"
-    BOLD="\e[1m"
-    GREEN="\e[32m"
-    RED='\033[00;31m'
+info() { echo -en "\n${BOLD}>>${RESET} $1\n\n"; }
+error() { echo -e "${BOLD}${RED}!!${RESET} $1" >&2; }
+
+main() {
+    [ "$EUID" != 0 ] && error 'Run me as root :)' && exit 1
 
     for directory in *; do
-        if [[ -d $directory ]]; then
-            echo -en "\n${BOLD}>> ${RESET}Compiling ${GREEN}$directory${RESET}\n\n"
-
-            chown "$USER":"$USER" -R "$directory"
+        if [ -d "$directory" ]; then
+            info "Compiling ${GREEN}$directory${RESET}"
 
             make -C "$directory" clean
             make -C "$directory" -j"$(($(nproc --all) * 4))"
             make_return_code="$?"
 
-            if [[ $make_return_code -ne 0 ]]; then
-                echo -e "${BOLD}${RED}!!${RESET} ${BOLD}make${RESET} exited with code of ${BOLD}$make_return_code${RESET}"
+            if [ "$make_return_code" -ne 0 ]; then
+                error "${BOLD}make${RESET} exited with code of ${BOLD}$make_return_code${RESET}"
                 exit "$make_return_code"
             fi
 
-            [[ ! $NO_INSTALL ]] && make -C "$directory" install
-            [[ ! $NO_CLEAN ]] && make -C "$directory" clean
+            [ ! "$NO_INSTALL" ] && make -C "$directory" install
+            [ ! "$NO_CLEAN" ] && make -C "$directory" clean
         fi
     done
 

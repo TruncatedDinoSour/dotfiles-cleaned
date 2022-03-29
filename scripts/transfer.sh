@@ -2,16 +2,14 @@
 
 FIREFOX_PROFILE='/home/ari/.mozilla/firefox/3s4h1qq0.default-release'
 
-if [ "$USER" != "ari" ] || [ "$EUID" != 0 ]; then
-    exit 255
-fi
+[ "$EUID" != 0 ] && exit 255
 
 echo "[?] Are you sure that you want to update the dotfiles?"
 read -rp "=== [ press enter to continue  ] ==="
 
 rm -rf dotfiles list
 mkdir -m 700 -p list
-mkdir -p dotfiles{,/shells/bash,/suckless,/etc,/custom,/core,/linux,/portage,/qbittorrent,/editors/vim,/fix}
+mkdir -p dotfiles{,/shells/bash,/suckless,/etc,/custom,/core,/linux,/portage,/qbittorrent,/editors,/fix}
 chmod 700 -R dotfiles
 
 from=(
@@ -27,8 +25,6 @@ from=(
     '/home/ari/Media/Pictures/wallpaper.png'
     '/home/ari/.mailcap'
     '/home/ari/.mutt/muttrc'
-    '/home/ari/.lynxrc'
-    '/home/ari/.gitconfig'
 
     "$FIREFOX_PROFILE"
 
@@ -37,10 +33,8 @@ from=(
     '/home/ari/.scripts'
 
     '/home/ari/.vim'
-    '/home/ari/.vimrc'
 
     '/home/ari/.xinitrc'
-    '/home/ari/.xprofile'
     '/etc/default/grub'
     '/etc/hosts'
     '/etc/dracut.conf'
@@ -80,8 +74,6 @@ to=(
     'dotfiles/etc'
     'dotfiles/etc'
     'dotfiles/etc'
-    'dotfiles/etc'
-    'dotfiles/etc'
 
     'dotfiles/etc/firefox'
 
@@ -90,9 +82,7 @@ to=(
     'dotfiles/custom'
 
     'dotfiles/editors/vim'
-    'dotfiles/editors/vim'
 
-    'dotfiles/core'
     'dotfiles/core'
     'dotfiles/core'
     'dotfiles/core'
@@ -145,6 +135,7 @@ cd dotfiles/etc/firefox || exit 1
 cd ../../.. || exit 2
 
 # sed -i '/PHONE/d' dotfiles/config/arigram/config.py
-sed -i '/signingkey/d' dotfiles/etc/.gitconfig
+sed -i '/signingkey/d' dotfiles/config/git/config
+sed -i '/ssh$/d' dotfiles/core/hosts
 
 chown -R ari:ari dotfiles list

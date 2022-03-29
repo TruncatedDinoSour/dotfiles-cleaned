@@ -400,6 +400,7 @@ dev-util/shellcheck-bin
 dev-util/shfmt
 dev-util/source-highlight
 dev-util/systemtap
+dev-util/valgrind
 dev-vcs/git
 gnome-base/gsettings-desktop-schemas
 gnome-base/librsvg
@@ -434,6 +435,7 @@ media-libs/harfbuzz
 media-libs/imlib2
 media-libs/jbig2dec
 media-libs/lcms
+media-libs/libaom
 media-libs/libass
 media-libs/libepoxy
 media-libs/libglvnd

@@ -1,7 +1,10 @@
 #!/usr/bin/env bash
 
+TIMES=0
+
 run_root() {
-    st -e "${__BASH_RUNAS:-sudo}" "$@"
+    TIMES=$((TIMES + 1))
+    st -e "${__BASH_RUNAS:-sudo}" "$@" || ([ "$TIMES" -lt 3 ] && run_root "$@")
 }
 
 main() {
