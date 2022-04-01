@@ -64,10 +64,9 @@ check <a href="/doc/INSTALLATION.md">/doc/INSTALLATION.md</a>
 
 <h1 align="center"><b>Resources</b></h1>
 <ul>
-<li><a href="//github.com/htop-dev/htop">Htop - "htop - an interactive process viewer"</a></li>
-<li><a href="//github.com/abishekvashok/cmatrix">Cmatrix - "Terminal based "The Matrix" like implementation"</a></li>
-<li><a href="//github.com/gilbertw1/telegram-gruvbox-theme">Telegram-gruvbox-theme - "Gruvbox theme for Telegram Desktop"</a></li>
-<li><a href="//github.com/muesli/duf/releases">DUF (better DF)</a></li>
+<li><a href="//github.com/KoffeinFlummi/htop-vim">Htop - "htop - an interactive process viewer"</a></li>
+<li><a href="//github.com/muesli/duf">DUF (better DF)</a></li>
 <li><a href="//suckless.org">Suckless's website</a></li>
 <li><a href="//github.com/TruncatedDinosour/dotfiles-cleaned/blob/gentoo/dotfiles/etc/wallpaper.png">Wallpaper</a></li>
+<li><a href="//github.com/TruncatedDinosour/yafetch">Yafetch (my fork)</a></li>
 </ul>

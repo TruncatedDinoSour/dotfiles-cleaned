@@ -4,9 +4,14 @@
 
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
-export PATH="$PATH:/usr/local/bin:$HOME/.local/bin:$HOME/.scripts"
+export PATH="$PATH:/usr/local/bin:$HOME/.local/bin:$HOME/.config/scripts"
+
+# Completion
+
+[ -f "$HOME/.config/tabtab/__tabtab.bash" ] && . "$HOME/.config/tabtab/__tabtab.bash"
 
 # config
+
 source ~/.config/shells/bash/*.conf
 
 __BASH_TERM="$(tset -q)"

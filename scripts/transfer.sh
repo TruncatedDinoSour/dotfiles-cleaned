@@ -9,7 +9,7 @@ read -rp "=== [ press enter to continue  ] ==="
 
 rm -rf dotfiles list
 mkdir -m 700 -p list
-mkdir -p dotfiles{,/shells/bash,/suckless,/etc,/custom,/core,/linux,/portage,/qbittorrent,/editors,/fix}
+mkdir -p dotfiles{,/shells/bash,/suckless,/etc,/core,/linux,/portage,/qbittorrent,/editors,/fix}
 chmod 700 -R dotfiles
 
 from=(
@@ -21,16 +21,14 @@ from=(
     '/home/ari/Documents/dwm_bar.sh'
     '/home/ari/Suckless'
 
-    '/home/ari/.gtkrc-2.0'
     '/home/ari/Media/Pictures/wallpaper.png'
     '/home/ari/.mailcap'
     '/home/ari/.mutt/muttrc'
+    '/home/ari/.lynxrc'
 
     "$FIREFOX_PROFILE"
 
     '/home/ari/.icons'
-
-    '/home/ari/.scripts'
 
     '/home/ari/.vim'
 
@@ -79,8 +77,6 @@ to=(
 
     'dotfiles/icons'
 
-    'dotfiles/custom'
-
     'dotfiles/editors/vim'
 
     'dotfiles/core'
@@ -127,7 +123,7 @@ python3 -m jupyter nbextension list 2>/dev/null >list/jupyter_entensions.list
 python3 -m pip list | awk '{ print $1 }' | tail -n +3 >list/pip_modules.list
 npm list -g --depth=0 >list/npm.list
 
-rm -rfv dotfiles/config/asciinema dotfiles/editors/vim/.vim/undodir dotfiles/config/keepassxc dotfiles/config/VSCodium dotfiles/config/VirtualBox dotfiles/config/transmission/dht.dat dotfiles/config/dconf dotfiles/config/netlify dotfiles/config/transmission/resume dotfiles/editors/vim/.vim/.netrwhist
+rm -rfv dotfiles/config/asciinema dotfiles/editors/vim/.vim/undodir dotfiles/config/VSCodium dotfiles/config/VirtualBox dotfiles/config/transmission/dht.dat dotfiles/config/dconf dotfiles/config/netlify dotfiles/config/transmission/resume dotfiles/editors/vim/.vim/.netrwhist
 
 cp scripts/clean_firefox_profile dotfiles/etc/firefox
 cd dotfiles/etc/firefox || exit 1

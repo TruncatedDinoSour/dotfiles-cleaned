@@ -26,7 +26,6 @@ dev-util/shellcheck-bin
 dev-util/shfmt
 dev-util/valgrind
 dev-vcs/git
-mail-client/mutt
 media-fonts/fira-mono
 media-fonts/freefont
 media-fonts/nerd-fonts
@@ -54,6 +53,7 @@ sys-fs/xfsprogs
 sys-kernel/dracut
 sys-kernel/linux-firmware
 sys-process/htop-vim
+sys-process/time
 www-client/firefox
 x11-apps/xbacklight
 x11-apps/xinit

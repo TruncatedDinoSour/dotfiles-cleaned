@@ -61,6 +61,9 @@ autocmd BufRead,BufNewFile *.j2 set filetype=html
 " Make ebuilds highlight properly
 autocmd Filetype ebuild set syntax=ebuildspace
 
+" Rys
+autocmd BufRead,BufNewFile *.rys set filetype=rys
+
 " Plugins
 "   To Install the plugins type `:PlugInstall`
 " CoC:

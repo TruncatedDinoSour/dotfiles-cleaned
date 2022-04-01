@@ -11,7 +11,7 @@ info() { echo -en "\n${BOLD}>>${RESET} $1\n\n"; }
 error() { echo -e "${BOLD}${RED}!!${RESET} $1" >&2; }
 
 main() {
-    [ "$EUID" != 0 ] && error 'Run me as root :)' && exit 1
+    [ "$EUID" != 0 ] && error 'Run me as root' && exit 1
 
     for directory in *; do
         if [ -d "$directory" ]; then

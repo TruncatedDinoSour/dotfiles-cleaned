@@ -1,60 +1,62 @@
 #!/bin/bash
 
-alias k="\$__BASH_CORE_BIN_DIR/kill"
-alias ka="\$__BASH_BIN_DIR/killall"
+alias k='$__BASH_CORE_BIN_DIR/kill'
+alias ka='$__BASH_BIN_DIR/killall'
 alias e='exit'
 alias c='clear'
 
-alias ls="\$__BASH_BIN_DIR/lsd --group-dirs --color=auto -Fh"
+alias ls='$__BASH_BIN_DIR/lsd --group-dirs --color=auto -Fh'
 alias ll='ls -lF'
 alias la='ls -lFA'
 alias l='ll'
 alias lf='ls -FA'
 
-alias mkb="\$__BASH_BIN_DIR/make -C .."
-alias mk="\$__BASH_BIN_DIR/make"
+alias mkb='$__BASH_BIN_DIR/make -C ..'
+alias mk='$__BASH_BIN_DIR/make'
 
 alias rm='trash-put'
 alias rls='trash-list'
 alias rrm='trash-empty -f'
 alias rmk='trash-restore'
 
-alias v="\$__BASH_BIN_DIR/vim"
+alias v='$__BASH_BIN_DIR/vim'
 alias vn='v -Nu NONE'
 
-alias df="\$__BASH_BIN_DIR/duf -hide special"
-alias cat="\$__BASH_BIN_DIR/bat"
+alias df='$__BASH_BIN_DIR/duf -hide special'
+alias cat='$__BASH_BIN_DIR/bat'
 
 alias src='source ~/.bashrc'
-alias stx="\$__BASH_BIN_DIR/startx"
+alias stx='$__BASH_BIN_DIR/startx'
 
 alias yt-dlp='yt-dlp --verbose --yes-playlist'
 alias yt='yt-dlp --format mp4'
 alias ys='yt-dlp --extract-audio --audio-format mp3'
 
-alias clear="\$__BASH_BIN_DIR/clear; autorun"
+alias clear='$__BASH_BIN_DIR/clear; autorun'
 
-alias grep="\$__BASH_CORE_BIN_DIR/grep --color=auto -iHn"
-alias diff="\$__BASH_BIN_DIR/diff --color=auto"
+alias grep='$__BASH_CORE_BIN_DIR/grep --color=auto -iHn'
+alias diff='$__BASH_BIN_DIR/diff --color=auto'
 
-alias lsblk="\$__BASH_CORE_BIN_DIR/lsblk -f"
+alias lsblk='$__BASH_CORE_BIN_DIR/lsblk -f'
 
-alias mv="\$__BASH_CORE_BIN_DIR/mv -i"
-alias cp="\$__BASH_CORE_BIN_DIR/cp -i"
-alias mkdir="\$__BASH_CORE_BIN_DIR/mkdir -m 700 -p"
-alias curl="\$__BASH_BIN_DIR/curl -fL"
+alias mv='$__BASH_CORE_BIN_DIR/mv -i'
+alias cp='$__BASH_CORE_BIN_DIR/cp -i'
+alias mkdir='$__BASH_CORE_BIN_DIR/mkdir -m 700 -p'
+alias curl='$__BASH_BIN_DIR/curl -fL'
 # alias sudo="\$__BASH_BIN_DIR/sudo -E env PATH=\"$PATH\""
-alias less="\$__BASH_BIN_DIR/less -NJ --line-num-width=2"
+alias less='$__BASH_BIN_DIR/less -NJ --line-num-width=2'
 
 alias fzf="\$__BASH_BIN_DIR/fzf --preview 'bat --theme=\"gruvbox-dark\" --color=always --style=numbers --line-range=:500 {}'"
-alias mpvp="\$__BASH_BIN_DIR/mpv --shuffle --loop-playlist"
-alias clip="\$__BASH_BIN_DIR/xclip -selection clipboard"
+alias mpvp='$__BASH_BIN_DIR/mpv --shuffle --loop-playlist'
+alias clip='$__BASH_BIN_DIR/xclip -selection clipboard'
 
-alias mimetypeof="xdg-mime query filetype"
+alias mimetypeof='$__BASH_BIN_DIR/xdg-mime query filetype'
 alias dos2unix="\$__BASH_CORE_BIN_DIR/sed -i $'s/\r$//'"
 alias beep='(speaker-test -l 1 -f 1500 -t sine -P 2 -X >/dev/null)& pid="$!"; sleep 0.08; kill -9 $pid'
 alias showtopcmd="fc -l 1 | \$__BASH_BIN_DIR/awk '{CMD[\$2]++;count++;}END { for (a in CMD)print CMD[a] \" \" CMD[a]/count*100 \"% \" a;}' | \$__BASH_CORE_BIN_DIR/grep -v './' | \$__BASH_BIN_DIR/column -c3 -s ' ' -t | \$__BASH_BIN_DIR/sort -nr | \$__BASH_BIN_DIR/nl | \$__BASH_BIN_DIR/head -n"
-alias rshell="\$__BASH_CORE_BIN_DIR/rm -f \$HISTFILE && \$__BASH_BIN_DIR/reset && \$SHELL && exit 127"
+alias rshell='$__BASH_CORE_BIN_DIR/rm -f \$HISTFILE && $__BASH_BIN_DIR/reset && \$SHELL && exit 127'
 alias killyourself='$__BASH_CORE_BIN_DIR/kill -9 $$'
 
 alias full_upgrade="vim +PlugUpdate +qall! && vim +CocUpdate +qall! && \${__BASH_RUNAS:-sudo} npm update -g --unsafe-perm=true && \${__BASH_RUNAS:-sudo} npm upgrade -g --unsafe-perm=true && pip_upgrade && \${__BASH_RUNAS:-sudo} emerge --sync && \${__BASH_RUNAS:-sudo} emerge -uDUN --with-bdeps=y @world"
+
+alias time='$__BASH_BIN_DIR/time -v'

@@ -8,7 +8,6 @@ acct-group/kos
 acct-group/kvm
 acct-group/locate
 acct-group/lp
-acct-group/mail
 acct-group/man
 acct-group/messagebus
 acct-group/portage
@@ -22,11 +21,9 @@ acct-group/stapusr
 acct-group/tape
 acct-group/tty
 acct-group/video
-acct-user/mail
 acct-user/man
 acct-user/messagebus
 acct-user/portage
-acct-user/postmaster
 acct-user/sshd
 app-accessibility/at-spi2-atk
 app-accessibility/at-spi2-core
@@ -126,7 +123,6 @@ app-text/xmlto
 app-text/zathura
 app-text/zathura-pdf-poppler
 app-vim/gentoo-syntax
-dev-db/lmdb
 dev-db/sqlite
 dev-lang/go
 dev-lang/lua
@@ -146,7 +142,6 @@ dev-lang/vala
 dev-lang/yasm
 dev-libs/atk
 dev-libs/boost
-dev-libs/cyrus-sasl
 dev-libs/double-conversion
 dev-libs/elfutils
 dev-libs/expat
@@ -405,7 +400,6 @@ dev-vcs/git
 gnome-base/gsettings-desktop-schemas
 gnome-base/librsvg
 gui-libs/display-manager-init
-mail-client/mutt
 media-fonts/encodings
 media-fonts/fira-mono
 media-fonts/font-util
@@ -470,7 +464,6 @@ net-libs/libssh2
 net-libs/libtirpc
 net-libs/nghttp2
 net-libs/nodejs
-net-mail/mailbase
 net-misc/curl
 net-misc/dhcpcd
 net-misc/iputils
@@ -601,6 +594,7 @@ sys-libs/zlib
 sys-process/htop-vim
 sys-process/procps
 sys-process/psmisc
+sys-process/time
 virtual/acl
 virtual/awk
 virtual/dev-manager
