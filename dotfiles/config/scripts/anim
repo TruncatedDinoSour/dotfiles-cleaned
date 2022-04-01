@@ -1,0 +1,33 @@
+#!/usr/bin/env bash
+
+# How to use:
+#   - anim 'frame 1' 'frame 2' ...
+# or
+#   - anim <file.anim>
+# FPS: 2 or ANIM_DELAY
+
+set -e
+
+main() {
+    clear
+    IFS=''
+
+    local delay="${ANIM_DELAY:-0.5}"
+
+    while true; do
+        if [[ -f "$1" ]]; then
+            while read -r frame; do
+               echo -e "$frame"
+               [[ ! "$frame" ]] && (sleep "$delay" && clear)
+            done < "$1"
+        else
+            for frame in "$@"; do
+                echo -e "$frame"
+                [[ "$frame" ]] && (sleep "$delay" && clear)
+            done
+        fi
+    done
+}
+
+main "$@"
+

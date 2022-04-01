@@ -1,0 +1,39 @@
+REPOS:
+    type: R vector or string
+    description: This is an R vector of your mirrors, the first value should be a . (if used as an R vector) and all of your mirrors should be seperated by spaces
+    suggested value: "$(unlist ". https://cran.r-project.org/")"
+    see: https://cran.r-project.org/mirrors.html
+    examples:
+        repos="$(unlist ". https://cran.r-project.org/")"
+        repos="$(unlist ". https://cran.r-project.org/ https://mirror.las.iastate.edu/CRAN/")"
+        repos="\"https://cran.r-project.org/\""
+        ...
+
+ROOT_REQUIRED:
+    type: bool
+    description: This value controls if cran requires root access to run
+    suggested value: true
+    see: NULL
+    examples:
+        root_required=true
+        root_required=false
+
+R_INTERPRETER:
+    type: path
+    description: The path to your R interpreter
+    suggested value: /bin/R
+    see: NULL
+    examples:
+        r_interpreter=/bin/R
+
+R_FLAGS:
+    type: array
+    description: The flags passed to the R interpreter when running a command, I'd suggest leaving it as-is
+    suggested value: (-q --vanilla -e)
+    see: https://linux.die.net/man/1/r
+    examples:
+        r_flags=(-q --vanilla -e)
+        r_flags=(-q --save -e)
+        r_flags=(-q --no-echo --vanilla -e)
+        ...
+

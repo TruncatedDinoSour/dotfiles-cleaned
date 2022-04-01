@@ -1,0 +1,67 @@
+#!/usr/bin/env python3
+
+import asyncio
+import os, sys
+
+
+home_dir = os.path.expanduser("~")
+bloat_file = f"{home_dir}/.config/bloat.list"
+
+
+def write_bloat() -> None:
+    with open(bloat_file, "a") as bloat_list:
+        for bloat in sys.argv[2:]:
+            bloat_list.write(f"{bloat.lower()}")
+            bloat_list.write("\n")
+
+
+def find_bloat() -> None:
+    if not os.path.exists(bloat_file):
+        open(bloat_file, "w").close()
+
+    with open(bloat_file, "r") as bloat_list:
+        all_bloat = list(map(str.rstrip, bloat_list.readlines()))
+        for bloat in sys.argv[2:]:
+            print(f"{bloat}: {bloat.lower() in all_bloat}")
+
+
+def list_bloat() -> None:
+    if not os.path.exists(bloat_file):
+        open(bloat_file, "w").close()
+
+    with open(bloat_file, "r") as bloat_list:
+        for bloat in bloat_list:
+            print(bloat, end='')
+
+
+def usage(subcommands: dict, msg: str) -> None:
+    print(f"ERROR: {msg}", file=sys.stderr)
+
+    for subcommand, info in subcommands.items():
+        print(f"\t{subcommand}")
+        print(f"\t\t{info['desc']}")
+
+
+async def main() -> int:
+    SUBCOMMANDS = {
+        "find": {"fn": find_bloat, "desc": "Find if specified items are bloat"},
+        "add": {"fn": write_bloat, "desc": "Add a bloated item"},
+        "list": {"fn": list_bloat, "desc": "List all bloated items"},
+    }
+
+    try:
+        SUBCOMMANDS[sys.argv[1]]["fn"]()
+    except IndexError:
+        usage(SUBCOMMANDS, "no subcommand specified")
+        return 1
+    except KeyError:
+        usage(SUBCOMMANDS, "subcommand not found")
+        return 1
+
+    return 0
+
+
+if __name__ == "__main__":
+    assert main.__annotations__.get("return") is int, "main() should return an integer"
+    exit(asyncio.run(main()))
+

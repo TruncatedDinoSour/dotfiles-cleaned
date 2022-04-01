@@ -1,0 +1,17 @@
+#!/usr/bin/env sh
+
+main() {
+    ip="$(curl -s 'https://ifconfig.me/')"
+
+    [ ! "$ip" ] && exit 1;
+
+    id="$(lspci;
+    lsblk -f;
+    uname -mp;
+    blkid)$ip"
+
+    echo "$id" | base64 | sha512sum | sed 's/a/:/g' | awk '{ print $1 }'
+}
+
+main "$@"
+

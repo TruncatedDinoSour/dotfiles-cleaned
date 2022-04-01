@@ -1,0 +1,11 @@
+#!/usr/bin/env sh
+
+main() {
+    find ~/.scripts/doc/* |
+        fzf --layout=reverse --height=20 --no-mouse -i --preview 'cat  {}' |
+        xargs less
+}
+
+
+main "$@"
+
