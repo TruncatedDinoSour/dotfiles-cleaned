@@ -34,6 +34,7 @@ main() {
         "weave"
         "webappsstore.sqlite"
         "cert_override.txt"
+        "webappsstore.sqlite-wal"
         )
 
     for private in "${info[@]}"; do
