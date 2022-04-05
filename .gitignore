@@ -12,4 +12,6 @@ undodir/
 .VimballRecord
 .netrwhist
 .viminfo
+.github
+codeql-analysis.yml
 

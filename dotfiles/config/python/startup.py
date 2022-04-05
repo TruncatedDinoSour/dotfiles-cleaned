@@ -23,3 +23,5 @@ atexit.register(readline.read_history_file, histfile)
 readline.set_history_length(1000)
 
 del os, histfile, readline, rlcompleter
+
+e = exit

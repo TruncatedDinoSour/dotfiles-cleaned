@@ -44,7 +44,8 @@ let g:coc_global_extensions = [
             \ 'coc-css',
             \ 'coc-html',
             \ 'coc-tsserver',
-            \ 'coc-docker'
+            \ 'coc-docker',
+            \ 'coc-xml'
             \ ]
 
 " ALE

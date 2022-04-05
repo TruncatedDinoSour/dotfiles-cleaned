@@ -18,6 +18,7 @@ black
 bleach
 blessings
 bpython
+Brotli
 CacheControl
 cachy
 certbot
@@ -42,6 +43,7 @@ DateTime
 debugpy
 decorator
 defusedxml
+dill
 dirsync
 distlib
 distro
@@ -52,6 +54,7 @@ entrypoints
 execnet
 executing
 fabulous
+fastjsonschema
 filelock
 flake8
 Flask

@@ -1,2 +1,2 @@
-app-misc/yafetch lto errors aggressive-pre-strip optimised
+app-misc/yafetch errors aggressive-pre-strip lto optimised -hardened clang
 
