@@ -191,18 +191,18 @@ static void tputc(Rune);
 static void treset(void);
 static void tscrollup(int, int, int);
 static void tscrolldown(int, int, int);
-static void tsetattr(int *, int);
-static void tsetchar(Rune, Glyph *, int, int);
+static void tsetattr(const int *, int);
+static void tsetchar(Rune, const Glyph *, int, int);
 static void tsetdirt(int, int);
 static void tsetscroll(int, int);
 static void tswapscreen(void);
-static void tsetmode(int, int, int *, int);
+static void tsetmode(int, int, const int *, int);
 static int twrite(const char *, int, int);
 static void tfulldirt(void);
 static void tcontrolcode(uchar);
 static void tdectest(char);
 static void tdefutf8(char);
-static int32_t tdefcolor(int *, int *, int);
+static int32_t tdefcolor(const int *, int *, int);
 static void tdeftran(char);
 static void tstrsequence(uchar);
 
@@ -231,10 +231,11 @@ static int iofd = 1;
 static int cmdfd;
 static pid_t pid;
 
-static uchar utfbyte[UTF_SIZ + 1] = {0x80, 0, 0xC0, 0xE0, 0xF0};
-static uchar utfmask[UTF_SIZ + 1] = {0xC0, 0x80, 0xE0, 0xF0, 0xF8};
-static Rune utfmin[UTF_SIZ + 1] = {0, 0, 0x80, 0x800, 0x10000};
-static Rune utfmax[UTF_SIZ + 1] = {0x10FFFF, 0x7F, 0x7FF, 0xFFFF, 0x10FFFF};
+static const uchar utfbyte[UTF_SIZ + 1] = {0x80, 0, 0xC0, 0xE0, 0xF0};
+static const uchar utfmask[UTF_SIZ + 1] = {0xC0, 0x80, 0xE0, 0xF0, 0xF8};
+static const Rune utfmin[UTF_SIZ + 1] = {0, 0, 0x80, 0x800, 0x10000};
+static const Rune utfmax[UTF_SIZ + 1] = {0x10FFFF, 0x7F, 0x7FF, 0xFFFF,
+                                         0x10FFFF};
 
 ssize_t xwrite(int fd, const char *s, size_t len) {
     size_t aux = len;
@@ -267,11 +268,13 @@ void *xrealloc(void *p, size_t len) {
     return p;
 }
 
-char *xstrdup(char *s) {
-    if ((s = strdup(s)) == NULL)
+char *xstrdup(const char *s) {
+    char *p;
+
+    if ((p = strdup(s)) == NULL)
         die("strdup: %s\n", strerror(errno));
 
-    return s;
+    return p;
 }
 
 size_t utf8decode(const char *c, Rune *u, size_t clen) {
@@ -332,24 +335,15 @@ size_t utf8validate(Rune *u, size_t i) {
     return i;
 }
 
-static const char base64_digits[] = {
-    0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,
-    0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,
-    0,  0,  0,  0,  0,  62, 0,  0,  0,  63, 52, 53, 54, 55, 56, 57, 58, 59, 60,
-    61, 0,  0,  0,  -1, 0,  0,  0,  0,  1,  2,  3,  4,  5,  6,  7,  8,  9,  10,
-    11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 0,  0,  0,  0,
-    0,  0,  26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42,
-    43, 44, 45, 46, 47, 48, 49, 50, 51, 0,  0,  0,  0,  0,  0,  0,  0,  0,  0,
-    0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,
-    0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,
-    0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,
-    0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,
-    0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,
-    0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,  0,
-    0,  0,  0,  0,  0,  0,  0,  0};
+static const char base64_digits[256] = {
+    [43] = 62, 0,  0,  0,  63, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 0,
+    0,         0,  -1, 0,  0,  0,  0,  1,  2,  3,  4,  5,  6,  7,  8,  9,
+    10,        11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25,
+    0,         0,  0,  0,  0,  0,  26, 27, 28, 29, 30, 31, 32, 33, 34, 35,
+    36,        37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51};
 
 char base64dec_getc(const char **src) {
-    while (**src && !isprint(**src))
+    while (**src && !isprint((unsigned char)**src))
         (*src)++;
     return **src ? *((*src)++) : '='; /* emulate padding if string ends */
 }
@@ -485,7 +479,7 @@ int selected(int x, int y) {
 void selsnap(int *x, int *y, int direction) {
     int newx, newy, xt, yt;
     int delim, prevdelim;
-    Glyph *gp, *prevgp;
+    const Glyph *gp, *prevgp;
 
     switch (sel.snap) {
     case SNAP_WORD:
@@ -554,7 +548,7 @@ void selsnap(int *x, int *y, int direction) {
 char *getsel(void) {
     char *str, *ptr;
     int y, bufsize, lastx, linelen;
-    Glyph *gp, *last;
+    const Glyph *gp, *last;
 
     if (sel.ob.x == -1)
         return NULL;
@@ -769,7 +763,7 @@ void stty(char **args) {
         perror("Couldn't call stty");
 }
 
-int ttynew(char *line, char *cmd, char *out, char **args) {
+int ttynew(const char *line, char *cmd, const char *out, char **args) {
     int m, s;
 
     if (out) {
@@ -798,14 +792,15 @@ int ttynew(char *line, char *cmd, char *out, char **args) {
         break;
     case 0:
         close(iofd);
+        close(m);
         setsid(); /* create a new process group */
         dup2(s, 0);
         dup2(s, 1);
         dup2(s, 2);
         if (ioctl(s, TIOCSCTTY, NULL) < 0)
             die("ioctl TIOCSCTTY failed: %s\n", strerror(errno));
-        close(s);
-        close(m);
+        if (s > 2)
+            close(s);
 #ifdef __OpenBSD__
         if (pledge("stdio getpw proc exec", NULL) == -1)
             die("pledge\n");
@@ -1202,8 +1197,8 @@ void tmoveto(int x, int y) {
     term.c.y = LIMIT(y, miny, maxy);
 }
 
-void tsetchar(Rune u, Glyph *attr, int x, int y) {
-    static char *vt100_0[62] = {
+void tsetchar(Rune u, const Glyph *attr, int x, int y) {
+    static const char *vt100_0[62] = {
         /* 0x41 - 0x7e */
         "↑", "↓", "→", "←", "█", "▚", "☃",      /* A - G */
         0,   0,   0,   0,   0,   0,   0,   0,   /* H - O */
@@ -1305,7 +1300,7 @@ void tdeleteline(int n) {
         tscrollup(term.c.y, n, 0);
 }
 
-int32_t tdefcolor(int *attr, int *npar, int l) {
+int32_t tdefcolor(const int *attr, int *npar, int l) {
     int32_t idx = -1;
     uint r, g, b;
 
@@ -1349,7 +1344,7 @@ int32_t tdefcolor(int *attr, int *npar, int l) {
     return idx;
 }
 
-void tsetattr(int *attr, int l) {
+void tsetattr(const int *attr, int l) {
     int i;
     int32_t idx;
 
@@ -1456,8 +1451,9 @@ void tsetscroll(int t, int b) {
     term.bot = b;
 }
 
-void tsetmode(int priv, int set, int *args, int narg) {
-    int alt, *lim;
+void tsetmode(int priv, int set, const int *args, int narg) {
+    int alt;
+    const int *lim;
 
     for (lim = args + narg; args < lim; ++args) {
         if (priv) {
@@ -1853,7 +1849,7 @@ void strhandle(void) {
                 break;
             p = strescseq.args[2];
             /* FALLTHROUGH */
-        case 104: /* color reset, here p = NULL */
+        case 104: /* colour reset */
             j = (narg > 1) ? atoi(strescseq.args[1]) : -1;
             if (xsetcolorname(j, p)) {
                 if (par == 104 && narg <= 1)
@@ -1865,7 +1861,7 @@ void strhandle(void) {
                  * TODO if defaultbg color is changed, borders
                  * are dirty
                  */
-                redraw();
+                tfulldirt();
             }
             return;
         }
@@ -1976,7 +1972,7 @@ void tdumpsel(void) {
 
 void tdumpline(int n) {
     char buf[UTF_SIZ];
-    Glyph *bp, *end;
+    const Glyph *bp, *end;
 
     bp = &term.line[n][0];
     end = &bp[MIN(tlinelen(n), term.col) - 1];
@@ -2362,6 +2358,11 @@ check_control_code:
     if (width == 2) {
         gp->mode |= ATTR_WIDE;
         if (term.c.x + 1 < term.col) {
+            if (gp[1].mode == ATTR_WIDE && term.c.x + 2 < term.col) {
+                gp[2].u = ' ';
+                gp[2].mode &= ~ATTR_WDUMMY;
+            }
+
             gp[1].u = '\0';
             gp[1].mode = ATTR_WDUMMY;
         }

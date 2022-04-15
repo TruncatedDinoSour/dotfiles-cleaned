@@ -6,18 +6,19 @@ let g:lightline = {
             \ 'colorscheme': 'coffee',
             \ 'active': {
             \     'left': [ [ 'mode', 'paste' ],
-            \               [ 'readonly', 'filename', 'modified' ] ],
+            \               [ 'readonly', 'filename', 'buddy', 'modified' ] ],
             \ 'right':    [ [ 'lineinfo' ],
             \               [ 'percent' ],
             \               [ 'linter', 'fileformat', 'fileencoding', 'filetype' ] ]
             \ },
             \ 'inactive': {
-            \     'left':   [ [ 'filename' ] ],
+            \     'left':   [ [ 'filename', 'buddy' ] ],
             \     'right':  [ [ 'lineinfo' ],
             \                 [ 'percent' ] ]
             \ },
             \ 'component_function': {
-            \     'linter': 'LightlineLinterStatus'
+            \     'linter': 'LightlineLinterStatus',
+            \     'buddy': 'VimBuddy'
             \ }
             \ }
 
@@ -45,7 +46,7 @@ let g:coc_global_extensions = [
             \ 'coc-html',
             \ 'coc-tsserver',
             \ 'coc-docker',
-            \ 'coc-xml'
+            \ 'coc-vimlsp'
             \ ]
 
 " ALE

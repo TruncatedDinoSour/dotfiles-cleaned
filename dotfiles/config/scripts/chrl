@@ -1,0 +1,8 @@
+#!/usr/bin/env sh
+
+main() {
+    RLWRAP_HOME="$HOME/.cache" rlwrap -s "${HISTSIZE:-500}" csi $@
+}
+
+main "$@"
+

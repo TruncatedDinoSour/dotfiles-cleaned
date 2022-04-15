@@ -11,8 +11,7 @@ main() {
     options=("1 Cancel"
         "2 Quit DWM"
         "3 Reboot"
-        "4 Poweroff / Shutdown"
-        "5 Kill xautolock")
+        "4 Poweroff / Shutdown")
 
     option="$(printf "%s\n" "${options[@]}" | dmenu | awk '{ print $1 }')"
 
@@ -23,7 +22,6 @@ main() {
     2) killall dwm ;;
     3) run_root reboot -h ;;
     4) run_root poweroff ;;
-    5) xautolock -exit ;;
     *) notify-send "Option '$option' not found" ;;
     esac
 }

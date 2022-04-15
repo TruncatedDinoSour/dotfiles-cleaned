@@ -2,9 +2,6 @@
 
 #include <X11/XF86keysym.h>
 
-/* definitions */
-static const char sudo_cmd[] = "sudo";
-
 /* appearance */
 static const unsigned int gappx = 2;    /* gaps */
 static const unsigned int borderpx = 2; /* border pixel of windows */
@@ -111,8 +108,8 @@ static const char *volupcmd[] = {"amixer", "-q",     "set", "Master",
 static const char *voldowncmd[] = {"amixer", "-q",     "set", "Master",
                                    "5%-",    "unmute", NULL};
 
-static const char *brupcmd[] = {sudo_cmd, "xbacklight", "-inc", "10", NULL};
-static const char *brdowncmd[] = {sudo_cmd, "xbacklight", "-dec", "10", NULL};
+static const char *brupcmd[] = {"xbacklight", "-inc", "10", NULL};
+static const char *brdowncmd[] = {"xbacklight", "-dec", "10", NULL};
 
 static const char *editorcmd[] = {"st", "-e", "vim", NULL};
 static const char *calandarcmd[] = {"st", "-e", "calcurse", NULL};

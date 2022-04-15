@@ -1,2 +1,3 @@
-sys-libs/glibc valgrind.conf
+# Uncomment if you want valgrind :)
+# sys-libs/glibc valgrind.conf
 

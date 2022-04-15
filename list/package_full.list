@@ -78,6 +78,7 @@ app-misc/mime-types
 app-misc/mkproj
 app-misc/neofetch
 app-misc/pax-utils
+app-misc/rlwrap
 app-misc/tmux
 app-misc/yafetch
 app-office/calcurse
@@ -340,8 +341,8 @@ dev-python/tomli
 dev-python/urllib3
 dev-python/wheel
 dev-python/zipp
+dev-python/zxcvbn
 dev-qt/linguist-tools
-dev-qt/qtchooser
 dev-qt/qtconcurrent
 dev-qt/qtcore
 dev-qt/qtdbus
@@ -351,6 +352,7 @@ dev-qt/qtsvg
 dev-qt/qttest
 dev-qt/qtwidgets
 dev-qt/qtxml
+dev-scheme/chicken
 dev-tcltk/blt
 dev-tcltk/tix
 dev-tex/bibtexu
@@ -395,7 +397,6 @@ dev-util/shellcheck-bin
 dev-util/shfmt
 dev-util/source-highlight
 dev-util/systemtap
-dev-util/valgrind
 dev-vcs/git
 gnome-base/gsettings-desktop-schemas
 gnome-base/librsvg
@@ -575,7 +576,6 @@ sys-kernel/linux-headers
 sys-libs/binutils-libs
 sys-libs/compiler-rt
 sys-libs/compiler-rt-sanitizers
-sys-libs/e2fsprogs-libs
 sys-libs/efivar
 sys-libs/gdbm
 sys-libs/glibc

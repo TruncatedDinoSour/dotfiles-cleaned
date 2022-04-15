@@ -88,13 +88,14 @@ call plug#begin("~/.vim/plugged")
     Plug 'lilydjwg/colorizer'
     Plug 'christoomey/vim-tmux-navigator'
     Plug 'tpope/vim-surround'
-    Plug 'luochen1990/rainbow'
     Plug 'tpope/vim-markdown'
     Plug 'editorconfig/editorconfig-vim'
-    Plug 'coffee-theme/coffee.vim'
     Plug 'godlygeek/tabular'
     Plug 'haya14busa/is.vim'
     Plug 'machakann/vim-highlightedyank'
+    Plug 'luochen1990/rainbow'
+    Plug 'coffee-theme/coffee.vim'
+    Plug 'vim-scripts/vimbuddy.vim'
 call plug#end()
 
 

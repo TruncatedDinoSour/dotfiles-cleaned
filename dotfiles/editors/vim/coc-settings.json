@@ -11,12 +11,20 @@
                 ".git/",
                 ".hg/"
             ],
-            "initializationOptions": {"cache": {"directory": "/tmp/ccls"}}
+            "initializationOptions": {
+                "cache": {
+                    "directory": "/tmp/ccls"
+                }
+            }
         },
         "pyls": {
             "command": "pyls",
             "filetypes": ["python"],
-            "initializationOptions": {"cache": {"directory": "/tmp/pyls"}}
+            "initializationOptions": {
+                "cache": {
+                    "directory": "/tmp/pyls"
+                }
+            }
         }
     }
 }

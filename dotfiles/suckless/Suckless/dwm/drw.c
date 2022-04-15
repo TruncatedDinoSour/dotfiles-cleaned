@@ -239,7 +239,8 @@ int drw_text(Drw *drw, int x, int y, unsigned int w, unsigned int h,
     XftDraw *d = NULL;
     Fnt *usedfont, *curfont, *nextfont;
     size_t i, len;
-    int utf8strlen, utf8charlen, render = x || y || w || h;
+    int utf8charlen, render = x || y || w || h;
+    unsigned long utf8strlen;
     long utf8codepoint = 0;
     const char *utf8str;
     FcCharSet *fccharset;
@@ -295,9 +296,17 @@ int drw_text(Drw *drw, int x, int y, unsigned int w, unsigned int h,
         if (utf8strlen) {
             drw_font_getexts(usedfont, utf8str, utf8strlen, &ew, NULL);
             /* shorten text if necessary */
-            for (len = MIN((unsigned long)utf8strlen, sizeof(buf) - 1);
-                 len && ew > w; len--)
-                drw_font_getexts(usedfont, utf8str, len, &ew, NULL);
+            // for (len = MIN((unsigned long)utf8strlen, sizeof(buf) - 1);
+            //      len && ew > w; len--)
+            //     drw_font_getexts(usedfont, utf8str, len, &ew, NULL);
+
+            if (ew > w)
+                for (ew = 0, len = 0; ew < w - lpad * 2 &&
+                                      len < MIN(utf8strlen, sizeof(buf) - 1);
+                     len++)
+                    drw_font_getexts(usedfont, utf8str, len, &ew, NULL);
+            else
+                len = MIN(utf8strlen, sizeof(buf) - 1);
 
             if (len) {
                 memcpy(buf, utf8str, len);
