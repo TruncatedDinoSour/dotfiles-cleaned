@@ -1,14 +1,17 @@
 # media
-video/*; mpv "%s"
-audio/*; mpv --no-video "%s"
+video/*; mpv -- "%s"
+audio/*; mpv --no-video -- "%s"
 
-image/svg+xml; firefox "%s"
-image/*; mpv "%s"
+image/svg+xml; firefox -- "%s"
+image/*; mpv -- "%s"
 
 # text
-text/html; lynx "%s"
-text/*; vim "%s"
+text/html; lynx -- "%s"
+text/*; vim -- "%s"
 
 # URLs
-x-scheme-handler/*; firefox "%s"
+x-scheme-handler/*; firefox -- "%s"
+
+# PDF
+application/pdf; zathura -- "%s"
 

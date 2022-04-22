@@ -64,6 +64,10 @@ autocmd Filetype ebuild set syntax=ebuildspace
 " Rys
 autocmd BufRead,BufNewFile *.rys set filetype=rys
 
+" Buildfile
+autocmd BufRead,BufNewFile Buildfile set filetype=sh
+
+
 " Plugins
 "   To Install the plugins type `:PlugInstall`
 " CoC:

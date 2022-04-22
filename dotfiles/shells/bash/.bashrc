@@ -4,7 +4,7 @@
 
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
-export PATH="$PATH:/usr/local/bin:$HOME/.local/bin:$HOME/.config/scripts"
+export PATH="/usr/sm:$PATH:/usr/local/bin:$HOME/.local/bin:$HOME/.config/scripts"
 
 # Completion
 
@@ -79,6 +79,7 @@ GPG_TTY="$(tty)"
 export GPG_TTY
 
 export dots='/home/ari/Ari/coding/resources_/dots'
+export tdots='/home/ari/Ari/coding/resources_/tdots'
 export overlay='/home/ari/Ari/coding/resources_/overlay'
 export ntex='/home/ari/Documents/notes/doc.tex'
 export npdf='/home/ari/Documents/notes/doc.pdf'
