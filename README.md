@@ -53,7 +53,7 @@ A: Because it's a <a href="//www.howtogeek.com/287014/how-to-create-and-use-symb
 <br/>
 
 <h3>DWM</h3>
-<img src="https://user-images.githubusercontent.com/71613062/138791885-455028bd-0c76-4597-92bb-0e75b0593f9d.jpg">
+<img src="/media/ss.jpg">
 
 <br/>
 
