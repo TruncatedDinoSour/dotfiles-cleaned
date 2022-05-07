@@ -154,3 +154,44 @@ gitsuicide() {
 
     git push -f origin "$branch"
 }
+
+cm() {
+    printf ' * Looking for completions directory... '
+    if [ -d 'completions' ]; then
+        echo 'found'
+    else
+        echo 'not found' >&2
+        return 1
+    fi
+
+    printf ' * Looking for bash completions... '
+    local comps
+    comps="$(find 'completions' -type f -path '*.bash')"
+
+    if [ -z "$comps" ]; then
+        echo 'no bash completions' >&2
+        return 2
+    else
+        echo 'found'
+    fi
+
+    echo ' * Pulling up fzf selector'
+    local comp
+    comp="$(echo "$comps" | fzf)"
+
+    printf ' * Applying completion... '
+    if [ -f "$comp" ]; then
+        source -- "$comp"
+        echo 'done'
+    else
+        echo 'not a valid file' >&2
+        return 3
+    fi
+}
+
+venv() {
+    [ ! -d venv ] && python3 -m virtualenv venv
+    [ "$VIRTUAL_ENV" ] && deactivate && return
+
+    . ./venv/bin/activate
+}

@@ -60,5 +60,3 @@ alias killyourself='$__BASH_CORE_BIN_DIR/kill -9 $$'
 alias full_upgrade="vim +PlugUpdate +qall! && vim +CocUpdate +qall! && \${__BASH_RUNAS:-sudo} npm update -g --unsafe-perm=true && \${__BASH_RUNAS:-sudo} npm upgrade -g --unsafe-perm=true && pip_upgrade && \${__BASH_RUNAS:-sudo} emerge --sync && \${__BASH_RUNAS:-sudo} emerge -uDUN --with-bdeps=y @world"
 
 alias time='$__BASH_BIN_DIR/time -v'
-
-alias venv='virtualenv venv && . venv/bin/activate'

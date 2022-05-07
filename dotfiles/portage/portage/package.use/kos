@@ -1,3 +1,3 @@
-app-admin/kos::dinolay man lto test speed -flags
+app-admin/kos::dinolay man -lto test -speed -flags -size -strip gcc vtable-harden-gcc fcf-harden-gcc -clang
 # valgrind
 

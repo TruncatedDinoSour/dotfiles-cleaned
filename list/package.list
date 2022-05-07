@@ -22,7 +22,6 @@ app-text/zathura
 app-text/zathura-pdf-poppler
 dev-lang/python
 dev-python/pip
-dev-scheme/chicken
 dev-util/ccls
 dev-util/shellcheck-bin
 dev-util/shfmt
@@ -32,6 +31,7 @@ media-fonts/freefont
 media-fonts/nerd-fonts
 media-fonts/unifont
 media-gfx/feh
+media-gfx/jpegoptim
 media-gfx/shot
 media-sound/alsa-utils
 media-video/mpv::dinolay
@@ -46,6 +46,7 @@ sys-apps/mlocate
 sys-apps/portage
 sys-boot/grub:2
 sys-devel/bc
+sys-devel/gcc
 sys-devel/gdb
 sys-fs/cryptsetup
 sys-fs/dosfstools

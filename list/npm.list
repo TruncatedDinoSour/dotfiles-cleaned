@@ -1,6 +1,8 @@
 /usr/lib64
+├── corepack@0.10.0
 ├── js-beautify@1.14.0
+├── live-server@1.2.1
 ├── netlify-cli@8.19.3
 ├── node-sass@7.0.1
-└── npm@6.14.15
+└── npm@6.14.16
 

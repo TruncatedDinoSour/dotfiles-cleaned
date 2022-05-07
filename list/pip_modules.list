@@ -1,5 +1,6 @@
 acme
 alabaster
+altgraph
 appdirs
 argon2-cffi
 argon2-cffi-bindings
@@ -21,6 +22,7 @@ bpython
 Brotli
 CacheControl
 cachy
+capstone
 certbot
 certifi-system-store
 certifi-system-store
@@ -55,6 +57,7 @@ execnet
 executing
 fabulous
 fastjsonschema
+filebytes
 filelock
 flake8
 Flask
@@ -98,6 +101,7 @@ jupyter-core
 jupyterlab-pygments
 jupyterlab-widgets
 keyring
+keystone-engine
 kiwisolver
 lazy-object-proxy
 libcst
@@ -128,6 +132,7 @@ networkx
 ninja
 nodeenv
 notebook
+nspektr
 numpy
 ordered-set
 packaging
@@ -168,9 +173,11 @@ pyflakes
 pyfzf
 pygame
 Pygments
+pyinstaller-hooks-contrib
 pylev
 pylint
 pymdown-extensions
+pymongo
 pyOpenSSL
 pyparsing
 pyperclip
@@ -196,6 +203,7 @@ readline
 requests
 requests-toolbelt
 rope
+ropper
 rsa
 SecretStorage
 Send2Trash
@@ -206,6 +214,7 @@ simpleaudio
 six
 snowballstemmer
 soupsieve
+spark-parser
 Sphinx
 sphinx-rtd-theme
 sphinxcontrib-applehelp
@@ -226,10 +235,11 @@ tornado
 tqdm
 traitlets
 trash-cli
-typing
 typing_extensions
 typing-inspect
 ujson
+uncompyle6
+unicorn
 urllib3
 uwuify
 virtualenv
@@ -242,6 +252,7 @@ wheel
 widgetsnbextension
 wikipedia
 wrapt
+xdis
 yapf
 yt-dlp
 zipp

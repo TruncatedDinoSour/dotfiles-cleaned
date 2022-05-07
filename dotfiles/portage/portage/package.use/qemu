@@ -1,4 +1,4 @@
-app-emulation/qemu python_targets_python3_9 -accessibility aio -capstone curl fdt -fuse -glusterfs gnutls iscsi io-uring jemalloc jpeg -multipath -ncurses -nfs -numa pin-upstream-blobs plugins png -rbd -sdl -sdl-image slirp spice -ssh systemtap usb usbdir vde vhost-net -vhost-user-fs -virgl virtfs vte -xattrs -xen xfs gtk
+app-emulation/qemu python_targets_python3_9 -accessibility aio -capstone curl fdt -fuse -glusterfs gnutls iscsi io-uring jemalloc jpeg -multipath -ncurses -nfs -numa pin-upstream-blobs plugins png -rbd -sdl -sdl-image slirp spice -ssh systemtap usb usbdir vde vhost-net -vhost-user-fs -virgl virtfs vte -xattrs -xen xfs gtk -pam
 app-emulation/virt-manager gtk
 # enabke `usbredir` USE on qemu when compiling virt-manager
 

@@ -298,6 +298,7 @@ dev-python/certifi
 dev-python/charset_normalizer
 dev-python/docutils
 dev-python/flit_core
+dev-python/gpep517
 dev-python/httplib2
 dev-python/idna
 dev-python/imagesize
@@ -311,7 +312,7 @@ dev-python/m2crypto
 dev-python/mako
 dev-python/markupsafe
 dev-python/more-itertools
-dev-python/namespace-sphinxcontrib
+dev-python/nspektr
 dev-python/ordered-set
 dev-python/packaging
 dev-python/password-strength
@@ -352,7 +353,6 @@ dev-qt/qtsvg
 dev-qt/qttest
 dev-qt/qtwidgets
 dev-qt/qtxml
-dev-scheme/chicken
 dev-tcltk/blt
 dev-tcltk/tix
 dev-tex/bibtexu
@@ -410,6 +410,7 @@ media-fonts/unifont
 media-fonts/urw-fonts
 media-gfx/feh
 media-gfx/graphite2
+media-gfx/jpegoptim
 media-gfx/potrace
 media-gfx/qrencode
 media-gfx/sam2p
