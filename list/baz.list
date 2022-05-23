@@ -1,0 +1,104 @@
+ * ----------------
+ * Description: Baz plugin for making commands short
+ * ----------------
+ * Name: shortcmd-baz-plugin
+ * License: WTFPL
+ * Version: v2
+ * Author: Ari Archer
+ * Root_plugin_directory: plugin
+ * Recomended_install_method: git
+ * Source: https://ari-web.xyz/gh/shortcmd-baz-plugin
+ * Installed_with_method: git
+
+
+ * ----------------
+ * Description: Baz plugin for making your man pages colourful
+ * ----------------
+ * Name: coloured-man-pages-plugin
+ * License: WTFPL
+ * Version: v1
+ * Author: Ari Archer
+ * Root_plugin_directory: plugin
+ * Recomended_install_method: git
+ * Source: https://ari-web.xyz/gh/coloured-man-pages-plugin
+ * Installed_with_method: git
+
+
+ * ----------------
+ * Description: Baz plugin for making your bash better
+ * ----------------
+ * Name: better-bash-baz-plugin
+ * License: WTFPL
+ * Version: v3
+ * Author: Ari Archer
+ * Root_plugin_directory: plugin
+ * Recomended_install_method: git
+ * Source: https://ari-web.xyz/gh/better-bash-baz-plugin
+ * Installed_with_method: git
+
+
+ * ----------------
+ * Description: Baz plugin for making your ls better
+ * ----------------
+ * Name: ls-aliases-baz-plugin
+ * License: WTFPL
+ * Version: v1
+ * Author: Ari Archer
+ * Root_plugin_directory: plugin
+ * Recomended_install_method: git
+ * Source: https://ari-web.xyz/gh/ls-aliases-baz-plugin
+ * Installed_with_method: git
+
+
+ * ----------------
+ * Description: Baz plugin for adding vi fzf keybinds
+ * ----------------
+ * Name: vifzf-keybinds-baz-plugin
+ * License: WTFPL
+ * Version: v1
+ * Author: Ari Archer
+ * Root_plugin_directory: plugin
+ * Recomended_install_method: git
+ * Source: https://ari-web.xyz/gh/vifzf-keybinds-baz-plugin
+ * Installed_with_method: git
+
+
+ * ----------------
+ * Description: Baz plugin for coffee TTY theme
+ * ----------------
+ * Name: coffee.tty-theme
+ * License: WTFPL
+ * Version: v2
+ * Author: Ari Archer
+ * Root_plugin_directory: plugin
+ * Recomended_install_method: git
+ * Source: https://github.com/coffee-theme/coffee.tty-theme
+ * Installed_with_method: git
+
+
+ * ----------------
+ * Description: Baz plugin for coffee theme in bash prompt
+ * ----------------
+ * Name: coffee.baz-plugin
+ * License: WTFPL
+ * Version: v5
+ * Author: Ari Archer
+ * Root_plugin_directory: plugin
+ * Recomended_install_method: git
+ * Source: https://github.com/coffee-theme/coffee.baz-plugin
+ * Installed_with_method: git
+
+
+ * ----------------
+ * Description: Baz plugin for entering and exiting virtualenvs with ease
+ * ----------------
+ * Name: venvin-baz-plugin
+ * License: WTFPL
+ * Version: v3
+ * Author: Ari Archer
+ * Root_plugin_directory: plugin
+ * Recomended_install_method: git
+ * Source: https://ari-web.xyz/gh/venvin-baz-plugin
+ * Installed_with_method: git
+
+

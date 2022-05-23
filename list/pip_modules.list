@@ -235,6 +235,7 @@ tornado
 tqdm
 traitlets
 trash-cli
+typing
 typing_extensions
 typing-inspect
 ujson

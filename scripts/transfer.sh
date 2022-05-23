@@ -123,6 +123,11 @@ python3 -m jupyter nbextension list 2>/dev/null >list/jupyter_entensions.list
 python3 -m pip list | awk '{ print $1 }' | tail -n +3 >list/pip_modules.list
 npm list -g --depth=0 >list/npm.list
 
+while read -r line; do
+    baz info exist "$(echo "$line" | awk '{print $2}')" 2>&1
+    echo
+done <<<$(baz list 2>&1 | tail -n +2) >list/baz.list
+
 rm -rfv dotfiles/config/asciinema dotfiles/editors/vim/.vim/undodir dotfiles/config/VSCodium dotfiles/config/VirtualBox dotfiles/config/transmission/dht.dat dotfiles/config/dconf dotfiles/config/netlify dotfiles/config/transmission/resume dotfiles/editors/vim/.vim/.netrwhist
 
 cp scripts/clean_firefox_profile dotfiles/etc/firefox

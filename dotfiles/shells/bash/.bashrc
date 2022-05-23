@@ -6,10 +6,6 @@
 [[ $- != *i* ]] && return
 export PATH="/usr/sm:$PATH:/usr/local/bin:$HOME/.local/bin:$HOME/.config/scripts"
 
-# Completion
-
-[ -f "$HOME/.config/tabtab/__tabtab.bash" ] && . "$HOME/.config/tabtab/__tabtab.bash"
-
 # config
 
 source ~/.config/shells/bash/*.conf
@@ -33,46 +29,16 @@ else
     vecho 'TMUX not started'
 fi
 
-# Disable stuff like ^S and ^Q
-stty -ixon
+# Load baz
+_baz_loader="$HOME/.local/share/baz/loader.sh"
+[ ! -f "$_baz_loader" ] || source "$_baz_loader"
+# sleep 1000
 
 # Functions
 source ~/.config/shells/bash/*.functions
 
-# Enable FZF support
-if [[ -x "$(command -v fzf)" ]]; then
-    source /usr/share/bash-completion/completions/fzf
-    source /usr/share/fzf/key-bindings.bash
-else
-    vecho 'Please install FZF for FZF keybindings'
-fi
-
-# enable programmable completion features (you don't need to enable
-# this, if it's already enabled in /etc/bash.bashrc and /etc/profile
-# sources /etc/bash.bashrc).
-if ! shopt -oq posix; then
-    if [ -f /usr/share/bash-completion/bash_completion ]; then
-        . /usr/share/bash-completion/bash_completion
-    elif [ -f /etc/bash_completion ]; then
-        . /etc/bash_completion
-    fi
-fi
-
+# Aliases
 source ~/.config/shells/bash/*.aliases
-
-# Enable Vi(M) mode
-set -o vi
-
-# cd into a directory with only the name supplied
-shopt -s autocd
-
-# Enable extended globbing
-shopt -s globstar
-shopt -s extglob
-
-export PROMPT_COMMAND='ps_one'
-
-[ "$TERM" == "$__BASH_TERM" ] && tty_autorun
 
 # GPG
 GPG_TTY="$(tty)"
@@ -84,13 +50,5 @@ export overlay='/home/ari/Ari/coding/resources_/overlay'
 export ntex='/home/ari/Documents/notes/doc.tex'
 export npdf='/home/ari/Documents/notes/doc.pdf'
 export ndir='/home/ari/Documents/notes'
-
-# Keybinds
-bind -f ~/.config/shells/input/inputrc
-
-for keymap in ~/.config/shells/input/input/*; do
-    vecho "Setting up readline keybinds for $keymap"
-    bind -m "$(basename "$keymap")" -f "$keymap" || vecho "Failed to set bindings"
-done 2>/dev/null
 
 autorun || vecho 'Autorun failed'

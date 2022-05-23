@@ -1,7 +1,7 @@
 [syntax]
 keyword = y
 name = w
-comment = K
+comment = w
 string = y
 error = R
 number = y

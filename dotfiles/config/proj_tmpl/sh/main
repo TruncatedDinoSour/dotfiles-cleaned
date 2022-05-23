@@ -1,9 +1,10 @@
 #!/usr/bin/env sh
 
+[ "$DEBUG" ] && set -x
 set -e
 
 main() {
     return 0
 }
 
-main "$@"
+[ "$HEADER" ] || main "$@"

@@ -20,6 +20,8 @@
 
 [alias]
     glog = log --graph --oneline --decorate
+    gss = !bash ./scripts/git.sh
+    gs = !bash ./git.sh
 
 [web]
     browser = firefox
@@ -28,4 +30,4 @@
     browser = firefox
 
 [github]
-  user = TruncatedDinosour
+    user = TruncatedDinosour

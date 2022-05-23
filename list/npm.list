@@ -4,5 +4,6 @@
 ├── live-server@1.2.1
 ├── netlify-cli@8.19.3
 ├── node-sass@7.0.1
-└── npm@6.14.16
+├── npm@8.5.0
+└── typescript@4.6.4
 

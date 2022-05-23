@@ -16,6 +16,7 @@ app-misc/tmux
 app-misc/yafetch
 app-office/calcurse
 app-shells/bash-completion
+app-shells/baz
 app-shells/fzf
 app-text/texlive
 app-text/zathura
@@ -55,6 +56,7 @@ sys-fs/xfsprogs
 sys-kernel/dracut
 sys-kernel/linux-firmware
 sys-libs/glibc
+sys-libs/libxcrypt
 sys-process/htop-vim
 sys-process/time
 www-client/firefox
@@ -71,4 +73,5 @@ x11-misc/bdwmb
 x11-misc/dunst
 x11-misc/xautolock
 x11-misc/xclip
+x11-misc/xdotool
 x11-themes/gruvbox-material-gtk-theme

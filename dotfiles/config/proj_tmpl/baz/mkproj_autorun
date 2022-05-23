@@ -1,0 +1,38 @@
+#!/usr/bin/env sh
+
+set -e
+
+main() {
+    PROJ_BASE="$(basename -- "$(pwd)")"
+    PROJ_GIT="https://ari-web.xyz/gh/$PROJ_BASE"
+
+    tee baz.env >/dev/null <<EOF
+export BAZP_NAME='$PROJ_BASE'
+export BAZP_LICENSE='WTFPL'
+export BAZP_VER=1
+export BAZP_AUTHOR='$(git config user.name)'
+export BAZP_SRC='plugin'
+export BAZP_METHOD='git'
+export BAZP_SOURCE='$PROJ_GIT'
+export BAZP_DESCRIPTION='Baz plugin for'
+EOF
+
+    tee README.md >/dev/null <<EOF
+# Baz plugin: $PROJ_BASE
+
+> Baz plugin for
+
+# Installation
+
+- Using [baz plugin manager](https://ari-web.xyz/gh/baz):
+
+\`\`\`bash
+$ baz install git '$PROJ_GIT'
+\`\`\`
+
+EOF
+
+    lmgr @wtfpl || echo 'Lmgr not found: https://ari-web.xyz/gh/lmgr'
+}
+
+main "$@"

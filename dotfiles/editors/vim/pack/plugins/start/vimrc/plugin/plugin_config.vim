@@ -129,3 +129,5 @@ let g:PreserveNoEOL = 1
 let g:highlightedyank_highlight_duration = 500
 highlight HighlightedyankRegion cterm=reverse gui=reverse
 
+" Vim composer
+let g:markdown_composer_autostart = 0

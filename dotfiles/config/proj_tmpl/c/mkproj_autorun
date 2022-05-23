@@ -3,7 +3,7 @@
 set -e
 
 main() {
-    sed -i "s/PROJECT_NAME/$(basename "$PWD")/g" build.sh
+    sed -i "s/PROJECT_NAME/$(basename -- "$PWD")/g" build.sh
     clang-format src/main.c -i
     code="$(shfmt -s -i 4 build.sh)"
     echo "$code" >build.sh

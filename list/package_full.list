@@ -87,6 +87,7 @@ app-portage/gemato
 app-portage/portage-utils
 app-shells/bash
 app-shells/bash-completion
+app-shells/baz
 app-shells/fzf
 app-shells/gentoo-bashcomp
 app-text/asciidoc
@@ -749,6 +750,7 @@ x11-misc/xbitmaps
 x11-misc/xclip
 x11-misc/xdg-user-dirs
 x11-misc/xdg-utils
+x11-misc/xdotool
 x11-misc/xkeyboard-config
 x11-misc/xorg-cf-files
 x11-themes/adwaita-icon-theme

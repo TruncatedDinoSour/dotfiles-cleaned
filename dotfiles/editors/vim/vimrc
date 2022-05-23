@@ -61,11 +61,12 @@ autocmd BufRead,BufNewFile *.j2 set filetype=html
 " Make ebuilds highlight properly
 autocmd Filetype ebuild set syntax=ebuildspace
 
-" Rys
-autocmd BufRead,BufNewFile *.rys set filetype=rys
-
 " Buildfile
 autocmd BufRead,BufNewFile Buildfile set filetype=sh
+
+" Readline
+autocmd BufRead,BufNewFile *.rl set filetype=readline
+autocmd BufRead,BufNewFile */bindings/* set filetype=readline
 
 
 " Plugins
@@ -77,10 +78,19 @@ autocmd BufRead,BufNewFile Buildfile set filetype=sh
 "   $ cd ~/.vim/pluggled/bracey
 "   $ npm install --prefix server
 
+function! BuildVimComposer(info)
+    if a:info.status != 'unchanged' || a:info.force
+        if has('nvim')
+            !cargo build --release --locked
+        else
+            !cargo build --release --locked --no-default-features --features json-rpc
+        endif
+    endif
+endfunction
+
 call plug#begin("~/.vim/plugged")
     Plug 'turbio/bracey.vim'
     Plug 'mattn/emmet-vim'
-    Plug 'tpope/vim-surround'
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
     Plug 'w0rp/ale'
     Plug 'coffee-theme/lightline.vim'
@@ -100,8 +110,8 @@ call plug#begin("~/.vim/plugged")
     Plug 'luochen1990/rainbow'
     Plug 'coffee-theme/coffee.vim'
     Plug 'vim-scripts/vimbuddy.vim'
+    Plug 'euclio/vim-markdown-composer', { 'do': function('BuildVimComposer') }
 call plug#end()
-
 
 colorscheme coffee                      " Set the theme
 
