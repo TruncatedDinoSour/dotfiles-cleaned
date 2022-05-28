@@ -4,13 +4,11 @@
 
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
-export PATH="/usr/sm:$PATH:/usr/local/bin:$HOME/.local/bin:$HOME/.config/scripts"
+export PATH="$PATH:/usr/local/bin:$HOME/.local/bin:$HOME/.config/scripts"
 
 # config
 
 source ~/.config/shells/bash/*.conf
-
-__BASH_TERM="$(tset -q)"
 
 # pre-run
 source ~/.config/shells/bash/*.pre
@@ -22,7 +20,7 @@ source ~/.config/shells/bash/*.env
 source ~/.config/shells/tmux/*.conf
 
 # Check for TMUX
-if [ -z "$TMUX" ] && [ "$__BASH_TERM" != 'linux' ] && [ -x "$(command -v tmux)" ] && [ ! "$__BASH_TMUX_DISABLE" ]; then
+if [ -z "$TMUX" ] && [ "$TERM" != 'linux' ] && command -v tmux >/dev/null && [ ! "$__BASH_TMUX_DISABLE" ]; then
     tmux -2 -l
     exit 127
 else
@@ -50,5 +48,8 @@ export overlay='/home/ari/Ari/coding/resources_/overlay'
 export ntex='/home/ari/Documents/notes/doc.tex'
 export npdf='/home/ari/Documents/notes/doc.pdf'
 export ndir='/home/ari/Documents/notes'
+
+# Enable luarocks
+command -v luarocks >/dev/null && eval "$(luarocks path)"
 
 autorun || vecho 'Autorun failed'

@@ -102,14 +102,13 @@ call plug#begin("~/.vim/plugged")
     Plug 'lilydjwg/colorizer'
     Plug 'christoomey/vim-tmux-navigator'
     Plug 'tpope/vim-surround'
-    Plug 'tpope/vim-markdown'
     Plug 'editorconfig/editorconfig-vim'
     Plug 'godlygeek/tabular'
     Plug 'haya14busa/is.vim'
     Plug 'machakann/vim-highlightedyank'
     Plug 'luochen1990/rainbow'
     Plug 'coffee-theme/coffee.vim'
-    Plug 'vim-scripts/vimbuddy.vim'
+    Plug 'TruncatedDinosour/vimbuddy.vim'
     Plug 'euclio/vim-markdown-composer', { 'do': function('BuildVimComposer') }
 call plug#end()
 

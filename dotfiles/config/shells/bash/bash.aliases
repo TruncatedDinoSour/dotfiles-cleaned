@@ -29,7 +29,6 @@ alias time='$__BASH_BIN_DIR/time -v'
 
 alias fzf="\$__BASH_BIN_DIR/fzf --preview 'bat --theme=\"gruvbox-dark\" --color=always --style=numbers --line-range=:500 {}'"
 alias mpvp='$__BASH_BIN_DIR/mpv --shuffle --loop-playlist'
-alias clip='$__BASH_BIN_DIR/xclip -selection clipboard'
 
 alias mimetypeof='$__BASH_BIN_DIR/xdg-mime query filetype'
 alias dos2unix="\$__BASH_CORE_BIN_DIR/sed -i $'s/\r$//'"

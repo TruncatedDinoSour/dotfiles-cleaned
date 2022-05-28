@@ -27,7 +27,7 @@ let g:lightline = {
 "let s:palette.inactive.middle = s:palette.normal.middle
 "let s:palette.tabline.middle = s:palette.normal.middle
 
-set noshowmode                                  " Don't show what mode vim is in
+set noshowmode                  " Don't show what mode vim is in
 
 " Emmet
 let g:user_emmet_install_global = 1
@@ -131,3 +131,4 @@ highlight HighlightedyankRegion cterm=reverse gui=reverse
 
 " Vim composer
 let g:markdown_composer_autostart = 0
+

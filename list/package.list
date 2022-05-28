@@ -22,6 +22,7 @@ app-text/texlive
 app-text/zathura
 app-text/zathura-pdf-poppler
 dev-lang/python
+dev-lua/luarocks
 dev-python/pip
 dev-util/ccls
 dev-util/shellcheck-bin

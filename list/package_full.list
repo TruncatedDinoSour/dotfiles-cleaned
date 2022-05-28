@@ -198,6 +198,7 @@ dev-libs/userspace-rcu
 dev-libs/vala-common
 dev-libs/xxhash
 dev-libs/zziplib
+dev-lua/luarocks
 dev-perl/Algorithm-Diff
 dev-perl/Authen-SASL
 dev-perl/B-Hooks-EndOfScope
