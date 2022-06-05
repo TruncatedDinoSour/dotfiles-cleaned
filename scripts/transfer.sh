@@ -25,6 +25,7 @@ from=(
     '/home/ari/.mailcap'
     '/home/ari/.mutt/muttrc'
     '/home/ari/.lynxrc'
+    '/home/ari/.idlerc'
 
     "$FIREFOX_PROFILE"
 
@@ -68,6 +69,7 @@ to=(
     'dotfiles/suckless'
     'dotfiles/suckless'
 
+    'dotfiles/etc'
     'dotfiles/etc'
     'dotfiles/etc'
     'dotfiles/etc'
