@@ -5,12 +5,14 @@ appdirs
 argon2-cffi
 argon2-cffi-bindings
 arigram
+asciinema
 astroid
 asttokens
 attrs
 autopep8
 Babel
 backcall
+backpack
 backports.entry-points-selectable
 beautifulsoup4
 beepy
@@ -45,6 +47,7 @@ DateTime
 debugpy
 decorator
 defusedxml
+Deprecated
 dill
 dirsync
 distlib
@@ -59,6 +62,7 @@ fabulous
 fastjsonschema
 filebytes
 filelock
+first
 flake8
 Flask
 Flask-Limit
@@ -118,7 +122,7 @@ mccabe
 meson
 mistune
 mock
-more_itertools
+more-itertools
 msgpack
 musicalbeeps
 mutagen
@@ -149,6 +153,7 @@ pexpect
 pickleshare
 Pillow
 pip
+pip-tools
 pkginfo
 platformdirs
 pluggy
@@ -211,6 +216,7 @@ setuptools
 setuptools-scm
 shellingham
 simpleaudio
+simplejson
 six
 snowballstemmer
 soupsieve
@@ -223,11 +229,13 @@ sphinxcontrib-htmlhelp
 sphinxcontrib-jsmath
 sphinxcontrib-qthelp
 sphinxcontrib-serializinghtml
+SQLAlchemy
 stack-data
 tabulate
 termcolor
 terminado
 testpath
+tinycss2
 toml
 tomli
 tomlkit
