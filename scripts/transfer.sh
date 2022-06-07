@@ -25,13 +25,13 @@ from=(
     '/home/ari/.mailcap'
     '/home/ari/.mutt/muttrc'
     '/home/ari/.lynxrc'
-    '/home/ari/.idlerc'
 
     "$FIREFOX_PROFILE"
 
     '/home/ari/.icons'
 
     '/home/ari/.vim'
+    '/home/ari/.idlerc'
 
     '/home/ari/.xinitrc'
     '/etc/default/grub'
@@ -73,13 +73,13 @@ to=(
     'dotfiles/etc'
     'dotfiles/etc'
     'dotfiles/etc'
-    'dotfiles/etc'
 
     'dotfiles/etc/firefox'
 
     'dotfiles/icons'
 
     'dotfiles/editors/vim'
+    'dotfiles/editors/idle'
 
     'dotfiles/core'
     'dotfiles/core'
