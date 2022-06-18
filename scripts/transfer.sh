@@ -123,7 +123,7 @@ rc-update >list/openrc_services.sysvinit.list
 
 python3 -m jupyter nbextension list 2>/dev/null >list/jupyter_entensions.list
 python3 -m pip list | awk '{ print $1 }' | tail -n +3 >list/pip_modules.list
-npm list -g --depth=0 >list/npm.list
+npm list --location=global --depth=0 >list/npm.list
 
 while read -r line; do
     baz info exist "$(echo "$line" | awk '{print $2}')" 2>&1

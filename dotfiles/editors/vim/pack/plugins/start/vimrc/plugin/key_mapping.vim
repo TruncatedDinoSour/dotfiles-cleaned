@@ -48,7 +48,7 @@ nnoremap T :call TrimWhitespace()<CR>
 
 " Tabs
 nnoremap <C-n> <ESC>:tabnew<space>
-nnoremap <C-b> <ESC>:tabprevious<CR>
+nnoremap <C-x> <ESC>:tabprevious<CR>
 nnoremap <C-c> <ESC>:tabnext<CR>
 
 " Open a file
@@ -60,4 +60,3 @@ nnoremap <C-d> <ESC>:split<space>
 
 " Tabular
 nnoremap U <ESC>:Tabularize<space>
-

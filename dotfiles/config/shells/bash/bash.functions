@@ -13,28 +13,6 @@ mkkernel() {
     $__BASH_RUNAS /usr/sbin/grub-mkconfig -o /boot/grub/grub.cfg
 }
 
-vs() {
-    back="$(pwd)"
-    scriptdir="$HOME/.scripts"
-    script="$(find "$scriptdir" -maxdepth 1 -type f | fzf)"
-
-    if [[ "$script" ]]; then
-        $EDITOR "$script"
-        history -s "$EDITOR '$script'"
-    fi
-
-    cd "$back" || exit 2
-}
-
-vv() {
-    file="$(fzf)"
-
-    if [[ "$file" ]]; then
-        $EDITOR "$file"
-        history -s "$EDITOR '$file'"
-    fi
-}
-
 pip_upgrade() {
     "$__BASH_BIN_DIR"/python3 -m pip list |
         "$__BASH_BIN_DIR"/awk '{ print $1  }' |
@@ -80,53 +58,4 @@ NO() {
     [ -f ~/Documents/no/"$title" ] && echo 'Thank you, I will save this memory :), Hope you feel better soon'
 
     return 0
-}
-
-gitsuicide() {
-    msg="${1:-The end}"
-    branch="$(git branch --show-current)"
-
-    git checkout --orphan tmp
-
-    git add -A
-    git commit -sam "$msg"
-
-    git branch -D "$branch"
-    git branch -m "$branch"
-
-    git push -f origin "$branch"
-}
-
-cm() {
-    printf ' * Looking for completions directory... '
-    if [ -d 'completions' ]; then
-        echo 'found'
-    else
-        echo 'not found' >&2
-        return 1
-    fi
-
-    printf ' * Looking for bash completions... '
-    local comps
-    comps="$(find 'completions' -type f -path '*.bash')"
-
-    if [ -z "$comps" ]; then
-        echo 'no bash completions' >&2
-        return 2
-    else
-        echo 'found'
-    fi
-
-    echo ' * Pulling up fzf selector'
-    local comp
-    comp="$(echo "$comps" | fzf)"
-
-    printf ' * Applying completion... '
-    if [ -f "$comp" ]; then
-        source -- "$comp"
-        echo 'done'
-    else
-        echo 'not a valid file' >&2
-        return 3
-    fi
 }

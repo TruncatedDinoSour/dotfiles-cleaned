@@ -14,8 +14,8 @@ augroup END
 " Update CoC and VimPlug
 function! s:PackUpdate()
     CocUpdate
-    PlugUpdate
     PlugUpgrade
+    PlugUpdate
 endfunction
 
 com! PackUpdate call s:PackUpdate()

@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 #
 # ~/.bashrc
 #
@@ -48,8 +49,5 @@ export overlay='/home/ari/Ari/coding/resources_/overlay'
 export ntex='/home/ari/Documents/notes/doc.tex'
 export npdf='/home/ari/Documents/notes/doc.pdf'
 export ndir='/home/ari/Documents/notes'
-
-# Enable luarocks
-command -v luarocks >/dev/null && eval "$(luarocks path)"
 
 autorun || vecho 'Autorun failed'

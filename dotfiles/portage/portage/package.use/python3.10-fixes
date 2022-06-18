@@ -1,0 +1,165 @@
+# required by dev-python/sphinxcontrib-devhelp-1.0.2-r1::gentoo
+>=dev-python/sphinx-4.5.0-r1 python_targets_python3_9
+# required by app-emulation/qemu-7.0.0-r1::gentoo[doc]
+# required by @selected
+# required by @world (argument)
+>=dev-python/sphinx_rtd_theme-1.0.0 python_targets_python3_9
+# required by dev-python/sphinx-4.5.0-r1::gentoo
+# required by dev-python/sphinxcontrib-applehelp-1.0.2-r1::gentoo
+=dev-python/docutils-0.17.1-r1 python_targets_python3_9
+# required by dev-python/sphinx-4.5.0-r1::gentoo
+# required by dev-python/sphinxcontrib-applehelp-1.0.2-r1::gentoo
+>=dev-python/setuptools-62.3.3 python_targets_python3_9
+# required by dev-python/sphinx-4.5.0-r1::gentoo
+# required by dev-python/sphinxcontrib-applehelp-1.0.2-r1::gentoo
+>=dev-python/pygments-2.12.0-r1 python_targets_python3_9
+# required by dev-python/sphinxcontrib-serializinghtml-1.1.5-r1::gentoo
+# required by dev-python/sphinx-4.5.0-r1::gentoo
+# required by dev-python/sphinxcontrib-applehelp-1.0.2-r1::gentoo
+>=dev-python/gpep517-6 python_targets_python3_9
+# required by dev-python/Babel-2.10.1::gentoo
+# required by dev-python/sphinx-4.5.0-r1::gentoo
+# required by dev-python/sphinxcontrib-applehelp-1.0.2-r1::gentoo
+>=dev-python/wheel-0.37.1-r1 python_targets_python3_9
+# required by dev-python/sphinx-4.5.0-r1::gentoo
+# required by dev-python/sphinxcontrib-applehelp-1.0.2-r1::gentoo
+>=dev-python/alabaster-0.7.12-r1 python_targets_python3_9
+# required by dev-python/sphinx-4.5.0-r1::gentoo
+# required by dev-python/sphinxcontrib-applehelp-1.0.2-r1::gentoo
+>=dev-python/Babel-2.10.1 python_targets_python3_9
+# required by dev-python/sphinx-4.5.0-r1::gentoo
+# required by dev-python/sphinxcontrib-applehelp-1.0.2-r1::gentoo
+>=dev-python/imagesize-1.3.0-r1 python_targets_python3_9
+# required by dev-python/sphinx-4.5.0-r1::gentoo
+# required by dev-python/sphinxcontrib-applehelp-1.0.2-r1::gentoo
+>=dev-python/jinja-3.1.2 python_targets_python3_9
+# required by dev-python/sphinx-4.5.0-r1::gentoo
+# required by dev-python/sphinxcontrib-applehelp-1.0.2-r1::gentoo
+>=dev-python/requests-2.27.1-r1 python_targets_python3_9
+# required by dev-python/sphinx-4.5.0-r1::gentoo
+# required by dev-python/sphinxcontrib-applehelp-1.0.2-r1::gentoo
+>=dev-python/snowballstemmer-2.2.0-r1 python_targets_python3_9
+# required by dev-python/sphinx-4.5.0-r1::gentoo
+# required by dev-python/sphinxcontrib-devhelp-1.0.2-r1::gentoo
+>=dev-python/sphinxcontrib-applehelp-1.0.2-r1 python_targets_python3_9
+# required by dev-python/sphinx-4.5.0-r1::gentoo
+# required by dev-python/sphinxcontrib-applehelp-1.0.2-r1::gentoo
+>=dev-python/sphinxcontrib-devhelp-1.0.2-r1 python_targets_python3_9
+# required by dev-python/sphinx-4.5.0-r1::gentoo
+# required by dev-python/sphinxcontrib-applehelp-1.0.2-r1::gentoo
+>=dev-python/sphinxcontrib-jsmath-1.0.1-r2 python_targets_python3_9
+# required by dev-python/sphinx-4.5.0-r1::gentoo
+# required by dev-python/sphinxcontrib-applehelp-1.0.2-r1::gentoo
+>=dev-python/sphinxcontrib-htmlhelp-2.0.0-r1 python_targets_python3_9
+# required by dev-python/sphinx-4.5.0-r1::gentoo
+# required by dev-python/sphinxcontrib-applehelp-1.0.2-r1::gentoo
+>=dev-python/sphinxcontrib-serializinghtml-1.1.5-r1 python_targets_python3_9
+# required by dev-python/sphinx-4.5.0-r1::gentoo
+# required by dev-python/sphinxcontrib-applehelp-1.0.2-r1::gentoo
+>=dev-python/sphinxcontrib-qthelp-1.0.3-r1 python_targets_python3_9
+# required by dev-python/sphinx-4.5.0-r1::gentoo
+# required by dev-python/sphinxcontrib-applehelp-1.0.2-r1::gentoo
+>=dev-python/packaging-21.3-r2 python_targets_python3_9
+# required by dev-python/jinja-3.1.2::gentoo
+# required by dev-python/sphinx-4.5.0-r1::gentoo
+# required by dev-python/sphinxcontrib-applehelp-1.0.2-r1::gentoo
+>=dev-python/markupsafe-2.1.1 python_targets_python3_9
+# required by dev-python/Babel-2.10.1::gentoo
+# required by dev-python/sphinx-4.5.0-r1::gentoo
+# required by dev-python/sphinxcontrib-applehelp-1.0.2-r1::gentoo
+>=dev-python/pytz-2022.1 python_targets_python3_9
+# required by dev-python/ordered-set-4.1.0::gentoo
+# required by dev-python/setuptools-62.3.3::gentoo
+# required by dev-python/python-magic-0.4.25::gentoo
+# required by app-admin/filetools-0.4::dinolay
+# required by @selected
+# required by @world (argument)
+>=dev-python/flit_core-3.7.1 python_targets_python3_9
+# required by dev-python/setuptools-62.3.3::gentoo
+# required by dev-python/python-magic-0.4.25::gentoo
+# required by app-admin/filetools-0.4::dinolay
+# required by @selected
+# required by @world (argument)
+>=dev-python/tomli-2.0.1 python_targets_python3_9
+# required by dev-python/packaging-21.3-r2::gentoo
+# required by dev-python/sphinx-4.5.0-r1::gentoo
+# required by dev-python/sphinxcontrib-applehelp-1.0.2-r1::gentoo
+>=dev-python/pyparsing-3.0.9 python_targets_python3_9
+# required by dev-python/setuptools-62.3.3::gentoo
+# required by dev-python/python-magic-0.4.25::gentoo
+# required by app-admin/filetools-0.4::dinolay
+# required by @selected
+# required by @world (argument)
+>=dev-python/appdirs-1.4.4-r2 python_targets_python3_9
+# required by dev-python/setuptools-62.3.3::gentoo
+# required by dev-python/python-magic-0.4.25::gentoo
+# required by app-admin/filetools-0.4::dinolay
+# required by @selected
+# required by @world (argument)
+>=dev-python/jaraco-text-3.7.0-r2 python_targets_python3_9
+# required by dev-python/nspektr-0.3.0::gentoo
+# required by dev-python/setuptools-62.3.3::gentoo
+# required by dev-python/python-magic-0.4.25::gentoo
+# required by app-admin/filetools-0.4::dinolay
+# required by @selected
+# required by @world (argument)
+>=dev-python/more-itertools-8.13.0 python_targets_python3_9
+# required by dev-python/setuptools-62.3.3::gentoo
+# required by dev-python/python-magic-0.4.25::gentoo
+# required by app-admin/filetools-0.4::dinolay
+# required by @selected
+# required by @world (argument)
+>=dev-python/nspektr-0.3.0 python_targets_python3_9
+# required by dev-python/setuptools-62.3.3::gentoo
+# required by dev-python/python-magic-0.4.25::gentoo
+# required by app-admin/filetools-0.4::dinolay
+# required by @selected
+# required by @world (argument)
+>=dev-python/ordered-set-4.1.0 python_targets_python3_9
+# required by dev-python/requests-2.27.1-r1::gentoo
+# required by dev-python/sphinx-4.5.0-r1::gentoo
+# required by dev-python/sphinxcontrib-applehelp-1.0.2-r1::gentoo
+>=dev-python/certifi-3021.3.16-r2 python_targets_python3_9
+# required by dev-python/setuptools-62.3.3::gentoo
+# required by dev-python/python-magic-0.4.25::gentoo
+# required by app-admin/filetools-0.4::dinolay
+# required by @selected
+# required by @world (argument)
+>=dev-python/setuptools_scm-6.4.2 python_targets_python3_9
+# required by dev-python/nspektr-0.3.0::gentoo
+# required by dev-python/setuptools-62.3.3::gentoo
+# required by dev-python/python-magic-0.4.25::gentoo
+# required by app-admin/filetools-0.4::dinolay
+# required by @selected
+# required by @world (argument)
+>=dev-python/jaraco-context-4.1.1-r2 python_targets_python3_9
+# required by dev-python/nspektr-0.3.0::gentoo
+# required by dev-python/setuptools-62.3.3::gentoo
+# required by dev-python/python-magic-0.4.25::gentoo
+# required by app-admin/filetools-0.4::dinolay
+# required by @selected
+# required by @world (argument)
+>=dev-python/jaraco-functools-3.5.0-r2 python_targets_python3_9
+# required by dev-python/gpep517-6::gentoo
+# required by dev-python/python-magic-0.4.25::gentoo
+# required by app-admin/filetools-0.4::dinolay
+# required by @selected
+# required by @world (argument)
+>=dev-python/installer-0.5.1 python_targets_python3_9
+# required by dev-python/requests-2.27.1-r1::gentoo
+# required by dev-python/sphinx-4.5.0-r1::gentoo
+# required by dev-python/sphinxcontrib-applehelp-1.0.2-r1::gentoo
+>=dev-python/charset_normalizer-2.0.12 python_targets_python3_9
+# required by dev-python/requests-2.27.1-r1::gentoo
+# required by dev-python/sphinx-4.5.0-r1::gentoo
+# required by dev-python/sphinxcontrib-applehelp-1.0.2-r1::gentoo
+>=dev-python/idna-3.3-r1 python_targets_python3_9
+# required by dev-python/requests-2.27.1-r1::gentoo
+# required by dev-python/sphinx-4.5.0-r1::gentoo
+# required by dev-python/sphinxcontrib-applehelp-1.0.2-r1::gentoo
+>=dev-python/urllib3-1.26.9-r1 python_targets_python3_9
+# required by dev-python/urllib3-1.26.9-r1::gentoo
+# required by dev-python/requests-2.27.1-r1::gentoo
+# required by dev-python/sphinx-4.5.0-r1::gentoo
+# required by dev-python/sphinxcontrib-applehelp-1.0.2-r1::gentoo
+>=dev-python/PySocks-1.7.1-r2 python_targets_python3_9
