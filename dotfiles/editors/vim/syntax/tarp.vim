@@ -1,1 +1,0 @@
-/home/ari/Ari/coding/projects_/tarp/editor/tarp.vim

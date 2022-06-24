@@ -32,6 +32,6 @@ COMPATSRC = explicit_bzero.c
 CC = clang
 
 # Stripper
-STRIP = strip
+STRIP = llvm-strip
 STRIPFLAGS = --strip-all --remove-section=.eh_frame --remove-section=.eh_frame_ptr --remove-section=.note.gnu.gold-version --remove-section=.note.gnu.build-id --remove-section=.note.ABI-tag --remove-section=.note --remove-section=.gnu.version --remove-section=.comment --strip-debug --strip-unneeded
 

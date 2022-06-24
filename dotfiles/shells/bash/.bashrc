@@ -43,11 +43,11 @@ source ~/.config/shells/bash/*.aliases
 GPG_TTY="$(tty)"
 export GPG_TTY
 
-export dots='/home/ari/Ari/coding/resources_/dots'
-export tdots='/home/ari/Ari/coding/resources_/tdots'
-export overlay='/home/ari/Ari/coding/resources_/overlay'
-export ntex='/home/ari/Documents/notes/doc.tex'
-export npdf='/home/ari/Documents/notes/doc.pdf'
-export ndir='/home/ari/Documents/notes'
+export dots="$HOME/Ari/coding/resources_/dots"
+export tdots="$HOME/Ari/coding/resources_/tdots"
+export overlay="$HOME/Ari/coding/resources_/overlay"
+export ntex="$HOME/Documents/notes/doc.tex"
+export npdf="$HOME/Documents/notes/doc.pdf"
+export ndir="$HOME/Documents/notes"
 
 autorun || vecho 'Autorun failed'

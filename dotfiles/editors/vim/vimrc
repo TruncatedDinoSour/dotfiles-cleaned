@@ -81,9 +81,9 @@ autocmd BufRead,BufNewFile */bindings/* set filetype=readline
 function! BuildVimComposer(info)
     if a:info.status != 'unchanged' || a:info.force
         if has('nvim')
-            !cargo build --release --locked
+            silent !cargo build --release --locked
         else
-            !cargo build --release --locked --no-default-features --features json-rpc
+            silent !cargo build --release --locked --no-default-features --features json-rpc
         endif
     endif
 endfunction
