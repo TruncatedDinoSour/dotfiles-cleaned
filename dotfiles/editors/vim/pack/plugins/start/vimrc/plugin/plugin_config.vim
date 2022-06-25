@@ -117,7 +117,7 @@ let g:markdown_fenced_languages = [
             \ 'vim', 'vi=vim', 'r',
             \ 'R=r', 'scheme', 'scm=scheme', 'c',
             \ 'cpp', 'asm=nasm', 'nasm',
-            \ 'assembly=nasm', 'lua', 'sed'
+            \ 'assembly=nasm', 'lua', 'sed', 'fa'
             \ ]
 let g:markdown_syntax_conceal = 0
 

@@ -26,6 +26,7 @@ dev-python/pip
 dev-util/ccls
 dev-util/shellcheck-bin
 dev-util/shfmt
+dev-util/strace
 dev-vcs/git
 media-fonts/fira-mono
 media-fonts/freefont
