@@ -11,6 +11,7 @@ certifi-system-store
 certifi-system-store
 charset-normalizer
 click
+colorama
 curtsies
 cwcwidth
 distlib

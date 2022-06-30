@@ -21,6 +21,7 @@ app-shells/fzf
 app-text/texlive
 app-text/zathura
 app-text/zathura-pdf-poppler
+dev-lang/fasm
 dev-lang/python
 dev-python/pip
 dev-util/ccls

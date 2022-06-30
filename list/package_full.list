@@ -128,6 +128,7 @@ app-text/zathura
 app-text/zathura-pdf-poppler
 app-vim/gentoo-syntax
 dev-db/sqlite
+dev-lang/fasm
 dev-lang/go
 dev-lang/lua
 dev-lang/lua

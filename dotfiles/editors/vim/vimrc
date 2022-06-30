@@ -53,7 +53,7 @@ autocmd Filetype racket,scheme,lisp,clojure set lisp
 autocmd BufWritePre,BufRead,BufNewFile /mnt/*,/tmp/*,/media/* set noundofile undodir=
 
 " Assembly uses nasm
-autocmd Filetype asm set ft=nasm
+autocmd Filetype asm set ft=fasm
 
 " Set jinja to html
 autocmd BufRead,BufNewFile *.j2 set filetype=html
@@ -110,6 +110,7 @@ call plug#begin("~/.vim/plugged")
     Plug 'TruncatedDinosour/vimbuddy.vim'
     Plug 'euclio/vim-markdown-composer', { 'do': function('BuildVimComposer') }
     Plug 'godlygeek/tabular'
+    Plug 'fedorenchik/fasm.vim'
 call plug#end()
 
 colorscheme coffee                      " Set the theme
