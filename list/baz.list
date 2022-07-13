@@ -1,18 +1,4 @@
  * ----------------
- * Description: Baz plugin for making commands short
- * ----------------
- * Name: shortcmd-baz-plugin
- * License: WTFPL
- * Version: v3
- * Author: Ari Archer
- * Root_plugin_directory: plugin
- * Recomended_install_method: git
- * Source: https://ari-web.xyz/gh/shortcmd-baz-plugin
- * Installed_with_method: git
- * Disabled: No
-
-
- * ----------------
  * Description: Baz plugin for making your man pages colourful
  * ----------------
  * Name: coloured-man-pages-plugin
@@ -162,6 +148,34 @@
  * Root_plugin_directory: plugin
  * Recomended_install_method: git
  * Source: https://ari-web.xyz/gh/venvin-baz-plugin
+ * Installed_with_method: git
+ * Disabled: No
+
+
+ * ----------------
+ * Description: Baz plugin for making commands short
+ * ----------------
+ * Name: shortcmd-baz-plugin
+ * License: WTFPL
+ * Version: v4
+ * Author: Ari Archer
+ * Root_plugin_directory: plugin
+ * Recomended_install_method: git
+ * Source: https://ari-web.xyz/gh/shortcmd-baz-plugin
+ * Installed_with_method: git
+ * Disabled: No
+
+
+ * ----------------
+ * Description: Baz plugin for git cli a bit less verbose
+ * ----------------
+ * Name: git-aliases-plugin
+ * License: WTFPL
+ * Version: v2
+ * Author: Ari Archer
+ * Root_plugin_directory: plugin
+ * Recomended_install_method: git
+ * Source: https://ari-web.xyz/gh/git-aliases-plugin
  * Installed_with_method: git
  * Disabled: No
 

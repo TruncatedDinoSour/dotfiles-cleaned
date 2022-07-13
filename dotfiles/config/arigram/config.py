@@ -27,8 +27,7 @@ MSG_MODIFIERS = {
     "kde": lambda string: string.replace("c", "k").replace("C", "K"),
     "swap": lambda string: string.swapcase(),
     "ok hun": lambda string: string.title().removesuffix(".") + ".",
-    "sr2": lambda string: "".join((chr(ord(character) << 2) for character in string)),
-    "!sr2": lambda string: "".join((chr(ord(character) >> 2) for character in string)),
+    "sr2": lambda string: "".join((chr((((ord(character) << 2) | 6) ^ 18) // 2) for character in string)),
     "c l o s e  y o u r  f u c k i n g  d o o r": lambda string: " ".join(string),
 }
 

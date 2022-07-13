@@ -1,6 +1,6 @@
 #!/usr/bin/env sh
 
-userresources="$HOME/.config/Xresources"
+userresources="$HOME/.config/.Xresources"
 usermodmap="$HOME/.config/.Xmodmap"
 sysresources='/etc/X11/xinit/.Xresources'
 sysmodmap='/etc/X11/xinit/.Xmodmap'

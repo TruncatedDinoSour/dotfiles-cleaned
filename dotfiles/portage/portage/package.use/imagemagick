@@ -1,0 +1,1 @@
+media-gfx/imagemagick -X jpeg -cxx -zlib -truetype -bzip2

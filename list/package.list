@@ -42,6 +42,7 @@ net-misc/dhcpcd
 net-misc/netifrc
 net-p2p/transmission-cli
 net-wireless/wpa_supplicant
+sys-apps/ack
 sys-apps/bat
 sys-apps/duf
 sys-apps/lsd

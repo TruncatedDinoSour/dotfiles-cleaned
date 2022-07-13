@@ -229,6 +229,7 @@ dev-perl/File-DesktopEntry
 dev-perl/File-HomeDir
 dev-perl/File-Listing
 dev-perl/File-MimeInfo
+dev-perl/File-Next
 dev-perl/File-Slurper
 dev-perl/File-Which
 dev-perl/HTML-Parser
@@ -489,6 +490,7 @@ perl-core/Encode
 perl-core/File-Temp
 perl-core/Scalar-List-Utils
 sec-keys/openpgp-keys-gentoo-release
+sys-apps/ack
 sys-apps/acl
 sys-apps/attr
 sys-apps/baselayout
