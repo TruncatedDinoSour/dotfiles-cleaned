@@ -138,7 +138,7 @@ cd dotfiles/etc/firefox || exit 1
 cd ../../.. || exit 2
 
 # sed -i '/PHONE/d' dotfiles/config/arigram/config.py
-sed -i '/signingkey/d' dotfiles/config/git/config
+sed -i '/signingkey/d; /email/d; /name/d; /\[user\]/d; /\[github\]/d; /user/d' dotfiles/config/git/config
 sed -i '/ssh$/d' dotfiles/core/hosts
 
 chown -R ari:ari dotfiles list

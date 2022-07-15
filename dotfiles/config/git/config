@@ -1,6 +1,3 @@
-[user]
-    email = ari.web.xyz@gmail.com
-    name = Ari Archer
 
 [credential]
     helper = cache
@@ -29,5 +26,3 @@
 [instaweb]
     browser = firefox
 
-[github]
-    user = TruncatedDinosour
