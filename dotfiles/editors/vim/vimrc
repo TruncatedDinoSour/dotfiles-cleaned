@@ -105,7 +105,7 @@ call plug#begin("~/.vim/plugged")
     Plug 'editorconfig/editorconfig-vim'
     Plug 'haya14busa/is.vim'
     Plug 'machakann/vim-highlightedyank'
-    Plug 'luochen1990/rainbow'
+"   Plug 'luochen1990/rainbow'
     Plug 'coffee-theme/coffee.vim'
     Plug 'TruncatedDinosour/vimbuddy.vim'
     Plug 'euclio/vim-markdown-composer', { 'do': function('BuildVimComposer') }
