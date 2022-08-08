@@ -6,6 +6,7 @@ alias cat='$__BASH_BIN_DIR/bat'
 alias clear='$__BASH_BIN_DIR/clear; autorun'
 
 # alias sudo="\$__BASH_BIN_DIR/sudo -E env PATH=\"$PATH\""
+alias wget='$__BASH_BIN_DIR/axel'
 
 alias fzf="\$__BASH_BIN_DIR/fzf --preview 'bat --theme=\"gruvbox-dark\" --color=always --style=numbers --line-range=:500 {}'"
 alias killyourself='$__BASH_CORE_BIN_DIR/kill -9 $$'

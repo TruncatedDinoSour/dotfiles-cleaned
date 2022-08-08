@@ -2,5 +2,5 @@ lrwxrwxrwx 1 root root 17 Oct 20  2021 /root/.bashrc -> /home/ari/.bashrc
 lrwxrwxrwx 1 root root 17 Oct 20  2021 /root/.config -> /home/ari/.config
 lrwxrwxrwx 1 root root 16 Oct 20  2021 /root/.icons -> /home/ari/.icons
 lrwxrwxrwx 1 root root 16 Oct 20  2021 /root/.local -> /home/ari/.local
-lrwxrwxrwx 1 root root 18 Oct 20  2021 /root/.profile -> /home/ari/.profile
+lrwxrwxrwx 1 root root 17 Aug  8 17:49 /root/.profile -> /home/ari/.bashrc
 lrwxrwxrwx 1 root root 14 Oct 20  2021 /root/.vim -> /home/ari/.vim

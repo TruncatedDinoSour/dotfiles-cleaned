@@ -22,8 +22,7 @@ source ~/.config/shells/tmux/*.conf
 
 # Check for TMUX
 if [ -z "$TMUX" ] && [ "$TERM" != 'linux' ] && command -v tmux >/dev/null && [ ! "$__BASH_TMUX_DISABLE" ]; then
-    tmux -2 -l
-    exit 127
+    exec tmux -2 -l
 else
     vecho 'TMUX not started'
 fi

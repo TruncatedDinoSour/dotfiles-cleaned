@@ -2,7 +2,7 @@
 
 set -xe
 
-GENERIC_FLAGS="-std=c++98 -Wall -Wextra -Wpedantic -Wshadow -Werror -pedantic -march=native -pipe -o ../PROJECT_NAME.elf main.cpp"
+GENERIC_FLAGS="-std=c++98 -Wall -Wextra -Wpedantic -Wshadow -Werror -pedantic -march=native -pipe -o ../PROJECT_NAME.elf main.cc"
 
 main() {
     CXX="${CXX:-clang++}"

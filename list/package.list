@@ -6,6 +6,7 @@ app-admin/pwdtools
 app-editors/vim
 app-emulation/mkqemuvm
 app-emulation/qemu
+app-eselect/eselect-python
 app-misc/char
 app-misc/colourpicker
 app-misc/lmgr
@@ -38,6 +39,7 @@ media-gfx/jpegoptim
 media-gfx/shot
 media-sound/alsa-utils
 media-video/mpv::dinolay
+net-misc/axel
 net-misc/dhcpcd
 net-misc/netifrc
 net-p2p/transmission-cli

@@ -67,6 +67,7 @@ app-eselect/eselect-lib-bin-symlink
 app-eselect/eselect-lua
 app-eselect/eselect-notify-send
 app-eselect/eselect-pinentry
+app-eselect/eselect-python
 app-eselect/eselect-rust
 app-eselect/eselect-vi
 app-i18n/uchardet
@@ -345,6 +346,7 @@ dev-python/sphinxcontrib-jsmath
 dev-python/sphinxcontrib-qthelp
 dev-python/sphinxcontrib-serializinghtml
 dev-python/tomli
+dev-python/typing-extensions
 dev-python/urllib3
 dev-python/wheel
 dev-python/zipp
@@ -473,6 +475,7 @@ net-libs/libssh2
 net-libs/libtirpc
 net-libs/nghttp2
 net-libs/nodejs
+net-misc/axel
 net-misc/curl
 net-misc/dhcpcd
 net-misc/iputils
@@ -485,6 +488,7 @@ net-p2p/transmission-cli
 net-wireless/crda
 net-wireless/wireless-regdb
 net-wireless/wpa_supplicant
+perl-core/Compress-Raw-Zlib
 perl-core/CPAN
 perl-core/Encode
 perl-core/File-Temp
