@@ -1,6 +1,7 @@
 /* See LICENSE file for copyright and license details. */
 
 #include <X11/XF86keysym.h>
+#include "dwmutils.h"
 
 /* appearance */
 static const unsigned int gappx = 2;    /* gaps */
@@ -35,45 +36,44 @@ static const Rule rules[] = {
     /* class        instance   title       tags mask   monitor */
     /*                                     (1 << tag - 1) */
     /* all tags */
-    {"st", NULL, NULL, 0, -1},
-    {"Alacritty", NULL, NULL, 0, -1},
+    mk_atag("st", ALL_TAGS),
+    mk_atag("Alacritty", ALL_TAGS),
 
     /* tag 2 */
-    {"Firefox", NULL, NULL, 1 << 1, -1},
-    {"firefox", NULL, NULL, 1 << 1, -1},
+    mk_ftag("Firefox", 2),
+    mk_ftag("firefox", 2),
 
-    {"Pale moon", NULL, NULL, 1 << 1, -1},
-    {"Tor Browser", NULL, NULL, 1 << 1, -1},
-    {"LibreWolf", NULL, NULL, 1 << 1, -1},
-    {"chromium", NULL, NULL, 1 << 1, -1},
-    {"qBittorrent", NULL, NULL, 1 << 1, -1},
-    {"kristall", NULL, NULL, 1 << 1, -1},
-    {"Thunderbird", NULL, NULL, 1 << 1, -1},
-    {"FreeTube", NULL, NULL, 1 << 1, -1},
+    mk_ftag("Pale moon", 2),
+    mk_ftag("Tor Browser", 2),
+    mk_ftag("LibreWolf", 2),
+    mk_ftag("chromium", 2),
+    mk_ftag("qBittorrent", 2),
+    mk_ftag("kristall", 2),
+    mk_ftag("Thunderbird", 2),
+    mk_ftag("FreeTube", 2),
 
     /* tag 3 */
-    {"Code", NULL, NULL, 1 << 2, -1},
-    {"VSCodium", NULL, NULL, 1 << 2, -1},
-    {"jetbrains-pycharm-ce", NULL, NULL, 1 << 2, -1},
+    mk_ftag("Code", 3),
+    mk_ftag("VSCodium", 3),
+    mk_ftag("jetbrains-pycharm-ce", 3),
 
     /* tag 4 */
-    {"discord", NULL, NULL, 1 << 3, -1},
-    {"Bitwarden", NULL, NULL, 1 << 3, -1},
-    {"TelegramDesktop", NULL, NULL, 1 << 3, -1},
-    {"KotatogramDesktop", NULL, NULL, 1 << 3, -1},
+    mk_ftag("discord", 4),
+    mk_ftag("Bitwarden", 4),
+    mk_ftag("TelegramDesktop", 4),
+    mk_ftag("KotatogramDesktop", 4),
 
     /* tag 5 */
-    {"Microsoft Teams - Preview", NULL, NULL, 1 << 4, -1},
-    {"teams-for-linux", NULL, NULL, 1 << 4, -1},
-    {"zoom", NULL, NULL, 1 << 4, -1},
+    mk_ftag("Microsoft Teams - Preview", 5),
+    mk_ftag("teams-for-linux", 5),
+    mk_ftag("zoom", 5),
 
     /* tag 6 */
-    {"VirtualBox Manager", NULL, NULL, 1 << 5, -1},
-    {NULL, "qemu", NULL, 1 << 5, -1},
+    mk_ftag("VirtualBox Manager", 6),
+    {NULL, "qemu", NULL, mk_tag(6), -1},
 
     /* tag 7 */
-    {"libreoffice", NULL, NULL, 1 << 6, -1},
-};
+    mk_ftag("libreoffice", 7)};
 
 /* layout(s) */
 static const float mfact = 0.5; /* factor of master area size [0.05..0.95] */
@@ -89,42 +89,37 @@ static const int resizehints =
         {MODKEY | ShiftMask, KEY, tag, {.ui = 1 << TAG}},                      \
         {MODKEY | ControlMask | ShiftMask, KEY, toggletag, {.ui = 1 << TAG}},
 
-/* helper for spawning shell commands in the pre dwm-5.0 fashion */
-#define SHCMD(cmd)                                                             \
-    {                                                                          \
-        .v = (const char *[]) { "/bin/sh", "-c", cmd, NULL }                   \
-    }
-
 /* commands */
 static char dmenumon[2] =
     "0"; /* component of dmenucmd, manipulated in spawn() */
 // static const char *dmenucmd[] = { "rofi", "-show", "run", NULL };
-static const char *dmenucmd[] = {"dmenu_run", NULL};
+static const char *dmenucmd[] = mk_command("dmenu_run");
 
-static const char *mutecmd[] = {"amixer", "-q",     "set",
-                                "Master", "toggle", NULL};
-static const char *volupcmd[] = {"amixer", "-q",     "set", "Master",
-                                 "5%+",    "unmute", NULL};
-static const char *voldowncmd[] = {"amixer", "-q",     "set", "Master",
-                                   "5%-",    "unmute", NULL};
+static const char *mutecmd[] =
+    mk_command("amixer", "-q", "set", "Master", "toggle");
+static const char *volupcmd[] =
+    mk_command("amixer", "-q", "set", "Master", "5%+", "unmute");
+static const char *voldowncmd[] =
+    mk_command("amixer", "-q", "set", "Master", "5%-", "unmute");
 
-static const char *brupcmd[] = {"xbacklight", "-inc", "10", NULL};
-static const char *brdowncmd[] = {"xbacklight", "-dec", "10", NULL};
+static const char *brupcmd[] = mk_command("xbacklight", "-inc", "10");
+static const char *brdowncmd[] = mk_command("xbacklight", "-dec", "10");
 
-static const char *editorcmd[] = {"st", "-e", "vim", NULL};
-static const char *calandarcmd[] = {"st", "-e", "calcurse", NULL};
+static const char *editorcmd[] = mk_command("st", "-e", "vim");
+static const char *calandarcmd[] = mk_command("st", "-e", "calcurse");
 
-static const char *lockercmd[] = {"xautolock", "-locknow", NULL};
-static const char *browser[] = {"firefox", NULL};
-static const char *emojicmd[] = {"emoji", NULL};
-static const char *redshifttoggle[] = {"redshifttoggle", "eDP1", NULL};
+static const char *lockercmd[] = mk_command("xautolock", "-locknow", NULL);
+static const char *browser[] = mk_command("firefox", NULL);
+static const char *emojicmd[] = mk_command("emoji", NULL);
+static const char *redshifttoggle[] =
+    mk_command("redshifttoggle", "eDP1", NULL);
 
-static const char *quitdwmcmd[] = {"quitdwm", NULL};
-static const char *dwmmenucmd[] = {"dwmmenu", NULL};
+static const char *quitdwmcmd[] = mk_command("quitdwm", NULL);
+static const char *dwmmenucmd[] = mk_command("dwmmenu", NULL);
 
-static const char *termcmd[] = {"st", NULL};
-static const char *extrakbcmd[] = {"extrakb", NULL};
-static const char *weathercmd[] = {"st", "-e", "dweather", NULL};
+static const char *termcmd[] = mk_command("st");
+static const char *extrakbcmd[] = mk_command("extrakb");
+static const char *weathercmd[] = mk_command("st", "-e", "dweather");
 
 static Key keys[] = {
     /* modifier                     key        function        argument */
