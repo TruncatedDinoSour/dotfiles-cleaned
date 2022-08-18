@@ -418,6 +418,7 @@ media-fonts/freefont
 media-fonts/nerd-fonts
 media-fonts/unifont
 media-fonts/urw-fonts
+media-gfx/fbgrab
 media-gfx/feh
 media-gfx/graphite2
 media-gfx/jpegoptim
