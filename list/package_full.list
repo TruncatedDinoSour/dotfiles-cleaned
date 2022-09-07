@@ -10,6 +10,7 @@ acct-group/locate
 acct-group/lp
 acct-group/man
 acct-group/messagebus
+acct-group/pcap
 acct-group/portage
 acct-group/qemu
 acct-group/render
@@ -23,12 +24,14 @@ acct-group/tty
 acct-group/video
 acct-user/man
 acct-user/messagebus
+acct-user/pcap
 acct-user/portage
 acct-user/sshd
 app-accessibility/at-spi2-atk
 app-accessibility/at-spi2-core
 app-admin/eselect
 app-admin/filetools
+app-admin/haskell-updater
 app-admin/kbdrate-openrc
 app-admin/keepassxc
 app-admin/kos
@@ -52,6 +55,7 @@ app-crypt/gnupg
 app-crypt/gpgme
 app-crypt/libb2
 app-crypt/libmd
+app-crypt/p11-kit
 app-crypt/pinentry
 app-crypt/rhash
 app-editors/vim
@@ -63,6 +67,7 @@ app-emulation/spice-protocol
 app-eselect/eselect-ctags
 app-eselect/eselect-fontconfig
 app-eselect/eselect-iptables
+app-eselect/eselect-java
 app-eselect/eselect-lib-bin-symlink
 app-eselect/eselect-lua
 app-eselect/eselect-notify-send
@@ -102,12 +107,14 @@ app-text/docbook-xml-dtd
 app-text/docbook-xml-dtd
 app-text/docbook-xsl-ns-stylesheets
 app-text/docbook-xsl-stylesheets
+app-text/dos2unix
 app-text/dvipng
 app-text/dvipsk
 app-text/dvisvgm
 app-text/ghostscript-gpl
 app-text/lcdf-typetools
 app-text/libpaper
+app-text/mandoc
 app-text/manpager
 app-text/opensp
 app-text/po4a
@@ -129,7 +136,10 @@ app-text/zathura
 app-text/zathura-pdf-poppler
 app-vim/gentoo-syntax
 dev-db/sqlite
+dev-java/java-config
+dev-java/openjdk-bin
 dev-lang/fasm
+dev-lang/ghc
 dev-lang/go
 dev-lang/lua
 dev-lang/lua
@@ -304,6 +314,7 @@ dev-python/Babel
 dev-python/certifi
 dev-python/charset_normalizer
 dev-python/docutils
+dev-python/ensurepip-wheels
 dev-python/flit_core
 dev-python/gpep517
 dev-python/httplib2
@@ -456,6 +467,7 @@ media-libs/openal
 media-libs/openh264
 media-libs/openjpeg
 media-libs/opus
+media-libs/speexdsp
 media-libs/tiff
 media-libs/woff2
 media-sound/alsa-utils
@@ -471,6 +483,7 @@ net-libs/http-parser
 net-libs/libiscsi
 net-libs/libmnl
 net-libs/libnsl
+net-libs/libpcap
 net-libs/libslirp
 net-libs/libssh2
 net-libs/libtirpc
@@ -499,6 +512,7 @@ sys-apps/ack
 sys-apps/acl
 sys-apps/attr
 sys-apps/baselayout
+sys-apps/baselayout-java
 sys-apps/bat
 sys-apps/coreutils
 sys-apps/dbus
@@ -552,6 +566,7 @@ sys-devel/autoconf-wrapper
 sys-devel/automake
 sys-devel/automake-wrapper
 sys-devel/bc
+sys-devel/binutils
 sys-devel/binutils
 sys-devel/binutils-config
 sys-devel/bison
@@ -615,7 +630,9 @@ virtual/dev-manager
 virtual/editor
 virtual/freedesktop-icon-theme
 virtual/glu
+virtual/jdk
 virtual/jpeg
+virtual/jre
 virtual/latex-base
 virtual/libc
 virtual/libcrypt

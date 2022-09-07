@@ -23,6 +23,7 @@ app-text/texlive
 app-text/zathura
 app-text/zathura-pdf-poppler
 dev-lang/fasm
+dev-lang/ghc
 dev-lang/python
 dev-python/pip
 dev-util/ccls
@@ -65,6 +66,8 @@ sys-libs/glibc
 sys-libs/libxcrypt
 sys-process/htop-vim
 sys-process/time
+virtual/jdk
+virtual/jre
 www-client/firefox
 x11-apps/xbacklight
 x11-apps/xinit

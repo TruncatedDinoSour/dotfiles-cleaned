@@ -96,6 +96,7 @@ itsdangerous
 jaraco.context
 jaraco.functools
 jaraco.text
+java-config
 jedi
 jeepney
 Jinja2

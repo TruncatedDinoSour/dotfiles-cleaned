@@ -5,7 +5,7 @@
 
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
-export PATH="$PATH:/usr/local/bin:$HOME/.local/bin:$HOME/.config/scripts"
+export PATH="$PATH:/usr/local/bin:$HOME/.local/bin:$HOME/.cabal/bin:$HOME/.config/scripts"
 
 # config
 

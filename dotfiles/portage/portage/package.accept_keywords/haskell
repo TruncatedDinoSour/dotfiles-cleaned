@@ -1,0 +1,8 @@
+# Haskell has no stable keywords in Gentoo
+dev-lang/ghc ~amd64
+dev-haskell/* ~amd64
+app-admin/haskell-updater ~amd64
+
+# Only needed if using ::haskell, but harmless if not.
+# May as well put it in, just in case for future use.
+*/*::haskell ~amd64

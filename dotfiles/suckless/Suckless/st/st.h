@@ -106,14 +106,11 @@ char *xstrdup(const char *);
 void externalpipe(const Arg *);
 
 /* config.h globals */
-extern char *utmp;
-extern char *scroll;
-extern char *stty_args;
-extern char *vtiden;
-extern wchar_t *worddelimiters;
-extern int allowaltscreen;
-extern int allowwindowops;
+extern const char *stty_args;
+extern const char *vtiden;
+extern const wchar_t *worddelimiters;
+extern const unsigned char allowwindowops;
 extern char *termname;
-extern unsigned int tabspaces;
-extern unsigned int defaultfg;
-extern unsigned int defaultbg;
+extern const unsigned int tabspaces;
+extern const unsigned int defaultfg;
+extern const unsigned int defaultbg;

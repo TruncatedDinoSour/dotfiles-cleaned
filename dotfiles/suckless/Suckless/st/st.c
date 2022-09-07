@@ -633,12 +633,6 @@ void execsh(char *cmd, char **args) {
     if (args) {
         prog = args[0];
         arg = NULL;
-    } else if (scroll) {
-        prog = scroll;
-        arg = utmp ? utmp : sh;
-    } else if (utmp) {
-        prog = utmp;
-        arg = NULL;
     } else {
         prog = sh;
         arg = NULL;
@@ -1514,14 +1508,10 @@ void tsetmode(int priv, int set, const int *args, int narg) {
                 xsetmode(set, MODE_8BIT);
                 break;
             case 1049: /* swap screen & set/restore cursor as xterm */
-                if (!allowaltscreen)
-                    break;
                 tcursor((set) ? CURSOR_SAVE : CURSOR_LOAD);
                 /* FALLTHROUGH */
             case 47: /* swap screen */
             case 1047:
-                if (!allowaltscreen)
-                    break;
                 alt = IS_SET(MODE_ALTSCREEN);
                 if (alt) {
                     tclearregion(0, 0, term.col - 1, term.row - 1);
@@ -1687,6 +1677,7 @@ void csihandle(void) {
             tclearregion(0, term.c.y, term.c.x, term.c.y);
             break;
         case 2: /* all */
+        case 3:
             tclearregion(0, 0, term.col - 1, term.row - 1);
             break;
         default:
@@ -2076,8 +2067,6 @@ void tcontrolcode(uchar ascii) {
         if (term.esc & ESC_STR_END) {
             /* backwards compatibility to xterm */
             strhandle();
-        } else {
-            xbell();
         }
         break;
     case '\033': /* ESC */

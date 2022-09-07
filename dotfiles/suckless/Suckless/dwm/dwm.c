@@ -332,37 +332,37 @@ int applysizehints(Client *c, int *x, int *y, int *w, int *h, int interact) {
         *h = bh;
     if (*w < bh)
         *w = bh;
-    if (resizehints) {
-        /* see last two sentences in ICCCM 4.1.2.3 */
-        baseismin = c->basew == c->minw && c->baseh == c->minh;
-        if (!baseismin) { /* temporarily remove base dimensions */
-            *w -= c->basew;
-            *h -= c->baseh;
-        }
-        /* adjust for aspect limits */
-        if (c->mina > 0 && c->maxa > 0) {
-            if (c->maxa < (float)*w / *h)
-                *w = *h * c->maxa + 0.5;
-            else if (c->mina < (float)*h / *w)
-                *h = *w * c->mina + 0.5;
-        }
-        if (baseismin) { /* increment calculation requires this */
-            *w -= c->basew;
-            *h -= c->baseh;
-        }
-        /* adjust for increment value */
-        if (c->incw)
-            *w -= *w % c->incw;
-        if (c->inch)
-            *h -= *h % c->inch;
-        /* restore base dimensions */
-        *w = MAX(*w + c->basew, c->minw);
-        *h = MAX(*h + c->baseh, c->minh);
-        if (c->maxw)
-            *w = MIN(*w, c->maxw);
-        if (c->maxh)
-            *h = MIN(*h, c->maxh);
+
+    /* see last two sentences in ICCCM 4.1.2.3 */
+    baseismin = c->basew == c->minw && c->baseh == c->minh;
+    if (!baseismin) { /* temporarily remove base dimensions */
+        *w -= c->basew;
+        *h -= c->baseh;
     }
+    /* adjust for aspect limits */
+    if (c->mina > 0 && c->maxa > 0) {
+        if (c->maxa < (float)*w / *h)
+            *w = *h * c->maxa + 0.5;
+        else if (c->mina < (float)*h / *w)
+            *h = *w * c->mina + 0.5;
+    }
+    if (baseismin) { /* increment calculation requires this */
+        *w -= c->basew;
+        *h -= c->baseh;
+    }
+    /* adjust for increment value */
+    if (c->incw)
+        *w -= *w % c->incw;
+    if (c->inch)
+        *h -= *h % c->inch;
+    /* restore base dimensions */
+    *w = MAX(*w + c->basew, c->minw);
+    *h = MAX(*h + c->baseh, c->minh);
+    if (c->maxw)
+        *w = MIN(*w, c->maxw);
+    if (c->maxh)
+        *h = MIN(*h, c->maxh);
+
     return *x != c->x || *y != c->y || *w != c->w || *h != c->h;
 }
 
@@ -528,8 +528,8 @@ Monitor *createmon(void) {
 
     m = ecalloc(1, sizeof(Monitor));
     m->tagset[0] = m->tagset[1] = 1;
-    m->mfact = mfact;
-    m->nmaster = nmaster;
+    m->mfact = 0.5;
+    m->nmaster = 1;
     m->showbar = showbar;
     m->topbar = topbar;
     m->gappx = gappx;

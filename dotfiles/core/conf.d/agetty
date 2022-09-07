@@ -2,7 +2,7 @@
 #quiet="yes"
 
 # Set the baud rate of the terminal line
-#baud=""
+baud="38400"
 
 # set the terminal type
 #term_type="linux"

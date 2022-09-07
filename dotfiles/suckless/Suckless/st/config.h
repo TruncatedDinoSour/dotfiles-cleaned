@@ -7,7 +7,7 @@
  */
 static char *font =
     "Hack Nerd Font:style=regular:pixelsize=20:antialias=true:autohint=true";
-static int borderpx = 5;
+static const int borderpx = 5;
 
 /*
  * What program is execed by st depends of these precedence rules:
@@ -18,35 +18,25 @@ static int borderpx = 5;
  * 5: value of shell in config.h
  */
 static char *shell = "/bin/sh";
-char *utmp = NULL;
-/* scroll program: to enable use a string like "scroll" */
-char *scroll = NULL;
-char *stty_args = "stty raw pass8 nl -echo -iexten -cstopb 38400";
+const char *stty_args = "stty raw pass8 nl -echo -iexten -cstopb 38400";
 
 /* identification sequence returned in DA and DECID */
-char *vtiden = "\033[?6c";
-
-/* Kerning / character bounding-box multipliers */
-static float cwscale = 1.0;
-static float chscale = 1.0;
+const char *vtiden = "\033[?6c";
 
 /*
  * word delimiter string
  *
  * More advanced example: L" `'\"()[]{}"
  */
-wchar_t *worddelimiters = L" ";
+const wchar_t *worddelimiters = L" ";
 
 /* selection timeouts (in milliseconds) */
 static unsigned int doubleclicktimeout = 300;
 static unsigned int tripleclicktimeout = 600;
 
-/* alt screens */
-int allowaltscreen = 1;
-
 /* allow certain non-interactive (insecure) window operations such as:
    setting the clipboard text */
-int allowwindowops = 1;
+const unsigned char allowwindowops = 1;
 
 /*
  * draw latency range in ms - from new content/keypress/etc until drawing.
@@ -54,25 +44,8 @@ int allowwindowops = 1;
  * near minlatency, but it waits longer for slow updates to avoid partial draw.
  * low minlatency will tear/flicker more, as it can "detect" idle too early.
  */
-static double minlatency = 8;
-static double maxlatency = 33;
-
-/*
- * blinking timeout (set to 0 to disable blinking) for the terminal blinking
- * attribute.
- */
-static unsigned int blinktimeout = 0;
-
-/*
- * thickness of underline and bar cursors
- */
-static unsigned int cursorthickness = 1;
-
-/*
- * bell volume. It must be a value between -100 and 100. Use 0 for disabling
- * it
- */
-static int bellvolume = 0;
+static const double minlatency = 8;
+static const double maxlatency = 33;
 
 /* default TERM value */
 char *termname = "xterm-256color";
@@ -92,7 +65,7 @@ char *termname = "xterm-256color";
  *
  *      stty tabs
  */
-unsigned int tabspaces = 4;
+const unsigned int tabspaces = 4;
 
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
@@ -123,10 +96,10 @@ static const char *colorname[] = {
  * Default colors (colorname index)
  * foreground, background, cursor, reverse cursor
  */
-unsigned int defaultfg = 15;
-unsigned int defaultbg = 0;
-unsigned int defaultcs = 15;
-static unsigned int defaultrcs = 257;
+const unsigned int defaultfg = 15;
+const unsigned int defaultbg = 0;
+const unsigned int defaultcs = 15;
+static const unsigned int defaultrcs = 257;
 
 /*
  * Default shape of cursor
@@ -135,34 +108,34 @@ static unsigned int defaultrcs = 257;
  * 6: Bar ("|")
  * 7: Snowman ("☃")
  */
-static unsigned int cursorshape = 4;
+static const unsigned int cursorshape = 4;
 
 /*
  * Default columns and rows numbers
  */
 
-static unsigned int cols = 100;
+static unsigned int cols = 30;
 static unsigned int rows = 30;
 
 /*
  * Default colour and shape of the mouse cursor
  */
-static unsigned int mouseshape = XC_xterm;
-static unsigned int mousefg = 7;
-static unsigned int mousebg = 0;
+static const unsigned int mouseshape = XC_xterm;
+static const unsigned int mousefg = 7;
+static const unsigned int mousebg = 0;
 
 /*
  * Color used to display font attributes when fontconfig selected a font which
  * doesn't match the ones requested.
  */
-static unsigned int defaultattr = 11;
+static const unsigned int defaultattr = 11;
 
 /*
  * Force mouse select/shortcuts while mask is active (when MODE_MOUSE is set).
  * Note that if you want to use ShiftMask with selmasks, set this to an other
  * modifier, set to 0 to not use it.
  */
-static uint forcemousemod = ShiftMask;
+static const uint forcemousemod = ShiftMask;
 
 /*
  * Internal mouse shortcuts.
@@ -181,30 +154,14 @@ static MouseShortcut mshortcuts[] = {
 #define MODKEY Mod1Mask
 #define TERMMOD (ControlMask | ShiftMask)
 
-static char *openurlcmd[] = {
-    "/bin/sh", "-c",
-    "sed 's/.*│//g' | tr -d '\n' | grep -aEo "
-    "'(((http|https)://|www\\.)[a-zA-Z0-9.]*[:]?[a-zA-Z0-9./"
-    "&%?#=_-]*)|((magnet:\\?xt=urn:btih:)[a-zA-Z0-9]*)'| uniq | sed "
-    "'s/^www./http:\\/\\/www\\./g' | dmenu -p 'Follow URL: ' -l 10 | xargs "
-    "-r xdg-open",
-    "externalpipe", NULL};
-static char *copyurlcmd[] = {
-    "/bin/sh", "-c",
-    "sed 's/.*│//g' | tr -d '\n' | grep -aEo "
-    "'(((http|https)://|www\\.)[a-zA-Z0-9.]*[:]?[a-zA-Z0-9./"
-    "&%?#=_-]*)|((magnet:\\?xt=urn:btih:)[a-zA-Z0-9]*)' | uniq | sed "
-    "'s/^www./http:\\/\\/www\\./g' | dmenu -p 'Copy URL: ' -l 10 | tr -d "
-    "'\n' | xclip -selection clipboard",
-    "externalpipe", NULL};
-static char *copyoutput[] = {"/bin/sh", "-c", "st-copyout", "externalpipe",
-                             NULL};
+static const char *copyoutput[] = {"/bin/sh", "-c", "st-copyout",
+                                   "externalpipe", NULL};
 
-static char *copyline[] = {"/bin/sh", "-c", "st-copyline", "externalpipe",
-                           NULL};
+static const char *copyline[] = {"/bin/sh", "-c", "st-copyline", "externalpipe",
+                                 NULL};
 
-static char *copylines[] = {"/bin/sh", "-c", "st-copylines", "externalpipe",
-                            NULL};
+static const char *copylines[] = {"/bin/sh", "-c", "st-copylines",
+                                  "externalpipe", NULL};
 
 static Shortcut shortcuts[] = {
     /* mask                 keysym          function        argument */
@@ -224,8 +181,6 @@ static Shortcut shortcuts[] = {
     {TERMMOD, XK_H, kscrollup, {.i = -1}},
     {TERMMOD, XK_B, kscrolldown, {.i = -1}},
 
-    {MODKEY | ControlMask, XK_l, externalpipe, {.v = openurlcmd}},
-    {MODKEY, XK_y, externalpipe, {.v = copyurlcmd}},
     {MODKEY, XK_o, externalpipe, {.v = copyoutput}},
     {MODKEY, XK_g, externalpipe, {.v = copyline}},
     {TERMMOD, XK_G, externalpipe, {.v = copylines}},
@@ -256,13 +211,13 @@ static Shortcut shortcuts[] = {
  * If you want keys other than the X11 function keys (0xFD00 - 0xFFFF)
  * to be mapped below, add them to this array.
  */
-static KeySym mappedkeys[] = {-1};
+static const KeySym mappedkeys[] = {-1};
 
 /*
  * State bits to ignore when matching key or button events.  By default,
  * numlock (Mod2Mask) and keyboard layout (XK_SWITCH_MOD) are ignored.
  */
-static uint ignoremod = Mod2Mask | XK_SWITCH_MOD;
+static const uint ignoremod = Mod2Mask | XK_SWITCH_MOD;
 
 /*
  * This is the huge key array which defines all compatibility to the Linux
@@ -488,7 +443,7 @@ static Key key[] = {
  * ButtonRelease and MotionNotify.
  * If no match is found, regular selection is used.
  */
-static uint selmasks[] = {
+static const uint selmasks[] = {
     [SEL_RECTANGULAR] = Mod1Mask,
 };
 
@@ -496,6 +451,6 @@ static uint selmasks[] = {
  * Printable characters in ASCII, used to estimate the advance width
  * of single wide characters.
  */
-static char ascii_printable[] = " !\"#$%&'()*+,-./0123456789:;<=>?"
-                                "@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_"
-                                "`abcdefghijklmnopqrstuvwxyz{|}~";
+static const char ascii_printable[] = " !\"#$%&'()*+,-./0123456789:;<=>?"
+                                      "@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_"
+                                      "`abcdefghijklmnopqrstuvwxyz{|}~";

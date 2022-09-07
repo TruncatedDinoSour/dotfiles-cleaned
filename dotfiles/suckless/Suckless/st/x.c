@@ -933,8 +933,8 @@ void xloadfonts(const char *fontstr, double fontsize) {
     }
 
     /* Setting character width and height. */
-    win.cw = ceilf(dc.font.width * cwscale);
-    win.ch = ceilf(dc.font.height * chscale);
+    win.cw = dc.font.width;
+    win.ch = dc.font.height;
 
     FcPatternDel(pattern, FC_SLANT);
     FcPatternAddInteger(pattern, FC_SLANT, FC_SLANT_ITALIC);
@@ -1391,12 +1391,10 @@ void xdrawglyphfontspecs(const XftGlyphFontSpec *specs, Glyph base, int len,
 
     /* Render underline and strikethrough. */
     if (base.mode & ATTR_UNDERLINE)
-        XftDrawRect(xw.draw, fg, winx, winy + dc.font.ascent * chscale + 1,
-                    width, 1);
+        XftDrawRect(xw.draw, fg, winx, winy + dc.font.ascent + 1, width, 1);
 
     if (base.mode & ATTR_STRUCK)
-        XftDrawRect(xw.draw, fg, winx, winy + 2 * dc.font.ascent * chscale / 3,
-                    width, 1);
+        XftDrawRect(xw.draw, fg, winx, winy + 2 * dc.font.ascent / 3, width, 1);
 
     /* Reset clip to none. */
     XftDrawSetClip(xw.draw, 0);
@@ -1477,13 +1475,13 @@ void xdrawcursor(int cx, int cy, Glyph g, int ox, int oy, Glyph og) {
         case 3: /* Blinking Underline */
         case 4: /* Steady Underline */
             XftDrawRect(xw.draw, &drawcol, win.hborderpx + cx * win.cw,
-                        win.vborderpx + (cy + 1) * win.ch - cursorthickness,
-                        win.cw, cursorthickness);
+                        win.vborderpx + (cy + 1) * win.ch - 1,
+                        win.cw, 1);
             break;
         case 5: /* Blinking bar */
         case 6: /* Steady bar */
             XftDrawRect(xw.draw, &drawcol, win.hborderpx + cx * win.cw,
-                        win.vborderpx + cy * win.ch, cursorthickness, win.ch);
+                        win.vborderpx + cy * win.ch, 1, win.ch);
             break;
         }
     } else {
@@ -1619,13 +1617,6 @@ void xseturgency(int add) {
     MODBIT(h->flags, add, XUrgencyHint);
     XSetWMHints(xw.dpy, xw.win, h);
     XFree(h);
-}
-
-void xbell(void) {
-    if (!(IS_SET(MODE_FOCUSED)))
-        xseturgency(1);
-    if (bellvolume)
-        XkbBell(xw.dpy, xw.win, bellvolume, (Atom)NULL);
 }
 
 void focus(XEvent *ev) {
@@ -1843,20 +1834,6 @@ void run(void) {
                 continue; /* we have time, try to find idle */
         }
 
-        /* idle detected or maxlatency exhausted -> draw */
-        timeout = -1;
-        if (blinktimeout && tattrset(ATTR_BLINK)) {
-            timeout = blinktimeout - TIMEDIFF(now, lastblink);
-            if (timeout <= 0) {
-                if (-timeout > blinktimeout) /* start visible */
-                    win.mode |= MODE_BLINK;
-                win.mode ^= MODE_BLINK;
-                tsetdirtattr(ATTR_BLINK);
-                lastblink = now;
-                timeout = blinktimeout;
-            }
-        }
-
         draw();
         XFlush(xw.dpy);
         drawing = 0;
@@ -1881,9 +1858,6 @@ int main(int argc, char *argv[]) {
     xsetcursor(cursorshape);
 
     ARGBEGIN {
-    case 'a':
-        allowaltscreen = 0;
-        break;
     case 'c':
         opt_class = EARGF(usage());
         break;
