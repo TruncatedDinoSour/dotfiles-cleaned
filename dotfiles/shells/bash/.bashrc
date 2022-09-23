@@ -38,10 +38,6 @@ source ~/.config/shells/bash/*.functions
 # Aliases
 source ~/.config/shells/bash/*.aliases
 
-# GPG
-GPG_TTY="$(tty)"
-export GPG_TTY
-
 export dots="$HOME/Ari/coding/resources_/dots"
 export tdots="$HOME/Ari/coding/resources_/tdots"
 export overlay="$HOME/Ari/coding/resources_/overlay"

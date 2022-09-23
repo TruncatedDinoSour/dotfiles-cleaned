@@ -19,7 +19,7 @@
 /etc/sudoers -> dotfiles/core
 /etc/X11/xorg.conf.d -> dotfiles/core
 /etc/rc.conf -> dotfiles/core
-/etc/modprobe.d/kernel_unfreeze_rtw.conf -> dotfiles/core
+/etc/modprobe.d/rtw.conf -> dotfiles/core
 /etc/conf.d -> dotfiles/core
 /etc/profile -> dotfiles/core
 /etc/profile.env -> dotfiles/core

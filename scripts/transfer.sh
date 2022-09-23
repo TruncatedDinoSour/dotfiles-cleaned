@@ -41,7 +41,7 @@ from=(
     '/etc/sudoers'
     '/etc/X11/xorg.conf.d'
     '/etc/rc.conf'
-    '/etc/modprobe.d/kernel_unfreeze_rtw.conf'
+    '/etc/modprobe.d/rtw.conf'
     '/etc/conf.d'
     '/etc/profile'
     '/etc/profile.env'

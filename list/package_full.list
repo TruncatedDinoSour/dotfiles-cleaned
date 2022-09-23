@@ -10,7 +10,6 @@ acct-group/locate
 acct-group/lp
 acct-group/man
 acct-group/messagebus
-acct-group/pcap
 acct-group/portage
 acct-group/qemu
 acct-group/render
@@ -24,14 +23,12 @@ acct-group/tty
 acct-group/video
 acct-user/man
 acct-user/messagebus
-acct-user/pcap
 acct-user/portage
 acct-user/sshd
 app-accessibility/at-spi2-atk
 app-accessibility/at-spi2-core
 app-admin/eselect
 app-admin/filetools
-app-admin/haskell-updater
 app-admin/kbdrate-openrc
 app-admin/keepassxc
 app-admin/kos
@@ -55,7 +52,6 @@ app-crypt/gnupg
 app-crypt/gpgme
 app-crypt/libb2
 app-crypt/libmd
-app-crypt/p11-kit
 app-crypt/pinentry
 app-crypt/rhash
 app-editors/vim
@@ -67,7 +63,6 @@ app-emulation/spice-protocol
 app-eselect/eselect-ctags
 app-eselect/eselect-fontconfig
 app-eselect/eselect-iptables
-app-eselect/eselect-java
 app-eselect/eselect-lib-bin-symlink
 app-eselect/eselect-lua
 app-eselect/eselect-notify-send
@@ -107,7 +102,6 @@ app-text/docbook-xml-dtd
 app-text/docbook-xml-dtd
 app-text/docbook-xsl-ns-stylesheets
 app-text/docbook-xsl-stylesheets
-app-text/dos2unix
 app-text/dvipng
 app-text/dvipsk
 app-text/dvisvgm
@@ -136,10 +130,7 @@ app-text/zathura
 app-text/zathura-pdf-poppler
 app-vim/gentoo-syntax
 dev-db/sqlite
-dev-java/java-config
-dev-java/openjdk-bin
 dev-lang/fasm
-dev-lang/ghc
 dev-lang/go
 dev-lang/lua
 dev-lang/lua
@@ -152,6 +143,7 @@ dev-lang/python-exec
 dev-lang/python-exec-conf
 dev-lang/rust
 dev-lang/swig
+dev-lang/tcc
 dev-lang/tcl
 dev-lang/tk
 dev-lang/vala
@@ -308,9 +300,7 @@ dev-perl/WWW-RobotRules
 dev-perl/XML-Parser
 dev-perl/XString
 dev-perl/YAML-Tiny
-dev-python/alabaster
 dev-python/appdirs
-dev-python/Babel
 dev-python/certifi
 dev-python/charset_normalizer
 dev-python/docutils
@@ -319,8 +309,6 @@ dev-python/flit_core
 dev-python/gpep517
 dev-python/httplib2
 dev-python/idna
-dev-python/imagesize
-dev-python/importlib_metadata
 dev-python/installer
 dev-python/jaraco-context
 dev-python/jaraco-functools
@@ -342,25 +330,14 @@ dev-python/pyparsing
 dev-python/pyperclip
 dev-python/PySocks
 dev-python/python-magic
-dev-python/pytz
 dev-python/requests
 dev-python/setuptools
 dev-python/setuptools_scm
 dev-python/six
-dev-python/snowballstemmer
-dev-python/sphinx
-dev-python/sphinx_rtd_theme
-dev-python/sphinxcontrib-applehelp
-dev-python/sphinxcontrib-devhelp
-dev-python/sphinxcontrib-htmlhelp
-dev-python/sphinxcontrib-jsmath
-dev-python/sphinxcontrib-qthelp
-dev-python/sphinxcontrib-serializinghtml
 dev-python/tomli
 dev-python/typing-extensions
 dev-python/urllib3
 dev-python/wheel
-dev-python/zipp
 dev-python/zxcvbn
 dev-qt/linguist-tools
 dev-qt/qtconcurrent
@@ -467,7 +444,6 @@ media-libs/openal
 media-libs/openh264
 media-libs/openjpeg
 media-libs/opus
-media-libs/speexdsp
 media-libs/tiff
 media-libs/woff2
 media-sound/alsa-utils
@@ -483,7 +459,6 @@ net-libs/http-parser
 net-libs/libiscsi
 net-libs/libmnl
 net-libs/libnsl
-net-libs/libpcap
 net-libs/libslirp
 net-libs/libssh2
 net-libs/libtirpc
@@ -512,7 +487,6 @@ sys-apps/ack
 sys-apps/acl
 sys-apps/attr
 sys-apps/baselayout
-sys-apps/baselayout-java
 sys-apps/bat
 sys-apps/coreutils
 sys-apps/dbus
@@ -566,7 +540,6 @@ sys-devel/autoconf-wrapper
 sys-devel/automake
 sys-devel/automake-wrapper
 sys-devel/bc
-sys-devel/binutils
 sys-devel/binutils
 sys-devel/binutils-config
 sys-devel/bison
@@ -630,9 +603,7 @@ virtual/dev-manager
 virtual/editor
 virtual/freedesktop-icon-theme
 virtual/glu
-virtual/jdk
 virtual/jpeg
-virtual/jre
 virtual/latex-base
 virtual/libc
 virtual/libcrypt

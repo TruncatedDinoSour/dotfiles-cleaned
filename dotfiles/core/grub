@@ -29,7 +29,7 @@ GRUB_DISTRIBUTOR="Gentoo"
 # GRUB_CMDLINE_LINUX="init=/usr/lib/systemd/systemd"
 
 # Append parameters to the linux kernel command line for non-recovery entries
-GRUB_CMDLINE_LINUX_DEFAULT="loglevel=3 init=/sbin/openrc-init"
+GRUB_CMDLINE_LINUX_DEFAULT="loglevel=3 init=/sbin/openrc-init pcie_aspm.policy=performance"
 
 # Uncomment to disable graphical terminal (grub-pc only)
 #GRUB_TERMINAL=console
