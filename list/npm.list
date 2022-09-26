@@ -1,5 +1,6 @@
 /usr/lib64
 ├── corepack@0.12.0
+├── html-minifier@4.0.0
 ├── imgur-cli@0.7.0
 ├── js-beautify@1.14.4
 ├── live-server@1.2.2

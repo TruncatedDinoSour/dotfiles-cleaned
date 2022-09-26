@@ -44,6 +44,7 @@ media-video/mpv::dinolay
 net-misc/axel
 net-misc/dhcpcd
 net-misc/netifrc
+net-misc/socat
 net-p2p/transmission-cli
 net-wireless/wpa_supplicant
 sys-apps/ack

@@ -217,8 +217,10 @@ rsa
 scikit-learn
 scipy
 SecretStorage
+semantic-version
 Send2Trash
 setuptools
+setuptools-rust
 setuptools-scm
 shellingham
 simpleaudio
