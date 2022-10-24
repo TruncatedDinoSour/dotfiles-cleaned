@@ -26,7 +26,7 @@ pip_upgrade() {
 
 dlt() {
     local name="$RANDOM"
-    read -p "This will delete $1 perminatly, are you sure you want to do this? (type 'yes, please delete $1, do as I say $name' in all caps without the quates to confirm): " confirm
+    read -rp "This will delete $1 perminatly, are you sure you want to do this? (type 'yes, please delete $1, do as I say $name' in all caps without the quates to confirm): " confirm
 
     [[ $confirm != "YES, PLEASE DELETE ${1^^}, DO AS I SAY $name" ]] && return 1
 

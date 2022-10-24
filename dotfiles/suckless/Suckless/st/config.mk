@@ -1,5 +1,5 @@
 # st version
-VERSION = 0.8.5
+VERSION = 0.9
 
 # Customize below to fit your system
 
@@ -22,8 +22,8 @@ LIBS = -L$(X11LIB) -lm -lrt -lX11 -lutil -lXft \
 
 # flags
 STCPPFLAGS = -ffunction-sections -fdata-sections -DVERSION=\"$(VERSION)\" -D_XOPEN_SOURCE=600
-STCFLAGS = -Os -Werror -Wshadow -Wall -Wextra -Wpedantic -pedantic -ffast-math -mfancy-math-387 -fno-ident -fmerge-all-constants -fno-unroll-loops -fno-math-errno -fno-unwind-tables -fno-asynchronous-unwind-tables -ffunction-sections -fdata-sections $(INCS) $(STCPPFLAGS)
-STLDFLAGS = -Wl,--build-id=none -Wl,--hash-style=gnu,-Os -s $(LIBS)
+STCFLAGS = -Ofast -Werror -Wshadow -Wall -Wextra -Wpedantic -pedantic -ffast-math -mfancy-math-387 -fno-ident -fmerge-all-constants -fno-unroll-loops -fno-math-errno -fno-unwind-tables -fno-asynchronous-unwind-tables -ffunction-sections -fdata-sections $(INCS) $(STCPPFLAGS)
+STLDFLAGS = -Wl,--build-id=none -Wl,--hash-style=gnu,-Ofast,-flto -s $(LIBS)
 
 # OpenBSD:
 #CPPFLAGS = -DVERSION=\"$(VERSION)\" -D_XOPEN_SOURCE=600 -D_BSD_SOURCE

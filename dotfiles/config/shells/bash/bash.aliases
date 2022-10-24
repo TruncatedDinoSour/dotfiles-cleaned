@@ -3,11 +3,14 @@
 alias df='$__BASH_BIN_DIR/duf -hide special'
 alias cat='$__BASH_BIN_DIR/bat'
 
-alias clear='$__BASH_BIN_DIR/clear; autorun'
+alias clear='$__BASH_BIN_DIR/clear && autorun'
 
 # alias sudo="\$__BASH_BIN_DIR/sudo -E env PATH=\"$PATH\""
 alias wget='$__BASH_BIN_DIR/axel'
 
+alias mpvp='mpvp --shuffle --loop-playlist'
+
 alias fzf="\$__BASH_BIN_DIR/fzf --preview 'bat --theme=\"gruvbox-dark\" --color=always --style=numbers --line-range=:500 {}'"
-alias killyourself='$__BASH_CORE_BIN_DIR/kill -9 $$'
-alias full_upgrade="vim +PlugUpdate +qall! && vim +CocUpdate +qall! && \${__BASH_RUNAS:-sudo} npm update --location=global --unsafe-perm=true && \${__BASH_RUNAS:-sudo} npm upgrade --location=global --unsafe-perm=true && pip_upgrade && \${__BASH_RUNAS:-sudo} emerge --sync && \${__BASH_RUNAS:-sudo} emerge -uDUN --with-bdeps=y @world"
+alias full_upgrade="baz update && vim +PlugUpdate +qall! && vim +CocUpdate +qall! && \${__BASH_RUNAS:-sudo} npm update --location=global --unsafe-perm=true && \${__BASH_RUNAS:-sudo} npm upgrade --location=global --unsafe-perm=true && pip_upgrade && \${__BASH_RUNAS:-sudo} emerge --sync && \${__BASH_RUNAS:-sudo} emerge -uDUN --with-bdeps=y @world"
+
+alias dilf='vim'

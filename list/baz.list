@@ -13,20 +13,6 @@
 
 
  * ----------------
- * Description: Baz plugin for making your bash better
- * ----------------
- * Name: better-bash-baz-plugin
- * License: WTFPL
- * Version: v8
- * Author: Ari Archer
- * Root_plugin_directory: plugin
- * Recomended_install_method: git
- * Source: https://ari-web.xyz/gh/better-bash-baz-plugin
- * Installed_with_method: git
- * Disabled: No
-
-
- * ----------------
  * Description: Baz plugin for making your ls better
  * ----------------
  * Name: ls-aliases-baz-plugin
@@ -73,7 +59,7 @@
  * ----------------
  * Name: trash-cli-rm-baz
  * License: WTFPL
- * Version: v4
+ * Version: v8
  * Author: Ari Archer
  * Root_plugin_directory: plugin
  * Recomended_install_method: git
@@ -101,25 +87,11 @@
  * ----------------
  * Name: bettercmd-baz-plugin
  * License: WTFPL
- * Version: v2
+ * Version: v4
  * Author: Ari Archer
  * Root_plugin_directory: plugin
  * Recomended_install_method: git
  * Source: https://ari-web.xyz/gh/bettercmd-baz-plugin
- * Installed_with_method: git
- * Disabled: No
-
-
- * ----------------
- * Description: Baz plugin for coffee theme in bash prompt
- * ----------------
- * Name: coffee.baz-plugin
- * License: WTFPL
- * Version: v5
- * Author: Ari Archer
- * Root_plugin_directory: plugin
- * Recomended_install_method: git
- * Source: https://github.com/coffee-theme/coffee.baz-plugin
  * Installed_with_method: git
  * Disabled: No
 
@@ -143,7 +115,7 @@
  * ----------------
  * Name: shortcmd-baz-plugin
  * License: WTFPL
- * Version: v4
+ * Version: v5
  * Author: Ari Archer
  * Root_plugin_directory: plugin
  * Recomended_install_method: git
@@ -157,7 +129,7 @@
  * ----------------
  * Name: git-aliases-plugin
  * License: WTFPL
- * Version: v2
+ * Version: v3
  * Author: Ari Archer
  * Root_plugin_directory: plugin
  * Recomended_install_method: git
@@ -171,12 +143,68 @@
  * ----------------
  * Name: cmdutils-baz-plugin
  * License: WTFPL
- * Version: v2
+ * Version: v4
  * Author: Ari Archer
  * Root_plugin_directory: plugin
  * Recomended_install_method: git
  * Source: https://ari-web.xyz/gh/cmdutils-baz-plugin
  * Installed_with_method: git
  * Disabled: No
+
+
+ * ----------------
+ * Description: Collect MPV player data
+ * ----------------
+ * Name: mpvp-report
+ * License: gpl3
+ * Version: v7
+ * Author: Ari Archer
+ * Root_plugin_directory: plugin
+ * Recomended_install_method: git
+ * Source: https://ari-web.xyz/gh/mpvp-report
+ * Installed_with_method: git
+ * Disabled: No
+
+
+ * ----------------
+ * Description: Baz plugin for making your bash better
+ * ----------------
+ * Name: better-bash-baz-plugin
+ * License: WTFPL
+ * Version: v9
+ * Author: Ari Archer
+ * Root_plugin_directory: plugin
+ * Recomended_install_method: git
+ * Source: https://ari-web.xyz/gh/better-bash-baz-plugin
+ * Installed_with_method: git
+ * Disabled: No
+
+
+ * ----------------
+ * Description: Baz plugin for coffee theme in bash prompt
+ * ----------------
+ * Name: coffee.baz-plugin
+ * License: WTFPL
+ * Version: v7
+ * Author: Ari Archer
+ * Root_plugin_directory: plugin
+ * Recomended_install_method: git
+ * Source: https://github.com/coffee-theme/coffee.baz-plugin
+ * Installed_with_method: git
+ * Disabled: No
+
+
+ * ----------------
+ * Description: Baz plugin for testing baz performance
+ * ----------------
+ * Name: baz-perf-plugin
+ * License: WTFPL
+ * Version: v1
+ * Author: Ari Archer
+ * Root_plugin_directory: plugin
+ * Recomended_install_method: git
+ * Source: https://ari-web.xyz/gh/baz-perf-plugin
+ * Installed_with_method: git
+ * Disabled: Yes
 
 

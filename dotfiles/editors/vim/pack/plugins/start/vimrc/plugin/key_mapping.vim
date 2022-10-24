@@ -60,3 +60,7 @@ nnoremap <C-d> <ESC>:split<space>
 
 " Tabular
 nnoremap U <ESC>:Tabularize<space>
+
+" Inc/decrement
+nnoremap X <C-a>
+nnoremap Z <C-x>

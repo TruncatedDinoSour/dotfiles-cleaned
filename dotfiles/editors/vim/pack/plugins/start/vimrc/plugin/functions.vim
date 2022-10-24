@@ -59,4 +59,3 @@ autocmd! filetype python map F :call FormatPythonCode()<CR>
 " Convert to spaces
 autocmd! bufreadpost * set expandtab | retab!
 autocmd! bufwritepre * set expandtab | retab!
-

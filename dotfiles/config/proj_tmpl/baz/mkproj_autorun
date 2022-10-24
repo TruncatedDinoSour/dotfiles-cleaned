@@ -24,7 +24,7 @@ EOF
 
 # Installation
 
-- Using [baz plugin manager](https://ari-web.xyz/gh/baz):
+- Using the [baz plugin manager](https://ari-web.xyz/gh/baz):
 
 \`\`\`bash
 $ baz install git '$PROJ_GIT'

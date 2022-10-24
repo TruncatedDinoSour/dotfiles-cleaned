@@ -27,3 +27,6 @@ autocmd BufRead,BufNewFile Buildfile set filetype=sh
 " Readline
 autocmd BufRead,BufNewFile *.rl set filetype=readline
 autocmd BufRead,BufNewFile */bindings/* set filetype=readline
+
+" Index files for https://etc.ari-web.xyz/
+autocmd BufRead,BufNewFile _index.txt set filetype=html

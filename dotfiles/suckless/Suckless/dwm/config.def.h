@@ -115,7 +115,7 @@ static const char *termcmd[] = mk_command("st");
 static const char *extrakbcmd[] = mk_command("extrakb");
 static const char *weathercmd[] = mk_command("st", "-e", "dweather");
 
-static Key keys[] = {
+static const Key keys[] = {
     /* modifier                     key        function        argument */
     {MODKEY, XK_d, spawn, {.v = dmenucmd}},
     {MODKEY, XK_Return, spawn, {.v = termcmd}},

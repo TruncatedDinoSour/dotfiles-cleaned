@@ -30,7 +30,6 @@ app-accessibility/at-spi2-core
 app-admin/eselect
 app-admin/filetools
 app-admin/kbdrate-openrc
-app-admin/keepassxc
 app-admin/kos
 app-admin/perl-cleaner
 app-admin/pwdtools
@@ -73,7 +72,6 @@ app-eselect/eselect-vi
 app-i18n/uchardet
 app-misc/c_rehash
 app-misc/ca-certificates
-app-misc/char
 app-misc/colourpicker
 app-misc/editor-wrapper
 app-misc/lmgr
@@ -150,8 +148,6 @@ dev-lang/vala
 dev-lang/yasm
 dev-libs/atk
 dev-libs/boost
-dev-libs/botan
-dev-libs/double-conversion
 dev-libs/elfutils
 dev-libs/expat
 dev-libs/fribidi
@@ -345,17 +341,6 @@ dev-python/typing-extensions
 dev-python/urllib3
 dev-python/wheel
 dev-python/zxcvbn
-dev-qt/linguist-tools
-dev-qt/qtconcurrent
-dev-qt/qtcore
-dev-qt/qtdbus
-dev-qt/qtgui
-dev-qt/qtnetwork
-dev-qt/qtsvg
-dev-qt/qttest
-dev-qt/qtwidgets
-dev-qt/qtx11extras
-dev-qt/qtxml
 dev-tcltk/blt
 dev-tcltk/tix
 dev-tex/bibtexu
@@ -416,8 +401,8 @@ media-gfx/fbgrab
 media-gfx/feh
 media-gfx/graphite2
 media-gfx/jpegoptim
+media-gfx/optipng
 media-gfx/potrace
-media-gfx/qrencode
 media-gfx/sam2p
 media-gfx/scrot
 media-gfx/shot

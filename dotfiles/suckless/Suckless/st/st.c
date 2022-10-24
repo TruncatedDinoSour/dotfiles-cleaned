@@ -934,7 +934,7 @@ void ttyresize(int tw, int th) {
         fprintf(stderr, "Couldn't set window size: %s\n", strerror(errno));
 }
 
-void ttyhangup() {
+void ttyhangup(void) {
     /* Send SIGHUP to shell */
     kill(pid, SIGHUP);
 }

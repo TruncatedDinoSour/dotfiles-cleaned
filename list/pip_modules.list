@@ -41,6 +41,7 @@ configobj
 contextlib2
 crashtest
 cryptography
+css-html-js-minify
 curtsies
 cwcwidth
 cycler
@@ -51,6 +52,7 @@ defusedxml
 Deprecated
 dill
 dirsync
+discord-webhook
 distlib
 distro
 dnspython
@@ -72,6 +74,7 @@ fonttools
 frozenlist
 gdbus_codegen
 gemato
+getch
 gevent
 gpg
 GPUtil
@@ -243,7 +246,6 @@ tomlkit
 tornado
 tqdm
 traitlets
-trash-cli
 typing
 typing_extensions
 typing-inspect

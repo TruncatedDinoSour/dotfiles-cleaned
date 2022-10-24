@@ -1,13 +1,11 @@
 app-admin/filetools
 app-admin/kbdrate-openrc
-app-admin/keepassxc
 app-admin/kos
 app-admin/pwdtools
 app-editors/vim
 app-emulation/mkqemuvm
 app-emulation/qemu
 app-eselect/eselect-python
-app-misc/char
 app-misc/colourpicker
 app-misc/lmgr
 app-misc/mkproj
@@ -38,6 +36,7 @@ media-fonts/unifont
 media-gfx/fbgrab
 media-gfx/feh
 media-gfx/jpegoptim
+media-gfx/optipng
 media-gfx/shot
 media-sound/alsa-utils
 media-video/mpv::dinolay

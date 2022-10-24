@@ -1,0 +1,153 @@
+@import url("https://cdn.jsdelivr.net/npm/hack-font@3/build/web/hack.min.css");
+
+:root {
+    color-scheme: dark;
+
+    --clr-bg: #262220;
+    --clr-fg: #f9f6e8;
+
+    --clr-code-bg: #1f1b1a;
+    --clr-code-fg: #f0f3e6;
+    --clr-code-bg-dark: #181414;
+
+    --scrollbar-height: 6px; /* TODO: Firefox */
+}
+
+*,
+*::before,
+*::after {
+    background-color: var(--clr-bg);
+    color: var(--clr-fg);
+    font-family: Hack, hack, monospace;
+
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+
+    scrollbar-color: var(--clr-code-bg-dark) transparent;
+
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+
+    word-wrap: break-word;
+
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar,
+::-webkit-scrollbar-thumb {
+    height: var(--scrollbar-height);
+}
+
+::-webkit-scrollbar {
+    background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--clr-code-bg-dark);
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+    display: none !important;
+}
+
+body {
+    margin: auto;
+    padding: 2rem;
+    max-width: 1100px;
+    min-height: 100vh;
+    text-rendering: optimizeSpeed;
+}
+
+h1 {
+    text-align: center;
+    margin: 1em;
+    font-size: 2em;
+}
+
+li {
+    margin: 0.5em;
+}
+
+a {
+    text-decoration: none;
+    text-shadow: 0px 0px 4px white;
+}
+
+pre,
+pre * {
+    background-color: var(--clr-code-bg);
+}
+
+pre,
+pre *,
+code {
+    color: var(--clr-code-fg);
+}
+
+pre,
+pre code {
+    overflow-x: auto !important;
+
+    scrollbar-width: initial;
+    -ms-overflow-style: initial;
+}
+
+pre {
+    padding: 1em;
+    border-radius: 4px;
+}
+
+code:not(pre code) {
+    background-color: var(--clr-code-bg);
+    border-radius: 2px;
+    padding: 0.2em;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        -webkit-animation-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+
+        -webkit-animation-iteration-count: 1 !important;
+        animation-iteration-count: 1 !important;
+
+        -webkit-transition-duration: 0.01ms !important;
+        -o-transition-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+
+        scroll-behavior: auto !important;
+    }
+}
+
+@media (prefers-contrast: more) {
+    :root {
+        --clr-bg: black;
+        --clr-fg: white;
+
+        --clr-code-bg: #181818;
+        --clr-code-fg: whitesmoke;
+
+        --scrollbar-height: 12px; /* TODO: Firefox */
+    }
+
+    html::-webkit-scrollbar {
+        display: initial !important;
+    }
+
+    *,
+    *::before,
+    *::after {
+        scrollbar-width: initial !important;
+        -ms-overflow-style: initial !important;
+    }
+
+    a {
+        text-shadow: none !important;
+
+        -webkit-text-decoration: underline dotted !important;
+        text-decoration: underline dotted !important;
+    }
+}

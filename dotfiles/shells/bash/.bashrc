@@ -5,44 +5,37 @@
 
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
-export PATH="$PATH:/usr/local/bin:$HOME/.local/bin:$HOME/.cabal/bin:$HOME/.config/scripts"
-
-# config
-
-source ~/.config/shells/bash/*.conf
-
-# pre-run
-source ~/.config/shells/bash/*.pre
-
-# Environment
-source ~/.config/shells/bash/*.env
+export PATH="$HOME/.cargo/bin:$PATH:/usr/local/bin:$HOME/.local/bin:$HOME/.config/scripts"
 
 # TMUX config
-source ~/.config/shells/tmux/*.conf
+source "$HOME/.config/shells/tmux/tmux.conf"
 
-# Check for TMUX
-if [ -z "$TMUX" ] && [ "$TERM" != 'linux' ] && command -v tmux >/dev/null && [ ! "$__BASH_TMUX_DISABLE" ]; then
-    exec tmux -2 -l
-else
-    vecho 'TMUX not started'
-fi
+# Start TMUX
+[ -z "$TMUX" ] && [ "$TERM" != 'linux' ] && command -v tmux >/dev/null && [ ! "$__BASH_TMUX_DISABLE" ] && exec tmux -2 -l
+
+# shellcheck disable=SC1090
+for _t in conf pre env; do
+    source "$HOME/.config/shells/bash/bash.$_t"
+done
 
 # Load baz
 _baz_loader="$HOME/.local/share/baz/loader.sh"
+
+# shellcheck disable=SC1090
 [ ! -f "$_baz_loader" ] || source "$_baz_loader"
 # sleep 1000
 
 # Functions
-source ~/.config/shells/bash/*.functions
+source "$HOME/.config/shells/bash/bash.functions"
 
 # Aliases
-source ~/.config/shells/bash/*.aliases
+source "$HOME/.config/shells/bash/bash.aliases"
 
-export dots="$HOME/Ari/coding/resources_/dots"
-export tdots="$HOME/Ari/coding/resources_/tdots"
-export overlay="$HOME/Ari/coding/resources_/overlay"
-export ntex="$HOME/Documents/notes/doc.tex"
-export npdf="$HOME/Documents/notes/doc.pdf"
-export ndir="$HOME/Documents/notes"
+export dots="$HOME/Ari/coding/resources_/dots" \
+    tdots="$HOME/Ari/coding/resources_/tdots" \
+    overlay="$HOME/Ari/coding/resources_/overlay" \
+    ntex="$HOME/Documents/notes/doc.tex" \
+    npdf="$HOME/Documents/notes/doc.pdf" \
+    ndir="$HOME/Documents/notes"
 
 autorun || vecho 'Autorun failed'

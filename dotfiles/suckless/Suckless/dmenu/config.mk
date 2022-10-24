@@ -1,5 +1,5 @@
 # dmenu version
-VERSION = 5.1
+VERSION = 5.2
 
 # paths
 PREFIX = /usr/local
@@ -24,8 +24,8 @@ LIBS = -L$(X11LIB) -lX11 $(XINERAMALIBS) $(FREETYPELIBS)
 
 # flags
 CPPFLAGS = -fno-unwind-tables -fno-asynchronous-unwind-tables -ffunction-sections -fdata-sections -D_DEFAULT_SOURCE -D_BSD_SOURCE -D_XOPEN_SOURCE=700 -D_POSIX_C_SOURCE=200809L -DVERSION=\"$(VERSION)\" $(XINERAMAFLAGS)
-CFLAGS   = -Werror -Wshadow -Wall -Wextra -Wpedantic -pedantic -ffast-math -mfancy-math-387 -fno-ident -fmerge-all-constants -fno-unroll-loops -fno-math-errno -std=c99 -pedantic -Wall -Os -ffunction-sections -fdata-sections $(INCS) $(CPPFLAGS)
-LDFLAGS  = -Wl,--build-id=none -Wl,--hash-style=gnu,-Os -s $(LIBS)
+CFLAGS   = -Werror -Wshadow -Wall -Wextra -Wpedantic -pedantic -ffast-math -mfancy-math-387 -fno-ident -fmerge-all-constants -fno-unroll-loops -fno-math-errno -std=c99 -pedantic -Wall -Ofast -ffunction-sections -fdata-sections $(INCS) $(CPPFLAGS)
+LDFLAGS  = -Wl,--build-id=none -Wl,--hash-style=gnu,-Ofast,-flto -s $(LIBS)
 
 # compiler and linker
 CC = clang
