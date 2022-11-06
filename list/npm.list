@@ -1,12 +1,12 @@
 /usr/lib64
-├── corepack@0.12.0
+├── corepack@0.14.1
 ├── html-minifier@4.0.0
 ├── imgur-cli@0.7.0
 ├── js-beautify@1.14.4
 ├── live-server@1.2.2
 ├── netlify-cli@12.0.6
 ├── netlify@12.0.1
-├── npm@8.13.2
+├── npm@8.19.2
 ├── typescript@4.7.4
 └── uglifycss@0.0.29
 

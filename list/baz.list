@@ -59,7 +59,7 @@
  * ----------------
  * Name: trash-cli-rm-baz
  * License: WTFPL
- * Version: v8
+ * Version: v10
  * Author: Ari Archer
  * Root_plugin_directory: plugin
  * Recomended_install_method: git
@@ -199,7 +199,7 @@
  * ----------------
  * Name: baz-perf-plugin
  * License: WTFPL
- * Version: v1
+ * Version: v2
  * Author: Ari Archer
  * Root_plugin_directory: plugin
  * Recomended_install_method: git

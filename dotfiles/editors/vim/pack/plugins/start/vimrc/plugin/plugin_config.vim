@@ -46,7 +46,8 @@ let g:coc_global_extensions = [
             \ 'coc-html',
             \ 'coc-tsserver',
             \ 'coc-docker',
-            \ 'coc-vimlsp'
+            \ 'coc-vimlsp',
+            \ 'coc-pyright'
             \ ]
 
 " ALE

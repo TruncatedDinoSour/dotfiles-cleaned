@@ -1,2 +1,2 @@
 #!/usr/bin/env sh
-dmenu_path | dmenu "$@" | ${SHELL:-"/bin/sh"} &
+dmenu_path | dmenu "$@" | exec ${SHELL:-"/bin/sh"} &

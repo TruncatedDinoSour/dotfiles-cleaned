@@ -15,19 +15,18 @@ main() {
     local delay="${ANIM_DELAY:-0.5}"
 
     while true; do
-        if [[ -f "$1" ]]; then
+        if [ -f "$1" ]; then
             while read -r frame; do
-               echo -e "$frame"
-               [[ ! "$frame" ]] && (sleep "$delay" && clear)
-            done < "$1"
+                echo -e "$frame"
+                [[ ! $frame ]] && (sleep "$delay" && clear)
+            done <"$1"
         else
             for frame in "$@"; do
                 echo -e "$frame"
-                [[ "$frame" ]] && (sleep "$delay" && clear)
+                [ "$frame" ] && (sleep "$delay" && clear)
             done
         fi
     done
 }
 
 main "$@"
-

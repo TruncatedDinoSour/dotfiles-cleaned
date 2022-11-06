@@ -28,6 +28,7 @@
          save-keymaps | boot                                   
     save-termencoding | boot                                   
             savecache |                        shutdown        
+              seedrng | boot                                   
                  swap | boot                                   
                sysctl | boot                                   
                 sysfs |                                 sysinit
@@ -36,4 +37,3 @@
          termencoding | boot                                   
                  udev |                                 sysinit
          udev-trigger |                                 sysinit
-              urandom | boot                                   

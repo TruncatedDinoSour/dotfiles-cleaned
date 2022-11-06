@@ -53,6 +53,7 @@ app-crypt/libb2
 app-crypt/libmd
 app-crypt/pinentry
 app-crypt/rhash
+app-dicts/myspell-en
 app-editors/vim
 app-editors/vim-core
 app-emulation/mkqemuvm
@@ -103,7 +104,9 @@ app-text/docbook-xsl-stylesheets
 app-text/dvipng
 app-text/dvipsk
 app-text/dvisvgm
+app-text/enchant
 app-text/ghostscript-gpl
+app-text/hunspell
 app-text/lcdf-typetools
 app-text/libpaper
 app-text/mandoc
@@ -297,16 +300,21 @@ dev-perl/XML-Parser
 dev-perl/XString
 dev-perl/YAML-Tiny
 dev-python/appdirs
+dev-python/autocommand
 dev-python/certifi
 dev-python/cffi
 dev-python/charset_normalizer
 dev-python/cryptography
+dev-python/cython
 dev-python/docutils
+dev-python/ensurepip-pip
+dev-python/ensurepip-setuptools
 dev-python/ensurepip-wheels
 dev-python/flit_core
 dev-python/gpep517
 dev-python/httplib2
 dev-python/idna
+dev-python/inflect
 dev-python/installer
 dev-python/jaraco-context
 dev-python/jaraco-functools
@@ -324,6 +332,7 @@ dev-python/pip
 dev-python/plumbum
 dev-python/ply
 dev-python/pycparser
+dev-python/pydantic
 dev-python/pyfzf
 dev-python/pygments
 dev-python/pyparsing

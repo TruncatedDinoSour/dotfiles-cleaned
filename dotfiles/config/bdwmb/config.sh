@@ -18,4 +18,3 @@ export SEPERATOR1=' | '
 export DRIVE_CHECK_MOUNT='/home'
 export BATTERY_NAME='BAT1'
 export BATTERY_SHOW_STATUS=0
-

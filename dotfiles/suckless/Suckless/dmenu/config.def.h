@@ -4,7 +4,7 @@
 static const int dmenuwpx = 430; /* dmenu width */
 static int topbar = 1; /* -b  option; if 0, dmenu appears at bottom     */
 /* -fn option overrides fonts[0]; default X11 font or font set */
-static const char *fonts[] = {"firamono:size=15.5", "unifont"};
+static const char *fonts[] = {"Hack Nerd Font:size=15", "unifont"};
 static const char *prompt =
     NULL; /* -p  option; prompt to the left of input field */
 static const char *colors[SchemeLast][2] = {

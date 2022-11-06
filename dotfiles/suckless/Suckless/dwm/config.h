@@ -73,7 +73,8 @@ static const Rule rules[] = {
     {NULL, "qemu", NULL, mk_tag(6), -1},
 
     /* tag 7 */
-    mk_ftag("libreoffice", 7)};
+    mk_ftag("libreoffice", 7),
+};
 
 /* key definitions */
 #define MODKEY Mod4Mask

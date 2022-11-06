@@ -11,6 +11,7 @@ asttokens
 async-timeout
 asyncio
 attrs
+autocommand
 autopep8
 Babel
 backcall
@@ -45,6 +46,7 @@ css-html-js-minify
 curtsies
 cwcwidth
 cycler
+Cython
 DateTime
 debugpy
 decorator
@@ -87,6 +89,7 @@ idna
 imagesize
 importlab
 importlib-metadata
+inflect
 iniconfig
 installer
 ipykernel
@@ -181,6 +184,7 @@ pyasn1
 pycodestyle
 pycparser
 pycryptodomex
+pydantic
 pydocstyle
 pyflakes
 pyfzf
@@ -195,6 +199,7 @@ pyOpenSSL
 pyparsing
 pyperclip
 pyRFC3339
+pyright
 pyrsistent
 PySocks
 pytest

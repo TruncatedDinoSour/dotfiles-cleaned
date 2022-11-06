@@ -1,0 +1,7 @@
+if [ "$EBUILD_PHASE" == 'postinst' ] && [ "$CATEGORY/$PN" = 'www-client/firefox' ]; then
+    echo " [HOOK] (update me if is showing) MOZILLA_FIVE_HOME=$MOZILLA_FIVE_HOME"
+
+    printf ' [HOOK] %s... ' 'Removing telementary firefox pingsender'
+    rm -f -- /usr/lib64/firefox/pingsender
+    echo 'done'
+fi

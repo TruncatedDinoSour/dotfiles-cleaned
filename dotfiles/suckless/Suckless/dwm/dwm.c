@@ -1684,11 +1684,13 @@ void zoom() {
     if (c == nexttiled(selmon->clients))
         if (!c || !(c = nexttiled(c->next)))
             return;
+
     pop(c);
 }
 
 void setenvvars(void) {
     /* For Information Fetchers */
+
     setenv("XDG_CURRENT_DESKTOP", "dwm", 1);
     setenv("XDG_SESSION_DESKTOP", "dwm", 1);
     setenv("DESKTOP_SESSION", "dwm", 1);
@@ -1699,20 +1701,28 @@ int main(int argc, char *argv[]) {
         die("dwm-" VERSION);
     else if (argc != 1)
         die("usage: dwm [-v]");
+
     if (!setlocale(LC_CTYPE, "") || !XSupportsLocale())
         fputs("warning: no locale support\n", stderr);
+
     if (!(dpy = XOpenDisplay(NULL)))
         die("dwm: cannot open display");
+
     checkotherwm();
     setup();
+
 #ifdef __OpenBSD__
     if (pledge("stdio rpath proc exec", NULL) == -1)
         die("pledge");
 #endif /* __OpenBSD__ */
+
     scan();
     setenvvars();
+
     run();
+
     cleanup();
     XCloseDisplay(dpy);
+
     return EXIT_SUCCESS;
 }
