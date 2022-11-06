@@ -18,7 +18,6 @@ app-shells/bash
 app-shells/bash-completion
 app-shells/baz
 app-shells/fzf
-app-text/enchant
 app-text/texlive
 app-text/zathura
 app-text/zathura-pdf-poppler

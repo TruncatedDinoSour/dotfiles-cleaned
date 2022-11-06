@@ -53,7 +53,6 @@ app-crypt/libb2
 app-crypt/libmd
 app-crypt/pinentry
 app-crypt/rhash
-app-dicts/myspell-en
 app-editors/vim
 app-editors/vim-core
 app-emulation/mkqemuvm
@@ -104,9 +103,7 @@ app-text/docbook-xsl-stylesheets
 app-text/dvipng
 app-text/dvipsk
 app-text/dvisvgm
-app-text/enchant
 app-text/ghostscript-gpl
-app-text/hunspell
 app-text/lcdf-typetools
 app-text/libpaper
 app-text/mandoc
