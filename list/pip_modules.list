@@ -240,6 +240,7 @@ Sphinx
 SQLAlchemy
 stack-data
 tabulate
+telegram
 termcolor
 terminado
 testpath

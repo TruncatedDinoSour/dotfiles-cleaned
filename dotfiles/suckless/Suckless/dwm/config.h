@@ -38,6 +38,7 @@ static const Rule rules[] = {
     /* all tags */
     mk_atag("st", ALL_TAGS),
     mk_atag("Alacritty", ALL_TAGS),
+    mk_atag("Emacs", ALL_TAGS),
 
     /* tag 2 */
     mk_ftag("Firefox", 2),

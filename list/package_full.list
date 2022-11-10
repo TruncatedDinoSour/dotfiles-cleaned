@@ -8,6 +8,7 @@ acct-group/kos
 acct-group/kvm
 acct-group/locate
 acct-group/lp
+acct-group/mail
 acct-group/man
 acct-group/messagebus
 acct-group/portage
@@ -53,13 +54,16 @@ app-crypt/libb2
 app-crypt/libmd
 app-crypt/pinentry
 app-crypt/rhash
+app-editors/emacs
 app-editors/vim
 app-editors/vim-core
+app-emacs/emacs-common
 app-emulation/mkqemuvm
 app-emulation/qemu
 app-emulation/spice
 app-emulation/spice-protocol
 app-eselect/eselect-ctags
+app-eselect/eselect-emacs
 app-eselect/eselect-fontconfig
 app-eselect/eselect-iptables
 app-eselect/eselect-lib-bin-symlink
@@ -454,6 +458,7 @@ net-firewall/iptables
 net-libs/gnutls
 net-libs/http-parser
 net-libs/libiscsi
+net-libs/liblockfile
 net-libs/libmnl
 net-libs/libnsl
 net-libs/libslirp
