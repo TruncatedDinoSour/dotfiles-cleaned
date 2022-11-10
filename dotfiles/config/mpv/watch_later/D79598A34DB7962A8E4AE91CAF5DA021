@@ -1,0 +1,3 @@
+start=0.000000
+pause=yes
+vf=crop=y=421:x=964:w=602:h=120

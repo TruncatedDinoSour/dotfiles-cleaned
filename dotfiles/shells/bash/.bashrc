@@ -11,7 +11,7 @@ export PATH="$HOME/.cargo/bin:$PATH:/usr/local/bin:$HOME/.local/bin:$HOME/.confi
 source "$HOME/.config/shells/tmux/tmux.conf"
 
 # Start TMUX
-[ -z "$TMUX" ] && [ "$TERM" != 'linux' ] && [ "$TERM" != 'eterm-color' ] && command -v tmux >/dev/null && [ ! "$__BASH_TMUX_DISABLE" ] && exec tmux -2 -l
+[ -z "$TMUX" ] && [ "$TERM" != 'linux' ] && command -v tmux >/dev/null && [ ! "$__BASH_TMUX_DISABLE" ] && exec tmux -2 -l
 
 # shellcheck disable=SC1090
 for _t in conf pre env; do

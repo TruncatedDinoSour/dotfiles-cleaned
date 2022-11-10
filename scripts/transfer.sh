@@ -9,7 +9,7 @@ read -rp "=== [ press enter to continue  ] ==="
 
 rm -rf dotfiles list
 mkdir -m 700 -p list
-mkdir -p dotfiles{,/shells/bash,/suckless,/etc,/core,/linux,/portage,/qbittorrent,/editors/emacs,/fix}
+mkdir -p dotfiles{,/shells/bash,/suckless,/etc,/core,/linux,/portage,/qbittorrent,/editors,/fix}
 chmod 700 -R dotfiles
 
 from=(
@@ -32,9 +32,6 @@ from=(
 
     '/home/ari/.vim'
     '/home/ari/.idlerc'
-
-    '/home/ari/.emacs.d'
-    '/home/ari/.emacs'
 
     '/home/ari/.xinitrc'
     '/etc/default/grub'
@@ -83,9 +80,6 @@ to=(
 
     'dotfiles/editors/vim'
     'dotfiles/editors/idle'
-
-    'dotfiles/editors/emacs'
-    'dotfiles/editors/emacs'
 
     'dotfiles/core'
     'dotfiles/core'
@@ -136,20 +130,7 @@ while read -r line; do
     echo
 done <<<$(baz list 2>&1 | tail -n +2) >list/baz.list
 
-rm -rfv dotfiles/config/asciinema \
-    dotfiles/editors/vim/.vim/undodir \
-    dotfiles/config/VSCodium \
-    dotfiles/config/VirtualBox \
-    dotfiles/config/transmission/dht.dat \
-    dotfiles/config/dconf \
-    dotfiles/config/netlify \
-    dotfiles/config/transmission/resume \
-    dotfiles/editors/vim/.vim/.netrwhist \
-    dotfiles/editors/emacs/emacs.d/.cache \
-    dotfiles/editors/emacs/emacs.d/.lsp-session-v1 \
-    dotfiles/editors/emacs/emacs.d/auto-save-list \
-    dotfiles/editors/emacs/emacs.d/elpa \
-    dotfiles/editors/emacs/emacs.d/recentf
+rm -rfv dotfiles/config/asciinema dotfiles/editors/vim/.vim/undodir dotfiles/config/VSCodium dotfiles/config/VirtualBox dotfiles/config/transmission/dht.dat dotfiles/config/dconf dotfiles/config/netlify dotfiles/config/transmission/resume dotfiles/editors/vim/.vim/.netrwhist
 
 cp scripts/clean_firefox_profile dotfiles/etc/firefox
 cd dotfiles/etc/firefox || exit 1

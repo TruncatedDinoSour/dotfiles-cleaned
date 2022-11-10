@@ -2,7 +2,6 @@ app-admin/filetools
 app-admin/kbdrate-openrc
 app-admin/kos
 app-admin/pwdtools
-app-editors/emacs
 app-editors/vim
 app-emulation/mkqemuvm
 app-emulation/qemu
