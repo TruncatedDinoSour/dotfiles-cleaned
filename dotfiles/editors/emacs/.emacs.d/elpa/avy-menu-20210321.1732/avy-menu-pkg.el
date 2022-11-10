@@ -1,0 +1,2 @@
+;;; Generated package description from avy-menu.el  -*- no-byte-compile: t -*-
+(define-package "avy-menu" "20210321.1732" "Library providing avy-powered popup menu" '((emacs "24.3") (avy "0.4.0")) :commit "2c5e0c08d6cb27c213a8eda5c7033e3ff2aa9661" :authors '(("Mark Karpov" . "markkarpov92@gmail.com")) :maintainer '("Mark Karpov" . "markkarpov92@gmail.com") :keywords '("popup" "menu") :url "https://github.com/mrkkrp/avy-menu")

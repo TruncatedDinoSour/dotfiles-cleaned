@@ -1,0 +1,2 @@
+;;; Generated package description from auto-yasnippet.el  -*- no-byte-compile: t -*-
+(define-package "auto-yasnippet" "20220927.857" "Quickly create disposable yasnippets" '((yasnippet "0.14.0") (emacs "25.1")) :commit "7ef65b8e128bcf8afc52a702402c7943839abfb9" :authors '(("Oleh Krehel" . "ohwoeowho@gmail.com") ("Jason Milkins" . "jasonm23@gmail.com")) :maintainer '("Jason Milkins" . "jasonm23@gmail.com") :url "https://github.com/abo-abo/auto-yasnippet")

@@ -11,6 +11,8 @@
 /home/ari/.icons -> dotfiles/icons
 /home/ari/.vim -> dotfiles/editors/vim
 /home/ari/.idlerc -> dotfiles/editors/idle
+/home/ari/.emacs.d -> dotfiles/editors/emacs
+/home/ari/.emacs -> dotfiles/editors/emacs
 /home/ari/.xinitrc -> dotfiles/core
 /etc/default/grub -> dotfiles/core
 /etc/hosts -> dotfiles/core
