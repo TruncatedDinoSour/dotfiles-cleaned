@@ -15,4 +15,5 @@ undodir/
 .github
 codeql-analysis.yml
 recent-files.lst
+mypy_cache/
 

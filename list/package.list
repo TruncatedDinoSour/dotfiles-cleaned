@@ -2,11 +2,11 @@ app-admin/filetools
 app-admin/kbdrate-openrc
 app-admin/kos
 app-admin/pwdtools
-app-editors/emacs
 app-editors/vim
 app-emulation/mkqemuvm
 app-emulation/qemu
 app-eselect/eselect-python
+app-eselect/eselect-sh
 app-misc/colourpicker
 app-misc/lmgr
 app-misc/mkproj
@@ -18,6 +18,7 @@ app-office/calcurse
 app-shells/bash
 app-shells/bash-completion
 app-shells/baz
+app-shells/dash
 app-shells/fzf
 app-text/texlive
 app-text/zathura
@@ -41,7 +42,7 @@ media-gfx/jpegoptim
 media-gfx/optipng
 media-gfx/shot
 media-sound/alsa-utils
-media-video/mpv::dinolay
+media-video/mpv
 net-misc/axel
 net-misc/dhcpcd
 net-misc/netifrc
