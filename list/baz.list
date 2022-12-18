@@ -167,20 +167,6 @@
 
 
  * ----------------
- * Description: Baz plugin for making your bash better
- * ----------------
- * Name: better-bash-baz-plugin
- * License: WTFPL
- * Version: v9
- * Author: Ari Archer
- * Root_plugin_directory: plugin
- * Recomended_install_method: git
- * Source: https://ari-web.xyz/gh/better-bash-baz-plugin
- * Installed_with_method: git
- * Disabled: No
-
-
- * ----------------
  * Description: Baz plugin for coffee theme in bash prompt
  * ----------------
  * Name: coffee.baz-plugin
@@ -206,5 +192,19 @@
  * Source: https://ari-web.xyz/gh/baz-perf-plugin
  * Installed_with_method: git
  * Disabled: Yes
+
+
+ * ----------------
+ * Description: Baz plugin for making your bash better
+ * ----------------
+ * Name: better-bash-baz-plugin
+ * License: WTFPL
+ * Version: v9
+ * Author: Ari Archer
+ * Root_plugin_directory: plugin
+ * Recomended_install_method: git
+ * Source: https://ari-web.xyz/gh/better-bash-baz-plugin
+ * Installed_with_method: git
+ * Disabled: No
 
 

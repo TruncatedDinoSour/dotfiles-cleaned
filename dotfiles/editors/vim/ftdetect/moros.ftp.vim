@@ -1,0 +1,1 @@
+/home/ari/Ari/coding/projects_/moros/editors/moros.ftp.vim

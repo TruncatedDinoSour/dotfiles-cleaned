@@ -1,1 +1,1 @@
-sys-devel/gcc vtv cet hardened -fortran
+sys-devel/gcc vtv cet hardened -fortran jit

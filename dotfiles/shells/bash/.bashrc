@@ -5,13 +5,18 @@
 
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
-export PATH="$HOME/.cargo/bin:$PATH:/usr/local/bin:$HOME/.local/bin:$HOME/.config/scripts"
+export PATH="$PATH:/usr/local/bin:$HOME/.local/bin:$HOME/.config/scripts"
 
 # TMUX config
 source "$HOME/.config/shells/tmux/tmux.conf"
 
 # Start TMUX
-[ -z "$TMUX" ] && [ "$TERM" != 'linux' ] && [ "$TERM" != 'eterm-color' ] && command -v tmux >/dev/null && [ ! "$__BASH_TMUX_DISABLE" ] && exec tmux -2 -l
+[ -z "$TMUX" ] &&
+    command -v tmux >/dev/null &&
+    [ "$TERM" != 'linux' ] &&
+    [ "$TERM" != 'eterm-color' ] &&
+    [ ! "$__BASH_TMUX_DISABLE" ] &&
+    exec tmux -2 -l
 
 # shellcheck disable=SC1090
 for _t in conf pre env; do

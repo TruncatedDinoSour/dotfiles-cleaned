@@ -134,7 +134,6 @@ highlight HighlightedyankRegion cterm=reverse gui=reverse
 let g:markdown_composer_autostart = 0
 
 " Haskell
-
 let g:haskell_enable_quantification = 1   " to enable highlighting of `forall`
 let g:haskell_enable_recursivedo = 1      " to enable highlighting of `mdo` and `rec`
 let g:haskell_enable_arrowsyntax = 1      " to enable highlighting of `proc`

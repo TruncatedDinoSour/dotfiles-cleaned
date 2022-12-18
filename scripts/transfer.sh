@@ -9,7 +9,7 @@ read -rp "=== [ press enter to continue  ] ==="
 
 rm -rf dotfiles list
 mkdir -m 700 -p list
-mkdir -p dotfiles{,/shells/bash,/suckless,/etc,/core,/linux,/portage,/qbittorrent,/editors/emacs,/fix}
+mkdir -p dotfiles{,/shells/bash,/suckless,/etc,/core,/linux,/portage,/qbittorrent,/editors,/fix}
 chmod 700 -R dotfiles
 
 from=(
@@ -32,9 +32,6 @@ from=(
 
     '/home/ari/.vim'
     '/home/ari/.idlerc'
-
-    '/home/ari/.emacs.d'
-    '/home/ari/.emacs'
 
     '/home/ari/.xinitrc'
     '/etc/default/grub'
@@ -83,9 +80,6 @@ to=(
 
     'dotfiles/editors/vim'
     'dotfiles/editors/idle'
-
-    'dotfiles/editors/emacs'
-    'dotfiles/editors/emacs'
 
     'dotfiles/core'
     'dotfiles/core'

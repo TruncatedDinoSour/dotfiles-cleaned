@@ -2,7 +2,7 @@
 
 set -xe
 
-GENERIC_FLAGS="-std=c99 -Wall -Wextra -Wpedantic -Wshadow -Werror -pedantic -march=native -pipe -o ../PROJECT_NAME.elf main.c"
+GENERIC_FLAGS="-std=c89 -Wall -Wextra -Wpedantic -Wshadow -Werror -pedantic -march=native -mtune=native -pipe -o ../PROJECT_NAME.elf main.c"
 
 main() {
     CC="${CC:-clang}"

@@ -3,7 +3,8 @@
 set -e
 
 main() {
-    js-beautify index.html js/generic/generic.js
+    npm init -y
+    npm init @eslint/config
 }
 
 main "$@"

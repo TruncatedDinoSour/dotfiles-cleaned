@@ -5,6 +5,7 @@ altgraph
 appdirs
 argon2-cffi
 argon2-cffi-bindings
+arigram
 astroid
 asttokens
 async-timeout

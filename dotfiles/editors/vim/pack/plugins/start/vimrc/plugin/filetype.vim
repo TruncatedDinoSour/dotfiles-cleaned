@@ -30,3 +30,6 @@ autocmd BufRead,BufNewFile */bindings/* set filetype=readline
 
 " Index files for https://etc.ari-web.xyz/
 autocmd BufRead,BufNewFile _index.txt set filetype=html
+
+" K language
+autocmd BufRead,BufNewFile *.k source /usr/share/vim/vimfiles/syntax/k.vim

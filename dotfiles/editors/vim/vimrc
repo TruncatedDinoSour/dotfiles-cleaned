@@ -82,6 +82,7 @@ call plug#begin("~/.vim/plugged")
     Plug 'godlygeek/tabular'
     Plug 'fedorenchik/fasm.vim'
     Plug 'sheerun/vim-polyglot'
+    Plug 'katusk/vim-qkdb-syntax'
 call plug#end()
 
 colorscheme coffee                      " Set the theme

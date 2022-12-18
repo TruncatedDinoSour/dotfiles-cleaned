@@ -1,1 +1,1 @@
-/home/ari/.bashrc
+.bashrc
