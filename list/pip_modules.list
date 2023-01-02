@@ -6,6 +6,7 @@ appdirs
 argon2-cffi
 argon2-cffi-bindings
 arigram
+asciidoc
 astroid
 asttokens
 async-timeout
@@ -26,12 +27,14 @@ blessings
 bpython
 Brotli
 CacheControl
+cachetools
 cachy
 capstone
 certbot
 certifi-system-store
 certifi-system-store
 cffi
+chardet
 charset-normalizer
 cleo
 click
@@ -74,7 +77,7 @@ Flask-Limit
 flit_core
 fonttools
 frozenlist
-gdbus_codegen
+gdbus-codegen
 gemato
 getch
 gevent
@@ -198,6 +201,7 @@ pymongo
 pyOpenSSL
 pyparsing
 pyperclip
+pyproject_api
 pyRFC3339
 pyright
 pyrsistent
@@ -250,6 +254,7 @@ toml
 tomli
 tomlkit
 tornado
+tox
 tqdm
 traitlets
 typing

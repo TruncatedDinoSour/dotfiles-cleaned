@@ -152,6 +152,6 @@ cd ../../.. || exit 2
 
 # sed -i '/PHONE/d' dotfiles/config/arigram/config.py
 sed -i '/signingkey/d; /email/d; /name/d; /\[user\]/d; /\[github\]/d; /user/d' dotfiles/config/git/config
-sed -i '/ssh$/d' dotfiles/core/hosts
+gzip dotfiles/core/hosts  # too large for github
 
 chown -R ari:ari dotfiles list

@@ -1,14 +1,19 @@
-@import url("https://cdn.jsdelivr.net/npm/hack-font@3/build/web/hack.min.css");
-
 :root {
     color-scheme: dark;
 
     --clr-bg: #262220;
     --clr-fg: #f9f6e8;
 
+    --clr-blockquote-fg: #e6e0c8;
+    --clr-blockquote-bg: #ede9d3;
+
+    --blockquote-width: 2px;
+
     --clr-code-bg: #1f1b1a;
     --clr-code-fg: #f0f3e6;
     --clr-code-bg-dark: #181414;
+
+    --clr-link: #cdc4c4; /* #9e9b9b; */
 
     --scrollbar-height: 6px; /* TODO: Firefox */
 }
@@ -18,7 +23,7 @@
 *::after {
     background-color: var(--clr-bg);
     color: var(--clr-fg);
-    font-family: Hack, hack, monospace;
+    font-family: sans-serif;
 
     scrollbar-width: none;
     -ms-overflow-style: none;
@@ -31,6 +36,8 @@
     word-wrap: break-word;
 
     scroll-behavior: smooth;
+
+    outline-offset: 3px;
 }
 
 ::-webkit-scrollbar,
@@ -71,7 +78,13 @@ li {
 
 a {
     text-decoration: none;
-    text-shadow: 0px 0px 4px white;
+    color: var(--clr-link);
+    font-style: italic;
+}
+
+a:focus,
+a:hover {
+    text-decoration: underline;
 }
 
 pre,
@@ -124,13 +137,20 @@ code:not(pre code) {
 
 @media (prefers-contrast: more) {
     :root {
-        --clr-bg: black;
-        --clr-fg: white;
+        --clr-bg: #000000;
+        --clr-fg: #ffffff;
 
-        --clr-code-bg: #181818;
-        --clr-code-fg: whitesmoke;
+        --clr-blockquote-fg: #ededed;
+        --clr-blockquote-bg: #868e91;
 
-        --scrollbar-height: 12px; /* TODO: Firefox */
+        --clr-code-bg: #090909;
+        --clr-code-fg: #f0f0f0;
+
+        --clr-link: #a9c4d1;
+
+        --blockquote-width: 4px;
+
+        --scrollbar-height: initial; /* TODO: Firefox */
     }
 
     html::-webkit-scrollbar {
@@ -142,12 +162,5 @@ code:not(pre code) {
     *::after {
         scrollbar-width: initial !important;
         -ms-overflow-style: initial !important;
-    }
-
-    a {
-        text-shadow: none !important;
-
-        -webkit-text-decoration: underline dotted !important;
-        text-decoration: underline dotted !important;
     }
 }

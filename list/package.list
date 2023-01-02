@@ -6,7 +6,6 @@ app-editors/vim
 app-emulation/mkqemuvm
 app-emulation/qemu
 app-eselect/eselect-python
-app-eselect/eselect-sh
 app-misc/colourpicker
 app-misc/lmgr
 app-misc/mkproj

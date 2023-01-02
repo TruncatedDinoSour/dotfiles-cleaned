@@ -1,0 +1,1 @@
+sys-firmware/edk2-ovmf -binary -pin-upstream-blobs

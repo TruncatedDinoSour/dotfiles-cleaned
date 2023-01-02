@@ -2,7 +2,7 @@
 map ; :
 
 " Remap lj -> escape
-nnoremap lj <Esc>
+noremap lj <Esc>
 
 " h, l <=> b, w
 noremap h b
@@ -14,19 +14,19 @@ noremap w l
 for key in ['<Up>', '<Down>', '<Left>',
             \ '<Right>', '<PageUp>', '<PageDown>',
             \ 'gh', 'gj', 'gk', 'gl']
-    exec 'nnoremap'        key '<Nop>'
+    exec 'noremap'        key '<Nop>'
 endfor
 
 let mapleader = ","                 " , = leader
 
 " Navigate splits (supplied by tmux plugin)
-"nnoremap <C-J> <C-W><C-J>
-"nnoremap <C-K> <C-W><C-K>
-"nnoremap <C-L> <C-W><C-L>
-"nnoremap <C-H> <C-W><C-H>
+"noremap <C-J> <C-W><C-J>
+"noremap <C-K> <C-W><C-K>
+"noremap <C-L> <C-W><C-L>
+"noremap <C-H> <C-W><C-H>
 
 " Map D to redo
-nnoremap D :redo<CR>
+noremap D :redo<CR>
 
 " Snippets
 inoremap <silent><expr> <C-j>
@@ -41,29 +41,29 @@ function! s:check_back_space() abort
 endfunction
 
 " vim-codefmt
-nnoremap F :FormatCode<CR>
+noremap F :FormatCode<CR>
 
 " Trim whitespace
-nnoremap T :call TrimWhitespace()<CR>
+noremap T :call TrimWhitespace()<CR>
 
 " Tabs
-nnoremap <C-n> <ESC>:tabnew<space>
-nnoremap <C-x> <ESC>:tabprevious<CR>
-nnoremap <C-c> <ESC>:tabnext<CR>
+noremap <C-n> <ESC>:tabnew<space>
+noremap <C-x> <ESC>:tabprevious<CR>
+noremap <C-c> <ESC>:tabnext<CR>
 
 " Open a file
-nnoremap <C-o> <ESC>:open<space>
+noremap <C-o> <ESC>:open<space>
 
 " Splits
-nnoremap <C-s> <ESC>:vsplit<space>
-nnoremap <C-d> <ESC>:split<space>
+noremap <C-s> <ESC>:vsplit<space>
+noremap <C-d> <ESC>:split<space>
 
 " Tabular
-nnoremap U <ESC>:Tabularize<space>
+noremap U <ESC>:Tabularize<space>
 
 " Inc/decrement
-nnoremap X <C-a>
-nnoremap Z <C-x>
+noremap X <C-a>
+noremap Z <C-x>
 
 " (Un)indent
 
@@ -84,10 +84,14 @@ nnoremap Z <C-x>
 " >i{  Increase inner block indent
 " <i{  Decrease inner block indent
 
-nnoremap > >>
-nnoremap < <<
-nnoremap = ==
+noremap > >>
+noremap < <<
+noremap = ==
 
-nnoremap [ >i
-nnoremap ] <i
-nnoremap ) =i
+noremap [ >i
+noremap ] <i
+noremap ) =i
+
+" Comments
+
+noremap <C-m> :Commentary<CR>
