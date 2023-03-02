@@ -1,0 +1,38 @@
+#!/usr/bin/env sh
+
+set -e
+
+GRAY="\033[37m"
+RESET="\033[0m"
+BOLD="\033[1m"
+
+CLEAR_LINE="\033[0K"
+CURS_OFF="\033[?25l"
+CURS_ON="\033[?25h"
+
+main() {
+    clear
+
+    profile="${*:-no profile}"
+
+    while true; do
+        cols="$(($(stty size | cut -d ' ' -f2) - 2))"
+        extra=' '
+
+        if [ "${#profile}" -ge "$cols" ]; then
+            cols="$((cols - 4))"
+            extra="$extra... "
+        fi
+
+        printf "\n $GRAY%.${cols:-30}s$RESET$extra\n %s : " "$profile" 'prompt'
+        read -r prompt
+
+        if [ "$prompt" ]; then
+            echo
+            printf "$CURS_OFF$GRAY%s$RESET" 'generating response ...'
+            printf "\r$CLEAR_LINE$BOLD%s\n$CURS_ON$RESET" "$(gpt "$* $prompt")"
+        fi
+    done
+}
+
+main "$@"

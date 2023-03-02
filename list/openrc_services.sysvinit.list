@@ -15,7 +15,6 @@
               keymaps | boot                                   
             killprocs |                        shutdown        
     kmod-static-nodes |                                 sysinit
-                local |      default nonetwork                 
            localmount | boot                                   
              loopback | boot                                   
               modules | boot                                   

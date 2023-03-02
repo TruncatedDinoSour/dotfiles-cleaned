@@ -1,16 +1,21 @@
 #!/bin/bash
 
 autorun() {
-    yafetch 2>/dev/null || return
+    [ "$AUTORUN" ] || dfetch 2>/dev/null || return
 }
 
 mkkernel() {
-    cd /usr/src/linux || exit 1
-    $__BASH_RUNAS "$__BASH_BIN_DIR"/make "$@"
-    $__BASH_RUNAS "$__BASH_BIN_DIR"/make modules_install
-    $__BASH_RUNAS "$__BASH_BIN_DIR"/make install
-    $__BASH_RUNAS "$__BASH_BIN_DIR"/dracut --force
-    $__BASH_RUNAS /usr/sbin/grub-mkconfig -o /boot/grub/grub.cfg
+    set -x
+
+    cd /usr/src/linux || return 1
+    $__BASH_RUNAS mkmk "$@" || return 1
+    $__BASH_RUNAS mkmk modules "$@" || return 1
+    $__BASH_RUNAS make INSTALL_MOD_STRIP=1 modules_install || return 1
+    $__BASH_RUNAS mkmk install || return 1
+    $__BASH_RUNAS dracut --force || return 1
+    $__BASH_RUNAS grub-mkconfig -o /boot/grub/grub.cfg || return 1
+
+    set +x
 }
 
 pip_upgrade() {

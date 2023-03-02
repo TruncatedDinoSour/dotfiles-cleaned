@@ -182,7 +182,7 @@ static int drawitem(struct item *item, int x, int y, int w) {
     return r;
 }
 
-static void recalculatenumbers() {
+static void recalculatenumbers(void) {
     unsigned int numer = 0, denom = 0;
     struct item *item;
     if (matchend) {

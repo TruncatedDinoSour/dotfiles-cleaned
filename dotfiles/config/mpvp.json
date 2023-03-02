@@ -38,16 +38,11 @@
         "the internet": "kade",
         "privately owned spiral galaxy": "lovejoy",
         "mad - young nights (demo)": "mad tsai",
-        "so tired": "crawlers"
+        "so tired": "crawlers",
+        "bülow, rich the kid - you & jennifer (the other side) (audio)": "bülow"
     },
-    "styles": "~\/.config\/mpvp.css",
-    "song-name-delims": [
-        "\u2013",
-        "-",
-        ",",
-        "feat.",
-        ".",
-        "&"
-    ],
-    "yt-url": "https:\/\/ari-web.xyz\/yt\/watch?v=%s"
+    "styles": "~/.config/mpvp.css",
+    "song-name-delims": ["\u2013", "-", ",", "feat.", ".", "&", "⧸"],
+    "yt-url": "https://ari-web.xyz/yt/watch?v=%s",
+    "raw-json": false
 }

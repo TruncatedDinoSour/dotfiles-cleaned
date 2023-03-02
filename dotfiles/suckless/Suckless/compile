@@ -14,6 +14,10 @@ main() {
     [ "$EUID" != 0 ] && error 'Run me as root' && exit 1
 
     for directory in *; do
+        if [ "$directory" = 'dfetch' ]; then
+            continue
+        fi
+
         if [ -d "$directory" ]; then
             info "Compiling ${GREEN}$directory${RESET}"
 

@@ -1,0 +1,22 @@
+#!/usr/bin/env sh
+
+set -e
+
+main() {
+    while true; do
+        sleep 1000
+        d="$(date '+%d %B %Y')"
+
+        if [ "$d" = '12 July 2023' ] || [ "$d" = '13 July 2023' ]; then
+            notify-send -u critical 'ari-web is 1000 days old today !!!'
+
+            (speaker-test -l 1 -f 1500 -t sine -P 2 -X >/dev/null) &
+            pid="$!"
+            sleep 0.08
+            kill -9 $pid
+        fi
+    done
+}
+
+main "$@"
+

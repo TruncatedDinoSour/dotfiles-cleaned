@@ -1423,7 +1423,7 @@ void updatebarpos(Monitor *m) {
         m->by = -bh;
 }
 
-void updateclientlist() {
+void updateclientlist(void) {
     Client *c;
     Monitor *m;
 
@@ -1678,7 +1678,9 @@ int xerrorstart(Display *xesdpy, XErrorEvent *ee) {
     return -1;
 }
 
-void zoom() {
+static void zoom(const Arg *arg) {
+    (void) arg;
+
     Client *c = selmon->sel;
 
     if (c == nexttiled(selmon->clients))

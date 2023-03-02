@@ -8,7 +8,7 @@ static const char *fonts[] = {"Hack Nerd Font:size=15", "unifont"};
 static const char *prompt =
     NULL; /* -p  option; prompt to the left of input field */
 static const char *colors[SchemeLast][2] = {
-    /*                          fg         bg       */
+    /*              fg         bg       */
     [SchemeNorm] = {"#BBBBBB", "#262220"},
     [SchemeSel] = {"#383838", "#f9f0c2"},
     [SchemeSelHighlight] = {"#3f3f3f", "#f9f0c2"},

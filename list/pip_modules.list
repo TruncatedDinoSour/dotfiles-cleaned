@@ -24,6 +24,7 @@ bidict
 black
 bleach
 blessings
+boto
 bpython
 Brotli
 CacheControl
@@ -57,6 +58,7 @@ defusedxml
 Deprecated
 dill
 dirsync
+discord.py
 discord-webhook
 distlib
 distro
@@ -151,6 +153,7 @@ notebook
 nspektr
 numexpr
 numpy
+openai
 ordered-set
 packaging
 pandas
@@ -257,6 +260,8 @@ tornado
 tox
 tqdm
 traitlets
+types-requests
+types-urllib3
 typing
 typing_extensions
 typing-inspect
@@ -280,6 +285,7 @@ xdis
 yapf
 yarl
 yt-dlp
+z3-solver
 zipp
 zope.component
 zope.event

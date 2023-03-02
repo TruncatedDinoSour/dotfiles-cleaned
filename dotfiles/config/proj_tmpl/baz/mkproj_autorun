@@ -8,7 +8,7 @@ main() {
 
     tee baz.env >/dev/null <<EOF
 export BAZP_NAME='$PROJ_BASE'
-export BAZP_LICENSE='WTFPL'
+export BAZP_LICENSE='gpl3'
 export BAZP_VER=1
 export BAZP_AUTHOR='$(git config user.name)'
 export BAZP_SRC='plugin'
@@ -18,13 +18,13 @@ export BAZP_DESCRIPTION='Baz plugin for'
 EOF
 
     tee README.md >/dev/null <<EOF
-# Baz plugin: $PROJ_BASE
+# baz plugin : $PROJ_BASE
 
-> Baz plugin for
+> baz plugin for
 
-# Installation
+# installation
 
-- Using the [baz plugin manager](https://ari-web.xyz/gh/baz):
+- using the [baz plugin manager](https://ari-web.xyz/gh/baz) :
 
 \`\`\`bash
 $ baz install git '$PROJ_GIT'
@@ -32,7 +32,7 @@ $ baz install git '$PROJ_GIT'
 
 EOF
 
-    lmgr @wtfpl || echo 'Lmgr not found: https://ari-web.xyz/gh/lmgr'
+    lmgr @gpl3 || echo 'lmgr not found : https://ari-web.xyz/gh/lmgr'
 }
 
 main "$@"

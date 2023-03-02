@@ -1,210 +1,210 @@
  * ----------------
- * Description: Baz plugin for making your man pages colourful
+ * description : Baz plugin for making your man pages colourful
  * ----------------
- * Name: coloured-man-pages-plugin
- * License: WTFPL
- * Version: v1
- * Author: Ari Archer
- * Root_plugin_directory: plugin
- * Recomended_install_method: git
- * Source: https://ari-web.xyz/gh/coloured-man-pages-plugin
- * Installed_with_method: git
- * Disabled: No
+ * name : coloured-man-pages-plugin
+ * license : WTFPL
+ * version : v1
+ * author : Ari Archer
+ * root_plugin_directory : plugin
+ * recomended_install_method : git
+ * source : https://ari-web.xyz/gh/coloured-man-pages-plugin
+ * installed_with_method : git
+ * disabled : no
 
 
  * ----------------
- * Description: Baz plugin for making your ls better
+ * description : Baz plugin for making your ls better
  * ----------------
- * Name: ls-aliases-baz-plugin
- * License: WTFPL
- * Version: v1
- * Author: Ari Archer
- * Root_plugin_directory: plugin
- * Recomended_install_method: git
- * Source: https://ari-web.xyz/gh/ls-aliases-baz-plugin
- * Installed_with_method: git
- * Disabled: No
+ * name : ls-aliases-baz-plugin
+ * license : WTFPL
+ * version : v1
+ * author : Ari Archer
+ * root_plugin_directory : plugin
+ * recomended_install_method : git
+ * source : https://ari-web.xyz/gh/ls-aliases-baz-plugin
+ * installed_with_method : git
+ * disabled : no
 
 
  * ----------------
- * Description: Baz plugin for adding vi fzf keybinds
+ * description : Baz plugin for adding vi fzf keybinds
  * ----------------
- * Name: vifzf-keybinds-baz-plugin
- * License: WTFPL
- * Version: v1
- * Author: Ari Archer
- * Root_plugin_directory: plugin
- * Recomended_install_method: git
- * Source: https://ari-web.xyz/gh/vifzf-keybinds-baz-plugin
- * Installed_with_method: git
- * Disabled: No
+ * name : vifzf-keybinds-baz-plugin
+ * license : WTFPL
+ * version : v1
+ * author : Ari Archer
+ * root_plugin_directory : plugin
+ * recomended_install_method : git
+ * source : https://ari-web.xyz/gh/vifzf-keybinds-baz-plugin
+ * installed_with_method : git
+ * disabled : no
 
 
  * ----------------
- * Description: Baz plugin for coffee TTY theme
+ * description : Baz plugin for coffee TTY theme
  * ----------------
- * Name: coffee.tty-theme
- * License: WTFPL
- * Version: v3
- * Author: Ari Archer
- * Root_plugin_directory: plugin
- * Recomended_install_method: git
- * Source: https://github.com/coffee-theme/coffee.tty-theme
- * Installed_with_method: git
- * Disabled: No
+ * name : coffee.tty-theme
+ * license : WTFPL
+ * version : v3
+ * author : Ari Archer
+ * root_plugin_directory : plugin
+ * recomended_install_method : git
+ * source : https://github.com/coffee-theme/coffee.tty-theme
+ * installed_with_method : git
+ * disabled : no
 
 
  * ----------------
- * Description: Baz plugin for aliases for trash-cli
+ * description : Baz plugin for aliases for trash-cli
  * ----------------
- * Name: trash-cli-rm-baz
- * License: WTFPL
- * Version: v10
- * Author: Ari Archer
- * Root_plugin_directory: plugin
- * Recomended_install_method: git
- * Source: https://ari-web.xyz/gh/trash-cli-rm-baz
- * Installed_with_method: git
- * Disabled: No
+ * name : trash-cli-rm-baz
+ * license : WTFPL
+ * version : v10
+ * author : Ari Archer
+ * root_plugin_directory : plugin
+ * recomended_install_method : git
+ * source : https://ari-web.xyz/gh/trash-cli-rm-baz
+ * installed_with_method : git
+ * disabled : no
 
 
  * ----------------
- * Description: Baz plugin for aliases for yt-dlp
+ * description : Baz plugin for aliases for yt-dlp
  * ----------------
- * Name: yt-dlp-aliases-baz-plugin
- * License: WTFPL
- * Version: v1
- * Author: Ari Archer
- * Root_plugin_directory: plugin
- * Recomended_install_method: git
- * Source: https://ari-web.xyz/gh/yt-dlp-aliases-baz-plugin
- * Installed_with_method: git
- * Disabled: No
+ * name : yt-dlp-aliases-baz-plugin
+ * license : WTFPL
+ * version : v1
+ * author : Ari Archer
+ * root_plugin_directory : plugin
+ * recomended_install_method : git
+ * source : https://ari-web.xyz/gh/yt-dlp-aliases-baz-plugin
+ * installed_with_method : git
+ * disabled : no
 
 
  * ----------------
- * Description: Baz plugin for making linux cli better
+ * description : Baz plugin for making linux cli better
  * ----------------
- * Name: bettercmd-baz-plugin
- * License: WTFPL
- * Version: v5
- * Author: Ari Archer
- * Root_plugin_directory: plugin
- * Recomended_install_method: git
- * Source: https://ari-web.xyz/gh/bettercmd-baz-plugin
- * Installed_with_method: git
- * Disabled: No
+ * name : bettercmd-baz-plugin
+ * license : WTFPL
+ * version : v5
+ * author : Ari Archer
+ * root_plugin_directory : plugin
+ * recomended_install_method : git
+ * source : https://ari-web.xyz/gh/bettercmd-baz-plugin
+ * installed_with_method : git
+ * disabled : no
 
 
  * ----------------
- * Description: Baz plugin for entering and exiting virtualenvs with ease
+ * description : Baz plugin for entering and exiting virtualenvs with ease
  * ----------------
- * Name: venvin-baz-plugin
- * License: WTFPL
- * Version: v3
- * Author: Ari Archer
- * Root_plugin_directory: plugin
- * Recomended_install_method: git
- * Source: https://ari-web.xyz/gh/venvin-baz-plugin
- * Installed_with_method: git
- * Disabled: No
+ * name : venvin-baz-plugin
+ * license : WTFPL
+ * version : v3
+ * author : Ari Archer
+ * root_plugin_directory : plugin
+ * recomended_install_method : git
+ * source : https://ari-web.xyz/gh/venvin-baz-plugin
+ * installed_with_method : git
+ * disabled : no
 
 
  * ----------------
- * Description: Baz plugin for making commands short
+ * description : Baz plugin for making commands short
  * ----------------
- * Name: shortcmd-baz-plugin
- * License: WTFPL
- * Version: v5
- * Author: Ari Archer
- * Root_plugin_directory: plugin
- * Recomended_install_method: git
- * Source: https://ari-web.xyz/gh/shortcmd-baz-plugin
- * Installed_with_method: git
- * Disabled: No
+ * name : shortcmd-baz-plugin
+ * license : WTFPL
+ * version : v6
+ * author : Ari Archer
+ * root_plugin_directory : plugin
+ * recomended_install_method : git
+ * source : https://ari-web.xyz/gh/shortcmd-baz-plugin
+ * installed_with_method : git
+ * disabled : no
 
 
  * ----------------
- * Description: Baz plugin for git cli a bit less verbose
+ * description : Baz plugin for git cli a bit less verbose
  * ----------------
- * Name: git-aliases-plugin
- * License: WTFPL
- * Version: v3
- * Author: Ari Archer
- * Root_plugin_directory: plugin
- * Recomended_install_method: git
- * Source: https://ari-web.xyz/gh/git-aliases-plugin
- * Installed_with_method: git
- * Disabled: No
+ * name : git-aliases-plugin
+ * license : WTFPL
+ * version : v3
+ * author : Ari Archer
+ * root_plugin_directory : plugin
+ * recomended_install_method : git
+ * source : https://ari-web.xyz/gh/git-aliases-plugin
+ * installed_with_method : git
+ * disabled : no
 
 
  * ----------------
- * Description: Baz plugin for
+ * description : Baz plugin for
  * ----------------
- * Name: cmdutils-baz-plugin
- * License: WTFPL
- * Version: v4
- * Author: Ari Archer
- * Root_plugin_directory: plugin
- * Recomended_install_method: git
- * Source: https://ari-web.xyz/gh/cmdutils-baz-plugin
- * Installed_with_method: git
- * Disabled: No
+ * name : cmdutils-baz-plugin
+ * license : WTFPL
+ * version : v4
+ * author : Ari Archer
+ * root_plugin_directory : plugin
+ * recomended_install_method : git
+ * source : https://ari-web.xyz/gh/cmdutils-baz-plugin
+ * installed_with_method : git
+ * disabled : no
 
 
  * ----------------
- * Description: Collect MPV player data
+ * description : Baz plugin for coffee theme in bash prompt
  * ----------------
- * Name: mpvp-report
- * License: gpl3
- * Version: v7
- * Author: Ari Archer
- * Root_plugin_directory: plugin
- * Recomended_install_method: git
- * Source: https://ari-web.xyz/gh/mpvp-report
- * Installed_with_method: git
- * Disabled: No
+ * name : coffee.baz-plugin
+ * license : WTFPL
+ * version : v7
+ * author : Ari Archer
+ * root_plugin_directory : plugin
+ * recomended_install_method : git
+ * source : https://github.com/coffee-theme/coffee.baz-plugin
+ * installed_with_method : git
+ * disabled : no
 
 
  * ----------------
- * Description: Baz plugin for coffee theme in bash prompt
+ * description : Baz plugin for making your bash better
  * ----------------
- * Name: coffee.baz-plugin
- * License: WTFPL
- * Version: v7
- * Author: Ari Archer
- * Root_plugin_directory: plugin
- * Recomended_install_method: git
- * Source: https://github.com/coffee-theme/coffee.baz-plugin
- * Installed_with_method: git
- * Disabled: No
+ * name : better-bash-baz-plugin
+ * license : WTFPL
+ * version : v10
+ * author : Ari Archer
+ * root_plugin_directory : plugin
+ * recomended_install_method : git
+ * source : https://ari-web.xyz/gh/better-bash-baz-plugin
+ * installed_with_method : git
+ * disabled : no
 
 
  * ----------------
- * Description: Baz plugin for testing baz performance
+ * description : Baz plugin for testing baz performance
  * ----------------
- * Name: baz-perf-plugin
- * License: WTFPL
- * Version: v2
- * Author: Ari Archer
- * Root_plugin_directory: plugin
- * Recomended_install_method: git
- * Source: https://ari-web.xyz/gh/baz-perf-plugin
- * Installed_with_method: git
- * Disabled: Yes
+ * name : baz-perf-plugin
+ * license : WTFPL
+ * version : v2
+ * author : Ari Archer
+ * root_plugin_directory : plugin
+ * recomended_install_method : git
+ * source : https://ari-web.xyz/gh/baz-perf-plugin
+ * installed_with_method : git
+ * disabled : yes
 
 
  * ----------------
- * Description: Baz plugin for making your bash better
+ * description : Collect MPV player data
  * ----------------
- * Name: better-bash-baz-plugin
- * License: WTFPL
- * Version: v9
- * Author: Ari Archer
- * Root_plugin_directory: plugin
- * Recomended_install_method: git
- * Source: https://ari-web.xyz/gh/better-bash-baz-plugin
- * Installed_with_method: git
- * Disabled: No
+ * name : mpvp-report
+ * license : gpl3
+ * version : v9
+ * author : Ari Archer
+ * root_plugin_directory : plugin
+ * recomended_install_method : git
+ * source : https://ari-web.xyz/gh/mpvp-report
+ * installed_with_method : git
+ * disabled : no
 
 

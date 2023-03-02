@@ -11,7 +11,6 @@ app-misc/lmgr
 app-misc/mkproj
 app-misc/rlwrap
 app-misc/tmux
-app-misc/yafetch
 app-office/calcurse
 app-shells/bash
 app-shells/bash-completion
