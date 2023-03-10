@@ -101,6 +101,7 @@ ipykernel
 ipython
 ipython-genutils
 ipywidgets
+isodate
 isort
 itsdangerous
 jaraco.context
@@ -216,6 +217,7 @@ python-engineio
 python-jsonrpc-server
 python-language-server
 python-magic
+python-osc
 python-socketio
 python-telegram
 pyxdg
@@ -223,6 +225,7 @@ PyYAML
 pyzmq
 qtconsole
 QtPy
+rdflib
 readline
 requests
 requests-toolbelt
@@ -248,6 +251,7 @@ SQLAlchemy
 stack-data
 tabulate
 telegram
+telegram-text
 termcolor
 terminado
 testpath

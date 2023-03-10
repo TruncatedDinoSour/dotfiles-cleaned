@@ -39,6 +39,7 @@ media-gfx/jpegoptim
 media-gfx/optipng
 media-gfx/shot
 media-sound/alsa-utils
+media-sound/audacity
 media-video/mpv
 net-misc/axel
 net-misc/dhcpcd

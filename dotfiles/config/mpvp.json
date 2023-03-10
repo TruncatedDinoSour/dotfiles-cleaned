@@ -39,7 +39,8 @@
         "privately owned spiral galaxy": "lovejoy",
         "mad - young nights (demo)": "mad tsai",
         "so tired": "crawlers",
-        "bülow, rich the kid - you & jennifer (the other side) (audio)": "bülow"
+        "bülow, rich the kid - you & jennifer (the other side) (audio)": "bülow",
+        "redesign": "awfultine"
     },
     "styles": "~/.config/mpvp.css",
     "song-name-delims": ["\u2013", "-", ",", "feat.", ".", "&", "⧸"],

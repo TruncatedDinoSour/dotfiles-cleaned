@@ -1,1 +1,1 @@
-app-shells/baz mem-custom
+app-shells/baz -mem-custom
