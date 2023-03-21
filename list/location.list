@@ -13,7 +13,6 @@
 /home/ari/.idlerc -> dotfiles/editors/idle
 /home/ari/.xinitrc -> dotfiles/core
 /etc/default/grub -> dotfiles/core
-/etc/hosts -> dotfiles/core
 /etc/dracut.conf -> dotfiles/core
 /etc/dracut.conf.d -> dotfiles/core
 /etc/sudoers -> dotfiles/core

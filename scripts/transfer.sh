@@ -35,7 +35,6 @@ from=(
 
     '/home/ari/.xinitrc'
     '/etc/default/grub'
-    '/etc/hosts'
     '/etc/dracut.conf'
     '/etc/dracut.conf.d'
     '/etc/sudoers'
@@ -96,7 +95,6 @@ to=(
     'dotfiles/core'
     'dotfiles/core'
     'dotfiles/core'
-    'dotfiles/core'
 
     'dotfiles/portage'
 
@@ -112,6 +110,8 @@ for i in "${!from[@]}"; do
     cp -rfv "${from[$i]}" "${to[$i]}"
     echo "${from[$i]} -> ${to[$i]}" >>list/location.list
 done
+
+cp ../hosts.gz dotfiles/core
 
 find /root -type l -exec ls -lA {} + | tee list/root_symlinks.list
 
@@ -152,8 +152,5 @@ cd ../../.. || exit 2
 
 # sed -i '/PHONE/d' dotfiles/config/arigram/config.py
 sed -i '/signingkey/d; /email/d; /name/d; /\[user\]/d; /\[github\]/d; /user/d' dotfiles/config/git/config
-
-sed '/\.ssh$/d' -i dotfiles/core/hosts
-gzip -9 dotfiles/core/hosts # too large for github
 
 chown -R ari:ari dotfiles list
