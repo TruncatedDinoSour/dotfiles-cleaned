@@ -101,7 +101,6 @@ ipykernel
 ipython
 ipython-genutils
 ipywidgets
-isodate
 isort
 itsdangerous
 jaraco.context
@@ -225,7 +224,6 @@ PyYAML
 pyzmq
 qtconsole
 QtPy
-rdflib
 readline
 requests
 requests-toolbelt

@@ -13,6 +13,8 @@ main() {
 
     [ "$nx" ] || return 0
 
+    . "$HOME/.config/baz/genoo-cflags.env" || :
+
     CC="${CC:-clang}"
 
     if [ "$DEBUG" ]; then
