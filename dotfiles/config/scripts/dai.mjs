@@ -32,7 +32,12 @@ function escape_nonalpha(string) {
 /*
  * i did not write this code, only made it a slight bit
  * prettier, this is a custom hashing algorithm used by
- * deepai
+ * deepai, this function is called `f` and is defined as
+ * `f=function`, you can probably grep for it and youll find it,
+ * for example : `f=function(){for(var v=[],w=0;64>w;)v[w]=0|4294967296*`,
+ * this continues, as mentioned in the function
+ * body its located at https://deepai.org/machine-learning-model/text-generator
+ * ( yes as in index.html ) L1035
  */
 function deepai_hash(target) {
     let computed_tmp;

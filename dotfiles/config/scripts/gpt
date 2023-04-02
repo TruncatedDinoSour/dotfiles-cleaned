@@ -13,6 +13,8 @@ API: str = "https://ai.ls/api/generate"
 
 # _astro/Generator.<..>.js @ digestMessage(r) ( L71566 )
 # and generateSignature ( L71573 ) ( this one has the key )
+# if anything, check the sign() and message() functions just
+# in case the format ot smt got updated
 KEY: str = "Na3dx_(?qx32l}ep?#:8:mo44;7W\\2W.:nxm"
 
 
