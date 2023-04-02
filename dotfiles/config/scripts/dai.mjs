@@ -37,7 +37,8 @@ function escape_nonalpha(string) {
  * for example : `f=function(){for(var v=[],w=0;64>w;)v[w]=0|4294967296*`,
  * this continues, as mentioned in the function
  * body its located at https://deepai.org/machine-learning-model/text-generator
- * ( yes as in index.html ) L1035
+ * ( yes as in index.html ) L1035, all line numbers are from
+ * prettified source code using firefox
  */
 function deepai_hash(target) {
     let computed_tmp;
