@@ -41,6 +41,7 @@ charset-normalizer
 cleo
 click
 clikit
+cloudscraper
 colorama
 ConfigArgParse
 configobj
@@ -222,6 +223,7 @@ python-magic
 python-osc
 python-socketio
 python-telegram
+pytz
 pytz-deprecation-shim
 pyxdg
 PyYAML

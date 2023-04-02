@@ -7,7 +7,7 @@ import sys
 from time import time
 from typing import Any
 
-import requests
+import cloudscraper  # type: ignore
 
 KEY: str = "Na3dx_(?qx32l}ep?#:8:mo44;7W\\2W.:nxm"
 API: str = "https://ai.ls/api/generate"
@@ -48,7 +48,9 @@ def main() -> int:
     if not prompt:
         return 2
 
-    print(requests.post(API, json=message(prompt)).text)
+    print(
+        cloudscraper.CloudScraper(browser="chrome").post(API, json=message(prompt)).text
+    )
 
     return 0
 
