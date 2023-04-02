@@ -9,8 +9,11 @@ from typing import Any
 
 import cloudscraper  # type: ignore
 
-KEY: str = "Na3dx_(?qx32l}ep?#:8:mo44;7W\\2W.:nxm"
 API: str = "https://ai.ls/api/generate"
+
+# _astro/Generator.<..>.js @ digestMessage(r) ( L71566 )
+# and generateSignature ( L71573 ) ( this one has the key )
+KEY: str = "Na3dx_(?qx32l}ep?#:8:mo44;7W\\2W.:nxm"
 
 
 def sign(msg: str, t: int) -> str:
@@ -21,6 +24,7 @@ def sign(msg: str, t: int) -> str:
 
 
 def message(msg: str) -> dict[str, Any]:
+    msg = msg.encode("unicode_escape").decode()
     t: int = round(time() * 1000)
 
     return {
