@@ -10,7 +10,7 @@ unset LD_PRELAOD
 export PATH="$PATH:/usr/local/bin:$HOME/.local/bin:$HOME/.config/scripts"
 
 # TMUX config
-source "$HOME/.config/shells/tmux/tmux.conf"
+. "$HOME/.config/shells/tmux/tmux.conf"
 
 # Start TMUX
 [ -z "$TMUX" ] &&
@@ -20,7 +20,7 @@ source "$HOME/.config/shells/tmux/tmux.conf"
 
 # shellcheck disable=SC1090
 for _t in conf pre env; do
-    source "$HOME/.config/shells/bash/bash.$_t"
+    . "$HOME/.config/shells/bash/bash.$_t"
 done
 
 # Load baz
@@ -28,14 +28,14 @@ _baz_loader="$HOME/.local/share/baz/loader.sh"
 
 # export BAZ_DEBUG_LOAD=1
 # shellcheck disable=SC1090
-[ ! -f "$_baz_loader" ] || source "$_baz_loader"
+[ ! -f "$_baz_loader" ] || . "$_baz_loader"
 # sleep 1000
 
 # Functions
-source "$HOME/.config/shells/bash/bash.functions"
+. "$HOME/.config/shells/bash/bash.functions"
 
 # Aliases
-source "$HOME/.config/shells/bash/bash.aliases"
+. "$HOME/.config/shells/bash/bash.aliases"
 
 export dots="$HOME/Ari/coding/resources_/dots" \
     tdots="$HOME/Ari/coding/resources_/tdots" \

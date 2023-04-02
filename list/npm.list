@@ -1,5 +1,7 @@
 /usr/lib64
 ├── corepack@0.14.2
+├── got@12.6.0
+├── hpagent@1.2.0
 ├── html-minifier@4.0.0
 ├── imgur-cli@0.7.0
 ├── js-beautify@1.14.4
@@ -7,6 +9,8 @@
 ├── netlify-cli@12.0.6
 ├── netlify@12.0.1
 ├── npm@8.19.2
+├── scripts@1.0.0 -> ./../../home/ari/.config/scripts
 ├── typescript@4.7.4
+├── uglify-js@3.17.4
 └── uglifycss@0.0.29
 

@@ -8,6 +8,7 @@ acct-group/kos
 acct-group/kvm
 acct-group/locate
 acct-group/lp
+acct-group/lpadmin
 acct-group/man
 acct-group/messagebus
 acct-group/portage
@@ -121,6 +122,7 @@ app-text/poppler-data
 app-text/ps2eps
 app-text/ps2pkm
 app-text/psutils
+app-text/qpdf
 app-text/rman
 app-text/sgml-common
 app-text/t1utils
@@ -429,6 +431,7 @@ media-libs/alsa-lib
 media-libs/alsa-topology-conf
 media-libs/alsa-ucm-conf
 media-libs/dav1d
+media-libs/flac
 media-libs/fontconfig
 media-libs/freeglut
 media-libs/freetype
@@ -487,6 +490,8 @@ net-misc/socat
 net-misc/vde
 net-misc/wget
 net-p2p/transmission-cli
+net-print/cups
+net-print/cups-filters
 net-wireless/crda
 net-wireless/wireless-regdb
 net-wireless/wpa_supplicant
@@ -686,6 +691,7 @@ virtual/texi2dvi
 virtual/tmpfiles
 virtual/ttf-fonts
 virtual/udev
+www-client/chromium-bin
 www-client/firefox
 www-client/lynx
 x11-apps/iceauth

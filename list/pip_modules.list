@@ -21,6 +21,7 @@ backports.entry-points-selectable
 beautifulsoup4
 beepy
 bidict
+bitstring
 black
 bleach
 blessings
@@ -111,6 +112,7 @@ jeepney
 Jinja2
 joblib
 josepy
+Js2Py
 jsonschema
 jupyter-client
 jupyter-console
@@ -197,6 +199,7 @@ pyfzf
 pygame
 Pygments
 pyinstaller-hooks-contrib
+pyjsparser
 pylev
 pylint
 pymdown-extensions
@@ -219,6 +222,7 @@ python-magic
 python-osc
 python-socketio
 python-telegram
+pytz-deprecation-shim
 pyxdg
 PyYAML
 pyzmq
@@ -267,6 +271,8 @@ types-urllib3
 typing
 typing_extensions
 typing-inspect
+tzdata
+tzlocal
 ujson
 uncompyle6
 unicorn

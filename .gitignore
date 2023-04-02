@@ -16,4 +16,7 @@ undodir/
 codeql-analysis.yml
 recent-files.lst
 mypy_cache/
-
+.mypy_cache/
+chromium/
+chromium-bin/
+/dotfiles/config/scripts/node_modules/

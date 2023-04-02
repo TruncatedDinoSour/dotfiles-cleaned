@@ -67,6 +67,7 @@ sys-libs/glibc
 sys-libs/libxcrypt
 sys-process/htop-vim
 sys-process/time
+www-client/chromium-bin
 www-client/firefox
 x11-apps/xbacklight
 x11-apps/xinit
