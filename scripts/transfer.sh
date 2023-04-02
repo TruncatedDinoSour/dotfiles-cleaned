@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-# FIREFOX_PROFILE='/home/ari/.mozilla/firefox/3s4h1qq0.default-release'
+FIREFOX_PROFILE='/home/ari/.mozilla/firefox/3s4h1qq0.default-release'
 
 [ "$EUID" != 0 ] && exit 255
 
@@ -26,7 +26,7 @@ from=(
     '/home/ari/.mutt/muttrc'
     '/home/ari/.lynxrc'
 
-    # "$FIREFOX_PROFILE"
+    "$FIREFOX_PROFILE/chrome/userChrome.css"
 
     '/home/ari/.icons'
 
@@ -73,7 +73,7 @@ to=(
     'dotfiles/etc'
     'dotfiles/etc'
 
-    # 'dotfiles/etc/firefox'
+    'dotfiles/etc'
 
     'dotfiles/icons'
 
