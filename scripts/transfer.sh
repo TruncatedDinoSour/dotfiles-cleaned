@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-FIREFOX_PROFILE='/home/ari/.mozilla/firefox/3s4h1qq0.default-release'
+# FIREFOX_PROFILE='/home/ari/.mozilla/firefox/3s4h1qq0.default-release'
 
 [ "$EUID" != 0 ] && exit 255
 
@@ -26,7 +26,7 @@ from=(
     '/home/ari/.mutt/muttrc'
     '/home/ari/.lynxrc'
 
-    "$FIREFOX_PROFILE"
+    # "$FIREFOX_PROFILE"
 
     '/home/ari/.icons'
 
@@ -73,7 +73,7 @@ to=(
     'dotfiles/etc'
     'dotfiles/etc'
 
-    'dotfiles/etc/firefox'
+    # 'dotfiles/etc/firefox'
 
     'dotfiles/icons'
 
@@ -145,10 +145,10 @@ rm -rfv dotfiles/config/asciinema \
     dotfiles/editors/emacs/.emacs.d/elpa \
     dotfiles/editors/emacs/.emacs.d/recentf
 
-cp scripts/clean_firefox_profile dotfiles/etc/firefox
-cd dotfiles/etc/firefox || exit 1
-./clean_firefox_profile
-cd ../../.. || exit 2
+# cp scripts/clean_firefox_profile dotfiles/etc/firefox
+# cd dotfiles/etc/firefox || exit 1
+# ./clean_firefox_profile
+# cd ../../.. || exit 2
 
 # sed -i '/PHONE/d' dotfiles/config/arigram/config.py
 sed -i '/signingkey/d; /email/d; /name/d; /\[user\]/d; /\[github\]/d; /user/d' dotfiles/config/git/config
