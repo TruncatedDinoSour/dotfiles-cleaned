@@ -6,7 +6,6 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-unset LD_PRELAOD
 export PATH="$PATH:/usr/local/bin:$HOME/.local/bin:$HOME/.config/scripts"
 
 # TMUX config

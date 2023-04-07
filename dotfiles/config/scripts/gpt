@@ -56,7 +56,15 @@ def main() -> int:
         return 2
 
     print(
-        cloudscraper.CloudScraper(browser="chrome").post(API, json=message(prompt)).text
+        cloudscraper.CloudScraper(
+            browser={"browser": "chrome", "platform": "android", "desktop": False},
+        )
+        .post(
+            API,
+            json=message(prompt),
+            headers={"referer": API},
+        )
+        .text
     )
 
     return 0
