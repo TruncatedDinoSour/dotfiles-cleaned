@@ -45,7 +45,7 @@ set list listchars=trail:~,extends:»,precedes:«,nbsp:×
 "   $ cd ~/.vim/plugged/coc.nvim
 "   $ npm install
 " Bracey:
-"   $ cd ~/.vim/pluggled/bracey
+"   $ cd ~/.vim/plugged/bracey.vim
 "   $ npm install --prefix server
 
 function! BuildVimComposer(info)
