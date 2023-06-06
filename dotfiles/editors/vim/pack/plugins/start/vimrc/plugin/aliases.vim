@@ -1,10 +1,5 @@
-" Vim composor
-function! ComposerAll()
-    ComposerStart
-    ComposerOpen
-endfunction
-
-command Md call ComposerAll()
+command Md :InstantMarkdownPreview
+command NMd :InstantMarkdownStop
 
 " Vim dilf
 cabbrev dilf Diff

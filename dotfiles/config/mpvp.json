@@ -40,7 +40,8 @@
         "mad - young nights (demo)": "mad tsai",
         "so tired": "crawlers",
         "bülow, rich the kid - you & jennifer (the other side) (audio)": "bülow",
-        "redesign": "awfultine"
+        "redesign": "awfultune",
+        "『ノンブレス・オブリージュ』3dmvゲームサイズ公開！": "3dmv"
     },
     "styles": "~/.config/mpvp.css",
     "song-name-delims": ["\u2013", "-", ",", "feat.", ".", "&", "⧸"],

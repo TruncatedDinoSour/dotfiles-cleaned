@@ -59,6 +59,7 @@ app-crypt/gnupg
 app-crypt/gpgme
 app-crypt/libb2
 app-crypt/libmd
+app-crypt/p11-kit
 app-crypt/pinentry
 app-crypt/rhash
 app-editors/vim
@@ -70,6 +71,7 @@ app-emulation/spice-protocol
 app-eselect/eselect-ctags
 app-eselect/eselect-fontconfig
 app-eselect/eselect-iptables
+app-eselect/eselect-java
 app-eselect/eselect-lib-bin-symlink
 app-eselect/eselect-lua
 app-eselect/eselect-notify-send
@@ -136,6 +138,8 @@ app-text/zathura
 app-text/zathura-pdf-poppler
 app-vim/gentoo-syntax
 dev-db/sqlite
+dev-java/java-config
+dev-java/openjdk-bin
 dev-lang/fasm
 dev-lang/go
 dev-lang/lua
@@ -304,7 +308,6 @@ dev-perl/WWW-RobotRules
 dev-perl/XML-Parser
 dev-perl/XString
 dev-perl/YAML-Tiny
-dev-python/appdirs
 dev-python/autocommand
 dev-python/certifi
 dev-python/cffi
@@ -335,6 +338,7 @@ dev-python/ordered-set
 dev-python/packaging
 dev-python/password-strength
 dev-python/pip
+dev-python/platformdirs
 dev-python/plumbum
 dev-python/ply
 dev-python/pycparser
@@ -487,6 +491,7 @@ net-misc/netifrc
 net-misc/openssh
 net-misc/rsync
 net-misc/socat
+net-misc/telnet-bsd
 net-misc/vde
 net-misc/wget
 net-p2p/transmission-cli
@@ -502,6 +507,7 @@ sys-apps/ack
 sys-apps/acl
 sys-apps/attr
 sys-apps/baselayout
+sys-apps/baselayout-java
 sys-apps/bat
 sys-apps/coreutils
 sys-apps/dbus
@@ -625,7 +631,9 @@ virtual/dev-manager
 virtual/editor
 virtual/freedesktop-icon-theme
 virtual/glu
+virtual/jdk
 virtual/jpeg
+virtual/jre
 virtual/latex-base
 virtual/libc
 virtual/libcrypt

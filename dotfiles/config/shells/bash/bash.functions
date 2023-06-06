@@ -12,21 +12,11 @@ mkkernel() {
     $__BASH_RUNAS mkmk modules "$@" || return 1
     $__BASH_RUNAS make INSTALL_MOD_STRIP=1 modules_install || return 1
     $__BASH_RUNAS mkmk install || return 1
+    $__BASH_RUNAS mkmk headers_install || return 1
     $__BASH_RUNAS dracut --force || return 1
     $__BASH_RUNAS grub-mkconfig -o /boot/grub/grub.cfg || return 1
 
     set +x
-}
-
-pip_upgrade() {
-    "$__BASH_BIN_DIR"/python3 -m pip list |
-        "$__BASH_BIN_DIR"/awk '{ print $1  }' |
-        sed '/portage/d' |
-        "$__BASH_BIN_DIR"/tail -n +3 >/tmp/requirements.txt
-
-    "$__BASH_BIN_DIR"/python3 -m pip install --user --upgrade -r /tmp/requirements.txt
-
-    "$__BASH_CORE_BIN_DIR"/rm -f /tmp/requirements.txt
 }
 
 dlt() {

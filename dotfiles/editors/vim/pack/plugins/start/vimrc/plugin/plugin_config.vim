@@ -141,3 +141,42 @@ let g:haskell_enable_pattern_synonyms = 1 " to enable highlighting of `pattern`
 let g:haskell_enable_typeroles = 1        " to enable highlighting of type roles
 let g:haskell_enable_static_pointers = 1  " to enable highlighting of `static`
 let g:haskell_backpack = 1                " to enable highlighting of backpack keywords
+
+" Subby
+let g:subby = {
+            \ 'ae': 'ä',
+            \ 'oe': 'ö',
+            \ 'ue': 'ü',
+            \ 'ss': 'ß',
+            \ 'Ae': 'Ä',
+            \ 'Oe': 'Ö',
+            \ 'Ue': 'Ü',
+            \ 'Ss': 'ß',
+            \ 'Aa': 'Ą',
+            \ 'aa': 'ą',
+            \ 'Ch': 'Č',
+            \ 'ch': 'č',
+            \ 'Ee': 'Ę',
+            \ 'ee': 'ę',
+            \ 'Ie': 'Ė',
+            \ 'ie': 'ė',
+            \ 'Ii': 'Į',
+            \ 'ii': 'į',
+            \ 'Sh': 'Š',
+            \ 'sh': 'š',
+            \ 'Uu': 'Ų',
+            \ 'uu': 'ų',
+            \ 'Ul': 'Ū',
+            \ 'ul': 'ū',
+            \ 'Zh': 'Ž',
+            \ 'zh': 'ž'
+            \ }
+let g:subby_delim = ','
+
+" Instant-markdown
+
+let g:instant_markdown_slow = 0
+let g:instant_markdown_open_to_the_world = 0
+let g:instant_markdown_autostart = 0
+let g:instant_markdown_allow_external_content = 1
+let g:instant_markdown_browser = 'firefox --new-window'

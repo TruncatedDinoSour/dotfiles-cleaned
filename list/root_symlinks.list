@@ -1,4 +1,5 @@
 lrwxrwxrwx 1 root root 17 Oct 20  2021 /root/.bashrc -> /home/ari/.bashrc
+lrwxrwxrwx 1 root root 26 Apr 19 00:16 /root/.cache/.user.key -> /home/ari/.cache/.user.key
 lrwxrwxrwx 1 root root 17 Oct 20  2021 /root/.config -> /home/ari/.config
 lrwxrwxrwx 1 root root 16 Oct 20  2021 /root/.icons -> /home/ari/.icons
 lrwxrwxrwx 1 root root 16 Oct 20  2021 /root/.local -> /home/ari/.local

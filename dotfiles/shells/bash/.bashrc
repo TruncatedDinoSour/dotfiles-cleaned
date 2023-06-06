@@ -17,17 +17,15 @@ export PATH="$PATH:/usr/local/bin:$HOME/.local/bin:$HOME/.config/scripts"
     command -v tmux >/dev/null &&
     exec tmux -2 -l
 
-# shellcheck disable=SC1090
-for _t in conf pre env; do
-    . "$HOME/.config/shells/bash/bash.$_t"
-done
+. "$HOME/.config/shells/bash/bash.conf"
+. "$HOME/.config/shells/bash/bash.env"
 
 # Load baz
 _baz_loader="$HOME/.local/share/baz/loader.sh"
 
 # export BAZ_DEBUG_LOAD=1
 # shellcheck disable=SC1090
-[ ! -f "$_baz_loader" ] || . "$_baz_loader"
+[ -f "$_baz_loader" ] && . "$_baz_loader"
 # sleep 1000
 
 # Functions
@@ -43,6 +41,4 @@ export dots="$HOME/Ari/coding/resources_/dots" \
     npdf="$HOME/Documents/notes/doc.pdf" \
     ndir="$HOME/Documents/notes"
 
-autorun || vecho 'Autorun failed'
-
-alias m='mpv --loop --loop-playlist --shuffle'
+autorun

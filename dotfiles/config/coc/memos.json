@@ -598,7 +598,7 @@
       "https://json.schemastore.org/package.json": {
         "etag": "\"092b9eba35dd91:0\"",
         "fileName": "473f72b44c2905902dfbcc770aab7f7a.schema.json",
-        "updateTime": 1680404456408
+        "updateTime": 1685262941162
       },
       "https://json.schemastore.org/semantic-release.json": {
         "etag": "\"808cdec3a9a4d81:0\"",
@@ -633,7 +633,7 @@
       "https://json.schemastore.org/config.json": {
         "etag": "\"bcd1f6fd316ad81:0\"",
         "fileName": "ee050b74d016c5f06e4024d2dce36b54.schema.json",
-        "updateTime": 1675765771884
+        "updateTime": 1684596222031
       },
       "https://json.schemastore.org/web-manifest-combined.json": {
         "etag": "\"43e0aa0326ad81:0\"",

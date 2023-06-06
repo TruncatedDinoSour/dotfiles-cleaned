@@ -1,5 +1,0 @@
-#!/bin/bash
-
-vecho() {
-    [ "$__BASH_VINFO" != 'true' ] || echo "[VECHO] $*";
-}

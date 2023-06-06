@@ -164,3 +164,4 @@ cython_debug/
 
 # Other
 .ccls-cache/
+!py.typed

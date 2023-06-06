@@ -20,3 +20,18 @@ snippet h
 $2
 #endif /* $1 */
 endsnippet
+
+snippet a
+$1 $2($3) {
+    $4
+}
+endsnippet
+
+snippet fn
+ssize_t (*$1)($2) = NULL;
+endsnippet
+
+snippet fnw
+if (!og_$1)
+    og_$1 = ($2 (*)($3))dlsym(RTLD_NEXT, "$1");
+endsnippet

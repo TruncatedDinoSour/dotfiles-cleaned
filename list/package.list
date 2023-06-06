@@ -44,6 +44,7 @@ net-misc/axel
 net-misc/dhcpcd
 net-misc/netifrc
 net-misc/socat
+net-misc/telnet-bsd
 net-p2p/transmission-cli
 net-wireless/wpa_supplicant
 sys-apps/ack
@@ -67,6 +68,7 @@ sys-libs/glibc
 sys-libs/libxcrypt
 sys-process/htop-vim
 sys-process/time
+virtual/jre
 www-client/chromium-bin
 www-client/firefox
 x11-apps/xbacklight

@@ -9,12 +9,13 @@
  */
 
 import got from "got";
+import process from "process";
 import { HttpsProxyAgent, HttpProxyAgent } from "hpagent";
-import "process";
 
 const MAX32 = 2 ** 32;
 
-const USER_AGENT = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36";
+const USER_AGENT =
+    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36";
 
 const DEFAULT_KEY = "quickstart-QUdJIGlzIGNvbWluZy4uLi4K";
 const PROXY_API =
@@ -140,9 +141,46 @@ function error(msg) {
     process.exit(1);
 }
 
+async function get_proxy() {
+    var proxy = "";
+
+    while (proxy === "") {
+        let proxy_obj = {
+            keepAlive: true,
+            keepAliveMsecs: 1000,
+            maxSockets: 256,
+            maxFreeSockets: 256,
+            scheduling: "lifo",
+            timeout: 3000,
+            proxy: await got.get(PROXY_API).then((r) => r.body),
+        };
+
+        let agent = {
+            http: new HttpProxyAgent(proxy_obj),
+            https: new HttpsProxyAgent(proxy_obj),
+        };
+
+        try {
+            await got.get({
+                url: "http://example.com/",
+                agent: agent,
+            });
+
+            proxy = proxy_obj.proxy;
+        } catch {
+            // ignore
+        } finally {
+            agent.http.destroy();
+            agent.https.destroy();
+        }
+    }
+
+    return proxy;
+}
+
 async function main() {
     if (process.argv.length < 4 || !(process.argv[2] = process.argv[2].trim()))
-        error("usage : <api> <parametre:value> ...");
+        error(`usage : <api> <parametre:value> ...`);
 
     // console.log(
     //     `curl -F 'text=${encodeURI(
@@ -154,6 +192,24 @@ async function main() {
 
     for (let [k, v] of Object.entries(params))
         if (!v) error(`\`${k}\` does not have a non-empty defined value`);
+
+    // generates a curl command instead of making a request itself
+    if (process.env.CURL) {
+        process.stdout.write(`${process.env.CURL} ${API}/${process.argv[2]} \
+--proxy '${await get_proxy()}' -A '${USER_AGENT}' -H 'api-key:${create_deepai_key()}' `);
+
+        Object.entries(params).forEach((item) =>
+            process.stdout.write(
+                `-F '${item[0]}=${
+                    item[1].startsWith("@")
+                        ? item[1]
+                        : encodeURIComponent(item[1])
+                }' `
+            )
+        );
+
+        return console.log(";");
+    }
 
     let options = {
         url: `${API}/${process.argv[2]}`,
@@ -170,24 +226,20 @@ async function main() {
         options.headers["Api-key"] = create_deepai_key();
         if (!do_api && defkey) return;
 
-        await got.get(PROXY_API).then((r) => {
-            let proxy = {
-                keepAlive: true,
-                keepAliveMsecs: 1000,
-                maxSockets: 256,
-                maxFreeSockets: 256,
-                scheduling: "lifo",
-                proxy: r.body,
-                headers: options.headers,
-            };
+        let proxy = {
+            keepAlive: true,
+            keepAliveMsecs: 1000,
+            maxSockets: 256,
+            maxFreeSockets: 256,
+            scheduling: "lifo",
+            proxy: await get_proxy(),
+            headers: options.headers,
+        };
 
-            options.agent = {
-                https: new HttpsProxyAgent(proxy),
-                http: new HttpProxyAgent(proxy),
-            };
-
-            options.agent.http2 = options.agent.http2;
-        });
+        options.agent = {
+            https: new HttpsProxyAgent(proxy),
+            http: new HttpProxyAgent(proxy),
+        };
     }
 
     // DA_TRY -- try other methods than just an API bypass

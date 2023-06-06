@@ -45,18 +45,18 @@ set list listchars=trail:~,extends:»,precedes:«,nbsp:×
 "   $ cd ~/.vim/plugged/coc.nvim
 "   $ npm install
 " Bracey:
-"   $ cd ~/.vim/pluggled/bracey
+"   $ cd ~/.vim/plugged/bracey.vim # TruncatedDinosour/dotfiles-cleaned #4
 "   $ npm install --prefix server
 
-function! BuildVimComposer(info)
-    if a:info.status != 'unchanged' || a:info.force
-        if has('nvim')
-            silent !cargo build --release --locked
-        else
-            silent !cargo build --release --locked --no-default-features --features json-rpc
-        endif
-    endif
-endfunction
+" function! BuildVimComposer(info)
+"     if a:info.status != 'unchanged' || a:info.force
+"         if has('nvim')
+"             silent !cargo build --release --locked
+"         else
+"             silent !cargo build --release --locked --no-default-features --features json-rpc
+"         endif
+"     endif
+" endfunction
 
 call plug#begin("~/.vim/plugged")
     Plug 'turbio/bracey.vim'
@@ -78,13 +78,18 @@ call plug#begin("~/.vim/plugged")
     Plug 'luochen1990/rainbow'
     Plug 'coffee-theme/coffee.vim'
     Plug 'TruncatedDinosour/vimbuddy.vim'
-    Plug 'euclio/vim-markdown-composer', { 'do': function('BuildVimComposer') }
     Plug 'godlygeek/tabular'
     Plug 'fedorenchik/fasm.vim'
     Plug 'sheerun/vim-polyglot'
     Plug 'katusk/vim-qkdb-syntax'
     Plug 'tpope/vim-commentary'
+    Plug 'TruncatedDinosour/subby.vim'
+    Plug 'itchyny/vim-cursorword'
+    Plug 'dstein64/vim-startuptime'
 call plug#end()
+
+" Plug 'instant-markdown/vim-instant-markdown', {'for': 'markdown', 'do': 'npm install'}
+" Plug 'euclio/vim-markdown-composer', { 'do': function('BuildVimComposer') }
 
 colorscheme coffee                      " Set the theme
 
