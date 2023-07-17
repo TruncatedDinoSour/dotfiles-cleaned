@@ -35,6 +35,7 @@ cairo
 calcurse
 cantarell-fonts
 ccls
+chromium
 clang
 compiler-rt
 coreutils
@@ -124,6 +125,7 @@ jack2
 jansson
 json-c
 json-glib
+jsoncpp
 kbd
 keyutils
 kmod
@@ -263,6 +265,7 @@ libxpresent
 libxrandr
 libxrender
 libxshmfence
+libxslt
 libxss
 libxt
 libxtst
@@ -287,6 +290,7 @@ mailcap
 make
 man-db
 mesa
+minizip
 mkinitcpio
 mkinitcpio-busybox
 mobile-broadband-provider-info
@@ -355,6 +359,7 @@ python-pycparser
 python-wheel
 rapidjson
 rav1e
+re2
 readline
 reflector
 rtkit
@@ -368,6 +373,7 @@ shadow
 shared-mime-info
 shfmt
 slang
+snappy
 socat
 speex
 speexdsp
@@ -384,6 +390,7 @@ tmux
 tpm2-tss
 tracker3
 ttf-hack-nerd
+ttf-liberation
 tzdata
 uchardet
 util-linux
@@ -397,12 +404,14 @@ vulkan-icd-loader
 wayland
 webrtc-audio-processing
 which
+woff2
 wpa_supplicant
 x264
 x265
 xautolock
 xcb-proto
 xclip
+xdg-utils
 xf86-input-libinput
 xf86-video-amdgpu
 xkeyboard-config
