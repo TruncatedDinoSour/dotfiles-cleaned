@@ -10,9 +10,11 @@ all: options dwm
 
 options:
 	@echo dwm build options:
-	@echo "CFLAGS   = ${CFLAGS}"
-	@echo "LDFLAGS  = ${LDFLAGS}"
-	@echo "CC       = ${CC}"
+	@echo "CFLAGS    = ${CFLAGS}"
+	@echo "LDFLAGS   = ${LDFLAGS}"
+	@echo "CC        = ${CC}"
+	@echo "STRIP     = ${STRIP}"
+	@echo "STFLAGS   = ${STRIPFLAGS}"
 
 .c.o:
 	${CC} -c ${CFLAGS} $<
@@ -24,6 +26,7 @@ config.h:
 
 dwm: ${OBJ}
 	${CC} -o $@ ${OBJ} ${LDFLAGS}
+	$(STRIP) $@ -o $@ ${STRIPFLAGS}
 
 clean:
 	rm -f dwm ${OBJ} dwm-${VERSION}.tar.gz
@@ -37,22 +40,16 @@ dist: clean
 	rm -rf dwm-${VERSION}
 
 install: all
-	mkdir -p ${DESTDIR}${PREFIX}/bin
-	mkdir -p /usr/share/xsessions
-	cp -f dwm ${DESTDIR}${PREFIX}/bin
-	cp -f quitdwm ${DESTDIR}${PREFIX}/bin
-	cp -f emoji ${DESTDIR}${PREFIX}/bin
-	cp -f dwmlocker ${DESTDIR}${PREFIX}/bin
-	cp -f send_calcurse_notification ${DESTDIR}${PREFIX}/bin
-	cp -f redshifttoggle ${DESTDIR}${PREFIX}/bin
-	cp -f dwm.desktop /usr/share/xsessions
-	chmod 755 ${DESTDIR}${PREFIX}/bin/dwm
-	chmod 755 ${DESTDIR}${PREFIX}/bin/quitdwm
-	chmod 755 ${DESTDIR}${PREFIX}/bin/emoji
-	chmod 755 ${DESTDIR}${PREFIX}/bin/dwmlocker
-	chmod 755 ${DESTDIR}${PREFIX}/bin/send_calcurse_notification
-	chmod 755 ${DESTDIR}${PREFIX}/bin/redshifttoggle
-	mkdir -p ${DESTDIR}${MANPREFIX}/man1
+	cp -f config.h config.def.h
+	mkdir -p ${DESTDIR}${PREFIX}/bin ${DESTDIR}${PREFIX}/share/xsessions ${DESTDIR}${MANPREFIX}/man1
+	cp -f dwm quitdwm emoji dwmlocker send_calcurse_notification redshifttoggle\
+		extrakb dweather dwmmenu ${DESTDIR}${PREFIX}/bin
+	cp -f dwm.desktop ${DESTDIR}${PREFIX}/share/xsessions
+	chmod 755 ${DESTDIR}${PREFIX}/bin/dwm ${DESTDIR}${PREFIX}/bin/quitdwm\
+		${DESTDIR}${PREFIX}/bin/emoji ${DESTDIR}${PREFIX}/bin/dwmlocker\
+		${DESTDIR}${PREFIX}/bin/send_calcurse_notification\
+		${DESTDIR}${PREFIX}/bin/redshifttoggle ${DESTDIR}${PREFIX}/bin/extrakb\
+		${DESTDIR}${PREFIX}/bin/dweather ${DESTDIR}${PREFIX}/bin/dwmmenu
 	sed "s/VERSION/${VERSION}/g" < dwm.1 > ${DESTDIR}${MANPREFIX}/man1/dwm.1
 	chmod 644 ${DESTDIR}${MANPREFIX}/man1/dwm.1
 
@@ -63,6 +60,8 @@ uninstall:
 		${DESTDIR}${PREFIX}/bin/emoji\
 		${DESTDIR}${PREFIX}/bin/dwmlocker\
 		${DESTDIR}${PREFIX}/bin/send_calcurse_notification\
-		${DESTDIR}${PREFIX}/bin/redshifttoggle
+		${DESTDIR}${PREFIX}/bin/redshifttoggle\
+		${DESTDIR}${PREFIX}/bin/extrakb\
+		${DESTDIR}${PREFIX}/bin/dweather
 
 .PHONY: all options clean dist install uninstall

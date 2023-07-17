@@ -1,0 +1,10 @@
+#!/usr/bin/env sh
+
+set -e
+
+main() {
+    sed -i "s/PROJECT_TITLE/$(basename "$PWD")/g" index.html
+    js-beautify index.html content/js/generic/generic.js content/css/generic/generic.css
+}
+
+main "$@"

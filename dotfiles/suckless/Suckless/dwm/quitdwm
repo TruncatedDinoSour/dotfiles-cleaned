@@ -1,25 +1,29 @@
-#!/bin/bash
+#!/usr/bin/env bash
+
+TIMES=0
+
+run_root() {
+    TIMES=$((TIMES + 1))
+    st -e "${__BASH_RUNAS:-sudo}" "$@" || ([ "$TIMES" -lt 3 ] && run_root "$@")
+}
 
 main() {
-    options=("1 Cancel" \
-        "2 Quit DWM" \
-        "3 Reboot" \
+    options=("1 Cancel"
+        "2 Quit DWM"
+        "3 Reboot"
         "4 Poweroff / Shutdown")
 
-    option="$(/usr/bin/printf "%s\n" "${options[@]}" | \dmenu | /usr/bin/awk '{ print $1 }')"
+    option="$(printf "%s\n" "${options[@]}" | dmenu | awk '{ print $1 }')"
 
-
-    [[ ! "$option" ]] && exit 1
+    [[ ! $option ]] && exit 1
 
     case "$option" in
-        1) exit 0                                               ;;
-        2) /usr/bin/killall dwm                                 ;;
-        3) ${__BASH_RUNAS:-sudo} reboot -h now                  ;;
-        4) ${__BASH_RUNAS:-sudo} poweroff                       ;;
-        *) /usr/bin/notify-send "Option '$option' not found"    ;;
+    1) exit 0 ;;
+    2) killall dwm ;;
+    3) run_root reboot -h ;;
+    4) run_root poweroff ;;
+    *) notify-send "Option '$option' not found" ;;
     esac
 }
 
-
 main "$@"
-

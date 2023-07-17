@@ -1,0 +1,17 @@
+{
+    "name": "scripts",
+    "version": "1.0.0",
+    "author": "Ari Archer",
+    "license": "ISC",
+    "type": "module",
+    "bin": {
+        "dai": "dai.mjs"
+    },
+    "dependencies": {
+        "got": "^12.6.0",
+        "hpagent": "^1.2.0"
+    },
+    "devDependencies": {
+        "eslint": "^8.37.0"
+    }
+}

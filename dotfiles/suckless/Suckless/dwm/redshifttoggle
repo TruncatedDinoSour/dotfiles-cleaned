@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env sh
 
 main() {
     if [ ! "$1" ]; then
@@ -16,4 +16,3 @@ main() {
 }
 
 main "$@"
-

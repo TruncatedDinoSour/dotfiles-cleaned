@@ -1,0 +1,12 @@
+#!/usr/bin/env sh
+
+set -e
+
+main() {
+    sed -i "s/PROJECT_NAME/$(basename "$PWD")/g" build.sh
+    clang-format src/main.cc -i
+    code="$(shfmt -s -i 4 build.sh)"
+    echo "$code" >build.sh
+}
+
+main "$@"

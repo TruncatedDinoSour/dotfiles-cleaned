@@ -1,0 +1,48 @@
+#!/usr/bin/env bash
+
+main() {
+    local info=(
+        "AlternateServices.txt"
+        "bookmarkbackups"
+        "browser-extension-data"
+        "cert9.db"
+        "chrome_debugger_profile"
+        "compatibility.ini"
+        "cookies.sqlite"
+        "cookies.sqlite-wal"
+        "datareporting"
+        "favicons.sqlite"
+        "favicons.sqlite-wal"
+        "formhistory.sqlite"
+        "key4.db"
+        "logins.json"
+        "pkcs11.txt"
+        "places.sqlite"
+        "places.sqlite-wal"
+        "protections.sqlite"
+        "security_state"
+        "serviceworker.txt"
+        "sessionCheckpoints.json"
+        "sessionstore-backups"
+        "signedInUser.json"
+        "SiteSecurityServiceState.txt"
+        "storage-sync-v2.sqlite"
+        "storage-sync-v2.sqlite-shm"
+        "storage-sync-v2.sqlite-wal"
+        "storage.sqlite"
+        "times.json"
+        "weave"
+        "webappsstore.sqlite"
+        "cert_override.txt"
+        "webappsstore.sqlite-wal"
+        )
+
+    for private in "${info[@]}"; do
+        rm -rfv "$private"
+    done
+
+    rm -rf storage/default/http* storage/temporary
+}
+
+main "$@"
+

@@ -1,0 +1,28 @@
+
+[credential]
+    helper = cache
+
+[gpg]
+    program = gpg
+
+[commit]
+    gpgsign = true
+
+[color "diff"]
+    old = red strike
+    new = green italic
+
+[init]
+    defaultBranch = main
+
+[alias]
+    glog = log --graph --oneline --decorate
+    gss = !bash ./scripts/git.sh
+    gs = !bash ./git.sh
+
+[web]
+    browser = firefox
+
+[instaweb]
+    browser = firefox
+

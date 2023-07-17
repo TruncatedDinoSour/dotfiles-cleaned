@@ -1,0 +1,38 @@
+#!/usr/bin/env python3
+"""Generate a bunch of garbage in the clipboard"""
+
+import random
+import string
+import sys
+
+import pyperclip
+
+
+def main() -> int:
+    """Entry/main function"""
+
+    pyperclip.copy("")
+    while True:
+        try:
+            pyperclip.copy(
+                "".join(
+                    [
+                        chr(random.randint(1, 13370))
+                        for _ in range(random.randint(127, 13370))
+                    ]
+                )
+            )
+        except UnicodeError:
+            pyperclip.copy(
+                "".join(
+                    [
+                        random.choice(string.printable)
+                        for _ in range(random.randint(127, 13370))
+                    ]
+                )
+            )
+
+
+if __name__ == "__main__":
+    assert main.__annotations__.get("return") is int, "main() should return an integer"
+    sys.exit(main())

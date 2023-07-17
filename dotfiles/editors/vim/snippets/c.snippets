@@ -1,0 +1,37 @@
+snippet m
+int main(void) {
+    $0
+    return 0;
+}
+
+endsnippet
+
+snippet mv
+int main(int argc, char *argv[]) {
+    $0
+    return 0;
+}
+
+endsnippet
+
+snippet h
+#ifndef $1
+#define $1
+$2
+#endif /* $1 */
+endsnippet
+
+snippet a
+$1 $2($3) {
+    $4
+}
+endsnippet
+
+snippet fn
+ssize_t (*$1)($2) = NULL;
+endsnippet
+
+snippet fnw
+if (!og_$1)
+    og_$1 = ($2 (*)($3))dlsym(RTLD_NEXT, "$1");
+endsnippet

@@ -1,0 +1,8 @@
+include 'std.fa'
+
+--< Entry macro >--
+macro main
+    %EXIT_SUCCESS %exit
+end
+
+%main

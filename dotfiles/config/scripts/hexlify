@@ -1,0 +1,21 @@
+#!/usr/bin/env python3
+
+import asyncio
+import sys
+
+
+async def main() -> int:
+    sys.argv.append('')  # I was too lazy to write usage()
+    number = 0
+
+    for char in sys.argv[1]:  # Also too lazy to make it accept a list or flaten it lol
+        number += ord(char)
+
+    print(hex(number))
+    return 0
+
+
+if __name__ == "__main__":
+    assert main.__annotations__.get("return") is int, "main() should return an integer"
+    exit(asyncio.run(main()))
+

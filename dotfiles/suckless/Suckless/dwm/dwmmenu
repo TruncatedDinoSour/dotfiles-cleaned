@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+
+main() {
+    options=("1 Cancel"
+        "2 Kill XAutoLock"
+        "3 Close all dunst notifications")
+
+    option="$(/usr/bin/printf "%s\n" "${options[@]}" | \dmenu | /usr/bin/awk '{ print $1 }')"
+
+    [[ ! $option ]] && exit 1
+
+    case "$option" in
+    1) exit 0 ;;
+    2) for _ in $(seq 100); do xautolock -exit; done ;;
+    3) dunstctl close-all ;;
+    *) notify-send "Option '$option' not found" ;;
+    esac
+}
+
+main "$@"

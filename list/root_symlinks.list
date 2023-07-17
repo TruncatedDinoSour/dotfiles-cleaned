@@ -1,10 +1,5 @@
-lrwxrwxrwx 1 root root 17 Oct 16 20:52 /root/.bashrc -> /home/ari/.bashrc
-lrwxrwxrwx 1 root root 17 Oct 16 20:52 /root/.config -> /home/ari/.config
-lrwxrwxrwx 1 root root 20 Oct 16 20:53 /root/.gtkrc-2.0 -> /home/ari/.gtkrc-2.0
-lrwxrwxrwx 1 root root 16 Oct 16 20:53 /root/.icons -> /home/ari/.icons
-lrwxrwxrwx 1 root root 16 Oct 16 20:53 /root/.local -> /home/ari/.local
-lrwxrwxrwx 1 root root 18 Oct 16 20:53 /root/.scripts -> /home/ari/.scripts
-lrwxrwxrwx 1 root root 14 Oct 16 20:54 /root/.vim -> /home/ari/.vim
-lrwxrwxrwx 1 root root 16 Oct 16 20:54 /root/.vimrc -> /home/ari/.vimrc
-lrwxrwxrwx 1 root root 21 Oct 16 20:54 /root/.vscode-oss -> /home/ari/.vscode-oss
-lrwxrwxrwx 1 root root 19 Oct 16 20:54 /root/.vscode-R -> /home/ari/.vscode-R
+lrwxrwxrwx 1 root root 17 Jul 17 13:32 /root/.bashrc -> /home/ari/.bashrc
+lrwxrwxrwx 1 root root 17 Jul 17 13:32 /root/.config -> /home/ari/.config
+lrwxrwxrwx 1 root root 16 Jul 17 13:32 /root/.local -> /home/ari/.local
+lrwxrwxrwx 1 root root 18 Jul 17 13:32 /root/.profile -> /home/ari/.profile
+lrwxrwxrwx 1 root root 14 Jul 17 13:32 /root/.vim -> /home/ari/.vim

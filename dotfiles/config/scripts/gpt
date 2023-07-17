@@ -1,0 +1,37 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""gpt4 cli"""
+
+import asyncio
+import sys
+from warnings import filterwarnings as filter_warnings
+
+from freeGPT import gpt4  # type: ignore
+
+
+def main() -> int:
+    """entry / main function"""
+
+    if len(sys.argv) < 2:
+        sys.argv.append(sys.stdin.read())
+
+    print("--------")
+
+    if not (prompt := " ".join(sys.argv[1:]).strip()):
+        return 1
+
+    while True:
+        try:
+            print(asyncio.run(gpt4.Completion.create(prompt)))
+            break
+        except Exception:
+            pass
+
+    return 0
+
+
+if __name__ == "__main__":
+    assert main.__annotations__.get("return") is int, "main() should return an integer"
+
+    filter_warnings("error", category=Warning)
+    raise SystemExit(main())

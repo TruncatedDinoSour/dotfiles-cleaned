@@ -1,0 +1,8 @@
+#!/usr/bin/env sh
+
+main() {
+    curl wttr.in
+    tail -f /dev/null
+}
+
+main "$@"

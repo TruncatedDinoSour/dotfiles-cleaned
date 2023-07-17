@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env sh
 
 main() {
     minute=""
@@ -20,7 +20,10 @@ main() {
         fi
 
         # Beep
-        (speaker-test -l 1 -f 1500 -t sine -P 2 -X >/dev/null)& pid="$!"; sleep 0.08; kill -9 $pid
+        (speaker-test -l 1 -f 1500 -t sine -P 2 -X >/dev/null) &
+        pid="$!"
+        sleep 0.08
+        kill -9 $pid
 
         sleep 60
     done
@@ -29,4 +32,3 @@ main() {
 }
 
 main "$@"
-

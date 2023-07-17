@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env sh
 
 cachedir="${XDG_CACHE_HOME:-"$HOME/.cache"}"
 cache="$cachedir/dmenu_run"
@@ -7,7 +7,7 @@ cache="$cachedir/dmenu_run"
 
 IFS=:
 if stest -dqr -n "$cache" $PATH; then
-	stest -flx $PATH | sort -u | tee "$cache"
+    stest -flx $PATH | sort -u | tee "$cache"
 else
-	cat "$cache"
+    cat "$cache"
 fi

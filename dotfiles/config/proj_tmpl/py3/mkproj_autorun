@@ -1,0 +1,11 @@
+#!/usr/bin/env sh
+
+set -e
+
+main() {
+    sed -i "s/PROJECT_TITLE/$(basename "$PWD")/g" src/main.py
+    black src/main.py
+    isort src/main.py
+}
+
+main "$@"

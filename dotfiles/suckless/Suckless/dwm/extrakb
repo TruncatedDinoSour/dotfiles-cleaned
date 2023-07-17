@@ -1,0 +1,11 @@
+#!/usr/bin/env sh
+
+main() {
+    sed '/#.*$/d; /^\s*$/d' <"$HOME/.config/extra.kb" |
+        dmenu |
+        awk ' { print $1 } ' |
+        tr -d "\n" |
+        xclip -selection clipboard
+}
+
+main "$@"

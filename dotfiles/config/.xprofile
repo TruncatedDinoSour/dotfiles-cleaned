@@ -1,0 +1,15 @@
+#!/usr/bin/env sh
+
+# this script autostarts on startup
+# please be careful
+
+wallpaper="$HOME/Media/Pictures/wallpaper.png"
+
+bdwmb -q &
+dunst &
+calcurse --daemon &
+ari-web-1000 &
+xrandr --output eDP --mode 1920x1200 --scale 1.6x1.6 &
+xset r rate 300 50 &
+feh --bg-tile --no-fehbg "$wallpaper" &
+xautolock -time 10 -locker dwmlocker &

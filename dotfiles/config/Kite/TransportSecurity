@@ -1,8 +1,0 @@
-{
-   "9m9TCYYYAMLjsxSkH3tat2KKTxutFkOh9yTFzKj8slI=": {
-      "expiry": 1634429702.980988,
-      "mode": "force-https",
-      "sts_include_subdomains": true,
-      "sts_observed": 1633824902.981
-   }
-}

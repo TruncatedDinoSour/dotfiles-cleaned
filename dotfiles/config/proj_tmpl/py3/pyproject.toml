@@ -1,0 +1,21 @@
+[tool.pyright]
+pythonVersion = "3.10"
+exclude = [
+    "venv",
+    "**/node_modules",
+    "**/__pycache__",
+    ".git"
+]
+include = ["src", "scripts"]
+venv = "venv"
+stubPath = "src/stubs"
+typeCheckingMode = "strict"
+useLibraryCodeForTypes = true
+reportMissingTypeStubs = true
+
+[tool.mypy]
+exclude = [
+    "^venv/.*",
+    "^node_modules/.*",
+    "^__pycache__/.*",
+]

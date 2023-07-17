@@ -1,0 +1,10 @@
+# General setup
+
+.tmp_*
+*.old
+*.bak
+*cache
+
+# from project root
+/mkproj_autorun
+

@@ -1,0 +1,26 @@
+#!/usr/bin/env bash
+
+set -e
+
+mkmake() { make "$@" 2>&1; }
+
+log() {
+    local bar="done"
+    [ "$1" = "$2" ] || bar="($1/$2)"
+
+    printf '%10s %7s%% | %s\n' "$bar" "$(bc -l <<<"scale=3; $1 / $2 * 100")" "$3"
+}
+
+main() {
+    lines_count="$(mkmake -n "$@" | awk 'length >= 3' | grep -c c)"
+    line=1
+
+    [ "$lines_count" -le 1 ] && return 0
+
+    mkmake "$@" | while read -r mkline; do
+        log "$line" "$lines_count" "$mkline"
+        line="$((line + 1))"
+    done
+}
+
+main "$@"

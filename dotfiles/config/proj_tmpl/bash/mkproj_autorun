@@ -1,0 +1,14 @@
+#!/usr/bin/env sh
+
+[ "$DEBUG" ] && set -x
+set -e
+
+main() {
+    code="$(shfmt -s -i 4 main)"
+    echo "$code" >main
+    chmod +x main
+
+    mv main "$(basename -- "$PWD")"
+}
+
+main "$@"

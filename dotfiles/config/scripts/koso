@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+
+main() {
+    for arg in "$@"; do
+        if [[ "$arg" != --* ]]; then
+            break
+        fi
+
+        shift
+    done
+
+    echo "$@"
+    kos "${@}"
+}
+
+main "$@"

@@ -1,38 +1,44 @@
+#!/usr/bin/env bash
 #
 # ~/.bashrc
 #
 
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
-export PATH="$PATH:/usr/local/bin:$HOME/.local/bin:$HOME/.scripts"
 
+export PATH="$PATH:/usr/local/bin:$HOME/.local/bin:$HOME/.config/scripts"
 
-# Enable Vi(M) mode
-set -o vi
+# TMUX config
+. "$HOME/.config/shells/tmux/tmux.conf"
 
-# cd into a directory with only the name supplied
-shopt -s autocd
+# Start TMUX
+[ -z "$TMUX" ] &&
+    [ "$DISPLAY" ] &&
+    command -v tmux >/dev/null &&
+    exec tmux -2 -l
 
-# Enable extended globbing
-shopt -s globstar
-shopt -s extglob
+. "$HOME/.config/shells/bash/bash.conf"
+. "$HOME/.config/shells/bash/bash.env"
 
+# Load baz
+_baz_loader="$HOME/.local/share/baz/loader.sh"
 
-source ~/.config/shells/bash/*.functions
+# export BAZ_DEBUG_LOAD=1
+# shellcheck disable=SC1090
+[ -f "$_baz_loader" ] && . "$_baz_loader"
+# sleep 1000
 
-export PROMPT_COMMAND='ps_one'
+# Functions
+. "$HOME/.config/shells/bash/bash.functions"
 
-case "$TERM" in
-    "bsd"|"linux") tty_autorun ;;
-esac
+# Aliases
+. "$HOME/.config/shells/bash/bash.aliases"
 
-source ~/.config/shells/bash/*.aliases
-
-export dots='/home/ari/Ari/coding/resources_/dots'
-export overlay='/home/ari/Ari/coding/resources_/overlay'
-export ntex='/home/ari/Documents/notes/doc.tex'
-export npdf='/home/ari/Documents/notes/doc.pdf'
-export ndir='/home/ari/Documents/notes'
+export dots="$HOME/Ari/coding/resources_/dots" \
+    tdots="$HOME/Ari/coding/resources_/tdots" \
+    overlay="$HOME/Ari/coding/resources_/overlay" \
+    ntex="$HOME/Documents/notes/doc.tex" \
+    npdf="$HOME/Documents/notes/doc.pdf" \
+    ndir="$HOME/Documents/notes"
 
 autorun
-

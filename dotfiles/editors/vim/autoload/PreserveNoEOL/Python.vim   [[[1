@@ -1,0 +1,89 @@
+" PreserveNoEOL/Python.vim: Preserve EOL Python implementation.
+"
+" DEPENDENCIES:
+"   - Vim with built-in Python support.
+"
+" Source:
+"   http://stackoverflow.com/a/1663283/813602
+"
+" Copyright: (C) 2013 Ingo Karkat
+"   The VIM LICENSE applies to this script; see ':help copyright'.
+"
+" Maintainer:   Ingo Karkat <ingo@karkat.de>
+"
+" REVISION  DATE        REMARKS
+"   1.01.004    26-Apr-2013 Support traditional Mac (CR) line endings, too.
+"   1.00.003    26-Apr-2013 Return the potential error message;
+"               PreserveNoEOL#HandleNoEOL will print it.
+"   002 06-Jan-2013 Complete implementation.
+"   001 05-Jan-2013 file creation
+
+if ! has('python')
+    finish
+endif
+
+if ! exists('s:isPythonInitialized')
+    python << EOF
+import os, stat, sys
+import vim
+
+def trunc(file, new_len):
+    file_mode = os.stat(file)[0]
+    is_temp_writable = False
+    if (not file_mode & stat.S_IWRITE) and vim.eval("v:cmdbang") == "1":
+    # Unlike Vim with :write!, Python cannot open a read-only file for
+    # writing. Being invoked here means that Vim was able to
+    # successfully write the file itself, so we should be able to
+    # temporarily lift the read-only flag, too.
+    os.chmod(file, stat.S_IWRITE)
+    is_temp_writable = True
+
+    # Open with mode "append" so that we have permission to modify.
+    # Cannot open with mode "write" because that clobbers the file!
+    f = open(file, "ab")
+    f.truncate(new_len)
+    f.close()
+
+    if is_temp_writable:
+    os.chmod(file, file_mode)
+
+def noeol():
+    try:
+    file = vim.eval('expand("<afile>")')
+
+    # Must have mode "binary" to allow f.seek() with negative offset.
+    f = open(file, "rb")
+    f.seek(-2, os.SEEK_END)  # Seek to two bytes before EOF
+    end_pos = f.tell()
+    last_line = f.read()
+    f.close()
+
+    if last_line.endswith("\r\n"):
+        trunc(file, end_pos)
+    elif last_line.endswith("\n"):
+        trunc(file, end_pos + 1)
+    elif last_line.endswith("\r"):
+        trunc(file, end_pos + 1)
+    except Exception as e:
+    vim.command("let python_errmsg = '%s'" % str(e).replace("'", "''"))
+EOF
+    let s:isPythonInitialized = 1
+endif
+function! PreserveNoEOL#Python#Preserve( isPostWrite )
+    if ! a:isPostWrite
+    return ''
+    endif
+
+    let l:python_errmsg = ''
+    python noeol()
+    return l:python_errmsg
+
+    " Even though the file was changed outside of Vim, this doesn't seem to
+    " trigger the |timestamp| "file changed" warning, probably because Vim
+    " doesn't regard the change in the final EOL as a change. (The help text
+    " says Vim re-reads in to a hidden buffer, so it probably doesn't even see
+    " the change.)
+    " Therefore, no :checktime / temporary setting of 'autoread' is necessary.
+endfunction
+
+" vim: set ts=8 sts=4 sw=4 noexpandtab ff=unix fdm=syntax :

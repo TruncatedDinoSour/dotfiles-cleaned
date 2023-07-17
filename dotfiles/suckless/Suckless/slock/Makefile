@@ -10,9 +10,12 @@ all: options slock
 
 options:
 	@echo slock build options:
-	@echo "CFLAGS   = ${CFLAGS}"
-	@echo "LDFLAGS  = ${LDFLAGS}"
-	@echo "CC       = ${CC}"
+	@echo "CFLAGS    = ${CFLAGS}"
+	@echo "LDFLAGS   = ${LDFLAGS}"
+	@echo "CC        = ${CC}"
+	@echo "STRIP     = ${STRIP}"
+	@echo "STFLAGS   = ${STRIPFLAGS}"
+
 
 .c.o:
 	@echo CC $<
@@ -27,6 +30,8 @@ config.h:
 slock: ${OBJ}
 	@echo CC -o $@
 	@${CC} -o $@ ${OBJ} ${LDFLAGS}
+	@echo STRIP -o $@
+	@$(STRIP) $@ -o $@ ${STRIPFLAGS}
 
 clean:
 	@echo cleaning
@@ -36,12 +41,13 @@ dist: clean
 	@echo creating dist tarball
 	@mkdir -p slock-${VERSION}
 	@cp -R LICENSE Makefile README slock.1 config.mk \
-		${SRC} explicit_bzero.c config.def.h arg.h util.h slock-${VERSION}
+		${SRC} config.def.h arg.h util.h slock-${VERSION}
 	@tar -cf slock-${VERSION}.tar slock-${VERSION}
 	@gzip slock-${VERSION}.tar
 	@rm -rf slock-${VERSION}
 
 install: all
+	cp -f config.h config.def.h
 	@echo installing executable file to ${DESTDIR}${PREFIX}/bin
 	@mkdir -p ${DESTDIR}${PREFIX}/bin
 	@cp -f slock ${DESTDIR}${PREFIX}/bin

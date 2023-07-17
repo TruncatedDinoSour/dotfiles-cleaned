@@ -1,0 +1,11 @@
+#!/usr/bin/env sh
+
+set -e
+
+main() {
+    npm init -y
+    npm init @eslint/config
+}
+
+main "$@"
+

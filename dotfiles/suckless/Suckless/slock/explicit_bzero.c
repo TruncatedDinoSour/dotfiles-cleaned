@@ -1,4 +1,4 @@
-/*	$OpenBSD: explicit_bzero.c,v 1.3 2014/06/21 02:34:26 matthew Exp $ */
+/*  $OpenBSD: explicit_bzero.c,v 1.3 2014/06/21 02:34:26 matthew Exp $ */
 /*
  * Public domain.
  * Written by Matthew Dempsky.
@@ -6,14 +6,12 @@
 
 #include <string.h>
 
-__attribute__((weak)) void
-__explicit_bzero_hook(void *buf, size_t len)
-{
+__attribute__((weak)) void __explicit_bzero_hook(void *buf, size_t len) {
+    (void)buf;
+    (void)len;
 }
 
-void
-explicit_bzero(void *buf, size_t len)
-{
-	memset(buf, 0, len);
-	__explicit_bzero_hook(buf, len);
+void explicit_bzero(void *buf, size_t len) {
+    memset(buf, 0, len);
+    __explicit_bzero_hook(buf, len);
 }

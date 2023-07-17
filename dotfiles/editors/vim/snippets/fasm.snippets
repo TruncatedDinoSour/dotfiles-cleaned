@@ -1,0 +1,149 @@
+snippet m
+format ELF64 executable 3
+segment readable executable
+
+define SYS_exit 60
+
+_start:
+    $1
+
+    mov rax, SYS_exit
+    xor rdi, rdi
+    syscall
+
+endsnippet
+
+
+snippet e
+format ELF64 executable 3
+segment readable executable
+
+define SYS_exit 60
+
+_start:
+    $1
+
+    mov eax, SYS_exit
+    xor edi, edi
+    syscall
+
+endsnippet
+
+
+snippet s
+define SYS_$0
+endsnippet
+
+
+snippet s1
+mov rax, $1
+syscall
+endsnippet
+
+snippet s2
+mov rax, $1
+mov rdi, $2
+syscall
+endsnippet
+
+snippet s3
+mov rax, $1
+mov rdi, $2
+mov rsi, $3
+syscall
+endsnippet
+
+snippet s4
+mov rax, $1
+mov rdi, $2
+mov rsi, $3
+mov rdx, $4
+syscall
+endsnippet
+
+snippet s5
+mov rax, $1
+mov rdi, $2
+mov rsi, $3
+mov rdx, $4
+mov r8, $5
+syscall
+endsnippet
+
+snippet s6
+mov rax, $1
+mov rdi, $2
+mov rsi, $3
+mov rdx, $4
+mov r8, $6
+mov r9, $5
+syscall
+endsnippet
+
+snippet s7
+mov rax, $1
+mov rdi, $2
+mov rsi, $3
+mov rdx, $4
+mov r8, $5
+mov r9, $6
+mov r10, $7
+syscall
+endsnippet
+
+
+snippet e1
+mov eax, $1
+syscall
+endsnippet
+
+snippet e2
+mov eax, $1
+mov edi, $2
+syscall
+endsnippet
+
+snippet e3
+mov eax, $1
+mov edi, $2
+mov esi, $3
+syscall
+endsnippet
+
+snippet e4
+mov eax, $1
+mov edi, $2
+mov esi, $3
+mov edx, $4
+syscall
+endsnippet
+
+snippet e5
+mov eax, $1
+mov edi, $2
+mov esi, $3
+mov edx, $4
+mov r8, $5
+syscall
+endsnippet
+
+snippet e6
+mov eax, $1
+mov edi, $2
+mov esi, $3
+mov edx, $4
+mov r8, $6
+mov r9, $5
+syscall
+endsnippet
+
+snippet e7
+mov eax, $1
+mov edi, $2
+mov esi, $3
+mov edx, $4
+mov r8, $5
+mov r9, $6
+mov r10, $7
+syscall
+endsnippet
