@@ -92,11 +92,11 @@ static char dmenumon[2] =
 static const char *dmenucmd[] = mk_command("dmenu_run");
 
 static const char *mutecmd[] =
-    mk_command("amixer", "-q", "set", "Master", "toggle");
+    mk_command("pactl", "set-sink-mute", "@DEFAULT_SINK@", "toggle");
 static const char *volupcmd[] =
-    mk_command("amixer", "-q", "set", "Master", "5%+", "unmute");
+    mk_command("pactl", "set-sink-volume", "@DEFAULT_SINK@", "+5%");
 static const char *voldowncmd[] =
-    mk_command("amixer", "-q", "set", "Master", "5%-", "unmute");
+    mk_command("pactl", "set-sink-volume", "@DEFAULT_SINK@", "-5%");
 
 static const char *brupcmd[] = mk_command("xbacklight", "-inc", "10");
 static const char *brdowncmd[] = mk_command("xbacklight", "-dec", "10");

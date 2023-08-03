@@ -110,7 +110,9 @@ rm -rfv dotfiles/config/asciinema \
     dotfiles/editors/emacs/.emacs.d/auto-save-list \
     dotfiles/editors/emacs/.emacs.d/elpa \
     dotfiles/editors/emacs/.emacs.d/recentf \
-    dotfiles/config/chromium
+    dotfiles/config/chromium \
+    dotfiles/config/SlippiOnline \
+    dotfiles/config/mpv/watch_later
 
 # cp scripts/clean_firefox_profile dotfiles/etc/firefox
 # cd dotfiles/etc/firefox || exit 1

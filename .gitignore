@@ -22,3 +22,6 @@ chromium-bin/
 /dotfiles/config/scripts/node_modules/
 /dotfiles/etc/firefox/storage/default/moz-extension+++17675e2a-b925-452b-a9b3-a151db7bf093/idb/1633265821agnntiiktcra.sqlite
 /dotfiles/etc/firefox/
+/dotfiles/config/pulse/*.tdb
+/dotfiles/config/pulse/*-default-*
+/dotfiles/config/pulse/cookie

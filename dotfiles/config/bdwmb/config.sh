@@ -5,7 +5,7 @@ export MODULES=('pad'
                 'ram'        'sep1'
                 'drive'      'sep1'
                 'battery'    'sep1'
-                'alsa'       'sep1'
+                'pulseaudio' 'sep1'
                 'time'
                 'pad')
 

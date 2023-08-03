@@ -2,11 +2,10 @@
 # -*- coding: utf-8 -*-
 """gpt4 cli"""
 
-import asyncio
 import sys
 from warnings import filterwarnings as filter_warnings
 
-from freeGPT import gpt4  # type: ignore
+from rebelai.ai.gpt import gpt4
 
 
 def main() -> int:
@@ -22,7 +21,7 @@ def main() -> int:
 
     while True:
         try:
-            print(asyncio.run(gpt4.Completion.create(prompt)))
+            print(gpt4(prompt))
             break
         except Exception:
             pass

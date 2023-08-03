@@ -4,3 +4,6 @@ keysym Escape = Caps_Lock
 keysym Caps_Lock = Escape
 add Lock = Caps_Lock
 
+keycode 67 = XF86AudioMute
+keycode 68 = XF86AudioLowerVolume
+keycode 69 = XF86AudioRaiseVolume

@@ -229,7 +229,7 @@ static void zoom(const Arg *arg);
 static void setenvvars(void);
 
 /* variables */
-static const char broken[] = "broken";
+static const char *broken = "broken";
 static char stext[256];
 static int screen;
 static int sw, sh; /* X display screen geometry width, height */

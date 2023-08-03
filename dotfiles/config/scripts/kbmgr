@@ -1,0 +1,25 @@
+#!/usr/bin/env sh
+
+set -e
+
+main() {
+    case "$(date +%H)" in
+    06 | 07 | 08 | 09 | 10 | 11)
+        backlight 1
+        ;;
+    12 | 13 | 14 | 15 | 16 | 17)
+        backlight 0
+        ;;
+    18 | 19 | 20 | 21 | 22 | 23)
+        backlight 2
+        ;;
+    00 | 01 | 02 | 03 | 04 | 05)
+        backlight 3
+        ;;
+    esac
+}
+
+while true; do
+    main
+    sleep 10m
+done

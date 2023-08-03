@@ -1,7 +1,7 @@
 #!/usr/bin/env sh
 
-state="$(amixer sget Master | /bin/grep -io '\[on\|off\]$' | tr -d '\[\]')"
+state="$(pacmd dump | grep "set-default-sink" | head -n1 | cut -d ' ' -f2 | xargs pacmd list-sinks | grep -q "muted: yes" && printf 'yes' || printf 'no')"
 
-amixer -q set Master mute
+pactl set-sink-mute @DEFAULT_SINK@ yes
 slock
-amixer -q set Master "$state"
+pactl set-sink-mute @DEFAULT_SINK@ "$state"

@@ -1,0 +1,9 @@
+#!/usr/bin/env sh
+
+bpulseaudio() {
+    if pacmd dump | /bin/grep "set-default-sink" | head -n1 | cut -d ' ' -f2 | xargs pacmd list-sinks | grep -q "muted: yes"; then
+        printf "V MUTE"
+    else
+        printf "V %s%%" "$(pactl list sinks | grep '^[[:space:]]Volume:' | head -n 1 | awk '{print $5}' | sed -e 's/\%//')"
+    fi
+}
