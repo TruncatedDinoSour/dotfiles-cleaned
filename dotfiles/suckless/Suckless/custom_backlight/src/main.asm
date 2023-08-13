@@ -19,10 +19,10 @@ _start:
 
     mov rbx, [rsp + ARGV_1]  ; argv[1]
 
+    cmp byte [rbx], 48       ; *argv[1] < '0'
+    jl .err
     cmp byte [rbx], 51       ; *argv[1] > '3'
     jg .err
-    cmp byte [rbx], 48       ; || *argv[1] < '0'
-    jl .err
 
     mov rax, SYS_open        ; open(backlight, O_WRONLY)
     mov rdi, backlight
@@ -41,7 +41,7 @@ _start:
     syscall
 
     mov rax, SYS_exit        ; return 0
-    xor rdi, rdi
+    xor edi, edi
     syscall
 
 .err:
@@ -50,7 +50,7 @@ _start:
     syscall
 
     mov rax, SYS_exit        ; return 1
-    mov rdi, EXIT_FAILURE
+    mov edi, EXIT_FAILURE
     syscall
 
 

@@ -77,7 +77,7 @@ for i in "${!from[@]}"; do
     echo "${from[$i]} -> ${to[$i]}" >>list/location.list
 done
 
-cp ../hosts.gz dotfiles/core
+cp ../hosts.xz dotfiles/core
 
 find /root -type l -exec ls -lA {} + | tee list/root_symlinks.list
 

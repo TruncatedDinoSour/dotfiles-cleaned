@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 """gpt4 cli"""
 
+import asyncio
 import sys
 from warnings import filterwarnings as filter_warnings
 
@@ -21,7 +22,7 @@ def main() -> int:
 
     while True:
         try:
-            print(gpt4(prompt))
+            print(asyncio.run(gpt4(prompt)))
             break
         except Exception:
             pass

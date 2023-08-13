@@ -35,6 +35,7 @@ set virtualedit=all              " Improve visual block to select past the line
 set backspace=0                  " Disable backspace
 set t_Co=256                     " Show 256 colours
 set viminfofile=~/.vim/.viminfo  " Store viminfo
+set wildmenu                     " Enable command mode autocomplete
 
 " Show indentation
 set list listchars=trail:~,extends:»,precedes:«,nbsp:×

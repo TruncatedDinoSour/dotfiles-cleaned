@@ -1,0 +1,11 @@
+[KgTheme]
+Theme=themes/egyptian.desktop
+
+[MainWindow]
+3072x1920 screen: Height=624
+3072x1920 screen: Width=1682
+3072x1920 screen: XPosition=1384
+3072x1920 screen: YPosition=28
+State=AAAA/wAAAAD9AAAAAAAABpIAAAIqAAAABAAAAAQAAAAIAAAACPwAAAABAAAAAgAAAAEAAAAWAG0AYQBpAG4AVABvAG8AbABCAGEAcgEAAAAA/////wAAAAAAAAAA
+ToolBarsMovable=Disabled
+eDP=eDP

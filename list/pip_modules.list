@@ -11,6 +11,7 @@ bleach
 blessed
 blinker
 bpython
+Brlapi
 Brotli
 build
 cachetools
@@ -44,7 +45,9 @@ jedi
 jeepney
 Jinja2
 keyring
+libfdt
 lit
+louis
 lxml
 markdown-it-py
 MarkupSafe
