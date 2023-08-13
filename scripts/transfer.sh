@@ -82,7 +82,7 @@ cp ../hosts.xz dotfiles/core
 find /root -type l -exec ls -lA {} + | tee list/root_symlinks.list
 
 # cp /var/lib/portage/world list/package.list
-yay -Qq >list/package.list
+pacman -Qq >list/package.list
 
 uname -r >list/kernel.release
 # rc-update >list/openrc_services.sysvinit.list
