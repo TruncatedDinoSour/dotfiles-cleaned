@@ -9,7 +9,7 @@ let g:lightline = {
             \               [ 'readonly', 'filename', 'buddy', 'modified' ] ],
             \ 'right':    [ [ 'lineinfo' ],
             \               [ 'percent' ],
-            \               [ 'linter', 'time', 'fileformat', 'fileencoding', 'filetype' ] ]
+            \               [ 'linter', 'fileformat', 'fileencoding', 'filetype' ] ]
             \ },
             \ 'inactive': {
             \     'left':   [ [ 'filename', 'buddy' ] ],
@@ -19,7 +19,6 @@ let g:lightline = {
             \ 'component_function': {
             \     'linter': 'LightlineLinterStatus',
             \     'buddy': 'VimBuddy',
-            \     'time': 'LightlineTime',
             \ }
             \ }
 
@@ -35,17 +34,6 @@ function! LightlineLinterStatus() abort
     \   all_errors
     \)
 endfunction
-
-function! LightlineTime() abort
-    return strftime('%X')
-endfunction
-
-function! LightlineUpdate(timer) abort
-    call lightline#update()
-    call timer_start(1000, {-> LightlineUpdate(a:timer)})
-endfunction
-
-call timer_start(0, {-> LightlineUpdate(0)})
 
 "let s:palette = g:lightline#colorscheme#{g:lightline.colorscheme}#palette
 "let s:palette.normal.middle = [ [ 'NONE', 'NONE', 'NONE', 'NONE' ] ]
