@@ -1,46 +1,49 @@
 scriptencoding utf-8
 
-syntax on                        " Turn syntax highlighting on
-filetype plugin on               " This makes vim invoke Latex-Suite when you open a tex file
+syntax on                       " turn syntax highlighting on
+filetype plugin on              " this makes vim invoke latex-suite when you open a tex file
+filetype plugin indent on       " enable filetype-specific indents
 
-set nocompatible                 " No need for VI
-set noerrorbells                 " Turn off error sound
-set expandtab smarttab           " Will make the tab key insert spaces instead of tabs
-set smartindent autoindent       " Automatically indent files
-set number relativenumber        " Show line count in a file (dynamic)
-set nowrap                       " Turn word wrapping off
-set ignorecase                   " Turn case-insensitive searching on
-set noswapfile                   " Turn swap files off
-set nobackup                     " Don't back files up after saving the file
-set undofile                     " Let undo get stored in files
-set incsearch                    " Show results while searching live
-set confirm                      " Confirm unsaved changes in files
-set lazyredraw                   " Remove macro redraws
-set autochdir                    " Automatically enter a directory if a file is opened
-set cursorline                   " Highlight the current line number
-set splitright                   " Split the terminal to below and split files to right
-set timeout                      " Let timeout happen
-set noeol                        " Add a newline
+set nocompatible                " no need for vi
+set noerrorbells                " turn off error sound
+set expandtab smarttab          " will make the tab key insert spaces instead of tabs
+set smartindent autoindent      " automatically indent files
+set number relativenumber       " show line count in a file (dynamic)
+set nowrap                      " turn word wrapping off
+set ignorecase                  " turn case-insensitive searching on
+set noswapfile                  " turn swap files off
+set nobackup                    " don't back files up after saving the file
+set undofile                    " let undo get stored in files
+set incsearch                   " show results while searching live
+set confirm                     " confirm unsaved changes in files
+set lazyredraw                  " remove macro redraws
+set autochdir                   " automatically enter a directory if a file is opened
+set cursorline                  " highlight the current line number
+set splitright                  " split the terminal to below and split files to right
+set timeout                     " let timeout happen
+set noeol                       " add a newline
+set wildmenu                    " enable command mode autocomplete
+set list                        " enable visible whitespace
 
-set encoding=utf-8               " File encoding
-set laststatus=2                 " Set the bar type
-set undodir=~/.vim/undodir       " Where to put undo files
-set tabstop=4                    " Maximum tab width
-set shiftwidth=4                 " Indent size
-set softtabstop=0                " Insert spaces instead of tabs
-set guicursor=a:hor100           " Set the cursor shape to a _
-set clipboard=unnamedplus        " Copy text to clipboard
-set timeoutlen=0 ttimeoutlen=0   " Set timeout to 0s
-set virtualedit=all              " Improve visual block to select past the line
-set backspace=0                  " Disable backspace
-set t_Co=256                     " Show 256 colours
-set viminfofile=~/.vim/.viminfo  " Store viminfo
-set wildmenu                     " Enable command mode autocomplete
+set encoding=utf-8              " file encoding
+set laststatus=2                " set the bar type
+set undodir=~/.vim/undodir      " where to put undo files
+set tabstop=4                   " maximum tab width
+set shiftwidth=4                " indent size
+set softtabstop=0               " insert spaces instead of tabs
+set guicursor=a:hor100          " set the cursor shape to a _
+set clipboard=unnamedplus       " copy text to clipboard
+set timeoutlen=0 ttimeoutlen=0  " set timeout to 0s
+set virtualedit=all             " improve visual block to select past the line
+set backspace=0                 " disable backspace
+set t_Co=256                    " show 256 colours
+set viminfofile=~/.vim/.viminfo " store viminfo
+set nrformats-=octal            " remove octal format from numbers ( bc its stupid )
+set fileformat=unix             " unix >>>
+                                " make `set list` pretty
+set listchars=trail:~,extends:»,precedes:«,nbsp:×
 
-" Show indentation
-set list listchars=trail:~,extends:»,precedes:«,nbsp:×
-
-" Plugins
+" plugins
 "   To Install the plugins type `:PlugInstall`
 " CoC:
 "   $ cd ~/.vim/plugged/coc.nvim
@@ -87,15 +90,16 @@ call plug#begin("~/.vim/plugged")
     Plug 'TruncatedDinosour/subby.vim'
     Plug 'itchyny/vim-cursorword'
     Plug 'dstein64/vim-startuptime'
+    Plug 'tpope/vim-endwise'
 call plug#end()
 
 " Plug 'instant-markdown/vim-instant-markdown', {'for': 'markdown', 'do': 'npm install'}
 " Plug 'euclio/vim-markdown-composer', { 'do': function('BuildVimComposer') }
 
-colorscheme coffee                      " Set the theme
+colorscheme coffee                      " set the theme
 
-" Plugin config
+" plugin config
 source ~/.vim/pack/plugins/start/vimrc/plugin/plugin_config.vim
 
-" Filetypes
+" filetypes
 source ~/.vim/pack/plugins/start/vimrc/plugin/filetype.vim

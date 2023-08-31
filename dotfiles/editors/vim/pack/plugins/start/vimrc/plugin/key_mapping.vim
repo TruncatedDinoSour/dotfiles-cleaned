@@ -14,7 +14,7 @@ noremap w l
 for key in ['<Up>', '<Down>', '<Left>',
             \ '<Right>', '<PageUp>', '<PageDown>',
             \ 'gh', 'gj', 'gk', 'gl']
-    exec 'noremap'        key '<Nop>'
+    exec 'noremap' key '<Nop>'
 endfor
 
 let mapleader = ","                 " , = leader
@@ -95,3 +95,12 @@ noremap ) =i
 " Comments
 
 noremap <C-m> :Commentary<CR>
+
+" enable auto-closing
+
+inoremap " ""<left>
+inoremap ' ''<left>
+inoremap ( ()<left>
+inoremap [ []<left>
+inoremap { {}<left>
+inoremap < <><left>

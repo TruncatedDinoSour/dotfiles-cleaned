@@ -36,3 +36,6 @@ autocmd BufRead,BufNewFile *.k source /usr/share/vim/vimfiles/syntax/k.vim
 
 " C headers
 autocmd BufRead,BufWritePre,BufNewFile *.h set filetype=c
+
+" Enter
+autocmd VimEnter * echo 'welcome back,' $USER

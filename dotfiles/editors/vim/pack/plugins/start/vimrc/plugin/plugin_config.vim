@@ -9,7 +9,7 @@ let g:lightline = {
             \               [ 'readonly', 'filename', 'buddy', 'modified' ] ],
             \ 'right':    [ [ 'lineinfo' ],
             \               [ 'percent' ],
-            \               [ 'linter', 'fileformat', 'fileencoding', 'filetype' ] ]
+            \               [ 'linter', 'time', 'fileformat', 'fileencoding', 'filetype' ] ]
             \ },
             \ 'inactive': {
             \     'left':   [ [ 'filename', 'buddy' ] ],
@@ -18,9 +18,34 @@ let g:lightline = {
             \ },
             \ 'component_function': {
             \     'linter': 'LightlineLinterStatus',
-            \     'buddy': 'VimBuddy'
+            \     'buddy': 'VimBuddy',
+            \     'time': 'LightlineTime',
             \ }
             \ }
+
+function! LightlineLinterStatus() abort
+    let l:counts = ale#statusline#Count(bufnr(''))
+
+    let l:all_errors = l:counts.error + l:counts.style_error
+    let l:all_non_errors = l:counts.total - l:all_errors
+
+    return l:counts.total == 0 ? 'OK' : printf(
+    \   '%dW %dE',
+    \   all_non_errors,
+    \   all_errors
+    \)
+endfunction
+
+function! LightlineTime() abort
+    return strftime('%X')
+endfunction
+
+function! LightlineUpdate(timer) abort
+    call lightline#update()
+    call timer_start(1000, {-> LightlineUpdate(a:timer)})
+endfunction
+
+call timer_start(0, {-> LightlineUpdate(0)})
 
 "let s:palette = g:lightline#colorscheme#{g:lightline.colorscheme}#palette
 "let s:palette.normal.middle = [ [ 'NONE', 'NONE', 'NONE', 'NONE' ] ]
@@ -55,19 +80,6 @@ let g:ale_echo_msg_format = '[%linter%] %s [%severity%]'
 let g:ale_linters = {
             \ 'python': ['flake8', 'pytype', 'mypy']
             \ }
-
-function! LightlineLinterStatus() abort
-    let l:counts = ale#statusline#Count(bufnr(''))
-
-    let l:all_errors = l:counts.error + l:counts.style_error
-    let l:all_non_errors = l:counts.total - l:all_errors
-
-    return l:counts.total == 0 ? 'OK' : printf(
-    \   '%dW %dE',
-    \   all_non_errors,
-    \   all_errors
-    \)
-endfunction
 
 " Rainbow parenteces
 let g:rainbow_active = 1

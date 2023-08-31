@@ -1,4 +1,5 @@
 8188eu-dkms
+abseil-cpp
 acl
 adobe-source-code-pro-fonts
 adwaita-cursors
@@ -10,6 +11,8 @@ alsa-topology-conf
 alsa-ucm-conf
 alsa-utils
 amd-ucode
+android-tools
+android-udev
 aom
 archlinux-keyring
 argon2
@@ -170,6 +173,8 @@ libbpf
 libbs2b
 libbsd
 libcacard
+libcamera
+libcamera-ipa
 libcap
 libcap-ng
 libcdio
@@ -212,6 +217,7 @@ libmm-glib
 libmnl
 libmodplug
 libmpc
+libmtp
 libndp
 libnetfilter_conntrack
 libnewt
@@ -363,9 +369,11 @@ openpmix
 openssh
 openssl
 openssl-1.1
+optipng
 opus
 orc
 p11-kit
+p7zip
 pacman
 pacman-mirrorlist
 pahole
@@ -382,14 +390,17 @@ perl-error
 perl-mailtools
 perl-timedate
 pinentry
+pipewire
 pixman
 pkgconf
 polkit
 popt
 portaudio
 procps-ng
+protobuf
 psmisc
 pulseaudio
+pulseaudio-alsa
 python
 python-attrs
 python-cffi
@@ -404,8 +415,10 @@ qemu-audio-dbus
 qemu-audio-jack
 qemu-audio-oss
 qemu-audio-pa
+qemu-audio-pipewire
 qemu-audio-sdl
 qemu-audio-spice
+qemu-base
 qemu-block-curl
 qemu-block-dmg
 qemu-block-gluster
@@ -415,7 +428,9 @@ qemu-block-ssh
 qemu-chardev-baum
 qemu-chardev-spice
 qemu-common
+qemu-desktop
 qemu-docs
+qemu-emulators-full
 qemu-full
 qemu-hw-display-qxl
 qemu-hw-display-virtio-gpu
@@ -555,6 +570,7 @@ xorg-server-common
 xorg-setxkbmap
 xorg-xauth
 xorg-xev
+xorg-xhost
 xorg-xinit
 xorg-xkbcomp
 xorg-xmodmap
@@ -569,5 +585,6 @@ xz
 yay
 zeromq
 zimg
+zip
 zlib
 zstd

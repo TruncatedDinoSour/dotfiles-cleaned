@@ -129,7 +129,7 @@
  * ----------------
  * name : git-aliases-plugin
  * license : WTFPL
- * version : v3
+ * version : v4
  * author : Ari Archer
  * root_plugin_directory : plugin
  * recomended_install_method : git

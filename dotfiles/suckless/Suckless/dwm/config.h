@@ -117,6 +117,8 @@ static const char *termcmd[] = mk_command("st");
 static const char *extrakbcmd[] = mk_command("extrakb");
 static const char *weathercmd[] = mk_command("st", "-e", "dweather");
 
+static const char *fpdwmcmd[] = mk_command("fpdwm");
+
 static const Key keys[] = {
     /* modifier                     key        function        argument */
     {MODKEY, XK_d, spawn, {.v = dmenucmd}},
@@ -201,4 +203,7 @@ static const Key keys[] = {
 
     // Weather
     {MODKEY, XK_w, spawn, {.v = weathercmd}},
+
+    // Firefox profile selector
+    {MODKEY | ShiftMask, XK_p, spawn, {.v = fpdwmcmd}},
 };

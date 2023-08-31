@@ -15,10 +15,16 @@ int main(int argc, char *argv[]) {
 endsnippet
 
 snippet h
-#ifndef $1
-#define $1
+#ifndef _$1_H
+#define _$1_H
 $2
-#endif /* $1 */
+#endif /* _$1_H */
+endsnippet
+
+snippet i
+#ifdef $1_IMPL
+$2
+#endif /* $1_IMPL */
 endsnippet
 
 snippet a

@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.pyright]
+pythonVersion = "3.9"
+exclude = [
+    "venv",
+    "**/node_modules",
+    "**/__pycache__",
+    ".git"
+]
+include = ["PROJ_NAME", "scripts"]
+venvPath = "venv"
+typeCheckingMode = "strict"
+useLibraryCodeForTypes = true
+reportMissingTypeStubs = true
+
+[tool.mypy]
+exclude = [
+    "^venv/.*",
+    "^node_modules/.*",
+    "^__pycache__/.*",
+]
+
+[tool.pylint.message-control]
+disable = [
+    "missing-timeout",
+    "too-many-arguments",
+    "too-many-locals"
+]

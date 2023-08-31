@@ -26,3 +26,6 @@
 [instaweb]
     browser = firefox
 
+
+[pull]
+    rebase = false

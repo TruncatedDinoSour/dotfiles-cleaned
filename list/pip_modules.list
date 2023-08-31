@@ -22,6 +22,7 @@ charset-normalizer
 click
 colorama
 cryptography
+css-html-js-minify
 curtsies
 cwcwidth
 decorator

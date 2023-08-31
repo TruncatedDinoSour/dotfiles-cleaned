@@ -43,13 +43,14 @@ install: all
 	cp -f config.h config.def.h
 	mkdir -p ${DESTDIR}${PREFIX}/bin ${DESTDIR}${PREFIX}/share/xsessions ${DESTDIR}${MANPREFIX}/man1
 	cp -f dwm quitdwm emoji dwmlocker send_calcurse_notification redshifttoggle\
-		extrakb dweather dwmmenu ${DESTDIR}${PREFIX}/bin
+		extrakb dweather dwmmenu fpdwm ${DESTDIR}${PREFIX}/bin
 	cp -f dwm.desktop ${DESTDIR}${PREFIX}/share/xsessions
 	chmod 755 ${DESTDIR}${PREFIX}/bin/dwm ${DESTDIR}${PREFIX}/bin/quitdwm\
 		${DESTDIR}${PREFIX}/bin/emoji ${DESTDIR}${PREFIX}/bin/dwmlocker\
 		${DESTDIR}${PREFIX}/bin/send_calcurse_notification\
 		${DESTDIR}${PREFIX}/bin/redshifttoggle ${DESTDIR}${PREFIX}/bin/extrakb\
-		${DESTDIR}${PREFIX}/bin/dweather ${DESTDIR}${PREFIX}/bin/dwmmenu
+		${DESTDIR}${PREFIX}/bin/dweather ${DESTDIR}${PREFIX}/bin/dwmmenu\
+		${DESTDIR}${PREFIX}/bin/fpdwm
 	sed "s/VERSION/${VERSION}/g" < dwm.1 > ${DESTDIR}${MANPREFIX}/man1/dwm.1
 	chmod 644 ${DESTDIR}${MANPREFIX}/man1/dwm.1
 
@@ -62,6 +63,7 @@ uninstall:
 		${DESTDIR}${PREFIX}/bin/send_calcurse_notification\
 		${DESTDIR}${PREFIX}/bin/redshifttoggle\
 		${DESTDIR}${PREFIX}/bin/extrakb\
-		${DESTDIR}${PREFIX}/bin/dweather
+		${DESTDIR}${PREFIX}/bin/dweather\
+		${DESTDIR}${PREFIX}/bin/fpdwm
 
 .PHONY: all options clean dist install uninstall

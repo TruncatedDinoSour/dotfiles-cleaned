@@ -1,0 +1,5 @@
+#!/usr/bin/env sh
+
+set -e
+p="$(ls -d ~/.mozilla/firefox/*.*/ | dmenu)"
+[ "$p" ] && exec firefox --profile "$p"

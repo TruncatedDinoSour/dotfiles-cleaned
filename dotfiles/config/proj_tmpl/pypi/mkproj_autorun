@@ -1,0 +1,15 @@
+#!/usr/bin/env sh
+
+set -e
+
+main() {
+    proj="$(basename -- "$PWD"  | sed 's/-/_/g')"
+    sed -i "s/PROJ_NAME/$proj/g" README.md pyproject.toml PROJ_NAME/__init__.py setup.cfg tox.ini
+
+    mv PROJ_NAME "$proj"
+    chmod 700 scripts/*
+
+    lmgr @gpl3
+}
+
+main "$@"
