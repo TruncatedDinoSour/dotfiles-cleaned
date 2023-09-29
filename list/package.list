@@ -30,6 +30,7 @@ bat
 bc
 binutils
 bluez-libs
+boost-libs
 brltty
 brotli
 bzip2
@@ -95,10 +96,13 @@ gawk
 gc
 gcc
 gcc-libs
+gdb
+gdb-common
 gdbm
 gdk-pixbuf2
 gettext
 giflib
+girara
 git
 glib-networking
 glib2
@@ -143,6 +147,7 @@ iso-codes
 jack2
 jansson
 java-runtime-common
+jbigkit
 jq
 jre8-openjdk
 jre8-openjdk-headless
@@ -184,6 +189,8 @@ libcolord
 libcups
 libdaemon
 libdatrie
+libdeflate
+libdovi
 libdrm
 libdvdnav
 libdvdread
@@ -212,7 +219,6 @@ libksba
 libldap
 liblouis
 libmd
-libmfx
 libmm-glib
 libmnl
 libmodplug
@@ -259,6 +265,7 @@ libspeechd
 libssh
 libssh2
 libstemmer
+libsynctex
 libsysprof-capture
 libtasn1
 libteam
@@ -360,7 +367,9 @@ nss
 numactl
 nvme-cli
 ocl-icd
+onevpl
 oniguruma
+openbsd-netcat
 opencore-amr
 openexr
 openjpeg2
@@ -394,6 +403,8 @@ pipewire
 pixman
 pkgconf
 polkit
+poppler
+poppler-glib
 popt
 portaudio
 procps-ng
@@ -495,6 +506,7 @@ reflector
 rpcbind
 rtkit
 rubberband
+rust
 scc
 scrot
 sdl2
@@ -509,6 +521,7 @@ shfmt
 slang
 snappy
 socat
+source-highlight
 speex
 speexdsp
 spice
@@ -583,6 +596,8 @@ xorgproto
 xvidcore
 xz
 yay
+zathura
+zathura-pdf-poppler
 zeromq
 zimg
 zip

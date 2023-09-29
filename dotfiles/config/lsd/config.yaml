@@ -1,0 +1,9 @@
+blocks:
+  - permission
+  - git
+  - user
+  - group
+  - size
+  - date
+  - name
+symlink-arrow: ->

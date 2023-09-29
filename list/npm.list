@@ -6,7 +6,7 @@
 ├── netlify@13.1.10
 ├── node-gyp@9.4.0
 ├── nopt@7.2.0
-├── npm@9.8.1
+├── npm@10.1.0
 ├── prettier@3.0.0
-└── semver@7.5.0
+└── semver@7.5.1
 
