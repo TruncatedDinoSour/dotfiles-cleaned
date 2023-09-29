@@ -25,4 +25,4 @@ chromium-bin/
 /dotfiles/config/pulse/*.tdb
 /dotfiles/config/pulse/*-default-*
 /dotfiles/config/pulse/cookie
-/dotfiles/config/gdb/scripts/
+/dotfiles/config/gdb/scripts/gef.py
