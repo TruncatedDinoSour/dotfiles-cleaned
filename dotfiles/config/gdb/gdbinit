@@ -1,3 +1,5 @@
 set history filename ~/.cache/.gdb_history
-source ~/.config/gdb/scripts/gef.py
 
+add-auto-load-safe-path /home/ari/.gdbinit
+set auto-load safe-path /
+source ~/.config/gdb/scripts/gef.py

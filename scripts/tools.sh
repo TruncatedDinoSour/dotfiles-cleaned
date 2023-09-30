@@ -13,6 +13,9 @@
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
         https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
+# gef
+bash -c "$(curl -fsSL https://gef.blah.cat/sh)"
+
 # Themes and icons
 # git clone https://github.com/TheGreatMcPain/gruvbox-material-gtk
 # cd gruvbox-material-gtk || exit 1

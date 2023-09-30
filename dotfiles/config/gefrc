@@ -38,7 +38,7 @@ clean_on_exit = False
 autosave_breakpoints_file = 
 debug = False
 disable_color = False
-extra_plugins_dir = ~/.config/gdb/scripts/gef-plugins
+extra_plugins_dir = /home/ari/.config/gdb/scripts/gef-plugins/gef-extras/scripts
 follow_child = True
 readline_compat = False
 show_deprecation_warnings = True
@@ -74,7 +74,7 @@ length = 1024
 
 [pcustom]
 max_depth = 4
-struct_path = /tmp/gef/structs
+struct_path = /home/ari/.config/gdb/scripts/gef-plugins/gef-extras/structs
 structure_name = bold blue
 structure_size = green
 structure_type = bold red

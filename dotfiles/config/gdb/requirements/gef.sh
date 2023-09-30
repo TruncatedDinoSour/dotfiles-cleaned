@@ -3,8 +3,7 @@
 set -xe
 
 main() {
-    pip install --user keystone-engine unicorn \
-        capstone ropper
+    pip install --user --break-system-packages --upgrade keystone-engine unicorn capstone ropper rpyc
 }
 
-main "$@"
+main

@@ -41,7 +41,8 @@
         "so tired": "crawlers",
         "bülow, rich the kid - you & jennifer (the other side) (audio)": "bülow",
         "redesign": "awfultune",
-        "『ノンブレス・オブリージュ』3dmvゲームサイズ公開！": "3dmv"
+        "『ノンブレス・オブリージュ』3dmvゲームサイズ公開！": "3dmv",
+        "running out of time": "burdead"
     },
     "styles": "~/.config/mpvp.css",
     "song-name-delims": ["\u2013", "-", ",", "feat.", ".", "&", "⧸"],

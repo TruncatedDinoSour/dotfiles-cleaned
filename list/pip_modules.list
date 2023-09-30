@@ -15,6 +15,7 @@ Brlapi
 Brotli
 build
 cachetools
+capstone
 certifi
 cffi
 chardet
@@ -32,6 +33,7 @@ discord.py
 distlib
 docutils
 fake-useragent
+filebytes
 filelock
 flake8
 Flask
@@ -49,6 +51,7 @@ jedi
 jeepney
 Jinja2
 keyring
+keystone-engine
 kiwisolver
 libfdt
 lit
@@ -105,6 +108,8 @@ requests
 requests-toolbelt
 rfc3986
 rich
+ropper
+rpyc
 SecretStorage
 setuptools
 simpleaudio
@@ -120,6 +125,7 @@ types-SQLAlchemy
 types-urllib3
 typing_extensions
 ujson
+unicorn
 urllib3
 uwuify
 validators
