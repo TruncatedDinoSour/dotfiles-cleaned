@@ -42,10 +42,26 @@
         "bülow, rich the kid - you & jennifer (the other side) (audio)": "bülow",
         "redesign": "awfultune",
         "『ノンブレス・オブリージュ』3dmvゲームサイズ公開！": "3dmv",
-        "running out of time": "burdead"
+        "running out of time": "burdead",
+        "problematic": "boywithuke",
+        "nightmare": "boywithuke",
+        "before i die": "boywithuke",
+        "king of nothing": "boywithuke",
+        "2007": "you love her",
+        "the moss ｜ flipnote 3d animation": "cosmo sheldrake",
+        "little dark age": "mgmt",
+        "black wedding": "tx2",
+        "weltschmerz": "klangkuenstler",
+        "untergang": "klangkuenstler",
+        "armageddon": "klangkuenstler",
+        "zombie": "johnnie guilbert",
+        "ketamine": "siouxxie is dead",
+        "starlight - laura les": "laura les",
+        "anxiety": "johnnie guilbert"
     },
     "styles": "~/.config/mpvp.css",
     "song-name-delims": ["\u2013", "-", ",", "feat.", ".", "&", "⧸"],
-    "yt-url": "https://ari-web.xyz/yt/watch?v=%s",
-    "raw-json": false
+    "yt-url": "https://ari.lt/yt/watch?v=%s",
+    "raw-json": false,
+    "ai": true
 }

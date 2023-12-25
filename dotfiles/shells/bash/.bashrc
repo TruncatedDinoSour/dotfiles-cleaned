@@ -4,6 +4,7 @@
 #
 
 # If not running interactively, don't do anything
+[ "$NORC" ] && return
 [[ $- != *i* ]] && return
 
 export PATH="$PATH:/usr/local/bin:$HOME/.local/bin:$HOME/.config/scripts"

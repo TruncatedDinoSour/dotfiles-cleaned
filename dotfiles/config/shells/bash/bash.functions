@@ -54,3 +54,11 @@ NO() {
 
     return 0
 }
+
+pypi() {
+    python3 -m pip install --user --upgrade --break-system-packages "$@"
+}
+
+upypi() {
+    python3 -m pip uninstall --break-system-packages "$@"
+}

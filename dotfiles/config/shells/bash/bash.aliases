@@ -13,5 +13,7 @@ alias m='mpv --loop --loop-playlist --shuffle'
 
 alias fzf="\$__BASH_BIN_DIR/fzf --preview 'bat --theme=\"gruvbox-dark\" --color=always --style=numbers --line-range=:500 {}'"
 
-alias pw='pwdmgr ~/Ari/passwd/p.pdb ~/Ari/passwd/sda2/p.slt'
+alias pw='pwdmgr ~/Ari/passwd/pw.pdb ~/Ari/passwd/sda2/pw.slt'
 alias pwa='v ~/Ari/passwd/sda2/app_passwords'
+
+alias x='pwd | clip'

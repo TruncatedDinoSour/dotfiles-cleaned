@@ -3,13 +3,13 @@
 """gpt4 cli"""
 
 import asyncio
+import os
 import sys
-from warnings import filterwarnings as filter_warnings
 
 from rebelai.ai.gpt import gpt4
 
 
-def main() -> int:
+async def main() -> int:
     """entry / main function"""
 
     if len(sys.argv) < 2:
@@ -22,7 +22,7 @@ def main() -> int:
 
     while True:
         try:
-            print(asyncio.run(gpt4(prompt)))
+            print(await gpt4(prompt, profile=os.environ.get("p", "")))
             break
         except Exception:
             pass
@@ -32,6 +32,4 @@ def main() -> int:
 
 if __name__ == "__main__":
     assert main.__annotations__.get("return") is int, "main() should return an integer"
-
-    filter_warnings("error", category=Warning)
-    raise SystemExit(main())
+    raise SystemExit(asyncio.run(main()))

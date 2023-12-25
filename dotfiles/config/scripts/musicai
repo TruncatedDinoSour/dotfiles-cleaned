@@ -1,0 +1,23 @@
+#!/usr/bin/env sh
+
+set -e
+
+main() {
+    responses=''
+    nl="$(printf '\n')"
+
+    for _ in $(seq 10); do
+        read -r r <<EOF
+Act as if you were an advanced suggestion algorithm and you must suggest one singular indie, indie pop, breakcore, electronic, emo, indie rock or any other alternative (or alternative-esc) genre song with no formatting or extra information, the suggestion must be provided on the first line of output. Your response is limited to 128 characters so keep your responses short and concise, just the artist and the song. You now must give me one singular song with those requirements in the format of 'artist - song', you must introduce variety to your suggestions (topics, artists, genres, vibes, sounds, lyrics, popularity, length, etc.) and not repeat yourself, meaning don't always pick the most popular and known option, variety is very important in this case.
+
+Your previous responses were (artist - song):
+${responses:-'<none> - <none>'}
+EOF
+
+        responses="$responses$nl$(echo "$r" | gpt)"
+    done
+
+    echo "$responses"
+}
+
+main "$@"

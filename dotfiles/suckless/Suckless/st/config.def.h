@@ -178,9 +178,6 @@ static Shortcut shortcuts[] = {
     {ShiftMask, XK_Insert, selpaste, {.i = 0}},
     {TERMMOD, XK_Num_Lock, numlock, {.i = 0}},
 
-    {TERMMOD, XK_H, kscrollup, {.i = -1}},
-    {TERMMOD, XK_B, kscrolldown, {.i = -1}},
-
     {MODKEY, XK_o, externalpipe, {.v = copyoutput}},
     {MODKEY, XK_g, externalpipe, {.v = copyline}},
     {TERMMOD, XK_G, externalpipe, {.v = copylines}},

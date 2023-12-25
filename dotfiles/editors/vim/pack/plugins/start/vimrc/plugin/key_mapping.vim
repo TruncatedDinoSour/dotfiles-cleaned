@@ -104,3 +104,9 @@ noremap <C-m> :Commentary<CR>
 " inoremap [ []<left>
 " inoremap { {}<left>
 " inoremap < <><left>
+
+" remap s to switch chars wout overwriting the main register
+noremap s "sx"sph
+
+" remap f to e for convenience
+noremap f e

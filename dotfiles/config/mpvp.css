@@ -107,6 +107,8 @@ pre code {
 }
 
 pre {
+    white-space: pre-wrap;
+    word-wrap: break-word;
     padding: 1em;
     border-radius: 4px;
 }

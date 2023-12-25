@@ -1,0 +1,25 @@
+#!/usr/bin/env sh
+
+set -e
+
+main() {
+    chat='system: Welcome to the chat! If you are responding to the user, you are the assistant responding to the user. Please keep the conversation going and keep the responses short. Only respond as assistant, use slang if user, never say goodbye. You cannot add "user:" or "assistant:" to your responses. The input is the conversation so far. You must take role depending on the last response, if last one is user you are assistant and vise versa. Answer all questions as user.
+user: Yo, how are you doing? How are you? Who are you?'
+
+    for idx in $(seq "$1"); do
+        res="$(gpt "$chat" | tail -n +2)"
+
+        echo "$res"
+        echo '---------------------------------------------------------------------'
+
+        chat="$chat
+user: $res"
+
+        chat="$(echo "$chat" | tail -c 2000)"
+
+        sleep 2
+    done
+}
+
+main "$@"
+

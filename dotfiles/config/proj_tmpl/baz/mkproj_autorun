@@ -4,7 +4,7 @@ set -e
 
 main() {
     PROJ_BASE="$(basename -- "$(pwd)")"
-    PROJ_GIT="https://ari-web.xyz/gh/$PROJ_BASE"
+    PROJ_GIT="https://ari.lt/gh/$PROJ_BASE"
 
     tee baz.env >/dev/null <<EOF
 export BAZP_NAME='$PROJ_BASE'
@@ -24,7 +24,7 @@ EOF
 
 # installation
 
-- using the [baz plugin manager](https://ari-web.xyz/gh/baz) :
+- using the [baz plugin manager](https://ari.lt/gh/baz) :
 
 \`\`\`bash
 $ baz install git '$PROJ_GIT'
@@ -32,7 +32,7 @@ $ baz install git '$PROJ_GIT'
 
 EOF
 
-    lmgr @gpl3 || echo 'lmgr not found : https://ari-web.xyz/gh/lmgr'
+    lmgr @gpl3 || echo 'lmgr not found : https://ari.lt/gh/lmgr'
 }
 
 main "$@"
