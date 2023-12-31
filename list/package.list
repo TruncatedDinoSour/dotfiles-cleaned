@@ -109,6 +109,8 @@ gdb
 gdb-common
 gdbm
 gdk-pixbuf2
+geoip
+geoip-database
 gettext
 giflib
 girara
@@ -118,6 +120,7 @@ glib2
 glibc
 glibmm
 glslang
+glu
 gmp
 gnu-free-fonts
 gnupg
@@ -383,6 +386,7 @@ neofetch
 net-tools
 nettle
 networkmanager
+nginx
 node-gyp
 nodejs
 nodejs-nopt
@@ -528,6 +532,7 @@ qemu-vhost-user-gpu
 qt5-base
 qt5-tools
 qt5-translations
+qt5-x11extras
 rapidjson
 rav1e
 readline
@@ -548,6 +553,7 @@ shaderc
 shadow
 shared-mime-info
 shfmt
+simplescreenrecorder
 slang
 smartmontools
 snappy
