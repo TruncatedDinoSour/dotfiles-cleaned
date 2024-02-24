@@ -92,6 +92,7 @@ call plug#begin("~/.vim/plugged")
     Plug 'dstein64/vim-startuptime'
     Plug 'tpope/vim-endwise'
     Plug 'chiedo/vim-case-convert'
+    Plug 'svermeulen/vim-subversive'
 call plug#end()
 
 " Plug 'instant-markdown/vim-instant-markdown', {'for': 'markdown', 'do': 'npm install'}

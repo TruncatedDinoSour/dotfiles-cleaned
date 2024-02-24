@@ -1,0 +1,7 @@
+[connection]
+defaccount=ari
+account=ari
+mam=true
+
+[omemo]
+trustmode=blind

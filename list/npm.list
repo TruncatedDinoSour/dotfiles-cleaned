@@ -1,14 +1,13 @@
 /usr/lib
 ├── autoprefixer-cli@1.0.0
-├── corepack@0.23.0
-├── js-beautify@1.14.9
+├── corepack@0.24.0
+├── js-beautify@1.14.11
 ├── live-server@1.2.2
-├── netlify-cli@15.9.1
-├── netlify@13.1.10
+├── netlify-cli@17.16.1
 ├── node-gyp@10.0.1
 ├── node-sass@9.0.0
 ├── nopt@7.2.0
-├── npm@10.2.5
-├── prettier@3.0.0
+├── npm@10.4.0
+├── prettier@3.2.5
 └── semver@7.5.4
 

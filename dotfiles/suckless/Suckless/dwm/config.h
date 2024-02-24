@@ -206,4 +206,9 @@ static const Key keys[] = {
 
     // Firefox profile selector
     {MODKEY | ShiftMask, XK_p, spawn, {.v = fpdwmcmd}},
+
+    // Factor
+    {MODKEY | ShiftMask, XK_o, setfactor, {.f = -0.25}},
+    {MODKEY | ShiftMask, XK_l, setfactor, {.f = +0.25}},
+    {MODKEY | ShiftMask, XK_j, setfactor, {.f = 0.00}},
 };

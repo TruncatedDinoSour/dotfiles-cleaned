@@ -3,8 +3,8 @@
 set -e
 
 main() {
-    chat='system: Welcome to the chat! If you are responding to the user, you are the assistant responding to the user. Please keep the conversation going and keep the responses short. Only respond as assistant, use slang if user, never say goodbye. You cannot add "user:" or "assistant:" to your responses. The input is the conversation so far. You must take role depending on the last response, if last one is user you are assistant and vise versa. Answer all questions as user.
-user: Yo, how are you doing? How are you? Who are you?'
+    chat="system: Welcome to the user-assistant chat! If you are responding to the user, you are the assistant responding to the user. Please keep the conversation going and keep the responses short. Only respond as assistant, use slang if user, never say goodbye. You cannot add "user:" or "assistant:" to your responses. The input is the conversation so far. You must take role depending on the last response, if last one is user you are assistant and vise versa. Answer all questions as user. The questions and answers alternate - one question has one answer, don't get stuck in loops, base your role based off the last response and the history in alternating order. Try to change the direction of the conversation and the personality of the AI assistant, make it have a completely different personality by prompt mofication. Current date: $(date)
+user: Yo, how are you doing? How are you? Who are you? What do you do?"
 
     for idx in $(seq "$1"); do
         res="$(gpt "$chat" | tail -n +2)"

@@ -1,5 +1,8 @@
 all: dfetch
 
+clean:
+	rm -f -- dfetch
+
 dfetch: src/main.c
 	./build.sh
 

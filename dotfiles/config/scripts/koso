@@ -9,7 +9,7 @@ main() {
         shift
     done
 
-    echo "$@"
+    # echo "$@"
     kos "${@}"
 }
 

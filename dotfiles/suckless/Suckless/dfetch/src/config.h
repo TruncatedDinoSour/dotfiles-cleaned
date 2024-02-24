@@ -14,5 +14,5 @@
 #define PKG_END             " 2>/dev/null|wc -l"
 #define PKG_MANAGER(cmd)    cmd "\n"
 #define PACKAGE_MANAGERS_CMD \
-    "{\n" PKG_MANAGER("pacman -Qq") "} 2>/dev/null|wc -l"
+    "{\n" PKG_MANAGER("pacman -Q") "} 2>/dev/null|wc -l"
 #endif /* _CONFIG_H */

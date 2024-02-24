@@ -1,6 +1,4 @@
-lrwxrwxrwx 1 root root 17 Jul 17 13:32 /root/.bashrc -> /home/ari/.bashrc
-lrwxrwxrwx 1 root root 17 Jul 17 13:32 /root/.config -> /home/ari/.config
-lrwxrwxrwx 1 root root 16 Jul 17 13:32 /root/.local -> /home/ari/.local
-lrwxrwxrwx 1 root root 18 Jul 17 13:32 /root/.profile -> /home/ari/.profile
-lrwxrwxrwx 1 root root 13 Oct  2 22:34 /root/.sh -> /home/ari/.sh
-lrwxrwxrwx 1 root root 14 Jul 17 13:32 /root/.vim -> /home/ari/.vim
+lrwxrwxrwx 1 root root 17 Feb  9 17:04 /root/.bashrc -> /home/ari/.bashrc
+lrwxrwxrwx 1 root root 17 Feb  9 17:04 /root/.config -> /home/ari/.config
+lrwxrwxrwx 1 root root 16 Feb  9 17:04 /root/.local -> /home/ari/.local
+lrwxrwxrwx 1 root root 14 Feb  9 17:04 /root/.vim -> /home/ari/.vim

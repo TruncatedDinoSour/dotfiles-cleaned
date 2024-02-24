@@ -96,6 +96,7 @@ typedef struct Client Client;
 struct Client {
     char name[256];
     float mina, maxa;
+    float factor;
     int x, y, w, h;
     int oldx, oldy, oldw, oldh;
     int basew, baseh, incw, inch, maxw, maxh, minw, minh;
@@ -227,6 +228,7 @@ static int xerrordummy(Display *dpy, XErrorEvent *ee);
 static int xerrorstart(Display *dpy, XErrorEvent *ee);
 static void zoom(const Arg *arg);
 static void setenvvars(void);
+static void setfactor(const Arg *arg);
 
 /* variables */
 static const char *broken = "broken";
@@ -860,6 +862,7 @@ void manage(Window w, XWindowAttributes *wa) {
     c->w = c->oldw = wa->width;
     c->h = c->oldh = wa->height;
     c->oldbw = wa->border_width;
+    c->factor = 1.0;
 
     updatetitle(c);
     if (XGetTransientForHint(dpy, w, &trans) && (t = wintoclient(trans))) {
@@ -1277,10 +1280,15 @@ void tag(const Arg *arg) {
 
 void tile(Monitor *m) {
     unsigned int i, n, h, mw, my, ty;
+    float mfacts = 0, sfacts = 0;
     Client *c;
 
     for (n = 0, c = nexttiled(m->clients); c; c = nexttiled(c->next), n++)
-        ;
+        if ((int)n < m->nmaster)
+            mfacts += c->factor;
+        else
+            sfacts += c->factor;
+
     if (n == 0)
         return;
 
@@ -1288,20 +1296,29 @@ void tile(Monitor *m) {
         mw = m->nmaster ? m->ww * m->mfact : 0;
     else
         mw = m->ww;
+
     for (i = 0, my = ty = m->gappx, c = nexttiled(m->clients); c;
          c = nexttiled(c->next), i++)
         if ((int)i < m->nmaster) {
-            h = (m->wh - my) / (MIN((int)n, m->nmaster) - i) - m->gappx;
+            h = (m->wh - my) * (c->factor / mfacts);
+
             resize(c, m->wx + m->gappx, m->wy + my, mw - (2 * c->bw) - m->gappx,
                    h - (2 * c->bw), 0);
+
             if ((int)ty + HEIGHT(c) < m->wh)
                 my += HEIGHT(c) + m->gappx;
+
+            mfacts -= c->factor;
         } else {
-            h = (m->wh - ty) / (n - i) - m->gappx;
+            h = (m->wh - ty) * (c->factor / sfacts);
+
             resize(c, m->wx + mw + m->gappx, m->wy + ty,
                    m->ww - mw - (2 * c->bw) - 2 * m->gappx, h - (2 * c->bw), 0);
+
             if ((int)ty + HEIGHT(c) < m->wh)
                 ty += HEIGHT(c) + m->gappx;
+
+            sfacts -= c->factor;
         }
 }
 
@@ -1679,7 +1696,7 @@ int xerrorstart(Display *xesdpy, XErrorEvent *ee) {
 }
 
 static void zoom(const Arg *arg) {
-    (void) arg;
+    (void)arg;
 
     Client *c = selmon->sel;
 
@@ -1690,12 +1707,33 @@ static void zoom(const Arg *arg) {
     pop(c);
 }
 
-void setenvvars(void) {
+static void setenvvars(void) {
     /* For Information Fetchers */
 
     setenv("XDG_CURRENT_DESKTOP", "dwm", 1);
     setenv("XDG_SESSION_DESKTOP", "dwm", 1);
     setenv("DESKTOP_SESSION", "dwm", 1);
+}
+
+static void setfactor(const Arg *arg) {
+    float factor;
+    Client *c;
+
+    c = selmon->sel;
+
+    if (!arg || !c)
+        return;
+
+    factor = arg->f + c->factor;
+
+    if (arg->f == 0.0)
+        factor = 1.0;
+    else if (factor > 4.0)
+        return;
+
+    c->factor = factor;
+
+    arrange(selmon);
 }
 
 int main(int argc, char *argv[]) {

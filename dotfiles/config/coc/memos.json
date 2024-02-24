@@ -9,22 +9,22 @@
       "https://json.schemastore.org/web-manifest-combined.json": {
         "etag": "\"9256526360d0d91:0\"",
         "fileName": "b06e2f702dd4972ea2bb3d76ff088406.schema.json",
-        "updateTime": 1701369874827
+        "updateTime": 1704520914018
       },
       "https://json.schemastore.org/web-manifest-share-target.json": {
-        "etag": "\"8059190326ad81:0\"",
+        "etag": "\"8047ce18b33da1:0\"",
         "fileName": "cdeb8e92350ff78b8eec26631dae6f2d.schema.json",
-        "updateTime": 1701369875931
+        "updateTime": 1704520915156
       },
       "https://json.schemastore.org/web-manifest-app-info.json": {
         "etag": "\"b27da80326ad81:0\"",
         "fileName": "37e25b60beaa201ec2222b96a2ea00d6.schema.json",
-        "updateTime": 1701369875931
+        "updateTime": 1704520915222
       },
       "https://json.schemastore.org/web-manifest.json": {
-        "etag": "\"8059190326ad81:0\"",
+        "etag": "\"cfa4af0326ad81:0\"",
         "fileName": "6edb6ea4435d040104641056c40c6326.schema.json",
-        "updateTime": 1701369876250
+        "updateTime": 1704520915531
       },
       "https://json.schemastore.org/package.json": {
         "etag": "\"80e4d0496aead91:0\"",
